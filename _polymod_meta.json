@@ -1,0 +1,11 @@
+{
+  "title": "Funkin' Remnants",
+  "description": "A Remix Mod with a cool style and nods to Early Funkin' Content.",
+  "author": "SPG64",
+  "contributors": [{
+    "name": "SPG64"
+  }],
+  "api_version": "0.5.0",
+  "mod_version": "1.1.4",
+  "license": "Apache-2.0"
+}
