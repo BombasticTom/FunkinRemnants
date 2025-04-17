@@ -10,10 +10,10 @@
       "girlfriend": "pico-speaker",
       "opponent": "tankman",
       "instrumental": "",
-      "altInstrumentals": ["pico"]
+      "altInstrumentals": ["pico", "remnants"]
     },
-    "stage": "tankmanBattlefieldErect",
-    "songVariations": ["pico"],
+    "stage": "tankmanBattlefield",
+    "songVariations": ["pico", "remnants"],
     "noteStyle": "funkin",
     "ratings": { "easy": 3, "normal": 4, "hard": 5 },
     "album": "volume2",

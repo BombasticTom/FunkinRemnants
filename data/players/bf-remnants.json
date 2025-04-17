@@ -1,10 +1,10 @@
 {
   "version": "1.0.0",
-  "name": "Remnants BF",
-  "ownedChars": ["bf-remnants", "bf-car-remnants", "bf-christmas-remnants"],
+  "name": "BF Remnants",
+  "ownedChars": ["bf-remnants", "bf-car-remnants", "bf-christmas-remnants", "bf-holding-gf-remnants", "bf-pixel-remnants"],
   "showUnownedChars": true,
   "unlocked": true,
-  "freeplayStyle": "bf",
+  "freeplayStyle": "bf-remnants",
   "freeplayDJ": {
     "assetPath": "freeplay/freeplay-bf-remnants",
     "cartoon": {

@@ -4,14 +4,14 @@
   "artist": "Kawai Sprite",
   "charter": "ninjamuffin99 + MtH + SpazKid",
   "playData": {
-    "songVariations": ["erect", "pico"],
+    "songVariations": ["erect", "pico", "remnants"],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf",
       "girlfriend": "gf",
       "opponent": "spooky",
       "instrumental": "",
-      "altInstrumentals": ["pico"]
+      "altInstrumentals": ["pico", "remnants"]
     },
     "stage": "spookyMansion",
     "noteStyle": "funkin",
