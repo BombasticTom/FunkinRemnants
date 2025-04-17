@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
   "songName": "Spookeez (Remnants Mix)",
-  "artist": "Six Impala (feat. Saster)",
-  "charter": "Fabs + Spazkid",
+  "artist": "Unknown",
+  "charter": "Unknown",
   "playData": {
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
@@ -15,7 +15,7 @@
     "stage": "spookyMansion",
     "noteStyle": "funkin",
     "ratings": { "easy": 1, "normal": 2, "hard": 3 },
-    "album": "remnantsmix",
+    "album": "remnantsmix1",
     "previewStart": 0,
     "previewEnd": 15000
   },
