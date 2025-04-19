@@ -1,0 +1,96 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [-600, -350],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "stageBack",
+      "isPixel": false,
+      "assetPath": "stages/week1Remnants/Stage",
+      "scroll": [0.9, 0.9],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-350, -200],
+      "scale": [1.1, 1.1],
+      "animType": "sparrow",
+      "name": "stageLights",
+      "isPixel": false,
+      "assetPath": "stages/week1Remnants/StageLights",
+      "scroll": [0.975, 0.975],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 30,
+      "position": [-450, 650],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "frontLights",
+      "isPixel": false,
+      "assetPath": "stages/week1Remnants/FrontLights",
+      "scroll": [0.9, 0.9],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 40,
+      "position": [-600, -300],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "stageCurtains",
+      "isPixel": false,
+      "assetPath": "stages/week1Remnants/Curtains",
+      "scroll": [1.1, 1.1],
+      "animations": []
+    },
+    {
+      "zIndex": 50,
+      "danceEvery": 0,
+      "position": [-600, -370],
+      "scale": [1.1, 1.1],
+      "name": "Crowd",
+      "animType": "sparrow",
+      "isPixel": false,
+      "startingAnimation": "crowdcheer",
+      "scroll": [1.4, 1.4],
+      "assetPath": "stages/week1Remnants/Crowd",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 12,
+          "prefix": "Cheering",
+          "name": "crowdcheer",
+          "looped": true,
+          "flipX": false
+        }
+      ]
+    }
+  ],
+  "cameraZoom": 0.675,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [989.5, 885],
+      "cameraOffsets": [-100, -100]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [335, 885],
+      "cameraOffsets": [150, -100]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [0, 0],
+      "position": [751.5, 787]
+    }
+  },
+  "name": "Main Stage",
+  "directory": "week1"
+}
