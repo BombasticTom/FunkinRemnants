@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "BF Remnants",
+  "name": "Remnants BF",
   "ownedChars": ["bf-remnants", "bf-car-remnants", "bf-christmas-remnants", "bf-holding-gf-remnants", "bf-pixel-remnants"],
   "showUnownedChars": true,
   "unlocked": true,
