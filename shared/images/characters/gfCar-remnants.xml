@@ -32,8 +32,8 @@
 	<SubTexture name="GF Dancing Beat Hair blowing CAR0027" x="2" y="3227" width="699" height="638" frameX="-2" frameY="-11" frameWidth="774" frameHeight="649"/>
 	<SubTexture name="GF Dancing Beat Hair blowing CAR0028" x="703" y="3227" width="712" height="646" frameX="-2" frameY="-3" frameWidth="774" frameHeight="649"/>
 	<SubTexture name="GF Dancing Beat Hair blowing CAR0029" x="703" y="3227" width="712" height="646" frameX="-2" frameY="-3" frameWidth="774" frameHeight="649"/>
-	<SubTexture name="GF Duck0000" x="1417" y="3227" width="713" height="552" frameX="0" frameY="-11" frameWidth="713" frameHeight="563"/>
-	<SubTexture name="GF Duck0001" x="1417" y="3227" width="713" height="552" frameX="0" frameY="-11" frameWidth="713" frameHeight="563"/>
-	<SubTexture name="GF Duck0002" x="2132" y="3227" width="708" height="563" frameX="-3" frameY="0" frameWidth="713" frameHeight="563"/>
-	<SubTexture name="GF Duck0003" x="2132" y="3227" width="708" height="563" frameX="-3" frameY="0" frameWidth="713" frameHeight="563"/>
+	<SubTexture name="GF Duck Hair Blowing0000" x="1417" y="3227" width="713" height="564" frameX="0" frameY="-8" frameWidth="727" frameHeight="572"/>
+	<SubTexture name="GF Duck Hair Blowing0001" x="1417" y="3227" width="713" height="564" frameX="0" frameY="-8" frameWidth="727" frameHeight="572"/>
+	<SubTexture name="GF Duck Hair Blowing0002" x="2132" y="3227" width="724" height="572" frameX="-3" frameY="0" frameWidth="727" frameHeight="572"/>
+	<SubTexture name="GF Duck Hair Blowing0003" x="2858" y="3227" width="708" height="571" frameX="-3" frameY="-1" frameWidth="727" frameHeight="572"/>
 </TextureAtlas>
