@@ -56,16 +56,12 @@ class RemnantsCard extends Module
 	override function onStateChangeEnd(event)
 	{
 		super.onStateChangeEnd(event);
-
-		// Unload the Backing Card.
 		cardWasAdded = false;
 	}
 
 	override function onSubStateCloseEnd(event)
 	{
 		super.onSubStateCloseEnd(event);
-
-		// Unload the Backing Card.
 		cardWasAdded = false;
 	}
 
@@ -88,7 +84,7 @@ class RemnantsCard extends Module
 	/**
 	 * The character that should use this backing card.
 	 */
-	var CUR_CHARACTER:String = 'remnants-bf';
+	var CUR_CHARACTER:String = 'bf-remnants';
 
 	/**
 	 * The substate this module needs to be called.
@@ -99,20 +95,15 @@ class RemnantsCard extends Module
 	{
 		super.onUpdate(event);
 
-		// If the current substate is FreeplayState and the currentCharacterId is 'remnants-bf', create the backing card.
+		// If the current substate is FreeplayState and the currentCharacterId is 'bf-remnants', create the backing card.
 		if (ReflectUtil.getClassNameOf(FlxG.state.subState) == SUBSTATE_TO_GET && FlxG.state.subState.currentCharacterId == CUR_CHARACTER)
 		{
-			if (!cardWasAdded)
+			if (cardWasAdded == false)
 			{
 				cardWasAdded = true;
 				wentBack = false;
 
 				//Add the card stuff <3
-				blackBack = new FlxSprite().loadGraphic(Paths.image('freeplay/pinkBack'));
-				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), blackBack);
-				blackBack.cameras = [FlxG.state.subState.funnyCam];
-				blackBack.color = 0xFF000000;
-
 				funnyScroll = new BGScrollingText(0, 220, FlxG.state.subState.currentCharacter.getFreeplayDJText(1), FlxG.width / 2, false, 60);
 				funnyScroll.funnyColor = 0xFF0094FF;
 				funnyScroll.speed = -3.8;
@@ -148,17 +139,25 @@ class RemnantsCard extends Module
 				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), funnyScroll3);
 				funnyScroll3.cameras = [FlxG.state.subState.funnyCam];
 
-				moreWays.visible = false;
-				funnyScroll.visible = false;
-				txtNuts.visible = false;
-				funnyScroll2.visible = false;
-				moreWays2.visible = false;
-				funnyScroll3.visible = false;
+				// We change the glow color to be a remnants bf type color.
+				FlxG.state.subState.backingCard.cardGlow.color = 0xFF1869FF;
+
+				//We also make the yellow line black!
+				FlxG.state.subState.backingCard.orangeBackShit.color = 0xFF000000;
+				FlxG.state.subState.backingCard.alsoOrangeLOL.color = 0xFF000000;
 
 				if (!FlxG.state.subState.fromCharSelect)
 				{
-				blackBack.color = 0xFF000000;
+					moreWays.visible = false;
+					funnyScroll.visible = false;
+					txtNuts.visible = false;
+					funnyScroll2.visible = false;
+					moreWays2.visible = false;
+					funnyScroll3.visible = false;
 				}
+			}
+			else {
+				// Stop the card creation logic.
 			}
 
 			if (FlxG.state.subState.dj != null)
@@ -166,6 +165,10 @@ class RemnantsCard extends Module
 				if (FlxG.state.subState.fromCharSelect || FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ loss reaction 1' || FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ fist pump')
 				{
 					showBackCard = true;
+				}
+				else if (FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ confirm')
+				{
+					showBackCard = false;
 				}
 				else
 				{
@@ -177,18 +180,26 @@ class RemnantsCard extends Module
 					if (FlxG.state.subState.dj.getCurrentAnimation() == 'boyfriend dj intro')
 					{
 						showBackCard = false;
+
+						// Double check
+						moreWays.visible = false;
+						funnyScroll.visible = false;
+						txtNuts.visible = false;
+						funnyScroll2.visible = false;
+						moreWays2.visible = false;
+						funnyScroll3.visible = false;
 					}
 				}
 
-				if (showBackCard)
+				if (showBackCard == true)
 				{
-					blackBack.color = 0xFF000000;
 					moreWays.visible = true;
 					funnyScroll.visible = true;
 					txtNuts.visible = true;
 					funnyScroll2.visible = true;
 					moreWays2.visible = true;
 					funnyScroll3.visible = true;
+					FlxG.state.subState.backingCard.pinkBack.color = 0xFF000000;
 				}
 				else {
 					moreWays.visible = false;
@@ -197,19 +208,28 @@ class RemnantsCard extends Module
 					funnyScroll2.visible = false;
 					moreWays2.visible = false;
 					funnyScroll3.visible = false;
-				}
-			}
 
-			if (FlxG.state.subState.backingCard.pinkBack != null)
-			{
-				blackBack.x = FlxG.state.subState.backingCard.pinkBack.x;
+					if (FlxG.state.subState.dj.getCurrentAnimation() != 'Boyfriend DJ confirm')
+					{
+						FlxG.state.subState.backingCard.pinkBack.color = 0xFFFFD4E9;
+					}
+				}
 			}
 
 			if (PlayerSettings.player1.controls.BACK && !FlxG.state.subState.busy)
 			{
 				wentBack = true;
 				showBackCard = false;
-				blackBack.color = 0xFF000000;
+
+				// Double check
+				moreWays.visible = false;
+				funnyScroll.visible = false;
+				txtNuts.visible = false;
+				funnyScroll2.visible = false;
+				moreWays2.visible = false;
+				funnyScroll3.visible = false;
+
+				FlxG.state.subState.backingCard.pinkBack.color = 0xFFFFD4E9;
 			}
 		}
 	}
