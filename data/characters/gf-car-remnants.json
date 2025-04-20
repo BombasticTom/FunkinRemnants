@@ -28,9 +28,31 @@
     },
     {
       "name": "duck",
-      "prefix": "GF Duck",
-      "frameIndices": [0, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      "prefix": "GF Duck Hair Blowing",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5, 6, 7, 4, 5],
       "offsets": [0, -100]
+    },
+    {
+      "name": "cheer",
+      "prefix": "GF Cheer CAR",
+      "offsets": [0, -100]
+    },
+    {
+      "name": "sad",
+      "prefix": "gf sad CAR",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "offsets": [2, -21]
+    },
+    {
+      "name": "combo50",
+      "prefix": "GF Cheer CAR",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "drop70",
+      "prefix": "gf sad CAR",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "offsets": [2, -21]
     }
   ]
 }

@@ -1,0 +1,216 @@
+import flixel.FlxG;
+import funkin.ui.freeplay.FreeplayState;
+import flixel.FlxSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxSpriteUtil;
+import flixel.addons.display.FlxTiledSprite;
+import flixel.addons.display.FlxBackdrop;
+import funkin.ui.freeplay.BGScrollingText;
+import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.base.ScriptedMusicBeatSubState;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.modding.base.ScriptedMusicBeatState;
+import funkin.util.ReflectUtil;
+import funkin.PlayerSettings;
+
+/**
+ * Took some inspiration from "Spooky Mix" code to make this work.
+ * So big props to them for making their amazing mod work with
+ * Softmodding and for the original module inspiritation!
+ */
+class RemnantsCard extends Module
+{
+	/**
+	 * Checks if the Backing Card was added.
+	 * We do this just so when we leave, the card doesn't overflows the screen.
+	 */
+	var cardWasAdded:Bool = false;
+
+	/**
+	 * Checks if the Backing Card is visible or not.
+	 */
+	var cardIsVisible:Bool = false;
+
+	/**
+	 * Checks the player went back to the main menu.
+	 * Used for block some interaction while this happens.
+	 */
+	var wentBack:Bool = false;
+
+	public function new()
+	{
+		super('RemnantsCard');
+	}
+
+	/**
+	 * Necessary for make the script work.
+	 **/
+	override function onCreate(event):Void
+	{
+		super.onCreate(event);
+	}
+
+	override function onStateChangeEnd(event)
+	{
+		super.onStateChangeEnd(event);
+
+		// Unload the Backing Card.
+		cardWasAdded = false;
+	}
+
+	override function onSubStateCloseEnd(event)
+	{
+		super.onSubStateCloseEnd(event);
+
+		// Unload the Backing Card.
+		cardWasAdded = false;
+	}
+
+	// Here is where the card code starts!
+
+	public var moreWays:BGScrollingText;
+	public var funnyScroll:BGScrollingText;
+	public var txtNuts:BGScrollingText;
+	public var funnyScroll2:BGScrollingText;
+	public var moreWays2:BGScrollingText;
+	public var funnyScroll3:BGScrollingText;
+
+	var confirmAtlas:FlxAtlasSprite;
+	public var pinkBack:FlxSprite;
+	public var cardGlow:FlxSprite;
+
+	var glow:FlxSprite;
+	var glowDark:FlxSprite;
+
+	/**
+	 * The character that should use this backing card.
+	 */
+	var CUR_CHARACTER:String = 'remnants-bf';
+
+	/**
+	 * The substate this module needs to be called.
+	 */
+	var SUBSTATE_TO_GET:String = "funkin.ui.freeplay.FreeplayState";
+
+	override function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+
+		// If the current substate is FreeplayState and the currentCharacterId is 'remnants-bf', create the backing card.
+		if (ReflectUtil.getClassNameOf(FlxG.state.subState) == SUBSTATE_TO_GET && FlxG.state.subState.currentCharacterId == CUR_CHARACTER)
+		{
+			if (!cardWasAdded)
+			{
+				cardWasAdded = true;
+				wentBack = false;
+
+				//Add the card stuff <3
+				blackBack = new FlxSprite().loadGraphic(Paths.image('freeplay/pinkBack'));
+				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), blackBack);
+				blackBack.cameras = [FlxG.state.subState.funnyCam];
+				blackBack.color = 0xFF000000;
+
+				funnyScroll = new BGScrollingText(0, 220, FlxG.state.subState.currentCharacter.getFreeplayDJText(1), FlxG.width / 2, false, 60);
+				funnyScroll.funnyColor = 0xFF0094FF;
+				funnyScroll.speed = -3.8;
+				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), funnyScroll);
+				funnyScroll.cameras = [FlxG.state.subState.funnyCam];
+
+				funnyScroll2 = new BGScrollingText(0, 335, FlxG.state.subState.currentCharacter.getFreeplayDJText(1), FlxG.width / 2, false, 60);
+				funnyScroll2.funnyColor = 0xFF0094FF;
+				funnyScroll2.speed = -3.8;
+				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), funnyScroll2);
+				funnyScroll2.cameras = [FlxG.state.subState.funnyCam];
+
+				moreWays = new BGScrollingText(0, 160, FlxG.state.subState.currentCharacter.getFreeplayDJText(2), FlxG.width, true, 43);
+				moreWays.funnyColor = 0xFF00DDFF;
+				moreWays.speed = 6.8;
+				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), moreWays);
+				moreWays.cameras = [FlxG.state.subState.funnyCam];
+
+				moreWays2 = new BGScrollingText(0, 397, FlxG.state.subState.currentCharacter.getFreeplayDJText(2), FlxG.width, true, 43);
+				moreWays2.funnyColor = 0xFF00DDFF;
+				moreWays2.speed = 6.8;
+				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), moreWays2);
+				moreWays2.cameras = [FlxG.state.subState.funnyCam];
+
+				txtNuts = new BGScrollingText(0, 285, FlxG.state.subState.currentCharacter.getFreeplayDJText(3), FlxG.width / 2, true, 43);
+				txtNuts.speed = 3.5;
+				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), txtNuts);
+				txtNuts.cameras = [FlxG.state.subState.funnyCam];
+
+				funnyScroll3 = new BGScrollingText(0, FlxG.state.subState.backingCard.orangeBackShit.y + 10, FlxG.state.subState.currentCharacter.getFreeplayDJText(1), FlxG.width / 2, 60);
+				funnyScroll3.funnyColor = 0xFF001A9E;
+				funnyScroll3.speed = -3.8;
+				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.dj), funnyScroll3);
+				funnyScroll3.cameras = [FlxG.state.subState.funnyCam];
+
+				moreWays.visible = false;
+				funnyScroll.visible = false;
+				txtNuts.visible = false;
+				funnyScroll2.visible = false;
+				moreWays2.visible = false;
+				funnyScroll3.visible = false;
+
+				if (!FlxG.state.subState.fromCharSelect)
+				{
+				blackBack.color = 0xFF000000;
+				}
+			}
+
+			if (FlxG.state.subState.dj != null)
+			{
+				if (FlxG.state.subState.fromCharSelect || FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ loss reaction 1' || FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ fist pump')
+				{
+					showBackCard = true;
+				}
+				else
+				{
+					if (FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ' && wentBack == false)
+					{
+						showBackCard = true;
+					}
+
+					if (FlxG.state.subState.dj.getCurrentAnimation() == 'boyfriend dj intro')
+					{
+						showBackCard = false;
+					}
+				}
+
+				if (showBackCard)
+				{
+					blackBack.color = 0xFF000000;
+					moreWays.visible = true;
+					funnyScroll.visible = true;
+					txtNuts.visible = true;
+					funnyScroll2.visible = true;
+					moreWays2.visible = true;
+					funnyScroll3.visible = true;
+				}
+				else {
+					moreWays.visible = false;
+					funnyScroll.visible = false;
+					txtNuts.visible = false;
+					funnyScroll2.visible = false;
+					moreWays2.visible = false;
+					funnyScroll3.visible = false;
+				}
+			}
+
+			if (FlxG.state.subState.backingCard.pinkBack != null)
+			{
+				blackBack.x = FlxG.state.subState.backingCard.pinkBack.x;
+			}
+
+			if (PlayerSettings.player1.controls.BACK && !FlxG.state.subState.busy)
+			{
+				wentBack = true;
+				showBackCard = false;
+				blackBack.color = 0xFF000000;
+			}
+		}
+	}
+}
