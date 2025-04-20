@@ -1,0 +1,17 @@
+{
+  "name": "stickers-set-remnants",
+  "artist": "PhantomArcade3K",
+  "stickers": {
+    "bf": ["bfRemnantsSticker1", "bfRemnantsSticker2", "bfRemnantsSticker3"],
+    "dad": ["dadRemnantsSticker1", "dadRemnantsSticker2", "dadRemnantsSticker3"],
+    "pico": ["picoRemnantsSticker1", "picoRemnantsSticker2", "picoRemnantsSticker3"],
+    "mom": ["momRemnantsSticker1", "momRemnantsSticker2", "momRemnantsSticker3"],
+    "monster": ["monsterRemnantsSticker1", "monsterRemnantsSticker2", "monsterRemnantsSticker3"],
+    "gf": ["gfRemnantsSticker1", "gfRemnantsSticker2", "gfRemnantsSticker3"]
+  },
+  "stickerPacks": {
+    "tutorial": ["bf", "gf"],
+    "parents": ["dad", "mom"],
+    "all": ["bf", "gf", "dad", "mom", "monster", "pico"]
+  }
+}
