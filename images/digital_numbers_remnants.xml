@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="digital_numbers.png">
+<TextureAtlas imagePath="digital_numbers_remnants.png">
 	<SubTexture name="EIGHT DIGITAL0000" x="0" y="0" width="139" height="197" />
 	<SubTexture name="EIGHT DIGITAL0001" x="0" y="0" width="139" height="197" />
 	<SubTexture name="EIGHT DIGITAL0002" x="431" y="0" width="115" height="173" frameX="-12" frameY="-12" frameWidth="139" frameHeight="197" />
