@@ -20,7 +20,7 @@
       "erect"
     ],
     "characters": {
-      "player": "pico-remnants",
+      "player": "pico-playable-remnants",
       "girlfriend": "nene",
       "opponent": "darnell",
       "instrumental": "remnants",
@@ -29,7 +29,7 @@
         "darnell"
       ],
       "playerVocals": [
-        "pico-remnants"
+        "pico-playable-remnants"
       ]
     },
     "stage": "phillyStreetsErect",
