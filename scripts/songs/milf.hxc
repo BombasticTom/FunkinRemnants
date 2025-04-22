@@ -19,9 +19,9 @@ import flixel.tweens.FlxEase;
 	* That ended up being cut (main reason we would need a whole custom death animation if it killed you),
 	* but the code for that is still in here, so go wild!
 	*/
-class SatinPantiesSong extends Song {
+class MILFSong extends Song {
 	public function new() {
-		super('satin-panties');
+		super('milf');
 	}
 
 	/**
@@ -448,7 +448,7 @@ class SatinPantiesSong extends Song {
 		{
 			trace("Player dodged!");
 			FlxG.sound.play(Paths.soundRandom('week4/Light_Pass_Head_', 1, 4), 1.0);
-			PlayState.instance.currentStage.getBoyfriend().playAnimation('dodge', true, true);
+			PlayState.instance.currentStage.getBoyfriend().playAnimation('singDOWN', true, true);
 		}
 		else
 		{
