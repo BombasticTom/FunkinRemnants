@@ -3,36 +3,27 @@
   "songName": "Blammed (Remnants Mix)",
   "artist": "fishgarden",
   "charter": "fishgarden",
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [    ],
     "difficulties": [
       "hard",
+      "normal",
       "easy"
     ],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "pico-remnants",
-      "instrumental": "",
-      "opponentVocals": [
-        "dad"
-      ],
-      "playerVocals": [
-        "bf"
-      ]
+      "instrumental": "remnants",
+      "altInstrumentals": []
     },
     "stage": "phillyTrainErect",
     "noteStyle": "funkin",
     "ratings": {
-      "hard": 8
+      "hard": 8,
+      "normal": 6,
+      "easy": 4
     },
+    "album": "remnantsmix1",
     "previewStart": 0,
     "previewEnd": 0
   },
