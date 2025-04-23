@@ -1,7 +1,8 @@
 {
   "version": "2.2.4",
   "songName": "Darnell (Remnants Mix)",
-  "artist": "Kawai Sprite",
+  "artist": "Loopy",
+  "charter": "Chara",
   "playData": {
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
