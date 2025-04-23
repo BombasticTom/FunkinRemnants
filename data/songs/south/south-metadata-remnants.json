@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
   "songName": "South (Remnants Mix)",
-  "artist": "Six Impala (feat. Saster)",
-  "charter": "Fabs + Spazkid",
+  "artist": "wiiz",
+  "charter": "Chara",
   "playData": {
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
@@ -10,7 +10,7 @@
       "girlfriend": "gf-remnants",
       "opponent": "spooky-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": ["pico", ""]
+      "altInstrumentals": []
     },
     "stage": "spookyMansionErect",
     "noteStyle": "funkin",
