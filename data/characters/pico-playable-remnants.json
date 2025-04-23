@@ -3,7 +3,7 @@
   "name": "Remnants Pico (Playable)",
   "assetPath": "characters/pico-remnants",
   "healthIcon": {
-    "id": "pico",
+    "id": "pico-remnants",
     "flipX": false
   },
   "death": {

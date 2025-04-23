@@ -4,7 +4,7 @@
   "assetPath": "characters/momCar-remnants",
   "singTime": 8.0,
   "healthIcon": {
-    "id": "mom"
+    "id": "mom-remnants"
   },
   "cameraOffsets": [0, -100],
   "animations": [
