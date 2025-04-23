@@ -104,6 +104,11 @@ class RemnantsCard extends Module
 				wentBack = false;
 
 				//Add the card stuff <3
+
+				// Change the "OFFICIAL OST" text by "REMNANTS OST".
+				if (FlxG.state.subState.ostName != null)
+					FlxG.state.subState.ostName.text = "REMNANTS OST";
+
 				funnyScroll = new BGScrollingText(0, 220, FlxG.state.subState.currentCharacter.getFreeplayDJText(1), FlxG.width / 2, false, 60);
 				funnyScroll.funnyColor = 0xFF0094FF;
 				funnyScroll.speed = -3.8;
