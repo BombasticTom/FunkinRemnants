@@ -81,8 +81,8 @@
     },
     {
       "name": "cheer",
-      "prefix": "Cheer",
-      "assetPath": "characters/BFCheer",
+      "prefix": "Boyfriend YEAH cheer",
+      "assetPath": "characters/BFCheer-remnants",
       "offsets": [0, 0]
     },
     {
