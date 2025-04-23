@@ -15,9 +15,7 @@
     "difficulties": [
       "easy",
       "normal",
-      "hard",
-      "nightmare",
-      "erect"
+      "hard"
     ],
     "characters": {
       "player": "pico-playable-remnants",
