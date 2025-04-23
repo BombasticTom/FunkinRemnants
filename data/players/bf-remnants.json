@@ -30,9 +30,9 @@
     "charSelect": {
       "transitionDelay": 0.45
     },
-    "text1": "BOYFRIEND",
-    "text2": "HOT BLOODED IN MORE WAYS THAN ONE",
-    "text3": "PROTECT YO NUTS",
+    "text1": "FUNKIN' REMNANTS",
+    "text2": "OLD FUNKIN CONTENT AT YOUR SERVICE",
+    "text3": "IDK WHAT TO PUT HERE!",
     "animations": [
       {
         "name": "intro",
@@ -158,7 +158,7 @@
     "excellent": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsEXCELLENT",
+        "assetPath": "shared:resultScreen/results-remnants/resultsEXCELLENT",
         "zIndex": 500,
         "offsets": [1329, 429],
 
@@ -168,7 +168,7 @@
     "great": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsGREAT/gf",
+        "assetPath": "shared:resultScreen/results-remnants/resultsGREAT/gf",
         "scale": 0.93,
         "delay": 0.25,
         "offsets": [802, 331],
@@ -178,7 +178,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsGREAT/bf",
+        "assetPath": "shared:resultScreen/results-remnants/resultsGREAT/bf",
         "scale": 0.93,
         "zIndex": 500,
         "offsets": [929, 363],
@@ -207,7 +207,7 @@
     "loss": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsSHIT",
+        "assetPath": "shared:resultScreen/results-remnants/resultsSHIT",
         "zIndex": 500,
         "offsets": [0, 20],
         "loopFrameLabel": "Loop Start"
