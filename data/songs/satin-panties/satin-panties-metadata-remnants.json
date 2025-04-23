@@ -3,29 +3,14 @@
   "songName": "Satin Panties (Remnants Mix)",
   "artist": "dylanesg",
   "charter": "Plush",
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [    ],
-    "difficulties": [
-      "normal"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-car-remnants",
       "girlfriend": "gf-car-remnants",
       "opponent": "mom-car-remnants",
       "instrumental": "remnants",
-      "opponentVocals": [
-        "mom-car-remnants"
-      ],
-      "playerVocals": [
-        "bf-car-remnants"
-      ]
+      "altInstrumentals": []
     },
     "stage": "limoRideErect",
     "noteStyle": "funkin",

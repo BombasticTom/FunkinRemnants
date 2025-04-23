@@ -2,32 +2,14 @@
   "version": "2.2.4",
   "songName": "M.I.L.F (Remnants Mix)",
   "artist": "",
-  "divisions": 96,
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [    ],
-    "difficulties": [
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-car-remnants",
       "girlfriend": "gf-car-remnants",
       "opponent": "mom-car-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "mom-car-remnants"
-      ],
-      "playerVocals": [
-        "bf-car-remnants"
-      ]
+      "altInstrumentals": [""]
     },
     "stage": "limoRideErect",
     "noteStyle": "funkin",

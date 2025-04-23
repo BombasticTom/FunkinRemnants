@@ -10,7 +10,7 @@
       "girlfriend": "gf-remnants",
       "opponent": "spooky-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": []
+      "altInstrumentals": ["pico", ""]
     },
     "stage": "spookyMansion",
     "noteStyle": "funkin",

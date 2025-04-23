@@ -2,33 +2,14 @@
   "version": "2.2.4",
   "songName": "Philly Nice (Remnants Mix)",
   "artist": "",
-  "divisions": 96,
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "pico-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "pico"
-      ],
-      "playerVocals": [
-        "bf"
-      ]
+      "altInstrumentals": []
     },
     "stage": "phillyTrainErect",
     "noteStyle": "funkin",

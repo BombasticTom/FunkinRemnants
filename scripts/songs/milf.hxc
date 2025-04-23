@@ -4,6 +4,7 @@ import funkin.play.character.CharacterType;
 import flixel.util.FlxTimer;
 import funkin.Conductor;
 import funkin.Paths;
+import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
 import funkin.play.song.Song;
 import funkin.play.PlayState;
@@ -513,5 +514,23 @@ class MILFSong extends Song {
 
 		// Properly reset lights and collision when restarting the song.
 		this.hardResetSong();
+	}
+
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+	{
+		if (currentVariation == 'remnants')
+		return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
+	
+		return false;
+	}
+	
+	public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+	{
+		var targetDifficulty:Null<SongDifficulty> = getDifficulty(difficultyId, variationId);
+
+		if ((difficultyId == "erect" || difficultyId == "nightmare") && (Save.instance.hasBeatenSong(this.id, ["erect"], "") || Save.instance.hasBeatenSong(this.id, ["nightmare"], ""))) return targetDifficulty?.characters?.altInstrumentals ?? [];
+		else if (variationId == "default" && Save.instance.hasBeatenSong(this.id, null, "")) return targetDifficulty?.characters?.altInstrumentals ?? [];
+		else if (Save.instance.hasBeatenSong(this.id, null, variationId)) return targetDifficulty?.characters?.altInstrumentals ?? [];
+		else return [];
 	}
 }

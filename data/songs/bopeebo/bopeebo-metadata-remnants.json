@@ -2,33 +2,14 @@
   "version": "2.2.4",
   "songName": "Bopeebo (Remnants Mix)",
   "artist": "",
-  "divisions": 96,
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard" ],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "dad-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "dad-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "altInstrumentals": ["pico", ""]
     },
     "stage": "mainStage",
     "noteStyle": "funkin",
