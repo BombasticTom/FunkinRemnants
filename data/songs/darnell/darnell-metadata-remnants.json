@@ -7,7 +7,7 @@
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "pico-playable-remnants",
-      "girlfriend": "nene",
+      "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants",
       "instrumental": "remnants",
       "altInstrumentals": ["bf", ""]
