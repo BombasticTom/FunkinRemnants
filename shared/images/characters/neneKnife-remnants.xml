@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="neneKnife-remnants.png">
+	<!-- Created with Adobe Animate version 22.0.0.93 -->
+	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="knife toss0000" x="2" y="2" width="345" height="401" frameX="0" frameY="-9" frameWidth="345" frameHeight="410"/>
 	<SubTexture name="knife toss0001" x="2" y="2" width="345" height="401" frameX="0" frameY="-9" frameWidth="345" frameHeight="410"/>
 	<SubTexture name="knife toss0002" x="349" y="2" width="310" height="393" frameX="-32" frameY="0" frameWidth="345" frameHeight="410"/>
