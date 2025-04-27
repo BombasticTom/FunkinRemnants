@@ -5,6 +5,7 @@
   "showUnownedChars": false,
   "unlocked": true,
   "freeplayStyle": "bf-remnants",
+  "stickerPack": "default-remnants",
   "freeplayDJ": {
     "assetPath": "freeplay/freeplay-bf-remnants",
     "cartoon": {
