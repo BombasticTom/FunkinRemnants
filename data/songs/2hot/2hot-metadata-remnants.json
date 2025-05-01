@@ -1,7 +1,7 @@
 {
   "version": "2.2.4",
-  "songName": "Darnell (Remnants Mix)",
-  "artist": "Loopy",
+  "songName": "2Hot (Remnants Mix)",
+  "artist": "Zero",
   "charter": "RhysRJJ",
   "playData": {
     "difficulties": ["easy", "normal", "hard"],
@@ -15,9 +15,9 @@
     "stage": "phillyStreetsErect",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 2,
-      "normal": 3,
-      "hard": 4
+      "easy": 3,
+      "normal": 4,
+      "hard": 5
     },
     "album": "remnants-general",
     "previewStart": 0,
@@ -29,7 +29,7 @@
     {
       "t": 0,
       "b": 0,
-      "bpm": 155,
+      "bpm": 182,
       "n": 4,
       "d": 4,
       "bt": [
