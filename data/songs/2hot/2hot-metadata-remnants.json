@@ -10,7 +10,7 @@
       "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": ["bf", ""]
+      "altInstrumentals": [""]
     },
     "stage": "phillyStreetsErect",
     "noteStyle": "funkin",
@@ -21,7 +21,7 @@
     },
     "album": "remnants-general",
     "previewStart": 0,
-    "previewEnd": 0
+    "previewEnd": 15000
   },
   "generatedBy": "Friday Night Funkin' - v0.6.2",
   "timeFormat": "ms",
