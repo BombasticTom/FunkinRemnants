@@ -86,6 +86,12 @@
       "offsets": [0, 0]
     },
     {
+      "name": "ugh",
+      "prefix": "BF ugh",
+      "assetPath": "characters/BFUgh-remnants",
+      "offsets": [5, -5]
+    },
+    {
       "name": "hit",
       "prefix": "BF hit",
       "assetPath": "characters/BOYFRIEND",
