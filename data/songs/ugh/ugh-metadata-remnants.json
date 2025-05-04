@@ -2,7 +2,7 @@
   "version": "2.2.4",
   "songName": "Ugh (Remnants Mix)",
   "artist": "fishgarden",
-  "charter": "Timsondry",
+  "divisions": 96,
   "looped": false,
   "offsets": {
     "instrumental": 0,
@@ -11,6 +11,7 @@
     "altVocals": {    }
   },
   "playData": {
+    "songVariations": [    ],
     "difficulties": [
       "easy",
       "normal",
@@ -21,7 +22,13 @@
       "girlfriend": "gf-remnants",
       "opponent": "tankman-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": []
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "tankman-remnants"
+      ],
+      "playerVocals": [
+        "bf-remnants"
+      ]
     },
     "stage": "tankmanBattlefield",
     "noteStyle": "funkin",
