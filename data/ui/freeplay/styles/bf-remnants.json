@@ -4,6 +4,6 @@
   "selectorAsset": "freeplay/freeplaySelector/freeplaySelector_remnants",
   "numbersAsset": "digital_numbers_remnants",
   "capsuleAsset": "freeplay/capsule/freeplayCapsule_remnants",
-  "capsuleTextColors": ["#00ccff", "#00ccff"],
+  "capsuleTextColors": ["#BE009E", "#BE009E"],
   "startDelay": 1.0
 }
