@@ -1,0 +1,57 @@
+{
+  "version": "2.2.4",
+  "songName": "Senpai (Remnants Mix)",
+  "artist": "fishgarden",
+  "charter": "fishgarden",
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "songVariations": [    ],
+    "difficulties": [
+      "hard",
+      "normal",
+      "easy"
+    ],
+    "characters": {
+      "player": "bf-pixel-remnants",
+      "girlfriend": "gf-pixel",
+      "opponent": "senpai",
+      "instrumental": "",
+      "opponentVocals": [
+        "dad"
+      ],
+      "playerVocals": [
+        "bf"
+      ]
+    },
+    "stage": "schoolErect",
+    "noteStyle": "pixel",
+    "ratings": {
+      "hard": 6
+    },
+    "previewStart": 0,
+    "previewEnd": 13100
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.4",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 144,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}
