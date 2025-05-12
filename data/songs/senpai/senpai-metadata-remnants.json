@@ -20,10 +20,10 @@
     "characters": {
       "player": "bf-pixel-remnants",
       "girlfriend": "gf-pixel",
-      "opponent": "senpai",
+      "opponent": "senpai-remnants",
       "instrumental": "",
       "opponentVocals": [
-        "dad"
+        "senpai"
       ],
       "playerVocals": [
         "bf"
