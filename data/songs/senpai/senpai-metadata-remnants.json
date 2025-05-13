@@ -3,15 +3,7 @@
   "songName": "Senpai (Remnants Mix)",
   "artist": "fishgarden",
   "charter": "fishgarden",
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [    ],
     "difficulties": [
       "hard",
       "normal",
@@ -21,18 +13,15 @@
       "player": "bf-pixel-remnants",
       "girlfriend": "gf-pixel",
       "opponent": "senpai-remnants",
-      "instrumental": "remnants",
-      "opponentVocals": [
-        "senpai"
-      ],
-      "playerVocals": [
-        "bf"
-      ]
+      "instrumental": "remnants"
     },
+    "album": "remnants-general",
     "stage": "schoolErect",
     "noteStyle": "pixel",
     "ratings": {
-      "hard": 6
+      "hard": 6,
+      "normal": 4,
+      "easy": 2
     },
     "previewStart": 0,
     "previewEnd": 13100

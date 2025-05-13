@@ -3,16 +3,7 @@
   "songName": "Thorns (Remnants Mix)",
   "artist": "Zerolnx",
   "charter": "RhysRJJ",
-  "divisions": 96,
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [    ],
     "difficulties": [
       "easy",
       "normal",
@@ -22,21 +13,15 @@
       "player": "bf-pixel-remnants",
       "girlfriend": "gf-pixel",
       "opponent": "spirit-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "spirit-remnants"
-      ],
-      "playerVocals": [
-        "bf-pixel-remnants"
-      ]
+      "instrumental": "remnants"
     },
+    "album": "remnants-general",
     "stage": "schoolEvilErect",
     "noteStyle": "pixel",
     "ratings": {
-      "easy": 4,
-      "hard": 4,
-      "normal": 8
+      "easy": 2,
+      "hard": 8,
+      "normal": 4
     },
     "previewStart": 0,
     "previewEnd": 15000
