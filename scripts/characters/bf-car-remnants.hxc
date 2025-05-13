@@ -1,0 +1,22 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.PlayState;
+import funkin.Preferences;
+
+class BoyfriendCarRemnantsCharacter extends MultiSparrowCharacter {
+	function new() {
+		super('bf-car-remnants');
+	}
+
+	function onCreate(event:ScriptEvent) {
+		super.onCreate(event);
+
+		// Are we even getting a gameover theme or nah?
+		// GameOverSubState.musicSuffix = '-remnants';
+		// GameOverSubState.blueBallSuffix = '-remnants';
+		PauseSubState.musicSuffix = '-remnants';
+	}
+}
