@@ -1,15 +1,35 @@
 {
   "version": "2.2.4",
   "songName": "DadBattle (Remnants Mix)",
-  "artist": "",
+  "artist": "Mali",
+  "charter": "fishgarden",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
-    "difficulties": ["easy", "normal", "hard"],
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "dad-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": []
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "dad-remnants"
+      ],
+      "playerVocals": [
+        "bf-remnants"
+      ]
     },
     "stage": "mainStage",
     "noteStyle": "funkin",
@@ -20,9 +40,9 @@
     },
     "album": "remnants-week1",
     "previewStart": 0,
-    "previewEnd": 15000
+    "previewEnd": 0
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "generatedBy": "Friday Night Funkin' - v0.6.4",
   "timeFormat": "ms",
   "timeChanges": [
     {
