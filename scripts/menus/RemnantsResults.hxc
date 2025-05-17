@@ -1,0 +1,103 @@
+import flixel.FlxG;
+import funkin.ui.freeplay.FreeplayState;
+import flixel.FlxSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxSpriteUtil;
+import flixel.addons.display.FlxTiledSprite;
+import flixel.addons.display.FlxBackdrop;
+import flixel.util.FlxGradient;
+import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.modding.base.ScriptedMusicBeatSubState;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import funkin.modding.base.ScriptedMusicBeatState;
+import funkin.util.ReflectUtil;
+import funkin.PlayerSettings;
+
+/**
+ * Module for change some stuff when we are on the results screen as any remnants character!
+ */
+class RemnantsResults extends Module
+{
+	/**
+	 * Checks if the code was executed
+	 * We do this just so when we leave, it doesn't overflows the screen.
+	 */
+	var codeWasRun:Bool = false;
+
+	/**
+	 * Checks if the Results Content we added is visible or not.
+	 */
+	var contentIsVisible:Bool = false;
+
+	/**
+	 * Checks the player went back to freeplay or story mode.
+	 * Used for block some interaction while this happens.
+	 */
+	var wentBack:Bool = false;
+
+	public function new()
+	{
+		super('RemnantsResults');
+	}
+
+	/**
+	 * Necessary for make the script work.
+	 **/
+	override function onCreate(event):Void
+	{
+		super.onCreate(event);
+	}
+
+	override function onStateChangeEnd(event)
+	{
+		super.onStateChangeEnd(event);
+		codeWasRun = false;
+	}
+
+	override function onSubStateCloseEnd(event)
+	{
+		super.onSubStateCloseEnd(event);
+		codeWasRun = false;
+	}
+
+	var newBG:FlxGradient;
+
+	/**
+	 * The character that triggers this module.
+	 */
+	var CUR_CHARACTER:String = 'bf-remnants';
+
+	/**
+	 * The state this module needs to be called.
+	 */
+	var SUBSTATE_TO_GET:String = "funkin.play.ResultState";
+
+	override function onUpdate(event:UpdateScriptEvent)
+	{
+		super.onUpdate(event);
+
+		// If the current state is ResultState and the playerCharacterId is 'bf-remnants', run the code.
+		if (ReflectUtil.getClassNameOf(FlxG.state.subState) == SUBSTATE_TO_GET && FlxG.state.subState.playerCharacterId == CUR_CHARACTER)
+		{
+			if (codeWasRun == false)
+			{
+				codeWasRun = true;
+				wentBack = false;
+
+				// Our funnies go here!
+
+				newBG = FlxGradient.createGradientFlxSprite(FlxG.width, FlxG.height, [0xFF000000, 0xFF0C0C0C], 90);
+				newBG.scrollFactor.set();
+				newBG.zIndex = 11;
+				FlxG.state.subState.insert(FlxG.state.subState.members.indexOf(FlxG.state.subState.bgFlash), newBG);
+				newBG.cameras = [FlxG.state.subState.cameraBG];
+
+				// Change the BG flash color.
+				FlxG.state.subState.bgFlash.makeGraphic(FlxG.width, FlxG.height, 0xFF404040);
+			}
+		}
+	}
+}
