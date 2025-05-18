@@ -94,7 +94,7 @@
     "music": {
       "PERFECT_GOLD": "resultsPERFECT",
       "PERFECT": "resultsPERFECT",
-      "EXCELLENT": "resultsEXCELLENT",
+      "EXCELLENT": "resultsEXCELLENT-remnants",
       "GREAT": "resultsNORMAL",
       "GOOD": "resultsNORMAL",
       "SHIT": "resultsSHIT"
