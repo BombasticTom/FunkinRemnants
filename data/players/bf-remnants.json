@@ -95,8 +95,8 @@
       "PERFECT_GOLD": "resultsPERFECT",
       "PERFECT": "resultsPERFECT",
       "EXCELLENT": "resultsEXCELLENT-remnants",
-      "GREAT": "resultsNORMAL",
-      "GOOD": "resultsNORMAL",
+      "GREAT": "resultsGREAT-remnants",
+      "GOOD": "resultsGOOD-remnants",
       "SHIT": "resultsSHIT"
     },
     "perfectGold": [
