@@ -190,7 +190,7 @@
     "good": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsGOOD/bf",
+        "assetPath": "shared:resultScreen/results-remnants/resultsGOOD/bf",
         "zIndex": 501,
         "offsets": [662, 371],
 
@@ -198,7 +198,7 @@
       },
       {
         "renderType": "sparrow",
-        "assetPath": "shared:resultScreen/results-bf/resultsGOOD/resultGirlfriendGOOD",
+        "assetPath": "shared:resultScreen/results-remnants/resultsGOOD/resultGirlfriendGOOD",
         "zIndex": 500,
         "delay": 0.91,
         "offsets": [629, 323],
