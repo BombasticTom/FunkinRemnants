@@ -19,13 +19,13 @@
       "introStartFrame": 0,
       "introEndFrame": 4,
 
-      "loopStartFrame": 4,
+      "loopStartFrame": 45,
       "loopEndFrame": -1,
 
       "introBadStartFrame": 0,
       "introBadEndFrame": 4,
 
-      "loopBadStartFrame": 4,
+      "loopBadStartFrame": 29,
       "loopBadEndFrame": -1
     },
     "charSelect": {
