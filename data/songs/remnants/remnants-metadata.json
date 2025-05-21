@@ -19,7 +19,7 @@
     ],
     "characters": {
       "player": "bf",
-      "girlfriend": "gf-remnants",
+      "girlfriend": "podium-girls",
       "opponent": "bf-remnants-opponent",
       "instrumental": "",
       "altInstrumentals": [      ],
@@ -30,7 +30,7 @@
         "bf"
       ]
     },
-    "stage": "mainStage",
+    "stage": "sketchRemnants",
     "noteStyle": "funkin",
     "ratings": {
       "easy": 4,
