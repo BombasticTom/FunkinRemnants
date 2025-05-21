@@ -2,8 +2,14 @@
   "version": "2.2.4",
   "songName": "Remnants!",
   "artist": "MarkedAman",
-  "charter": "RhysRJJ",
+  "divisions": 96,
   "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
     "songVariations": [    ],
     "difficulties": [
@@ -14,7 +20,15 @@
     "characters": {
       "player": "bf",
       "girlfriend": "gf-remnants",
-      "opponent": "bf-remnants-opponent"
+      "opponent": "bf-remnants-opponent",
+      "instrumental": "",
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "bf-remnants-opponent"
+      ],
+      "playerVocals": [
+        "bf"
+      ]
     },
     "stage": "mainStage",
     "noteStyle": "funkin",
