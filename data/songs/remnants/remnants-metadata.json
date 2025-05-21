@@ -1,6 +1,6 @@
 {
   "version": "2.2.4",
-  "songName": "Remnants",
+  "songName": "Remnants!",
   "artist": "MarkedAman",
   "charter": "RhysRJJ",
   "looped": false,
@@ -14,7 +14,7 @@
     "characters": {
       "player": "bf",
       "girlfriend": "gf-remnants",
-      "opponent": "bf-remnants"
+      "opponent": "bf-remnants-opponent"
     },
     "stage": "mainStage",
     "noteStyle": "funkin",

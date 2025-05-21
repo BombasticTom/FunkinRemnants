@@ -1,0 +1,209 @@
+{
+  "version": "1.0.0",
+  "name": "Remnants BF",
+  "renderType": "multisparrow",
+  "assetPath": "characters/bf-remnants-opponent",
+  "flipX": false,
+  "singTime": 8.0,
+  "healthIcon": {
+    "id": "bf-remnants",
+    "isPixel": false
+  },
+  "animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF idle dance",
+			"indices": [],
+			"name": "idle",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				42,
+				-7
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF NOTE LEFT0",
+			"indices": [],
+			"name": "singLEFT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-15,
+				-53
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF NOTE DOWN0",
+			"indices": [],
+			"name": "singDOWN",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				3,
+				31
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF NOTE UP0",
+			"indices": [],
+			"name": "singUP",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-34,
+				-6
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF NOTE RIGHT0",
+			"indices": [],
+			"name": "singRIGHT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				2,
+				5
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF HEY!!0",
+			"indices": [],
+			"name": "hey",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				30,
+				30
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Boyfriend YEAH cheer0",
+			"indices": [],
+			"name": "cheer",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				41,
+				20
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF NOTE LEFT MISS0",
+			"indices": [],
+			"name": "singLEFTmiss",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-15,
+				-25
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF NOTE DOWN MISS0",
+			"indices": [],
+			"name": "singDOWNmiss",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				1,
+				29
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF NOTE UP MISS0",
+			"indices": [],
+			"name": "singUPmiss",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-33,
+				20
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF NOTE RIGHT MISS0",
+			"indices": [],
+			"name": "singRIGHTmiss",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				42,
+				-7
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF Censor Left0",
+			"indices": [],
+			"name": "censorLEFT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-15,
+				-53
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF Censor Down0",
+			"indices": [],
+			"name": "censorDOWN",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				3,
+				31
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF Censor Up0",
+			"indices": [],
+			"name": "censorUP",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-34,
+				-6
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "BF Censor Right0",
+			"indices": [],
+			"name": "censorRIGHT",
+			"looped": false,
+			"flipX": false
+		}
+	]
+}
