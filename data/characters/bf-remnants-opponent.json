@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Remnants BF",
+  "name": "Remnants BF (Opponent)",
   "renderType": "multisparrow",
   "assetPath": "characters/bf-remnants-opponent",
   "flipX": false,
