@@ -28,14 +28,14 @@
         "tankman-remnants"
       ],
       "playerVocals": [
-        "bf-remnants"
+        "bf-holding-gf-remnants"
       ]
     },
     "stage": "tankmanBattlefieldErect",
     "noteStyle": "funkin",
     "ratings": {
       "easy": 4,
-      "hard": 4,
+      "hard": 11,
       "normal": 6
     },
     "album": "remnants-general",

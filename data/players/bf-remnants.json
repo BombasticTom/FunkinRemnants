@@ -3,7 +3,7 @@
   "name": "Remnants BF",
   "ownedChars": ["bf-remnants", "bf-car-remnants", "bf-christmas-remnants", "bf-holding-gf-remnants", "bf-pixel-remnants", "pico-playable-remnants"],
   "showUnownedChars": false,
-  "unlocked": true,
+  "unlocked": false,
   "freeplayStyle": "bf-remnants",
   "stickerPack": "default-remnants",
   "freeplayDJ": {

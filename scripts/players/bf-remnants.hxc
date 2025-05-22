@@ -1,0 +1,14 @@
+import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.save.Save;
+
+class RemnantsPlayableCharacter extends PlayableCharacter
+{
+	function new()
+	{
+		super('bf-remnants');
+	}
+
+  override function isUnlocked():Bool {
+    return Save.instance.hasBeatenLevel('Remnants');
+  }
+}

@@ -2,10 +2,38 @@
   "version": "2.0.0",
   "scrollSpeed": {
     "easy": 2.6,
-    "normal": 2.6,
-    "hard": 2.6
+    "hard": 2.6,
+    "normal": 2.6
   },
   "events": [
+    {
+      "t": 0.142857142856883,
+      "e": "FocusCamera",
+      "v": {
+	"char": 1
+}
+    },
+    {
+      "t": 1714.28571428571,
+      "e": "FocusCamera",
+      "v": {
+	"char": 2
+}
+    },
+    {
+      "t": 3428.57142857143,
+      "e": "FocusCamera",
+      "v": {
+	"char": 0
+}
+    },
+    {
+      "t": 5142.85714285714,
+      "e": "FocusCamera",
+      "v": {
+	"char": 2
+}
+    },
     {
       "t": 6857.14285714286,
       "e": "FocusCamera",
@@ -168,21 +196,21 @@
 }
     },
     {
-      "t": 74571.4285714286,
+      "t": 74607.1428571428,
       "e": "PlayAnimation",
       "v": {
-	"target": "dad",
+	"anim": "singRIGHTmiss",
 	"force": false,
-	"anim": "singRIGHTmiss"
+	"target": "dad"
 }
     },
     {
-      "t": 74946.4285714286,
+      "t": 74892.8571428571,
       "e": "PlayAnimation",
       "v": {
-	"target": "dad",
+	"anim": "censorDOWN",
 	"force": true,
-	"anim": "censorDOWN"
+	"target": "dad"
 }
     },
     {
@@ -293,7 +321,6 @@
   ],
   "notes": {
     "easy": [    ],
-    "normal": [    ],
     "hard": [
       {
         "t": 6857.14285714286,
@@ -4831,7 +4858,8 @@
         "k": "normal",
         "p": [        ]
       }
-    ]
+    ],
+    "normal": [    ]
   },
   "generatedBy": "Friday Night Funkin' - v0.6.4"
 }
