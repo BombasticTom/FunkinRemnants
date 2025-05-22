@@ -5,7 +5,6 @@ import funkin.ui.PixelatedIcon;
 
 /**
  * This module's main focus is to only fix some freeplay icons and prevent duplicated sprites.
- * At the moment, the only song that needs this is `Roses (Remnants Mix)`.
  * Made by `Honton129` for `Funkin' Remnants Mix`.
  */
 class RemnantsPixelIcons extends Module
@@ -15,12 +14,6 @@ class RemnantsPixelIcons extends Module
    * We need this boolean just so the script doesn't applies the code every frame even when it was already done.
    */
   var iconFix:Bool = false;
-
-  /**
-   * The song we want to apply the fix.
-   * TO-DO: Get rid of this variable when there's more than one song that needs the fix.
-   */
-  var songToCheck:String = 'Roses (Remnants Mix)';
 
   public function new()
   {
@@ -51,12 +44,20 @@ class RemnantsPixelIcons extends Module
         if (capsuleGroup.members[i].songText != null)
         {
           // Roses (Remnants Mix)
-          if (capsuleGroup.members[i].songText.text == songToCheck)
+          if (capsuleGroup.members[i].songText.text == 'Roses (Remnants Mix)')
           {
             capsuleGroup.members[i].pixelIcon.setCharacter('senpai-remnants');
           }
+
+          // Remnants!
+          if (capsuleGroup.members[i].songText.text == 'Remnants!')
+          {
+            capsuleGroup.members[i].pixelIcon.setCharacter('bf-remnants');
+          }
         }
       }
+
+      // Close the function.
       iconFix = true;
     }
   }

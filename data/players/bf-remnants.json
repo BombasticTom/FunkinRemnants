@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Remnants BF",
-  "ownedChars": ["bf-remnants", "bf-car-remnants", "bf-christmas-remnants", "bf-holding-gf-remnants", "bf-pixel-remnants", "pico-playable-remnants"],
+  "ownedChars": ["bf-remnants", "bf-car-remnants", "bf-christmas-remnants", "bf-holding-gf-remnants", "bf-pixel-remnants", "pico-playable-remnants", "bf-remnants-opponent"],
   "showUnownedChars": false,
   "unlocked": false,
   "freeplayStyle": "bf-remnants",

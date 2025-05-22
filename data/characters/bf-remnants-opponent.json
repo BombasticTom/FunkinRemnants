@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Remnants BF",
+  "name": "Remnants BF (Opponent)",
   "renderType": "multisparrow",
   "assetPath": "characters/bf-remnants-opponent",
   "flipX": false,
@@ -110,7 +110,7 @@
 			"frameRate": 24,
 			"prefix": "BF NOTE LEFT MISS0",
 			"indices": [],
-			"name": "singLEFTmiss",
+			"name": "singLEFT-miss",
 			"looped": false,
 			"flipX": false
 		},
@@ -123,7 +123,7 @@
 			"frameRate": 24,
 			"prefix": "BF NOTE DOWN MISS0",
 			"indices": [],
-			"name": "singDOWNmiss",
+			"name": "singDOWN-miss",
 			"looped": false,
 			"flipX": false
 		},
@@ -136,7 +136,7 @@
 			"frameRate": 24,
 			"prefix": "BF NOTE UP MISS0",
 			"indices": [],
-			"name": "singUPmiss",
+			"name": "singUP-miss",
 			"looped": false,
 			"flipX": false
 		},
@@ -149,7 +149,7 @@
 			"frameRate": 24,
 			"prefix": "BF NOTE RIGHT MISS0",
 			"indices": [],
-			"name": "singRIGHTmiss",
+			"name": "singRIGHT-miss",
 			"looped": false,
 			"flipX": false
 		},
@@ -162,7 +162,7 @@
 			"frameRate": 24,
 			"prefix": "BF Censor Left0",
 			"indices": [],
-			"name": "censorLEFT",
+			"name": "singLEFT-censor",
 			"looped": false,
 			"flipX": false
 		},
@@ -175,7 +175,7 @@
 			"frameRate": 24,
 			"prefix": "BF Censor Down0",
 			"indices": [],
-			"name": "censorDOWN",
+			"name": "singDOWN-censor",
 			"looped": false,
 			"flipX": false
 		},
@@ -188,7 +188,7 @@
 			"frameRate": 24,
 			"prefix": "BF Censor Up0",
 			"indices": [],
-			"name": "censorUP",
+			"name": "singUP-censor",
 			"looped": false,
 			"flipX": false
 		},
@@ -201,7 +201,7 @@
 			"frameRate": 24,
 			"prefix": "BF Censor Right0",
 			"indices": [],
-			"name": "censorRIGHT",
+			"name": "singRIGHT-censor",
 			"looped": false,
 			"flipX": false
 		}

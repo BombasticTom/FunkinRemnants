@@ -1,7 +1,6 @@
 {
   "version": "1.0.0",
   "name": "FUNKIN' REMNANTS",
-  "visible": true,
   "titleAsset": "storymenu/titles/remnants",
   "props": [
     {

@@ -2,16 +2,7 @@
   "version": "2.2.4",
   "songName": "Remnants!",
   "artist": "MarkedAman",
-  "divisions": 96,
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [    ],
     "difficulties": [
       "easy",
       "normal",
@@ -20,15 +11,7 @@
     "characters": {
       "player": "bf",
       "girlfriend": "podium-girls",
-      "opponent": "bf-remnants-opponent",
-      "instrumental": "",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "bf-remnants-opponent"
-      ],
-      "playerVocals": [
-        "bf"
-      ]
+      "opponent": "bf-remnants-opponent"
     },
     "stage": "sketchRemnants",
     "noteStyle": "funkin",
@@ -39,7 +22,7 @@
     },
     "album": "remnants-week1",
     "previewStart": 0,
-    "previewEnd": 0
+    "previewEnd": 14000
   },
   "generatedBy": "Friday Night Funkin' - v0.6.4",
   "timeFormat": "ms",

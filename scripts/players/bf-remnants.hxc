@@ -1,7 +1,7 @@
 import funkin.ui.freeplay.charselect.PlayableCharacter;
 import funkin.save.Save;
 
-class RemnantsPlayableCharacter extends PlayableCharacter
+class BFRemnantsPlayableCharacter extends PlayableCharacter
 {
 	function new()
 	{
@@ -9,6 +9,6 @@ class RemnantsPlayableCharacter extends PlayableCharacter
 	}
 
   override function isUnlocked():Bool {
-    return Save.instance.hasBeatenLevel('Remnants');
+    return Save.instance.hasBeatenLevel('remnants-week');
   }
 }
