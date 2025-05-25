@@ -2,7 +2,6 @@
   "version": "2.2.4",
   "songName": "Remnants!",
   "artist": "MarkedAman",
-  "charter": "Chara, Plush",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -19,7 +18,7 @@
       "hard"
     ],
     "characters": {
-      "player": "bf",
+      "player": "bf-regular-remnants",
       "girlfriend": "podium-girls",
       "opponent": "bf-remnants-opponent",
       "instrumental": "",
@@ -28,7 +27,7 @@
         "bf-remnants-opponent"
       ],
       "playerVocals": [
-        "bf"
+        "bf-regular-remnants"
       ]
     },
     "stage": "sketchRemnants",
