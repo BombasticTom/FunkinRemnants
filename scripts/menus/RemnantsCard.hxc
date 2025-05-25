@@ -4,6 +4,7 @@ import flixel.FlxSprite;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxSpriteUtil;
+import funkin.audio.FunkinSound;
 import flixel.addons.display.FlxTiledSprite;
 import flixel.addons.display.FlxBackdrop;
 import funkin.ui.freeplay.BGScrollingText;
@@ -39,6 +40,11 @@ class RemnantsCard extends Module
 	 * Used for block some interaction while this happens.
 	 */
 	var wentBack:Bool = false;
+
+	/**
+	 * Prevents the Custom Random Theme from playing more than one time.
+	 */
+	var playingMusic:Bool = false;
 
 	public function new()
 	{
@@ -163,6 +169,23 @@ class RemnantsCard extends Module
 			}
 			else {
 				// Stop the card creation logic.
+			}
+
+			if (FlxG.state.subState.curSelected == 0)
+			{
+				if (!playingMusic) {
+					FunkinSound.playMusic('freeplayRandom-remnants',
+					{
+						startingVolume: 0.0,
+						overrideExisting: true,
+						restartTrack: false
+					});
+					FlxG.sound.music.fadeIn(2, 0, 0.8);
+					playingMusic = true;
+				}
+			}
+			else {
+				playingMusic = false;
 			}
 
 			if (FlxG.state.subState.dj != null)
