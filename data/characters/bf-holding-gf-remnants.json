@@ -39,6 +39,11 @@
       "offsets": [0, 0]
     },
     {
+      "name": "hey",
+      "prefix": "BF HEY!!0",
+      "offsets": [0, 0]
+    },
+    {
       "name": "singLEFT",
       "prefix": "BF NOTE LEFT0",
       "offsets": [12, 7]
