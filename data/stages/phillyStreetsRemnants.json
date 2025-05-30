@@ -48,8 +48,8 @@
 			"zIndex": 59,
 			"danceEvery": 0,
 			"position": [
-				880,
-				502
+				910,
+				530
 			],
 			"scale": [
 				1,
@@ -71,7 +71,7 @@
 			"zIndex": 60,
 			"danceEvery": 0,
 			"position": [
-				632,
+				630,
 				255
 			],
 			"scale": [
@@ -88,6 +88,27 @@
 				1
 			],
 			"assetPath": "stages/weekEnd1Remnants/StreetlightsFront",
+			"animations": []
+		},
+		{
+			"danceEvery": 0,
+			"zIndex": 49,
+			"position": [
+				950,
+				860
+			],
+			"scale": [
+				1,
+				1
+			],
+			"animType": "sparrow",
+			"name": "fence",
+			"isPixel": false,
+			"assetPath": "stages/weekEnd1Remnants/Fence",
+			"scroll": [
+				0.95,
+				1
+			],
 			"animations": []
 		},
 		{
