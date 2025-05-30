@@ -145,7 +145,7 @@ class MILFSong extends Song {
 	var currentHenchmenIndex = 1;
 
 	function createGib(type:Int):FunkinSprite {
-		var gibSprite:FunkinSprite = FunkinSprite.createSparrow(0, 0, 'week4/limoRemnants/henchmen');
+		var gibSprite:FunkinSprite = FunkinSprite.createSparrow(0, 0, 'stages/week4Remnants/henchmen');
 		gibSprite.angle = FlxG.random.int(0, 360);
 		gibSprite.active = true;
 		gibSprite.velocity.x = FlxG.random.int(-20, -1000);
@@ -201,7 +201,7 @@ class MILFSong extends Song {
 		PlayState.instance.currentStage.add(legGib);
 		gibs.push(legGib);
 
-		var bloodEffect = FunkinSprite.createSparrow(0, 0, 'week4/limoRemnants/effects');
+		var bloodEffect = FunkinSprite.createSparrow(0, 0, 'stages/week4Remnants/effects');
 		bloodEffect.x = target.getGraphicMidpoint().x - 100;
 		bloodEffect.y = target.getGraphicMidpoint().y - 200;
 		bloodEffect.angle = -90;

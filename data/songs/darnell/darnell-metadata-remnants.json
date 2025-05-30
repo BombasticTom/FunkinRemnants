@@ -12,7 +12,7 @@
       "instrumental": "remnants",
       "altInstrumentals": ["bf", ""]
     },
-    "stage": "phillyStreetsErect",
+    "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
     "ratings": {
       "easy": 2,
@@ -21,7 +21,7 @@
     },
     "album": "remnants-general",
     "previewStart": 0,
-    "previewEnd": 0
+    "previewEnd": 14000
   },
   "generatedBy": "Friday Night Funkin' - v0.6.2",
   "timeFormat": "ms",

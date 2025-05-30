@@ -11,7 +11,7 @@
         "animType": "sparrow",
         "isPixel": false,
         "scroll": [0.1, 0.1],
-        "assetPath": "week4/limoRemnants/limoSunset",
+        "assetPath": "stages/week4Remnants/limoSunset",
         "animations": []
       },
   
@@ -23,7 +23,7 @@
         "name": "bgPole1",
         "isPixel": false,
         "scroll": [1, 1],
-        "assetPath": "week4/limoRemnants/highwayPoleTall"
+        "assetPath": "stages/week4Remnants/highwayPoleTall"
       },
       {
         "zIndex": 15,
@@ -33,7 +33,7 @@
         "name": "bgPole2",
         "isPixel": false,
         "scroll": [1, 1],
-        "assetPath": "week4/limoRemnants/highwayPoleTall"
+        "assetPath": "stages/week4Remnants/highwayPoleTall"
       },
   
       {
@@ -43,7 +43,7 @@
         "name": "bgLight1",
         "isPixel": false,
         "scroll": [1, 1],
-        "assetPath": "week4/limoRemnants/highwayLight"
+        "assetPath": "stages/week4Remnants/highwayLight"
       },
       {
         "zIndex": 15,
@@ -52,7 +52,7 @@
         "name": "bgLight2",
         "isPixel": false,
         "scroll": [1, 1],
-        "assetPath": "week4/limoRemnants/highwayLight"
+        "assetPath": "stages/week4Remnants/highwayLight"
       },
   
       {
@@ -62,7 +62,7 @@
         "name": "boyfriendLightPole",
         "isPixel": false,
         "scroll": [1, 1],
-        "assetPath": "week4/limoRemnants/highwayPole"
+        "assetPath": "stages/week4Remnants/highwayPole"
       },
       {
         "zIndex": 20,
@@ -74,7 +74,7 @@
         "isPixel": false,
         "startingAnimation": "drive",
         "scroll": [0.4, 0.4],
-        "assetPath": "week4/limoRemnants/bgLimo",
+        "assetPath": "stages/week4Remnants/bgLimo",
         "animations": [
           {
             "offsets": [0, 0],
@@ -97,7 +97,7 @@
         "isPixel": false,
         "startingAnimation": "drive",
         "scroll": [1, 1],
-        "assetPath": "week4/limoRemnants/limoDrive",
+        "assetPath": "stages/week4Remnants/limoDrive",
         "animations": [
           {
             "offsets": [0, 0],
@@ -119,7 +119,7 @@
         "animType": "sparrow",
         "isPixel": false,
         "scroll": [1, 1],
-        "assetPath": "week4/limoRemnants/fastCarLol",
+        "assetPath": "stages/week4Remnants/fastCarLol",
         "animations": []
       },
       {
@@ -129,7 +129,7 @@
         "name": "boyfriendLight",
         "isPixel": false,
         "scroll": [1, 1],
-        "assetPath": "week4/limoRemnants/highwayLight"
+        "assetPath": "stages/week4Remnants/highwayLight"
       },
       {
         "zIndex": 30,
@@ -141,7 +141,7 @@
         "isPixel": false,
         "startingAnimation": "danceLeft",
         "scroll": [0.4, 0.4],
-        "assetPath": "week4/limoRemnants/henchmen",
+        "assetPath": "stages/week4Remnants/henchmen",
         "animations": [
           {
             "offsets": [0, 0],
@@ -195,7 +195,7 @@
         "isPixel": false,
         "startingAnimation": "danceLeft",
         "scroll": [0.4, 0.4],
-        "assetPath": "week4/limoRemnants/henchmen",
+        "assetPath": "stages/week4Remnants/henchmen",
         "animations": [
           {
             "offsets": [0, 0],
@@ -249,7 +249,7 @@
         "isPixel": false,
         "startingAnimation": "danceLeft",
         "scroll": [0.4, 0.4],
-        "assetPath": "week4/limoRemnants/henchmen",
+        "assetPath": "stages/week4Remnants/henchmen",
         "animations": [
           {
             "offsets": [0, 0],
@@ -303,7 +303,7 @@
         "isPixel": false,
         "startingAnimation": "danceLeft",
         "scroll": [0.4, 0.4],
-        "assetPath": "week4/limoRemnants/henchmen",
+        "assetPath": "stages/week4Remnants/henchmen",
         "animations": [
           {
             "offsets": [0, 0],
@@ -357,7 +357,7 @@
         "isPixel": false,
         "startingAnimation": "danceLeft",
         "scroll": [0.4, 0.4],
-        "assetPath": "week4/limoRemnants/henchmen",
+        "assetPath": "stages/week4Remnants/henchmen",
         "animations": [
           {
             "offsets": [0, 0],

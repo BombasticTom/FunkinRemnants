@@ -171,11 +171,12 @@ class RemnantsCard extends Module
 				// Stop the card creation logic.
 			}
 
-			if (FlxG.state.subState.curSelected == 0)
+			if (FlxG.state.subState.curSelected == 0 || FlxG.state.subState.fromCharSelect)
 			{
 				if (!playingMusic) {
-					FunkinSound.playMusic('freeplayRandom-remnants',
-					{
+					if (FlxG.sound.music != null) FlxG.sound.music.stop();
+					if (FlxG.sound.music.playing) FlxG.sound.music.stop();
+					FunkinSound.playMusic('freeplayRandom-remnants', {
 						startingVolume: 0.0,
 						overrideExisting: true,
 						restartTrack: false
