@@ -102,14 +102,14 @@
     "perfectGold": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsPERFECT/bed",
+        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/bed",
         "zIndex": 500,
         "offsets": [1342, 370],
         "loopFrameLabel": "LOOP START"
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsPERFECT/hearts",
+        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/hearts",
         "zIndex": 501,
         "delay": 4.41,
         "offsets": [1342, 370],
@@ -119,7 +119,7 @@
     "perfect": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsPERFECT/bed",
+        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/bed",
         "startFrameLabel": "INTRO",
         "filter": "naughty",
         "zIndex": 500,
@@ -128,7 +128,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsPERFECT/hearts",
+        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/hearts",
         "filter": "naughty",
         "zIndex": 501,
         "delay": 4.41,
@@ -137,7 +137,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsPERFECT/bed",
+        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/bed",
         "startFrameLabel": "INTRO 2",
         "filter": "safe",
         "zIndex": 500,
@@ -146,7 +146,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-bf/resultsPERFECT/tickleFight",
+        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/tickleFight",
         "filter": "safe",
         "zIndex": 501,
         "delay": 4.41,
