@@ -1,26 +1,16 @@
 import flixel.FlxG;
-import flixel.FlxSprite;
 import flixel.math.FlxMath;
-import flixel.math.FlxPoint;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import funkin.audio.FunkinSound;
-import funkin.audio.FunkinSound;
 import funkin.Conductor;
-import funkin.graphics.framebuffer.BitmapDataUtil;
-import funkin.graphics.framebuffer.FixedBitmapData;
-import funkin.graphics.shaders.OverlayBlend;
 import funkin.graphics.shaders.RuntimeRainShader;
-import funkin.modding.base.ScriptedFlxRuntimeShader;
 import funkin.play.PlayState;
 import funkin.play.stage.Stage;
-import openfl.filters.BlurFilter;
 import openfl.filters.ShaderFilter;
-import funkin.util.FlxTweenUtil;
-import flixel.addons.display.FlxTiledSprite;
 import flixel.addons.display.FlxBackdrop;
-import funkin.graphics.shaders.AdjustColorShader;
+import funkin.util.FlxTweenUtil;
 import StringTools;
 
 class PhillyStreetsRemnantsStage extends Stage
@@ -34,8 +24,6 @@ class PhillyStreetsRemnantsStage extends Stage
 	// these values are also used for the rain sound effect volume intensity!
 	var rainShaderStartIntensity:Float;
 	var rainShaderEndIntensity:Float;
-
-	var colorShader:AdjustColorShader;
 
 	function new()
 	{
@@ -85,8 +73,6 @@ class PhillyStreetsRemnantsStage extends Stage
 	override function buildStage()
 	{
 		super.buildStage();
-
-		colorShader = new AdjustColorShader();
 
 		mist0 = new FlxBackdrop(Paths.image('stages/weekEnd1Remnants/mistMid'), 0x01);
 		mist0.setPosition(-650, 250);
@@ -195,13 +181,9 @@ class PhillyStreetsRemnantsStage extends Stage
 			rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
 			rainShader.update(event.elapsed);
 		}
-
-		colorShader.hue = -5;
-		colorShader.saturation = -40;
-		colorShader.contrast = -25;
-		colorShader.brightness = -20;
     }
 
+	var paperTimer:FlxTimer;
 	function onBeatHit(event:SongTimeScriptEvent)
 	{
 		super.onBeatHit(event);
@@ -214,10 +196,31 @@ class PhillyStreetsRemnantsStage extends Stage
 			paper.y = 608 + FlxG.random.float(-150,150);
 			FlxTween.tween(paper, {x: paper.x - 250}, 2);
 			paperInterruptable = false;
-			new FlxTimer().start(2, function(tmr:FlxTimer)
+			paperTimer = new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
 				resetPaper();
 			});
+		}
+	}
+
+	public override function onPause(event:PauseScriptEvent)
+	{
+		super.onPause(event);
+		var paper = getNamedProp('paper');
+		if (paper != null) {
+			FlxTweenUtil.pauseTweensOf(paper);
+			if (paperTimer != null) paperTimer.active = false;
+		}
+	}
+
+	public override function onResume(event:ScriptEvent)
+	{
+		super.onResume(event);
+
+		var paper = getNamedProp('paper');
+		if (paper != null) {
+			FlxTweenUtil.resumeTweensOf(paper);
+			if (paperTimer != null) paperTimer.active = true;
 		}
 	}
 
@@ -236,6 +239,7 @@ class PhillyStreetsRemnantsStage extends Stage
 	}
 
 	function resetPaper() {
+		if (paperTimer != null) paperTimer.destroy();
 		var paper = getNamedProp('paper');
 		FlxTween.cancelTweensOf(paper);
 		paperInterruptable = true;
