@@ -1,0 +1,43 @@
+{
+  "version": "2.2.4",
+  "songName": "Pico (Remnants Mix)",
+  "artist": "Loopy",
+  "charter": "RhysRJJ",
+  "playData": {
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf-remnants",
+      "girlfriend": "gf-remnants",
+      "opponent": "pico-remnants",
+      "instrumental": "remnants",
+      "altInstrumentals": []
+    },
+    "stage": "phillyTrainErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 3,
+      "normal": 4,
+      "hard": 5
+    },
+    "album": "remnants-general",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 175,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}
