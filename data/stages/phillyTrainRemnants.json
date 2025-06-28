@@ -119,6 +119,18 @@
       "assetPath": "stages/week3Remnants/street",
       "scroll": [1, 1],
       "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 350,
+      "position": [25, 825],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "hatch",
+      "isPixel": false,
+      "assetPath": "stages/week3Remnants/hatch",
+      "scroll": [1, 1],
+      "animations": []
     }
   ],
   "cameraZoom": 1.1,
