@@ -13,7 +13,7 @@ import flixel.addons.display.FlxBackdrop;
 import funkin.util.FlxTweenUtil;
 import StringTools;
 
-class PhillyStreetsRemnantsStage extends Stage
+class PhillyAlleywayStage extends Stage
 {
 	var rainShader:RuntimeRainShader = new RuntimeRainShader();
 	var rainShaderFilter:ShaderFilter;
@@ -27,7 +27,7 @@ class PhillyStreetsRemnantsStage extends Stage
 
 	function new()
 	{
-		super('phillyStreetsRemnants');
+		super('phillyAlleyway');
 	}
 
 	override function onCountdownStart(event:ScriptEvent) {
