@@ -8,7 +8,7 @@
       "animType": "sparrow",
       "name": "sky",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebSky",
+      "assetPath": "stages/week6Remnants/remnantsSky",
       "scroll": [0.2, 0.2],
       "animations": []
     },
@@ -32,7 +32,7 @@
       "animType": "sparrow",
       "name": "backTrees",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebBackTrees",
+      "assetPath": "stages/week6Remnants/remnantsBackTrees",
       "scroll": [0.5, 0.5],
       "animations": []
     },
@@ -44,7 +44,7 @@
       "animType": "sparrow",
       "name": "street",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebStreet",
+      "assetPath": "stages/week6Remnants/remnantsStreet",
       "scroll": [1, 1],
       "animations": []
     },
@@ -56,7 +56,7 @@
       "animType": "sparrow",
       "name": "treesFG",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebTreesBack",
+      "assetPath": "stages/week6Remnants/remnantsTreesBack",
       "scroll": [1, 1],
       "animations": []
     },
@@ -69,7 +69,7 @@
       "name": "treesBG",
       "startingAnimation": "treeLoop",
       "isPixel": true,
-      "assetPath": "weeb/erect/weebTrees",
+      "assetPath": "stages/week6Remnants/remnantsTrees",
       "scroll": [1, 1],
       "animations": [
         {
@@ -94,7 +94,7 @@
       "name": "petals",
       "startingAnimation": "leaves",
       "isPixel": true,
-      "assetPath": "weeb/erect/petals",
+      "assetPath": "stages/week6Remnants/petals",
       "scroll": [0.85, 0.85],
       "animations": [
         {
@@ -117,7 +117,7 @@
       "name": "freaks",
       "startingAnimation": "danceLeft",
       "isPixel": true,
-      "assetPath": "weeb/bgFreaks",
+      "assetPath": "stages/week6Remnants/bgFreaks",
       "scroll": [0.9, 0.9],
       "alpha": 0,
       "animations": [

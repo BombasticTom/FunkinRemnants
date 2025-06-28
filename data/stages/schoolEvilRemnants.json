@@ -15,7 +15,7 @@
       "animType": "sparrow",
       "name": "evilSchoolBG",
       "isPixel": true,
-      "assetPath": "weeb/erect/evilSchoolBG",
+      "assetPath": "stages/week6Remnants/evilSchoolBG-remnants",
       "scroll": [1, 1],
       "animations": []
     }
