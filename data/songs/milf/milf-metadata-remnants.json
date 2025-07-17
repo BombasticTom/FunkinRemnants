@@ -2,27 +2,44 @@
   "version": "2.2.4",
   "songName": "M.I.L.F (Remnants Mix)",
   "artist": "",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
-    "difficulties": ["easy", "normal", "hard"],
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
     "characters": {
       "player": "bf-car-remnants",
       "girlfriend": "gf-car-remnants",
       "opponent": "mom-car-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [""]
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "mom-car-remnants"
+      ],
+      "playerVocals": [
+        "bf-car-remnants"
+      ]
     },
     "stage": "limoRideRemnants",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 1,
-      "normal": 10,
-      "hard": 4
+      "hard": 0,
+      "normal": 0
     },
-    "album": "remnants-general",
     "previewStart": 0,
-    "previewEnd": 0
+    "previewEnd": 15000
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "generatedBy": "Friday Night Funkin' - v0.6.4",
   "timeFormat": "ms",
   "timeChanges": [
     {
