@@ -80,7 +80,7 @@
             "offsets": [0, 0],
             "flipY": false,
             "frameRate": 24,
-            "prefix": "background limo pink",
+            "prefix": "BG limo",
             "name": "drive",
             "looped": true,
             "flipX": false
@@ -90,7 +90,7 @@
       {
         "zIndex": 150,
         "danceEvery": 0,
-        "position": [-120, 550],
+        "position": [-120, 540],
         "scale": [1, 1],
         "name": "limo",
         "animType": "sparrow",
