@@ -113,7 +113,7 @@
       {
         "zIndex": 500,
         "danceEvery": 0,
-        "position": [-300, 160],
+        "position": [-5000, 250],
         "scale": [1, 1],
         "name": "fastCar",
         "animType": "sparrow",
