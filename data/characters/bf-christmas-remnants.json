@@ -1,10 +1,10 @@
 {
   "version": "1.0.0",
   "name": "Remnants BF (Christmas)",
-  "assetPath": "characters/bfChristmas",
+  "assetPath": "characters/bfChristmas-remnants",
   "flipX": true,
   "healthIcon": {
-    "id": "bf"
+    "id": "bf-remnants"
   },
   "renderType": "multisparrow",
   "singTime": 8.0,
