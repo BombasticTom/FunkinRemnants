@@ -32,10 +32,8 @@
     },
     "stage": "limoRideRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "hard": 0,
-      "normal": 0
-    },
+    "ratings": { "easy": 1, "normal": 2, "hard": 3 },
+    "album": "remnants-week4",
     "previewStart": 0,
     "previewEnd": 15000
   },
