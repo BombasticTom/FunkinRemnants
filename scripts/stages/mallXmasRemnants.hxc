@@ -26,7 +26,7 @@ class MallXmasRemnantsStage extends Stage
 		// Create a single color shader and reuse it.
     colorShader = new AdjustColorShader();
 		colorShader.hue = 5;
-		colorShader.saturation = 20;
+		colorShader.saturation = 5;
 
 		getNamedProp('santa').shader = colorShader;
 	}
