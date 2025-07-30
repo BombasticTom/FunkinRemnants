@@ -10,12 +10,48 @@
     {
       "danceEvery": 0,
       "zIndex": 20,
-      "position": [-200, 18],
+      "position": [-816, -38],
       "scale": [6, 6],
       "animType": "sparrow",
-      "name": "evilSchoolBG",
+      "name": "school",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/evilSchoolBG-remnants",
+      "assetPath": "stages/week6Remnants/evil/weebSchool",
+      "scroll": [0.75, 0.75],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 15,
+      "position": [-842, -80],
+      "scale": [6, 6],
+      "animType": "sparrow",
+      "name": "backTrees",
+      "isPixel": true,
+      "assetPath": "stages/week6Remnants/evil/weebBackTrees",
+      "scroll": [0.5, 0.5],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 30,
+      "position": [-662, 6],
+      "scale": [6, 6],
+      "animType": "sparrow",
+      "name": "street",
+      "isPixel": true,
+      "assetPath": "stages/week6Remnants/evil/weebStreet",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 30,
+      "position": [-662, 6],
+      "scale": [6, 6],
+      "animType": "sparrow",
+      "name": "trees",
+      "isPixel": true,
+      "assetPath": "stages/week6Remnants/evil/weebTrees",
       "scroll": [1, 1],
       "animations": []
     }
@@ -25,16 +61,15 @@
   "characters": {
     "bf": {
       "zIndex": 300,
-      "position": [1139, 908],
-      "cameraOffsets": [-200, -100]
+      "cameraOffsets": [-200, -94],
+      "position": [1168, 900]
     },
     "dad": {
       "zIndex": 200,
-      "position": [84, 718],
-      "cameraOffsets": [410, 250]
+      "position": [0, 648],
+      "cameraOffsets": [440, 270]
     },
-    "gf": { "zIndex": 100, "cameraOffsets": [0, 0], "position": [840, 766] }
+    "gf": { "zIndex": 100, "cameraOffsets": [40, 40], "position": [724, 823] }
   },
-  "name": "School (Hate) [Remnants]",
-  "directory": "week6"
+  "name": "School (Hate) [Remnants]"
 }

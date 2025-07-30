@@ -3,60 +3,60 @@
     {
       "danceEvery": 0,
       "zIndex": 10,
-      "position": [-164, -78],
+      "position": [-626, -78],
       "scale": [6, 6],
       "animType": "sparrow",
       "name": "sky",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/remnantsSky",
+      "assetPath": "stages/week6Remnants/weebSky",
       "scroll": [0.2, 0.2],
       "animations": []
     },
     {
       "danceEvery": 0,
       "zIndex": 20,
-      "position": [-216, -38],
+      "position": [-816, -38],
       "scale": [6, 6],
       "animType": "sparrow",
       "name": "school",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/remnantsSchool",
+      "assetPath": "stages/week6Remnants/weebSchool",
       "scroll": [0.75, 0.75],
       "animations": []
     },
     {
       "danceEvery": 0,
       "zIndex": 15,
-      "position": [-242, -80],
+      "position": [-842, -80],
       "scale": [6, 6],
       "animType": "sparrow",
       "name": "backTrees",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/remnantsBackTrees",
+      "assetPath": "stages/week6Remnants/weebBackTrees",
       "scroll": [0.5, 0.5],
       "animations": []
     },
     {
       "danceEvery": 0,
       "zIndex": 30,
-      "position": [-200, 6],
+      "position": [-662, 6],
       "scale": [6, 6],
       "animType": "sparrow",
       "name": "street",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/remnantsStreet",
+      "assetPath": "stages/week6Remnants/weebStreet",
       "scroll": [1, 1],
       "animations": []
     },
     {
       "danceEvery": 0,
       "zIndex": 40,
-      "position": [-200, 6],
+      "position": [-500, 6],
       "scale": [6, 6],
       "animType": "sparrow",
       "name": "treesFG",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/remnantsTreesBack",
+      "assetPath": "stages/week6Remnants/weebTreesBack",
       "scroll": [1, 1],
       "animations": []
     },
@@ -69,7 +69,7 @@
       "name": "treesBG",
       "startingAnimation": "treeLoop",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/remnantsTrees",
+      "assetPath": "stages/week6Remnants/weebTrees",
       "scroll": [1, 1],
       "animations": [
         {
@@ -109,17 +109,16 @@
       ]
     },
     {
-      "zIndex": 0,
+      "zIndex": 80,
       "danceEvery": 1,
-      "position": [-100, 190],
+      "position": [-646, 222],
       "scale": [6, 6],
       "animType": "sparrow",
       "name": "freaks",
       "startingAnimation": "danceLeft",
       "isPixel": true,
       "assetPath": "stages/week6Remnants/bgFreaks",
-      "scroll": [0.9, 0.9],
-      "alpha": 0,
+      "scroll": [1, 1],
       "animations": [
         {
           "offsets": [0, 0],
@@ -176,13 +175,8 @@
       "cameraOffsets": [-200, -94],
       "position": [1168, 900]
     },
-    "dad": {
-      "zIndex": 200,
-      "cameraOffsets": [160, 0],
-      "position": [306, 960]
-    },
-    "gf": { "zIndex": 100, "cameraOffsets": [40, 40], "position": [724, 763] }
+    "dad": { "zIndex": 200, "cameraOffsets": [160, 0], "position": [306, 960] },
+    "gf": { "zIndex": 100, "cameraOffsets": [40, 40], "position": [724, 823] }
   },
-  "name": "School (Date) [Remnants]",
-  "directory": "week6"
+  "name": "School (Date) [Remnants]"
 }

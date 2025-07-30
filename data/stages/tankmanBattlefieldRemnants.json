@@ -1,50 +1,221 @@
 {
   "version": "1.0.0",
   "name": "Tankman Battlefield (Remnants)",
-  "cameraZoom": 0.7,
+  "cameraZoom": 0.9,
   "props": [
     {
-      "name": "bg",
-      "assetPath": "erect/bg",
-      "position": [-985, -805],
-      "scale": [1.15, 1.15],
+      "name": "tankSky",
+      "assetPath": "stages/week7Remnants/tankSky",
+      "position": [-2000, -400],
+      "scale": [4, 1],
       "zIndex": 10,
-      "scroll": [1, 1]
+      "scroll": [0, 0]
     },
     {
-      "name": "sniper",
-      "assetPath": "erect/sniper",
-      "zIndex": 20,
-      "position": [-127, 349],
-      "scale": [1.15, 1.15],
-      "scroll": [1, 1],
-      "danceEvery": 2,
+      "name": "solid",
+      "assetPath": "#E3A26D",
+      "position": [-500, -1000],
+      "scale": [2400, 2000],
+      "scroll": [0, 0]
+    },
+    {
+      "name": "mountains",
+      "assetPath": "stages/week7Remnants/mountains2",
+      "position": [-500, -35],
+      "scale": [1.2, 1.2],
+      "zIndex": 11,
+      "scroll": [0.2, 0.2]
+    },
+    {
+      "name": "buildings",
+      "assetPath": "stages/week7Remnants/tankBuildings",
+      "position": [-260, -35],
+      "scale": [1.1, 1.1],
+      "zIndex": 13,
+      "scroll": [0.3, 0.3]
+    },
+    {
+      "name": "ruins",
+      "assetPath": "stages/week7Remnants/cityruins2",
+      "position": [-200, 150],
+      "scale": [1.1, 1.1],
+      "zIndex": 13,
+      "scroll": [0.35, 0.35]
+    },
+    {
+      "name": "clouds2",
+      "assetPath": "stages/week7Remnants/tankClouds",
+      "scale": [1, 1],
+      "position": [0, 0],
+      "zIndex": 11,
+      "scroll": [0.4, 0.4],
+      "alpha": 0
+    },
+    {
+      "name": "smokeLeft",
+      "assetPath": "stages/week7Remnants/smokeLeft",
+      "position": [-380, -40],
+      "scale": [1, 1],
+      "scroll": [0.4, 0.4],
+      "zIndex": 14,
+      "animations": [
+        { "name": "smokeLeft", "prefix": "SmokeBlurLeft", "looped": true }
+      ],
+      "startingAnimation": "smokeLeft"
+    },
+    {
+      "name": "smokeRight",
+      "assetPath": "stages/week7Remnants/smokeRight",
+      "position": [1050, -35],
+      "scale": [1, 1],
+      "zIndex": 15,
+      "scroll": [0.4, 0.4],
+      "animations": [
+        { "name": "smokeRight", "prefix": "SmokeRight", "looped": true }
+      ],
+      "startingAnimation": "smokeRight"
+    },
+    {
+      "name": "watchtower",
+      "assetPath": "stages/week7Remnants/tankWatchtower",
+      "position": [-35, 110],
+      "scroll": [0.5, 0.5],
+      "scale": [0.85, 0.85],
+      "zIndex": 21,
+      "danceEvery": 1,
       "animations": [
         {
           "name": "idle",
-          "prefix": "Tankmanidlebaked instance 1",
-          "looped": false
-        },
+          "prefix": "watchtower gradient color"
+        }
+      ],
+      "startingAnimation": "idle"
+    },
+    {
+      "name": "tankRolling",
+      "assetPath": "stages/week7Remnants/tankRolling",
+      "position": [300, 300],
+      "scale": [1, 1],
+      "zIndex": 22,
+      "scroll": [0.5, 0.5],
+      "animations": [
+        { "name": "roll", "prefix": "BG tank w lighting", "looped": true }
+      ],
+      "startingAnimation": "roll"
+    },
+    {
+      "name": "tankGround",
+      "assetPath": "stages/week7Remnants/tankGround",
+      "position": [-420, -150],
+      "scroll": [1, 1],
+      "scale": [1.15, 1.15],
+      "zIndex": 40
+    },
+    {
+      "name": "tankBricks",
+      "assetPath": "stages/week7Remnants/bricksGround",
+      "position": [438, 715],
+      "scroll": [1, 1],
+      "scale": [1.15, 1.15],
+      "zIndex": 101
+    },
+    {
+      "name": "tankmanAudience0",
+      "assetPath": "stages/week7Remnants/tank0",
+      "zIndex": 1000,
+      "position": [-500, 650],
+      "scale": [1, 1],
+      "scroll": [1.7, 1.5],
+      "danceEvery": 1,
+      "animations": [
         {
-          "name": "sip",
-          "prefix": "tanksippingBaked instance 1",
+          "name": "idle",
+          "prefix": "fg tankhead far right instance 1",
           "looped": false
         }
       ],
       "startingAnimation": "idle"
     },
     {
-      "name": "guy",
-      "assetPath": "erect/guy",
-      "zIndex": 20,
-      "position": [1398, 407],
-      "scale": [1.15, 1.15],
-      "scroll": [1, 1],
-      "danceEvery": 2,
+      "name": "tankmanAudience2",
+      "assetPath": "stages/week7Remnants/tank2",
+      "zIndex": 1002,
+      "position": [360, 980],
+      "scale": [1, 1],
+      "scroll": [1.5, 1.5],
+      "danceEvery": 1,
       "animations": [
         {
           "name": "idle",
-          "prefix": "BLTank2 instance 1",
+          "prefix": "foreground man 3 instance 1",
+          "looped": false
+        }
+      ],
+      "startingAnimation": "idle"
+    },
+    {
+      "name": "tankmanAudience3",
+      "assetPath": "stages/week7Remnants/tank3",
+      "zIndex": 1016,
+      "position": [1050, 1240],
+      "scale": [1, 1],
+      "scroll": [3.5, 2.5],
+      "danceEvery": 1,
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "fg tankhead 4 instance 1",
+          "looped": false
+        }
+      ],
+      "startingAnimation": "idle"
+    },
+    {
+      "name": "tankmanAudience4",
+      "assetPath": "stages/week7Remnants/tank4",
+      "zIndex": 1004,
+      "position": [1200, 900],
+      "scale": [1, 1],
+      "scroll": [1.5, 1.5],
+      "danceEvery": 1,
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "fg tankman bobbin 3 instance 1",
+          "looped": false
+        }
+      ],
+      "startingAnimation": "idle"
+    },
+    {
+      "name": "tankmanAudience5",
+      "assetPath": "stages/week7Remnants/tank5",
+      "zIndex": 1003,
+      "position": [1550, 700],
+      "scale": [1, 1],
+      "scroll": [1.5, 1.5],
+      "danceEvery": 1,
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "fg tankhead far right instance 1",
+          "looped": false
+        }
+      ],
+      "startingAnimation": "idle"
+    },
+    {
+      "name": "tankmanAudience1",
+      "assetPath": "stages/week7Remnants/tank1",
+      "zIndex": 1100,
+      "position": [-300, 750],
+      "scale": [1, 1],
+      "scroll": [2.0, 0.2],
+      "danceEvery": 1,
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "fg tankhead 5 instance 1",
           "looped": false
         }
       ],
@@ -53,16 +224,15 @@
   ],
   "characters": {
     "bf": {
-      "zIndex": 100,
-      "position": [1340.5, 885],
+      "zIndex": 102,
+      "position": [1090.5, 885],
       "cameraOffsets": [-220, -100]
     },
     "dad": {
-      "zIndex": 100,
+      "zIndex": 102,
       "position": [230.5, 996],
       "cameraOffsets": [250, -100]
     },
-    "gf": { "zIndex": 100, "position": [800.5, 775], "cameraOffsets": [0, 0] }
-  },
-  "directory": "week7"
+    "gf": { "zIndex": 100, "position": [660.5, 730], "cameraOffsets": [0, 0] }
+  }
 }
