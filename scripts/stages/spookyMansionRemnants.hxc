@@ -2,15 +2,8 @@ import flixel.FlxG;
 import funkin.audio.FunkinSound;
 import funkin.play.PlayState;
 import funkin.play.stage.Stage;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
-import funkin.util.FlxTweenUtil;
-import flixel.util.FlxTimer;
-import funkin.play.character.BaseCharacter;
-import funkin.play.character.CharacterDataParser;
-import funkin.play.character.CharacterType;
-import funkin.play.PlayState;
-import funkin.graphics.shaders.RuntimeRainShader;
+import funkin.util.Constants;
+import funkin.util.HapticUtil;
 
 class SpookyMansionRemnantsStage extends Stage
 {
