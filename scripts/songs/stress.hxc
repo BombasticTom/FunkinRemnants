@@ -67,8 +67,8 @@ class StressSong extends Song
     super.onCountdownStart(event);
 
     // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
-    if (PlayState.instance.currentVariation != 'pico' && !PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
-    if (PlayState.instance.currentVariation != 'remnants' && !PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+    if (PlayState.instance.currentVariation != 'pico' && PlayState.instance.currentVariation != 'remnants' && !PlayStatePlaylist.isStoryMode)
+      hasPlayedCutscene = true;
 
     if (!hasPlayedCutscene)
     {
@@ -77,7 +77,7 @@ class StressSong extends Song
       hasPlayedCutscene = true;
 
       event.cancel(); // CANCEL THE COUNTDOWN!
-      startVideo(PlayState.instance.currentVariation);
+      startVideo(PlayState.instance.currentVariation == 'pico', PlayState.instance.currentVariation == 'remnants');
     }
 
     if (tankmanGroup != null && !tankmanGroup.scriptCall('isValid'))
@@ -118,13 +118,11 @@ class StressSong extends Song
     super.onSongStart(event);
   }
 
-  function startVideo(variationToPlay:String)
+  function startVideo(isPico:Bool, isRemnants:Bool)
   {
-    if (variationToPlay == 'pico') variationToPlay = 'Pico';
-    else if (variationToPlay == 'remnants') variationToPlay = 'Remnants';
-    else variationToPlay = '';
-
-    var videoPath =  'stress' + variationToPlay + 'Cutscene';
+    var videoPath = 'stressCutscene';
+    if (isPico) videoPath = 'stressPicoCutscene';
+    if (isRemnants) videoPath = 'stressRemnantsCutscene';
     if (Constants.CENSOR_EXPLETIVES)
     {
       videoPath += '-censored';
@@ -200,8 +198,7 @@ class StressSong extends Song
   public override function onSongEnd(event:CountdownScriptEvent):Void
   {
     super.onSongEnd(event);
-    if (PlayState.instance.currentVariation != 'pico') hasPlayedEndCutscene = true;
-    if (PlayState.instance.currentVariation != 'remnants') hasPlayedEndCutscene = true;
+    if (PlayState.instance.currentVariation != 'pico' && PlayState.instance.currentVariation != 'remnants') hasPlayedEndCutscene = true;
     // only play this on those variants..
 
     if (!hasPlayedEndCutscene)
