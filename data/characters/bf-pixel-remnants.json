@@ -1,7 +1,7 @@
 {
   "version": "1.0.1",
   "name": "Remnants BF (Pixel)",
-  "assetPath": "characters/bfPixel",
+  "assetPath": "characters/bfPixel-remnants",
   "flipX": true,
   "renderType": "multisparrow",
   "singTime": 8.0,
@@ -19,6 +19,11 @@
       "name": "idle",
       "prefix": "BF IDLE instance 10",
       "offsets": [0, 0]
+    },
+    {
+      "name": "hey",
+      "prefix": "BF HEY instance 10",
+      "offsets": [18, 13]
     },
     {
       "name": "singUP",
