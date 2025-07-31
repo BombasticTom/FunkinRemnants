@@ -1,0 +1,75 @@
+import funkin.modding.module.Module;
+import funkin.modding.events.HitNoteScriptEvent;
+import funkin.play.character.BaseCharacter;
+import funkin.play.notes.Strumline;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+
+/**
+ * A handy amount of custom notetypes lol.
+ * No Animation Real.
+ */
+class CustomNotes extends Module
+{
+    public function new()
+    {
+        super("CustomNotes");
+    }
+
+    // For Alt Animation Note.
+    var animToCheck:Array<String> = [
+        'singLEFT',
+        'singRIGHT',
+        'singUP',
+        'singDOWN'
+    ];
+
+    override public function onNoteHit(event:HitNoteScriptEvent):Void
+    {
+        if (PlayState.instance == null || PlayState.instance.currentStage == null) return;
+        switch (event.note.kind)
+        {
+            case 'no-anim':
+                if (event.note.noteData.getMustHitNote()) {
+                    if (PlayState.instance.currentStage.getBoyfriend() != null) {
+                        var oldIgnoreList = PlayState.instance.currentStage.getBoyfriend().ignoreExclusionPref;
+                        PlayState.instance.currentStage.getBoyfriend().ignoreExclusionPref = [];
+                        PlayState.instance.currentStage.getBoyfriend().canPlayOtherAnims = false;
+
+                        new FlxTimer().start(0, function(_) {
+                            PlayState.instance.currentStage.getBoyfriend().ignoreExclusionPref = oldIgnoreList;
+                            PlayState.instance.currentStage.getBoyfriend().canPlayOtherAnims = true;
+                        });
+                    }
+                }
+                else {
+                    if (PlayState.instance.currentStage.getDad() != null) {
+                        var oldIgnoreList = PlayState.instance.currentStage.getDad().ignoreExclusionPref;
+                        PlayState.instance.currentStage.getDad().ignoreExclusionPref = [];
+                        PlayState.instance.currentStage.getDad().canPlayOtherAnims = false;
+
+                        new FlxTimer().start(0, function(_) {
+                            PlayState.instance.currentStage.getDad().ignoreExclusionPref = oldIgnoreList;
+                            PlayState.instance.currentStage.getDad().canPlayOtherAnims = true;
+                        });
+                    }
+                }
+            case 'alt-anim':
+                if (event.note.noteData.getMustHitNote(Strumline.KEY_COUNT)) {
+                    new FlxTimer().start(0, function(_) {
+                        if (PlayState.instance.currentStage.getBoyfriend().animation.name == animToCheck[event.note.direction])
+                            PlayState.instance.currentStage.getBoyfriend().playAnimation(animToCheck[event.note.direction] + "-alt", true);
+                    });
+                }
+                else {
+                    new FlxTimer().start(0, function(_) {
+                        if (PlayState.instance.currentStage.getDad().animation.name == animToCheck[event.note.direction])
+                            PlayState.instance.currentStage.getDad().playAnimation(animToCheck[event.note.direction] + "-alt", true);
+                    });
+                }
+
+            default:
+                super.onNoteHit(event);
+        }
+    }
+}
