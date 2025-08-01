@@ -1,7 +1,8 @@
 {
   "version": "2.2.4",
   "songName": "M.I.L.F (Remnants Mix)",
-  "artist": "",
+  "artist": "Bruh (ft. Bruh)",
+  "charter": "Bruh + Bruh",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -32,12 +33,16 @@
     },
     "stage": "limoRideRemnants",
     "noteStyle": "funkin",
-    "ratings": { "easy": 1, "normal": 2, "hard": 3 },
+    "ratings": {
+      "easy": 1,
+      "normal": 2,
+      "hard": 4
+    },
     "album": "remnants-week4",
     "previewStart": 0,
-    "previewEnd": 15000
+    "previewEnd": 0
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.4",
+  "generatedBy": "Friday Night Funkin' - v0.7.3",
   "timeFormat": "ms",
   "timeChanges": [
     {
