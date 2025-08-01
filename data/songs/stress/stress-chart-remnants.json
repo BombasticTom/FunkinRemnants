@@ -125,6 +125,29 @@
 }
     },
     {
+      "t": 64002.808988764,
+      "e": "FocusCamera",
+      "v": {
+	"char": 0
+}
+    },
+    {
+      "t": 64382.0224719101,
+      "e": "PlayAnimation",
+      "v": {
+	"anim": "hey",
+	"force": true,
+	"target": "boyfriend"
+}
+    },
+    {
+      "t": 64887.6404494382,
+      "e": "FocusCamera",
+      "v": {
+	"char": 1
+}
+    },
+    {
       "t": 70112.3595505618,
       "e": "FocusCamera",
       "v": {
@@ -15274,6 +15297,7 @@
         "t": 64382.0224719101,
         "d": 2,
         "l": 0,
+        "k": "no-anim",
         "p": [        ]
       },
       {
@@ -18058,5 +18082,5 @@
       }
     ]
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.4"
+  "generatedBy": "Friday Night Funkin' - v0.7.3"
 }
