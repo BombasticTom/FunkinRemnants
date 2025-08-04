@@ -1,6 +1,6 @@
 {
 "AN": {
-"N": "Pico_Fighting_Animations_V3",
+"N": "remnants pico fighting assets",
 "STI": {
 "SI": {
 "SN": "Pico Fighting ALL ANIMS",
@@ -40,29 +40,29 @@
 "FR": [
 {
 "I": 0,
-"DU": 64,
+"DU": 67,
 "E": []
 },
 {
 "N": "Taunt Laugh Loop",
-"I": 64,
-"DU": 4,
+"I": 67,
+"DU": 9,
 "E": []
 },
 {
-"I": 68,
+"I": 76,
 "DU": 7,
 "E": []
 },
 {
 "N": "Uppercut Punch Loop",
-"I": 75,
+"I": 83,
 "DU": 3,
 "E": []
 },
 {
-"I": 78,
-"DU": 303,
+"I": 86,
+"DU": 301,
 "E": []
 }
 ]
@@ -133,53 +133,53 @@
 {
 "N": "Fake Hit",
 "I": 57,
-"DU": 5,
+"DU": 8,
 "E": []
 },
 {
 "N": "Taunt",
-"I": 62,
-"DU": 6,
+"I": 65,
+"DU": 11,
 "E": []
 },
 {
 "N": "Uppercut Prep",
-"I": 68,
+"I": 76,
 "DU": 5,
 "E": []
 },
 {
 "N": "Uppercut Punch",
-"I": 73,
+"I": 81,
 "DU": 5,
 "E": []
 },
 {
 "N": "Hit Spin",
-"I": 78,
+"I": 86,
 "DU": 3,
 "E": []
 },
 {
-"I": 81,
+"I": 89,
 "DU": 4,
 "E": []
 },
 {
 "N": "Low Death Intro",
-"I": 85,
+"I": 93,
 "DU": 44,
 "E": []
 },
 {
 "N": "Low Death Loop",
-"I": 129,
+"I": 137,
 "DU": 148,
 "E": []
 },
 {
 "N": "Low Death Confirm",
-"I": 277,
+"I": 285,
 "DU": 102,
 "E": []
 }
@@ -2488,14 +2488,14 @@
 "E": [
 {
 "SI": {
-"SN": "laughing pico",
+"SN": "fake out pico",
 "IN": "",
 "ST": "G",
-"FF": 0,
+"FF": 5,
 "LP": "LP",
 "TRP": {
-"x": 178.70000000000003,
-"y": 241.55
+"x": 220.0,
+"y": 229.25
 },
 "M3D": [
 1.0,
@@ -2510,8 +2510,8 @@
 0.0,
 1.0,
 0.0,
-76.9,
--409.5,
+18.7,
+-384.6,
 0.0,
 1.0
 ]
@@ -2525,14 +2525,14 @@
 "E": [
 {
 "SI": {
-"SN": "laughing pico",
+"SN": "fake out pico",
 "IN": "",
 "ST": "G",
-"FF": 1,
+"FF": 6,
 "LP": "LP",
 "TRP": {
-"x": 178.7,
-"y": 241.55
+"x": 220.0,
+"y": 229.25
 },
 "M3D": [
 1.0,
@@ -2547,8 +2547,8 @@
 0.0,
 1.0,
 0.0,
-76.9,
--409.5,
+18.7,
+-384.6,
 0.0,
 1.0
 ]
@@ -2562,14 +2562,14 @@
 "E": [
 {
 "SI": {
-"SN": "laughing pico",
+"SN": "fake out pico",
 "IN": "",
 "ST": "G",
-"FF": 2,
+"FF": 7,
 "LP": "LP",
 "TRP": {
-"x": 178.7,
-"y": 241.55
+"x": 220.0,
+"y": 229.25
 },
 "M3D": [
 1.0,
@@ -2584,8 +2584,8 @@
 0.0,
 1.0,
 0.0,
-76.9,
--409.5,
+18.7,
+-384.6,
 0.0,
 1.0
 ]
@@ -2602,10 +2602,10 @@
 "SN": "laughing pico",
 "IN": "",
 "ST": "G",
-"FF": 3,
+"FF": 0,
 "LP": "LP",
 "TRP": {
-"x": 178.7,
+"x": 178.70000000000003,
 "y": 241.55
 },
 "M3D": [
@@ -2639,7 +2639,7 @@
 "SN": "laughing pico",
 "IN": "",
 "ST": "G",
-"FF": 4,
+"FF": 1,
 "LP": "LP",
 "TRP": {
 "x": 178.7,
@@ -2676,7 +2676,7 @@
 "SN": "laughing pico",
 "IN": "",
 "ST": "G",
-"FF": 5,
+"FF": 2,
 "LP": "LP",
 "TRP": {
 "x": 178.7,
@@ -2706,6 +2706,302 @@
 },
 {
 "I": 68,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "laughing pico",
+"IN": "",
+"ST": "G",
+"FF": 3,
+"LP": "LP",
+"TRP": {
+"x": 178.7,
+"y": 241.55
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+76.9,
+-409.5,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 69,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "laughing pico",
+"IN": "",
+"ST": "G",
+"FF": 4,
+"LP": "LP",
+"TRP": {
+"x": 178.7,
+"y": 241.55
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+76.9,
+-409.5,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 70,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "laughing pico",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 178.7,
+"y": 241.55
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+76.9,
+-409.5,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 71,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "laughing pico",
+"IN": "",
+"ST": "G",
+"FF": 6,
+"LP": "LP",
+"TRP": {
+"x": 178.7,
+"y": 241.55
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+76.9,
+-409.5,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 72,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "laughing pico",
+"IN": "",
+"ST": "G",
+"FF": 7,
+"LP": "LP",
+"TRP": {
+"x": 178.7,
+"y": 241.55
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+76.9,
+-409.5,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 73,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "laughing pico",
+"IN": "",
+"ST": "G",
+"FF": 8,
+"LP": "LP",
+"TRP": {
+"x": 178.7,
+"y": 241.55
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+76.9,
+-409.5,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 74,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "laughing pico",
+"IN": "",
+"ST": "G",
+"FF": 9,
+"LP": "LP",
+"TRP": {
+"x": 178.7,
+"y": 241.55
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+76.9,
+-409.5,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 75,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "laughing pico",
+"IN": "",
+"ST": "G",
+"FF": 10,
+"LP": "LP",
+"TRP": {
+"x": 178.7,
+"y": 241.55
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+76.9,
+-409.5,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 76,
 "DU": 1,
 "E": [
 {
@@ -2742,7 +3038,7 @@
 ]
 },
 {
-"I": 69,
+"I": 77,
 "DU": 1,
 "E": [
 {
@@ -2779,7 +3075,7 @@
 ]
 },
 {
-"I": 70,
+"I": 78,
 "DU": 1,
 "E": [
 {
@@ -2816,7 +3112,7 @@
 ]
 },
 {
-"I": 71,
+"I": 79,
 "DU": 1,
 "E": [
 {
@@ -2853,7 +3149,7 @@
 ]
 },
 {
-"I": 72,
+"I": 80,
 "DU": 1,
 "E": [
 {
@@ -2890,7 +3186,7 @@
 ]
 },
 {
-"I": 73,
+"I": 81,
 "DU": 1,
 "E": [
 {
@@ -2927,315 +3223,19 @@
 ]
 },
 {
-"I": 74,
-"DU": 1,
-"E": [
-{
-"SI": {
-"SN": "uppercut pico",
-"IN": "",
-"ST": "G",
-"FF": 1,
-"LP": "LP",
-"TRP": {
-"x": 218.0,
-"y": 252.95
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-35.9,
--426.3,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 75,
-"DU": 1,
-"E": [
-{
-"SI": {
-"SN": "uppercut pico",
-"IN": "",
-"ST": "G",
-"FF": 2,
-"LP": "LP",
-"TRP": {
-"x": 218.0,
-"y": 252.95
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-35.9,
--426.3,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 76,
-"DU": 1,
-"E": [
-{
-"SI": {
-"SN": "uppercut pico",
-"IN": "",
-"ST": "G",
-"FF": 3,
-"LP": "LP",
-"TRP": {
-"x": 218.0,
-"y": 252.95
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-35.9,
--426.3,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 77,
-"DU": 1,
-"E": [
-{
-"SI": {
-"SN": "uppercut pico",
-"IN": "",
-"ST": "G",
-"FF": 4,
-"LP": "LP",
-"TRP": {
-"x": 218.0,
-"y": 252.95
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-35.9,
--426.3,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 78,
-"DU": 1,
-"E": [
-{
-"SI": {
-"SN": "spin pico ",
-"IN": "",
-"ST": "G",
-"FF": 0,
-"LP": "LP",
-"TRP": {
-"x": 0.0,
-"y": 0.0
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
--0.05,
--0.05,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 79,
-"DU": 1,
-"E": [
-{
-"SI": {
-"SN": "spin pico ",
-"IN": "",
-"ST": "G",
-"FF": 1,
-"LP": "LP",
-"TRP": {
-"x": 0.0,
-"y": 0.0
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
--0.05,
--0.05,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 80,
-"DU": 1,
-"E": [
-{
-"SI": {
-"SN": "spin pico ",
-"IN": "",
-"ST": "G",
-"FF": 2,
-"LP": "LP",
-"TRP": {
-"x": 0.0,
-"y": 0.0
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
--0.05,
--0.05,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 81,
-"DU": 1,
-"E": [
-{
-"SI": {
-"SN": "Pico Gut Punch Death Frame Labels",
-"IN": "",
-"ST": "G",
-"FF": 0,
-"LP": "PO",
-"TRP": {
-"x": 0.0,
-"y": 0.0
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-269.85,
-34.9,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
 "I": 82,
 "DU": 1,
 "E": [
 {
 "SI": {
-"SN": "Pico Gut Punch Death Frame Labels",
+"SN": "uppercut pico",
 "IN": "",
 "ST": "G",
 "FF": 1,
-"LP": "PO",
+"LP": "LP",
 "TRP": {
-"x": 0.0,
-"y": 0.0
+"x": 218.0,
+"y": 252.95
 },
 "M3D": [
 1.0,
@@ -3250,8 +3250,8 @@
 0.0,
 1.0,
 0.0,
-269.85,
-34.9,
+35.9,
+-426.3,
 0.0,
 1.0
 ]
@@ -3265,14 +3265,14 @@
 "E": [
 {
 "SI": {
-"SN": "Pico Gut Punch Death Frame Labels",
+"SN": "uppercut pico",
 "IN": "",
 "ST": "G",
 "FF": 2,
-"LP": "PO",
+"LP": "LP",
 "TRP": {
-"x": 0.0,
-"y": 0.0
+"x": 218.0,
+"y": 252.95
 },
 "M3D": [
 1.0,
@@ -3287,8 +3287,8 @@
 0.0,
 1.0,
 0.0,
-269.85,
-34.9,
+35.9,
+-426.3,
 0.0,
 1.0
 ]
@@ -3302,14 +3302,14 @@
 "E": [
 {
 "SI": {
-"SN": "Pico Gut Punch Death Frame Labels",
+"SN": "uppercut pico",
 "IN": "",
 "ST": "G",
 "FF": 3,
-"LP": "PO",
+"LP": "LP",
 "TRP": {
-"x": 0.0,
-"y": 0.0
+"x": 218.0,
+"y": 252.95
 },
 "M3D": [
 1.0,
@@ -3324,8 +3324,8 @@
 0.0,
 1.0,
 0.0,
-269.85,
-34.9,
+35.9,
+-426.3,
 0.0,
 1.0
 ]
@@ -3339,14 +3339,14 @@
 "E": [
 {
 "SI": {
-"SN": "Pico Gut Punch Death Frame Labels",
+"SN": "uppercut pico",
 "IN": "",
 "ST": "G",
 "FF": 4,
-"LP": "PO",
+"LP": "LP",
 "TRP": {
-"x": 0.0,
-"y": 0.0
+"x": 218.0,
+"y": 252.95
 },
 "M3D": [
 1.0,
@@ -3361,8 +3361,8 @@
 0.0,
 1.0,
 0.0,
-269.85,
-34.9,
+35.9,
+-426.3,
 0.0,
 1.0
 ]
@@ -3376,11 +3376,11 @@
 "E": [
 {
 "SI": {
-"SN": "Pico Gut Punch Death Frame Labels",
+"SN": "spin pico ",
 "IN": "",
 "ST": "G",
-"FF": 5,
-"LP": "PO",
+"FF": 0,
+"LP": "LP",
 "TRP": {
 "x": 0.0,
 "y": 0.0
@@ -3398,8 +3398,8 @@
 0.0,
 1.0,
 0.0,
-269.85,
-34.9,
+-0.05,
+-0.05,
 0.0,
 1.0
 ]
@@ -3413,11 +3413,11 @@
 "E": [
 {
 "SI": {
-"SN": "Pico Gut Punch Death Frame Labels",
+"SN": "spin pico ",
 "IN": "",
 "ST": "G",
-"FF": 6,
-"LP": "PO",
+"FF": 1,
+"LP": "LP",
 "TRP": {
 "x": 0.0,
 "y": 0.0
@@ -3435,8 +3435,8 @@
 0.0,
 1.0,
 0.0,
-269.85,
-34.9,
+-0.05,
+-0.05,
 0.0,
 1.0
 ]
@@ -3450,11 +3450,11 @@
 "E": [
 {
 "SI": {
-"SN": "Pico Gut Punch Death Frame Labels",
+"SN": "spin pico ",
 "IN": "",
 "ST": "G",
-"FF": 7,
-"LP": "PO",
+"FF": 2,
+"LP": "LP",
 "TRP": {
 "x": 0.0,
 "y": 0.0
@@ -3472,8 +3472,8 @@
 0.0,
 1.0,
 0.0,
-269.85,
-34.9,
+-0.05,
+-0.05,
 0.0,
 1.0
 ]
@@ -3490,7 +3490,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 8,
+"FF": 0,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3527,7 +3527,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 9,
+"FF": 1,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3564,7 +3564,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 10,
+"FF": 2,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3601,7 +3601,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 11,
+"FF": 3,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3638,7 +3638,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 12,
+"FF": 4,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3675,7 +3675,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 13,
+"FF": 5,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3712,7 +3712,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 14,
+"FF": 6,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3749,7 +3749,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 15,
+"FF": 7,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3786,7 +3786,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 16,
+"FF": 8,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3823,7 +3823,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 17,
+"FF": 9,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3860,7 +3860,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 18,
+"FF": 10,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3897,7 +3897,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 19,
+"FF": 11,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3934,7 +3934,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 20,
+"FF": 12,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -3971,7 +3971,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 21,
+"FF": 13,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4008,7 +4008,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 22,
+"FF": 14,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4045,7 +4045,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 23,
+"FF": 15,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4082,7 +4082,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 24,
+"FF": 16,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4119,7 +4119,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 25,
+"FF": 17,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4156,7 +4156,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 26,
+"FF": 18,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4193,7 +4193,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 27,
+"FF": 19,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4230,7 +4230,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 28,
+"FF": 20,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4267,7 +4267,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 29,
+"FF": 21,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4304,7 +4304,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 30,
+"FF": 22,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4341,7 +4341,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 31,
+"FF": 23,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4378,7 +4378,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 32,
+"FF": 24,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4415,7 +4415,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 33,
+"FF": 25,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4452,7 +4452,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 34,
+"FF": 26,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4489,7 +4489,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 35,
+"FF": 27,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4526,7 +4526,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 36,
+"FF": 28,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4563,7 +4563,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 37,
+"FF": 29,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4600,7 +4600,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 38,
+"FF": 30,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4637,7 +4637,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 39,
+"FF": 31,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4674,7 +4674,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 40,
+"FF": 32,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4711,7 +4711,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 41,
+"FF": 33,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4748,7 +4748,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 42,
+"FF": 34,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4785,7 +4785,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 43,
+"FF": 35,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4822,7 +4822,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 44,
+"FF": 36,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4859,7 +4859,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 45,
+"FF": 37,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4896,7 +4896,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 46,
+"FF": 38,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4933,7 +4933,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 47,
+"FF": 39,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -4970,7 +4970,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 48,
+"FF": 40,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5007,7 +5007,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 49,
+"FF": 41,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5044,7 +5044,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 50,
+"FF": 42,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5081,7 +5081,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 51,
+"FF": 43,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5118,7 +5118,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 52,
+"FF": 44,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5155,7 +5155,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 53,
+"FF": 45,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5192,7 +5192,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 54,
+"FF": 46,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5229,7 +5229,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 55,
+"FF": 47,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5266,7 +5266,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 56,
+"FF": 48,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5303,7 +5303,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 57,
+"FF": 49,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5340,7 +5340,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 58,
+"FF": 50,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5377,7 +5377,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 59,
+"FF": 51,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5414,7 +5414,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 60,
+"FF": 52,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5451,7 +5451,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 61,
+"FF": 53,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5488,7 +5488,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 62,
+"FF": 54,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5525,7 +5525,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 63,
+"FF": 55,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5562,7 +5562,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 64,
+"FF": 56,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5599,7 +5599,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 65,
+"FF": 57,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5636,7 +5636,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 66,
+"FF": 58,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5673,7 +5673,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 67,
+"FF": 59,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5710,7 +5710,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 68,
+"FF": 60,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5747,7 +5747,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 69,
+"FF": 61,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5784,7 +5784,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 70,
+"FF": 62,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5821,7 +5821,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 71,
+"FF": 63,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5858,7 +5858,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 72,
+"FF": 64,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5895,7 +5895,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 73,
+"FF": 65,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5932,7 +5932,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 74,
+"FF": 66,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -5969,7 +5969,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 75,
+"FF": 67,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6006,7 +6006,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 76,
+"FF": 68,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6043,7 +6043,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 77,
+"FF": 69,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6080,7 +6080,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 78,
+"FF": 70,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6117,7 +6117,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 79,
+"FF": 71,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6154,7 +6154,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 80,
+"FF": 72,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6191,7 +6191,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 81,
+"FF": 73,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6228,7 +6228,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 82,
+"FF": 74,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6265,7 +6265,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 83,
+"FF": 75,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6302,7 +6302,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 84,
+"FF": 76,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6339,7 +6339,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 85,
+"FF": 77,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6376,7 +6376,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 86,
+"FF": 78,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6413,7 +6413,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 87,
+"FF": 79,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6450,7 +6450,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 88,
+"FF": 80,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6487,7 +6487,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 89,
+"FF": 81,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6524,7 +6524,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 90,
+"FF": 82,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6561,7 +6561,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 91,
+"FF": 83,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6598,7 +6598,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 92,
+"FF": 84,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6635,7 +6635,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 93,
+"FF": 85,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6672,7 +6672,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 94,
+"FF": 86,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6709,7 +6709,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 95,
+"FF": 87,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6746,7 +6746,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 96,
+"FF": 88,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6783,7 +6783,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 97,
+"FF": 89,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6820,7 +6820,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 98,
+"FF": 90,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6857,7 +6857,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 99,
+"FF": 91,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6894,7 +6894,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 100,
+"FF": 92,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6931,7 +6931,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 101,
+"FF": 93,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -6968,7 +6968,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 102,
+"FF": 94,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7005,7 +7005,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 103,
+"FF": 95,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7042,7 +7042,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 104,
+"FF": 96,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7079,7 +7079,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 105,
+"FF": 97,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7116,7 +7116,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 106,
+"FF": 98,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7153,7 +7153,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 107,
+"FF": 99,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7190,7 +7190,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 108,
+"FF": 100,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7227,7 +7227,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 109,
+"FF": 101,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7264,7 +7264,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 110,
+"FF": 102,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7301,7 +7301,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 111,
+"FF": 103,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7338,7 +7338,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 112,
+"FF": 104,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7375,7 +7375,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 113,
+"FF": 105,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7412,7 +7412,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 114,
+"FF": 106,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7449,7 +7449,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 115,
+"FF": 107,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7486,7 +7486,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 116,
+"FF": 108,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7523,7 +7523,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 117,
+"FF": 109,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7560,7 +7560,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 118,
+"FF": 110,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7597,7 +7597,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 119,
+"FF": 111,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7634,7 +7634,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 120,
+"FF": 112,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7671,7 +7671,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 121,
+"FF": 113,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7708,7 +7708,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 122,
+"FF": 114,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7745,7 +7745,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 123,
+"FF": 115,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7782,7 +7782,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 124,
+"FF": 116,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7819,7 +7819,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 125,
+"FF": 117,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7856,7 +7856,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 126,
+"FF": 118,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7893,7 +7893,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 127,
+"FF": 119,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7930,7 +7930,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 128,
+"FF": 120,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -7967,7 +7967,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 129,
+"FF": 121,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8004,7 +8004,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 130,
+"FF": 122,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8041,7 +8041,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 131,
+"FF": 123,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8078,7 +8078,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 132,
+"FF": 124,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8115,7 +8115,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 133,
+"FF": 125,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8152,7 +8152,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 134,
+"FF": 126,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8189,7 +8189,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 135,
+"FF": 127,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8226,7 +8226,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 136,
+"FF": 128,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8263,7 +8263,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 137,
+"FF": 129,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8300,7 +8300,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 138,
+"FF": 130,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8337,7 +8337,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 139,
+"FF": 131,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8374,7 +8374,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 140,
+"FF": 132,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8411,7 +8411,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 141,
+"FF": 133,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8448,7 +8448,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 142,
+"FF": 134,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8485,7 +8485,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 143,
+"FF": 135,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8522,7 +8522,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 144,
+"FF": 136,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8559,7 +8559,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 145,
+"FF": 137,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8596,7 +8596,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 146,
+"FF": 138,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8633,7 +8633,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 147,
+"FF": 139,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8670,7 +8670,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 148,
+"FF": 140,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8707,7 +8707,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 149,
+"FF": 141,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8744,7 +8744,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 150,
+"FF": 142,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8781,7 +8781,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 151,
+"FF": 143,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8818,7 +8818,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 152,
+"FF": 144,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8855,7 +8855,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 153,
+"FF": 145,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8892,7 +8892,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 154,
+"FF": 146,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8929,7 +8929,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 155,
+"FF": 147,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -8966,7 +8966,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 156,
+"FF": 148,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9003,7 +9003,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 157,
+"FF": 149,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9040,7 +9040,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 158,
+"FF": 150,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9077,7 +9077,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 159,
+"FF": 151,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9114,7 +9114,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 160,
+"FF": 152,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9151,7 +9151,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 161,
+"FF": 153,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9188,7 +9188,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 162,
+"FF": 154,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9225,7 +9225,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 163,
+"FF": 155,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9262,7 +9262,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 164,
+"FF": 156,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9299,7 +9299,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 165,
+"FF": 157,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9336,7 +9336,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 166,
+"FF": 158,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9373,7 +9373,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 167,
+"FF": 159,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9410,7 +9410,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 168,
+"FF": 160,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9447,7 +9447,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 169,
+"FF": 161,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9484,7 +9484,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 170,
+"FF": 162,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9521,7 +9521,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 171,
+"FF": 163,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9558,7 +9558,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 172,
+"FF": 164,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9595,7 +9595,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 173,
+"FF": 165,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9632,7 +9632,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 174,
+"FF": 166,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9669,7 +9669,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 175,
+"FF": 167,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9706,7 +9706,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 176,
+"FF": 168,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9743,7 +9743,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 177,
+"FF": 169,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9780,7 +9780,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 178,
+"FF": 170,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9817,7 +9817,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 179,
+"FF": 171,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9854,7 +9854,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 180,
+"FF": 172,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9891,7 +9891,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 181,
+"FF": 173,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9928,7 +9928,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 182,
+"FF": 174,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -9965,7 +9965,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 183,
+"FF": 175,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10002,7 +10002,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 184,
+"FF": 176,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10039,7 +10039,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 185,
+"FF": 177,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10076,7 +10076,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 186,
+"FF": 178,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10113,7 +10113,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 187,
+"FF": 179,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10150,7 +10150,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 188,
+"FF": 180,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10187,7 +10187,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 189,
+"FF": 181,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10224,7 +10224,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 190,
+"FF": 182,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10261,7 +10261,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 191,
+"FF": 183,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10298,7 +10298,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 192,
+"FF": 184,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10335,7 +10335,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 193,
+"FF": 185,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10372,7 +10372,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 194,
+"FF": 186,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10409,7 +10409,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 195,
+"FF": 187,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10446,7 +10446,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 196,
+"FF": 188,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10483,7 +10483,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 197,
+"FF": 189,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10520,7 +10520,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 198,
+"FF": 190,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10557,7 +10557,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 199,
+"FF": 191,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10594,7 +10594,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 200,
+"FF": 192,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10631,7 +10631,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 201,
+"FF": 193,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10668,7 +10668,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 202,
+"FF": 194,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10705,7 +10705,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 203,
+"FF": 195,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10742,7 +10742,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 204,
+"FF": 196,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10779,7 +10779,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 205,
+"FF": 197,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10816,7 +10816,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 206,
+"FF": 198,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10853,7 +10853,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 207,
+"FF": 199,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10890,7 +10890,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 208,
+"FF": 200,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10927,7 +10927,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 209,
+"FF": 201,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -10964,7 +10964,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 210,
+"FF": 202,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11001,7 +11001,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 211,
+"FF": 203,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11038,7 +11038,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 212,
+"FF": 204,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11075,7 +11075,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 213,
+"FF": 205,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11112,7 +11112,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 214,
+"FF": 206,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11149,7 +11149,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 215,
+"FF": 207,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11186,7 +11186,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 216,
+"FF": 208,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11223,7 +11223,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 217,
+"FF": 209,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11260,7 +11260,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 218,
+"FF": 210,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11297,7 +11297,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 219,
+"FF": 211,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11334,7 +11334,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 220,
+"FF": 212,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11371,7 +11371,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 221,
+"FF": 213,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11408,7 +11408,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 222,
+"FF": 214,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11445,7 +11445,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 223,
+"FF": 215,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11482,7 +11482,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 224,
+"FF": 216,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11519,7 +11519,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 225,
+"FF": 217,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11556,7 +11556,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 226,
+"FF": 218,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11593,7 +11593,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 227,
+"FF": 219,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11630,7 +11630,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 228,
+"FF": 220,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11667,7 +11667,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 229,
+"FF": 221,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11704,7 +11704,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 230,
+"FF": 222,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11741,7 +11741,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 231,
+"FF": 223,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11778,7 +11778,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 232,
+"FF": 224,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11815,7 +11815,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 233,
+"FF": 225,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11852,7 +11852,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 234,
+"FF": 226,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11889,7 +11889,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 235,
+"FF": 227,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11926,7 +11926,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 236,
+"FF": 228,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -11963,7 +11963,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 237,
+"FF": 229,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12000,7 +12000,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 238,
+"FF": 230,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12037,7 +12037,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 239,
+"FF": 231,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12074,7 +12074,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 240,
+"FF": 232,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12111,7 +12111,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 241,
+"FF": 233,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12148,7 +12148,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 242,
+"FF": 234,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12185,7 +12185,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 243,
+"FF": 235,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12222,7 +12222,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 244,
+"FF": 236,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12259,7 +12259,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 245,
+"FF": 237,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12296,7 +12296,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 246,
+"FF": 238,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12333,7 +12333,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 247,
+"FF": 239,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12370,7 +12370,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 248,
+"FF": 240,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12407,7 +12407,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 249,
+"FF": 241,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12444,7 +12444,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 250,
+"FF": 242,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12481,7 +12481,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 251,
+"FF": 243,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12518,7 +12518,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 251,
+"FF": 244,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12555,7 +12555,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 251,
+"FF": 245,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12592,7 +12592,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 251,
+"FF": 246,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12629,7 +12629,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 251,
+"FF": 247,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12666,7 +12666,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 251,
+"FF": 248,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12703,7 +12703,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 251,
+"FF": 249,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -12740,7 +12740,7 @@
 "SN": "Pico Gut Punch Death Frame Labels",
 "IN": "",
 "ST": "G",
-"FF": 251,
+"FF": 250,
 "LP": "PO",
 "TRP": {
 "x": 0.0,
@@ -14210,6 +14210,302 @@
 }
 }
 ]
+},
+{
+"I": 379,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "Pico Gut Punch Death Frame Labels",
+"IN": "",
+"ST": "G",
+"FF": 251,
+"LP": "PO",
+"TRP": {
+"x": 0.0,
+"y": 0.0
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+269.85,
+34.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 380,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "Pico Gut Punch Death Frame Labels",
+"IN": "",
+"ST": "G",
+"FF": 251,
+"LP": "PO",
+"TRP": {
+"x": 0.0,
+"y": 0.0
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+269.85,
+34.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 381,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "Pico Gut Punch Death Frame Labels",
+"IN": "",
+"ST": "G",
+"FF": 251,
+"LP": "PO",
+"TRP": {
+"x": 0.0,
+"y": 0.0
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+269.85,
+34.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 382,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "Pico Gut Punch Death Frame Labels",
+"IN": "",
+"ST": "G",
+"FF": 251,
+"LP": "PO",
+"TRP": {
+"x": 0.0,
+"y": 0.0
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+269.85,
+34.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 383,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "Pico Gut Punch Death Frame Labels",
+"IN": "",
+"ST": "G",
+"FF": 251,
+"LP": "PO",
+"TRP": {
+"x": 0.0,
+"y": 0.0
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+269.85,
+34.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 384,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "Pico Gut Punch Death Frame Labels",
+"IN": "",
+"ST": "G",
+"FF": 251,
+"LP": "PO",
+"TRP": {
+"x": 0.0,
+"y": 0.0
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+269.85,
+34.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 385,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "Pico Gut Punch Death Frame Labels",
+"IN": "",
+"ST": "G",
+"FF": 251,
+"LP": "PO",
+"TRP": {
+"x": 0.0,
+"y": 0.0
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+269.85,
+34.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 386,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "Pico Gut Punch Death Frame Labels",
+"IN": "",
+"ST": "G",
+"FF": 251,
+"LP": "PO",
+"TRP": {
+"x": 0.0,
+"y": 0.0
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+269.85,
+34.9,
+0.0,
+1.0
+]
+}
+}
+]
 }
 ]
 }
@@ -15603,7 +15899,7 @@
 0.0,
 1.0,
 0.0,
-0.0,
+-2.0,
 0.0,
 0.0,
 1.0
@@ -16512,7 +16808,7 @@
 0.0,
 1.0,
 0.0,
-0.0,
+-1.0,
 0.0,
 0.0,
 1.0
@@ -16580,12 +16876,76 @@
 "E": [
 {
 "SI": {
-"SN": "pico dodge snap",
+"SN": "arm dodge pico",
 "IN": "",
-"ST": "MC",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
 "TRP": {
-"x": 167.65,
-"y": 227.9
+"x": 151.0,
+"y": 71.85000000000001
+},
+"M3D": [
+0.9905242919921875,
+0.137237548828125,
+0.0,
+0.0,
+-0.137237548828125,
+0.9905242919921875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+20.3,
+140.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "arm dodge pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 133.0,
+"y": 53.900000000000009
+},
+"M3D": [
+-0.99755859375,
+-0.0524749755859375,
+0.0,
+0.0,
+-0.0524749755859375,
+0.99755859375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+333.75,
+158.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "body dodge pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 169.45000000000003,
+"y": 278.45
 },
 "M3D": [
 1.0,
@@ -16593,26 +16953,80 @@
 0.0,
 0.0,
 0.0,
-1.0,
+1.048675537109375,
 0.0,
 0.0,
 0.0,
 0.0,
 1.0,
 0.0,
-2.1,
--3.8,
+0.0,
+161.0,
 0.0,
 1.0
-],
-"F": {
-"ACF": {
-"BRT": 17.0,
-"CT": -3.0,
-"SAT": 0.0,
-"H": 0.0
+]
 }
+},
+{
+"SI": {
+"SN": "pico dodge head",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 108.35000000000001,
+"y": 104.60000000000001
+},
+"M3D": [
+0.9543304443359375,
+0.0,
+0.0,
+0.0,
+0.0,
+0.9543304443359375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+62.55,
+-2.9,
+0.0,
+1.0
+]
 }
+},
+{
+"SI": {
+"SN": "pico dodge face",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 43.15,
+"y": 35.4
+},
+"M3D": [
+0.9543304443359375,
+0.0,
+0.0,
+0.0,
+0.0,
+0.9543304443359375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+124.05,
+108.5,
+0.0,
+1.0
+]
 }
 }
 ]
@@ -16630,31 +17044,7 @@
 {
 "I": 0,
 "DU": 2,
-"E": [
-{
-"ASI": {
-"N": "0016",
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-2.0,
--4.0,
-0.0,
-1.0
-]
-}
-}
-]
+"E": []
 },
 {
 "I": 2,
@@ -16685,7 +17075,7 @@
 1.0,
 0.0,
 3.6,
-160.2,
+164.2,
 0.0,
 1.0
 ]
@@ -16716,7 +17106,7 @@
 1.0,
 0.0,
 344.7,
-182.4,
+186.4,
 0.0,
 1.0
 ]
@@ -16823,7 +17213,7 @@
 }
 },
 {
-"SN": "pico dodge snap",
+"SN": "arm dodge pico",
 "TL": {
 "L": [
 {
@@ -16864,7 +17254,48 @@
 }
 },
 {
-"SN": "arm dodge pico",
+"SN": "body dodge pico",
+"TL": {
+"L": [
+{
+"LN": "Layer_2",
+"FR": [
+{
+"I": 0,
+"DU": 1,
+"E": [
+{
+"ASI": {
+"N": "0016",
+"M3D": [
+0.953582763671875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.953582763671875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0
+]
+}
+}
+]
+}
+]
+}
+]
+}
+},
+{
+"SN": "pico dodge head",
 "TL": {
 "L": [
 {
@@ -16905,88 +17336,6 @@
 }
 },
 {
-"SN": "body dodge pico",
-"TL": {
-"L": [
-{
-"LN": "Layer_2",
-"FR": [
-{
-"I": 0,
-"DU": 1,
-"E": [
-{
-"ASI": {
-"N": "0018",
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0
-]
-}
-}
-]
-}
-]
-}
-]
-}
-},
-{
-"SN": "pico dodge head",
-"TL": {
-"L": [
-{
-"LN": "Layer_2",
-"FR": [
-{
-"I": 0,
-"DU": 1,
-"E": [
-{
-"ASI": {
-"N": "0019",
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0
-]
-}
-}
-]
-}
-]
-}
-]
-}
-},
-{
 "SN": "pico dodge face",
 "TL": {
 "L": [
@@ -16999,7 +17348,7 @@
 "E": [
 {
 "ASI": {
-"N": "0020",
+"N": "0018",
 "M3D": [
 1.0,
 0.0,
@@ -17170,8 +17519,8 @@
 "FF": 0,
 "LP": "LP",
 "TRP": {
-"x": 60.300000000000007,
-"y": 54.1
+"x": 0.0,
+"y": 0.0
 },
 "M3D": [
 0.9137420654296875,
@@ -17436,7 +17785,7 @@
 "E": [
 {
 "ASI": {
-"N": "0021",
+"N": "0019",
 "M3D": [
 1.0,
 0.0,
@@ -17477,7 +17826,7 @@
 "E": [
 {
 "ASI": {
-"N": "0022",
+"N": "0020",
 "M3D": [
 0.97857666015625,
 0.0,
@@ -17518,7 +17867,7 @@
 "E": [
 {
 "ASI": {
-"N": "0023",
+"N": "0021",
 "M3D": [
 0.92938232421875,
 0.0,
@@ -17559,7 +17908,7 @@
 "E": [
 {
 "ASI": {
-"N": "0024",
+"N": "0022",
 "M3D": [
 1.0,
 0.0,
@@ -17600,7 +17949,7 @@
 "E": [
 {
 "ASI": {
-"N": "0025",
+"N": "0023",
 "M3D": [
 1.0,
 0.0,
@@ -17641,7 +17990,7 @@
 "E": [
 {
 "ASI": {
-"N": "0026",
+"N": "0024",
 "M3D": [
 1.0,
 0.0,
@@ -18078,7 +18427,7 @@
 "E": [
 {
 "ASI": {
-"N": "0027",
+"N": "0025",
 "M3D": [
 0.98272705078125,
 0.0,
@@ -18119,7 +18468,7 @@
 "E": [
 {
 "ASI": {
-"N": "0028",
+"N": "0026",
 "M3D": [
 1.0,
 0.0,
@@ -18160,7 +18509,7 @@
 "E": [
 {
 "ASI": {
-"N": "0029",
+"N": "0027",
 "M3D": [
 1.0,
 0.0,
@@ -18201,7 +18550,7 @@
 "E": [
 {
 "ASI": {
-"N": "0030",
+"N": "0028",
 "M3D": [
 1.0,
 0.0,
@@ -18242,7 +18591,7 @@
 "E": [
 {
 "ASI": {
-"N": "0031",
+"N": "0029",
 "M3D": [
 1.0,
 0.0,
@@ -18679,7 +19028,7 @@
 "E": [
 {
 "ASI": {
-"N": "0032",
+"N": "0030",
 "M3D": [
 1.0,
 0.0,
@@ -18894,7 +19243,7 @@
 "E": [
 {
 "ASI": {
-"N": "0035",
+"N": "0033",
 "M3D": [
 1.0,
 0.0,
@@ -19121,7 +19470,7 @@
 "E": [
 {
 "ASI": {
-"N": "0033",
+"N": "0031",
 "M3D": [
 1.0,
 0.0,
@@ -19162,7 +19511,7 @@
 "E": [
 {
 "ASI": {
-"N": "0034",
+"N": "0032",
 "M3D": [
 1.0,
 0.0,
@@ -19203,7 +19552,7 @@
 "E": [
 {
 "ASI": {
-"N": "0036",
+"N": "0034",
 "M3D": [
 1.0,
 0.0,
@@ -19232,7 +19581,7 @@
 "E": [
 {
 "ASI": {
-"N": "0037",
+"N": "0035",
 "M3D": [
 1.0,
 0.0,
@@ -19261,7 +19610,7 @@
 "E": [
 {
 "ASI": {
-"N": "0038",
+"N": "0036",
 "M3D": [
 1.0,
 0.0,
@@ -19302,7 +19651,7 @@
 "E": [
 {
 "ASI": {
-"N": "0039",
+"N": "0037",
 "M3D": [
 1.0,
 0.0,
@@ -19331,7 +19680,7 @@
 "E": [
 {
 "ASI": {
-"N": "0040",
+"N": "0038",
 "M3D": [
 1.0,
 0.0,
@@ -19360,7 +19709,7 @@
 "E": [
 {
 "ASI": {
-"N": "0041",
+"N": "0039",
 "M3D": [
 1.0,
 0.0,
@@ -19598,7 +19947,7 @@
 "E": [
 {
 "ASI": {
-"N": "0042",
+"N": "0040",
 "M3D": [
 1.0,
 0.0,
@@ -19639,7 +19988,7 @@
 "E": [
 {
 "ASI": {
-"N": "0043",
+"N": "0041",
 "M3D": [
 1.0,
 0.0,
@@ -19680,7 +20029,7 @@
 "E": [
 {
 "ASI": {
-"N": "0044",
+"N": "0042",
 "M3D": [
 0.999969482421875,
 0.0,
@@ -19836,7 +20185,7 @@
 0.0,
 1.0,
 0.0,
-36.45,
+48.45,
 51.35,
 0.0,
 1.0
@@ -19898,7 +20247,7 @@
 0.0,
 1.0,
 0.0,
-74.55,
+86.55,
 145.55,
 0.0,
 1.0
@@ -20028,7 +20377,7 @@
 0.0,
 1.0,
 0.0,
-36.45,
+48.45,
 51.35,
 0.0,
 1.0
@@ -20090,7 +20439,7 @@
 0.0,
 1.0,
 0.0,
-74.55,
+86.55,
 145.55,
 0.0,
 1.0
@@ -20220,7 +20569,7 @@
 0.0,
 1.0,
 0.0,
-51.45,
+63.45,
 31.75,
 0.0,
 1.0
@@ -20282,7 +20631,7 @@
 0.0,
 1.0,
 0.0,
-84.1,
+96.1,
 139.9,
 0.0,
 1.0
@@ -20412,7 +20761,7 @@
 0.0,
 1.0,
 0.0,
-51.45,
+63.45,
 31.75,
 0.0,
 1.0
@@ -20474,7 +20823,7 @@
 0.0,
 1.0,
 0.0,
-84.1,
+96.1,
 139.9,
 0.0,
 1.0
@@ -20604,7 +20953,7 @@
 0.0,
 1.0,
 0.0,
-51.45,
+63.45,
 31.75,
 0.0,
 1.0
@@ -20666,7 +21015,3463 @@
 0.0,
 1.0,
 0.0,
-84.1,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 5,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 6,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 6,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 6,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 7,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 7,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 7,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 8,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 8,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 8,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 9,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.550000000000007
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 2,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 2,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.300000000000007,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 10,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 3,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 3,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 11,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 4,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 4,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 12,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 13,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 6,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 6,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 14,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 7,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 7,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 15,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 8,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 8,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 16,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.550000000000007
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 2,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 2,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.300000000000007,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 17,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 3,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 3,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 18,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 4,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 4,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 19,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 20,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 6,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 6,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 21,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 7,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 7,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
+139.9,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 22,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "left arm bent pico ",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 39.1,
+"y": 40.55
+},
+"M3D": [
+0.89886474609375,
+-0.4271697998046875,
+0.0,
+0.0,
+0.4271697998046875,
+0.89886474609375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+156.75,
+88.2,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico body fightan stance",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 249.25,
+"y": 285.5
+},
+"M3D": [
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.105712890625,
+0.9722137451171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+33.35,
+175.3,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm pullback",
+"IN": "",
+"ST": "G",
+"FF": 8,
+"LP": "LP",
+"TRP": {
+"x": 124.95,
+"y": 84.4
+},
+"M3D": [
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+0.967987060546875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+3.2,
+29.35,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico head slight turn",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 134.65,
+"y": 107.9
+},
+"M3D": [
+1.0035552978515626,
+-0.109375,
+0.0,
+0.0,
+0.10638427734375,
+0.97613525390625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+63.45,
+31.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "pico arm bent",
+"IN": "",
+"ST": "G",
+"FF": 8,
+"LP": "LP",
+"TRP": {
+"x": 17.5,
+"y": 16.25
+},
+"M3D": [
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.071014404296875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+247.05,
+171.75,
+0.0,
+1.0
+]
+}
+},
+{
+"SI": {
+"SN": "face fakeout pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 63.3,
+"y": 41.95
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+96.1,
 139.9,
 0.0,
 1.0
@@ -20693,7 +24498,7 @@
 "E": [
 {
 "ASI": {
-"N": "0047",
+"N": "0045",
 "M3D": [
 1.0,
 0.0,
@@ -20722,7 +24527,7 @@
 "E": [
 {
 "ASI": {
-"N": "0048",
+"N": "0046",
 "M3D": [
 1.0,
 0.0,
@@ -20763,7 +24568,7 @@
 "E": [
 {
 "ASI": {
-"N": "0049",
+"N": "0047",
 "M3D": [
 0.933685302734375,
 0.0,
@@ -20777,7 +24582,7 @@
 0.0,
 1.0,
 0.0,
--2.8,
+-3.7,
 0.0,
 0.0,
 1.0
@@ -20792,7 +24597,7 @@
 "E": [
 {
 "ASI": {
-"N": "0050",
+"N": "0048",
 "M3D": [
 0.933685302734375,
 0.0,
@@ -20806,7 +24611,7 @@
 0.0,
 1.0,
 0.0,
-0.0,
+-0.9,
 0.9,
 0.0,
 1.0
@@ -20821,7 +24626,7 @@
 "E": [
 {
 "ASI": {
-"N": "0051",
+"N": "0049",
 "M3D": [
 0.933685302734375,
 0.0,
@@ -20850,7 +24655,7 @@
 "E": [
 {
 "ASI": {
-"N": "0052",
+"N": "0050",
 "M3D": [
 0.933685302734375,
 0.0,
@@ -20891,7 +24696,7 @@
 "E": [
 {
 "ASI": {
-"N": "0045",
+"N": "0043",
 "M3D": [
 1.0,
 0.0,
@@ -20932,7 +24737,7 @@
 "E": [
 {
 "ASI": {
-"N": "0046",
+"N": "0044",
 "M3D": [
 1.0,
 0.0,
@@ -20964,6 +24769,825 @@
 "SN": "laughing pico",
 "TL": {
 "L": [
+{
+"LN": "Layer_3",
+"FR": [
+{
+"I": 0,
+"DU": 2,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy snap 2 pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 69.35000000000001,
+"y": 63.25
+},
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+146.6,
+215.0,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 2,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 3,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 1,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 4,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 2,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 5,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 3,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 6,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 4,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 7,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 8,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 9,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 1,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 10,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 2,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 11,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 3,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 12,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 4,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 13,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 14,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 15,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 1,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 16,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 2,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 17,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 3,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 18,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 4,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 19,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 5,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 20,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 0,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 21,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 1,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 22,
+"DU": 1,
+"E": [
+{
+"SI": {
+"SN": "hand on tummy pico",
+"IN": "",
+"ST": "G",
+"FF": 2,
+"LP": "LP",
+"TRP": {
+"x": 74.25,
+"y": 67.25
+},
+"M3D": [
+0.9949951171875,
+0.0931549072265625,
+0.0,
+0.0,
+-0.0931549072265625,
+0.9949951171875,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+138.95,
+200.15,
+0.0,
+1.0
+]
+}
+}
+]
+}
+]
+},
 {
 "LN": "Layer_2",
 "FR": [
@@ -22473,37 +27097,6 @@
 },
 {
 "SI": {
-"SN": "hand on tummy snap 2 pico",
-"IN": "",
-"ST": "G",
-"FF": 0,
-"LP": "LP",
-"TRP": {
-"x": 69.35000000000001,
-"y": 63.25
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-146.6,
-215.0,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
 "SN": "pico default head",
 "IN": "",
 "ST": "G",
@@ -22627,37 +27220,6 @@
 0.0,
 5.35,
 190.7,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy snap 2 pico",
-"IN": "",
-"ST": "G",
-"FF": 0,
-"LP": "LP",
-"TRP": {
-"x": 69.35,
-"y": 63.25
-},
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-146.6,
-215.0,
 0.0,
 1.0
 ]
@@ -22792,37 +27354,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 0,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -22891,37 +27422,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 1,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -22986,37 +27486,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 2,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -23089,37 +27558,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 3,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -23184,37 +27622,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 4,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -23287,37 +27694,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 5,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -23382,37 +27758,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 0,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -23485,37 +27830,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 1,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -23580,37 +27894,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 2,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -23683,37 +27966,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 3,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -23778,37 +28030,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 4,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -23881,37 +28102,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 5,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -23976,37 +28166,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 0,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -24079,37 +28238,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 1,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -24174,37 +28302,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 2,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -24277,37 +28374,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 3,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -24372,37 +28438,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 4,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -24475,37 +28510,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 5,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -24570,37 +28574,6 @@
 0.0,
 8.4,
 185.2,
-0.0,
-1.0
-]
-}
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 0,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
 0.0,
 1.0
 ]
@@ -24673,37 +28646,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 1,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
 }
 ]
 },
@@ -24772,218 +28714,6 @@
 1.0
 ]
 }
-},
-{
-"SI": {
-"SN": "hand on tummy pico",
-"IN": "",
-"ST": "G",
-"FF": 2,
-"LP": "LP",
-"TRP": {
-"x": 74.25,
-"y": 67.25
-},
-"M3D": [
-0.9949951171875,
-0.0931549072265625,
-0.0,
-0.0,
--0.0931549072265625,
-0.9949951171875,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-138.95,
-200.15,
-0.0,
-1.0
-]
-}
-}
-]
-}
-]
-}
-]
-}
-},
-{
-"SN": "pico snide face",
-"TL": {
-"L": [
-{
-"LN": "Layer_1",
-"FR": [
-{
-"I": 0,
-"DU": 8,
-"E": [
-{
-"ASI": {
-"N": "0056",
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-4.0,
-15.0,
-0.0,
-1.0
-]
-}
-}
-]
-}
-]
-}
-]
-}
-},
-{
-"SN": "pointing arm snap pico",
-"TL": {
-"L": [
-{
-"LN": "Layer_1",
-"FR": [
-{
-"I": 0,
-"DU": 4,
-"E": [
-{
-"ASI": {
-"N": "0057",
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
--26.0,
-6.0,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 4,
-"DU": 2,
-"E": [
-{
-"ASI": {
-"N": "0058",
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0
-]
-}
-}
-]
-}
-]
-}
-]
-}
-},
-{
-"SN": "pico body laugh",
-"TL": {
-"L": [
-{
-"LN": "Layer_1",
-"FR": [
-{
-"I": 0,
-"DU": 11,
-"E": [
-{
-"ASI": {
-"N": "0059",
-"M3D": [
-0.983062744140625,
-0.0,
-0.0,
-0.0,
-0.0,
-0.983062744140625,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
--0.95,
-0.0,
-1.0
-]
-}
-}
-]
-},
-{
-"I": 11,
-"DU": 2,
-"E": [
-{
-"ASI": {
-"N": "0060",
-"M3D": [
-0.983062744140625,
-0.0,
-0.0,
-0.0,
-0.0,
-0.983062744140625,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-8.8,
-0.0,
-1.0
-]
-}
 }
 ]
 }
@@ -25005,89 +28735,7 @@
 "E": [
 {
 "ASI": {
-"N": "0053",
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0
-]
-}
-}
-]
-}
-]
-}
-]
-}
-},
-{
-"SN": "face snide pico",
-"TL": {
-"L": [
-{
-"LN": "Layer_2",
-"FR": [
-{
-"I": 0,
-"DU": 1,
-"E": [
-{
-"ASI": {
-"N": "0054",
-"M3D": [
-0.9715423583984375,
-0.0,
-0.0,
-0.0,
-0.0,
-0.9715423583984375,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0
-]
-}
-}
-]
-}
-]
-}
-]
-}
-},
-{
-"SN": "pointing arm pico",
-"TL": {
-"L": [
-{
-"LN": "Layer_2",
-"FR": [
-{
-"I": 0,
-"DU": 1,
-"E": [
-{
-"ASI": {
-"N": "0055",
+"N": "0051",
 "M3D": [
 1.0,
 0.0,
@@ -25128,7 +28776,270 @@
 "E": [
 {
 "ASI": {
-"N": "0061",
+"N": "0054",
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0
+]
+}
+}
+]
+}
+]
+}
+]
+}
+},
+{
+"SN": "pico snide face",
+"TL": {
+"L": [
+{
+"LN": "Layer_1",
+"FR": [
+{
+"I": 0,
+"DU": 8,
+"E": [
+{
+"ASI": {
+"N": "0055",
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+4.0,
+15.0,
+0.0,
+1.0
+]
+}
+}
+]
+}
+]
+}
+]
+}
+},
+{
+"SN": "pointing arm snap pico",
+"TL": {
+"L": [
+{
+"LN": "Layer_1",
+"FR": [
+{
+"I": 0,
+"DU": 4,
+"E": [
+{
+"ASI": {
+"N": "0056",
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+-26.0,
+6.0,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 4,
+"DU": 2,
+"E": [
+{
+"ASI": {
+"N": "0057",
+"M3D": [
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0
+]
+}
+}
+]
+}
+]
+}
+]
+}
+},
+{
+"SN": "pico body laugh",
+"TL": {
+"L": [
+{
+"LN": "Layer_1",
+"FR": [
+{
+"I": 0,
+"DU": 11,
+"E": [
+{
+"ASI": {
+"N": "0058",
+"M3D": [
+0.983062744140625,
+0.0,
+0.0,
+0.0,
+0.0,
+0.983062744140625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+-0.95,
+0.0,
+1.0
+]
+}
+}
+]
+},
+{
+"I": 11,
+"DU": 2,
+"E": [
+{
+"ASI": {
+"N": "0059",
+"M3D": [
+0.983062744140625,
+0.0,
+0.0,
+0.0,
+0.0,
+0.983062744140625,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+8.8,
+0.0,
+1.0
+]
+}
+}
+]
+}
+]
+}
+]
+}
+},
+{
+"SN": "face snide pico",
+"TL": {
+"L": [
+{
+"LN": "Layer_2",
+"FR": [
+{
+"I": 0,
+"DU": 1,
+"E": [
+{
+"ASI": {
+"N": "0052",
+"M3D": [
+0.9715423583984375,
+0.0,
+0.0,
+0.0,
+0.0,
+0.9715423583984375,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0,
+0.0,
+0.0,
+0.0,
+0.0,
+1.0
+]
+}
+}
+]
+}
+]
+}
+]
+}
+},
+{
+"SN": "pointing arm pico",
+"TL": {
+"L": [
+{
+"LN": "Layer_2",
+"FR": [
+{
+"I": 0,
+"DU": 1,
+"E": [
+{
+"ASI": {
+"N": "0053",
 "M3D": [
 1.0,
 0.0,
@@ -25441,7 +29352,7 @@
 "E": [
 {
 "ASI": {
-"N": "0062",
+"N": "0060",
 "M3D": [
 0.967193603515625,
 0.0,
@@ -25482,7 +29393,7 @@
 "E": [
 {
 "ASI": {
-"N": "0063",
+"N": "0061",
 "M3D": [
 1.0,
 0.0,
@@ -25523,7 +29434,7 @@
 "E": [
 {
 "ASI": {
-"N": "0064",
+"N": "0062",
 "M3D": [
 1.0,
 0.0,
@@ -25564,7 +29475,7 @@
 "E": [
 {
 "ASI": {
-"N": "0065",
+"N": "0063",
 "M3D": [
 1.0,
 0.0,
@@ -25605,7 +29516,7 @@
 "E": [
 {
 "ASI": {
-"N": "0066",
+"N": "0064",
 "M3D": [
 1.0,
 0.0,
@@ -29961,7 +33872,7 @@
 "E": [
 {
 "ASI": {
-"N": "0067",
+"N": "0065",
 "M3D": [
 1.0,
 0.0,
@@ -30002,7 +33913,7 @@
 "E": [
 {
 "ASI": {
-"N": "0068",
+"N": "0066",
 "M3D": [
 1.0,
 0.0,
@@ -30043,7 +33954,7 @@
 "E": [
 {
 "ASI": {
-"N": "0069",
+"N": "0067",
 "M3D": [
 1.0,
 0.0,
@@ -30084,7 +33995,7 @@
 "E": [
 {
 "ASI": {
-"N": "0070",
+"N": "0068",
 "M3D": [
 0.9775848388671875,
 0.0,
@@ -30117,40 +34028,6 @@
 "TL": {
 "L": [
 {
-"LN": "Layer_2",
-"FR": [
-{
-"I": 0,
-"DU": 3,
-"E": [
-{
-"ASI": {
-"N": "0074",
-"M3D": [
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-0.0,
-0.0,
-0.0,
-1.0,
-0.0,
-169.0,
--243.0,
-0.0,
-1.0
-]
-}
-}
-]
-}
-]
-},
-{
 "LN": "Layer_1",
 "FR": [
 {
@@ -30159,7 +34036,7 @@
 "E": [
 {
 "ASI": {
-"N": "0075",
+"N": "0072",
 "M3D": [
 1.0,
 0.0,
@@ -30188,7 +34065,7 @@
 "E": [
 {
 "ASI": {
-"N": "0076",
+"N": "0073",
 "M3D": [
 1.0,
 0.0,
@@ -30217,7 +34094,7 @@
 "E": [
 {
 "ASI": {
-"N": "0077",
+"N": "0074",
 "M3D": [
 1.0,
 0.0,
@@ -30258,7 +34135,7 @@
 "E": [
 {
 "ASI": {
-"N": "0071",
+"N": "0069",
 "M3D": [
 1.0,
 0.0,
@@ -30299,7 +34176,7 @@
 "E": [
 {
 "ASI": {
-"N": "0072",
+"N": "0070",
 "M3D": [
 1.0,
 0.0,
@@ -30340,7 +34217,7 @@
 "E": [
 {
 "ASI": {
-"N": "0073",
+"N": "0071",
 "M3D": [
 1.0,
 0.0,
@@ -30381,7 +34258,7 @@
 "E": [
 {
 "ASI": {
-"N": "0078",
+"N": "0075",
 "M3D": [
 1.0,
 0.0,
@@ -30410,7 +34287,7 @@
 "E": [
 {
 "ASI": {
-"N": "0079",
+"N": "0076",
 "M3D": [
 1.0,
 0.0,
@@ -30439,7 +34316,7 @@
 "E": [
 {
 "ASI": {
-"N": "0080",
+"N": "0077",
 "M3D": [
 1.0,
 0.0,
@@ -40839,7 +44716,7 @@
 "E": [
 {
 "ASI": {
-"N": "0082",
+"N": "0079",
 "M3D": [
 1.0,
 0.0,
@@ -40868,7 +44745,7 @@
 "E": [
 {
 "ASI": {
-"N": "0083",
+"N": "0080",
 "M3D": [
 1.0,
 0.0,
@@ -40897,7 +44774,7 @@
 "E": [
 {
 "ASI": {
-"N": "0084",
+"N": "0081",
 "M3D": [
 1.0,
 0.0,
@@ -40926,7 +44803,7 @@
 "E": [
 {
 "ASI": {
-"N": "0085",
+"N": "0082",
 "M3D": [
 1.0,
 0.0,
@@ -40955,7 +44832,7 @@
 "E": [
 {
 "ASI": {
-"N": "0086",
+"N": "0083",
 "M3D": [
 1.0,
 0.0,
@@ -40984,7 +44861,7 @@
 "E": [
 {
 "ASI": {
-"N": "0087",
+"N": "0084",
 "M3D": [
 1.0,
 0.0,
@@ -41013,7 +44890,7 @@
 "E": [
 {
 "ASI": {
-"N": "0088",
+"N": "0085",
 "M3D": [
 1.0,
 0.0,
@@ -41042,7 +44919,7 @@
 "E": [
 {
 "ASI": {
-"N": "0089",
+"N": "0086",
 "M3D": [
 1.0,
 0.0,
@@ -41071,7 +44948,7 @@
 "E": [
 {
 "ASI": {
-"N": "0090",
+"N": "0087",
 "M3D": [
 1.0,
 0.0,
@@ -42643,7 +46520,7 @@
 "E": [
 {
 "ASI": {
-"N": "0095",
+"N": "0092",
 "M3D": [
 1.0,
 0.0,
@@ -42672,7 +46549,7 @@
 "E": [
 {
 "ASI": {
-"N": "0096",
+"N": "0093",
 "M3D": [
 1.0,
 0.0,
@@ -42701,7 +46578,7 @@
 "E": [
 {
 "ASI": {
-"N": "0097",
+"N": "0094",
 "M3D": [
 1.0,
 0.0,
@@ -42888,7 +46765,7 @@
 "E": [
 {
 "ASI": {
-"N": "0098",
+"N": "0095",
 "M3D": [
 1.0,
 0.0,
@@ -42917,7 +46794,7 @@
 "E": [
 {
 "ASI": {
-"N": "0099",
+"N": "0096",
 "M3D": [
 1.0,
 0.0,
@@ -42946,7 +46823,7 @@
 "E": [
 {
 "ASI": {
-"N": "0100",
+"N": "0097",
 "M3D": [
 1.0,
 0.0,
@@ -42975,7 +46852,7 @@
 "E": [
 {
 "ASI": {
-"N": "0101",
+"N": "0098",
 "M3D": [
 1.0,
 0.0,
@@ -43004,7 +46881,7 @@
 "E": [
 {
 "ASI": {
-"N": "0102",
+"N": "0099",
 "M3D": [
 1.0,
 0.0,
@@ -43033,7 +46910,7 @@
 "E": [
 {
 "ASI": {
-"N": "0103",
+"N": "0100",
 "M3D": [
 1.0,
 0.0,
@@ -43062,7 +46939,7 @@
 "E": [
 {
 "ASI": {
-"N": "0104",
+"N": "0101",
 "M3D": [
 1.0,
 0.0,
@@ -43091,7 +46968,7 @@
 "E": [
 {
 "ASI": {
-"N": "0105",
+"N": "0102",
 "M3D": [
 1.0,
 0.0,
@@ -43120,7 +46997,7 @@
 "E": [
 {
 "ASI": {
-"N": "0106",
+"N": "0103",
 "M3D": [
 1.0,
 0.0,
@@ -43149,7 +47026,7 @@
 "E": [
 {
 "ASI": {
-"N": "0107",
+"N": "0104",
 "M3D": [
 1.0,
 0.0,
@@ -51254,7 +55131,7 @@
 "E": [
 {
 "ASI": {
-"N": "0108",
+"N": "0105",
 "M3D": [
 1.0,
 0.0,
@@ -51283,7 +55160,7 @@
 "E": [
 {
 "ASI": {
-"N": "0109",
+"N": "0106",
 "M3D": [
 1.0,
 0.0,
@@ -58609,7 +62486,7 @@
 "E": [
 {
 "ASI": {
-"N": "0110",
+"N": "0107",
 "M3D": [
 1.0,
 0.0,
@@ -58648,7 +62525,7 @@
 "E": [
 {
 "ASI": {
-"N": "0111",
+"N": "0108",
 "M3D": [
 1.0,
 0.0,
@@ -58677,7 +62554,7 @@
 "E": [
 {
 "ASI": {
-"N": "0112",
+"N": "0109",
 "M3D": [
 1.0,
 0.0,
@@ -58706,7 +62583,7 @@
 "E": [
 {
 "ASI": {
-"N": "0113",
+"N": "0110",
 "M3D": [
 1.0,
 0.0,
@@ -58735,7 +62612,7 @@
 "E": [
 {
 "ASI": {
-"N": "0114",
+"N": "0111",
 "M3D": [
 1.0,
 0.0,
@@ -58764,7 +62641,7 @@
 "E": [
 {
 "ASI": {
-"N": "0115",
+"N": "0112",
 "M3D": [
 1.0,
 0.0,
@@ -58793,7 +62670,7 @@
 "E": [
 {
 "ASI": {
-"N": "0116",
+"N": "0113",
 "M3D": [
 1.0,
 0.0,
@@ -58822,7 +62699,7 @@
 "E": [
 {
 "ASI": {
-"N": "0117",
+"N": "0114",
 "M3D": [
 1.0,
 0.0,
@@ -58851,7 +62728,7 @@
 "E": [
 {
 "ASI": {
-"N": "0118",
+"N": "0115",
 "M3D": [
 1.0,
 0.0,
@@ -58880,7 +62757,7 @@
 "E": [
 {
 "ASI": {
-"N": "0119",
+"N": "0116",
 "M3D": [
 1.0,
 0.0,
@@ -58909,7 +62786,7 @@
 "E": [
 {
 "ASI": {
-"N": "0120",
+"N": "0117",
 "M3D": [
 1.0,
 0.0,
@@ -67016,7 +70893,7 @@
 "E": [
 {
 "ASI": {
-"N": "0081",
+"N": "0078",
 "M3D": [
 1.0,
 0.0,
@@ -67057,7 +70934,7 @@
 "E": [
 {
 "ASI": {
-"N": "0091",
+"N": "0088",
 "M3D": [
 1.0,
 0.0,
@@ -67098,7 +70975,7 @@
 "E": [
 {
 "ASI": {
-"N": "0092",
+"N": "0089",
 "M3D": [
 1.0,
 0.0,
@@ -67139,7 +71016,7 @@
 "E": [
 {
 "ASI": {
-"N": "0093",
+"N": "0090",
 "M3D": [
 1.0,
 0.0,
@@ -67180,7 +71057,7 @@
 "E": [
 {
 "ASI": {
-"N": "0094",
+"N": "0091",
 "M3D": [
 1.0,
 0.0,
@@ -67529,7 +71406,7 @@
 "E": [
 {
 "ASI": {
-"N": "0121",
+"N": "0118",
 "M3D": [
 1.0,
 0.0,
@@ -67570,7 +71447,7 @@
 "E": [
 {
 "ASI": {
-"N": "0122",
+"N": "0119",
 "M3D": [
 1.0,
 0.0,
@@ -67611,7 +71488,7 @@
 "E": [
 {
 "ASI": {
-"N": "0123",
+"N": "0120",
 "M3D": [
 1.0,
 0.0,
@@ -67640,7 +71517,7 @@
 "E": [
 {
 "ASI": {
-"N": "0124",
+"N": "0121",
 "M3D": [
 1.0,
 0.0,
@@ -67669,7 +71546,7 @@
 "E": [
 {
 "ASI": {
-"N": "0125",
+"N": "0122",
 "M3D": [
 1.0,
 0.0,
@@ -67698,7 +71575,7 @@
 "E": [
 {
 "ASI": {
-"N": "0126",
+"N": "0123",
 "M3D": [
 1.0,
 0.0,
@@ -67739,7 +71616,7 @@
 "E": [
 {
 "ASI": {
-"N": "0127",
+"N": "0124",
 "M3D": [
 1.0,
 0.0,
