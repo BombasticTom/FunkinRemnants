@@ -54,6 +54,12 @@ class RemnantsPixelIcons extends Module
           {
             capsuleGroup.members[i].pixelIcon.setCharacter('bf-remnants');
           }
+
+          // Blazin' (Remnants Mix)
+          if (capsuleGroup.members[i].songText.text == "Blazin' (Remnants Mix)")
+          {
+            capsuleGroup.members[i].pixelIcon.setCharacter('darnell-remnants');
+          }
         }
       }
 
