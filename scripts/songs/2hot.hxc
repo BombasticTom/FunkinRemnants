@@ -210,7 +210,7 @@ class TwoHOTSong extends Song
         // This creates the can and starts the animation.
         // We define the behavior of the can in a separate scripted class,
         // which allows the can to track and manage its own properties.
-        var newCan:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('SpraycanAtlasSprite', 0, 0);
+        var newCan:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('SpraycanAtlasSpriteRemnants', 0, 0);
 
         var spraycanPile = PlayState.instance.currentStage.getNamedProp('spraycanPile');
 
@@ -283,10 +283,25 @@ class TwoHOTSong extends Song
           // Exclude.
           continue;
         }
+
+        // Newspaper.
+        if (stageProp.name == "paper")
+        {
+          // Exclude.
+          continue;
+        }
       }
 
       // Select cans.
       if (spawnedCans.contains(stageProp))
+      {
+        // Exclude.
+        continue;
+      }
+
+      // Hacky way of selecting the mist objects.
+      // They are not public so this is the only way i think.
+      if (stageProp.zIndex == 1000 || stageProp.zIndex == 1001 || stageProp.zIndex == 99 || stageProp.zIndex == 88 || stageProp.zIndex == 39)
       {
         // Exclude.
         continue;
@@ -321,6 +336,21 @@ class TwoHOTSong extends Song
           // Exclude.
           continue;
         }
+
+        // Newspaper.
+        if (stageProp.name == "paper")
+        {
+          // Exclude.
+          continue;
+        }
+      }
+
+       // Hacky way of selecting the mist objects.
+      // They are not public so this is the only way i think.
+      if (stageProp.zIndex == 1000 || stageProp.zIndex == 1001 || stageProp.zIndex == 99 || stageProp.zIndex == 88 || stageProp.zIndex == 39)
+      {
+        // Exclude.
+        continue;
       }
 
       // Select cans.
@@ -365,7 +395,7 @@ class TwoHOTSong extends Song
 
   function spawnImpactParticle()
   {
-    var impactParticle = FunkinSprite.createSparrow(0, 0, 'CanImpactParticle');
+    var impactParticle = FunkinSprite.createSparrow(0, 0, 'stages/weekEnd1Remnants/CanImpactParticle');
     impactParticle.animation.addByPrefix('idle', 'CanImpactParticle0', 24, false);
     impactParticle.animation.play('idle');
     impactParticle.x = PlayState.instance.currentStage.getBoyfriend().x + 400;
