@@ -153,6 +153,19 @@
 				"flipY": false
 				}
 			]
+		},
+		{
+			"danceEvery": 0,
+			"zIndex": 690,
+			"position": [920, 1275],
+			"scale": [1, 1],
+			"animType": "sparrow",
+			"name": "spraycanPile",
+			"isPixel": false,
+			"assetPath": "stages/weekEnd1Remnants/SpraycanPile",
+			"scroll": [1, 1],
+			"alpha": 1,
+			"animations": []
 		}
 	],
 	"characters": {
