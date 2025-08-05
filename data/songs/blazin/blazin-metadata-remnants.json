@@ -20,8 +20,8 @@
     "noteStyle": "funkin",
     "ratings": {
       "easy": 4,
-      "hard": 6,
-      "normal": 5
+      "normal": 5,
+      "hard": 6
     },
     "previewStart": 0,
     "previewEnd": 15000
