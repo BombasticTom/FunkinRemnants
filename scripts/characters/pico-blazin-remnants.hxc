@@ -447,17 +447,19 @@ class PicoBlazinRemnantsCharacter extends AnimateAtlasCharacter
     moveToBack();
   }
 
-  function playPunchHighAnim()
-  {
-    this.playAnimation('punchHigh' + doAlternate(), true, false);
-    moveToFront();
-  }
+	function playPunchHighAnim()
+	{
+		var postfix:String = doAlternate();
+		this.playAnimation('punchHigh' + postfix, true, false);
+		moveToFront();
+	}
 
-  function playPunchLowAnim()
-  {
-    this.playAnimation('punchLow' + doAlternate(), true, false);
-    moveToFront();
-  }
+	function playPunchLowAnim()
+	{
+		var postfix:String = doAlternate();
+		this.playAnimation('punchLow' + postfix, true, false);
+		moveToFront();
+	}
 
   function playTauntConditionalAnim()
   {
