@@ -302,7 +302,7 @@ class PicoPlayerRemnantsCharacter extends MultiSparrowCharacter {
 			addToStage(casingGroup);
 		}
 
-		var casing = ScriptedFunkinSprite.init('CasingSprite', 0, 0);
+		var casing = ScriptedFunkinSprite.init('CasingSpriteRemnants', 0, 0);
 		if (casing != null)
 			casingGroup.add(casing);
 	}

@@ -154,7 +154,7 @@ class PicoBlazinRemnantsCharacter extends AnimateAtlasCharacter
 
   function doDeathConfirm():Void
   {
-    var picoDeathConfirm:FunkinSprite = FunkinSprite.createSparrow(this.x + 905, this.y + 1030, 'picoBlazinDeathConfirm');
+    var picoDeathConfirm:FunkinSprite = FunkinSprite.createSparrow(this.x + 905, this.y + 1030, 'stages/weekEnd1Remnants/characters/picoBlazinDeathConfirm-remnants');
     picoDeathConfirm.animation.addByPrefix('confirm', "Pico Gut Punch Death0", 24, false);
     picoDeathConfirm.animation.play('confirm');
     picoDeathConfirm.scale.set(1.75, 1.75);
@@ -299,7 +299,7 @@ class PicoBlazinRemnantsCharacter extends AnimateAtlasCharacter
     playIdleAnim();
 
     GameOverSubState.musicSuffix = '-pico';
-    GameOverSubState.blueBallSuffix = '-pico-gutpunch';
+    GameOverSubState.blueBallSuffix = '-pico-gutpunch-remnants';
 
     PauseSubState.musicSuffix = '-pico';
   }
@@ -358,20 +358,20 @@ class PicoBlazinRemnantsCharacter extends AnimateAtlasCharacter
     // on sick block, do a 3rd strike esque "tech" effect
     if (judgement == 'sick')
     {
-      // var blendAnims:Array<Int> = [10, 0, 10, 0, 0, 10, 0, 0, 10, 0, 10];
-      //
-      // for (blendMode in 0...blendAnims.length)
-      // {
-      //	new FlxTimer().start(blendMode / 60, function(_) {
-      //
-      //		if (blendAnims[blendMode] != 10)
-      //			this.color = 0xFF0000FF;
-      //		else
-      //			this.color = 0xFFFFFFFF;
-      //
-      //		this.blend = blendAnims[blendMode];
-      //	});
-      // }
+      var blendAnims:Array<Int> = [10, 0, 10, 0, 0, 10, 0, 0, 10, 0, 10];
+      
+      for (blendMode in 0...blendAnims.length)
+      {
+      	new FlxTimer().start(blendMode / 60, function(_) {
+      
+      		if (blendAnims[blendMode] != 10)
+      			this.color = 0xFF0000FF;
+      		else
+      			this.color = 0xFFFFFFFF;
+      
+      		this.blend = blendAnims[blendMode];
+      	});
+      }
     }
 
     this.playAnimation('block', true, false);
