@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="Pico_Burps-remnants.png">
-	<!-- Created with Adobe Animate version 24.0.3.19 -->
-	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="burpshit0000" x="2" y="2" width="491" height="467" frameX="-1" frameY="-18" frameWidth="531" frameHeight="485"/>
 	<SubTexture name="burpshit0001" x="495" y="2" width="491" height="467" frameX="-1" frameY="-18" frameWidth="531" frameHeight="485"/>
 	<SubTexture name="burpshit0002" x="988" y="2" width="499" height="469" frameX="0" frameY="-16" frameWidth="531" frameHeight="485"/>

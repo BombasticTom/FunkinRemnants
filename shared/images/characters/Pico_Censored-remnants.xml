@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="Pico_Censored-remnants.png">
-	<!-- Created with Adobe Animate version 24.0.3.19 -->
-	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="pico swear down0000" x="2" y="2" width="548" height="382" frameX="-13" frameY="-9" frameWidth="561" frameHeight="392"/>
 	<SubTexture name="pico swear down0001" x="552" y="2" width="548" height="382" frameX="-13" frameY="-9" frameWidth="561" frameHeight="392"/>
 	<SubTexture name="pico swear down0002" x="1102" y="2" width="556" height="392" frameX="0" frameY="0" frameWidth="561" frameHeight="392"/>
