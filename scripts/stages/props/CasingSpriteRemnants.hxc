@@ -15,7 +15,7 @@ class CasingSpriteRemnants extends FunkinSprite
   {
     super(0, 0);
 
-    zIndex = 1900;
+    zIndex = 999;
 
     loadSparrow('stages/weekEnd1Remnants/mechanics/PicoBullet');
 
@@ -37,13 +37,16 @@ class CasingSpriteRemnants extends FunkinSprite
     }
   }
 
+  var offsetX:Float = 150;
+  var offsetY:Float = 150;
+
   function startRoll()
   {
     this.animation.callback = null; // Save performance.
 
     // Get the end position of the bullet dynamically.
-    this.x = this.x + this.frame.offset.x - 1;
-    this.y = this.y + this.frame.offset.y + 1;
+    this.x = this.x + this.frame.offset.x - 1 - offsetX;
+    this.y = this.y + this.frame.offset.y + 1 + offsetY;
 
     this.angle = 125.1; // Copied from FLA
 

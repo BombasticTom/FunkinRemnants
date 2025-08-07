@@ -345,7 +345,7 @@ class TwoHOTSong extends Song
         }
       }
 
-       // Hacky way of selecting the mist objects.
+      // Hacky way of selecting the mist objects.
       // They are not public so this is the only way i think.
       if (stageProp.zIndex == 1000 || stageProp.zIndex == 1001 || stageProp.zIndex == 99 || stageProp.zIndex == 88 || stageProp.zIndex == 39)
       {

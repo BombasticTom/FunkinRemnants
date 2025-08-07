@@ -154,7 +154,7 @@
 				20
 			],
 			"frameRate": 24,
-			"assetPath": "characters/Pico_Playable",
+			"assetPath": "characters/Pico_Playable-remnants",
 			"prefix": "Pico Left Note MISS",
 			"flipX": false,
 			"looped": false,
@@ -167,7 +167,7 @@
 				-40
 			],
 			"frameRate": 24,
-			"assetPath": "characters/Pico_Playable",
+			"assetPath": "characters/Pico_Playable-remnants",
 			"prefix": "Pico Down Note MISS",
 			"flipX": false,
 			"looped": false,
@@ -180,7 +180,7 @@
 				70
 			],
 			"frameRate": 24,
-			"assetPath": "characters/Pico_Playable",
+			"assetPath": "characters/Pico_Playable-remnants",
 			"prefix": "Pico Up Note MISS",
 			"flipX": false,
 			"looped": false,
@@ -193,7 +193,7 @@
 				45
 			],
 			"frameRate": 24,
-			"assetPath": "characters/Pico_Playable",
+			"assetPath": "characters/Pico_Playable-remnants",
 			"prefix": "Pico Right Note MISS",
 			"flipX": false,
 			"looped": false,
@@ -272,7 +272,7 @@
 			"looped": false,
 			"name": "firstDeath",
 			"flipY": false,
-			"assetPath": "characters/Pico_Death",
+			"assetPath": "characters/Pico_Death-remnants",
 			"frameRate": 24
 		},
 		{
@@ -315,7 +315,7 @@
 			"name": "deathLoop",
 			"looped": true,
 			"flipY": false,
-			"assetPath": "characters/Pico_Death",
+			"assetPath": "characters/Pico_Death-remnants",
 			"frameRate": 24
 		},
 		{
@@ -338,7 +338,7 @@
 				0
 			],
 			"frameRate": 24,
-			"assetPath": "characters/pico-yeah",
+			"assetPath": "characters/pico-yeah-remnants",
 			"prefix": "Pico YEAH cheer0",
 			"flipX": false,
 			"looped": false,
@@ -373,11 +373,24 @@
 		{
 			"flipY": false,
 			"offsets": [
+				300,
+				250
+			],
+			"frameRate": 24,
+			"assetPath": "characters/Pico_Shooting-remnants",
+			"prefix": "pico fire animation 1",
+			"flipX": false,
+			"looped": false,
+			"name": "fire"
+		},
+		{
+			"flipY": false,
+			"offsets": [
 				60,
 				0
 			],
 			"frameRate": 24,
-			"assetPath": "characters/Pico_Intro",
+			"assetPath": "characters/Pico_Intro-remnants",
 			"prefix": "Pico Gets Pissed0",
 			"flipX": false,
 			"looped": false,
@@ -390,7 +403,7 @@
 				0
 			],
 			"frameRate": 24,
-			"assetPath": "characters/Pico_Intro",
+			"assetPath": "characters/Pico_Intro-remnants",
 			"prefix": "cutscene cock0",
 			"flipX": false,
 			"looped": false,
@@ -403,7 +416,7 @@
 				230
 			],
 			"frameRate": 24,
-			"assetPath": "characters/Pico_Intro",
+			"assetPath": "characters/Pico_Intro-remnants",
 			"prefix": "shoot and return0",
 			"flipX": false,
 			"looped": false,
