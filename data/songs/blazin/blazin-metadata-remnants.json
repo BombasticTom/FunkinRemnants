@@ -3,7 +3,16 @@
   "songName": "Blazin' (Remnants Mix)",
   "artist": "RubyyyButCool",
   "charter": "Sammy The Goog",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
+    "songVariations": [    ],
     "difficulties": [
       "easy",
       "normal",
@@ -13,16 +22,17 @@
       "player": "pico-blazin-remnants",
       "girlfriend": "nene-remnants",
       "opponent": "darnell-blazin-remnants",
-      "instrumental": "remnants"
+      "instrumental": "remnants",
+      "altInstrumentals": [      ]
     },
-    "album": "remnants-general",
     "stage": "phillyBlazinRemnants",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 7,
-      "normal": 10,
+      "easy": 8,
+      "normal": 12,
       "hard": 13
     },
+    "album": "remnants-general",
     "previewStart": 0,
     "previewEnd": 15000
   },
