@@ -8,7 +8,7 @@
   },
 
   "music": {
-    "asset": "LunchboxScary",
+    "asset": "dialogue/LunchboxScary",
     "fadeTime": 2.0,
     "looped": true
   },
@@ -21,24 +21,23 @@
   "dialogue": [
     {
       "speaker": "spirit-remnants",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "talkEnter",
       "box": "remnants-thorns",
       "boxAnimation": "enter",
 
       "text": [
-        "Direct contact with real humans, after being trapped in here for so long...",
-        " and HER of all people."
+        "I know what you are"
       ],
       "speed": 1.0
     },
     {
-      "speaker": "spirit-remnants",
+      "speaker": "bf-pixel-remnants",
       "speakerAnimation": "talk",
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
       "text": [
-        "I'll make her father pay for what he's done to me and all the others..."
+        ""
       ]
     },
     {
@@ -47,17 +46,18 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": ["I'll beat you and make you take my place."]
+      "text": [
+        ""
+      ]
     },
     {
-      "speaker": "spirit-remnants",
+      "speaker": "bf-pixel-remnants",
       "speakerAnimation": "talk",
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
       "text": [
-        "You don't mind your bodies being borrowed right?",
-        " It's only fair..."
+        "Are we deadass?"
       ]
     }
   ]

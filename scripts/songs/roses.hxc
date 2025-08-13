@@ -54,6 +54,7 @@ class RosesSong extends Song
     return [];
   }
 
+  var variantPath:String = '';
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
@@ -61,6 +62,10 @@ class RosesSong extends Song
     // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
     if (PlayState.instance.currentVariation != 'pico' && PlayState.instance.currentVariation != 'remnants' && !PlayStatePlaylist.isStoryMode)
       hasPlayedCutscene = true;
+
+    // Set the audio's path depending of the current variation (if needed).
+    if (PlayState.instance.currentVariation == 'remnants')
+      variantPath = 'week6/';
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
@@ -74,7 +79,7 @@ class RosesSong extends Song
       event.cancel(); // CANCEL THE COUNTDOWN!
 
       // Play a SFX
-      FunkinSound.playOnce(Paths.sound('ANGRY_TEXT_BOX'), 1.0);
+      FunkinSound.playOnce(Paths.sound('' + variantPath + 'ANGRY_TEXT_BOX'), 1.0);
 
       HapticUtil.vibrate(0.1, 0.5, 1, 1);
 
@@ -93,6 +98,12 @@ class RosesSong extends Song
     if (PlayState.instance.currentVariation == 'pico') targetDialogue += "-pico";
     if (PlayState.instance.currentVariation == 'remnants') targetDialogue += "-remnants";
     if (!Preferences.naughtyness) targetDialogue += "-censored";
+
+    // Play a SFX
+    if (PlayState.instance.currentVariation == 'remnants')
+    {
+      FunkinSound.playOnce(Paths.sound('' + variantPath + 'ANGRY'), 1.0);
+    }
 
     trace('Playing dialogue...');
     PlayState.instance.startConversation(targetDialogue);
