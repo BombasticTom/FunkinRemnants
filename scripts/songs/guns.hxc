@@ -1,0 +1,92 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.save.Save;
+import funkin.play.PlayStatePlaylist;
+
+class GunsSong extends Song
+{
+  var hasPlayedCutscene:Bool;
+
+  public function new()
+  {
+    super('guns');
+
+    hasPlayedCutscene = false;
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
+    return false;
+	}
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+    {
+      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+			var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
+
+      switch (variationId)
+      {
+        case 'pico':
+          // return hasBeatenPicoMix ? [''] : [];
+          // No Pico mix on BF instrumental, sorry!
+          return [];
+        case 'remnants':
+					if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
+        default:
+          return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
+      }
+    }
+    return [];
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    // Skip the cutscene unless we are in Story Mode, or Remnants Mix specifically.
+    if (PlayState.instance.currentVariation != 'remnants' && !PlayStatePlaylist.isStoryMode)
+      hasPlayedCutscene = true;
+
+    if (!hasPlayedCutscene)
+    {
+      trace('Pausing countdown to play a video cutscene (`guns`)');
+
+      hasPlayedCutscene = true;
+
+      event.cancel(); // CANCEL THE COUNTDOWN!
+
+      startVideo(PlayState.instance.currentVariation == 'remnants');
+    }
+  }
+
+  function startVideo(isRemnants:Bool)
+  {
+    var videoPath = 'gunsCutscene';
+    if (isRemnants) videoPath = 'gunsRemnantsCutscene';
+    VideoCutscene.play(Paths.videos(videoPath));
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedCutscene = true;
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+  }
+}

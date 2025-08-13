@@ -11,16 +11,42 @@ import flixel.tweens.FlxEase;
 import funkin.ui.options.PreferencesMenu;
 import funkin.save.Save;
 
-class SouthSong extends Song {
-	public function new() {
+class SouthSong extends Song
+{
+	public function new()
+  {
 		super('south');
 	}
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
   {
-    if (currentVariation == 'remnants')
-      return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
-
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
     return false;
 	}
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+    {
+      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+			// var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
+
+      switch (variationId)
+      {
+        case 'pico':
+          // return hasBeatenPicoMix ? [''] : [];
+          // No Pico mix on BF instrumental, sorry!
+          return [];
+        case 'remnants':
+					// if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
+          // Remnants Mix BPM is different!
+          return [];
+        default:
+          // return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
+          // Remnants Mix BPM is different!
+          return hasBeatenPicoMix ? ['pico'] : [];
+      }
+    }
+    return [];
+  }
 }

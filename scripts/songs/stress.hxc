@@ -45,6 +45,7 @@ class StressSong extends Song
     if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
     {
       var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+			// var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
 
       switch (variationId)
       {
@@ -53,12 +54,15 @@ class StressSong extends Song
           // No Pico mix on BF instrumental, sorry!
           return [];
         case 'remnants':
+					// if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
+          // Remnants Mix Pitch is different!
           return [];
         default:
+          // return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
+          // Remnants Mix Pitch is different!
           return hasBeatenPicoMix ? ['pico'] : [];
       }
     }
-
     return [];
   }
 

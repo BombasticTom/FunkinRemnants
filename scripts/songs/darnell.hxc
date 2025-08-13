@@ -42,7 +42,6 @@ class DarnellSong extends Song
     {
       return !Save.instance.hasBeatenSong(this.id, ['erect', 'nightmare', 'remnants']);
     }
-
     return false;
   }
 
@@ -65,6 +64,7 @@ class DarnellSong extends Song
     if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
     {
       var hasBeatenBFMix = Save.instance.hasBeatenSong(this.id, null, 'bf');
+			var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
 
       switch (variationId)
       {
@@ -72,10 +72,13 @@ class DarnellSong extends Song
           // return hasBeatenBFMix ? [''] : [];
           // No BF mix on Pico instrumental, sorry!
           return [];
+        case 'remnants':
+					if (hasBeatenRemnantsMix) return hasBeatenBFMix ? ['bf', ''] : [];
         default:
-          return hasBeatenBFMix ? ['bf'] : [];
+          return [(hasBeatenBFMix) ? 'bf' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
       }
     }
+    return [];
   }
 
   public override function onCountdownStart(event:CountdownScriptEvent):Void

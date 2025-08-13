@@ -59,6 +59,29 @@ class TwoHOTSong extends Song
     return [];
   }
 
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
+    return false;
+	}
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+    {
+			var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
+
+      switch (variationId)
+      {
+        case 'remnants':
+					if (hasBeatenRemnantsMix) return [''];
+        default:
+          return [(hasBeatenRemnantsMix) ? 'remnants' : null];
+      }
+    }
+    return [];
+  }
+
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);

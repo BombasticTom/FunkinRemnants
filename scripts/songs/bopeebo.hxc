@@ -11,26 +11,38 @@ import flixel.tweens.FlxEase;
 import funkin.ui.options.PreferencesMenu;
 import funkin.save.Save;
 
-class BopeeboSong extends Song {
-	public function new() {
+class BopeeboSong extends Song
+{
+	public function new()
+	{
 		super('bopeebo');
 	}
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
   {
-    if (currentVariation == 'remnants')
-      return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
-
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
     return false;
 	}
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
   {
-		var targetDifficulty:Null<SongDifficulty> = getDifficulty(difficultyId, variationId);
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+    {
+      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+			var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
 
-		if ((difficultyId == "erect" || difficultyId == "nightmare") && (Save.instance.hasBeatenSong(this.id, ["erect"], "") || Save.instance.hasBeatenSong(this.id, ["nightmare"], ""))) return targetDifficulty?.characters?.altInstrumentals ?? [];
-		else if (variationId == "default" && Save.instance.hasBeatenSong(this.id, null, "")) return targetDifficulty?.characters?.altInstrumentals ?? [];
-		else if (Save.instance.hasBeatenSong(this.id, null, variationId)) return targetDifficulty?.characters?.altInstrumentals ?? [];
-		else return [];
+      switch (variationId)
+      {
+        case 'pico':
+          // return hasBeatenPicoMix ? [''] : [];
+          // No Pico mix on BF instrumental, sorry!
+          return [];
+        case 'remnants':
+					if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
+        default:
+          return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
+      }
+    }
+    return [];
   }
 }

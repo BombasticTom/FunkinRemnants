@@ -20,8 +20,10 @@ import flixel.tweens.FlxEase;
 	* That ended up being cut (main reason we would need a whole custom death animation if it killed you),
 	* but the code for that is still in here, so go wild!
 	*/
-class MILFSong extends Song {
-	public function new() {
+class MILFSong extends Song
+{
+	public function new()
+	{
 		super('milf');
 	}
 
@@ -87,7 +89,8 @@ class MILFSong extends Song {
 	function onNoteHit(event:HitNoteScriptEvent)
 	{
 		super.onNoteHit(event);
-    	if (PlayState.instance.currentStage == null) return;
+
+    if (PlayState.instance.currentStage == null) return;
 		if (event.note.noteData.getMustHitNote() && event.note.kind == 'week4-lightpole') {
 			this.hardResetSong();
 
@@ -102,6 +105,7 @@ class MILFSong extends Song {
 	function onNoteIncoming(event:HitNoteScriptEvent)
 	{
 		super.onNoteIncoming(event);
+
 		if (PlayState.instance.currentStage == null) return;
 		if (event.note.noteData.getMustHitNote() && event.note.kind == 'week4-lightpole') {
 			// Add the note strumTime to the list.
@@ -112,6 +116,7 @@ class MILFSong extends Song {
 	function onNoteMiss(event:HitNoteScriptEvent)
 	{
 		super.onNoteMiss(event);
+
 		if (PlayState.instance.currentStage == null) return;
 		if (event.note.noteData.getMustHitNote() && event.note.kind == 'week4-lightpole') {
 			this.hardResetSong();
@@ -130,9 +135,12 @@ class MILFSong extends Song {
 	function isPlayerDucking()
 	{
 		// Right now we just assume if they're holding a key at the right time, it counts.
-		if (PlayState.instance.controls.NOTE_DOWN || PlayState.instance.controls.NOTE_UP || PlayState.instance.controls.NOTE_LEFT || PlayState.instance.controls.NOTE_RIGHT) {
+		if (PlayState.instance.controls.NOTE_DOWN || PlayState.instance.controls.NOTE_UP || PlayState.instance.controls.NOTE_LEFT || PlayState.instance.controls.NOTE_RIGHT)
+		{
 			return true;
-		} else {
+		}
+		else
+		{
 			return false;
 		}
 	}
@@ -157,7 +165,8 @@ class MILFSong extends Song {
 
 		var random:Bool = FlxG.random.bool();
 		var animationName = "";
-		switch(type) {
+		switch(type)
+		{
 			case 0:
 				animationName = "hench head spin " + (random ? "1" : "2");
 			case 1:
@@ -179,7 +188,8 @@ class MILFSong extends Song {
 
 	var gibs:Array<FlxSprite> = [];
 
-	function gibHenchman(target:FlxSprite) {
+	function gibHenchman(target:FlxSprite)
+	{
 		var headGib = createGib(0);
 		headGib.x = target.getGraphicMidpoint().x + FlxG.random.int(-20, 20);
 		headGib.y = target.getGraphicMidpoint().y - 150;
@@ -226,7 +236,8 @@ class MILFSong extends Song {
 		});
 	}
 
-	function hardResetLimo() {
+	function hardResetLimo()
+	{
 		limoState = 0;
 		isTweeningLimo = false;
 
@@ -240,7 +251,8 @@ class MILFSong extends Song {
 	 * Destroys all existing gibs immediately. Called either when gibs are done animating,
 	 * or when the player restarts the song.
 	 */
-	function destroyAllGibs() {
+	function destroyAllGibs()
+	{
 		for (gib in gibs) {
 			PlayState.instance.currentStage.remove(gib);
 		}
@@ -518,19 +530,24 @@ class MILFSong extends Song {
 
 	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
 	{
-		if (currentVariation == 'remnants')
-		return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
-	
+		if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
 		return false;
 	}
 	
 	public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
 	{
-		var targetDifficulty:Null<SongDifficulty> = getDifficulty(difficultyId, variationId);
+		if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+		{
+			var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
 
-		if ((difficultyId == "erect" || difficultyId == "nightmare") && (Save.instance.hasBeatenSong(this.id, ["erect"], "") || Save.instance.hasBeatenSong(this.id, ["nightmare"], ""))) return targetDifficulty?.characters?.altInstrumentals ?? [];
-		else if (variationId == "default" && Save.instance.hasBeatenSong(this.id, null, "")) return targetDifficulty?.characters?.altInstrumentals ?? [];
-		else if (Save.instance.hasBeatenSong(this.id, null, variationId)) return targetDifficulty?.characters?.altInstrumentals ?? [];
-		else return [];
+			switch (variationId)
+			{
+				case 'remnants':
+					if (hasBeatenRemnantsMix) return [''];
+				default:
+					return [(hasBeatenRemnantsMix) ? 'remnants' : null];
+			}
+		}
+		return [];
 	}
 }

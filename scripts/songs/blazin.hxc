@@ -51,6 +51,12 @@ class BlazinSong extends Song
     return [];
   }
 
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
+    return false;
+	}
+
   var hasHidden = false;
   var hasPlayedCutscene:Bool = false;
 

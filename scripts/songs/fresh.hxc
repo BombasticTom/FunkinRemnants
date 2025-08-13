@@ -11,16 +11,16 @@ import flixel.tweens.FlxEase;
 import funkin.ui.options.PreferencesMenu;
 import funkin.save.Save;
 
-class FreshSong extends Song {
-	public function new() {
+class FreshSong extends Song
+{
+	public function new()
+  {
 		super('fresh');
 	}
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
   {
-    if (currentVariation == 'remnants')
-      return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
-
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
     return false;
 	}
 }

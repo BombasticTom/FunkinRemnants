@@ -58,7 +58,7 @@ class SenpaiSong extends Song
     if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
     {
       var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
-      var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
+			var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
 
       switch (variationId)
       {
@@ -67,12 +67,11 @@ class SenpaiSong extends Song
           // No Pico mix on BF instrumental, sorry!
           return [];
         case 'remnants':
-          return hasBeatenPicoMix ? ['pico', ''] : [''];
+					if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
         default:
-          return hasBeatenPicoMix ? ['pico'] : [];
+          return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
       }
     }
-
     return [];
   }
 

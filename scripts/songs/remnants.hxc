@@ -8,8 +8,15 @@ class RemnantsSong extends Song
 		super('remnants');
 	}
 
-	public function listDifficulties(variationId:String, variationIds:Array<String>, showLocked:Bool):Array<String> {
-		if (showLocked || Save.instance.hasBeatenLevel('remnants-week')) {
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+	{
+    return !Save.instance.hasBeatenSong(this.id, null, 'default');
+	}
+
+	public function listDifficulties(variationId:String, variationIds:Array<String>, showLocked:Bool):Array<String>
+	{
+		if (showLocked || Save.instance.hasBeatenLevel('remnants-week'))
+		{
 			return super.listDifficulties(variationId, variationIds);
 		}
 

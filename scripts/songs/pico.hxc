@@ -1,22 +1,24 @@
-import funkin.play.song.Song;
-import funkin.play.PlayState;
-import funkin.Preferences;
-import flixel.FlxSprite;
-import funkin.graphics.FunkinSprite;
-import flixel.FlxG;
-import funkin.play.PlayStatePlaylist;
-import funkin.audio.FunkinSound;
-import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import funkin.ui.options.PreferencesMenu;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import funkin.play.cutscene.dialogue.DialogueBox;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.song.Song;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.util.FlxTimer;
 import funkin.save.Save;
+import funkin.effects.RetroCameraFade;
 
-class DadBattleSong extends Song
+class PicoSong extends Song
 {
-	public function new()
+  var hasPlayedCutscene:Bool;
+
+  public function new()
   {
-		super('dadbattle');
-	}
+    super('pico');
+  }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
   {
@@ -29,7 +31,7 @@ class DadBattleSong extends Song
     if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
     {
       var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
-			// var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
+			var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
 
       switch (variationId)
       {
@@ -38,13 +40,9 @@ class DadBattleSong extends Song
           // No Pico mix on BF instrumental, sorry!
           return [];
         case 'remnants':
-					// if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
-          // Remnants Mix is longer and has pitch change on extension!
-          return [];
+					if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
         default:
-          // return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
-          // Remnants Mix is longer and has pitch change on extension!
-          return hasBeatenPicoMix ? ['pico'] : [];
+          return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
       }
     }
     return [];
