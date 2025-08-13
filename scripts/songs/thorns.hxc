@@ -1,5 +1,6 @@
 import funkin.audio.FunkinSound;
 import flixel.FlxG;
+import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
 import flixel.FlxSprite;
 import funkin.play.song.Song;

@@ -73,9 +73,9 @@ class DarnellSong extends Song
           // No BF mix on Pico instrumental, sorry!
           return [];
         case 'remnants':
-					if (hasBeatenRemnantsMix) return hasBeatenBFMix ? ['bf', ''] : [];
+					if (hasBeatenRemnantsMix) return hasBeatenBFMix ? [''] : [];
         default:
-          return [(hasBeatenBFMix) ? 'bf' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
+          return [(hasBeatenBFMix) ? '' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
       }
     }
     return [];

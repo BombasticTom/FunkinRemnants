@@ -42,9 +42,13 @@ class RosesSong extends Song
           // No Pico mix on BF instrumental, sorry!
           return [];
         case 'remnants':
-					if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
+					// if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
+          // Remnants Mix BPM is slower. (It would have been great...)
+          return [];
         default:
-          return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
+          // return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
+          // Remnants Mix BPM is slower. (It would have been great...)
+          return hasBeatenPicoMix ? ['pico'] : [];
       }
     }
     return [];

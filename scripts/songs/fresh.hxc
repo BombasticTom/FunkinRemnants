@@ -23,4 +23,30 @@ class FreshSong extends Song
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, 'remnants');
     return false;
 	}
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+    {
+      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+			// var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
+
+      switch (variationId)
+      {
+        case 'pico':
+          // return hasBeatenPicoMix ? [''] : [];
+          // No Pico mix on BF instrumental, sorry!
+          return [];
+        case 'remnants':
+					// if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
+          // Remnants Mix is longer and has pitch change on extension!
+          return [];
+        default:
+          // return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
+          // Remnants Mix is longer and has pitch change on extension!
+          return hasBeatenPicoMix ? ['pico'] : [];
+      }
+    }
+    return [];
+  }
 }
