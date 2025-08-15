@@ -98,7 +98,7 @@
 		{
 			"flipY": false,
 			"offsets": [
-				-50,
+				-58,
 				1
 			],
 			"frameRate": 24,
@@ -111,8 +111,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				84,
-				-77
+				139,
+				-81
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Censored-remnants",
@@ -124,8 +124,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				21,
-				28
+				65,
+				29
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Censored-remnants",
@@ -137,8 +137,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				84,
-				-11
+				139,
+				-15
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Censored-remnants",
@@ -150,7 +150,7 @@
 		{
 			"flipY": false,
 			"offsets": [
-				68,
+				142,
 				20
 			],
 			"frameRate": 24,
@@ -163,7 +163,7 @@
 		{
 			"flipY": false,
 			"offsets": [
-				80,
+				155,
 				-40
 			],
 			"frameRate": 24,
@@ -176,8 +176,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				29,
-				70
+				74,
+				67
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Playable-remnants",
@@ -202,8 +202,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				0,
-				0
+				20,
+				-10
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Shooting-remnants",
@@ -214,8 +214,8 @@
 		},
 		{
 			"offsets": [
-				225,
-				125
+				205,
+				85
 			],
 			"prefix": "Pico Death Stab",
 			"frameIndices": [
@@ -321,7 +321,7 @@
 		{
 			"flipY": false,
 			"offsets": [
-				0,
+				80,
 				0
 			],
 			"frameRate": 24,
@@ -334,8 +334,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				0,
-				0
+				52,
+				13
 			],
 			"frameRate": 24,
 			"assetPath": "characters/pico-yeah-remnants",
@@ -348,7 +348,7 @@
 			"flipY": false,
 			"offsets": [
 				0,
-				0
+				-20
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Shooting-remnants",
@@ -373,8 +373,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				300,
-				250
+				620,
+				230
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Shooting-remnants",
@@ -386,8 +386,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				60,
-				0
+				80,
+				20
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Intro-remnants",
@@ -400,7 +400,7 @@
 			"flipY": false,
 			"offsets": [
 				0,
-				0
+				-20
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Intro-remnants",
@@ -413,7 +413,7 @@
 			"flipY": false,
 			"offsets": [
 				260,
-				230
+				260
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Intro-remnants",
@@ -425,8 +425,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				33,
-				-3
+				78,
+				6
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Burps-remnants",
@@ -438,8 +438,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				33,
-				-3
+				78,
+				33
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Burps-remnants",
@@ -450,8 +450,8 @@
 		},
 		{
 			"offsets": [
-				33,
-				-3
+				78,
+				33
 			],
 			"prefix": "burpsmile",
 			"frameIndices": [
@@ -528,8 +528,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				0,
-				-3
+				10,
+				7
 			],
 			"frameRate": 24,
 			"assetPath": "characters/Pico_Burps-remnants",
