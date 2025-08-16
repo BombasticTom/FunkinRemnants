@@ -13,7 +13,7 @@
   "assetPath": "characters/tankmanCaptain-remnants",
   "healthIcon": {
     "offsets": [0, 0],
-    "id": "tankman",
+    "id": "tankman-remnants",
     "flipX": false,
     "isPixel": false,
     "scale": 1
