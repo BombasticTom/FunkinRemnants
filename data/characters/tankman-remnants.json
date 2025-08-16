@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "renderType": "multisparrow",
-  "offsets": [20, -40],
+  "offsets": [20, -35],
   "danceEvery": 1,
   "scale": 1,
   "name": "Remnants Tankman",
@@ -91,7 +91,7 @@
       "frameRate": 24,
       "prefix": "tankman laugh",
       "flipX": true,
-      "assetPath": "characters/tankmanPico",
+      "assetPath": "characters/tankmanPico-remnants",
       "name": "laugh"
     },
     {
@@ -99,7 +99,7 @@
       "offsets": [90, -9],
       "frameRate": 24,
       "prefix": "tankman beat it",
-      "assetPath": "characters/tankmanPico",
+      "assetPath": "characters/tankmanPico-remnants",
       "flipX": true,
       "name": "beat it"
     },
@@ -108,7 +108,7 @@
       "offsets": [52, -6],
       "frameRate": 24,
       "prefix": "tankman ARGH",
-      "assetPath": "characters/tankmanPico",
+      "assetPath": "characters/tankmanPico-remnants",
       "flipX": true,
       "name": "augh"
     }
