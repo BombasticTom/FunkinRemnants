@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="tank3.png">
-	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="fg tankhead 4 instance 10000" x="2" y="2" width="590" height="125" frameX="0" frameY="-10" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10001" x="2" y="2" width="590" height="125" frameX="0" frameY="-10" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10002" x="2" y="129" width="585" height="124" frameX="-2" frameY="-11" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10003" x="2" y="129" width="585" height="124" frameX="-2" frameY="-11" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10004" x="2" y="255" width="580" height="131" frameX="-5" frameY="-4" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10005" x="2" y="255" width="580" height="131" frameX="-5" frameY="-4" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10006" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10007" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10008" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10009" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10010" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10011" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10012" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10013" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
-	<SubTexture name="fg tankhead 4 instance 10014" x="2" y="388" width="574" height="135" frameX="-9" frameY="0" frameWidth="590" frameHeight="135"/>
+	<SubTexture name="fg tankhead 4 instance 10000" x="2" y="2" width="595" height="178" frameX="0" frameY="-10" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10001" x="2" y="2" width="595" height="178" frameX="0" frameY="-10" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10002" x="599" y="2" width="588" height="179" frameX="-3" frameY="-9" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10003" x="599" y="2" width="588" height="179" frameX="-3" frameY="-9" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10004" x="2" y="183" width="584" height="186" frameX="-5" frameY="-4" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10005" x="2" y="183" width="584" height="186" frameX="-5" frameY="-4" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10006" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10007" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10008" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10009" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10010" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10011" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10012" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10013" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
+	<SubTexture name="fg tankhead 4 instance 10014" x="588" y="183" width="578" height="192" frameX="-9" frameY="0" frameWidth="595" frameHeight="192"/>
 </TextureAtlas>
