@@ -47,9 +47,9 @@
       "assetPath": "stages/week7Remnants/tankClouds",
       "scale": [1, 1],
       "position": [0, 0],
-      "zIndex": 11,
-      "scroll": [0.4, 0.4],
-      "alpha": 0
+      "zIndex": 10,
+      "scroll": [0, 0],
+      "alpha": 1
     },
     {
       "name": "smokeLeft",
@@ -118,6 +118,55 @@
       "scroll": [1, 1],
       "scale": [1.15, 1.15],
       "zIndex": 101
+    },
+    {
+      "name": "tankTable1",
+      "assetPath": "stages/week7Remnants/table1",
+      "position": [-275, 775],
+      "scroll": [1.25, 1.25],
+      "scale": [1.15, 1.15],
+      "zIndex": 250
+    },
+    {
+      "name": "tankTable2",
+      "assetPath": "stages/week7Remnants/table2",
+      "position": [100, 550],
+      "scroll": [1, 1],
+      "scale": [1.15, 1.15],
+      "zIndex": 42
+    },
+    {
+      "name": "tankTable3",
+      "assetPath": "stages/week7Remnants/table3",
+      "position": [1250, 800],
+      "scroll": [1.2, 1.2],
+      "scale": [1.15, 1.15],
+      "zIndex": 250
+    },
+    {
+      "name": "tankBoxClose1",
+      "assetPath": "stages/week7Remnants/boxClose1",
+      "position": [-275, 600],
+      "scroll": [1.10, 1.05],
+      "scale": [1.15, 1.15],
+      "zIndex": 45
+    },
+    {
+      "name": "tankmanBopperCheer1",
+      "assetPath": "stages/week7Remnants/tankBopperCheer",
+      "zIndex": 43,
+      "position": [1300, 375],
+      "scale": [1.15, 1.15],
+      "scroll": [1, 1],
+      "danceEvery": 1,
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "Tankguy BG Bump0",
+          "looped": false
+        }
+      ],
+      "startingAnimation": "idle"
     },
     {
       "name": "tankmanAudience0",
