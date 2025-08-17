@@ -22,7 +22,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
 	{
 		super.buildStage();
 
-		clouds = new FlxTiledSprite(Paths.image('tankClouds'), 3200, 235, true, false);
+		clouds = new FlxTiledSprite(Paths.image('stages/week7Remnants/tankClouds'), 3200, 235, true, false);
 		clouds.setPosition(-1100, 20);
 		clouds.scrollFactor.set(0.25, 0.25);
 		clouds.zIndex = 12;
@@ -44,7 +44,9 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
 	var tankMoving:Bool = false;
 	var tankAngle:Float = FlxG.random.int(-90, 45);
-	var tankSpeed:Float = FlxG.random.float(5, 7);
+	var tankAngle2:Float = tankAngle;
+	var tankSpeed:Float = FlxG.random.float(7, 10);
+	var tankSpeed2:Float = FlxG.random.float(9, 12);
 	var tankX:Float = 400;
 
 	function onBeatHit(event:SongTimeScriptEvent):Void
@@ -56,11 +58,17 @@ class TankmanBattlefieldRemnantsStage extends Stage
 	{
 		var daAngleOffset:Float = 1;
 		tankAngle += elapsed * tankSpeed;
+		tankAngle2 += elapsed * tankSpeed2;
 
 		var tankRolling = getNamedProp('tankRolling');
 		tankRolling.angle = tankAngle - 90 + 15;
 		tankRolling.x = tankX + Math.cos(FlxAngle.asRadians((tankAngle * daAngleOffset) + 180)) * 1500;
 		tankRolling.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle * daAngleOffset) + 180)) * 1100;
+
+		var tankRollingExtra = getNamedProp('tankRollingExtra');
+		tankRollingExtra.angle = tankAngle2 - 90 + 15;
+		tankRollingExtra.x = tankX + Math.cos(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1500;
+		tankRollingExtra.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1100;
 	}
 
 	function onSongRetry(event:ScriptEvent)

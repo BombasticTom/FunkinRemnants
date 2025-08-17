@@ -13,7 +13,7 @@
     },
     {
       "name": "solid",
-      "assetPath": "#E3A26D",
+      "assetPath": "#000000",
       "position": [-500, -1000],
       "scale": [2400, 2000],
       "scroll": [0, 0]
@@ -90,6 +90,18 @@
         }
       ],
       "startingAnimation": "idle"
+    },
+    {
+      "name": "tankRollingExtra",
+      "assetPath": "stages/week7Remnants/tankRollingExtra",
+      "position": [300, 300],
+      "scale": [1, 1],
+      "zIndex": 22,
+      "scroll": [0.45, 0.45],
+      "animations": [
+        { "name": "roll", "prefix": "BG extra tank w lighting", "looped": true }
+      ],
+      "startingAnimation": "roll"
     },
     {
       "name": "tankRolling",
