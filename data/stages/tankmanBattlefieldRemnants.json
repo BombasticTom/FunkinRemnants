@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Tankman Battlefield (Remnants)",
-  "cameraZoom": 0.9,
+  "cameraZoom": 0.86,
   "props": [
     {
       "name": "tankSky",
