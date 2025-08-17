@@ -134,7 +134,7 @@
     {
       "name": "tankTable1",
       "assetPath": "stages/week7Remnants/table1",
-      "position": [-275, 775],
+      "position": [-275, 795],
       "scroll": [1.25, 1.25],
       "scale": [1.15, 1.15],
       "zIndex": 250
@@ -151,8 +151,8 @@
       "name": "tankTable3",
       "assetPath": "stages/week7Remnants/table3",
       "position": [1250, 800],
-      "scroll": [1.2, 1.2],
-      "scale": [1.15, 1.15],
+      "scroll": [1.1, 1.1],
+      "scale": [1.2, 1.2],
       "zIndex": 250
     },
     {
