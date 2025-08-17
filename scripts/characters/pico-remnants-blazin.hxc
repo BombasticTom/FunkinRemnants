@@ -7,11 +7,11 @@ import funkin.play.character.AnimateAtlasCharacter;
 import funkin.play.GameOverSubState;
 import StringTools;
 
-class PicoBlazinRemnantsCharacter extends AnimateAtlasCharacter
+class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
 {
   function new()
   {
-    super('pico-blazin-remnants');
+    super('pico-remnants-blazin');
   }
 
   function onCreate(event:ScriptEvent)

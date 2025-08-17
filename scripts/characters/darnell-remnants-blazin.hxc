@@ -3,11 +3,11 @@ import funkin.play.PlayState;
 import funkin.play.character.AnimateAtlasCharacter;
 import StringTools;
 
-class DarnellBlazinRemnantsCharacter extends AnimateAtlasCharacter
+class DarnellRemnantsBlazinCharacter extends AnimateAtlasCharacter
 {
   function new()
   {
-    super('darnell-blazin-remnants');
+    super('darnell-remnants-blazin');
   }
 
   function onCreate(event:ScriptEvent)
