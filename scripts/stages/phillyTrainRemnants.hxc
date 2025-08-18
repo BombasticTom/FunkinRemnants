@@ -313,7 +313,7 @@ class PhillyTrainRemnantsStage extends Stage
 
 		// NOTE: You pass the constructor variables directly, not as an array.
 		lightShader = ScriptedFlxRuntimeShader.init('BuildingEffectShader', 1.0);
-		trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
+		trainSound = new FlxSound().loadEmbedded(Paths.sound('week3/train_passes'));
 
     colorShader = new AdjustColorShader();
 		colorShader.hue = -26;
@@ -336,7 +336,7 @@ class PhillyTrainRemnantsStage extends Stage
 	function fetchAssetPaths():Array<String>
 	{
 		var results:Array<String> = super.fetchAssetPaths();
-		results.push(Paths.sound('train_passes'));
+		results.push(Paths.sound('week3/train_passes'));
 		return results;
 	}
 
