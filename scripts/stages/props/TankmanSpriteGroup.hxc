@@ -71,8 +71,8 @@ class TankmanSpriteGroup extends FlxTypedSpriteGroup
 		for (note in animNotes)
 		{
 			if (PlayState.instance.currentVariation == 'remnants') {
-				// Only one out of every 3 notes, on average, is a tankman.
-				randomBool = randomBool = FlxG.random.bool(1 / 3 * 100);
+				// Only one out of every 8 notes, on average, is a tankman.
+				randomBool = randomBool = FlxG.random.bool(1 / 8 * 100);
 			}
 
 			if (randomBool) {
