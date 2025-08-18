@@ -135,9 +135,7 @@ class RosesSong extends Song
     // otherwise boppers will not work.
     super.onBeatHit(event);
 
-    var outroCondition:Bool = (PlayStatePlaylist.isStoryMode || PlayState.instance.currentVariation == 'remnants');
-
-    if (event.beat == 180 && outroCondition)
+    if (event.beat == 180 && PlayStatePlaylist.isStoryMode)
     {
       trace('Hit end of song! Starting outro.');
 
