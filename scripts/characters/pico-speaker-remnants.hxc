@@ -92,14 +92,15 @@ class PicoSpeakerRemnantsCharacter extends SparrowCharacter {
 	}
 
 	function playPicoAnimation(direction:Int):Void
-  {
+    {
+		// So evil...
+		// FunkinSound.playOnce(Paths.sound('week7/micDrop'));
+
 		switch (direction) {
 			case 0: this.playAnimation('shoot1', true, true);
 			case 1: this.playAnimation('shoot2', true, true);
 			case 2: this.playAnimation('shoot3', true, true);
 			case 3: this.playAnimation('shoot4', true, true);
 		}
-
-		FunkinSound.playOnce(Paths.sound('week7/micDrop'));
 	}
 }
