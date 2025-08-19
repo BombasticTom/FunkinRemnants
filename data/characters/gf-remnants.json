@@ -7,13 +7,13 @@
   "animations": [
     {
       "name": "danceLeft",
-      "prefix": "GF Dancing Beat",
+      "prefix": "GF Dancing Beat0",
       "frameIndices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       "offsets": [0, -9]
     },
     {
       "name": "danceRight",
-      "prefix": "GF Dancing Beat",
+      "prefix": "GF Dancing Beat0",
       "frameIndices": [
         15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
       ],
@@ -21,61 +21,61 @@
     },
     {
       "name": "sad",
-      "prefix": "gf sad",
+      "prefix": "gf sad0",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       "offsets": [2, -21]
     },
     {
       "name": "singLEFT",
-      "prefix": "GF left note",
+      "prefix": "GF left note0",
       "offsets": [0, -19]
     },
     {
       "name": "singDOWN",
-      "prefix": "GF Down Note",
+      "prefix": "GF Down Note0",
       "offsets": [0, -20]
     },
     {
       "name": "singUP",
-      "prefix": "GF Up Note",
+      "prefix": "GF Up Note0",
       "offsets": [0, 4]
     },
     {
       "name": "singRIGHT",
-      "prefix": "GF Right Note",
+      "prefix": "GF Right Note0",
       "offsets": [0, -20]
     },
     {
       "name": "cheer",
-      "prefix": "GF Cheer",
+      "prefix": "GF Cheer0",
       "offsets": [0, 0]
     },
     {
       "name": "combo50",
-      "prefix": "GF Cheer",
+      "prefix": "GF Cheer0",
       "offsets": [0, 0]
     },
     {
       "name": "drop70",
-      "prefix": "gf sad",
+      "prefix": "gf sad0",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       "offsets": [2, -21]
     },
     {
       "name": "hairBlow",
-      "prefix": "GF Dancing Beat Hair blowing",
+      "prefix": "GF Dancing Beat Hair blowing0",
       "frameIndices": [0, 1, 2, 3],
       "offsets": [45, -8]
     },
     {
       "name": "hairFall",
-      "prefix": "GF Dancing Beat Hair Landing",
+      "prefix": "GF Dancing Beat Hair Landing0",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
       "offsets": [0, -9]
     },
     {
       "name": "scared",
-      "prefix": "GF FEAR",
+      "prefix": "GF FEAR0",
       "offsets": [-2, -17]
     }
   ]

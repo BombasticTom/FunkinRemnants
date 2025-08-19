@@ -77,25 +77,25 @@
     {
       "name": "hey",
       "prefix": "BF HEY!!",
-      "offsets": [7, 4]
+      "offsets": [-3, 5]
     },
     {
       "name": "cheer",
       "prefix": "Boyfriend YEAH cheer",
       "assetPath": "characters/BFCheer-remnants",
-      "offsets": [0, 0]
+      "offsets": [-20, 30]
     },
     {
       "name": "ugh",
       "prefix": "BF ugh",
       "assetPath": "characters/BFUgh-remnants",
-      "offsets": [5, -5]
+      "offsets": [-4, -7]
     },
     {
       "name": "hit",
       "prefix": "BF hit",
       "assetPath": "characters/BOYFRIEND",
-      "offsets": [10, 20]
+      "offsets": [12, 18]
     },
     {
       "name": "hit-hold",
@@ -103,7 +103,7 @@
       "frameIndices": [10, 11],
       "looped": true,
       "assetPath": "characters/BOYFRIEND",
-      "offsets": [10, 20]
+      "offsets": [12, 18]
     },
     {
       "name": "firstDeath",

@@ -334,8 +334,8 @@
 		{
 			"flipY": false,
 			"offsets": [
-				52,
-				13
+				105,
+				10
 			],
 			"frameRate": 24,
 			"assetPath": "characters/pico-yeah-remnants",
