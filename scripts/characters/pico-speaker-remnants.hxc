@@ -4,6 +4,7 @@ import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
 import flixel.FlxG;
 import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
 import flixel.group.FlxTypedSpriteGroup;
 import flixel.util.FlxSort;
 import funkin.Conductor;
@@ -98,5 +99,7 @@ class PicoSpeakerRemnantsCharacter extends SparrowCharacter {
 			case 2: this.playAnimation('shoot3', true, true);
 			case 3: this.playAnimation('shoot4', true, true);
 		}
+
+		FunkinSound.playOnce(Paths.sound('week7/micDrop'));
 	}
 }
