@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BFSpooky-remnants.png">
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF spooky dance0000" x="2" y="2" width="388" height="411" frameX="-23" frameY="0" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0001" x="2" y="2" width="388" height="411" frameX="-23" frameY="0" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0002" x="392" y="2" width="386" height="406" frameX="-27" frameY="-4" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0003" x="392" y="2" width="386" height="406" frameX="-27" frameY="-4" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0004" x="2" y="415" width="350" height="352" frameX="-39" frameY="-58" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0005" x="2" y="415" width="350" height="352" frameX="-39" frameY="-58" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0006" x="354" y="415" width="346" height="352" frameX="-43" frameY="-58" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0007" x="354" y="415" width="346" height="352" frameX="-43" frameY="-58" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0008" x="2" y="769" width="382" height="411" frameX="-2" frameY="0" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0009" x="2" y="769" width="382" height="411" frameX="-2" frameY="0" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0010" x="386" y="769" width="374" height="406" frameX="0" frameY="-4" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0011" x="386" y="769" width="374" height="406" frameX="0" frameY="-4" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0012" x="2" y="1182" width="350" height="352" frameX="-41" frameY="-58" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0013" x="2" y="1182" width="350" height="352" frameX="-41" frameY="-58" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0014" x="354" y="1182" width="346" height="352" frameX="-41" frameY="-58" frameWidth="413" frameHeight="411"/>
+	<SubTexture name="BF spooky dance0015" x="354" y="1182" width="346" height="352" frameX="-41" frameY="-58" frameWidth="413" frameHeight="411"/>
+</TextureAtlas>

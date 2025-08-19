@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFSpooky-remnants.png">
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GF spooky dance0000" x="2" y="2" width="703" height="634" frameX="0" frameY="-3" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0001" x="2" y="2" width="703" height="634" frameX="0" frameY="-3" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0002" x="707" y="2" width="699" height="637" frameX="-2" frameY="0" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0003" x="707" y="2" width="699" height="637" frameX="-2" frameY="0" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0004" x="2" y="641" width="699" height="607" frameX="-2" frameY="-30" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0005" x="2" y="641" width="699" height="607" frameX="-2" frameY="-30" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0006" x="703" y="641" width="699" height="610" frameX="-2" frameY="-27" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0007" x="703" y="641" width="699" height="610" frameX="-2" frameY="-27" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0008" x="2" y="1253" width="703" height="634" frameX="0" frameY="-3" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0009" x="2" y="1253" width="703" height="634" frameX="0" frameY="-3" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0010" x="707" y="1253" width="699" height="637" frameX="-2" frameY="0" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0011" x="707" y="1253" width="699" height="637" frameX="-2" frameY="0" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0012" x="2" y="1892" width="699" height="609" frameX="-2" frameY="-28" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0013" x="2" y="1892" width="699" height="609" frameX="-2" frameY="-28" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0014" x="703" y="1892" width="699" height="611" frameX="-2" frameY="-26" frameWidth="703" frameHeight="637"/>
+	<SubTexture name="GF spooky dance0015" x="703" y="1892" width="699" height="611" frameX="-2" frameY="-26" frameWidth="703" frameHeight="637"/>
+</TextureAtlas>
