@@ -174,7 +174,7 @@
       "animations": [
         {
           "name": "idle",
-          "prefix": "Tankguy BG Bump0",
+          "prefix": "Tankguy BG Bump instance 1",
           "looped": false
         }
       ],
