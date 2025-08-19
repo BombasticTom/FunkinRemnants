@@ -491,7 +491,7 @@ class StressSong extends Song
   public override function onSongEnd(event:CountdownScriptEvent):Void
   {
     super.onSongEnd(event);
-    if (PlayState.instance.currentVariation != 'pico' && PlayState.instance.currentVariation != 'remnants') hasPlayedEndCutscene = true;
+    if (PlayState.instance.currentVariation != 'pico') hasPlayedEndCutscene = true;
     // only play this on those variants..
 
     if (!hasPlayedEndCutscene)
