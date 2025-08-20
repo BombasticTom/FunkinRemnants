@@ -162,6 +162,9 @@ class StressSong extends Song
   var fakeBF:BaseCharacter;
   var fakeGF:BaseCharacter;
 
+  var gfCutscene:ScriptedFlxAtlasSprite;
+  var picoKillCutscene:ScriptedFlxAtlasSprite;
+
   /**
    * In-Game cutscene function for Remnants Mix.
    * Creates everything needed for it and plays it before the song starts.
@@ -267,6 +270,7 @@ class StressSong extends Song
       cutsceneMusic.fadeIn(5.0, 0.0, 0.3);
 
       // Play the dialogue.
+      tankmanCutscene.playAnimation("GOD EFFING DAMMIT");
       tankTalk.play(true);
 
       FlxTween.tween(bgSprite, {alpha: 0}, 1.5, {startDelay: 0.1}, function() {
@@ -277,7 +281,7 @@ class StressSong extends Song
     // focus camera on gf
     new FlxTimer().start(15.1, function(tmr:FlxTimer)
 		{
-      PlayState.instance.tweenCameraToPosition(gfPos[0], gfPos[1], 0.5, FlxEase.elasticInOut);
+      PlayState.instance.tweenCameraToPosition(gfPos[0] - 100, gfPos[1], 0.5, FlxEase.elasticInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.3, 2.1, true, FlxEase.quadInOut);
       gunPoint.play(true);
 
@@ -309,7 +313,7 @@ class StressSong extends Song
         // focus camera to tankman
 				new FlxTimer().start(3, function(weedShitBaby:FlxTimer)
 				{
-					PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 2, FlxEase.quadInOut);
+					PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.quadInOut);
 				});
 			});
 
@@ -319,9 +323,18 @@ class StressSong extends Song
 			});
 		});
 
-    // true time is 35.
+    // Cunt 1
+    new FlxTimer().start(31.5, function(cunt:FlxTimer)
+		{
+      PlayState.instance.tweenCameraZoom(0.86 * 1.4, 0.1, true);
+      PlayState.instance.tweenCameraToPosition(bfPos[0] + 100, bfPos[1], 0.1);
+      PlayState.instance.tweenCameraZoom(0.86 * 1.4 + 0.1, 0.5, true, FlxEase.elasticOut);
+			PlayState.instance.currentStage.getBoyfriend().playAnimation('singUPmiss', true, true);
+		});
+
+    // true time is 34.
     // camera returns to normal, cutscene flags set and countdown starts.
-    new FlxTimer().start(35, function(tmr)
+    new FlxTimer().start(34, function(tmr)
     {
       new FlxTimer().start(2.5, _ -> {
         PlayState.instance.camHUD.visible = true;
@@ -360,52 +373,64 @@ class StressSong extends Song
       new FlxTimer().start(4.6, function(censorTimer:FlxTimer)
       {
         censor.visible = true;
-        censor.setPosition(leDad.x + 160, leDad.y + 180);
+        censor.setPosition(leDad.x + 145, leDad.y + 165);
         censorBeep.play(false);
+        tankTalk.volume = 0;
 
+        // Well played you little S##t!
         new FlxTimer().start(0.2, function(endThing:FlxTimer)
         {
           censor.visible = false;
           censorBeep.stop();
+          tankTalk.volume = 1;
         });
       });
 
+      // Don't you have s##### ## ##### ##?
       new FlxTimer().start(25.1, function(censorTimer:FlxTimer)
       {
         censor.visible = true;
         censor.setPosition(leDad.x + 120, leDad.y + 170);
         censorBeep.play(false);
+        tankTalk2.volume = 0;
 
         new FlxTimer().start(0.9, function(endThing:FlxTimer)
         {
           censor.visible = false;
           censorBeep.stop();
+          tankTalk2.volume = 1;
         });
       });
 
+      // Let's rock!, you little c####s!
       new FlxTimer().start(30.7, function(censorTimer:FlxTimer)
       {
         censor.visible = true;
         censor.setPosition(leDad.x + 210, leDad.y + 190);
         censorBeep.play(false);
+        tankTalk2.volume = 0;
 
         new FlxTimer().start(0.4, function(endThing:FlxTimer)
         {
           censor.visible = false;
           censorBeep.stop();
+          tankTalk2.volume = 1;
         });
       });
 
+      // You little c####s!
       new FlxTimer().start(33.8, function(censorTimer:FlxTimer)
       {
         censor.visible = true;
         censor.setPosition(leDad.x + 180, leDad.y + 170);
         censorBeep.play(false);
+        tankTalk2.volume = 0;
 
         new FlxTimer().start(0.6, function(endThing:FlxTimer)
         {
           censor.visible = false;
           censorBeep.stop();
+          tankTalk2.volume = 1;
         });
       });
     }
@@ -421,7 +446,30 @@ class StressSong extends Song
 
   function onCutsceneBeatHit()
   {
-    fakeGF.dance(true);
+    if (PlayState.instance.currentStage.getBoyfriend().isAnimationFinished())
+    {
+      PlayState.instance.currentStage.getBoyfriend().dance(true);
+      PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
+
+      if (PlayState.instance.currentStage.getBoyfriend().getCurrentAnimation() == 'singUPmiss')
+      {
+        PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 0.1);
+        PlayState.instance.tweenCameraZoom(0.86, 0.1, true);
+
+				PlayState.instance.currentStage.getBoyfriend().animation.onFinish = null;
+      }
+    }
+
+    if (fakeBF.isAnimationFinished())
+    {
+      fakeBF.dance(true);
+      fakeBF.animation.curAnim.curFrame = 12;
+    }
+
+    if (fakeGF.isAnimationFinished())
+    {
+      fakeGF.dance(true);
+    }
   }
 
   /**
@@ -474,6 +522,11 @@ class StressSong extends Song
         rimlightCamera.focusOn(new FlxPoint(PlayState.instance.camGame.viewLeft + PlayState.instance.camGame.viewWidth / 2,
           PlayState.instance.camGame.viewTop + PlayState.instance.camGame.viewHeight / 2));
         rimlightCamera.zoom = PlayState.instance.camGame.zoom;
+      }
+
+      if (cutsceneConductor != null && cutsceneMusic != null)
+      {
+        cutsceneConductor.update(cutsceneMusic.time);
       }
 
       if (FlxG.mouse.pressed)
