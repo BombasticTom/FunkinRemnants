@@ -43,7 +43,7 @@ class PicoPlayerRemnantsCharacter extends MultiSparrowCharacter {
 	 * for use later.
 	 */
 	function createDeathSprites() {
-		deathSpriteRetry = FunkinSprite.createSparrow(0, 0, "characters/Pico_Death_Retry");
+		deathSpriteRetry = FunkinSprite.createSparrow(0, 0, "characters/Pico_Death_Retry-remnants");
 
 		// week 3 shader
 		if (shader != null)

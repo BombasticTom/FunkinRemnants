@@ -10,6 +10,8 @@ import funkin.graphics.shaders.DropShadowScreenspace;
 import flixel.FlxCamera;
 import flixel.FlxG;
 import flixel.math.FlxPoint;
+import flixel.text.FlxText;
+import flixel.text.FlxTextBorderStyle;
 import funkin.play.character.BaseCharacter;
 import funkin.play.character.CharacterDataParser;
 import funkin.data.song.SongRegistry;
@@ -24,17 +26,34 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import flixel.util.FlxTimerManager;
 import funkin.Preferences;
+import funkin.util.TouchUtil;
+import funkin.util.HapticUtil;
+import funkin.ui.FullScreenScaleMode;
 
 class StressSong extends Song
 {
   var hasPlayedCutscene:Bool;
   var tankmanGroup:TankmanSpriteGroup = null;
+  var isMobilePauseButtonPressed:Bool = false;
 
   public function new()
   {
     super('stress');
 
     hasPlayedCutscene = false;
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+    cutsceneSkipped = false;
+    canSkipCutscene = false;
+    startedTalking = false;
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -87,6 +106,12 @@ class StressSong extends Song
 
       event.cancel(); // CANCEL THE COUNTDOWN!
       startVideo(PlayState.instance.currentVariation == 'pico', PlayState.instance.currentVariation == 'remnants');
+    }
+    else
+    {
+      hasPlayedCutscene = true;
+      cutsceneSkipped = true;
+      canSkipCutscene = true;
     }
 
     if (tankmanGroup != null && !tankmanGroup.scriptCall('isValid'))
@@ -146,20 +171,18 @@ class StressSong extends Song
     }
   }
 
-  var tankTalk:FunkinSound;
-  var tankTalk2:FunkinSound;
+  var tankTalk:FunkinSound = null;
+  var tankTalk2:FunkinSound = null;
 
-  var gunPoint:FunkinSound;
-  var gunHit:FunkinSound;
-  var steveDies:FunkinSound;
+  var gunPoint:FunkinSound = null;
+  var gunHit:FunkinSound = null;
+  var steveDies:FunkinSound = null;
 
-  var cutsceneMusic:FunkinSound;
+  var cutsceneMusic:FunkinSound = null;
   var cutsceneConductor:Conductor;
 
-  var censor:FunkinSprite;
-  var censorBeep:FunkinSound;
-
-  var gfFaceplant:FunkinSprite;
+  var censorBeep:FunkinSound = null;
+  var censorSprite:FunkinSprite;
 
   var fakeBF:BaseCharacter;
   var fakeGF:BaseCharacter;
@@ -167,10 +190,15 @@ class StressSong extends Song
   var gfCutscene:ScriptedFlxAtlasSprite;
   var picoCutscene:ScriptedFlxAtlasSprite;
 
+  var gfFaceplant:FunkinSprite;
   var gfFail:Bool = FlxG.random.bool(0.5);
 
+  var skipText:FlxText;
+  var cutsceneSkipped:Bool = false;
+  var canSkipCutscene:Bool = false;
+
   /**
-   * In-Game cutscene function for Remnants Mix.
+   * In-game cutscene function for Remnants Mix.
    * Creates everything needed for it and plays it before the song starts.
    */
   function stressIntro()
@@ -182,11 +210,27 @@ class StressSong extends Song
 
     PlayState.instance.camHUD.visible = false;
 
+    remnantsTimerManager = new FlxTimerManager();
+
+    skipText = new FlxText(936 * FullScreenScaleMode.wideScale.x, 618 * FullScreenScaleMode.wideScale.y, 0,
+      'Skip [ ' + PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true) + ' ]', 20);
+    if (FlxG.onMobile)
+    {
+      skipText.text = 'Skip [Pause Button]';
+      skipText.x -= 136;
+    }
+    skipText.setFormat(Paths.font('vcr.ttf'), 40, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+    skipText.scrollFactor.set();
+    skipText.borderSize = 2;
+    skipText.alpha = 0;
+
+    PlayState.instance.currentStage.add(skipText);
+
+    skipText.cameras = [PlayState.instance.camCutscene];
+
     PlayState.instance.currentStage.getDad().visible = false;
     PlayState.instance.currentStage.getBoyfriend().visible = false;
     PlayState.instance.currentStage.getGirlfriend().visible = false;
-
-    // gfFail = FlxG.random.bool(0.5);
 
     // Camera shorters
     var bfPos:Array<Float> = [
@@ -202,17 +246,7 @@ class StressSong extends Song
       PlayState.instance.currentStage.getDad().cameraFocusPoint.y
     ];
 
-    // Create the black fade if it doesn't exists
-    if (PlayState.instance.currentVariation == 'remnants' && bgSprite == null)
-    {
-      bgSprite = new FunkinSprite(0, 0);
-      bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
-      bgSprite.cameras = [PlayState.instance.camCutscene];
-      // this
-      bgSprite.zIndex = -10000;
-      PlayState.instance.add(bgSprite);
-      PlayState.instance.refresh();
-    }
+    PlayState.instance.camCutscene.fade(0xFF000000, 1.5, true, null, true);
 
     // Create the music and play it.
     cutsceneMusic = FunkinSound.load(Paths.music("klaskiiRomper/klaskiiRomper", "shared"), true);
@@ -222,11 +256,7 @@ class StressSong extends Song
     // Setup the audios.
     tankTalk = FunkinSound.load(Paths.sound('week7/stressCutscene1'), 1.0);
     tankTalk2 = FunkinSound.load(Paths.sound('week7/stressCutscene2'), 1.0);
-    tankTalk.volume = 0;
-    tankTalk.play(true);
-
-    censorBeep = FunkinSound.load(Paths.sound("week7/censorBeep"), 1.0);
-
+    if (!Preferences.naughtyness) censorBeep = FunkinSound.load(Paths.sound("week7/censorBeep"), 1.0);
     gunPoint = FunkinSound.load(Paths.sound("week7/gunPoint"), 1.0);
     gunHit = FunkinSound.load(Paths.sound("week7/picoArrives"), 1.0);
     steveDies = FunkinSound.load(Paths.sound("week7/steveDies"), 1.0);
@@ -234,66 +264,68 @@ class StressSong extends Song
     // For Fake GF dancing.
     cutsceneConductor = new Conductor();
     var songMusicData:Null<SongMusicData> = SongRegistry.instance.parseMusicData('klaskiiRomper');
-    if (songMusicData != null)
-    {
-      cutsceneConductor.mapTimeChanges(songMusicData.timeChanges);
-    }
+    if (songMusicData != null) cutsceneConductor.mapTimeChanges(songMusicData.timeChanges);
     cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
 
     // Create the Tankman atlas.
     tankmanCutscene = ScriptedFlxAtlasSprite.init('TankCutsceneRemnants', 0, 0);
+    tankmanCutscene.zIndex = PlayState.instance.currentStage.getDad().zIndex + 1;
 		tankmanCutscene.x = PlayState.instance.currentStage.getDad().x + 425;
 		tankmanCutscene.y = PlayState.instance.currentStage.getDad().y + 215;
-		tankmanCutscene.zIndex = PlayState.instance.currentStage.getDad().zIndex + 1;
     tankmanCutscene.playAnimation("GOD EFFING DAMMIT");
-    PlayState.instance.currentStage.add(tankmanCutscene);
 
     // Create the Girlfriend atlas.
     var gf = PlayState.instance.currentStage.getGirlfriend();
     gfCutscene = ScriptedFlxAtlasSprite.init('GFCutsceneRemnants', 0, 0);
-		gfCutscene.x = gf.x - 475;
-		gfCutscene.y = gf.y - 60;
-		gfCutscene.zIndex = gf.zIndex;
-    PlayState.instance.currentStage.add(gfCutscene);
+    gfCutscene.setPosition(gf.x - 475, gf.y - 60);
+    gfCutscene.zIndex = gf.zIndex;
+    gfCutscene.visible = false;
 
     // Create the Pico atlas.
     picoCutscene = ScriptedFlxAtlasSprite.init('PicoCutsceneRemnants', 0, 0);
-    picoCutscene.x = gfCutscene.x;
-		picoCutscene.y = gfCutscene.y;
+    picoCutscene.setPosition(gfCutscene.x, gfCutscene.y);
 		picoCutscene.zIndex = gf.zIndex;
-    PlayState.instance.currentStage.add(picoCutscene);
-
     picoCutscene.visible = false;
-    gfCutscene.visible = false;
-
-    gfFaceplant = FunkinSprite.createSparrow(0, 0, "stages/week7Remnants/cutscene/gfFail");
-    gfFaceplant.zIndex = PlayState.instance.currentStage.getBoyfriend().zIndex + 2;
-    gfFaceplant.x = gf.originalPosition.x + 475;
-    gfFaceplant.y = gf.originalPosition.y + 550;
-    gfFaceplant.animation.addByPrefix('faceplant', "girlfriend face plant0", 24, false);
-    gfFaceplant.visible = false;
-    PlayState.instance.currentStage.add(gfFaceplant);
 
     // Create a fake boyfriend.
     var leBoyfriend = PlayState.instance.currentStage.getBoyfriend();
     fakeBF = CharacterDataParser.fetchCharacter('bf-remnants');
-    fakeBF.zIndex = leBoyfriend.zIndex + 1;
-    fakeBF.flipX = false;
-    fakeBF.animation.curAnim.curFrame = 12;
-    PlayState.instance.currentStage.add(fakeBF);
+    fakeBF.animation.curAnim.curFrame = 12; // start on the last idle frame.
     fakeBF.setPosition(leBoyfriend.x - 5, leBoyfriend.y + 20);
+    fakeBF.zIndex = leBoyfriend.zIndex;
+    fakeBF.flipX = false;
+
+    if (gfFail)
+    {
+      gfFaceplant = FunkinSprite.createSparrow(0, 0, "stages/week7Remnants/cutscene/gfFail");
+      gfFaceplant.setPosition(gf.originalPosition.x + 475, gf.originalPosition.y + 550);
+      gfFaceplant.animation.addByPrefix('faceplant', "girlfriend face plant0", 24, false);
+      gfFaceplant.zIndex = leBoyfriend.zIndex + 2;
+      gfFaceplant.visible = false;
+    }
 
     // Create a fake girlfriend.
     var leGirlfriend = PlayState.instance.currentStage.getGirlfriend();
     fakeGF = CharacterDataParser.fetchCharacter('gf-tankmen-remnants');
-    fakeGF.zIndex = leGirlfriend.zIndex;
-    PlayState.instance.currentStage.add(fakeGF);
     fakeGF.setPosition(leGirlfriend.x + 15, leGirlfriend.y + 140);
+    fakeGF.zIndex = leGirlfriend.zIndex;
 
+    // Add everything.
+    PlayState.instance.currentStage.add(fakeBF);
+    PlayState.instance.currentStage.add(fakeGF);
+    PlayState.instance.currentStage.add(gfCutscene);
+    PlayState.instance.currentStage.add(picoCutscene);
+    PlayState.instance.currentStage.add(tankmanCutscene);
+    if (gfFail) PlayState.instance.currentStage.add(gfFaceplant);
     PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-    // camera starts on tankman.
-    new FlxTimer().start(0.1, function(tmr)
+    /**
+     * Cutscene Times!
+     */
+
+    // Camera starts on Tankman.
+    // It has a short delay for prevent lag.
+    new FlxTimer(remnantsTimerManager).start(0.1, function(tmr)
     {
       PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 1.5, FlxEase.quadInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.15, 0.01, true, FlxEase.quadInOut);
@@ -304,60 +336,64 @@ class StressSong extends Song
 
       // Play the dialogue.
       tankmanCutscene.playAnimation("GOD EFFING DAMMIT");
-
-      // Syncronize the audio.
-      tankTalk.stop();
-      tankTalk.volume = 1;
-      tankTalk.play(true);
-
-      FlxTween.tween(bgSprite, {alpha: 0}, 1.5, {startDelay: 0.1}, function() {
-        bgSprite.visible = false;
-      });
     });
 
-    // focus camera on gf
-    new FlxTimer().start(15.1, function(tmr:FlxTimer)
+    // Focus camera on GF.
+    new FlxTimer(remnantsTimerManager).start(15.1, function(tmr:FlxTimer)
 		{
       PlayState.instance.tweenCameraToPosition(gfPos[0] - 150, gfPos[1], 0.5, FlxEase.elasticInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.3, 2.1, true, FlxEase.quadInOut);
       gunPoint.play(true);
 
-      //Summon GF Being gunpointed.
-      fakeGF.visible = false;
-      gfCutscene.visible = true;
+      // Destroy Fake GF.
+      if (fakeGF != null)
+      {
+        PlayState.instance.currentStage.remove(fakeGF);
+        fakeGF.destroy();
+        fakeGF = null;
+      }
+
+      gfCutscene.visible = true; // Show GF getting gunpointed.
       gfCutscene.playAnimation("Gun Point");
-      gfCutscene.anim.onComplete.add(function() {
-        gfCutscene.visible = false;
+      gfCutscene.anim.onComplete.add(function()
+      {
+        // Destroy GF getting gunpointed after her anim is done.
+        PlayState.instance.currentStage.remove(gfCutscene);
+        gfCutscene.destroy();
+        gfCutscene = null;
       });
 
-      // BF Catches GF.
-			new FlxTimer().start(2.2, function(swagTimer:FlxTimer)
+      // BF Catches GF (after GF getting gunpointed is destroyed).
+			new FlxTimer(remnantsTimerManager).start(2.2, function(swagTimer:FlxTimer)
 			{
-        // zoom out, kill fake bf and play sound.
+        // Zoom out, hide fake bf (unless you got the rare variant) and play the sound.
 				PlayState.instance.tweenCameraZoom(0.8, 0.1, true);
         PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
 				fakeBF.visible = (!gfFail) ? false : true;
         gunHit.play(true);
 
-        // Summon pico cutscene.
+        // Summon pico cutscene act.
         picoCutscene.visible = true;
         picoCutscene.playAnimation("Pico Arrives");
 
         // Steve dies.
-        new FlxTimer().start(1.05, function(swagTimer:FlxTimer) {
+        new FlxTimer(remnantsTimerManager).start(1.05, function(swagTimer:FlxTimer) {
           picoCutscene.playAnimation("Steve Dies");
           steveDies.play(true);
         });
 
         // Pico goes to idle.
-        new FlxTimer().start(3.5, function(swagTimer:FlxTimer) {
+        new FlxTimer(remnantsTimerManager).start(3.5, function(swagTimer:FlxTimer) {
           picoCutscene.playAnimation("Idle");
         });
 
         // Real pico-speaker shows up.
-        new FlxTimer().start(5.2, function(swagTimer:FlxTimer) {
-          picoCutscene.visible = false;
+        new FlxTimer(remnantsTimerManager).start(5.2, function(swagTimer:FlxTimer)
+        {
           PlayState.instance.currentStage.getGirlfriend().visible = true;
+          PlayState.instance.currentStage.remove(picoCutscene);
+          picoCutscene.destroy();
+          picoCutscene = null;
         });
 
         if (gfFail)
@@ -366,164 +402,155 @@ class StressSong extends Song
           gfFaceplant.animation.play("faceplant");
           gfFaceplant.visible = true;
 
+          // Lower the camera a bit just so you can see gf epic fall.
+          PlayState.instance.tweenCameraToPosition(gfPos[0] - 150, gfPos[1] + 45, 0.5, FlxEase.quadInOut);
+
           // BF dodges GF
-          if (fakeBF.hasAnimation('dodge'))
+          if (fakeBF.hasAnimation('dodge') && fakeBF != null)
           {
             fakeBF.playAnimation('dodge', true, true);
           }
         }
         else
         {
-          // play bf catching gf anim
+          // Play bf catching gf anim
           if (PlayState.instance.currentStage.getBoyfriend().hasAnimation('bfCatch'))
           {
             PlayState.instance.currentStage.getBoyfriend().playAnimation('bfCatch', true, true);
           }
         }
 
-        // Play tank anim 2
-				new FlxTimer().start(2.3, function(gayLol:FlxTimer)
+        // Play tankman anim part 2
+				new FlxTimer(remnantsTimerManager).start(2.3, function(gayLol:FlxTimer)
 				{
 					tankmanCutscene.playAnimation("Sexually Ambiguous");
 					tankTalk2.play(true);
 				});
 
         // focus camera to tankman
-				new FlxTimer().start(3, function(weedShitBaby:FlxTimer)
+				new FlxTimer(remnantsTimerManager).start(3, function(weedShitBaby:FlxTimer)
 				{
 					PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.quadInOut);
 				});
 			});
 		});
 
-    // Cunt stuff
-    new FlxTimer().start(31.5, function(cunt:FlxTimer)
+    // Cunt scene.
+    new FlxTimer(remnantsTimerManager).start(31.5, function(cunt:FlxTimer)
 		{
       // Set the zoom to this value instantly.
       PlayState.instance.tweenCameraZoom(0.86 * 1.4, 0.1, true);
 
-      // Then elasticOut the zoom a bit to boyfriend and focus the camera to him.
+      // Elastic out the zoom a bit and focus to boyfriend.
       PlayState.instance.tweenCameraToPosition(bfPos[0] + 150, bfPos[1], 0.1);
       PlayState.instance.tweenCameraZoom(0.86 * 1.4 + 0.1, 0.5, true, FlxEase.elasticOut);
 
-      // Play the miss up anim.
-      if (gfFail)
+      // Cutting off skipping here.
+      // Really don't think its needed after this point and it saves problems from happening.
+      FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadIn,
+        onComplete: _ -> {
+          skipText.visible = false;
+        }
+      });
+
+      // Play the 'singUPmiss' animation (if found).
+      var whichBF = (gfFail) ? fakeBF : PlayState.instance.currentStage.getBoyfriend();
+      if (whichBF != null)
       {
-        fakeBF.playAnimation('singUPmiss', true, true);
-        fakeBF.animation.onFinish.add(function(name:String = '')
+        if (whichBF.hasAnimation('singUPmiss'))
+        {
+          whichBF.playAnimation('singUPmiss', true, true);
+        }
+        whichBF.animation.onFinish.add(function(name:String = '')
         {
           // fast focus to tankman.
           PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 0.01);
           PlayState.instance.tweenCameraZoom((0.86 * 1.5) / 1.4, 0.01, true);
 
           // remove the callback after it's done.
-          fakeBF.animation.onFinish.removeAll();
-        });
-      }
-      else
-      {
-        PlayState.instance.currentStage.getBoyfriend().playAnimation('singUPmiss', true, true);
-        PlayState.instance.currentStage.getBoyfriend().animation.onFinish.add(function(name:String = '')
-        {
-          // fast focus to tankman.
-          PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 0.01);
-          PlayState.instance.tweenCameraZoom((0.86 * 1.5) / 1.4, 0.01, true);
-
-          // remove the callback after it's done.
-          PlayState.instance.currentStage.getBoyfriend().animation.onFinish.removeAll();
+          whichBF.animation.onFinish.removeAll();
         });
       }
 		});
 
-    // true end time is 33.
-    // camera returns to normal, cutscene flags set and countdown starts.
-    new FlxTimer().start(33, function(tmr)
+    // Camera returns to normal, cutscene flags set and countdown starts.
+    // All of this after 33 seconds to be exacts.
+    new FlxTimer(remnantsTimerManager).start(33, function(tmr:FlxTimer)
     {
+      // Call the ending function.
       endStressIntro();
     });
 
-    // stupid censored mouth shit.
+    // Censor system.
+    // I'm proud of this thing.
     if (!Preferences.naughtyness)
     {
-      censor = FunkinSprite.createSparrow(0, 0, "stages/week7Remnants/cutscene/censor");
-      censor.zIndex = PlayState.instance.currentStage.getDad().zIndex + 2;
-      censor.animation.addByPrefix('censor', "mouth censor0", 24, true);
-      censor.animation.play('censor');
-      censor.visible = false;
+      var dad = PlayState.instance.currentStage.getDad();
+      censorSprite = FunkinSprite.createSparrow(0, 0, "stages/week7Remnants/cutscene/censor");
+      censorSprite.animation.addByPrefix('censor', "mouth censor0", 24, true);
+      censorSprite.animation.play('censor');
+      censorSprite.zIndex = dad.zIndex + 2;
+      censorSprite.visible = false;
 
-      PlayState.instance.currentStage.add(censor);
+      PlayState.instance.currentStage.add(censorSprite);
       PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-      var leDad = PlayState.instance.currentStage.getDad();
-
-      // Well played you little S##t!
-      new FlxTimer().start(4.55, function(censorTimer:FlxTimer)
-      {
-        censor.visible = true;
-        censor.setPosition(leDad.x + 145, leDad.y + 165);
-        censorBeep.play(false);
-        tankTalk.volume = 0;
-
-        new FlxTimer().start(0.2, function(endThing:FlxTimer)
-        {
-          censor.visible = false;
-          censorBeep.stop();
-          tankTalk.volume = 1;
-        });
-      });
+      // Well played you little s##t!
+      censorEvent(tankTalk, [dad.x + 145, dad.y + 165], [4.55, 0.2]); // dad.x + 145, dad.y + 165
 
       // Don't you have ###### ## ##### ##?
-      new FlxTimer().start(25.1, function(censorTimer:FlxTimer)
-      {
-        censor.visible = true;
-        censor.setPosition(leDad.x + 120, leDad.y + 150);
-        censorBeep.play(false);
-        tankTalk2.volume = 0;
-
-        new FlxTimer().start(0.9, function(endThing:FlxTimer)
-        {
-          censor.visible = false;
-          censorBeep.stop();
-          tankTalk2.volume = 1;
-        });
-      });
+      censorEvent(tankTalk2, [dad.x + 130, dad.y + 150], [25.1, 0.9]); // dad.x + 130, dad.y + 150
 
       // Let's rock!, you little c####s!
-      new FlxTimer().start(30.7, function(censorTimer:FlxTimer)
-      {
-        censor.visible = true;
-        censor.setPosition(leDad.x + 220, leDad.y + 185);
-        censorBeep.play(false);
-        tankTalk2.volume = 0;
-
-        new FlxTimer().start(0.4, function(endThing:FlxTimer)
-        {
-          censor.visible = false;
-          censorBeep.stop();
-          tankTalk2.volume = 1;
-        });
-      });
+      censorEvent(tankTalk2, [dad.x + 220, dad.y + 185], [30.7, 0.4]); // dad.x + 220, dad.y + 185
 
       // You little c####s!
-      new FlxTimer().start(33.8, function(censorTimer:FlxTimer)
-      {
-        censor.visible = true;
-        censor.setPosition(leDad.x + 160, leDad.y + 160);
-        censorBeep.play(false);
-        tankTalk2.volume = 0;
-
-        new FlxTimer().start(0.6, function(endThing:FlxTimer)
-        {
-          censor.visible = false;
-          censorBeep.stop();
-          tankTalk2.volume = 1;
-        });
-      });
+      censorEvent(tankTalk2, [dad.x + 160, dad.y + 160], [33.8, 0.5]); // dad.x + 160, dad.y + 160
     }
   }
 
   /**
-   * We put this here for when the skip feature is implemented.
+   * Used for mouth censor events.
+   * "Uh-Oh!" that's a bad word!
+   */
+  function censorEvent(sound:FunkinSound, position:Null<Float>, time:Null<Float>):Void
+  {
+    // Setup the variables.
+    // For some reason, you can't use function variables on FlxTimer functions.
+    // So to avoid that limitation, we do this instead.
+    var jeffSound:Bool = sound;
+    var censorTime:Null<Float> = time;
+    var censorPos:Null<Float> = position;
+
+    // Checks if censorSprite exists to run the code.
+    // If not, skip the function.
+    if (censorSprite != null)
+    {
+      // Start a timer for when the censor starts.
+      new FlxTimer(remnantsTimerManager).start(censorTime[0], function(censorStart:FlxTimer)
+      {
+        // Show the censor sprite and position it to the desired offset.
+        censorSprite.setPosition(censorPos[0], censorPos[1]);
+        censorSprite.visible = true;
+
+        // Play the beep sound and mute tankman talking.
+        if (censorBeep != null) censorBeep.play(false);
+        if (jeffSound != null) jeffSound.volume = 0;
+
+        // Start a timer for when the censor ends.
+        new FlxTimer(remnantsTimerManager).start(censorTime[1], function(censorEnd:FlxTimer)
+        {
+          // Hide the censor sprite, unmute tankman dialogue and stop the beep sound.
+          censorSprite.visible = false;
+          if (censorBeep != null) censorBeep.stop();
+          if (jeffSound != null) jeffSound.volume = 1;
+        });
+      }); 
+    }
+  }
+
+  /**
+   * For Remnants Mix cutscene.
    */
   function endStressIntro()
   {
@@ -532,34 +559,66 @@ class StressSong extends Song
       PlayState.instance.currentStage.getDad().cameraFocusPoint.y
     ];
 
-    new FlxTimer().start(2.5, _ -> {
+    cutsceneSkipped = true;
+    hasPlayedCutscene = true;
+    PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
+
+    // fade out and stop the music!!!!!!
+    cutsceneMusic.fadeOut(0.5, 0.0, function()
+    {
+      if (cutsceneMusic != null)
+        cutsceneMusic.stop();
+    });
+
+    new FlxTimer().start(0.5, _ -> {
       PlayState.instance.camHUD.visible = true;
 
-      cutsceneMusic.fadeOut(2.5, 0.0, function()
-      {
-        if (cutsceneMusic != null)
-        {
-          cutsceneMusic.stop(); // stop the music!!!!!!
-        }
-      });
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
 
-      gfFaceplant.visible = (gfFail) ? true : false;
+      fakeBF.visible = (gfFail) ? true : false;
+      if (gfFaceplant != null) gfFaceplant.visible = (gfFail) ? true : false;
       PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
       PlayState.instance.currentStage.getGirlfriend().visible = true;
       PlayState.instance.currentStage.getDad().visible = true;
+      
+      if (fakeGF != null)
+      {
+        PlayState.instance.currentStage.remove(fakeGF);
+        fakeGF.destroy();
+        fakeGF = null;
+      }
 
-      PlayState.instance.currentStage.remove(tankmanCutscene);
-      tankmanCutscene.destroy();
-      tankmanCutscene = null;
+      if (tankmanCutscene != null)
+      {
+        PlayState.instance.currentStage.remove(tankmanCutscene);
+        tankmanCutscene.destroy();
+        tankmanCutscene = null;
+      }
 
-      PlayState.instance.currentStage.remove(picoCutscene);
-      picoCutscene.destroy();
-      picoCutscene = null;
+      if (picoCutscene != null)
+      {
+        PlayState.instance.currentStage.remove(picoCutscene);
+        picoCutscene.destroy();
+        picoCutscene = null;
+      }
 
-      PlayState.instance.currentStage.remove(gfCutscene);
-      gfCutscene.destroy();
-      gfCutscene = null;
+      if (gfCutscene != null)
+      {
+        PlayState.instance.currentStage.remove(gfCutscene);
+        gfCutscene.destroy();
+        gfCutscene = null;
+      }
 
+      if (tankTalk != null) tankTalk.stop();
+      if (tankTalk2 != null) tankTalk2.stop();
+      if (gunHit != null) gunHit.stop();
+      if (gunPoint != null) gunPoint.stop();
+      if (steveDies != null) steveDies.stop();
+
+      if (skipText != null) skipText.visible = false;
+      remnantsTimerManager.clear();
+
+      PlayState.instance.justUnpaused = true;
       PlayState.instance.tweenCameraZoom(0.86, 2, true, FlxEase.sineInOut);
       PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.sineInOut);
       PlayState.instance.isInCutscene = false;
@@ -616,9 +675,20 @@ class StressSong extends Song
     // Default BF death.
     if (gfFail)
     {
+      createDefaultDeath();
 
+
+      // GameOverSubState.instance.add(deathBFNormal);
     }
 	}
+
+  /**
+   * Maybe there's a better way but this also works.
+   */
+  function createDefaultDeath()
+  {
+
+  }
 
   /**
    * Don't replay the cutscene between restarts.
@@ -641,21 +711,15 @@ class StressSong extends Song
     }
   }
 
-  /**
-   * Replay the cutscene after leaving the song.
-   */
-  function onCreate(event:ScriptEvent):Void
-  {
-    super.onCreate(event);
-
-    hasPlayedCutscene = false;
-  }
-
+  // Pico Mix
   var hasPlayedEndCutscene:Bool = false;
-
-  var tankmanCutscene:ScriptedFlxAtlasSprite;
   var rimlightCamera:FlxCamera;
+  var tankmanCutscene:ScriptedFlxAtlasSprite;
   var screenspaceRimlight:DropShadowScreenspace = new DropShadowScreenspace();
+
+  // Remnants Mix
+  var startedTalking:Bool = false;
+  var remnantsTimerManager:FlxTimerManager;
 
   function onUpdate(event:UpdateScriptEvent):Void
   {
@@ -664,17 +728,20 @@ class StressSong extends Song
     if (PlayState.instance.isInCutscene)
     {
       if (cutsceneTimerManager != null) cutsceneTimerManager.update(event.elapsed);
+      if (remnantsTimerManager != null) remnantsTimerManager.update(event.elapsed);
+      if (cutsceneConductor != null && cutsceneMusic != null) cutsceneConductor.update(cutsceneMusic.time);
+
+      if (!startedTalking && tankmanCutscene != null && tankmanCutscene.anim.curFrame >= 1 && tankTalk != null)
+      {
+        startedTalking = true;
+        tankTalk.play(true);
+      }
 
       if (rimlightCamera != null)
       {
         rimlightCamera.focusOn(new FlxPoint(PlayState.instance.camGame.viewLeft + PlayState.instance.camGame.viewWidth / 2,
           PlayState.instance.camGame.viewTop + PlayState.instance.camGame.viewHeight / 2));
         rimlightCamera.zoom = PlayState.instance.camGame.zoom;
-      }
-
-      if (cutsceneConductor != null && cutsceneMusic != null)
-      {
-        cutsceneConductor.update(cutsceneMusic.time);
       }
     }
     else
@@ -686,10 +753,41 @@ class StressSong extends Song
         fakeBF.animation.curAnim.curFrame = PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame;
       }
     }
+
+    if (FlxG.onMobile)
+    {
+      isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
+    }
+
+    if (PlayState.instance.currentVariation == 'remnants')
+    {
+      if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && cutsceneSkipped == false)
+      {
+        if (!canSkipCutscene)
+        {
+          trace('cant skip yet!');
+          if (skipText != null)
+          {
+            FlxTween.tween(skipText, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+            new FlxTimer().start(0.5, _ -> {
+              canSkipCutscene = true;
+              trace('can skip!');
+            });
+          }
+        }
+      }
+
+      if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed)
+        && cutsceneSkipped == false
+        && canSkipCutscene == true)
+      {
+        endStressIntro();
+        trace('skipped');
+      }
+    }
   }
 
   var bgSprite:FunkinSprite;
-
   public override function onSongEnd(event:CountdownScriptEvent):Void
   {
     super.onSongEnd(event);
@@ -723,7 +821,6 @@ class StressSong extends Song
   }
 
   var cutsceneTimerManager:FlxTimerManager;
-
   function startEndCutscene()
   {
     var picoPos:Array<Float> = [
@@ -792,6 +889,9 @@ class StressSong extends Song
   function kill():Void
   {
     cleanupTankmanGroup();
+
+    if (cutsceneTimerManager != null) cutsceneTimerManager.destroy();
+    if (remnantsTimerManager != null) remnantsTimerManager.destroy();
   }
 
   function cleanupTankmanGroup():Void
