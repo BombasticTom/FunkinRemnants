@@ -196,6 +196,7 @@ class StressSong extends Song
   var skipText:FlxText;
   var cutsceneSkipped:Bool = false;
   var canSkipCutscene:Bool = false;
+  var pressedSkip:Bool = false;
 
   /**
    * In-game cutscene function for Remnants Mix.
@@ -209,6 +210,20 @@ class StressSong extends Song
     PlayState.instance.mayPauseGame = false;
 
     PlayState.instance.camHUD.visible = false;
+
+    var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
+    if (tankRolling != null)
+    {
+      tankRolling.active = false;
+      tankRolling.visible = false;
+    }
+
+    var tankRollingExtra = PlayState.instance.currentStage.getNamedProp('tankRollingExtra');
+    if (tankRollingExtra != null)
+    {
+      tankRollingExtra.active = false;
+      tankRollingExtra.visible = false;
+    }
 
     remnantsTimerManager = new FlxTimerManager();
 
@@ -561,7 +576,7 @@ class StressSong extends Song
 
     cutsceneSkipped = true;
     hasPlayedCutscene = true;
-    PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
+    if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
 
     // fade out and stop the music!!!!!!
     cutsceneMusic.fadeOut(0.5, 0.0, function()
@@ -573,7 +588,7 @@ class StressSong extends Song
     new FlxTimer().start(0.5, _ -> {
       PlayState.instance.camHUD.visible = true;
 
-      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
+      if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
 
       fakeBF.visible = (gfFail) ? true : false;
       if (gfFaceplant != null) gfFaceplant.visible = (gfFail) ? true : false;
@@ -609,11 +624,25 @@ class StressSong extends Song
         gfCutscene = null;
       }
 
+      var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
+      if (tankRolling != null)
+      {
+        tankRolling.active = true;
+        tankRolling.visible = true;
+      }
+
+      var tankRollingExtra = PlayState.instance.currentStage.getNamedProp('tankRollingExtra');
+      if (tankRollingExtra != null)
+      {
+        tankRollingExtra.active = true;
+        tankRollingExtra.visible = true;
+      }
+
       if (tankTalk != null) tankTalk.stop();
-      if (tankTalk2 != null) tankTalk2.stop();
       if (gunHit != null) gunHit.stop();
       if (gunPoint != null) gunPoint.stop();
       if (steveDies != null) steveDies.stop();
+      if (tankTalk2 != null && pressedSkip) tankTalk2.stop();
 
       if (skipText != null) skipText.visible = false;
       remnantsTimerManager.clear();
@@ -647,24 +676,42 @@ class StressSong extends Song
       }
     }
 
-    if (fakeBF.isAnimationFinished())
-    {
-      fakeBF.dance(true);
-      fakeBF.animation.curAnim.curFrame = 12;
+    var sniper = PlayState.instance.currentStage.getNamedProp('watchtower');
+    if (sniper != null && sniper.isAnimationFinished()) sniper.dance(true);
 
-      if (gfFail)
+    for (man in 0...6)
+    {
+      var tank = PlayState.instance.currentStage.getNamedProp('tankmanAudience' + man);
+      if (tank.isAnimationFinished()) tank.dance(true);
+    }
+
+    var steveCheer = PlayState.instance.currentStage.getNamedProp('tankmanBopperCheer1');
+    if (steveCheer.isAnimationFinished()) steveCheer.dance(true);
+
+    if (fakeBF != null)
+    {
+      if (fakeBF.isAnimationFinished())
       {
-        if (fakeBF.getCurrentAnimation() == 'singUPmiss')
+        fakeBF.dance(true);
+        fakeBF.animation.curAnim.curFrame = 12;
+
+        if (gfFail)
         {
-          // making sure to remove the callback after it's done.
-          fakeBF.animation.onFinish = null;
+          if (fakeBF.getCurrentAnimation() == 'singUPmiss')
+          {
+            // making sure to remove the callback after it's done.
+            fakeBF.animation.onFinish = null;
+          }
         }
       }
     }
 
-    if (fakeGF.isAnimationFinished())
+    if (fakeGF != null)
     {
-      fakeGF.dance(true);
+      if (fakeGF.isAnimationFinished())
+      {
+        fakeGF.dance(true);
+      }
     }
   }
 
@@ -781,6 +828,7 @@ class StressSong extends Song
         && cutsceneSkipped == false
         && canSkipCutscene == true)
       {
+        pressedSkip = true;
         endStressIntro();
         trace('skipped');
       }
