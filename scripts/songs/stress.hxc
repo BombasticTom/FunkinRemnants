@@ -100,7 +100,7 @@ class StressSong extends Song
 
     if (!hasPlayedCutscene)
     {
-      trace('Pausing countdown to play a video cutscene (`stress`)');
+      trace('Pausing countdown to play a cutscene (`stress`)');
 
       hasPlayedCutscene = true;
 
@@ -175,6 +175,7 @@ class StressSong extends Song
   var tankTalk2:FunkinSound = null;
 
   var gunPoint:FunkinSound = null;
+  var demonEye:FunkinSound = null;
   var gunHit:FunkinSound = null;
   var steveDies:FunkinSound = null;
 
@@ -211,6 +212,7 @@ class StressSong extends Song
 
     PlayState.instance.camHUD.visible = false;
 
+    // Disable the tank so it doesn't looks weird due to camera movement.
     var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
     if (tankRolling != null)
     {
@@ -218,6 +220,7 @@ class StressSong extends Song
       tankRolling.visible = false;
     }
 
+    // Disable the tank so it doesn't looks weird due to camera movement.
     var tankRollingExtra = PlayState.instance.currentStage.getNamedProp('tankRollingExtra');
     if (tankRollingExtra != null)
     {
@@ -225,8 +228,10 @@ class StressSong extends Song
       tankRollingExtra.visible = false;
     }
 
+    // Start the manager.
     remnantsTimerManager = new FlxTimerManager();
 
+    // Skip text.
     skipText = new FlxText(936 * FullScreenScaleMode.wideScale.x, 618 * FullScreenScaleMode.wideScale.y, 0,
       'Skip [ ' + PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true) + ' ]', 20);
     if (FlxG.onMobile)
@@ -243,6 +248,7 @@ class StressSong extends Song
 
     skipText.cameras = [PlayState.instance.camCutscene];
 
+    // Hide the real characters.
     PlayState.instance.currentStage.getDad().visible = false;
     PlayState.instance.currentStage.getBoyfriend().visible = false;
     PlayState.instance.currentStage.getGirlfriend().visible = false;
@@ -263,16 +269,16 @@ class StressSong extends Song
 
     PlayState.instance.camCutscene.fade(0xFF000000, 1.5, true, null, true);
 
-    // Create the music and play it.
+    // Create the music instance.
     cutsceneMusic = FunkinSound.load(Paths.music("klaskiiRomper/klaskiiRomper", "shared"), true);
     cutsceneMusic.volume = 0;
-    cutsceneMusic.play(false);
 
     // Setup the audios.
     tankTalk = FunkinSound.load(Paths.sound('week7/stressCutscene1'), 1.0);
     tankTalk2 = FunkinSound.load(Paths.sound('week7/stressCutscene2'), 1.0);
     if (!Preferences.naughtyness) censorBeep = FunkinSound.load(Paths.sound("week7/censorBeep"), 1.0);
     gunPoint = FunkinSound.load(Paths.sound("week7/gunPoint"), 1.0);
+    demonEye = FunkinSound.load(Paths.sound("week7/demonEye"), 1.0);
     gunHit = FunkinSound.load(Paths.sound("week7/picoArrives"), 1.0);
     steveDies = FunkinSound.load(Paths.sound("week7/steveDies"), 1.0);
 
@@ -334,10 +340,7 @@ class StressSong extends Song
     if (gfFail) PlayState.instance.currentStage.add(gfFaceplant);
     PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-    /**
-     * Cutscene Times!
-     */
-
+    /** Cutscene Time! */
     // Camera starts on Tankman.
     // It has a short delay for prevent lag.
     new FlxTimer(remnantsTimerManager).start(0.1, function(tmr)
@@ -345,16 +348,12 @@ class StressSong extends Song
       PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 1.5, FlxEase.quadInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.15, 0.01, true, FlxEase.quadInOut);
 
-      // Play the music.
-      cutsceneMusic.play(false);
-      cutsceneMusic.fadeIn(5.0, 0.0, 0.3);
-
       // Play the dialogue.
       tankmanCutscene.playAnimation("GOD EFFING DAMMIT");
     });
 
     // Focus camera on GF.
-    new FlxTimer(remnantsTimerManager).start(15.1, function(tmr:FlxTimer)
+    new FlxTimer(remnantsTimerManager).start(15.9, function(tmr:FlxTimer)
 		{
       PlayState.instance.tweenCameraToPosition(gfPos[0] - 150, gfPos[1], 0.5, FlxEase.elasticInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.3, 2.1, true, FlxEase.quadInOut);
@@ -376,6 +375,12 @@ class StressSong extends Song
         PlayState.instance.currentStage.remove(gfCutscene);
         gfCutscene.destroy();
         gfCutscene = null;
+      });
+
+      // Play the demon eye sound.
+      new FlxTimer(remnantsTimerManager).start(1.25, function(swagTimer:FlxTimer)
+			{
+        demonEye.play(true);
       });
 
       // BF Catches GF (after GF getting gunpointed is destroyed).
@@ -451,7 +456,7 @@ class StressSong extends Song
 		});
 
     // Cunt scene.
-    new FlxTimer(remnantsTimerManager).start(31.5, function(cunt:FlxTimer)
+    new FlxTimer(remnantsTimerManager).start(32.3, function(cunt:FlxTimer)
 		{
       // Set the zoom to this value instantly.
       PlayState.instance.tweenCameraZoom(0.86 * 1.4, 0.1, true);
@@ -489,8 +494,8 @@ class StressSong extends Song
 		});
 
     // Camera returns to normal, cutscene flags set and countdown starts.
-    // All of this after 33 seconds to be exacts.
-    new FlxTimer(remnantsTimerManager).start(33, function(tmr:FlxTimer)
+    // All of this after 35 seconds to be exacts.
+    new FlxTimer(remnantsTimerManager).start(35, function(tmr:FlxTimer)
     {
       // Call the ending function.
       endStressIntro();
@@ -514,13 +519,13 @@ class StressSong extends Song
       censorEvent(tankTalk, [dad.x + 145, dad.y + 165], [4.55, 0.2]); // dad.x + 145, dad.y + 165
 
       // Don't you have ###### ## ##### ##?
-      censorEvent(tankTalk2, [dad.x + 130, dad.y + 150], [25.1, 0.9]); // dad.x + 130, dad.y + 150
+      censorEvent(tankTalk2, [dad.x + 130, dad.y + 150], [25.9, 0.9]); // dad.x + 130, dad.y + 150
 
       // Let's rock!, you little c####s!
-      censorEvent(tankTalk2, [dad.x + 220, dad.y + 185], [30.7, 0.4]); // dad.x + 220, dad.y + 185
+      censorEvent(tankTalk2, [dad.x + 220, dad.y + 185], [31.5, 0.4]); // dad.x + 220, dad.y + 185
 
       // You little c####s!
-      censorEvent(tankTalk2, [dad.x + 160, dad.y + 160], [33.8, 0.5]); // dad.x + 160, dad.y + 160
+      censorEvent(tankTalk2, [dad.x + 160, dad.y + 160], [34.6, 0.5]); // dad.x + 160, dad.y + 160
     }
   }
 
@@ -562,101 +567,6 @@ class StressSong extends Song
         });
       }); 
     }
-  }
-
-  /**
-   * For Remnants Mix cutscene.
-   */
-  function endStressIntro()
-  {
-    var dadPos:Array<Float> = [
-      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
-      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
-    ];
-
-    cutsceneSkipped = true;
-    hasPlayedCutscene = true;
-    if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
-
-    // fade out and stop the music!!!!!!
-    cutsceneMusic.fadeOut(0.5, 0.0, function()
-    {
-      if (cutsceneMusic != null)
-        cutsceneMusic.stop();
-    });
-
-    new FlxTimer().start(0.5, _ -> {
-      PlayState.instance.camHUD.visible = true;
-
-      if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
-
-      fakeBF.visible = (gfFail) ? true : false;
-      if (gfFaceplant != null) gfFaceplant.visible = (gfFail) ? true : false;
-      PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
-      PlayState.instance.currentStage.getGirlfriend().visible = true;
-      PlayState.instance.currentStage.getDad().visible = true;
-      
-      if (fakeGF != null)
-      {
-        PlayState.instance.currentStage.remove(fakeGF);
-        fakeGF.destroy();
-        fakeGF = null;
-      }
-
-      if (tankmanCutscene != null)
-      {
-        PlayState.instance.currentStage.remove(tankmanCutscene);
-        tankmanCutscene.destroy();
-        tankmanCutscene = null;
-      }
-
-      if (picoCutscene != null)
-      {
-        PlayState.instance.currentStage.remove(picoCutscene);
-        picoCutscene.destroy();
-        picoCutscene = null;
-      }
-
-      if (gfCutscene != null)
-      {
-        PlayState.instance.currentStage.remove(gfCutscene);
-        gfCutscene.destroy();
-        gfCutscene = null;
-      }
-
-      var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
-      if (tankRolling != null)
-      {
-        tankRolling.active = true;
-        tankRolling.visible = true;
-      }
-
-      var tankRollingExtra = PlayState.instance.currentStage.getNamedProp('tankRollingExtra');
-      if (tankRollingExtra != null)
-      {
-        tankRollingExtra.active = true;
-        tankRollingExtra.visible = true;
-      }
-
-      if (tankTalk != null) tankTalk.stop();
-      if (gunHit != null) gunHit.stop();
-      if (gunPoint != null) gunPoint.stop();
-      if (steveDies != null) steveDies.stop();
-      if (tankTalk2 != null && pressedSkip) tankTalk2.stop();
-
-      if (skipText != null) skipText.visible = false;
-      remnantsTimerManager.clear();
-
-      PlayState.instance.justUnpaused = true;
-      PlayState.instance.tweenCameraZoom(0.86, 2, true, FlxEase.sineInOut);
-      PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.sineInOut);
-      PlayState.instance.isInCutscene = false;
-      PlayState.instance.startCountdown();
-
-      PlayState.instance.togglePauseButton(true);
-      PlayState.instance.isInCutscene = false;
-      PlayState.instance.mayPauseGame = true;
-    });
   }
 
   function onCutsceneBeatHit()
@@ -723,9 +633,6 @@ class StressSong extends Song
     if (gfFail)
     {
       createDefaultDeath();
-
-
-      // GameOverSubState.instance.add(deathBFNormal);
     }
 	}
 
@@ -734,7 +641,7 @@ class StressSong extends Song
    */
   function createDefaultDeath()
   {
-
+    // GameOverSubState.instance.add(deathBFNormal);
   }
 
   /**
@@ -782,6 +689,10 @@ class StressSong extends Song
       {
         startedTalking = true;
         tankTalk.play(true);
+
+        // Play the music.
+        cutsceneMusic.play(false);
+        cutsceneMusic.fadeIn(5.0, 0.0, 0.3);
       }
 
       if (rimlightCamera != null)
@@ -931,6 +842,102 @@ class StressSong extends Song
       FlxG.cameras.remove(rimlightCamera);
       rimlightCamera = null;
       PlayState.instance.endSong(true);
+    });
+  }
+
+  /**
+   * For Remnants Mix cutscene.
+   */
+  function endStressIntro()
+  {
+    var dadPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+    ];
+
+    cutsceneSkipped = true;
+    hasPlayedCutscene = true;
+    if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
+
+    // fade out and stop the music!!!!!!
+    cutsceneMusic.fadeOut(0.5, 0.0, function()
+    {
+      if (cutsceneMusic != null)
+        cutsceneMusic.stop();
+    });
+
+    new FlxTimer().start(0.5, _ -> {
+      PlayState.instance.camHUD.visible = true;
+
+      if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
+
+      fakeBF.visible = (gfFail) ? true : false;
+      if (gfFaceplant != null) gfFaceplant.visible = (gfFail) ? true : false;
+      PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
+      PlayState.instance.currentStage.getGirlfriend().visible = true;
+      PlayState.instance.currentStage.getDad().visible = true;
+      
+      if (fakeGF != null)
+      {
+        PlayState.instance.currentStage.remove(fakeGF);
+        fakeGF.destroy();
+        fakeGF = null;
+      }
+
+      if (tankmanCutscene != null)
+      {
+        PlayState.instance.currentStage.remove(tankmanCutscene);
+        tankmanCutscene.destroy();
+        tankmanCutscene = null;
+      }
+
+      if (picoCutscene != null)
+      {
+        PlayState.instance.currentStage.remove(picoCutscene);
+        picoCutscene.destroy();
+        picoCutscene = null;
+      }
+
+      if (gfCutscene != null)
+      {
+        PlayState.instance.currentStage.remove(gfCutscene);
+        gfCutscene.destroy();
+        gfCutscene = null;
+      }
+
+      var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
+      if (tankRolling != null)
+      {
+        tankRolling.active = true;
+        tankRolling.visible = true;
+      }
+
+      var tankRollingExtra = PlayState.instance.currentStage.getNamedProp('tankRollingExtra');
+      if (tankRollingExtra != null)
+      {
+        tankRollingExtra.active = true;
+        tankRollingExtra.visible = true;
+      }
+
+      if (tankTalk != null) tankTalk.stop();
+      if (gunHit != null) gunHit.stop();
+      if (demonEye != null) demonEye.stop();
+      if (gunPoint != null) gunPoint.stop();
+      if (steveDies != null) steveDies.stop();
+      if (tankTalk2 != null && pressedSkip) tankTalk2.stop();
+
+      if (skipText != null) skipText.visible = false;
+      remnantsTimerManager.clear();
+
+      PlayState.instance.justUnpaused = true;
+      PlayState.instance.tweenCameraZoom(0.86, 2, true, FlxEase.sineInOut);
+      PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.sineInOut);
+      PlayState.instance.isInCutscene = false;
+      PlayState.instance.startCountdown();
+
+      PlayState.instance.togglePauseButton(true);
+      PlayState.instance.isInCutscene = false;
+      PlayState.instance.mayPauseGame = true;
     });
   }
 
