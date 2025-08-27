@@ -289,11 +289,11 @@ class StressSong extends Song
     cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
 
     // Create the Tankman atlas.
+    var dad = PlayState.instance.currentStage.getDad();
     tankmanCutscene = ScriptedFlxAtlasSprite.init('TankCutsceneRemnants', 0, 0);
-    tankmanCutscene.zIndex = PlayState.instance.currentStage.getDad().zIndex + 1;
-		tankmanCutscene.x = PlayState.instance.currentStage.getDad().x + 425;
-		tankmanCutscene.y = PlayState.instance.currentStage.getDad().y + 215;
-    tankmanCutscene.playAnimation("GOD EFFING DAMMIT");
+    tankmanCutscene.setPosition(dad.x + 425, dad.y + 215);
+    tankmanCutscene.playAnimation("GOD EFFING DAMMIT"); // Loading purpose!
+    tankmanCutscene.zIndex = dad.zIndex + 1;
 
     // Create the Girlfriend atlas.
     var gf = PlayState.instance.currentStage.getGirlfriend();
@@ -309,11 +309,11 @@ class StressSong extends Song
     picoCutscene.visible = false;
 
     // Create a fake boyfriend.
-    var leBoyfriend = PlayState.instance.currentStage.getBoyfriend();
+    var boyfriend = PlayState.instance.currentStage.getBoyfriend();
     fakeBF = CharacterDataParser.fetchCharacter('bf-remnants');
     fakeBF.animation.curAnim.curFrame = 12; // start on the last idle frame.
-    fakeBF.setPosition(leBoyfriend.x - 5, leBoyfriend.y + 20);
-    fakeBF.zIndex = leBoyfriend.zIndex;
+    fakeBF.setPosition(boyfriend.x - 5, boyfriend.y + 20);
+    fakeBF.zIndex = boyfriend.zIndex;
     fakeBF.flipX = false;
 
     if (gfFail)
@@ -321,15 +321,14 @@ class StressSong extends Song
       gfFaceplant = FunkinSprite.createSparrow(0, 0, "stages/week7Remnants/cutscene/gfFail");
       gfFaceplant.setPosition(gf.originalPosition.x + 475, gf.originalPosition.y + 550);
       gfFaceplant.animation.addByPrefix('faceplant', "girlfriend face plant0", 24, false);
-      gfFaceplant.zIndex = leBoyfriend.zIndex + 2;
+      gfFaceplant.zIndex = boyfriend.zIndex + 1;
       gfFaceplant.visible = false;
     }
 
     // Create a fake girlfriend.
-    var leGirlfriend = PlayState.instance.currentStage.getGirlfriend();
     fakeGF = CharacterDataParser.fetchCharacter('gf-tankmen-remnants');
-    fakeGF.setPosition(leGirlfriend.x + 15, leGirlfriend.y + 140);
-    fakeGF.zIndex = leGirlfriend.zIndex;
+    fakeGF.setPosition(gf.x + 15, gf.y + 140);
+    fakeGF.zIndex = gf.zIndex;
 
     // Add everything.
     PlayState.instance.currentStage.add(fakeBF);
@@ -423,7 +422,7 @@ class StressSong extends Song
           gfFaceplant.visible = true;
 
           // Lower the camera a bit just so you can see gf epic fall.
-          PlayState.instance.tweenCameraToPosition(gfPos[0] - 150, gfPos[1] + 45, 0.5, FlxEase.quadInOut);
+          PlayState.instance.tweenCameraToPosition(gfPos[0] - 150, gfPos[1] + 200, 0.5, FlxEase.quadInOut);
 
           // BF dodges GF
           if (fakeBF.hasAnimation('dodge') && fakeBF != null)
@@ -535,15 +534,12 @@ class StressSong extends Song
    */
   function censorEvent(sound:FunkinSound, position:Null<Float>, time:Null<Float>):Void
   {
-    // Setup the variables.
-    // For some reason, you can't use function variables on FlxTimer functions.
-    // So to avoid that limitation, we do this instead.
+    // For some reason, you can't use functions variables inside of FlxTimer functions.
     var jeffSound:Bool = sound;
     var censorTime:Null<Float> = time;
     var censorPos:Null<Float> = position;
 
-    // Checks if censorSprite exists to run the code.
-    // If not, skip the function.
+    // Censor the dialogue only if censorSprite exists.
     if (censorSprite != null)
     {
       // Start a timer for when the censor starts.
@@ -580,7 +576,7 @@ class StressSong extends Song
       {
         if (PlayState.instance.currentStage.getBoyfriend().getCurrentAnimation() == 'singUPmiss')
         {
-          // making sure to remove the callback after it's done.
+          // Making sure to remove the callback after it's done.
           PlayState.instance.currentStage.getBoyfriend().animation.onFinish = null;
         }
       }
@@ -692,7 +688,7 @@ class StressSong extends Song
 
         // Play the music.
         cutsceneMusic.play(false);
-        cutsceneMusic.fadeIn(5.0, 0.0, 0.3);
+        cutsceneMusic.fadeIn(5.0, 0.0, 0.25);
       }
 
       if (rimlightCamera != null)

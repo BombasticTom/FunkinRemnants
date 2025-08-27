@@ -11,8 +11,10 @@ import funkin.modding.base.ScriptedFlxSpriteGroup;
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import funkin.audio.visualize.ABotVis;
 
-class NeneRemnantsCharacter extends MultiSparrowCharacter {
-	function new() {
+class NeneRemnantsCharacter extends MultiSparrowCharacter
+{
+	function new()
+	{
 		super('nene-remnants');
 	}
 
@@ -29,7 +31,8 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter {
 
 	var vizAdjustColor:AdjustColorShader;
 
-	function onCreate(event:ScriptEvent) {
+	function onCreate(event:ScriptEvent)
+	{
 		super.onCreate(event);
 
 		stereoBG = new FlxSprite(0, 0, Paths.image('characters/abot-remnants/stereoBG'));
@@ -58,7 +61,8 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter {
 		vizAdjustColor.contrast = 25;
 		vizAdjustColor.hue = 180;
 
-		for(spr in abotViz.members){
+		for(spr in abotViz.members)
+		{
 			spr.shader = vizAdjustColor;
 		}
 	}
@@ -181,11 +185,12 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter {
 	 */
 	var trainPassing:Bool = false;
 
-	function dance(forceRestart:Bool) {
+	function dance(forceRestart:Bool)
+	{
 		if (abot != null)
 		{
 			abot.playAnimation("");
-    	abot.anim.curFrame = 0; // We start on frame zero manually so it bumps every beat.
+			abot.anim.curFrame = 0; // We start on frame zero manually so it bumps every beat.
 		}
 
 		// Then, perform the appropriate animation for the current state.
