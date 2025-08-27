@@ -24,15 +24,20 @@ class LimoRideRemnantsStage extends Stage
 		sunOverlay.updateHitbox();
 		skyOverlay.funnyShit.input = sunOverlay.pixels;
 		var limoSunset:FlxSprite = getNamedProp('limoSunset');
-		if (limoSunset == null) {
+		if (limoSunset == null)
+		{
 			trace('[WARN] Could not retrieve limoSunset');
-		} else {
+		}
+		else
+		{
 			limoSunset.shader = skyOverlay;
 		}
 
-		// There's some commented-out shader BS in the original code.
-		// I don't know what it's for, but it's not used in the game.
-		// If you want to re-add it, go find it in version control.
+		carSequenceData = [
+		{time: 1, callback: () -> doCarHaptics = true},
+		{time: 1.4, callback: () -> doCarHaptics = false},
+		{time: 2, callback: () -> resetFastCar()}
+		];
 
 		resetFastCar();
 	}
@@ -42,9 +47,15 @@ class LimoRideRemnantsStage extends Stage
 	 */
 	var POLE_QUANTITY = 2;
 
-	function onUpdate(event:ScriptEvent) {
+	var carSequence:Sequence;
+	var carSequenceData:Array<SequenceData>;
+	var doCarHaptics:Bool = false;
+
+	function onUpdate(event:ScriptEvent)
+	{
 		// Move background lamps.
-		for (i in 1...(POLE_QUANTITY + 1)) {
+		for (i in 1...(POLE_QUANTITY + 1))
+		{
 			var lamp = getNamedProp('bgLight' + i);
 			lamp.active = true;
 			lamp.velocity.x = 3000;
@@ -53,6 +64,11 @@ class LimoRideRemnantsStage extends Stage
 			}
 			var pole = getNamedProp('bgPole' + i);
 			pole.x = lamp.x + 190;
+		}
+
+		if (doCarHaptics)
+		{
+			HapticUtil.vibrate(0, 0.05, 0.25, 0);
 		}
 	}
 
@@ -72,30 +88,27 @@ class LimoRideRemnantsStage extends Stage
 	{
 		var fastCar = getNamedProp('fastCar');
 
-		if (fastCar == null)
-			return;
+		if (fastCar == null) return;
 
 		// Props are inactive by default.
 		// Set active to true so position is calculated based on velocity.
 		fastCar.active = true;
 
 		fastCar.x = -12600;
-		fastCar.y = FlxG.random.int(140, 600);
+		fastCar.y = FlxG.random.int(140, 250);
 		fastCar.velocity.x = 0;
 		fastCarCanDrive = true;
 	}
 
 	function fastCarDrive():Void
 	{
-		FunkinSound.playOnce(Paths.soundRandom('week4/carPass', 0, 1), 0.7);
+		FunkinSound.playOnce(Paths.soundRandom('carPass', 0, 1), 0.7);
 
 		var fastCar = getNamedProp('fastCar');
 		fastCar.velocity.x = (FlxG.random.int(170, 220) / FlxG.elapsed) * 3;
 		fastCarCanDrive = false;
-		new FlxTimer().start(2, function(tmr:FlxTimer)
-		{
-			resetFastCar();
-		});
+
+		carSequence = new Sequence(carSequenceData);
 	}
 
 	/**
@@ -108,8 +121,8 @@ class LimoRideRemnantsStage extends Stage
 
 		// This graphic is applied by shader to the background, so it's not included in the default stage function.
 		results.push(Paths.image('stages/week4Remnants/limoOverlay'));
-		results.push(Paths.sound('week4/carPass0'));
-		results.push(Paths.sound('week4/carPass1'));
+		results.push(Paths.sound('carPass0'));
+		results.push(Paths.sound('carPass1'));
 
 		return results;
 	}
@@ -117,7 +130,8 @@ class LimoRideRemnantsStage extends Stage
 	/**
 	 * Make sure the fast car is reset when the song restarts.
 	 */
-	function onSongRetry(event:ScriptEvent) {
+	function onSongRetry(event:ScriptEvent)
+	{
 		super.onSongRetry(event);
 		resetFastCar();
 	}
@@ -125,8 +139,23 @@ class LimoRideRemnantsStage extends Stage
 	/**
 	 * Make sure the fast car is reset when the song restarts.
 	 */
-	function onCountdownStart(event:ScriptEvent) {
+	function onCountdownStart(event:ScriptEvent)
+	{
 		super.onCountdownStart(event);
 		resetFastCar();
+	}
+
+	override function onPause(event:PauseScriptEvent)
+	{
+		super.onPause(event);
+
+		if (carSequence != null) carSequence.running = false;
+	}
+
+	override function onResume(event:ScriptEvent)
+	{
+		super.onResume(event);
+
+		if (carSequence != null) carSequence.running = true;
 	}
 }

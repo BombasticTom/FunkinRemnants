@@ -73,7 +73,7 @@ class DarnellRemnantsCharacter extends SparrowCharacter
   {
     if (!loadedLightCanSound)
     {
-      lightCanSound = FunkinSound.load(Paths.sound('weekend1/Darnell_Lighter'), 1.0);
+      lightCanSound = FunkinSound.load(Paths.sound('Darnell_Lighter'), 1.0);
       loadedLightCanSound = true;
     }
 
@@ -98,7 +98,7 @@ class DarnellRemnantsCharacter extends SparrowCharacter
   {
     if (!loadedKickCanSound)
     {
-      kickCanSound = FunkinSound.load(Paths.sound('weekend1/Kick_Can_UP'), 1.0);
+      kickCanSound = FunkinSound.load(Paths.sound('Kick_Can_UP'), 1.0);
       loadedKickCanSound = true;
     }
 
@@ -123,7 +123,7 @@ class DarnellRemnantsCharacter extends SparrowCharacter
   {
     if (!loadedKneeCanSound)
     {
-      kneeCanSound = FunkinSound.load(Paths.sound('weekend1/Kick_Can_FORWARD'), 1.0);
+      kneeCanSound = FunkinSound.load(Paths.sound('Kick_Can_FORWARD'), 1.0);
       loadedKneeCanSound = true;
     }
 

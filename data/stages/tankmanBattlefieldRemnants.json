@@ -1,6 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Tankman Battlefield (Remnants)",
+  "directory": "week7",
   "cameraZoom": 0.86,
   "props": [
     {

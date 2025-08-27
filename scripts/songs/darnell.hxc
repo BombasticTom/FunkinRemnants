@@ -237,20 +237,20 @@ class DarnellSong extends Song
     // darnell lights up a can
     new FlxTimer().start(cutsceneDelay + 3, function(tmr) {
       PlayState.instance.currentStage.getDad().playAnimation('lightCan', true);
-      FunkinSound.playOnce(Paths.sound(soundPath + 'Darnell_Lighter'), 1.0);
+      FunkinSound.playOnce(Paths.sound('Darnell_Lighter'), 1.0);
     });
 
     // pico cocks his gun, camera shifts to his side to show this
     new FlxTimer().start(cutsceneDelay + 4, function(tmr) {
       PlayState.instance.currentStage.getBoyfriend().playAnimation('cock', true);
       PlayState.instance.tweenCameraToPosition(darnellPos[0] + 180, darnellPos[1], 0.4, FlxEase.backOut);
-      FunkinSound.playOnce(Paths.sound(soundPath + 'Gun_Prep'), 1.0);
+      FunkinSound.playOnce(Paths.sound('Gun_Prep'), 1.0);
     });
 
     // darnell kicks the can up
     new FlxTimer().start(cutsceneDelay + 4.4, function(tmr) {
       PlayState.instance.currentStage.getDad().playAnimation('kickCan', true);
-      FunkinSound.playOnce(Paths.sound(soundPath + 'Kick_Can_UP'), 1.0);
+      FunkinSound.playOnce(Paths.sound('Kick_Can_UP'), 1.0);
       cutsceneCan.animation.play('up');
       cutsceneCan.visible = true;
     });
@@ -258,7 +258,7 @@ class DarnellSong extends Song
     // darnell knees the can forward
     new FlxTimer().start(cutsceneDelay + 4.9, function(tmr) {
       PlayState.instance.currentStage.getDad().playAnimation('kneeCan', true);
-      FunkinSound.playOnce(Paths.sound(soundPath + 'Kick_Can_FORWARD'), 1.0);
+      FunkinSound.playOnce(Paths.sound('Kick_Can_FORWARD'), 1.0);
       cutsceneCan.animation.play('forward');
     });
 
@@ -266,7 +266,7 @@ class DarnellSong extends Song
     new FlxTimer().start(cutsceneDelay + 5.1, function(tmr) {
       PlayState.instance.currentStage.getBoyfriend().playAnimation('intro2', true, true);
 
-      FunkinSound.playOnce(Paths.soundRandom(soundPath + 'shot', 1, 4));
+      FunkinSound.playOnce(Paths.soundRandom('shot', 1, 4));
 
       PlayState.instance.tweenCameraToPosition(darnellPos[0] + 100, darnellPos[1], 1, FlxEase.quadInOut);
 

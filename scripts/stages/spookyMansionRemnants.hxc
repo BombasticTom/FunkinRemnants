@@ -19,7 +19,7 @@ class SpookyMansionRemnantsStage extends Stage
 	{
 		if (playSound)
 		{
-			FunkinSound.playOnce(Paths.soundRandom('week2/thunder_', 1, 2), 1.0);
+			FunkinSound.playOnce(Paths.soundRandom('thunder_', 1, 2), 1.0);
 		}
 
 		getNamedProp('halloweenBG').animation.play('lightning');
@@ -56,8 +56,8 @@ class SpookyMansionRemnantsStage extends Stage
 	function fetchAssetPaths():Array<String>
 	{
 		var results:Array<String> = super.fetchAssetPaths();
-		results.push(Paths.sound('week2/thunder_1'));
-		results.push(Paths.sound('week2/thunder_2'));
+		results.push(Paths.sound('thunder_1'));
+		results.push(Paths.sound('thunder_2'));
 		return results;
 	}
 
