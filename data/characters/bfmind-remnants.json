@@ -1,0 +1,81 @@
+{
+	"renderType": "sparrow",
+	"version": "1.0.1",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 2,
+	"scale": 1,
+	"name": "Remnants BF (Mind)",
+	"cameraOffsets": [
+		0,
+		-50
+	],
+	"flipX": true,
+	"isPixel": false,
+	"singTime": 8,
+	"startingAnimation": "idle",
+	"healthIcon": {
+		"id": "bf-remnants",
+		"isPixel": false
+	},
+	"assetPath": "characters/bfMind-remnants",
+	"animations": [
+		{
+			"frameIndices": [],
+			"prefix": "BF idle dance",
+			"offsets": [
+				-4,
+				7
+			],
+			"frameRate": 24,
+			"name": "idle",
+			"looped": false
+		},
+		{
+			"frameIndices": [],
+			"prefix": "BF NOTE LEFT0",
+			"offsets": [
+				-4,
+				4
+			],
+			"frameRate": 24,
+			"name": "singLEFT",
+			"looped": false
+		},
+		{
+			"frameIndices": [],
+			"prefix": "BF NOTE DOWN0",
+			"offsets": [
+				-13,
+				-45
+			],
+			"frameRate": 24,
+			"name": "singDOWN",
+			"looped": false
+		},
+		{
+			"frameIndices": [],
+			"prefix": "BF NOTE UP0",
+			"offsets": [
+				-47,
+				26
+			],
+			"frameRate": 24,
+			"name": "singUP",
+			"looped": false
+		},
+		{
+			"frameIndices": [],
+			"prefix": "BF NOTE RIGHT0",
+			"offsets": [
+				-47,
+				-2
+			],
+			"frameRate": 24,
+			"name": "singRIGHT",
+			"looped": false
+		}
+	]
+}
