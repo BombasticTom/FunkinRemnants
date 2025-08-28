@@ -52,14 +52,7 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
 	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
 		if (name == "fakeoutDeath" && !this.debug) {
 			doFakeoutDeath();
-		} else {
-			super.playAnimation(name, restart, ignoreOther);
-		}
-	}
-
-	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
-  {
-    if (name == "firstDeath")
+    else if (name == "firstDeath")
     {
 			// Standard death animation.
 			createDeathSprites();
@@ -74,9 +67,12 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
     else if (name == "deathConfirm")
     {
 			FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-    }
-    super.playAnimation(name, restart, ignoreOther);
-  }
+		}
+		else
+		{
+			super.playAnimation(name, restart, ignoreOther);
+		}
+	}
 
 	function doFakeoutDeath():Void {
 		FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
