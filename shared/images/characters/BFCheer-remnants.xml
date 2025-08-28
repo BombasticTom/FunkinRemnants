@@ -1,14 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="BFCheer-remnants.png">
-	<!-- Created with Adobe Animate version 24.0.3.19 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Boyfriend YEAH cheer0000" x="2" y="2" width="434" height="459" frameX="-1" frameY="0" frameWidth="435" frameHeight="461"/>
-	<SubTexture name="Boyfriend YEAH cheer0001" x="2" y="2" width="434" height="459" frameX="-1" frameY="0" frameWidth="435" frameHeight="461"/>
-	<SubTexture name="Boyfriend YEAH cheer0002" x="2" y="463" width="425" height="439" frameX="-4" frameY="-21" frameWidth="435" frameHeight="461"/>
-	<SubTexture name="Boyfriend YEAH cheer0003" x="2" y="463" width="425" height="439" frameX="-4" frameY="-21" frameWidth="435" frameHeight="461"/>
-	<SubTexture name="Boyfriend YEAH cheer0004" x="2" y="904" width="432" height="447" frameX="0" frameY="-14" frameWidth="435" frameHeight="461"/>
-	<SubTexture name="Boyfriend YEAH cheer0005" x="2" y="904" width="432" height="447" frameX="0" frameY="-14" frameWidth="435" frameHeight="461"/>
-	<SubTexture name="Boyfriend YEAH cheer0006" x="2" y="904" width="432" height="447" frameX="0" frameY="-14" frameWidth="435" frameHeight="461"/>
-	<SubTexture name="Boyfriend YEAH cheer0007" x="2" y="904" width="432" height="447" frameX="0" frameY="-14" frameWidth="435" frameHeight="461"/>
-	<SubTexture name="Boyfriend YEAH cheer0008" x="2" y="904" width="432" height="447" frameX="0" frameY="-14" frameWidth="435" frameHeight="461"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="BFCheer-remnants.png" width="870" height="890">
+	<SubTexture name="Boyfriend YEAH cheer0000" x="2" y="2" width="432" height="459" frameX="-2" frameY="-0" frameWidth="435" frameHeight="461"/>
+	<SubTexture name="Boyfriend YEAH cheer0001" x="2" y="2" width="432" height="459" frameX="-2" frameY="-0" frameWidth="435" frameHeight="461"/>
+	<SubTexture name="Boyfriend YEAH cheer0002" x="2" y="463" width="439" height="425" rotated="true" frameX="-4" frameY="-21" frameWidth="435" frameHeight="461"/>
+	<SubTexture name="Boyfriend YEAH cheer0003" x="2" y="463" width="439" height="425" rotated="true" frameX="-4" frameY="-21" frameWidth="435" frameHeight="461"/>
+	<SubTexture name="Boyfriend YEAH cheer0004" x="436" y="2" width="432" height="446" frameX="-0" frameY="-14" frameWidth="435" frameHeight="461"/>
+	<SubTexture name="Boyfriend YEAH cheer0005" x="436" y="2" width="432" height="446" frameX="-0" frameY="-14" frameWidth="435" frameHeight="461"/>
+	<SubTexture name="Boyfriend YEAH cheer0006" x="436" y="2" width="432" height="446" frameX="-0" frameY="-14" frameWidth="435" frameHeight="461"/>
+	<SubTexture name="Boyfriend YEAH cheer0007" x="436" y="2" width="432" height="446" frameX="-0" frameY="-14" frameWidth="435" frameHeight="461"/>
+	<SubTexture name="Boyfriend YEAH cheer0008" x="436" y="2" width="432" height="446" frameX="-0" frameY="-14" frameWidth="435" frameHeight="461"/>
 </TextureAtlas>

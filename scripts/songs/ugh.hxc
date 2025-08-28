@@ -93,4 +93,140 @@ class UghSong extends Song
 
     hasPlayedCutscene = false;
   }
+
+  var startedTalking:Bool = false;
+  var remnantsTimerManager:FlxTimerManager;
+  var cutsceneMusic:FunkinSound = null;
+
+  function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (PlayState.instance.isInCutscene)
+    {
+      if (remnantsTimerManager != null) remnantsTimerManager.update(event.elapsed);
+      if (!startedTalking && tankmanCutscene != null && tankmanCutscene.anim.curFrame >= 1 && tankTalk != null)
+      {
+        startedTalking = true;
+        tankTalk.play(true);
+
+        // Play the music.
+        cutsceneMusic.play(false);
+        cutsceneMusic.fadeIn(5.0, 0.0, 0.25);
+      }
+    }
+  }
+
+  var tankTalk:FunkinSound = null;
+  var tankTalk2:FunkinSound = null;
+  var bfBeep:FunkinSound = null;
+
+  var tankmanCutscene:ScriptedFlxAtlasSprite;
+
+  /**
+   * "Well well well what do we got here?".
+   */
+  function ughIntro()
+  {
+    // Cutscene stuff
+    PlayState.instance.togglePauseButton();
+    PlayState.instance.isInCutscene = true;
+    PlayState.instance.mayPauseGame = false;
+
+    PlayState.instance.camHUD.visible = false;
+
+    // Disable the tank so it doesn't looks weird due to camera movement.
+    var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
+    tankRolling?.active = false;
+    tankRolling?.visible = false;
+
+    // Disable the tank so it doesn't looks weird due to camera movement.
+    var tankRollingExtra = PlayState.instance.currentStage.getNamedProp('tankRollingExtra');
+    tankRollingExtra?.active = false;
+    tankRollingExtra?.visible = false;
+
+    // Start the manager.
+    remnantsTimerManager = new FlxTimerManager();
+
+    // Skip text.
+    skipText = new FlxText(936 * FullScreenScaleMode.wideScale.x, 618 * FullScreenScaleMode.wideScale.y, 0,
+      'Skip [ ' + PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true) + ' ]', 20);
+    if (FlxG.onMobile)
+    {
+      skipText.text = 'Skip [Pause Button]';
+      skipText.x -= 136;
+    }
+    skipText.setFormat(Paths.font('vcr.ttf'), 40, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+    skipText.scrollFactor.set();
+    skipText.borderSize = 2;
+    skipText.alpha = 0;
+
+    PlayState.instance.currentStage.add(skipText);
+
+    skipText.cameras = [PlayState.instance.camCutscene];
+
+    // Hide the real characters.
+    PlayState.instance.currentStage.getDad().visible = false;
+    PlayState.instance.currentStage.getBoyfriend().visible = false;
+    PlayState.instance.currentStage.getGirlfriend().visible = false;
+
+    // Camera shorters
+    var bfPos:Array<Float> = [
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+    ];
+    var dadPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
+    ];
+
+    PlayState.instance.camCutscene.fade(0xFF000000, 1.5, true, null, true);
+
+    // Create the music instance.
+    cutsceneMusic = FunkinSound.load(Paths.music("distorto/distorto", "shared"), true);
+    cutsceneMusic.volume = 0;
+
+    // For BF idle.
+    cutsceneConductor = new Conductor();
+    var songMusicData:Null<SongMusicData> = SongRegistry.instance.parseMusicData('distorto');
+    if (songMusicData != null) cutsceneConductor.mapTimeChanges(songMusicData.timeChanges);
+    cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
+
+    // Setup the audios.
+    tankTalk = FunkinSound.load(Paths.sound('week7/ughCutscene1'), 1.0);
+    tankTalk2 = FunkinSound.load(Paths.sound('week7/ughCutscene2'), 1.0);
+    bfBeep = FunkinSound.load(Paths.sound('week7/bfBeep'), 1.0);
+
+    // Create the Tankman atlas.
+    var dad = PlayState.instance.currentStage.getDad();
+    tankmanCutscene = ScriptedFlxAtlasSprite.init('TankCutsceneRemnants', 0, 0);
+    tankmanCutscene.setPosition(dad.x + 425, dad.y + 215);
+    tankmanCutscene.playAnimation("What do we got here"); // Loading purpose!
+    tankmanCutscene.zIndex = dad.zIndex + 1;
+
+    // Add tankman.
+    PlayState.instance.currentStage.add(tankmanCutscene);
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+    /** Cutscene Time! */
+    // Camera starts on Tankman.
+    // It has a short delay for prevent lag.
+    new FlxTimer(remnantsTimerManager).start(0.1, function(tmr)
+    {
+      // PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 1.5, FlxEase.quadInOut);
+      // PlayState.instance.tweenCameraZoom(0.86 * 1.15, 0.01, true, FlxEase.quadInOut);
+
+      // Play the dialogue.
+      tankmanCutscene.playAnimation("What do we got here");
+    });
+  }
+
+  function onCutsceneBeatHit()
+  {
+    if (PlayState.instance.currentStage.getBoyfriend().isAnimationFinished())
+    {
+      PlayState.instance.currentStage.getBoyfriend().dance(true);
+      PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
+    }
+  }
 }

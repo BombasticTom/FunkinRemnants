@@ -3,6 +3,7 @@ import funkin.play.PlayState;
 import funkin.save.Save;
 import funkin.play.PlayStatePlaylist;
 import funkin.util.Constants;
+import funkin.play.GameOverSubState;
 import funkin.modding.base.ScriptedFlxSpriteGroup;
 import funkin.play.cutscene.VideoCutscene;
 import openfl.filters.ShaderFilter;
@@ -214,19 +215,13 @@ class StressSong extends Song
 
     // Disable the tank so it doesn't looks weird due to camera movement.
     var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
-    if (tankRolling != null)
-    {
-      tankRolling.active = false;
-      tankRolling.visible = false;
-    }
+    tankRolling?.active = false;
+    tankRolling?.visible = false;
 
     // Disable the tank so it doesn't looks weird due to camera movement.
     var tankRollingExtra = PlayState.instance.currentStage.getNamedProp('tankRollingExtra');
-    if (tankRollingExtra != null)
-    {
-      tankRollingExtra.active = false;
-      tankRollingExtra.visible = false;
-    }
+    tankRollingExtra?.active = false;
+    tankRollingExtra?.visible = false;
 
     // Start the manager.
     remnantsTimerManager = new FlxTimerManager();
@@ -327,7 +322,7 @@ class StressSong extends Song
 
     // Create a fake girlfriend.
     fakeGF = CharacterDataParser.fetchCharacter('gf-tankmen-remnants');
-    fakeGF.setPosition(gf.x + 15, gf.y + 140);
+    fakeGF.setPosition(gf.x + 15, gf.y + 135);
     fakeGF.zIndex = gf.zIndex;
 
     // Add everything.
@@ -368,90 +363,94 @@ class StressSong extends Song
 
       gfCutscene.visible = true; // Show GF getting gunpointed.
       gfCutscene.playAnimation("Gun Point");
-      gfCutscene.anim.onComplete.add(function()
-      {
-        // Destroy GF getting gunpointed after her anim is done.
-        PlayState.instance.currentStage.remove(gfCutscene);
-        gfCutscene.destroy();
-        gfCutscene = null;
-      });
 
-      // Play the demon eye sound.
-      new FlxTimer(remnantsTimerManager).start(1.25, function(swagTimer:FlxTimer)
+      // Play the demon eye sound and animation.
+      new FlxTimer(remnantsTimerManager).start(1.24, function(swagTimer:FlxTimer)
 			{
         demonEye.play(true);
+        gfCutscene.playAnimation("Demon Eye");
+        gfCutscene.anim.onComplete.add(function()
+        {
+          // Pico Arrives (Also GF getting gunpointed is destroyed).
+          PlayState.instance.currentStage.remove(gfCutscene);
+          gfCutscene.destroy();
+          gfCutscene = null;
+
+          // Zoom out, hide fake bf (unless you got the rare variant) and play the sound.
+          PlayState.instance.tweenCameraZoom(0.8, 0.1, true, FlxEase.elasticInOut);
+          gunHit.play(true);
+
+          // Summon pico cutscene act.
+          picoCutscene.visible = true;
+          picoCutscene.playAnimation("Pico Arrives");
+
+          // Steve dies.
+          new FlxTimer(remnantsTimerManager).start(1.05, function(swagTimer:FlxTimer) {
+            picoCutscene.playAnimation("Steve Dies");
+            steveDies.play(true);
+          });
+
+          // Pico goes to idle.
+          new FlxTimer(remnantsTimerManager).start(3.5, function(swagTimer:FlxTimer) {
+            picoCutscene.playAnimation("Idle");
+          });
+
+          // Real pico-speaker shows up.
+          new FlxTimer(remnantsTimerManager).start(5.2, function(swagTimer:FlxTimer)
+          {
+            PlayState.instance.currentStage.getGirlfriend().visible = true;
+            PlayState.instance.currentStage.remove(picoCutscene);
+            picoCutscene.destroy();
+            picoCutscene = null;
+          });
+
+          // Do boyfriend's part after 0.08 miliseconds.
+          new FlxTimer(remnantsTimerManager).start(0.08, function(swagTimer:FlxTimer)
+          {
+            PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
+            fakeBF.visible = (!gfFail) ? false : true;
+
+            if (gfFail)
+            {
+              // GF epic fail woooo!
+              gfFaceplant.animation.play("faceplant");
+              gfFaceplant.visible = true;
+
+              PlayState.instance.currentStage.getBoyfriend().characterId = 'bf-remnants';
+
+              // Lower the camera a bit just so you can see gf epic fall.
+              PlayState.instance.tweenCameraToPosition(gfPos[0] - 150, gfPos[1] + 200, 0.15, FlxEase.quadInOut);
+
+              // BF dodges GF.
+              if (fakeBF.hasAnimation('dodge') && fakeBF != null)
+              {
+                fakeBF.playAnimation('dodge', true, true);
+              }
+            }
+            else
+            {
+              // Play the BF catching GF animation.
+              if (PlayState.instance.currentStage.getBoyfriend().hasAnimation('bfCatch'))
+              {
+                PlayState.instance.currentStage.getBoyfriend().playAnimation('bfCatch', true, true);
+              }
+            }
+          });
+
+          // Play tankman anim part 2
+          new FlxTimer(remnantsTimerManager).start(2.3, function(gayLol:FlxTimer)
+          {
+            tankmanCutscene.playAnimation("Sexually Ambiguous");
+            tankTalk2.play(true);
+          });
+
+          // focus camera to tankman
+          new FlxTimer(remnantsTimerManager).start(3, function(weedShitBaby:FlxTimer)
+          {
+            PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.quadInOut);
+          });
+        });
       });
-
-      // BF Catches GF (after GF getting gunpointed is destroyed).
-			new FlxTimer(remnantsTimerManager).start(2.2, function(swagTimer:FlxTimer)
-			{
-        // Zoom out, hide fake bf (unless you got the rare variant) and play the sound.
-				PlayState.instance.tweenCameraZoom(0.8, 0.1, true);
-        PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
-				fakeBF.visible = (!gfFail) ? false : true;
-        gunHit.play(true);
-
-        // Summon pico cutscene act.
-        picoCutscene.visible = true;
-        picoCutscene.playAnimation("Pico Arrives");
-
-        // Steve dies.
-        new FlxTimer(remnantsTimerManager).start(1.05, function(swagTimer:FlxTimer) {
-          picoCutscene.playAnimation("Steve Dies");
-          steveDies.play(true);
-        });
-
-        // Pico goes to idle.
-        new FlxTimer(remnantsTimerManager).start(3.5, function(swagTimer:FlxTimer) {
-          picoCutscene.playAnimation("Idle");
-        });
-
-        // Real pico-speaker shows up.
-        new FlxTimer(remnantsTimerManager).start(5.2, function(swagTimer:FlxTimer)
-        {
-          PlayState.instance.currentStage.getGirlfriend().visible = true;
-          PlayState.instance.currentStage.remove(picoCutscene);
-          picoCutscene.destroy();
-          picoCutscene = null;
-        });
-
-        if (gfFail)
-        {
-          // Gf epic fail woooo
-          gfFaceplant.animation.play("faceplant");
-          gfFaceplant.visible = true;
-
-          // Lower the camera a bit just so you can see gf epic fall.
-          PlayState.instance.tweenCameraToPosition(gfPos[0] - 150, gfPos[1] + 200, 0.5, FlxEase.quadInOut);
-
-          // BF dodges GF
-          if (fakeBF.hasAnimation('dodge') && fakeBF != null)
-          {
-            fakeBF.playAnimation('dodge', true, true);
-          }
-        }
-        else
-        {
-          // Play bf catching gf anim
-          if (PlayState.instance.currentStage.getBoyfriend().hasAnimation('bfCatch'))
-          {
-            PlayState.instance.currentStage.getBoyfriend().playAnimation('bfCatch', true, true);
-          }
-        }
-
-        // Play tankman anim part 2
-				new FlxTimer(remnantsTimerManager).start(2.3, function(gayLol:FlxTimer)
-				{
-					tankmanCutscene.playAnimation("Sexually Ambiguous");
-					tankTalk2.play(true);
-				});
-
-        // focus camera to tankman
-				new FlxTimer(remnantsTimerManager).start(3, function(weedShitBaby:FlxTimer)
-				{
-					PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.quadInOut);
-				});
-			});
 		});
 
     // Cunt scene.
@@ -621,24 +620,42 @@ class StressSong extends Song
     }
   }
 
+  var deathBFNormal:FunkinSprite;
+
   override function onGameOver(event:ScriptEvent):Void
   {
 		super.onGameOver(event);
 
-    // Default BF death.
-    if (gfFail)
+    if (gfFail) // Default BF death when GF faceplant.
     {
-      createDefaultDeath();
+      new FlxTimer().start(0.05, _ -> {
+        deathBFNormal = FunkinSprite.createSparrow(0, 0, "characters/bf-remnants");
+        deathBFNormal.animation.addByPrefix('firstDeath', "BF dies", 24, false);
+        deathBFNormal.animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+        deathBFNormal.animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+        deathBFNormal.setPosition(GameOverSubState.instance.boyfriend.x, GameOverSubState.instance.boyfriend.y);
+        deathBFNormal.zIndex = GameOverSubState.instance.boyfriend.zIndex + 1;
+        deathBFNormal.animation.play("firstDeath");
+        deathBFNormal.animation.onFinish.add(function(name:String) {
+          deathBFNormal.animation.play("deathLoop");
+        });
+
+        GameOverSubState.instance.add(deathBFNormal);
+        GameOverSubState.instance.refresh();
+      });
+    }
+
+    if (GameOverSubState.instance != null)
+    {
+      if ((GameOverSubState.instance.controls.ACCEPT || (TouchUtil.pressAction() && !TouchUtil.overlaps(backButton) && GameOverSubState.instance.canInput)))
+      {
+        deathBFNormal?.animation.onFinish.removeAll();
+        deathBFNormal?.animation.onFinish = null;
+
+        deathBFNormal?.animation.play("deathConfirm");
+      }
     }
 	}
-
-  /**
-   * Maybe there's a better way but this also works.
-   */
-  function createDefaultDeath()
-  {
-    // GameOverSubState.instance.add(deathBFNormal);
-  }
 
   /**
    * Don't replay the cutscene between restarts.
@@ -862,13 +879,18 @@ class StressSong extends Song
         cutsceneMusic.stop();
     });
 
-    new FlxTimer().start(0.5, _ -> {
+    new FlxTimer().start(0.5, _ ->
+    {
       PlayState.instance.camHUD.visible = true;
 
       if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
 
-      fakeBF.visible = (gfFail) ? true : false;
-      if (gfFaceplant != null) gfFaceplant.visible = (gfFail) ? true : false;
+      fakeBF?.visible = (gfFail) ? true : false;
+
+      gfFaceplant?.animation.play("faceplant");
+      gfFaceplant?.animation.curAnim.curFrame = 116;
+      gfFaceplant?.visible = (gfFail) ? true : false;
+
       PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
       PlayState.instance.currentStage.getGirlfriend().visible = true;
       PlayState.instance.currentStage.getDad().visible = true;
@@ -902,28 +924,22 @@ class StressSong extends Song
       }
 
       var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
-      if (tankRolling != null)
-      {
-        tankRolling.active = true;
-        tankRolling.visible = true;
-      }
+      tankRolling?.active = true;
+      tankRolling?.visible = true;
 
       var tankRollingExtra = PlayState.instance.currentStage.getNamedProp('tankRollingExtra');
-      if (tankRollingExtra != null)
-      {
-        tankRollingExtra.active = true;
-        tankRollingExtra.visible = true;
-      }
+      tankRollingExtra?.active = true;
+      tankRollingExtra?.visible = true;
 
-      if (tankTalk != null) tankTalk.stop();
-      if (gunHit != null) gunHit.stop();
-      if (demonEye != null) demonEye.stop();
-      if (gunPoint != null) gunPoint.stop();
-      if (steveDies != null) steveDies.stop();
-      if (tankTalk2 != null && pressedSkip) tankTalk2.stop();
+      tankTalk?.stop();
+      gunHit?.stop();
+      demonEye?.stop();
+      gunPoint?.stop();
+      steveDies?.stop();
+      if (pressedSkip) tankTalk2?.stop();
 
-      if (skipText != null) skipText.visible = false;
-      remnantsTimerManager.clear();
+      skipText?.visible = false;
+      remnantsTimerManager?.clear();
 
       PlayState.instance.justUnpaused = true;
       PlayState.instance.tweenCameraZoom(0.86, 2, true, FlxEase.sineInOut);

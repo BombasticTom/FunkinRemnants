@@ -325,7 +325,7 @@
 				0
 			],
 			"frameRate": 24,
-			"assetPath": "characters/pico-cheer-remnants",
+			"assetPath": "characters/pico-taunts-remnants",
 			"prefix": "Pico HEY!!0",
 			"flipX": false,
 			"looped": false,
@@ -338,7 +338,7 @@
 				10
 			],
 			"frameRate": 24,
-			"assetPath": "characters/pico-yeah-remnants",
+			"assetPath": "characters/pico-taunts-remnants",
 			"prefix": "Pico YEAH cheer0",
 			"flipX": false,
 			"looped": false,

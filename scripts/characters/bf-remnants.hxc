@@ -25,7 +25,6 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
 	}
 
 	var loseSprite:FunkinSprite;
-  var retrySprite:FunkinSprite;
 
   /**
 	* Initialize and cache sprites used for the death animation,
@@ -48,23 +47,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
 
     loseSprite.zIndex = this.zIndex + 5;
     loseSprite.visible = false;
-
-		// retrySprite = FunkinSprite.createSparrow(this.x - 100, this.y + 425, "gameover/restartText");
-		// retrySprite.animation.addByPrefix('idle', "restart idle0", 24, true);
-    // retrySprite.animation.addByPrefix('confirm', "restart click0", 24, false);
-
-    // week 3 shader
-    // if (shader != null)
-    // {
-    //   retrySprite.shader = shader;
-    // }
-
-    // retrySprite.zIndex = this.zIndex + 6;
-    // retrySprite.alpha = 0.00001;
   }
 
-	/*
-	// Fakeout Death for Remnants BF?
 	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
 		if (name == "fakeoutDeath" && !this.debug) {
 			doFakeoutDeath();
@@ -72,7 +56,6 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
 			super.playAnimation(name, restart, ignoreOther);
 		}
 	}
-	*/
 
 	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
@@ -82,29 +65,23 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
 			createDeathSprites();
 
 			GameOverSubState.instance.add(loseSprite);
-			// GameOverSubState.instance.add(retrySprite);
     }
 		else if (name == 'deathLoop')
 		{
 			loseSprite.visible = true;
-			// FlxTween.tween(retrySprite, {alpha: 1}, 1.2, {ease: FlxEase.quadInOut});
-
-			// retrySprite.animation.play('idle', true);
 			loseSprite.animation.play('fall', true);
 		}
     else if (name == "deathConfirm")
     {
 			FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-			// retrySprite.animation.play('confirm', true);
     }
     super.playAnimation(name, restart, ignoreOther);
   }
 
-	/*
 	function doFakeoutDeath():Void {
 		FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
 
-		var bfFakeout:FlxAtlasSprite = new FlxAtlasSprite(this.x - 440, this.y - 240, Paths.animateAtlas("characters/bfFakeOut", "shared"));
+		var bfFakeout:FlxAtlasSprite = new FlxAtlasSprite(this.x - 440, this.y - 240, Paths.animateAtlas("characters/bfFakeOut-remnants", "shared"));
     FlxG.state.subState.add(bfFakeout);
 		bfFakeout.zIndex = 1000;
     bfFakeout.playAnimation('');
@@ -121,14 +98,13 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
     bfFakeout.visible = true;
 		this.visible = false;
 	}
-	*/
 
 	// Fartman Quotes
 	override function getDeathQuote():Null<String>
 	{
-		switch (PlayState.instance.currentStage.getDad().characterId)
+		switch (PlayState.instance.currentStage?.getDad().characterId)
 		{
-			case "tankman":
+			case "tankman-remnants":
 				var randomCensor:Array<Int> = [];
 				if (!Preferences.naughtyness) randomCensor = [1, 3, 8, 13, 17, 21];
 				return Paths.sound('jeffGameover/jeffGameover-' + FlxG.random.int(1, 25, randomCensor));
