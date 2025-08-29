@@ -65,9 +65,9 @@ Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="hench head spin 20005" x="1208" y="1148" width="208" height="170" rotated="true" frameX="-17" frameY="-0" frameWidth="236" frameHeight="236"/>
 	<SubTexture name="hench head spin 20006" x="1153" y="1320" width="173" height="204" rotated="true" frameX="-0" frameY="-50" frameWidth="236" frameHeight="236"/>
 	<SubTexture name="hench head spin 20007" x="1153" y="1320" width="173" height="204" rotated="true" frameX="-0" frameY="-50" frameWidth="236" frameHeight="236"/>
-	<SubTexture name="hench hit 0000" x="2" y="2" width="434" height="379" frameX="-0" frameY="-0" frameWidth="434" frameHeight="379"/>
-	<SubTexture name="hench hit 0001" x="2" y="2" width="434" height="379" frameX="-0" frameY="-0" frameWidth="434" frameHeight="379"/>
-	<SubTexture name="hench hit 0002" x="2" y="2" width="434" height="379" frameX="-0" frameY="-0" frameWidth="434" frameHeight="379"/>
+	<SubTexture name="hench hit 10000" x="2" y="2" width="434" height="379" frameX="-0" frameY="-0" frameWidth="434" frameHeight="379"/>
+	<SubTexture name="hench hit 10001" x="2" y="2" width="434" height="379" frameX="-0" frameY="-0" frameWidth="434" frameHeight="379"/>
+	<SubTexture name="hench hit 10002" x="2" y="2" width="434" height="379" frameX="-0" frameY="-0" frameWidth="434" frameHeight="379"/>
 	<SubTexture name="hench leg spin 0000" x="1496" y="2" width="111" height="158" rotated="true" frameX="-4" frameY="-28" frameWidth="165" frameHeight="166"/>
 	<SubTexture name="hench leg spin 0001" x="1496" y="2" width="111" height="158" rotated="true" frameX="-4" frameY="-28" frameWidth="165" frameHeight="166"/>
 	<SubTexture name="hench leg spin 0002" x="1328" y="1439" width="164" height="129" rotated="true" frameX="-19" frameY="-2" frameWidth="165" frameHeight="166"/>
@@ -84,6 +84,6 @@ Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
 	<SubTexture name="hench leg spin 20005" x="1454" y="574" width="142" height="139" frameX="-7" frameY="-13" frameWidth="149" frameHeight="153"/>
 	<SubTexture name="hench leg spin 20006" x="1448" y="715" width="142" height="140" rotated="true" frameX="-6" frameY="-0" frameWidth="149" frameHeight="153"/>
 	<SubTexture name="hench leg spin 20007" x="1448" y="715" width="142" height="140" rotated="true" frameX="-6" frameY="-0" frameWidth="149" frameHeight="153"/>
-	<SubTexture name="henchmen on rail 20000" x="1230" y="2" width="264" height="303" frameX="-0" frameY="-0" frameWidth="264" frameHeight="303"/>
-	<SubTexture name="henchmen on rail 20001" x="1230" y="2" width="264" height="303" frameX="-0" frameY="-0" frameWidth="264" frameHeight="303"/>
+	<SubTexture name="hench hit 20000" x="1230" y="2" width="264" height="303" frameX="-0" frameY="-0" frameWidth="264" frameHeight="303"/>
+	<SubTexture name="hench hit 20001" x="1230" y="2" width="264" height="303" frameX="-0" frameY="-0" frameWidth="264" frameHeight="303"/>
 </TextureAtlas>
