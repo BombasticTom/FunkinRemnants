@@ -83,6 +83,7 @@
       "position": [500, -100],
       "scale": [1.5, 1.5],
       "zIndex": 40,
+      "blend": "multiply",
       "scroll": [1, 1],
       "animations": [
         { "name": "idle", "prefix": "tv static", "frameRate": 24, "looped": true }
