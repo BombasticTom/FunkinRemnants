@@ -74,7 +74,7 @@ class PhillyStreetsRemnantsStage extends Stage
 	{
 		super.buildStage();
 
-		mist0 = new FlxBackdrop(Paths.image('stages/weekEnd1Remnants/mistMid'), 0x01);
+		mist0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
 		mist0.setPosition(-650, 250);
 		mist0.scrollFactor.set(1.2, 1.2);
 		mist0.zIndex = 1000;
@@ -86,7 +86,7 @@ class PhillyStreetsRemnantsStage extends Stage
 		PlayState.instance.currentStage.add(mist0);
 		PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-		mist1 = new FlxBackdrop(Paths.image('stages/weekEnd1Remnants/mistMid'), 0x01);
+		mist1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
 		mist1.setPosition(-650, 250);
 		mist1.scrollFactor.set(1.1, 1.1);
 		mist1.zIndex = 1000;
@@ -98,7 +98,7 @@ class PhillyStreetsRemnantsStage extends Stage
 		PlayState.instance.currentStage.add(mist1);
 		PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-		mist2 = new FlxBackdrop(Paths.image('stages/weekEnd1Remnants/mistBack'), 0x01);
+		mist2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
 		mist2.setPosition(-650, 250);
 		mist2.scrollFactor.set(1.2, 1.2);
 		mist2.zIndex = 1001;
@@ -110,7 +110,7 @@ class PhillyStreetsRemnantsStage extends Stage
 		PlayState.instance.currentStage.add(mist2);
 		PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-		mist3 = new FlxBackdrop(Paths.image('stages/weekEnd1Remnants/mistMid'), 0x01);
+		mist3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
 		mist3.setPosition(-650, 250);
 		mist3.scrollFactor.set(0.95, 0.95);
 		mist3.zIndex = 99;
@@ -123,7 +123,7 @@ class PhillyStreetsRemnantsStage extends Stage
 		PlayState.instance.currentStage.add(mist3);
 		PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-		mist4 = new FlxBackdrop(Paths.image('stages/weekEnd1Remnants/mistBack'), 0x01);
+		mist4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
 		mist4.setPosition(-650, 250);
 		mist4.scrollFactor.set(0.8, 0.8);
 		mist4.zIndex = 88;
@@ -136,7 +136,7 @@ class PhillyStreetsRemnantsStage extends Stage
 		PlayState.instance.currentStage.add(mist4);
 		PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-		mist5 = new FlxBackdrop(Paths.image('stages/weekEnd1Remnants/mistMid'), 0x01);
+		mist5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
 		mist5.setPosition(-650, 250);
 		mist5.scrollFactor.set(0.5, 0.5);
 		mist5.zIndex = 39;
