@@ -137,7 +137,7 @@ class UghSong extends Song
 
         // Play the music.
         cutsceneMusic.play(false);
-        cutsceneMusic.fadeIn(5.0, 0.0, 0.25);
+        cutsceneMusic.fadeIn(3.5, 0.0, 0.2);
       }
     }
 
@@ -195,6 +195,9 @@ class UghSong extends Song
     PlayState.instance.mayPauseGame = false;
 
     PlayState.instance.camHUD.visible = false;
+
+    PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
+    PlayState.instance.currentStage.getGirlfriend().animation.curAnim.curFrame = 14;
 
     // Disable the tank so it doesn't looks weird due to camera movement.
     var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
@@ -270,13 +273,54 @@ class UghSong extends Song
     /** Cutscene Time! */
     // Camera starts on Tankman.
     // It has a short delay for prevent lag.
-    new FlxTimer(remnantsTimerManager).start(0.1, function(tmr)
+    new FlxTimer(remnantsTimerManager).start(0.1, _ ->
     {
-      // PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 1.5, FlxEase.quadInOut);
-      // PlayState.instance.tweenCameraZoom(0.86 * 1.15, 0.01, true, FlxEase.quadInOut);
+      PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 0.01, FlxEase.quadInOut);
+      PlayState.instance.tweenCameraZoom(0.86 * 1.15, 1.5, true, FlxEase.quadInOut);
 
       // Play the dialogue.
       tankmanCutscene.playAnimation("What do we got here");
+    });
+
+    new FlxTimer(remnantsTimerManager).start(3, _ ->
+    {
+      PlayState.instance.tweenCameraZoom(0.86 * 1.2, 1.5, true, FlxEase.quadInOut);
+      PlayState.instance.tweenCameraToPosition(bfPos[0] + 150, bfPos[1], 1.5, FlxEase.quadInOut);
+      new FlxTimer(remnantsTimerManager).start(1.5, _ ->
+      {
+        PlayState.instance.currentStage.getBoyfriend().playAnimation('singUP');
+        bfBeep.play(true);
+
+        new FlxTimer(remnantsTimerManager).start(0.5, _ ->
+        {
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('idle');
+          PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
+        });
+      });
+
+      new FlxTimer(remnantsTimerManager).start(3, _ ->
+			{
+        PlayState.instance.tweenCameraZoom(0.86 * 1.15, 1.5, true, FlxEase.quadInOut);
+        PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 1.5, FlxEase.quadInOut);
+        tankmanCutscene.playAnimation("We should just kill you");
+        tankTalk2.play(true);
+
+        new FlxTimer(remnantsTimerManager).start(1.5, _ ->
+        {
+          // Cutting off skipping here.
+          // Really don't think its needed after this point and it saves problems from happening.
+          FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadIn,
+            onComplete: _ -> {
+              skipText.visible = false;
+            }
+          });
+        });
+
+        new FlxTimer(remnantsTimerManager).start(6.1, _ ->
+				{
+          endUghIntro();
+        });
+      });
     });
   }
 

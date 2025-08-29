@@ -1,8 +1,8 @@
 {
   "timeFormat": "ms",
-  "artist": "Kawai Sprite",
-  "songName": "DISTORTO",
-  "timeChanges": [{ "d": 4, "n": 4, "t": 0, "bt": [4, 4, 4, 4], "bpm": 176 }],
+  "artist": "fishgarden",
+  "songName": "DISTORTO!",
+  "timeChanges": [{ "d": 4, "n": 4, "t": 0, "bt": [4, 4, 4, 4], "bpm": 160 }],
   "generatedBy": "Manual (by EliteMasterEric)",
   "looped": true,
   "version": "2.0.0"
