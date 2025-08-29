@@ -2,6 +2,7 @@
   "version": "2.2.4",
   "songName": "Tormentor (Remnants Mix)",
   "artist": "",
+  "divisions": 96,
   "looped": false,
   "offsets": {
     "instrumental": 0,
@@ -10,7 +11,9 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": ["remnants"],
+    "songVariations": [
+      ""
+    ],
     "difficulties": [
       "easy",
       "normal",
@@ -21,6 +24,7 @@
       "girlfriend": "",
       "opponent": "soul-remnants",
       "instrumental": "",
+      "altInstrumentals": [      ],
       "opponentVocals": [
         "soul-remnants"
       ],
@@ -28,10 +32,10 @@
         "bfmind-remnants"
       ]
     },
-    "stage": "mainStageRemnants",
+    "stage": "mindRemnants",
     "noteStyle": "corruption",
     "ratings": {
-      "easy": 8
+      "hard": 8
     },
     "previewStart": 0,
     "previewEnd": 0
