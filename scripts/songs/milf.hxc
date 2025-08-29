@@ -96,8 +96,8 @@ class MILFSong extends Song
 	{
 		super.onCreate(event);
 
-		henchmenWipe = FunkinSound.load(Paths.sound('week4/Henchmen_Wipe'), 1.0, false, true, true);
-		playerHit = FunkinSound.load(Paths.sound('week4/BF_Hit_by_Passing_Light'), 1.0, false, true, true);
+		henchmenWipe = FunkinSound.load(Paths.sound('week4/Henchmen_Wipe'), 1.0, false);
+		playerHit = FunkinSound.load(Paths.sound('week4/BF_Hit_by_Passing_Light'), 1.0, false);
 
 		// Properly reset lights and collision when starting the song.
 		this.hardResetSong();
@@ -313,6 +313,7 @@ class MILFSong extends Song
 	{
 		super.onUpdate(event);
 
+		if (PlayState.instance.currentStage == null) return;
 		if (nextBFLampIndex < BOYFRIEND_LAMP_TIMES.length)
 		{
 			var boyfriend = PlayState.instance.currentStage.getBoyfriend();
