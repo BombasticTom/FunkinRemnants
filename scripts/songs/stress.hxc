@@ -887,9 +887,12 @@ class StressSong extends Song
 
       fakeBF?.visible = (gfFail) ? true : false;
 
-      gfFaceplant?.animation.play("faceplant");
-      gfFaceplant?.animation.curAnim.curFrame = 116;
-      gfFaceplant?.visible = (gfFail) ? true : false;
+      if (gfFaceplant != null)
+      {
+        gfFaceplant?.animation.play("faceplant");
+        gfFaceplant?.animation.curAnim.curFrame = 116;
+        gfFaceplant?.visible = (gfFail) ? true : false;
+      }
 
       PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
       PlayState.instance.currentStage.getGirlfriend().visible = true;
