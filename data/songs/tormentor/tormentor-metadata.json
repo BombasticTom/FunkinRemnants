@@ -23,7 +23,7 @@
       "player": "bfmind-remnants",
       "girlfriend": "",
       "opponent": "soul-remnants",
-      "instrumental": "",
+      "instrumental": "remnants",
       "altInstrumentals": [      ],
       "opponentVocals": [
         "soul-remnants"
@@ -38,8 +38,8 @@
       "hard": 8
     },
     "previewStart": 0,
-    "previewEnd": 0,
-    "album": "remnants-general"
+    "previewEnd": 15000,
+    "album": "remnants-corruption"
   },
   "generatedBy": "Friday Night Funkin' - v0.7.3",
   "timeFormat": "ms",
