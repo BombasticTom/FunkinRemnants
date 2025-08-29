@@ -5,13 +5,19 @@ import funkin.play.PauseSubState;
 import funkin.play.character.MultiSparrowCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.GameOverSubState;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 
-class BoyfriendChristmasRemnantsCharacter extends MultiSparrowCharacter {
-	function new() {
+class BoyfriendChristmasRemnantsCharacter extends MultiSparrowCharacter
+{
+	function new()
+	{
 		super('bf-christmas-remnants');
 	}
 
-	function onCreate(event:ScriptEvent) {
+	function onCreate(event:ScriptEvent)
+	{
 		super.onCreate(event);
 
 		// Are we even getting a gameover theme or nah?
@@ -42,4 +48,51 @@ class BoyfriendChristmasRemnantsCharacter extends MultiSparrowCharacter {
 		}
 	}
 	*/
+
+	var loseSprite:FunkinSprite;
+
+	/**
+	* Initialize and cache sprites used for the death animation,
+	* for use later.
+	*/
+	function createDeathSprites()
+	{
+		loseSprite = FunkinSprite.createSparrow(650, -50, "gameover/loseText");
+		loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
+		loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
+		loseSprite.animation.onFinish.add(function(name:String) {
+			loseSprite.animation.play('idle', true);
+		});
+
+		// week 5 shader
+		if (shader != null)
+		{
+			loseSprite.shader = shader;
+		}
+
+		loseSprite.zIndex = this.zIndex + 5;
+		loseSprite.visible = false;
+	}
+
+	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+	{
+		if (name == "firstDeath")
+		{
+			// Standard death animation.
+			createDeathSprites();
+
+			GameOverSubState.instance.add(loseSprite);
+		}
+		else if (name == 'deathLoop')
+		{
+			loseSprite.visible = true;
+			loseSprite.animation.play('fall', true);
+		}
+		else if (name == "deathConfirm")
+		{
+			FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+		}
+
+		super.playAnimation(name, restart, ignoreOther);
+	}
 }

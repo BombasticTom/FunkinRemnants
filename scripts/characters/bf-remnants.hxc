@@ -53,7 +53,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
 		if (name == "fakeoutDeath" && !this.debug) {
 			doFakeoutDeath();
 		}
-    else if (name == "firstDeath")
+
+    if (name == "firstDeath")
     {
 			// Standard death animation.
 			createDeathSprites();
@@ -69,7 +70,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
     {
 			FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
 		}
-		else
+
+		if (name != "fakeoutDeath")
 		{
 			super.playAnimation(name, restart, ignoreOther);
 		}
@@ -99,7 +101,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter {
 	// Fartman Quotes
 	override function getDeathQuote():Null<String>
 	{
-		switch (PlayState.instance.currentStage?.getDad().characterId)
+		if (PlayState.instance.currentStage == null) return;
+		switch (PlayState.instance.currentStage.getDad().characterId)
 		{
 			case "tankman-remnants":
 				var randomCensor:Array<Int> = [];

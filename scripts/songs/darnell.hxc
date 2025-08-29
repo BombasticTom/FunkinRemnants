@@ -42,21 +42,19 @@ class DarnellSong extends Song
     {
       return !Save.instance.hasBeatenSong(this.id, ['erect', 'nightmare', 'remnants']);
     }
+
     return false;
   }
 
   public function listDifficulties(variationId:String, variationIds:Array<String>, showLocked:Bool):Array<String>
   {
-    if (variationId != 'remnants')
+    if (showLocked || Save.instance.hasBeatenLevel('weekend1'))
     {
-      if (showLocked || Save.instance.hasBeatenLevel('weekend1'))
-      {
-        return super.listDifficulties(variationId, variationIds);
-      }
-
-      // Hide all difficulties if the player has not beaten the week.
-      return [];
+      return super.listDifficulties(variationId, variationIds);
     }
+
+    // Hide all difficulties if the player has not beaten the week.
+    return [];
   }
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
@@ -87,7 +85,7 @@ class DarnellSong extends Song
 
     if (!PlayStatePlaylist.isStoryMode)
     {
-      if (PlayState.instance.currentVariation != 'remnants')
+      if (PlayState.instance?.currentVariation != 'remnants' && PlayState.instance != null)
       {
         hasPlayedInGameCutscene = true;
       }

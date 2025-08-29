@@ -1,126 +1,674 @@
 {
-  "version": "1.0.0",
-  "directory": "week5",
+  "version": "1.0.2",
   "name": "Christmas Mall (Nice) [Remnants]",
-  "cameraZoom": 0.8,
   "props": [
     {
-      "name": "bgWalls",
-      "assetPath": "stages/week5Remnants/bgWalls",
-      "position": [-1000, -440],
-      "scale": [0.9, 0.9],
-      "scroll": [0.2, 0.2],
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/TopLevel",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "topLevel",
+      "position": [
+        -2914,
+        -2541
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 1
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": true,
+          "name": "snow",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "top ceiling"
+        }
+      ],
+      "assetPath": "stages/week5Remnants/CeilingWindow",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "ceilingWindow",
+      "position": [
+        -2315,
+        -3220
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "snow",
+      "zIndex": 2
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "Boppers Top"
+        }
+      ],
+      "assetPath": "stages/week5Remnants/TopBoppers",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "topBoppers",
+      "position": [
+        -600,
+        -1897
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "zIndex": 3
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/snowFalling",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "snowFalling",
+      "position": [
+        -1734,
+        -2490
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 4
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/MiddleLevel",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "middleLevel",
+      "position": [
+        -2924,
+        -1545
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 6
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "Boppers Middle 1"
+        }
+      ],
+      "assetPath": "stages/week5Remnants/MiddleBoppers1",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "middleBoppers1",
+      "position": [
+        -2234,
+        -720
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "zIndex": 8
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "Boppers Middle 2"
+        }
+      ],
+      "assetPath": "stages/week5Remnants/MiddleBoppers2",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "middleBoppers2",
+      "position": [
+        -473,
+        -833
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "zIndex": 9
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "Boppers Middle 3"
+        }
+      ],
+      "assetPath": "stages/week5Remnants/MiddleBoppers3",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "middleBoppers3",
+      "position": [
+        2454,
+        -588
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
       "zIndex": 10
     },
     {
-      "name": "upperBoppers",
-      "assetPath": "stages/week5Remnants/upperBop",
-      "position": [-240, -40],
-      "scale": [0.85, 0.85],
-      "scroll": [0.33, 0.33],
-      "danceEvery": 1,
-      "zIndex": 20,
-      "startingAnimation": "idle",
-      "animations": [
-        {
-          "name": "idle",
-          "prefix": "upperBop",
-          "frameRate": 24,
-          "flipX": false,
-          "flipY": false
-        }
-      ]
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/BottomLevel",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "bottomLevel",
+      "position": [
+        -2962,
+        -547
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 11
     },
     {
-      "name": "bgEscalator",
-      "assetPath": "stages/week5Remnants/bgEscalator",
-      "position": [-1100, -540],
-      "scale": [0.9, 0.9],
-      "scroll": [0.3, 0.3],
-      "zIndex": 30
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/MallEscalators",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "mallElevators",
+      "position": [
+        -1075,
+        -416
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 13
     },
     {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/RedCarpet",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "redCarpet",
+      "position": [
+        -930,
+        350
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 14
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/MallChristmasTree",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
       "name": "christmasTree",
-      "assetPath": "stages/week5Remnants/christmasTree",
-      "position": [370, -250],
-      "scale": [1, 1],
-      "scroll": [0.4, 0.4],
-      "zIndex": 40
+      "position": [
+        -176,
+        -1077
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 15
     },
     {
-      "name": "bottomBoppers",
-      "assetPath": "stages/week5Remnants/bottomBop",
-      "position": [-410, 100],
-      "scale": [1, 1],
-      "scroll": [0.9, 0.9],
-      "danceEvery": 1,
-      "zIndex": 50,
-      "startingAnimation": "idle",
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/SnowGround",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "snowGround",
+      "position": [
+        -1060,
+        591
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 16
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/CandyCane",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "candyCane",
+      "position": [
+        -1114,
+        251
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 17
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/RolusStand",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "rolusStand",
+      "position": [
+        1765,
+        -34
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 18
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
       "animations": [
         {
-          "name": "idle",
-          "prefix": "bottomBop",
-          "frameRate": 24,
+          "assetPath": null,
           "flipX": false,
-          "flipY": false
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "Phanto Bop"
         }
-      ]
+      ],
+      "assetPath": "stages/week5Remnants/PhantoBopper",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "phantoBopper",
+      "position": [
+        1420,
+        335
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "zIndex": 19
     },
     {
-      "name": "fog",
-      "assetPath": "stages/week5Remnants/white",
-      "position": [-1000, 100],
-      "scale": [0.9, 0.9],
-      "scroll": [0.85, 0.85],
-      "zIndex": 49
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "spg boppin"
+        }
+      ],
+      "assetPath": "stages/week5Remnants/SPG64Bopper",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "spgBop",
+      "position": [
+        2310,
+        129
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "zIndex": 20
     },
     {
-      "name": "fgSnow",
-      "assetPath": "stages/week5Remnants/fgSnow",
-      "position": [-1150, 680],
-      "scale": [1, 1],
-      "scroll": [1, 1],
-      "zIndex": 60
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "These guys"
+        }
+      ],
+      "assetPath": "stages/week5Remnants/FrenchieHankBoppers",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "frenchieHankBop",
+      "position": [
+        -1874,
+        404
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "idle",
+      "zIndex": 21
     },
     {
-      "name": "snowUnder",
-      "assetPath": "#F3F4F5",
-      "position": [-1200, 800],
-      "scale": [5400, 3000],
-      "scroll": [1, 1],
-      "zIndex": 59
-    },
-    {
-      "name": "santa",
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [          ],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [
+            0,
+            0
+          ],
+          "prefix": "santa idle in fear"
+        }
+      ],
       "assetPath": "stages/week5Remnants/santa",
-      "position": [-840, 150],
-      "scale": [1, 1],
-      "scroll": [1, 1],
+      "blend": "",
+      "color": "#FFFFFF",
       "danceEvery": 1,
-      "zIndex": 210,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "santa",
+      "position": [
+        -948,
+        117
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
       "startingAnimation": "idle",
-      "animations": [
-        {
-          "name": "idle",
-          "prefix": "santa idle in fear",
-          "frameRate": 24,
-          "flipX": false,
-          "flipY": false
-        }
-      ]
+      "zIndex": 22
     }
   ],
   "characters": {
     "bf": {
-      "zIndex": 300,
-      "position": [1177.5, 871],
-      "cameraOffsets": [-300, -200]
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        -100,
+        -350
+      ],
+      "position": [
+        1209.5,
+        878
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 300
     },
-    "gf": { "zIndex": 100, "position": [808.5, 854], "cameraOffsets": [0, 0] },
     "dad": {
-      "zIndex": 200,
-      "position": [42, 882],
-      "cameraOffsets": [150, -100]
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        0,
+        -150
+      ],
+      "position": [
+        -55,
+        875
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 200
+    },
+    "gf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        0,
+        0
+      ],
+      "position": [
+        621.5,
+        794
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 100
     }
-  }
+  },
+  "cameraZoom": 0.40,
+  "directory": "week5"
 }
