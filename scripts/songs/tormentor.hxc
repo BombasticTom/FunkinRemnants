@@ -1,0 +1,51 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.ui.options.PreferencesMenu;
+import funkin.save.Save;
+
+class TormentorSong extends Song
+{
+  var hasPlayedCutscene:Bool;
+  var black:FunkinSprite;
+
+  public function new()
+  {
+    super('tormentor');
+  }
+
+function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+    if (event.beat == 0)
+    {
+      black = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
+      black.cameras = [PlayState.instance.camCutscene];
+
+      black.alpha = 1.0;
+      PlayState.instance.camHUD.alpha = 0.0;
+      PlayState.instance.add(black);
+      FlxTween.tween(black, {alpha: 0.0}, 3, {ease: FlxEase.linear});
+    }
+    if (event.beat == 14)
+{
+      FlxTween.tween(black, {alpha: 1.0}, 0.1, {ease: FlxEase.linear});
+}
+    if (event.beat == 16)
+{
+      FlxTween.tween(black, {alpha: 0.0}, 0.1, {ease: FlxEase.linear});
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1.0}, 0.1, {ease: FlxEase.linear});
+}
+    if (event.beat == 320)
+{
+      FlxTween.tween(black, {alpha: 1.0}, 0.0001, {ease: FlxEase.linear});
+}
+}
+}
