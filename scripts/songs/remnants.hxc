@@ -10,7 +10,11 @@ class RemnantsSong extends Song
 
 	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
 	{
-    return !Save.instance.hasBeatenSong(this.id, null, 'default');
+		if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
+		{
+			return !Save.instance.hasBeatenSong(this.id, null, '');
+		}
+		return false;
 	}
 
 	public function listDifficulties(variationId:String, variationIds:Array<String>, showLocked:Bool):Array<String>
