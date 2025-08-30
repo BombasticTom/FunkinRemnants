@@ -123,6 +123,18 @@
       "animations": []
     },
     {
+      "zIndex": 500,
+      "danceEvery": 0,
+      "position": [8000, 290],
+      "scale": [1, 1],
+      "name": "fastTruck",
+      "animType": "sparrow",
+      "isPixel": false,
+      "scroll": [1, 1],
+      "assetPath": "stages/week4Remnants/fastTruckLol",
+      "animations": []
+    },
+    {
       "zIndex": 400,
       "position": [-2000, 150],
       "scale": [1, 1],

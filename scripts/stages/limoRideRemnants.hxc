@@ -101,6 +101,13 @@ class LimoRideRemnantsStage extends Stage
 			{time: 2, callback: () -> resetFastCar()}
 		];
 
+		truckSequenceData = [
+			{time: 1, callback: () -> doTruckHaptics = true},
+			{time: 1.4, callback: () -> doTruckHaptics = false},
+			{time: 2, callback: () -> resetFastTruck()}
+		];
+
+		resetFastTruck();
 		resetFastCar();
 	}
 
@@ -114,6 +121,10 @@ class LimoRideRemnantsStage extends Stage
 	var carSequence:Sequence;
 	var carSequenceData:Array<SequenceData>;
 	var doCarHaptics:Bool = false;
+
+	var truckSequence:Sequence;
+	var truckSequenceData:Array<SequenceData>;
+	var doTruckHaptics:Bool = false;
 
 	function onUpdate(event:ScriptEvent)
 	{
@@ -141,6 +152,11 @@ class LimoRideRemnantsStage extends Stage
 		{
 			HapticUtil.vibrate(0, 0.05, 0.25, 0);
 		}
+
+		if (doTruckHaptics)
+		{
+			HapticUtil.vibrate(0, 0.05, 0.35, 0);
+		}
 	}
 
 	function onBeatHit(event:SongTimeScriptEvent)
@@ -150,10 +166,14 @@ class LimoRideRemnantsStage extends Stage
 		super.onBeatHit(event);
 
 		if (FlxG.random.bool(10) && fastCarCanDrive)
-			fastCarDrive();
+			fastVehicleDrive(false);
+
+		if (FlxG.random.bool(5) && fastTruckCanDrive)
+			fastVehicleDrive(true);
 	}
 
 	var fastCarCanDrive:Bool = false;
+	var fastTruckCanDrive:Bool = false;
 
 	function resetFastCar():Void
 	{
@@ -171,15 +191,39 @@ class LimoRideRemnantsStage extends Stage
 		fastCarCanDrive = true;
 	}
 
-	function fastCarDrive():Void
+	function resetFastTruck():Void
+	{
+		var fastTruck = getNamedProp('fastTruck');
+
+		if (fastTruck == null) return;
+
+		// Props are inactive by default.
+		// Set active to true so position is calculated based on velocity.
+		fastTruck.active = true;
+
+		fastTruck.x = 12600;
+		fastTruck.y = FlxG.random.int(180, 290);
+		fastTruck.velocity.x = 0;
+		fastTruckCanDrive = true;
+	}
+
+	function fastVehicleDrive(isTruck:Bool):Void
 	{
 		FunkinSound.playOnce(Paths.soundRandom('carPass', 0, 1), 0.7);
 
-		var fastCar = getNamedProp('fastCar');
-		fastCar.velocity.x = (FlxG.random.int(170, 220) / FlxG.elapsed) * 3;
-		fastCarCanDrive = false;
+		var vehicle = isTruck ? getNamedProp('fastTruck') : getNamedProp('fastCar');
+		vehicle.velocity.x = isTruck ? (FlxG.random.int(-170, -220) / FlxG.elapsed) * 3 : (FlxG.random.int(170, 220) / FlxG.elapsed) * 3;
 
-		carSequence = new Sequence(carSequenceData);
+		if (isTruck)
+		{
+			fastTruckCanDrive = false;
+			truckSequence = new Sequence(truckSequenceData);
+		}
+		else
+		{
+			fastCarCanDrive = false;
+			carSequence = new Sequence(carSequenceData);
+		}
 	}
 
 	/**
@@ -213,6 +257,7 @@ class LimoRideRemnantsStage extends Stage
 	function onCountdownStart(event:ScriptEvent)
 	{
 		super.onCountdownStart(event);
+		resetFastTruck();
 		resetFastCar();
 	}
 
@@ -221,6 +266,7 @@ class LimoRideRemnantsStage extends Stage
 		super.onPause(event);
 
 		if (carSequence != null) carSequence.running = false;
+		if (truckSequence != null) truckSequence.running = false;
 	}
 
 	override function onResume(event:ScriptEvent)
@@ -228,5 +274,6 @@ class LimoRideRemnantsStage extends Stage
 		super.onResume(event);
 
 		if (carSequence != null) carSequence.running = true;
+		if (truckSequence != null) truckSequence.running = true;
 	}
 }
