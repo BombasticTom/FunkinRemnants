@@ -134,9 +134,11 @@ class LimoRideRemnantsStage extends Stage
 			var lamp = getNamedProp('bgLight' + i);
 			lamp.active = true;
 			lamp.velocity.x = 3000;
-			if (lamp.x > 2000) {
+			if (lamp.x > 2000)
+			{
 				lamp.x = -1000;
 			}
+
 			var pole = getNamedProp('bgPole' + i);
 			pole.x = lamp.x + 190;
 		}
@@ -165,10 +167,10 @@ class LimoRideRemnantsStage extends Stage
 		// otherwise boppers will not work.
 		super.onBeatHit(event);
 
-		if (FlxG.random.bool(10) && fastCarCanDrive)
+		if (FlxG.random.bool(10) && fastCarCanDrive && !isDeath)
 			fastVehicleDrive(false);
 
-		if (FlxG.random.bool(5) && fastTruckCanDrive)
+		if (FlxG.random.bool(5) && fastTruckCanDrive && !isDeath)
 			fastVehicleDrive(true);
 	}
 
@@ -209,7 +211,8 @@ class LimoRideRemnantsStage extends Stage
 
 	function fastVehicleDrive(isTruck:Bool):Void
 	{
-		FunkinSound.playOnce(Paths.soundRandom('carPass', 0, 1), 0.7);
+		var vehicleSound:String = isTruck ? 'week4/truckPass' : 'carPass';
+		FunkinSound.playOnce(Paths.soundRandom(vehicleSound, 0, 1), 0.7);
 
 		var vehicle = isTruck ? getNamedProp('fastTruck') : getNamedProp('fastCar');
 		vehicle.velocity.x = isTruck ? (FlxG.random.int(-170, -220) / FlxG.elapsed) * 3 : (FlxG.random.int(170, 220) / FlxG.elapsed) * 3;
@@ -239,8 +242,13 @@ class LimoRideRemnantsStage extends Stage
 		results.push(Paths.sound('carPass0'));
 		results.push(Paths.sound('carPass1'));
 
+		results.push(Paths.sound('week4/truckPass0'));
+		results.push(Paths.sound('week4/truckPass1'));
+
 		return results;
 	}
+
+	var isDeath:Bool = false;
 
 	/**
 	 * Make sure the fast car is reset when the song restarts.
@@ -248,7 +256,21 @@ class LimoRideRemnantsStage extends Stage
 	function onSongRetry(event:ScriptEvent)
 	{
 		super.onSongRetry(event);
+
+		resetFastTruck();
 		resetFastCar();
+
+		isDeath = false;
+	}
+
+	override function onGameOver(event:ScriptEvent):Void
+	{
+		super.onGameOver(event);
+
+		resetFastTruck();
+		resetFastCar();
+
+		isDeath = true;
 	}
 
 	/**
@@ -257,8 +279,11 @@ class LimoRideRemnantsStage extends Stage
 	function onCountdownStart(event:ScriptEvent)
 	{
 		super.onCountdownStart(event);
+
 		resetFastTruck();
 		resetFastCar();
+
+		isDeath = false;
 	}
 
 	override function onPause(event:PauseScriptEvent)
