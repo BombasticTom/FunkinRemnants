@@ -112,31 +112,6 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [      ],
-      "assetPath": "stages/week5Remnants/snowFalling",
-      "blend": "",
-      "color": "#FFFFFF",
-      "danceEvery": 0,
-      "flipX": false,
-      "flipY": false,
-      "isPixel": false,
-      "name": "snowFalling",
-      "position": [
-        -1734,
-        -2490
-      ],
-      "scale": 1,
-      "scroll": [
-        1,
-        1
-      ],
-      "startingAnimation": "",
-      "zIndex": 4
-    },
-    {
-      "alpha": 1,
-      "angle": 0,
-      "animType": "sparrow",
-      "animations": [      ],
       "assetPath": "stages/week5Remnants/MiddleLevel",
       "blend": "",
       "color": "#FFFFFF",
@@ -155,7 +130,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 6
+      "zIndex": 4
     },
     {
       "alpha": 1,
@@ -195,7 +170,7 @@
         1
       ],
       "startingAnimation": "idle",
-      "zIndex": 8
+      "zIndex": 5
     },
     {
       "alpha": 1,
@@ -235,7 +210,7 @@
         1
       ],
       "startingAnimation": "idle",
-      "zIndex": 9
+      "zIndex": 6
     },
     {
       "alpha": 1,
@@ -275,7 +250,7 @@
         1
       ],
       "startingAnimation": "idle",
-      "zIndex": 10
+      "zIndex": 7
     },
     {
       "alpha": 1,
@@ -300,7 +275,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 11
+      "zIndex": 8
     },
     {
       "alpha": 1,
@@ -325,7 +300,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 13
+      "zIndex": 9
     },
     {
       "alpha": 1,
@@ -350,7 +325,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 14
+      "zIndex": 10
     },
     {
       "alpha": 1,
@@ -375,7 +350,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 15
+      "zIndex": 11
     },
     {
       "alpha": 1,
@@ -400,7 +375,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 16
+      "zIndex": 12
     },
     {
       "alpha": 1,
@@ -425,7 +400,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 17
+      "zIndex": 13
     },
     {
       "alpha": 1,
@@ -450,7 +425,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 18
+      "zIndex": 14
     },
     {
       "alpha": 1,
@@ -490,7 +465,7 @@
         1
       ],
       "startingAnimation": "idle",
-      "zIndex": 19
+      "zIndex": 15
     },
     {
       "alpha": 1,
@@ -530,7 +505,7 @@
         1
       ],
       "startingAnimation": "idle",
-      "zIndex": 20
+      "zIndex": 16
     },
     {
       "alpha": 1,
@@ -570,7 +545,7 @@
         1
       ],
       "startingAnimation": "idle",
-      "zIndex": 21
+      "zIndex": 17
     },
     {
       "alpha": 1,

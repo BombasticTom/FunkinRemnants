@@ -72,31 +72,6 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [      ],
-      "assetPath": "stages/week5Remnants/snowFalling",
-      "blend": "",
-      "color": "#FFFFFF",
-      "danceEvery": 0,
-      "flipX": false,
-      "flipY": false,
-      "isPixel": false,
-      "name": "snowFalling",
-      "position": [
-        -1734,
-        -2490
-      ],
-      "scale": 1,
-      "scroll": [
-        1,
-        1
-      ],
-      "startingAnimation": "",
-      "zIndex": 3
-    },
-    {
-      "alpha": 1,
-      "angle": 0,
-      "animType": "sparrow",
-      "animations": [      ],
       "assetPath": "stages/week5Remnants/evil/MiddleLevel",
       "blend": "",
       "color": "#FFFFFF",
@@ -115,7 +90,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 4
+      "zIndex": 3
     },
     {
       "alpha": 1,
@@ -140,7 +115,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 5
+      "zIndex": 4
     },
     {
       "alpha": 1,
@@ -165,7 +140,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 6
+      "zIndex": 5
     },
     {
       "alpha": 1,
@@ -190,7 +165,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 7
+      "zIndex": 6
     },
     {
       "alpha": 1,
@@ -215,7 +190,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 8
+      "zIndex": 7
     },
     {
       "alpha": 1,
@@ -240,32 +215,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 9
-    },
-    {
-      "alpha": 1,
-      "angle": 0,
-      "animType": "sparrow",
-      "animations": [      ],
-      "assetPath": "stages/week5Remnants/evil/SantaScaryDead",
-      "blend": "",
-      "color": "#FFFFFF",
-      "danceEvery": 0,
-      "flipX": false,
-      "flipY": false,
-      "isPixel": false,
-      "name": "santaDead",
-      "position": [
-        -750,
-        625
-      ],
-      "scale": 1,
-      "scroll": [
-        1,
-        1
-      ],
-      "startingAnimation": "",
-      "zIndex": 301
+      "zIndex": 8
     },
     {
       "alpha": 1,
@@ -290,7 +240,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 10
+      "zIndex": 9
     },
     {
       "alpha": 1,
@@ -315,7 +265,7 @@
         1
       ],
       "startingAnimation": "",
-      "zIndex": 11
+      "zIndex": 10
     },
     {
       "alpha": 1,
@@ -355,7 +305,7 @@
         1
       ],
       "startingAnimation": "idle",
-      "zIndex": 12
+      "zIndex": 11
     },
     {
       "alpha": 1,
@@ -395,7 +345,32 @@
         1
       ],
       "startingAnimation": "idle",
-      "zIndex": 13
+      "zIndex": 12
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "stages/week5Remnants/evil/SantaScaryDead",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "santaDead",
+      "position": [
+        -750,
+        625
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 301
     }
   ],
   "characters": {

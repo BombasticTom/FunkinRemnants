@@ -7,11 +7,11 @@ import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 
-class MallXmasRemnantsStage extends Stage
+class MallEvilRemnantsStage extends Stage
 {
   function new()
   {
-    super('mallXmasRemnants');
+    super('mallEvilRemnants');
   }
 
   var snowGroup:FlxTypedSpriteGroup;
@@ -38,6 +38,7 @@ class MallXmasRemnantsStage extends Stage
       snowFall.alpha = FlxG.random.float(0.3, 0.5);
       snowFall.y = FlxG.random.float(-2490, -2250);
       snowFall.angle = FlxG.random.float(20, 25);
+      snowFall.color = 0xFFD273B1;
       snowFall.blend = 0;
 
       switch (snow)
