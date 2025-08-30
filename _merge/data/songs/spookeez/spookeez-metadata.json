@@ -1,4 +1,3 @@
 [
-    { "op": "add", "path": "/playData/characters/altInstrumentals/-", "value": "remnants" },
     { "op": "add", "path": "/playData/songVariations/-", "value": "remnants" }
 ]

@@ -1,0 +1,98 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.PauseSubState;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.CharacterType;
+import funkin.play.GameOverSubState;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+
+class BoyfriendRemnantsChristmasCharacter extends MultiSparrowCharacter
+{
+	function new()
+	{
+		super('bf-remnants-christmas');
+	}
+
+	function onCreate(event:ScriptEvent)
+	{
+		super.onCreate(event);
+
+		// Are we even getting a gameover theme or nah?
+		// GameOverSubState.musicSuffix = '-remnants';
+		// GameOverSubState.blueBallSuffix = '-remnants';
+		PauseSubState.musicSuffix = '-remnants';
+	}
+
+	/*
+	// Censor Notes for Jolly Remnants BF?
+	function onNoteHit(event:HitNoteScriptEvent)
+	{
+		if (event.eventCanceled) {
+			// onNoteHit event was cancelled by the gameplay module.
+			return;
+		}
+
+		if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF) {
+			// Override the hit note animation.
+			switch(event.note.kind) {
+				case "censor":
+					holdTimer = 0;
+					this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
+					return;
+				default:
+					super.onNoteHit(event);
+			}
+		}
+	}
+	*/
+
+	var loseSprite:FunkinSprite;
+
+	/**
+	* Initialize and cache sprites used for the death animation,
+	* for use later.
+	*/
+	function createDeathSprites()
+	{
+		loseSprite = FunkinSprite.createSparrow(650, -50, "gameover/loseText");
+		loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
+		loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
+		loseSprite.animation.onFinish.add(function(name:String) {
+			loseSprite.animation.play('idle', true);
+		});
+
+		// week 5 shader
+		if (shader != null)
+		{
+			loseSprite.shader = shader;
+		}
+
+		loseSprite.zIndex = this.zIndex + 5;
+		loseSprite.visible = false;
+	}
+
+	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+	{
+		if (name == "firstDeath")
+		{
+			// Standard death animation.
+			createDeathSprites();
+
+			GameOverSubState.instance.add(loseSprite);
+		}
+		else if (name == 'deathLoop')
+		{
+			loseSprite.visible = true;
+			loseSprite.animation.play('fall', true);
+		}
+		else if (name == "deathConfirm")
+		{
+			FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+		}
+
+		super.playAnimation(name, restart, ignoreOther);
+	}
+}

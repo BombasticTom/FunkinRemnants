@@ -19,8 +19,8 @@
       "hard"
     ],
     "characters": {
-      "player": "bf-car-remnants",
-      "girlfriend": "gf-car-remnants",
+      "player": "bf-remnants-car",
+      "girlfriend": "gf-remnants-car",
       "opponent": "mom-car-remnants",
       "instrumental": "remnants",
       "altInstrumentals": [      ],

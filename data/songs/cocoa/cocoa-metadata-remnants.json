@@ -6,8 +6,8 @@
   "playData": {
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-      "player": "bf-christmas-remnants",
-      "girlfriend": "gf-christmas-remnants",
+      "player": "bf-remnants-christmas",
+      "girlfriend": "gf-remnants-christmas",
       "opponent": "parents-christmas-remnants",
       "instrumental": "remnants",
       "altInstrumentals": ["bf", ""]

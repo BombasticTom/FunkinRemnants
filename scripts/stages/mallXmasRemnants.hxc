@@ -1,0 +1,20 @@
+import funkin.play.PlayState;
+import funkin.play.stage.Stage;
+
+class MallXmasRemnantsStage extends Stage
+{
+  function new()
+  {
+    super('mallXmasRemnants');
+  }
+
+  function buildStage()
+  {
+    super.buildStage();
+
+    for (snow in 1...8)
+    {
+      var snowFall:FlxBackdrop = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    }
+  }
+}

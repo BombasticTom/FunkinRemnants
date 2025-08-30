@@ -11,9 +11,7 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": [
-      "remnants"
-    ],
+    "songVariations": [],
     "difficulties": [
       "easy",
       "normal",
