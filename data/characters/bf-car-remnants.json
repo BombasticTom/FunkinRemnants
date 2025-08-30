@@ -90,12 +90,6 @@
       "offsets": [-30, 21]
     },
     {
-      "name": "firstDeath",
-      "prefix": "BF dies",
-      "assetPath": "characters/bf-remnants",
-      "offsets": [-37, 11]
-    },
-    {
       "name": "dodge",
       "prefix": "boyfriend dodge",
       "assetPath": "characters/bf-remnants",
@@ -114,6 +108,12 @@
       "prefix": "BF hit",
       "assetPath": "characters/bf-remnants",
       "offsets": [0, 0]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "BF dies",
+      "assetPath": "characters/bf-remnants",
+      "offsets": [-37, 11]
     },
     {
       "name": "deathLoop",

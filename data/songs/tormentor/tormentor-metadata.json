@@ -2,39 +2,21 @@
   "version": "2.2.4",
   "songName": "Tormentor (Remnants Mix)",
   "artist": "FellowDesert51",
-  "divisions": 96,
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
-  },
   "playData": {
-    "songVariations": [
-      ""
-    ],
     "difficulties": [
       "easy",
       "normal",
       "hard"
     ],
     "characters": {
-      "player": "bfmind-remnants",
-      "girlfriend": "",
-      "opponent": "soul-remnants",
-      "instrumental": "",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "soul-remnants"
-      ],
-      "playerVocals": [
-        "bfmind-remnants"
-      ]
+      "player": "bf-remnants-mind",
+      "opponent": "soul-remnants"
     },
     "stage": "mindRemnants",
     "noteStyle": "corruption",
     "ratings": {
+      "easy": 4,
+      "normal": 6,
       "hard": 8
     },
     "album": "remnants-corruption",
