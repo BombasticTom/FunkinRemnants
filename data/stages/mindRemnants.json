@@ -46,8 +46,8 @@
       ],
       "scale": 1,
       "scroll": [
-        1,
-        1
+        0.8,
+        0.8
       ],
       "startingAnimation": "",
       "zIndex": 10
@@ -71,8 +71,8 @@
       ],
       "scale": 1,
       "scroll": [
-        0.9,
-        0.9
+        0.85,
+        0.85
       ],
       "startingAnimation": "",
       "zIndex": 20
@@ -80,11 +80,11 @@
     {
       "name": "Corrupted BF",
       "assetPath": "stages/soulRemnants/corrupt",
-      "position": [500, -100],
+      "position": [500, -75],
       "scale": [1.5, 1.5],
       "zIndex": 40,
       "blend": "multiply",
-      "scroll": [1, 1],
+      "scroll": [0.9, 0.9],
       "animations": [
         { "name": "idle", "prefix": "tv static", "frameRate": 24, "looped": true }
       ],
@@ -93,10 +93,10 @@
     {
        "name": "Static",
       "assetPath": "stages/soulRemnants/static",
-      "position": [-1250, -1050],
+      "position": [-1235, -1025],
       "scale": [1, 1],
       "zIndex": 50,
-      "scroll": [1, 1],
+      "scroll": [0.9, 0.9],
       "animations": [
         { "name": "idle", "prefix": "static static", "frameRate": 12, "looped": true }
       ],
@@ -116,13 +116,13 @@
       "isPixel": false,
       "name": "BGStatic",
       "position": [
-        -1050,
+        -1065,
         -600
       ],
       "scale": 1,
       "scroll": [
-        1,
-        1
+        0.9,
+        0.9
       ],
       "startingAnimation": "",
       "zIndex": 30
