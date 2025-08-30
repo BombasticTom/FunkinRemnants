@@ -3,7 +3,7 @@
   "name": "Remnants Monster (Christmas)",
   "assetPath": "characters/monsterChristmas-remnants",
   "healthIcon": {
-    "id": "monster"
+    "id": "monster-remnants"
   },
   "animations": [
     {
