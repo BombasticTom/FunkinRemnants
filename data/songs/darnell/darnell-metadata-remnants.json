@@ -2,7 +2,7 @@
   "version": "2.2.4",
   "songName": "Darnell (Remnants Mix)",
   "artist": "Loopy",
-  "charter": "RhysRJJ",
+  "charter": "RhysRJJ + Sammy The Goog",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -37,9 +37,9 @@
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 2,
-      "normal": 3,
-      "hard": 4
+      "easy": 3,
+      "normal": 4,
+      "hard": 5
     },
     "album": "remnants-general",
     "previewStart": 0,
