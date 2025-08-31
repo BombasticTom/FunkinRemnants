@@ -2,6 +2,7 @@
   "version": "2.2.4",
   "songName": "Tormentor (Remnants Mix)",
   "artist": "FellowDesert51",
+  "charter": "Plush",
   "playData": {
     "difficulties": [
       "easy",
@@ -14,11 +15,7 @@
     },
     "stage": "mindRemnants",
     "noteStyle": "corruption",
-    "ratings": {
-      "easy": 4,
-      "normal": 6,
-      "hard": 8
-    },
+    "ratings": {"easy": 4, "normal": 6, "hard": 8},
     "album": "remnants-corruption",
     "previewStart": 0,
     "previewEnd": 15000
