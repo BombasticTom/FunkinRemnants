@@ -15,7 +15,7 @@
     {
       "name": "mountains",
       "assetPath": "stages/week7Remnants/mountains2",
-      "position": [-325, 35],
+      "position": [-445, 35],
       "scale": [1.2, 1.2],
       "zIndex": 11,
       "scroll": [0.2, 0.2]
@@ -39,8 +39,8 @@
     {
       "name": "clouds2",
       "assetPath": "stages/week7Remnants/tankClouds",
-      "scale": [1, 1],
-      "position": [0, 0],
+      "scale": [1.15, 1.15],
+      "position": [-150, -125],
       "zIndex": 10,
       "scroll": [0, 0],
       "alpha": 0.5
