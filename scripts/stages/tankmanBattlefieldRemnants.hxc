@@ -22,67 +22,65 @@ class TankmanBattlefieldRemnantsStage extends Stage
 	}
 
 	var clouds:FlxTiledSprite;
-	var parachuteGroup:FlxTypedSpriteGroup;
+	var tankParachute1:FlxBackdrop;
+	var tankParachute2:FlxBackdrop;
+	var tankParachute3:FlxBackdrop;
+	var boxParachute1:FlxBackdrop;
+	var boxParachute2:FlxBackdrop;
 
 	override function buildStage()
 	{
 		super.buildStage();
 
-		parachuteGroup = null;
-		if (parachuteGroup == null)
-		{
-			parachuteGroup = new FlxTypedSpriteGroup();
-			parachuteGroup.zIndex = 39;
+		tankParachute1 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall1'), 0x10, 0, 5000);
+		tankParachute1.scrollFactor.set(0.40, 0.35);
+		tankParachute1.setPosition(583, -215);
+		tankParachute1.velocity.y = 150;
+		tankParachute1.zIndex = 39;
+		tankParachute1.angle = -5;
 
-			PlayState.instance.currentStage.add(parachuteGroup);
-		}
+		FlxTween.tween(tankParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-		for (tank in 1...4)
-		{
-			var tankParachute:FlxBackdrop = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall' + tank), 0x10, 0, 5000);
-			tankParachute.angle = -5;
+		tankParachute2 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall2'), 0x10, 0, 5000);
+		tankParachute2.scrollFactor.set(0.35, 0.35);
+		tankParachute2.setPosition(989, -110);
+		tankParachute2.velocity.y = 125;
+		tankParachute2.zIndex = 39;
+		tankParachute2.angle = -5;
 
-			switch (tank)
-			{
-				case 1:
-					tankParachute.velocity.y = 150;
-					tankParachute.scrollFactor.set(0.40, 0.35);
-					tankParachute.setPosition(583, -215);
-				case 2:
-					tankParachute.velocity.y = 125;
-					tankParachute.scrollFactor.set(0.35, 0.35);
-					tankParachute.setPosition(989, -110);
-				case 3:
-					tankParachute.velocity.y = 125;
-					tankParachute.scrollFactor.set(0.35, 0.35);
-					tankParachute.setPosition(1238, -104);
-			}
+		FlxTween.tween(tankParachute2, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-			FlxTween.tween(tankParachute, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
-			parachuteGroup.add(tankParachute);
-		}
+		tankParachute3 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall3'), 0x10, 0, 5000);
+		tankParachute3.scrollFactor.set(0.35, 0.35);
+		tankParachute3.setPosition(1238, -104);
+		tankParachute3.velocity.y = 125;
+		tankParachute3.zIndex = 39;
+		tankParachute3.angle = -5;
 
-		for (box in 1...3)
-		{
-			var boxParachute:FlxBackdrop = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall' + box), 0x10, 0, 5000);
+		FlxTween.tween(tankParachute3, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-			switch (box)
-			{
-				case 1:
-					boxParachute.velocity.y = 100;
-					boxParachute.scrollFactor.set(0.20, 0.35);
-					FlxTween.tween(boxParachute, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
-					boxParachute.setPosition(-79, -148);
-					boxParachute.angle = -5;
-				case 2:
-					boxParachute.velocity.y = 125;
-					boxParachute.scrollFactor.set(0.25, 0.35);
-					FlxTween.tween(boxParachute, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
-					boxParachute.setPosition(282, -27);
-			}
+		boxParachute1 = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall1'), 0x10, 0, 5000);
+		boxParachute1.scrollFactor.set(0.20, 0.35);
+		boxParachute1.setPosition(-79, -148);
+		boxParachute1.velocity.y = 125;
+		boxParachute1.zIndex = 39;
+		boxParachute1.angle = -5;
 
-			parachuteGroup.add(boxParachute);
-		}
+		FlxTween.tween(boxParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+
+		boxParachute2 = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall2'), 0x10, 0, 5000);
+		boxParachute2.scrollFactor.set(0.25, 0.35);
+		boxParachute2.setPosition(282, -27);
+		boxParachute2.velocity.y = 125;
+		boxParachute2.zIndex = 39;
+
+		FlxTween.tween(boxParachute2, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
+
+		PlayState.instance.currentStage.add(tankParachute1);
+		PlayState.instance.currentStage.add(tankParachute2);
+		PlayState.instance.currentStage.add(tankParachute3);
+		PlayState.instance.currentStage.add(boxParachute1);
+		PlayState.instance.currentStage.add(boxParachute2);
 
 		clouds = new FlxTiledSprite(Paths.image('stages/week7Remnants/tankClouds'), 3200, 235, true, false);
 		clouds.setPosition(-1100, 20);
@@ -107,19 +105,23 @@ class TankmanBattlefieldRemnantsStage extends Stage
 	public override function onPause(event:PauseScriptEvent)
 	{
 		super.onPause(event);
-		for (parachute in 0...parachuteGroup.members.length)
-		{
-			FlxTweenUtil.pauseTweensOf(parachuteGroup.members[parachute]);
-		}
+
+		FlxTweenUtil.pauseTweensOf(tankParachute1);
+		FlxTweenUtil.pauseTweensOf(tankParachute2);
+		FlxTweenUtil.pauseTweensOf(tankParachute3);
+		FlxTweenUtil.pauseTweensOf(boxParachute1);
+		FlxTweenUtil.pauseTweensOf(boxParachute2);
 	}
 
 	public override function onResume(event:ScriptEvent)
 	{
 		super.onResume(event);
-		for (parachute in 0...parachuteGroup.members.length)
-		{
-			FlxTweenUtil.resumeTweensOf(parachuteGroup.members[parachute]);
-		}
+
+		FlxTweenUtil.resumeTweensOf(tankParachute1);
+		FlxTweenUtil.resumeTweensOf(tankParachute2);
+		FlxTweenUtil.resumeTweensOf(tankParachute3);
+		FlxTweenUtil.resumeTweensOf(boxParachute1);
+		FlxTweenUtil.resumeTweensOf(boxParachute2);
 	}
 
 	var tankMoving:Bool = false;

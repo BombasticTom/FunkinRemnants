@@ -24,14 +24,15 @@ class MallEvilRemnantsStage extends Stage
     if (snowGroup == null)
     {
       snowGroup = new FlxTypedSpriteGroup();
+      snowGroup.scrollFactor.set(1.5, 1.5);
       snowGroup.zIndex = 401;
+
       PlayState.instance.currentStage.add(snowGroup);
     }
 
     for (snow in 1...8)
     {
       var snowFall:FlxBackdrop = new FlxBackdrop(Paths.image('stages/week5Remnants/Snow' + snow), 0x11, 800, FlxG.random.float(750, 1000));
-      snowFall.scrollFactor.set(FlxG.random.float(1.4, 1.5), FlxG.random.float(1.4, 1.5));
       snowFall.velocity.x = FlxG.random.float(-250 + snow, 225 + snow);
       snowFall.velocity.y = FlxG.random.float(750 + snow, 1450 + snow);
       snowFall.alpha = FlxG.random.float(0.3, 0.5);
