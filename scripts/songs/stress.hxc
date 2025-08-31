@@ -213,6 +213,18 @@ class StressSong extends Song
 
     PlayState.instance.camHUD.visible = false;
 
+    PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
+
+    // Hiding the falling tankmans and boxes.
+    for (stageProp in PlayState.instance.currentStage.members)
+    {
+      if (stageProp?.zIndex == 39)
+      {
+        stageProp.visible = false;
+        stageProp.active = false;
+      }
+    }
+
     // Disable the tank so it doesn't looks weird due to camera movement.
     var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
     tankRolling?.active = false;
@@ -924,6 +936,15 @@ class StressSong extends Song
         PlayState.instance.currentStage.remove(gfCutscene);
         gfCutscene.destroy();
         gfCutscene = null;
+      }
+
+      for (stageProp in PlayState.instance.currentStage.members)
+      {
+        if (stageProp?.zIndex == 39)
+        {
+          stageProp.visible = true;
+          stageProp.active = true;
+        }
       }
 
       var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');

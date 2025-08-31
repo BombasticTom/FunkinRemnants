@@ -192,6 +192,16 @@ class GunsSong extends Song
     PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
     PlayState.instance.currentStage.getGirlfriend().animation.curAnim.curFrame = 14;
 
+    // Hiding the falling tankmans and boxes.
+    for (stageProp in PlayState.instance.currentStage.members)
+    {
+      if (stageProp?.zIndex == 39)
+      {
+        stageProp.visible = false;
+        stageProp.active = false;
+      }
+    }
+
     // Disable the tank so it doesn't looks weird due to camera movement.
     var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
     tankRolling?.active = false;
@@ -343,6 +353,15 @@ class GunsSong extends Song
         tankmanCutscene = null;
       }
 
+      for (stageProp in PlayState.instance.currentStage.members)
+      {
+        if (stageProp?.zIndex == 39)
+        {
+          stageProp.visible = true;
+          stageProp.active = true;
+        }
+      }
+
       var tankRolling = PlayState.instance.currentStage.getNamedProp('tankRolling');
       tankRolling?.active = true;
       tankRolling?.visible = true;
@@ -351,8 +370,7 @@ class GunsSong extends Song
       tankRollingExtra?.active = true;
       tankRollingExtra?.visible = true;
 
-      tankTalk?.stop();
-      if (pressedSkip) tankTalk2?.stop();
+      if (pressedSkip) tankTalk?.stop();
 
       skipText?.visible = false;
       remnantsTimerManager?.clear();

@@ -144,11 +144,11 @@ class LimoRideRemnantsStage extends Stage
 		}
 
 		_timer += event.elapsed;
-		mist1.y = 100 + (Math.sin(_timer) * 200);
-		mist2.y = 0 + (Math.sin(_timer * 0.8) * 100);
-		mist3.y = -20 + (Math.sin(_timer * 0.5) * 200);
-		mist4.y = -180 + (Math.sin(_timer * 0.4) * 300);
-		mist5.y = -450 + (Math.sin(_timer * 0.2) * 150);
+		mist1.y = 200 + (Math.sin(_timer) * 200);
+		mist2.y = 100 + (Math.sin(_timer * 0.8) * 100);
+		mist3.y = 120 + (Math.sin(_timer * 0.5) * 200);
+		mist4.y = -80 + (Math.sin(_timer * 0.4) * 300);
+		mist5.y = -350 + (Math.sin(_timer * 0.2) * 150);
 
 		if (doCarHaptics)
 		{
