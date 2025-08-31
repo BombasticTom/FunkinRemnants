@@ -21,8 +21,8 @@
       ],
       "scale": 1,
       "scroll": [
-        1,
-        1
+        0.85,
+        0.85
       ],
       "startingAnimation": "",
       "zIndex": 1
@@ -61,8 +61,8 @@
       ],
       "scale": 1,
       "scroll": [
-        1,
-        1
+        0.85,
+        0.85
       ],
       "startingAnimation": "snow",
       "zIndex": 2
@@ -86,8 +86,8 @@
       ],
       "scale": 1,
       "scroll": [
-        1,
-        1
+        0.9,
+        0.9
       ],
       "startingAnimation": "",
       "zIndex": 3
@@ -111,8 +111,8 @@
       ],
       "scale": 1,
       "scroll": [
-        1,
-        1
+        0.98,
+        0.98
       ],
       "startingAnimation": "",
       "zIndex": 4
@@ -136,8 +136,8 @@
       ],
       "scale": 1,
       "scroll": [
-        1,
-        1
+        0.98,
+        0.98
       ],
       "startingAnimation": "",
       "zIndex": 5
