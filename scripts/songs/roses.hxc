@@ -130,7 +130,7 @@ class RosesSong extends Song
     // otherwise boppers will not work.
     super.onBeatHit(event);
 
-    if (event.beat == 180 && PlayStatePlaylist.isStoryMode)
+    if (event.beat == 192)
     {
       trace('Hit end of song! Starting outro.');
 
@@ -141,7 +141,7 @@ class RosesSong extends Song
 
       red.alpha = 0.0;
       FlxTween.tween(PlayState.instance.camHUD, {alpha: 0.0}, 1.5, {ease: FlxEase.linear});
-      FlxTween.tween(red, {alpha: 1.0}, 2.0, {ease: FlxEase.linear});
+      FlxTween.tween(red, {alpha: 1.0}, 1.5, {ease: FlxEase.linear});
       PlayState.instance.add(red);
     }
   }
