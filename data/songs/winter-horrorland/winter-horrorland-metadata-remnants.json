@@ -3,6 +3,14 @@
   "songName": "Winter Horrorland (Remnants Mix)",
   "artist": "Guh",
   "charter": "Guh",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
     "songVariations": [    ],
     "difficulties": [
@@ -14,7 +22,14 @@
       "player": "bf-remnants-christmas",
       "girlfriend": "gf-remnants-christmas",
       "opponent": "monster-remnants-christmas",
-      "instrumental": "remnants"
+      "instrumental": "remnants",
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "monster-remnants-christmas"
+      ],
+      "playerVocals": [
+        "bf-remnants-christmas"
+      ]
     },
     "stage": "mallEvilRemnants",
     "noteStyle": "funkin",

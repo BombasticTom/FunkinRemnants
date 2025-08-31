@@ -3,7 +3,16 @@
   "songName": "Tormentor (Remnants Mix)",
   "artist": "FellowDesert51",
   "charter": "Plush",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
+    "songVariations": [    ],
     "difficulties": [
       "easy",
       "normal",
@@ -11,11 +20,24 @@
     ],
     "characters": {
       "player": "bf-remnants-mind",
-      "opponent": "soul-remnants"
+      "girlfriend": "",
+      "opponent": "soul-remnants",
+      "instrumental": "",
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "soul-remnants"
+      ],
+      "playerVocals": [
+        "bf-remnants-mind"
+      ]
     },
     "stage": "mindRemnants",
     "noteStyle": "corruption",
-    "ratings": {"easy": 4, "normal": 6, "hard": 8},
+    "ratings": {
+      "easy": 4,
+      "normal": 6,
+      "hard": 8
+    },
     "album": "remnants-corruption",
     "previewStart": 0,
     "previewEnd": 15000
