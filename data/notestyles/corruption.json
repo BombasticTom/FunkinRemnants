@@ -60,14 +60,14 @@
           { "prefix": "note impact 2 green0" }
         ],
         "downSplashes": [
-          { "prefix": "note impact 1  blue0" },
+          { "prefix": "note impact 1 blue0" },
           { "prefix": "note impact 2 blue0" }
         ]
       }
     },
     "holdNoteCover": {
       "assetPath": "",
-      "offsets": [0, 0],
+      "offsets": [63, 85],
       "data": {
         "enabled": true,
         "left": {
@@ -98,13 +98,13 @@
     },
     "countdownThree": {
       "data": {
-        "audioPath": "shared:gameplay/countdown/funkin/introTHREE"
+        "audioPath": "shared:gameplay/countdown/corruption/introTHREE"
       },
       "assetPath": null
     },
     "countdownTwo": {
       "data": {
-        "audioPath": "shared:gameplay/countdown/funkin/introTWO"
+        "audioPath": "shared:gameplay/countdown/corruption/introTWO"
       },
       "assetPath": "shared:ui/countdown/corruption/ready",
       "scale": 1.0,
@@ -112,7 +112,7 @@
     },
     "countdownOne": {
       "data": {
-        "audioPath": "shared:gameplay/countdown/funkin/introONE"
+        "audioPath": "shared:gameplay/countdown/corruption/introONE"
       },
       "assetPath": "shared:ui/countdown/corruption/set",
       "scale": 1.0,
@@ -120,7 +120,7 @@
     },
     "countdownGo": {
       "data": {
-        "audioPath": "shared:gameplay/countdown/funkin/introGO"
+        "audioPath": "shared:gameplay/countdown/corruption/introGO"
       },
       "assetPath": "shared:ui/countdown/corruption/go",
       "scale": 1.0,
