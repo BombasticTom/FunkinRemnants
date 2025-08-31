@@ -7,7 +7,7 @@
 	],
 	"danceEvery": 2,
 	"scale": 1,
-	"name": "Remnants Soul",
+	"name": "Remnants Soul BF",
 	"cameraOffsets": [
 		0,
 		50
@@ -24,7 +24,7 @@
 	"animations": [
 		{
 			"frameIndices": [],
-			"prefix": "Idle",
+			"prefix": "SoulBF Idle Dance",
 			"offsets": [
 				-4,
 				7
@@ -35,7 +35,7 @@
 		},
 		{
 			"frameIndices": [],
-			"prefix": "Left",
+			"prefix": "SoulBF Left Pose",
 			"offsets": [
 				-94,
 				-16
@@ -46,7 +46,7 @@
 		},
 		{
 			"frameIndices": [],
-			"prefix": "Down",
+			"prefix": "SoulBF Down Pose",
 			"offsets": [
 				-96,
 				-14
@@ -57,7 +57,7 @@
 		},
 		{
 			"frameIndices": [],
-			"prefix": "Up",
+			"prefix": "SoulBF Up Pose",
 			"offsets": [
 				-79,
 				48
@@ -68,7 +68,7 @@
 		},
 		{
 			"frameIndices": [],
-			"prefix": "Right",
+			"prefix": "SoulBF Right Pose",
 			"offsets": [
 				-67,
 				-22
