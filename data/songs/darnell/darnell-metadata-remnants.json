@@ -3,14 +3,36 @@
   "songName": "Darnell (Remnants Mix)",
   "artist": "Loopy",
   "charter": "RhysRJJ",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
-    "difficulties": ["easy", "normal", "hard"],
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
     "characters": {
       "player": "pico-playable-remnants",
       "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": ["bf", ""]
+      "altInstrumentals": [
+        "bf",
+        ""
+      ],
+      "opponentVocals": [
+        "darnell-remnants"
+      ],
+      "playerVocals": [
+        "pico-playable-remnants"
+      ]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
@@ -23,7 +45,7 @@
     "previewStart": 0,
     "previewEnd": 14000
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "generatedBy": "Friday Night Funkin' - v0.7.3",
   "timeFormat": "ms",
   "timeChanges": [
     {

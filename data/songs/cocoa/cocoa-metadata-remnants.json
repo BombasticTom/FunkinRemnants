@@ -3,14 +3,36 @@
   "songName": "Cocoa (Remnants Mix)",
   "artist": "Ame",
   "charter": "skibidi toilet",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
-    "difficulties": ["easy", "normal", "hard"],
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
     "characters": {
       "player": "bf-remnants-christmas",
       "girlfriend": "gf-remnants-christmas",
       "opponent": "parents-christmas-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": ["bf", ""]
+      "altInstrumentals": [
+        "bf",
+        ""
+      ],
+      "opponentVocals": [
+        "parents-christmas-remnants"
+      ],
+      "playerVocals": [
+        "bf-remnants-christmas"
+      ]
     },
     "stage": "mallXmasRemnants",
     "noteStyle": "funkin",
@@ -23,7 +45,7 @@
     "previewStart": 0,
     "previewEnd": 14000
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "generatedBy": "Friday Night Funkin' - v0.7.3",
   "timeFormat": "ms",
   "timeChanges": [
     {
