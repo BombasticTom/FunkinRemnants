@@ -2,7 +2,7 @@
   "version": "2.2.4",
   "songName": "Pico (Remnants Mix)",
   "artist": "Loopy",
-  "charter": "RhysRJJ",
+  "charter": "RhysRJJ + Sammy The Goog",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -26,14 +26,20 @@
       "altInstrumentals": [
         "pico",
         ""
+      ],
+      "opponentVocals": [
+        "pico-remnants"
+      ],
+      "playerVocals": [
+        "bf-remnants"
       ]
     },
     "stage": "phillyTrainRemnants",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 3,
-      "normal": 4,
-      "hard": 5
+      "easy": 4,
+      "normal": 6,
+      "hard": 7
     },
     "album": "remnants-general",
     "previewStart": 0,
