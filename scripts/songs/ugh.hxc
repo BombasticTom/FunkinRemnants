@@ -24,8 +24,8 @@ class UghSong extends Song
       var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
       if (!hasBeatenPicoMix) results.remove('pico');
 
-      var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants-alt');
-			if (!hasBeatenRemnantsMix) results.remove('remnants-alt');
+      var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
+			if (!hasBeatenRemnantsMix) results.remove('remnantsalt');
     }
     return results;
   }

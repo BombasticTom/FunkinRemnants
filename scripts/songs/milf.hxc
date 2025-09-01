@@ -1,4 +1,5 @@
 import funkin.play.song.Song;
+import funkin.save.Save;
 
 class MILFSong extends Song
 {
