@@ -22,14 +22,7 @@
       "player": "bf-remnants-pixel",
       "girlfriend": "gf-remnants-pixel",
       "opponent": "senpai-angry-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "senpai-angry-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants-pixel"
-      ]
+      "instrumental": "remnants"
     },
     "stage": "schoolRemnants",
     "noteStyle": "pixel",

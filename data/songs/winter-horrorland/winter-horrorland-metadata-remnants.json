@@ -22,14 +22,7 @@
       "player": "bf-remnants-christmas",
       "girlfriend": "gf-remnants-christmas",
       "opponent": "monster-remnants-christmas",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "monster-remnants-christmas"
-      ],
-      "playerVocals": [
-        "bf-remnants-christmas"
-      ]
+      "instrumental": "remnants"
     },
     "stage": "mallEvilRemnants",
     "noteStyle": "funkin",

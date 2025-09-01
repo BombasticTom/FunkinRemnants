@@ -22,14 +22,7 @@
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "pico-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "pico-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "instrumental": "remnants"
     },
     "stage": "phillyTrainRemnants",
     "noteStyle": "funkin",

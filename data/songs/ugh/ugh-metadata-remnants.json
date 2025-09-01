@@ -22,14 +22,7 @@
       "player": "bf-remnants",
       "girlfriend": "gf-tankmen-remnants",
       "opponent": "tankman-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "tankman-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "instrumental": "remnants"
     },
     "stage": "tankmanBattlefieldRemnants",
     "noteStyle": "funkin",

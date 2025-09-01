@@ -22,14 +22,7 @@
       "player": "bf-remnants-pixel",
       "girlfriend": "gf-remnants-pixel",
       "opponent": "spirit-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "spirit-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants-pixel"
-      ]
+      "instrumental": "remnants"
     },
     "stage": "schoolEvilRemnants",
     "noteStyle": "pixel",

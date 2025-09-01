@@ -22,14 +22,7 @@
       "player": "bf-remnants-car",
       "girlfriend": "gf-remnants-car",
       "opponent": "mom-car-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "mom-car-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants-car"
-      ]
+      "instrumental": "remnants"
     },
     "stage": "limoRideRemnants",
     "noteStyle": "funkin",

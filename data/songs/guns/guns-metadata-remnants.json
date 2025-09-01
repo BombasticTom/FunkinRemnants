@@ -22,11 +22,9 @@
       "girlfriend": "gf-tankmen-remnants",
       "opponent": "tankman-remnants",
       "instrumental": "remnants",
-      "opponentVocals": [
-        "tankman-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
+      "altInstrumentals": [
+        "pico",
+        ""
       ]
     },
     "stage": "tankmanBattlefieldRemnants",

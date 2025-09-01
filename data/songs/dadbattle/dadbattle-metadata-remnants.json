@@ -22,14 +22,7 @@
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "dad-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "dad-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "instrumental": "remnants"
     },
     "stage": "mainStageRemnants",
     "noteStyle": "funkin",

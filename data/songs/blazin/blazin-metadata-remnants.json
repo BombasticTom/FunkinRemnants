@@ -22,8 +22,7 @@
       "player": "pico-remnants-blazin",
       "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants-blazin",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ]
+      "instrumental": "remnants"
     },
     "stage": "phillyBlazinRemnants",
     "noteStyle": "funkin",

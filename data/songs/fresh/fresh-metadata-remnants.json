@@ -9,8 +9,7 @@
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "dad-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": []
+      "instrumental": "remnants"
     },
     "stage": "mainStageRemnants",
     "noteStyle": "funkin",

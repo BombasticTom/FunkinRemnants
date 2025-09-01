@@ -24,14 +24,8 @@
       "opponent": "parents-christmas-remnants",
       "instrumental": "remnants",
       "altInstrumentals": [
-        "bf",
+        "pico",
         ""
-      ],
-      "opponentVocals": [
-        "parents-christmas-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants-christmas"
       ]
     },
     "stage": "mallXmasRemnants",

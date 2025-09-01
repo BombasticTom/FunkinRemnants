@@ -19,7 +19,7 @@
       "hard"
     ],
     "characters": {
-      "player": "bf-holding-gf-remnants",
+      "player": "bf-remnants-holding-gf",
       "girlfriend": "pico-speaker-remnants",
       "opponent": "tankman-remnants",
       "instrumental": "remnants",
@@ -28,7 +28,7 @@
         "tankman-remnants"
       ],
       "playerVocals": [
-        "bf-holding-gf-remnants"
+        "bf-remnants-holding-gf"
       ]
     },
     "stage": "tankmanBattlefieldRemnants",

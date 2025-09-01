@@ -1,0 +1,85 @@
+import flixel.FlxG;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.save.Save;
+
+/**
+ * Apply middlescroll to the song.
+ */
+class BlazinRemnantsMixSong extends Song
+{
+  public function new()
+  {
+    super('blazin',
+      {
+        variation: 'remnants'
+      });
+
+    this.hasHidden = false;
+    this.hasPlayedCutscene = false;
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    this.hasHidden = false;
+    this.hasPlayedCutscene = false;
+  }
+
+  function onDestroy(event:ScriptEvent):Void
+  {
+    super.onDestroy(event);
+
+    this.hasHidden = false;
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent):Void
+  {
+    super.onNoteHit(event);
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    return false;
+	}
+
+  var hasHidden = false;
+  var hasPlayedCutscene:Bool = false;
+
+  function onUpdate(event:ScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (!this.hasHidden)
+    {
+      this.hasHidden = true;
+      hideOpponentStrumline();
+      centerPlayerStrumline();
+    }
+  }
+
+  function hideOpponentStrumline()
+  {
+    var opponentStrumline:FlxSprite = PlayState.instance.opponentStrumline;
+    if (opponentStrumline != null)
+    {
+      for (arrow in opponentStrumline.members)
+      {
+        arrow.visible = false;
+      }
+    }
+  }
+
+  function centerPlayerStrumline()
+  {
+    // This is a song gimmick we are never making middlescroll an option.
+
+    var playerStrumline:FlxSprite = PlayState.instance.playerStrumline;
+    if (playerStrumline != null)
+    {
+      playerStrumline.x = FlxG.width / 2 - playerStrumline.width / 2;
+    }
+  }
+}

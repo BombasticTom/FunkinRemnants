@@ -22,14 +22,7 @@
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "spooky-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "spooky-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "instrumental": "remnants"
     },
     "stage": "spookyMansionRemnants",
     "noteStyle": "funkin",

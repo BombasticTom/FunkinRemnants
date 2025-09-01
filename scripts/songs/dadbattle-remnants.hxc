@@ -1,0 +1,19 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+
+class DadBattleRemnantsMixSong extends Song
+{
+	public function new()
+  {
+		super('dadbattle',
+      {
+        variation: 'remnants'
+      });
+	}
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    return false;
+	}
+}

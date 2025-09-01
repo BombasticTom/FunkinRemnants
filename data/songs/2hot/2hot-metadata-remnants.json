@@ -19,7 +19,7 @@
       "hard"
     ],
     "characters": {
-      "player": "pico-playable-remnants",
+      "player": "pico-remnants-playable",
       "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants",
       "instrumental": "remnants",
@@ -30,7 +30,7 @@
         "darnell-remnants"
       ],
       "playerVocals": [
-        "pico-playable-remnants"
+        "pico-remnants-playable"
       ]
     },
     "stage": "phillyStreetsRemnants",
