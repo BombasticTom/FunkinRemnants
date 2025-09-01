@@ -22,11 +22,7 @@
       "player": "bf-remnants-christmas",
       "girlfriend": "gf-remnants-christmas",
       "opponent": "parents-christmas-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": [
-        "pico",
-        ""
-      ]
+      "instrumental": "remnants"
     },
     "stage": "mallXmasRemnants",
     "noteStyle": "funkin",

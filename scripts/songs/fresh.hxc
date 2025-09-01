@@ -1,0 +1,25 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+
+class FreshSong extends Song
+{
+  public function new()
+  {
+    super('fresh');
+  }
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
+
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+    {
+      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+      if (!hasBeatenPicoMix) results.remove('pico');
+
+      var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants-alt');
+      if (!hasBeatenRemnantsMix) results.remove('remnants-alt');
+    }
+    return results;
+  }
+}
