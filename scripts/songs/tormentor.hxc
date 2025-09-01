@@ -21,19 +21,26 @@ class TormentorSong extends Song
     super('tormentor');
   }
 
-function onBeatHit(event:ScriptEvent):Void
-  {
-    super.onBeatHit(event);
-    if (event.beat == 0)
-    {
-      black = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
+function onCreate()
+{
+      black = new FunkinSprite(-20, -20);
+      black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
       black.cameras = [PlayState.instance.camCutscene];
 
       black.alpha = 1.0;
-      PlayState.instance.camHUD.alpha = 0.0;
+      PlayState.instance.camHUD.alpha = 0;
       PlayState.instance.add(black);
-      FlxTween.tween(black, {alpha: 0.0}, 3, {ease: FlxEase.linear});
-    }
+}
+
+function onSongStart(event:ScriptEvent):Void
+{
+    super.onSongStart(event);
+    FlxTween.tween(black, {alpha: 0.0}, 3, {ease: FlxEase.linear});
+}
+
+function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
     if (event.beat == 14)
 {
       FlxTween.tween(black, {alpha: 1.0}, 0.1, {ease: FlxEase.linear});
