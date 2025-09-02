@@ -30,39 +30,20 @@ class MallXmasRemnantsStage extends Stage
       PlayState.instance.currentStage.add(snowGroup);
     }
 
-    for (snow in 1...8)
+    for (snow in 1...6)
     {
-      var snowFall:FlxBackdrop = new FlxBackdrop(Paths.image('stages/week5Remnants/Snow' + snow), 0x11, 800, FlxG.random.float(750, 1000));
-      snowFall.velocity.x = FlxG.random.float(-250 + snow, 225 + snow);
-      snowFall.velocity.y = FlxG.random.float(750 + snow, 1450 + snow);
+      var snowFall:FlxBackdrop = new FlxBackdrop(Paths.image('stages/week5Remnants/snowflakes'), 0x11, FlxG.random.int(100, 200), FlxG.random.int(100, 200));
+      snowFall.frames = Paths.getSparrowAtlas('stages/week5Remnants/snowflakes');
+      snowFall.animation.addByPrefix('snow', 'snowflake' + snow, 24, true);
+      snowFall.animation.play('snow');
+
+      snowFall.velocity.x = FlxG.random.int((200 * snow) / 2, (300 * snow) / 2);
+      snowFall.velocity.y = FlxG.random.int((200 * snow) / 2, (300 * snow) / 2);
       snowFall.alpha = FlxG.random.float(0.3, 0.5);
-      snowFall.y = FlxG.random.float(-2490, -2250);
-      snowFall.angle = FlxG.random.float(20, 25);
+      snowFall.y = FlxG.random.int(-2490, -2250);
       snowFall.blend = 0;
 
-      switch (snow)
-      {
-        case 1:
-          snowFall.x = -1734;
-        case 2:
-          snowFall.x = -974;
-        case 3:
-          snowFall.x = -228;
-        case 4:
-          snowFall.x = 521;
-        case 5:
-          snowFall.x = 760;
-        case 6:
-          snowFall.x = 1285;
-        case 7:
-          snowFall.x = 2222;
-        case 8:
-          snowFall.x = 2576;
-      }
-
-      FlxTween.tween(snowFall, {x: snowFall.x + FlxG.random.float(5, 10)}, 5, {ease: FlxEase.quadInOut, type: 4});
-      FlxTween.tween(snowFall, {angle: FlxG.random.float(-20, -25)}, 5.5, {ease: FlxEase.quadInOut, type: 4});
-
+      FlxTween.tween(snowFall, {x: FlxG.random.int((-200 * snow) / 2, (-300 * snow) / 2)}, 2, {ease: FlxEase.quadInOut, type: 4});
       snowGroup.add(snowFall);
     }
 

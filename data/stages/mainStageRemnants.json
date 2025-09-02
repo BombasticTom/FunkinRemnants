@@ -51,7 +51,7 @@
     {
       "zIndex": 50,
       "danceEvery": 0,
-      "position": [-600, -370],
+      "position": [-650, -370],
       "scale": [1.1, 1.1],
       "name": "Crowd",
       "animType": "sparrow",
