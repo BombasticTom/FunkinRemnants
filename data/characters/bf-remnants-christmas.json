@@ -10,6 +10,11 @@
   "singTime": 8.0,
   "animations": [
     {
+      "name": "hey",
+      "prefix": "BF HEY!!",
+      "offsets": [-2, 5]
+    },
+    {
       "name": "idle",
       "prefix": "BF idle dance",
       "offsets": [-5, 0]
@@ -49,25 +54,21 @@
     {
       "name": "singLEFTmiss",
       "prefix": "BF NOTE LEFT MISS",
-      "assetPath": "characters/bf-remnants",
       "offsets": [12, 24]
     },
     {
       "name": "singDOWNmiss",
       "prefix": "BF NOTE DOWN MISS",
-      "assetPath": "characters/bf-remnants",
       "offsets": [-11, -19]
     },
     {
       "name": "singUPmiss",
       "prefix": "BF NOTE UP MISS",
-      "assetPath": "characters/bf-remnants",
       "offsets": [-29, 27]
     },
     {
       "name": "singRIGHTmiss",
       "prefix": "BF NOTE RIGHT MISS",
-      "assetPath": "characters/bf-remnants",
       "offsets": [-30, 21]
     },
     {
