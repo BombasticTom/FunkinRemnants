@@ -34,7 +34,6 @@ class SenpaiPicoMixSong extends Song
   {
     var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
 
-    results.remove('default');
     if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
     {
       var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');

@@ -171,6 +171,14 @@ class BFRemnantsCard extends BackingCard
 
   override public function update(elapsed:Float):Void
   {
+    if (FlxG.state.subState.capsuleOptionsMenu != null)
+    {
+      var altInstBox = FlxG.state.subState.capsuleOptionsMenu;
+      var checkSize:Bool = (altInstBox.currentInstrumental.text.length > 14);
+      altInstBox.capsuleMenuBG.scale.y = (checkSize) ? 1.3 : 1;
+      altInstBox.capsuleMenuBG.updateHitbox();
+    }
+
     super.update(elapsed);
 
     if (FlxG.state.subState.dj != null) {
