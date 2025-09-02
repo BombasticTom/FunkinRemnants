@@ -5,36 +5,34 @@
   },
   "events": [
     {
-      "t": 2608.69565217391,
+      "t": 0,
       "e": "FocusCamera",
       "v": {
 	"x": 0,
 	"duration": 4,
 	"y": 0,
-	"ease": "CLASSIC",
-	"char": 0
+	"ease": "INSTANT",
+	"char": 2
 }
     },
     {
-      "t": 5217.39130434783,
-      "e": "FocusCamera",
+      "t": 0,
+      "e": "ZoomCamera",
       "v": {
-	"x": 0,
+	"ease": "INSTANT",
 	"duration": 4,
-	"y": 0,
-	"ease": "CLASSIC",
-	"char": 1
+	"mode": "stage",
+	"zoom": 0.73
 }
     },
     {
-      "t": 7826.08695652174,
-      "e": "FocusCamera",
+      "t": 0,
+      "e": "ZoomCamera",
       "v": {
-	"x": 0,
-	"duration": 4,
-	"y": 0,
-	"ease": "CLASSIC",
-	"char": 0
+	"ease": "linear",
+	"duration": 136,
+	"mode": "stage",
+	"zoom": 1
 }
     },
     {
@@ -45,6 +43,17 @@
 	"ease": "sineOut",
 	"zoom": 1.15,
 	"mode": "stage"
+}
+    },
+    {
+      "t": 9782.60869565217,
+      "e": "FocusCamera",
+      "v": {
+	"x": 0,
+	"duration": 6.5,
+	"y": 100,
+	"ease": "sineOut",
+	"char": 2
 }
     },
     {
@@ -5819,5 +5828,5 @@
       }
     ]
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.2"
+  "generatedBy": "Friday Night Funkin' - v0.7.4"
 }

@@ -1,8 +1,16 @@
 import funkin.play.song.Song;
+import funkin.play.PlayState;
 import funkin.save.Save;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
 
 class PhillyNiceRemnantsMixSong extends Song
 {
+  var black:FunkinSprite;
+  var fadeBlackTween:FlxTween;
+
 	public function new()
   {
 		super('philly-nice',
@@ -16,4 +24,29 @@ class PhillyNiceRemnantsMixSong extends Song
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
 	}
+
+function onCreate()
+{
+      black = new FunkinSprite(-20, -20);
+      black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+      black.cameras = [PlayState.instance.camCutscene];
+      PlayState.instance.add(black);
+}
+
+function onCountdownStart(event:ScriptEvent):Void
+{
+super.onCountdownStart(event);
+      if (fadeBlackTween != null) fadeBlackTween.cancel();
+
+      black.alpha = 0.0;
+}
+
+function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+    if (event.beat == 352)
+{
+      fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 3, {ease: FlxEase.linear});
+}
+}
 }
