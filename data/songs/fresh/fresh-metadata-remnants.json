@@ -3,8 +3,21 @@
   "songName": "Fresh (Remnants Mix)",
   "artist": "fishgarden",
   "charter": "fishgarden",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
-    "difficulties": ["easy", "normal", "hard"],
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
@@ -12,6 +25,12 @@
       "instrumental": "remnants",
       "altInstrumentals": [
         "default mix remnants cut"
+      ],
+      "opponentVocals": [
+        "dad-remnants"
+      ],
+      "playerVocals": [
+        "bf-remnants"
       ]
     },
     "stage": "mainStageRemnants",
@@ -19,13 +38,13 @@
     "ratings": {
       "easy": 1,
       "normal": 2,
-      "hard": 4
+      "hard": 5
     },
     "album": "remnants-week1",
     "previewStart": 0,
     "previewEnd": 0
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "generatedBy": "Friday Night Funkin' - v0.7.4",
   "timeFormat": "ms",
   "timeChanges": [
     {
