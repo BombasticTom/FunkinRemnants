@@ -20,11 +20,18 @@
     "characters": {
       "player": "bf",
       "girlfriend": "podium-girls",
-      "opponent": "bf-remnants-opponent"
+      "opponent": "bf-remnants-opponent",
+      "instrumental": "",
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "bf-remnants-opponent-remnants"
+      ],
+      "playerVocals": [
+        "bf-remnants"
+      ]
     },
     "stage": "sketchRemnants",
     "noteStyle": "funkin",
-    "stickerPack": "remnants-test",
     "ratings": {
       "easy": 4,
       "hard": 7,
@@ -34,7 +41,7 @@
     "previewStart": 0,
     "previewEnd": 14000
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.4",
+  "generatedBy": "Friday Night Funkin' - v0.7.4",
   "timeFormat": "ms",
   "timeChanges": [
     {

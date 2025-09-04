@@ -1,41 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-Created with Funkin Packer v0.1.3 https://neeeoo.github.io/funkin-packer/
--->
-<TextureAtlas imagePath="BFShrug.png" width="954" height="830">
-	<SubTexture name="BF shrug0000" x="537" y="2" width="415" height="429" rotated="true" frameX="-98" frameY="-0" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0001" x="537" y="2" width="415" height="429" rotated="true" frameX="-98" frameY="-0" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0002" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0003" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0004" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0005" x="2" y="416" width="437" height="412" frameX="-96" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0006" x="2" y="416" width="437" height="412" frameX="-96" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0007" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0008" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0009" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0010" x="2" y="416" width="437" height="412" frameX="-96" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0011" x="2" y="416" width="437" height="412" frameX="-96" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0012" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0013" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0014" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0015" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0016" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0017" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0018" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0019" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0020" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0021" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0022" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0023" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0024" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0025" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0026" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0027" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0028" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0029" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0030" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0031" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0032" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0033" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
-	<SubTexture name="BF shrug0034" x="2" y="2" width="533" height="412" frameX="-0" frameY="-2" frameWidth="533" frameHeight="415"/>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BFShrug.png">
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF shrug0000" x="2" y="2" width="406" height="410" frameX="-116" frameY="-4" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0001" x="2" y="2" width="406" height="410" frameX="-116" frameY="-4" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0002" x="410" y="2" width="527" height="415" frameX="0" frameY="0" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0003" x="939" y="2" width="528" height="415" frameX="0" frameY="0" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0004" x="2" y="419" width="543" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0005" x="547" y="419" width="451" height="412" frameX="-92" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0006" x="1000" y="419" width="437" height="412" frameX="-96" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0007" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0008" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0009" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0010" x="1000" y="419" width="437" height="412" frameX="-96" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0011" x="1000" y="419" width="437" height="412" frameX="-96" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0012" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0013" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0014" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0015" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0016" x="1072" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0017" x="2" y="1247" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0018" x="537" y="1247" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0019" x="1072" y="1247" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0020" x="2" y="1661" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0021" x="2" y="1661" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0022" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0023" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0024" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0025" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0026" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0027" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0028" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0029" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0030" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0031" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0032" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0033" x="2" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
+	<SubTexture name="BF shrug0034" x="537" y="833" width="533" height="412" frameX="0" frameY="-2" frameWidth="543" frameHeight="415"/>
 </TextureAtlas>
