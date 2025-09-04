@@ -1,5 +1,6 @@
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import flixel.FlxG;
+import funkin.util.HapticUtil;
 import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import funkin.play.PauseSubState;
@@ -42,7 +43,7 @@ class BoyfriendRemnantsHoldingGFCharacter extends MultiSparrowCharacter
 			loseSprite.animation.play('idle', true);
 		});
 
-		// week 5 shader
+		// week 7 shader
 		if (shader != null)
 		{
 			loseSprite.shader = shader;
@@ -74,7 +75,25 @@ class BoyfriendRemnantsHoldingGFCharacter extends MultiSparrowCharacter
 		super.playAnimation(name, restart, ignoreOther);
 	}
 
-	// Fartman Quotes
+	function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
+	{
+		super.onAnimationFrame(name, frameNumber, frameIndex);
+
+		if (!HapticUtil.hapticsAvailable) return;
+
+		// BF's mic drops.
+		if (name == 'firstDeath' && frameNumber == 27)
+		{
+			HapticUtil.vibrate(0, 0.1, 0.1, 1);
+		}
+
+		// BF's balls pulsating.
+		if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
+		{
+			HapticUtil.vibrate(0, 0.1, 0.1, 1);
+		}
+	}
+
 	override function getDeathQuote():Null<String>
 	{
 		if (PlayState.instance.currentStage == null) return;

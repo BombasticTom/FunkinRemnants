@@ -1,5 +1,6 @@
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import flixel.FlxG;
+import funkin.util.HapticUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.audio.FunkinSound;
@@ -10,12 +11,15 @@ import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
 import funkin.Preferences;
 
-class BoyfriendRemnantsCarCharacter extends MultiSparrowCharacter {
-	function new() {
+class BoyfriendRemnantsCarCharacter extends MultiSparrowCharacter
+{
+	function new()
+	{
 		super('bf-remnants-car');
 	}
 
-	function onCreate(event:ScriptEvent) {
+	function onCreate(event:ScriptEvent)
+	{
 		super.onCreate(event);
 
 		// Are we even getting a gameover theme or nah?
@@ -69,5 +73,24 @@ class BoyfriendRemnantsCarCharacter extends MultiSparrowCharacter {
 		}
 
 		super.playAnimation(name, restart, ignoreOther);
+	}
+
+	function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
+	{
+		super.onAnimationFrame(name, frameNumber, frameIndex);
+
+		if (!HapticUtil.hapticsAvailable) return;
+
+		// BF's mic drops.
+		if (name == 'firstDeath' && frameNumber == 27)
+		{
+			HapticUtil.vibrate(0, 0.1, 0.1, 1);
+		}
+
+		// BF's balls pulsating.
+		if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
+		{
+			HapticUtil.vibrate(0, 0.1, 0.1, 1);
+		}
 	}
 }
