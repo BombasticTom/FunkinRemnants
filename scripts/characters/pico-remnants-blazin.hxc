@@ -82,11 +82,11 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
         playPunchHighAnim();
 
       case "weekend-1-blockhigh":
-        playBlockAnim(event.judgement);
+        playBlockAnim();
       case "weekend-1-blocklow":
-        playBlockAnim(event.judgement);
+        playBlockAnim();
       case "weekend-1-blockspin":
-        playBlockAnim(event.judgement);
+        playBlockAnim();
 
       case "weekend-1-dodgehigh":
         playDodgeAnim();
@@ -357,27 +357,8 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
     return alternate ? '1' : '2';
   }
 
-  function playBlockAnim(?judgement:String)
+  function playBlockAnim()
   {
-    // on sick block, do a 3rd strike esque "tech" effect
-    if (judgement == 'sick')
-    {
-      var blendAnims:Array<Int> = [10, 0, 10, 0, 0, 10, 0, 0, 10, 0, 10];
-      
-      for (blendMode in 0...blendAnims.length)
-      {
-      	new FlxTimer().start(blendMode / 60, function(_) {
-      
-      		if (blendAnims[blendMode] != 10)
-      			this.color = 0xFF0000FF;
-      		else
-      			this.color = 0xFFFFFFFF;
-      
-      		this.blend = blendAnims[blendMode];
-      	});
-      }
-    }
-
     this.playAnimation('block', true, false);
     PlayState.instance.camGame.shake(0.002, 0.1);
     moveToBack();
