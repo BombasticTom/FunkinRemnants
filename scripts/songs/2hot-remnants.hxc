@@ -7,6 +7,7 @@ import funkin.play.GameOverSubState;
 import funkin.play.stage.StageProp;
 import funkin.play.song.Song;
 import funkin.play.PlayState;
+import funkin.FunkinMemory;
 import funkin.save.Save;
 
 class TwoHOTRemnantsMixSong extends Song
@@ -19,6 +20,14 @@ class TwoHOTRemnantsMixSong extends Song
       });
 
     hasPlayedCutscene = false;
+  }
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    // Precache the spraycan atlas.
+    FunkinMemory.cacheTexture(Paths.image("stages/weekEnd1Remnants/mechanics/spraycanAtlas/spritemap1", "shared"));
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
