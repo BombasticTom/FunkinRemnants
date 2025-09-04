@@ -92,6 +92,30 @@
       "offsets": [-4, -7]
     },
     {
+      "name": "ayo",
+      "prefix": "BF ayyyy",
+      "assetPath": "characters/BFHappy-remnants",
+      "offsets": [-29, 6]
+    },
+    {
+      "name": "aww",
+      "prefix": "BF awww",
+      "assetPath": "characters/BFHappy-remnants",
+      "offsets": [-2, 116]
+    },
+    {
+      "name": "turn",
+      "prefix": "BF head turn",
+      "assetPath": "characters/BFLooking-remnants",
+      "offsets": [-7, 11]
+    },
+    {
+      "name": "jump",
+      "prefix": "BF super jump",
+      "assetPath": "characters/BFJump-remnants",
+      "offsets": [8, 188]
+    },
+    {
       "name": "hit",
       "prefix": "BF hit",
       "assetPath": "characters/BOYFRIEND",
