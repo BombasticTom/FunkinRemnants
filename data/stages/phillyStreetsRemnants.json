@@ -135,7 +135,7 @@
 		{
 			"danceEvery": 0,
 			"zIndex": 800,
-			"position": [350, 608],
+			"position": [550, 608],
 			"scale": [1, 1],
 			"animType": "sparrow",
 			"name": "paper",
