@@ -128,7 +128,7 @@ class StressRemnantsMixSong extends Song
   var tankmanCutscene:ScriptedFlxAtlasSprite;
 
   var gfFaceplant:FunkinSprite;
-  var gfFail:Bool = true;
+  var gfFail:Bool = FlxG.random.bool(15);
 
   var skipText:FlxText;
   var cutsceneSkipped:Bool = false;
