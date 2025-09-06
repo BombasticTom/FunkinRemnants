@@ -23,19 +23,26 @@
     {
       "name": "cheer",
       "prefix": "GF Cheer",
-      "frameIndices": [0, 1, 2],
       "offsets": [0, 0]
     },
-{
+    {
+      "name": "combo50",
+      "prefix": "GF Cheer",
+      "offsets": [0, 0]
+    },
+    {
       "name": "sad",
       "prefix": "gf sad",
-      "frameIndices": [0, 1, 2],
       "offsets": [0, 0]
     },
-{
+    {
+      "name": "drop70",
+      "prefix": "gf sad",
+      "offsets": [0, 0]
+    },
+    {
       "name": "scared",
       "prefix": "GF FEAR",
-      "frameIndices": [0, 1, 2],
       "offsets": [0, 0]
     }
   ]
