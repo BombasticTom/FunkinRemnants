@@ -25,6 +25,12 @@
       "instrumental": "remnants",
       "altInstrumentals": [
         ""
+      ],
+      "opponentVocals": [
+        "darnell-remnants"
+      ],
+      "playerVocals": [
+        "pico-remnants-playable"
       ]
     },
     "stage": "phillyStreetsRemnants",
@@ -38,7 +44,7 @@
     "previewStart": 0,
     "previewEnd": 15000
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.3",
+  "generatedBy": "Friday Night Funkin' - v0.7.4",
   "timeFormat": "ms",
   "timeChanges": [
     {
