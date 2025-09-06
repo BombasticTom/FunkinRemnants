@@ -8,7 +8,8 @@ class BFRemnantsPlayableCharacter extends PlayableCharacter
 		super('bf-remnants');
 	}
 
-  override function isUnlocked():Bool {
-    return Save.instance.hasBeatenLevel('remnants-week');
-  }
+	override function isUnlocked():Bool
+	{
+		return Save.instance.hasBeatenLevel('remnants-week');
+	}
 }
