@@ -20,7 +20,7 @@
 
   "dialogue": [
     {
-      "speaker": "senpai-angry-remnants",
+      "speaker": "senpai-remnants-angry",
       "speakerAnimation": "talk",
       "box": "remnants-pixel",
       "boxAnimation": "angrySenpai",
@@ -28,7 +28,7 @@
       "text": ["Not bad for an ugly worm."]
     },
     {
-      "speaker": "senpai-angry-remnants",
+      "speaker": "senpai-remnants-angry",
       "speakerAnimation": "talk",
       "box": "remnants-pixel",
       "boxAnimation": "idle",
@@ -37,7 +37,7 @@
       "speed": 0.5
     },
     {
-      "speaker": "senpai-angry-remnants",
+      "speaker": "senpai-remnants-angry",
       "speakerAnimation": "talk",
       "box": "remnants-pixel",
       "boxAnimation": "idle",

@@ -20,15 +20,15 @@
 
   "dialogue": [
     {
-      "speaker": "senpai-angry-remnants",
+      "speaker": "senpai-remnants-angry",
       "speakerAnimation": "talk",
       "box": "remnants-pixel",
-      "boxAnimation": "angrySenpai",
+      "boxAnimation": "idle",
 
       "text": ["Not bad for an ugly worm."]
     },
     {
-      "speaker": "senpai-angry-remnants",
+      "speaker": "senpai-remnants-angry",
       "speakerAnimation": "talk",
       "box": "remnants-pixel",
       "boxAnimation": "idle",
