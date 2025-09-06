@@ -19,7 +19,8 @@ class FreshRemnantsMixSong extends Song
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
   {
+    var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
     var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
-    return results;
+    if (hasBeatenRemnantsMix) return results;
   }
 }

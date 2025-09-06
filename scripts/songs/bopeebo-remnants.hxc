@@ -19,23 +19,13 @@ class BopeeboRemnantsMixSong extends Song
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
   {
+    var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
+    var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
     if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
     {
-      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
-			var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, 'remnants');
-
-      switch (variationId)
-      {
-        case 'pico':
-          // return hasBeatenPicoMix ? [''] : [];
-          // No Pico mix on BF instrumental, sorry!
-          return [];
-        case 'remnants':
-					if (hasBeatenRemnantsMix) return hasBeatenPicoMix ? ['pico', ''] : [];
-        default:
-          return [(hasBeatenPicoMix) ? 'pico' : null, (hasBeatenRemnantsMix) ? 'remnants' : null];
-      }
+			var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+      if (!hasBeatenPicoMix) results.remove('pico');
     }
-    return [];
+    if (hasBeatenRemnantsMix) return results;
   }
 }

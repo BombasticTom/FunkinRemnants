@@ -46,12 +46,13 @@ class DarnellRemnantsMixSong extends Song
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
   {
     var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
+    var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
     if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
     {
       var hasBeatenBFMix = Save.instance.hasBeatenSong(this.id, null, 'bf');
       if (!hasBeatenBFMix) results.remove('bf');
     }
-    return results;
+    if (hasBeatenRemnantsMix) return results;
   }
 
   public override function onCountdownStart(event:CountdownScriptEvent):Void

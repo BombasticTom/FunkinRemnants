@@ -26,37 +26,37 @@ class BlammedRemnantsMixSong extends Song
     return false;
 	}
 
-function onCreate()
-{
-      black = new FunkinSprite(-20, -20);
-      black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-      black.cameras = [PlayState.instance.camCutscene];
+  function onCreate()
+  {
+    black = new FunkinSprite(-20, -20);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(black);
+  }
 
-      PlayState.instance.add(black);
-}
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (hudTween != null) hudTween.cancel();
 
-function onCountdownStart(event:ScriptEvent):Void
-{
-super.onCountdownStart(event);
-      if (fadeBlackTween != null) fadeBlackTween.cancel();
-      if (hudTween != null) hudTween.cancel();
+    black.alpha = 1.0;
+    PlayState.instance.camHUD.alpha = 0;
+  }
 
-      black.alpha = 1.0;
-      PlayState.instance.camHUD.alpha = 0;
-}
-
-function onSongStart(event:ScriptEvent):Void
-{
+  function onSongStart(event:ScriptEvent):Void
+  {
     super.onSongStart(event);
     fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 10, {ease: FlxEase.linear});
-}
+  }
 
-function onBeatHit(event:ScriptEvent):Void
+  function onBeatHit(event:ScriptEvent):Void
   {
     super.onBeatHit(event);
+
     if (event.beat == 30)
-{
+    {
       hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1.0}, 0.6, {ease: FlxEase.sineOut});
-}
-}
+    }
+  }
 }
