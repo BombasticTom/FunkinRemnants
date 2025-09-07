@@ -8,16 +8,9 @@ class RemnantsWeekLevel extends Level
 		super('remnants-week');
 	}
 
-  override function isUnlocked():Bool {
-    return true;
-  }
-
-  override function getSongDisplayNames(difficultyId:String):Array<String> {
-	if (Save.instance.hasBeatenLevel('remnants-week')) {
-	  // Reveal the name after beating the week ;)
-	  return ["Remnants!"];
-	} else {
-	  return ["???"];
+	// Reveal the name after beating the week ;)
+	override function getSongDisplayNames(difficultyId:String):Array<String>
+	{
+		return Save.instance.hasBeatenLevel('remnants-week') ? ["Remnants!"] : ["???"]
 	}
-  }
 }
