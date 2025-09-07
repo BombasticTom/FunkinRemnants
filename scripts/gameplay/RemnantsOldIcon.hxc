@@ -1,0 +1,77 @@
+import flixel.FlxG;
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.util.TouchUtil;
+import flixel.util.FlxTimer;
+import StringTools;
+
+class RemnantsOldIcon extends Module
+{
+    var hotReloaded:Bool = false;
+    var scriptLoaded:Bool = false;
+
+    var isMobileTouched:Bool = false;
+
+    var OLD_ICON:String = 'old-bf-remnants';
+
+    public function new()
+    {
+        super('RemnantsOldIcon');
+    }
+
+    override function onStateChangeEnd(event)
+    {
+        super.onStateChangeEnd(event);
+
+        scriptLoaded = false;
+        hotReloaded = false;
+    }
+
+    override function onSubStateCloseEnd(event)
+    {
+        super.onSubStateCloseEnd(event);
+
+        scriptLoaded = false;
+        hotReloaded = false;
+    }
+
+    override function onUpdate(event:UpdateScriptEvent)
+    {
+        super.onUpdate(event);
+        
+        if (FlxG.keys.justPressed.F5) hotReloaded = true;
+        if (ReflectUtil.getClassNameOf(FlxG.state) == 'funkin.play.PlayState' && !hotReloaded)
+        {
+            if (FlxG.onMobile)
+            {
+                isMobileTouched = TouchUtil.overlapsComplex(PlayState.instance.iconP1) && TouchUtil.justPressed;
+            }
+
+            if (FlxG.keys.justPressed.NINE || isMobileTouched)
+            {
+                var boyfriend = PlayState.instance.currentStage.getBoyfriend();
+                if (StringTools.contains(boyfriend.characterId, 'remnants'))
+                {
+                    if (PlayState.instance.iconP1.characterId == OLD_ICON)
+                    {
+                        // Gotta add a bit of delay for override the normal interaction.
+                        new FlxTimer().start(0.00001, _ -> {
+                            PlayState.instance.iconP1.characterId = boyfriend.getHealthIconId();
+                            PlayState.instance.iconP1.loadCharacter(boyfriend.getHealthIconId());
+                        });
+                    }
+                    else
+                    {
+                        // Gotta add a bit of delay for override the normal interaction.
+                        PlayState.instance.currentStage.getBoyfriend().initHealthIcon(false);
+                        new FlxTimer().start(0.00001, _ -> {
+                            PlayState.instance.iconP1.characterId = OLD_ICON;
+                            PlayState.instance.iconP1.loadCharacter(OLD_ICON);
+                        });
+                    }
+                }
+            }
+        }
+    }
+}
