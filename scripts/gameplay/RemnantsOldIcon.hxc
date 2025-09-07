@@ -45,29 +45,30 @@ class RemnantsOldIcon extends Module
         {
             if (FlxG.onMobile)
             {
-                isMobileTouched = TouchUtil.overlapsComplex(PlayState.instance.iconP1) && TouchUtil.justPressed;
+                isMobileTouched = TouchUtil.overlapsComplex(PlayState.instance?.iconP1) && TouchUtil.justPressed;
             }
 
             if (FlxG.keys.justPressed.NINE || isMobileTouched)
             {
-                var boyfriend = PlayState.instance.currentStage.getBoyfriend();
-                if (StringTools.contains(boyfriend.characterId, 'remnants'))
+                var iconP1 = PlayState.instance?.iconP1;
+                var boyfriend = PlayState.instance?.currentStage?.getBoyfriend();
+                if (StringTools.contains(boyfriend?.characterId, 'remnants'))
                 {
-                    if (PlayState.instance.iconP1.characterId == OLD_ICON)
+                    if (iconP1?.characterId == OLD_ICON)
                     {
                         // Gotta add a bit of delay for override the normal interaction.
-                        new FlxTimer().start(0.00001, _ -> {
-                            PlayState.instance.iconP1.characterId = boyfriend.getHealthIconId();
-                            PlayState.instance.iconP1.loadCharacter(boyfriend.getHealthIconId());
+                        new FlxTimer().start(0.0000001, _ -> {
+                            iconP1?.isPixel = boyfriend?.isPixel ?? false;
+                            boyfriend?.initHealthIcon(false);
                         });
                     }
                     else
                     {
                         // Gotta add a bit of delay for override the normal interaction.
-                        PlayState.instance.currentStage.getBoyfriend().initHealthIcon(false);
-                        new FlxTimer().start(0.00001, _ -> {
-                            PlayState.instance.iconP1.characterId = OLD_ICON;
-                            PlayState.instance.iconP1.loadCharacter(OLD_ICON);
+                        new FlxTimer().start(0.0000001, _ -> {
+                            iconP1?.characterId = OLD_ICON;
+                            iconP1?.isPixel = false;
+                            iconP1?.loadCharacter(OLD_ICON);
                         });
                     }
                 }
