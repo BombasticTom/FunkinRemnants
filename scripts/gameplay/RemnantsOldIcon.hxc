@@ -9,8 +9,6 @@ import StringTools;
 class RemnantsOldIcon extends Module
 {
     var hotReloaded:Bool = false;
-    var scriptLoaded:Bool = false;
-
     var isMobileTouched:Bool = false;
 
     var OLD_ICON:String = 'old-bf-remnants';
@@ -23,16 +21,12 @@ class RemnantsOldIcon extends Module
     override function onStateChangeEnd(event)
     {
         super.onStateChangeEnd(event);
-
-        scriptLoaded = false;
         hotReloaded = false;
     }
 
     override function onSubStateCloseEnd(event)
     {
         super.onSubStateCloseEnd(event);
-
-        scriptLoaded = false;
         hotReloaded = false;
     }
 
