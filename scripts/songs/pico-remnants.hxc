@@ -1,14 +1,21 @@
+import funkin.play.cutscene.VideoCutscene;
+import funkin.graphics.FunkinSprite;
 import funkin.play.song.Song;
+import funkin.play.PlayState;
 import funkin.save.Save;
 
 class PicoRemnantsMixSong extends Song
 {
+  var hasPlayedIntro:Bool;
+
   public function new()
   {
     super('pico',
       {
         variation: 'remnants'
       });
+
+        hasPlayedIntro = false;
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -27,5 +34,35 @@ class PicoRemnantsMixSong extends Song
       if (!hasBeatenPicoMix) results.remove('pico');
     }
     if (hasBeatenRemnantsMix) return results;
+  }
+
+   function onCreate(event:ScriptEvent):Void
+  {
+    hasPlayedIntro = false;
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!hasPlayedIntro)
+    {
+      trace('Playing remnants presentation video!');
+
+      hasPlayedIntro = true;
+      event.cancel(); // CANCEL THE COUNTDOWN!
+
+      VideoCutscene.play(Paths.videos("week3"));
+    }
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedIntro = true;
   }
 }
