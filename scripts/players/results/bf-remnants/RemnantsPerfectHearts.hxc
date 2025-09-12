@@ -1,0 +1,27 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.ui.FullScreenScaleMode;
+import funkin.play.PlayState;
+import flixel.math.FlxPoint;
+import StringTools;
+
+class RemnantsPerfectHearts extends FlxAtlasSprite
+{
+  function new(x:Float, y:Float)
+  {
+    var picoOffset:Array<Float> = [385, 82];
+    var boyfriend = PlayState.instance?.currentStage?.getBoyfriend();
+    super(x, y, Paths.animateAtlas("resultScreen/results-bf-remnants/resultsPERFECT/hearts", "shared"),
+      {
+        Reversed: false,
+        // ?OnComplete:Void -> Void,
+        ShowPivot: false,
+        Antialiasing: true,
+        ScrollFactor: new FlxPoint(1, 1),
+      });
+
+    if (StringTools.contains(boyfriend?.characterId ?? 'bf-remnants', 'pico'))
+    {
+      this.alpha = 0;
+    }
+  }
+}

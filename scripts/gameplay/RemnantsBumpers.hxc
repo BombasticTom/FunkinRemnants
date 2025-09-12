@@ -1,0 +1,15 @@
+import flixel.FlxG;
+import funkin.play.PlayState;
+import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.util.TouchUtil;
+import flixel.util.FlxTimer;
+import StringTools;
+
+class RemnantsBumpers extends Module
+{
+    public function new()
+    {
+        super('RemnantsBumpers');
+    }
+}
