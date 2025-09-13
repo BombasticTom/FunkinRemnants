@@ -1,14 +1,21 @@
+import funkin.play.cutscene.VideoCutscene;
+import funkin.graphics.FunkinSprite;
 import funkin.play.song.Song;
+import funkin.play.PlayState;
 import funkin.save.Save;
 
 class CocoaRemnantsMixSong extends Song
 {
-  function new()
+  var hasPlayedIntro:Bool;
+
+  public function new()
   {
     super('cocoa',
       {
         variation: 'remnants'
       });
+
+    hasPlayedIntro = false;
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -16,4 +23,34 @@ class CocoaRemnantsMixSong extends Song
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
 	}
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    hasPlayedIntro = false;
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!hasPlayedIntro)
+    {
+      trace('Playing remnants presentation video!');
+
+      hasPlayedIntro = true;
+      event.cancel(); // CANCEL THE COUNTDOWN!
+
+      VideoCutscene.play(Paths.videos("week5"));
+    }
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedIntro = true;
+  }
 }
