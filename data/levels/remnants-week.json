@@ -18,7 +18,7 @@
     {
       "assetPath": "storymenu/props/bf",
       "scale": 1.0,
-      "offsets": [150, 100],
+      "offsets": [150, 80],
       "animations": [
         {
           "name": "idle",
