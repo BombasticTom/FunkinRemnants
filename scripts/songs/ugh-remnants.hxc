@@ -8,6 +8,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.text.FlxText;
 import flixel.text.FlxTextBorderStyle;
+import funkin.modding.module.ModuleHandler;
 import funkin.audio.FunkinSound;
 import funkin.data.song.SongRegistry;
 import funkin.modding.base.ScriptedFlxAtlasSprite;

@@ -1,10 +1,11 @@
-import funkin.play.song.Song;
+import flixel.FlxG;
 import funkin.play.PlayState;
-import funkin.save.Save;
+import funkin.play.song.Song;
+import funkin.modding.module.ModuleHandler;
+import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import funkin.graphics.FunkinSprite;
-import flixel.FlxG;
+import funkin.save.Save;
 
 class BlammedRemnantsMixSong extends Song
 {
@@ -42,6 +43,12 @@ class BlammedRemnantsMixSong extends Song
 
     black.alpha = 1.0;
     PlayState.instance.camHUD.alpha = 0;
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
   }
 
   function onSongStart(event:ScriptEvent):Void
@@ -58,5 +65,15 @@ class BlammedRemnantsMixSong extends Song
     {
       hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1.0}, 0.6, {ease: FlxEase.sineOut});
     }
+  }
+
+  /**
+   * Don't replay the bumper between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
   }
 }

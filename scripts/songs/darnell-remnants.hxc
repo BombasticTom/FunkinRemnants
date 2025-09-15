@@ -1,28 +1,22 @@
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.math.FlxBasePoint;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.module.ModuleHandler;
+import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.data.song.SongRegistry;
+import funkin.play.stage.StageProp;
+import funkin.audio.FunkinSound;
 import flixel.tweens.FlxTween;
+import funkin.play.song.Song;
+import funkin.play.Countdown;
+import funkin.play.PlayState;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
-import funkin.Conductor;
-import funkin.util.Constants;
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
-import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
-import funkin.data.song.SongRegistry;
-import funkin.play.GameOverSubState;
-import funkin.play.PlayState;
-import funkin.play.song.Song;
-import funkin.play.stage.StageProp;
 import funkin.save.Save;
-import funkin.audio.FunkinSound;
-import funkin.play.cutscene.VideoCutscene;
-import funkin.play.cutscene.CutsceneType;
-import funkin.play.PlayStatePlaylist;
+import funkin.Conductor;
 
 class DarnellRemnantsMixSong extends Song
 {
-  var hasPlayedCutscene:Bool;
+  var hasPlayedInGameCutscene:Bool;
   var cutsceneMusic:FunkinSound;
   var cutsceneConductor:Conductor;
   var bgSprite:FunkinSprite;
@@ -34,7 +28,7 @@ class DarnellRemnantsMixSong extends Song
         variation: 'remnants'
       });
 
-    hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -59,15 +53,31 @@ class DarnellRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!hasPlayedCutscene)
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
-      trace('Pausing countdown to play in game cutscene');
+      if (bgSprite == null)
+      {
+        bgSprite = new FunkinSprite(0, 0);
+        bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+        bgSprite.cameras = [PlayState.instance.camCutscene];
+        bgSprite.zIndex = -10000;
+        PlayState.instance.add(bgSprite);
+        PlayState.instance.refresh();
+      }
 
-      hasPlayedCutscene = true;
-      event.cancel(); // CANCEL THE COUNTDOWN!
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+      event.cancel();
+    }
+    else
+    {
+      if (!hasPlayedInGameCutscene)
+      {
+        hasPlayedInGameCutscene = true;
+        event.cancel();
 
-      PlayState.instance.camHUD.visible = false;
-      introCutscene();
+        PlayState.instance.camHUD.visible = false;
+        introCutscene();
+      }
     }
   }
 
@@ -304,7 +314,7 @@ class DarnellRemnantsMixSong extends Song
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
-    hasPlayedCutscene = true;
+    hasPlayedInGameCutscene = true;
   }
 
   /**
@@ -313,7 +323,7 @@ class DarnellRemnantsMixSong extends Song
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
-    hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
   }
 
   function onUpdate(event:UpdateScriptEvent)

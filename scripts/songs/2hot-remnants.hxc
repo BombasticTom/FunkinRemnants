@@ -1,6 +1,7 @@
 import flixel.util.FlxTimer;
 import funkin.util.HapticUtil;
 import flixel.tweens.FlxTween;
+import funkin.modding.module.ModuleHandler;
 import funkin.modding.base.ScriptedFlxAtlasSprite;
 import funkin.graphics.FunkinSprite;
 import funkin.play.GameOverSubState;
@@ -48,9 +49,22 @@ class TwoHOTRemnantsMixSong extends Song
     if (hasBeatenRemnantsMix) return results;
   }
 
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+  }
+
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
+
+    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
 
     removeCans();
     gunCocked = false;

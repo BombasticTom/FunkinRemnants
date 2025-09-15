@@ -1,10 +1,11 @@
-import funkin.play.song.Song;
+import flixel.FlxG;
 import funkin.play.PlayState;
-import funkin.save.Save;
+import funkin.play.song.Song;
+import funkin.modding.module.ModuleHandler;
+import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import funkin.graphics.FunkinSprite;
-import flixel.FlxG;
+import funkin.save.Save;
 
 class PhillyNiceRemnantsMixSong extends Song
 {
@@ -36,8 +37,15 @@ class PhillyNiceRemnantsMixSong extends Song
   function onCountdownStart(event:ScriptEvent):Void
   {
     super.onCountdownStart(event);
+
     if (fadeBlackTween != null) fadeBlackTween.cancel();
     black.alpha = 0.0;
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -47,5 +55,15 @@ class PhillyNiceRemnantsMixSong extends Song
     {
       fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 3, {ease: FlxEase.linear});
     }
+  }
+
+  /**
+   * Don't replay the bumper between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
   }
 }

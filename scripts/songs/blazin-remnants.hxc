@@ -1,5 +1,6 @@
 import flixel.FlxG;
 import funkin.play.song.Song;
+import funkin.modding.module.ModuleHandler;
 import funkin.play.PlayState;
 import funkin.save.Save;
 
@@ -81,5 +82,26 @@ class BlazinRemnantsMixSong extends Song
     {
       playerStrumline.x = FlxG.width / 2 - playerStrumline.width / 2;
     }
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+  }
+
+  /**
+   * Don't replay the bumper between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
   }
 }

@@ -1,20 +1,15 @@
-import funkin.play.cutscene.VideoCutscene;
-import funkin.graphics.FunkinSprite;
+import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
-import funkin.play.PlayState;
 import funkin.save.Save;
 
 class SpookeezRemnantsMixSong extends Song
 {
-    var hasPlayedIntro:Bool;
-
-	public function new() {
+	public function new()
+  {
 		super('spookeez',
       {
         variation: 'remnants'
       });
-
-        hasPlayedIntro = false;
 	}
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -35,33 +30,24 @@ class SpookeezRemnantsMixSong extends Song
     if (hasBeatenRemnantsMix) return results;
   }
 
-  function onCreate(event:ScriptEvent):Void
-  {
-    hasPlayedIntro = false;
-  }
-
   function onCountdownStart(event:ScriptEvent):Void
   {
     super.onCountdownStart(event);
 
-    if (!hasPlayedIntro)
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
-      trace('Playing remnants presentation video!');
-
-      hasPlayedIntro = true;
-      event.cancel(); // CANCEL THE COUNTDOWN!
-
-      VideoCutscene.play(Paths.videos("week2"));
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
   }
 
   /**
-   * Don't replay the cutscene between restarts.
+   * Don't replay the bumper between restarts.
    */
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
 
-    hasPlayedIntro = true;
+    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
   }
 }

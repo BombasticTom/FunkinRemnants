@@ -78,7 +78,6 @@ class SenpaiRemnantsMixSong extends Song
 
     var tweenFunction = function(x) {
       var xSnapped = Math.floor(x * 8) / 8;
-      // black.alpha = 1.0 - xSnapped;
     };
 
     new FlxTimer().start(0.25, _ -> {

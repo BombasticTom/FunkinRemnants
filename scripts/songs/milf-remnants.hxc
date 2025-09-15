@@ -4,6 +4,7 @@ import flixel.util.FlxTimer;
 import funkin.play.song.Song;
 import funkin.play.PlayState;
 import funkin.graphics.FunkinSprite;
+import funkin.modding.module.ModuleHandler;
 import funkin.audio.FunkinSound;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
@@ -105,12 +106,14 @@ class MILFRemnantsMixSong extends Song
 		this.hardResetSong();
 	}
 
-		/**
+	/**
 	 * Make sure the lamp is reset when the song restarts.
 	 */
 	function onSongRetry(event:ScriptEvent)
 	{
 		super.onSongRetry(event);
+
+		ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
 
 		// Properly reset lights and collision when restarting the song.
 		this.hardResetSong();
@@ -119,6 +122,12 @@ class MILFRemnantsMixSong extends Song
 	function onCountdownStart(event:ScriptEvent)
 	{
 		super.onCountdownStart(event);
+
+		if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+		{
+			event.cancel();
+			ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+		}
 
 		// Properly reset lights and collision when restarting the song.
 		this.hardResetSong();
