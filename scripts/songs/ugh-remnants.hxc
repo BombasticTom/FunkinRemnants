@@ -160,7 +160,7 @@ class UghRemnantsMixSong extends Song
         && canSkipCutscene == true)
       {
         pressedSkip = true;
-        endStressIntro();
+        endUghIntro();
         trace('skipped');
       } 
     }

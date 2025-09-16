@@ -265,14 +265,11 @@ class DarnellRemnantsMixSong extends Song
           continue;
         }
 
-        if (PlayState.instance.currentVariation == 'remnants')
+        // Newspaper.
+        if (stageProp.name == "paper")
         {
-          // Newspaper.
-          if (stageProp.name == "paper")
-          {
-            // Exclude.
-            continue;
-          }
+          // Exclude.
+          continue;
         }
       }
 
@@ -283,15 +280,12 @@ class DarnellRemnantsMixSong extends Song
         continue;
       }
 
-      if (PlayState.instance.currentVariation == 'remnants')
+      // Hacky way of selecting the mist objects.
+      // They are not public so this is the only way i think.
+      if (stageProp.zIndex == 1000 || stageProp.zIndex == 1001 || stageProp.zIndex == 99 || stageProp.zIndex == 88 || stageProp.zIndex == 39)
       {
-        // Hacky way of selecting the mist objects.
-        // They are not public so this is the only way i think.
-        if (stageProp.zIndex == 1000 || stageProp.zIndex == 1001 || stageProp.zIndex == 99 || stageProp.zIndex == 88 || stageProp.zIndex == 39)
-        {
-          // Exclude.
-          continue;
-        }
+        // Exclude.
+        continue;
       }
 
       if (stageProp.zIndex > 299)

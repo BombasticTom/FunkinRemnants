@@ -159,7 +159,7 @@ class GunsRemnantsMixSong extends Song
         && canSkipCutscene == true)
       {
         pressedSkip = true;
-        endStressIntro();
+        endGunsIntro();
         trace('skipped');
       } 
     }
