@@ -64,8 +64,6 @@ class TwoHOTRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
-
     removeCans();
     gunCocked = false;
   }

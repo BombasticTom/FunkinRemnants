@@ -113,8 +113,6 @@ class MILFRemnantsMixSong extends Song
 	{
 		super.onSongRetry(event);
 
-		ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
-
 		// Properly reset lights and collision when restarting the song.
 		this.hardResetSong();
 	}

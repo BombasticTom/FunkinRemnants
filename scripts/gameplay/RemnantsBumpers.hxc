@@ -132,6 +132,7 @@ class RemnantsBumpers extends Module
     /**
      * Get's the current week's name looking for ´song´ on the weeks map.
      * If it fails, it returns null.
+     * This is also used for get the bumper video path.
      * @param song Song to check.
      */
     function getWeek(song:String):String
@@ -141,7 +142,25 @@ class RemnantsBumpers extends Module
         {
             var songs = weeks[weekName];
             if (songs.contains(song))
-                return weekName;
+            {
+                if (PlayState.instance.currentVariation == 'pico-remnants')
+                {
+                    return weekName;
+                }
+                else
+                {
+                    // Special Cases.
+                    switch (song)
+                    {
+                        case 'thorns':
+                            return weekName + "-scary";
+                        case 'darnell':
+                            return weekName + "-bf";
+                        default:
+                            return weekName;
+                    }
+                }
+            }
         }
         return null;
     }

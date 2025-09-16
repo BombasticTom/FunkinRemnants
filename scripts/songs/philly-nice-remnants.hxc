@@ -56,14 +56,4 @@ class PhillyNiceRemnantsMixSong extends Song
       fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 3, {ease: FlxEase.linear});
     }
   }
-
-  /**
-   * Don't replay the bumper between restarts.
-   */
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
-  }
 }

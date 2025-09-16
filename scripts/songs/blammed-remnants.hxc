@@ -66,14 +66,4 @@ class BlammedRemnantsMixSong extends Song
       hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1.0}, 0.6, {ease: FlxEase.sineOut});
     }
   }
-
-  /**
-   * Don't replay the bumper between restarts.
-   */
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
-  }
 }

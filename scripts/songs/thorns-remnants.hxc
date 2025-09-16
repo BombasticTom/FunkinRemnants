@@ -1,8 +1,10 @@
 import flixel.FlxG;
 import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
+import funkin.modding.module.ModuleHandler;
 import funkin.effects.RetroCameraFade;
 import funkin.audio.FunkinSound;
+import flixel.tweens.FlxTween;
 import funkin.play.song.Song;
 import funkin.play.PlayState;
 import funkin.util.Constants;
@@ -10,7 +12,8 @@ import flixel.util.FlxTimer;
 
 class ThornsRemnantsMixSong extends Song
 {
-  var hasPlayedCutscene:Bool;
+  var bgSprite:FunkinSprite;
+  var hasPlayedDialogue:Bool;
 
   public function new()
   {
@@ -31,16 +34,33 @@ class ThornsRemnantsMixSong extends Song
     super.onCountdownStart(event);
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
-    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
-
-    if (!hasPlayedCutscene)
+    if (PlayState.instance.isChartingMode && !hasPlayedDialogue) hasPlayedDialogue = true;
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
-      trace('Pausing countdown to play cutscene.');
+      if (bgSprite == null)
+      {
+        bgSprite = new FunkinSprite(0, 0);
+        bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+        bgSprite.cameras = [PlayState.instance.camCutscene];
+        bgSprite.zIndex = -1;
+        PlayState.instance.add(bgSprite);
+        PlayState.instance.refresh();
+      }
 
-      hasPlayedCutscene = true;
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+      event.cancel();
+    }
+    else
+    {
+      if (!hasPlayedDialogue)
+      {
+        trace('Pausing countdown to play cutscene.');
 
-      startCutscene();
-      event.cancel(); // CANCEL THE COUNTDOWN!
+        hasPlayedDialogue = true;
+
+        startCutscene();
+        event.cancel(); // CANCEL THE COUNTDOWN!
+      }
     }
   }
 
@@ -57,7 +77,15 @@ class ThornsRemnantsMixSong extends Song
     red.color = 0xFFFF1B31;
     red.cameras = [PlayState.instance.camCutscene];
     red.alpha = 1.0;
+    red.zIndex = -3;
     PlayState.instance.add(red);
+
+    if (bgSprite != null)
+    {
+      FlxTween.tween(bgSprite, {alpha: 0}, 0.5, null, function() {
+        bgSprite.visible = false;
+      });
+    }
 
     var senpaiCrazy = FunkinSprite.createSparrow(0, 0, 'stages/week6Remnants/evil/cutscene/senpaiCrazy-remnants');
     senpaiCrazy.cameras = [PlayState.instance.camCutscene];
@@ -66,6 +94,7 @@ class ThornsRemnantsMixSong extends Song
     senpaiCrazy.antialiasing = false;
     senpaiCrazy.pixelPerfectRender = true;
     senpaiCrazy.pixelPerfectPosition = true;
+    senpaiCrazy.zIndex = -2;
 
     senpaiCrazy.scrollFactor.set();
     senpaiCrazy.updateHitbox();
@@ -75,6 +104,7 @@ class ThornsRemnantsMixSong extends Song
     senpaiCrazy.alpha = 0;
 
     PlayState.instance.add(senpaiCrazy);
+    PlayState.instance.refresh();
 
     // Senpai fades in stepwise rather than linear.
     new FlxTimer().start(0.3, function(timer:FlxTimer) {
@@ -140,7 +170,7 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    hasPlayedCutscene = true;
+    hasPlayedDialogue = true;
   }
 
   /**
@@ -150,7 +180,7 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    hasPlayedCutscene = false;
+    hasPlayedDialogue = false;
   }
 
   public override function onDialogueEnd()

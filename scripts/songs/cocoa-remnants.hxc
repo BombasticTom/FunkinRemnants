@@ -28,14 +28,4 @@ class CocoaRemnantsMixSong extends Song
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
   }
-
-  /**
-   * Don't replay the bumper between restarts.
-   */
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
-  }
 }
