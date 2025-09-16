@@ -143,19 +143,16 @@ class RemnantsBumpers extends Module
             var songs = weeks[weekName];
             if (songs.contains(song))
             {
-                if (PlayState.instance.currentVariation == 'pico-remnants')
+                if (PlayState.instance.currentVariation == 'bf-remnants')
                 {
-                    return weekName;
+                    return weekName + "-bf";
                 }
                 else
                 {
-                    // Special Cases.
                     switch (song)
                     {
                         case 'thorns':
                             return weekName + "-scary";
-                        case 'darnell':
-                            return weekName + "-bf";
                         default:
                             return weekName;
                     }
