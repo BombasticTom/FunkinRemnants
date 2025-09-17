@@ -1,3 +1,4 @@
+import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
 
@@ -22,5 +23,16 @@ class FreshRemnantsMixSong extends Song
     var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
     var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
     if (hasBeatenRemnantsMix) return results;
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
   }
 }

@@ -1,0 +1,25 @@
+import funkin.graphics.adobeanimate.FlxAtlasSprite;
+import funkin.play.PlayState;
+import flixel.math.FlxPoint;
+import StringTools;
+
+class RemnantsGFResultsGreat extends FlxAtlasSprite
+{
+  function new(x:Float, y:Float)
+  {
+    super(x, y, Paths.animateAtlas("resultScreen/results-bf-remnants/resultsGREAT/gf", "shared"),
+      {
+        Reversed: false,
+        // ?OnComplete:Void -> Void,
+        ShowPivot: false,
+        Antialiasing: true,
+        ScrollFactor: new FlxPoint(1, 1),
+      });
+
+    var boyfriend = PlayState.instance?.currentStage?.getBoyfriend();
+    if (StringTools.contains(boyfriend?.characterId ?? 'bf-remnants', 'pico'))
+    {
+      this.alpha = 0;
+    }
+  }
+}

@@ -9,23 +9,27 @@ import flixel.text.FlxTextBorderStyle;
 import funkin.play.character.BaseCharacter;
 import funkin.play.character.CharacterDataParser;
 import funkin.data.song.SongRegistry;
+import funkin.modding.module.ModuleHandler;
 import funkin.modding.base.ScriptedFlxAtlasSprite;
-import funkin.audio.FunkinSound;
+import funkin.ui.FullScreenScaleMode;
 import funkin.Conductor;
 import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import flixel.util.FlxTimerManager;
-import funkin.Preferences;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
 import funkin.util.TouchUtil;
-import funkin.ui.FullScreenScaleMode;
+import funkin.Preferences;
 
 class StressRemnantsMixSong extends Song
 {
-  var hasPlayedCutscene:Bool;
+  var bgSprite:FunkinSprite;
+  var hasPlayedInGameCutscene:Bool;
   var tankmanGroup:TankmanSpriteGroup = null;
   var isMobilePauseButtonPressed:Bool = false;
+  var enableSkip:Bool = false;
 
   public function new()
   {
@@ -34,7 +38,7 @@ class StressRemnantsMixSong extends Song
         variation: 'remnants'
       });
 
-    hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
   }
 
   /**
@@ -44,7 +48,7 @@ class StressRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
     cutsceneSkipped = false;
     canSkipCutscene = false;
     startedTalking = false;
@@ -60,20 +64,33 @@ class StressRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!hasPlayedCutscene)
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
-      trace('Pausing countdown to play a cutscene (`stress-remnants`)');
+      if (bgSprite == null)
+      {
+        bgSprite = new FunkinSprite(0, 0);
+        bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+        bgSprite.cameras = [PlayState.instance.camCutscene];
+        bgSprite.zIndex = -10000;
+        PlayState.instance.add(bgSprite);
+        PlayState.instance.refresh();
+      }
 
-      hasPlayedCutscene = true;
-
-      event.cancel(); // CANCEL THE COUNTDOWN!
-      stressIntro();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+      event.cancel();
     }
     else
     {
-      hasPlayedCutscene = true;
-      cutsceneSkipped = true;
-      canSkipCutscene = true;
+      if (!hasPlayedInGameCutscene)
+      {
+        trace('Pausing countdown to play a cutscene (`stress-remnants`)');
+
+        hasPlayedInGameCutscene = true;
+
+        enableSkip = true;
+        event.cancel(); // CANCEL THE COUNTDOWN!
+        stressIntro();
+      }
     }
 
     if (tankmanGroup != null && !tankmanGroup.scriptCall('isValid'))
@@ -291,6 +308,12 @@ class StressRemnantsMixSong extends Song
 
       // Play the dialogue.
       tankmanCutscene.playAnimation("GOD EFFING DAMMIT");
+      if (bgSprite != null)
+      {
+        FlxTween.tween(bgSprite, {alpha: 0}, 1, {startDelay: 0.1}, function() {
+          bgSprite.visible = false;
+        });
+      }
     });
 
     // Focus camera on GF.
@@ -611,7 +634,7 @@ class StressRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    hasPlayedCutscene = true;
+    hasPlayedInGameCutscene = true;
 
     // resets the tankmen!
     if (tankmanGroup != null)
@@ -652,34 +675,37 @@ class StressRemnantsMixSong extends Song
       }
     }
 
-    if (FlxG.onMobile)
+    if (enableSkip)
     {
-      isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
-    }
-
-    if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && cutsceneSkipped == false)
-    {
-      if (!canSkipCutscene)
+      if (FlxG.onMobile)
       {
-        trace('cant skip yet!');
-        if (skipText != null)
+        isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
+      }
+
+      if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && cutsceneSkipped == false)
+      {
+        if (!canSkipCutscene)
         {
-          FlxTween.tween(skipText, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
-          new FlxTimer().start(0.5, _ -> {
-            canSkipCutscene = true;
-            trace('can skip!');
-          });
+          trace('cant skip yet!');
+          if (skipText != null)
+          {
+            FlxTween.tween(skipText, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+            new FlxTimer().start(0.5, _ -> {
+              canSkipCutscene = true;
+              trace('can skip!');
+            });
+          }
         }
       }
-    }
 
-    if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed)
-      && cutsceneSkipped == false
-      && canSkipCutscene == true)
-    {
-      pressedSkip = true;
-      endStressIntro();
-      trace('skipped');
+      if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed)
+        && cutsceneSkipped == false
+        && canSkipCutscene == true)
+      {
+        pressedSkip = true;
+        endStressIntro();
+        trace('skipped');
+      } 
     }
   }
 
@@ -694,7 +720,7 @@ class StressRemnantsMixSong extends Song
     ];
 
     cutsceneSkipped = true;
-    hasPlayedCutscene = true;
+    hasPlayedInGameCutscene = true;
     if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
 
     // fade out and stop the music!!!!!!

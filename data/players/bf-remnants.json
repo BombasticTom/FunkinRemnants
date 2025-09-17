@@ -8,9 +8,7 @@
     "bf-remnants-pixel",
     "bf-remnants-holding-gf",
     "bf-remnants-opponent",
-    "bf-remnants-mind",
-    "pico-remnants-playable",
-    "pico-remnants-blazin"
+    "bf-remnants-mind"
   ],
   "showUnownedChars": false,
   "unlocked": false,
@@ -93,7 +91,7 @@
     ]
   },
   "charSelect": {
-    "position": 4,
+    "position": 7,
     "gf": {
       "assetPath": "charSelect/gf-remnantsChill",
       "animInfoPath": "charSelect/gfAnimInfo",
@@ -112,7 +110,7 @@
     "perfectGold": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/bed",
+        "scriptClass": "RemnantsPerfectResults",
         "startFrameLabel": "INTRO",
         "filter": "naughty",
         "zIndex": 500,
@@ -121,7 +119,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/hearts",
+        "scriptClass": "RemnantsPerfectHearts",
         "filter": "naughty",
         "zIndex": 501,
         "delay": 4.41,
@@ -130,7 +128,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/bed",
+        "scriptClass": "RemnantsPerfectResults",
         "startFrameLabel": "INTRO 2",
         "filter": "safe",
         "zIndex": 500,
@@ -139,20 +137,20 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/tickleFight",
+        "scriptClass": "RemnantsTickleFight",
         "filter": "safe",
         "zIndex": 501,
         "delay": 4.41,
         "offsets": [650, 370],
         "scale": 0.6,
         "sound": "shared:tickleFight",
-        "loopFrameLabel": "LOOP"
+        "loopFrameLabel": "LOOP START"
       }
     ],
     "perfect": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/bed",
+        "scriptClass": "RemnantsPerfectResults",
         "startFrameLabel": "INTRO",
         "filter": "naughty",
         "zIndex": 500,
@@ -161,7 +159,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/hearts",
+        "scriptClass": "RemnantsPerfectHearts",
         "filter": "naughty",
         "zIndex": 501,
         "delay": 4.41,
@@ -170,7 +168,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/bed",
+        "scriptClass": "RemnantsPerfectResults",
         "startFrameLabel": "INTRO 2",
         "filter": "safe",
         "zIndex": 500,
@@ -179,20 +177,20 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsPERFECT/tickleFight",
+        "scriptClass": "RemnantsTickleFight",
         "filter": "safe",
         "zIndex": 501,
         "delay": 4.41,
         "offsets": [650, 370],
         "scale": 0.6,
         "sound": "shared:tickleFight",
-        "loopFrameLabel": "LOOP"
+        "loopFrameLabel": "LOOP START"
       }
     ],
     "excellent": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsEXCELLENT",
+        "scriptClass": "RemnantsExcellentResults",
         "zIndex": 500,
         "offsets": [1329, 429],
 
@@ -202,7 +200,7 @@
     "great": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsGREAT/gf",
+        "scriptClass": "RemnantsGFResultsGreat",
         "scale": 0.93,
         "delay": 0.25,
         "offsets": [802, 331],
@@ -212,7 +210,7 @@
       },
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsGREAT/bf",
+        "scriptClass": "RemnantsGreatResults",
         "scale": 0.93,
         "zIndex": 500,
         "offsets": [929, 363],
@@ -223,7 +221,7 @@
     "good": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsGOOD/bf",
+        "scriptClass": "RemnantsGoodResults",
         "zIndex": 501,
         "offsets": [662, 371],
 
@@ -231,7 +229,7 @@
       },
       {
         "renderType": "sparrow",
-        "assetPath": "shared:resultScreen/results-remnants/resultsGOOD/resultGirlfriendGOOD",
+        "scriptClass": "RemnantsGFResultsGood",
         "zIndex": 500,
         "delay": 0.91,
         "offsets": [629, 323],
@@ -241,7 +239,7 @@
     "loss": [
       {
         "renderType": "animateatlas",
-        "assetPath": "shared:resultScreen/results-remnants/resultsSHIT",
+        "scriptClass": "RemnantsShitResults",
         "zIndex": 500,
         "offsets": [0, 20],
         "loopFrameLabel": "Loop Start"

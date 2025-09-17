@@ -8,17 +8,22 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.text.FlxText;
 import flixel.text.FlxTextBorderStyle;
-import funkin.audio.FunkinSound;
+import funkin.modding.module.ModuleHandler;
 import funkin.data.song.SongRegistry;
+import funkin.modding.module.ModuleHandler;
 import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
 import funkin.util.TouchUtil;
 import funkin.Conductor;
 import flixel.FlxG;
 
 class UghRemnantsMixSong extends Song
 {
-  var hasPlayedCutscene:Bool;
+  var bgSprite:FunkinSprite;
+  var hasPlayedInGameCutscene:Bool;
   var isMobilePauseButtonPressed:Bool = false;
+  var enableSkip:Bool = false;
 
   public function new()
   {
@@ -27,7 +32,7 @@ class UghRemnantsMixSong extends Song
         variation: 'remnants'
       });
 
-    hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -52,14 +57,33 @@ class UghRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!hasPlayedCutscene)
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
-      trace('Pausing countdown to play a video cutscene (`ugh-remnants`)');
+      if (bgSprite == null)
+      {
+        bgSprite = new FunkinSprite(0, 0);
+        bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+        bgSprite.cameras = [PlayState.instance.camCutscene];
+        bgSprite.zIndex = -10000;
+        PlayState.instance.add(bgSprite);
+        PlayState.instance.refresh();
+      }
 
-      hasPlayedCutscene = true;
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+      event.cancel();
+    }
+    else
+    {
+      if (!hasPlayedInGameCutscene)
+      {
+        trace('Pausing countdown to play a video cutscene (`ugh-remnants`)');
 
-      event.cancel(); // CANCEL THE COUNTDOWN!
-      ughIntro();
+        hasPlayedInGameCutscene = true;
+
+        enableSkip = true;
+        event.cancel(); // CANCEL THE COUNTDOWN!
+        ughIntro();
+      }
     }
   }
 
@@ -70,7 +94,7 @@ class UghRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    hasPlayedCutscene = true;
+    hasPlayedInGameCutscene = true;    
   }
 
   /**
@@ -80,7 +104,7 @@ class UghRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
     cutsceneSkipped = false;
     canSkipCutscene = false;
     startedTalking = false;
@@ -108,34 +132,37 @@ class UghRemnantsMixSong extends Song
       }
     }
 
-    if (FlxG.onMobile)
+    if (enableSkip)
     {
-      isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
-    }
-
-    if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && cutsceneSkipped == false)
-    {
-      if (!canSkipCutscene)
+      if (FlxG.onMobile)
       {
-        trace('cant skip yet!');
-        if (skipText != null)
+        isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
+      }
+
+      if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && cutsceneSkipped == false)
+      {
+        if (!canSkipCutscene)
         {
-          FlxTween.tween(skipText, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
-          new FlxTimer().start(0.5, _ -> {
-            canSkipCutscene = true;
-            trace('can skip!');
-          });
+          trace('cant skip yet!');
+          if (skipText != null)
+          {
+            FlxTween.tween(skipText, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+            new FlxTimer().start(0.5, _ -> {
+              canSkipCutscene = true;
+              trace('can skip!');
+            });
+          }
         }
       }
-    }
 
-    if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed)
-      && cutsceneSkipped == false
-      && canSkipCutscene == true)
-    {
-      pressedSkip = true;
-      endUghIntro();
-      trace('skipped');
+      if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed)
+        && cutsceneSkipped == false
+        && canSkipCutscene == true)
+      {
+        pressedSkip = true;
+        endUghIntro();
+        trace('skipped');
+      } 
     }
   }
 
@@ -247,13 +274,19 @@ class UghRemnantsMixSong extends Song
     /** Cutscene Time! */
     // Camera starts on Tankman.
     // It has a short delay for prevent lag.
-    new FlxTimer(remnantsTimerManager).start(0.1, _ ->
+    new FlxTimer(remnantsTimerManager).start(0.001, _ ->
     {
       PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 0.01, FlxEase.quadInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.15, 1.5, true, FlxEase.quadInOut);
 
       // Play the dialogue.
       tankmanCutscene.playAnimation("What do we got here");
+      if (bgSprite != null)
+      {
+        FlxTween.tween(bgSprite, {alpha: 0}, 1, {startDelay: 0.1}, function() {
+          bgSprite.visible = false;
+        });
+      }
     });
 
     new FlxTimer(remnantsTimerManager).start(3, _ ->
@@ -318,7 +351,7 @@ class UghRemnantsMixSong extends Song
     ];
 
     cutsceneSkipped = true;
-    hasPlayedCutscene = true;
+    hasPlayedInGameCutscene = true;
     if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
 
     // fade out and stop the music!!!!!!

@@ -1,0 +1,164 @@
+import funkin.play.PlayState;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.modding.module.Module;
+
+class RemnantsBumpers extends Module
+{
+    /**
+     * Has the bumper been played already?
+     */
+    public var playedBumper:Bool = false;
+
+    /**
+     * What was the last song played?
+     */
+    public var lastSong:String = '';
+
+    /**
+     * What was the last week played?
+     */
+    public var lastWeek:String = '';
+
+    /**
+     * What's the current week being played?
+     */
+    public var currentWeek:String = '';
+
+    /**
+     * Is the current song the first one being played on the week?
+     */
+    public var isFirstOfWeek:Bool = null;
+
+    // Song / Weeks lists.
+    public var tutorialList:Array<String> = ["tutorial"];
+    public var week1List:Array<String> = ["bopeebo", "fresh", "dadbattle"];
+    public var week2List:Array<String> = ["spookeez", "south", "monster"];
+    public var week3List:Array<String> = ["pico", "philly-nice", "blammed"];
+    public var week4List:Array<String> = ["satin-panties", "high", "milf"];
+    public var week5List:Array<String> = ["cocoa", "eggnog", "winter-horrorland"];
+    public var week6List:Array<String> = ["senpai", "roses", "thorns"];
+    public var week7List:Array<String> = ["ugh", "guns", "stress"];
+    public var weekend1List:Array<String> = ["darnell", "lit-up", "2hot", "blazin"];
+    public var weeks:Map<String, Array<String>> = [
+        "tutorial" => tutorialList,
+        "week1" => week1List,
+        "week2" => week2List,
+        "week3" => week3List,
+        "week4" => week4List,
+        "week5" => week5List,
+        "week6" => week6List,
+        "week7" => week7List,
+        "weekend1" => weekend1List
+    ];
+
+    public function new()
+    {
+        super('RemnantsBumpers');
+    }
+
+    /**
+     * Sets up the bumper and plays it ONLY if the conditions allows it.
+     * The bumper should only play if the current song is the first one of the current week.
+     * Otherwise it will just skip the function entirely.
+     */
+    public function setupBumper():Bool
+    {
+        var songLowercase = PlayState.instance.currentSong.id.toLowerCase();
+
+        currentWeek = getWeek(songLowercase);
+        lastWeek = getWeek(lastSong);
+        hasChangedWeek();
+        
+        setIsFirstOfWeek();
+
+        if (isFirstOfWeek && !playedBumper)
+        {
+            VideoCutscene.play(Paths.videos(currentWeek));
+            playedBumper = true;
+
+            lastSong = songLowercase;
+            return true;
+        }
+
+        lastSong = songLowercase;
+        return false;
+    }
+
+    /**
+     * Returns ´playedBumper´.
+     */
+    public function getPlayedBumper():Bool
+    {
+        return playedBumper;
+    }
+
+    /**
+     * Returns ´isFirstOfWeek´.
+     */
+    public function getIsFirstOfWeek():Bool
+    {
+        return isFirstOfWeek;
+    }
+
+    /**
+     * Checks and sets if ´isFirstOfWeek´ is the first song being played of the week.
+     */
+    public function setIsFirstOfWeek()
+    {
+        isFirstOfWeek = (currentWeek != null && currentWeek != lastWeek);
+    }
+
+    /**
+     * Sets ´playedBumper´ to the choosen value (Boolean).
+     * @param value Bool type value.
+     */
+    public function setPlayedBumper(value:Bool)
+    {
+        playedBumper = value;
+    }
+
+    /**
+     * Checks if ´currentWeek´ has changed.
+     * If it's false, it resets the bumper state.
+     */
+    public function hasChangedWeek()
+    {
+        if (currentWeek != null && currentWeek != lastWeek)
+        {
+            playedBumper = false;
+        }
+    }
+
+    /**
+     * Get's the current week's name looking for ´song´ on the weeks map.
+     * If it fails, it returns null.
+     * This is also used for get the bumper video path.
+     * @param song Song to check.
+     */
+    function getWeek(song:String):String
+    {
+        if (song == null || song == '') return null;
+        for (weekName in weeks.keys())
+        {
+            var songs = weeks[weekName];
+            if (songs.contains(song))
+            {
+                if (PlayState.instance.currentVariation == 'bf-remnants')
+                {
+                    return weekName + "-bf";
+                }
+                else
+                {
+                    switch (song)
+                    {
+                        case 'thorns':
+                            return weekName + "-scary";
+                        default:
+                            return weekName;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+}

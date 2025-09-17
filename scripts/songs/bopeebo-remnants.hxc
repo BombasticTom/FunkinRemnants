@@ -1,15 +1,18 @@
+import funkin.modding.module.ModuleHandler;
+import funkin.graphics.FunkinSprite;
 import funkin.play.song.Song;
+import funkin.play.PlayState;
 import funkin.save.Save;
 
 class BopeeboRemnantsMixSong extends Song
 {
-	public function new()
-	{
-		super('bopeebo',
+  public function new()
+  {
+    super('bopeebo',
       {
         variation: 'remnants'
       });
-	}
+  }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
   {
@@ -27,5 +30,16 @@ class BopeeboRemnantsMixSong extends Song
       if (!hasBeatenPicoMix) results.remove('pico');
     }
     if (hasBeatenRemnantsMix) return results;
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
   }
 }

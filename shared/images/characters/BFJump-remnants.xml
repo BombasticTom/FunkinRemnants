@@ -33,8 +33,8 @@
 	<SubTexture name="BF super jump0028" x="402" y="1404" width="397" height="484" frameX="-29" frameY="-63" frameWidth="426" frameHeight="601"/>
 	<SubTexture name="BF super jump0029" x="801" y="1404" width="398" height="353" frameX="-7" frameY="-248" frameWidth="426" frameHeight="601"/>
 	<SubTexture name="BF super jump0030" x="1201" y="1404" width="398" height="353" frameX="-7" frameY="-248" frameWidth="426" frameHeight="601"/>
-	<SubTexture name="BF super jump0031" x="1601" y="1404" width="391" height="364" frameX="-14" frameY="-237" frameWidth="426" frameHeight="601"/>
-	<SubTexture name="BF super jump0032" x="1994" y="1404" width="391" height="364" frameX="-14" frameY="-237" frameWidth="426" frameHeight="601"/>
+	<SubTexture name="BF super jump0031" x="1601" y="1404" width="388" height="364" frameX="-14" frameY="-237" frameWidth="426" frameHeight="601"/>
+	<SubTexture name="BF super jump0032" x="1991" y="1404" width="388" height="364" frameX="-14" frameY="-237" frameWidth="426" frameHeight="601"/>
 	<SubTexture name="BF super jump0033" x="2" y="1890" width="405" height="396" frameX="-14" frameY="-204" frameWidth="426" frameHeight="601"/>
 	<SubTexture name="BF super jump0034" x="409" y="1890" width="408" height="404" frameX="-15" frameY="-196" frameWidth="426" frameHeight="601"/>
 	<SubTexture name="BF super jump0035" x="819" y="1890" width="408" height="405" frameX="-15" frameY="-196" frameWidth="426" frameHeight="601"/>
