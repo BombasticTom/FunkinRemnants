@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BFLimo-remnants.png">
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF limo dance0000" x="2" y="2" width="460" height="415" frameX="-126" frameY="0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0001" x="464" y="2" width="460" height="415" frameX="-126" frameY="0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0002" x="926" y="2" width="445" height="415" frameX="-127" frameY="0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0003" x="1373" y="2" width="445" height="415" frameX="-127" frameY="0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0004" x="1820" y="2" width="445" height="415" frameX="-127" frameY="0" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0005" x="2267" y="2" width="444" height="414" frameX="-126" frameY="-1" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0006" x="2" y="419" width="444" height="414" frameX="-126" frameY="-1" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0007" x="448" y="419" width="444" height="409" frameX="-124" frameY="-5" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0008" x="894" y="419" width="444" height="409" frameX="-124" frameY="-5" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0009" x="1340" y="419" width="399" height="385" frameX="-117" frameY="-27" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0010" x="1741" y="419" width="399" height="385" frameX="-117" frameY="-27" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0011" x="2142" y="419" width="396" height="388" frameX="-120" frameY="-24" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0012" x="2" y="835" width="396" height="388" frameX="-120" frameY="-24" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0013" x="400" y="835" width="396" height="388" frameX="-120" frameY="-24" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0014" x="798" y="835" width="396" height="388" frameX="-120" frameY="-24" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0015" x="1196" y="835" width="465" height="412" frameX="0" frameY="-1" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0016" x="1663" y="835" width="465" height="412" frameX="0" frameY="-1" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0017" x="2130" y="835" width="456" height="408" frameX="-7" frameY="-5" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0018" x="2" y="1249" width="456" height="408" frameX="-7" frameY="-5" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0019" x="460" y="1249" width="456" height="408" frameX="-7" frameY="-5" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0020" x="918" y="1249" width="456" height="408" frameX="-8" frameY="-5" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0021" x="1376" y="1249" width="456" height="408" frameX="-8" frameY="-5" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0022" x="1834" y="1249" width="457" height="403" frameX="-10" frameY="-10" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0023" x="2293" y="1249" width="457" height="403" frameX="-10" frameY="-10" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0024" x="2" y="1659" width="375" height="386" frameX="-100" frameY="-25" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0025" x="379" y="1659" width="373" height="386" frameX="-102" frameY="-25" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0026" x="754" y="1659" width="373" height="389" frameX="-99" frameY="-22" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0027" x="1129" y="1659" width="372" height="389" frameX="-100" frameY="-22" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0028" x="1503" y="1659" width="377" height="389" frameX="-95" frameY="-22" frameWidth="586" frameHeight="415"/>
+	<SubTexture name="BF limo dance0029" x="1882" y="1659" width="378" height="389" frameX="-94" frameY="-22" frameWidth="586" frameHeight="415"/>
+</TextureAtlas>
