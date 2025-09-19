@@ -4,7 +4,7 @@
   "backdrop": {
     "type": "solid",
     "fadeTime": 2.0,
-    "color": "#BFB3DFD8"
+    "color": "#AF40616E"
   },
 
   "music": {
@@ -23,7 +23,7 @@
       "speaker": "senpai-remnants-angry",
       "speakerAnimation": "talk",
       "box": "remnants-pixel",
-      "boxAnimation": "angrySenpai",
+      "boxAnimation": "idle",
 
       "text": ["Not bad for an ugly worm."]
     },
