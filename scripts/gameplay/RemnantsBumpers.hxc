@@ -35,8 +35,10 @@ class RemnantsBumpers extends Module
     public var week2List:Array<String> = ["spookeez", "south", "monster"];
     public var week3List:Array<String> = ["pico", "philly-nice", "blammed"];
     public var week4List:Array<String> = ["satin-panties", "high", "milf"];
-    public var week5List:Array<String> = ["cocoa", "eggnog", "winter-horrorland"];
-    public var week6List:Array<String> = ["senpai", "roses", "thorns"];
+    public var week5List:Array<String> = ["cocoa", "eggnog"];
+    public var week5ListScary:Array<String> = ["winter-horrorland"];
+    public var week6List:Array<String> = ["senpai", "roses"];
+    public var week6ListScary:Array<String> = ["thorns"];
     public var week7List:Array<String> = ["ugh", "guns", "stress"];
     public var weekend1List:Array<String> = ["darnell", "lit-up", "2hot", "blazin"];
     public var weeks:Map<String, Array<String>> = [
@@ -48,7 +50,9 @@ class RemnantsBumpers extends Module
         "week5" => week5List,
         "week6" => week6List,
         "week7" => week7List,
-        "weekend1" => weekend1List
+        "weekend1" => weekend1List,
+        "week5-scary" => week5ListScary,
+        "week6-scary" => week6ListScary
     ];
 
     public function new()
@@ -58,19 +62,23 @@ class RemnantsBumpers extends Module
 
     /**
      * Sets up the bumper and plays it ONLY if the conditions allows it.
-     * The bumper should only play if the current song is the first one of the current week.
-     * Otherwise it will just skip the function entirely.
+     * Condition 1: The song must be the first one the user plays of the current week.
+     * Condition 2: The current week has changed.
+     * Condition 3: There's a bumper to play.
+     * If any of those checks fail, the bumper will not play.
+     * Really proud of this - Honton129
      */
     public function setupBumper():Bool
     {
         var songLowercase = PlayState.instance.currentSong.id.toLowerCase();
-
         currentWeek = getWeek(songLowercase);
         lastWeek = getWeek(lastSong);
         hasChangedWeek();
-        
+
         setIsFirstOfWeek();
 
+        // Prevent the bumper from playing if there's no video.
+        if (getWeek(songLowercase) == null) return false;
         if (isFirstOfWeek && !playedBumper)
         {
             VideoCutscene.play(Paths.videos(currentWeek));
@@ -148,15 +156,7 @@ class RemnantsBumpers extends Module
                     return weekName + "-bf";
                 }
                 else
-                {
-                    switch (song)
-                    {
-                        case 'winter-horrorland', 'thorns':
-                            return weekName + "-scary";
-                        default:
-                            return weekName;
-                    }
-                }
+                    return weekName;
             }
         }
         return null;
