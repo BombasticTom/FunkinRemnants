@@ -151,7 +151,7 @@ class RemnantsBumpers extends Module
                 {
                     switch (song)
                     {
-                        case 'thorns':
+                        case 'winter-horrorland', 'thorns':
                             return weekName + "-scary";
                         default:
                             return weekName;
