@@ -1,60 +1,98 @@
 {
+  "version": "1.0.2",
+  "name": "Spooky Mansion (Remnants)",
+  "cameraZoom": 0.75,
   "props": [
     {
-      "name": "solid",
-      "assetPath": "#242336",
-      "position": [-300, -500],
-      "scroll": [1, 1],
-      "scale": [2400, 2000],
-      "zIndex": -500
+      "name": "sky",
+      "assetPath": "#FFFFFF",
+      "position": [1046, -121],
+      "scroll": [0.9, 0.9],
+      "scale": [650, 500],
+      "color": "#000000",
+      "zIndex": 1
     },
     {
-      "danceEvery": 0,
-      "zIndex": -100,
-      "position": [-200, -100],
-      "scale": [1, 1],
-      "animType": "sparrow",
-      "name": "halloweenBG",
-      "isPixel": false,
-      "startingAnimation": "idle",
-      "assetPath": "stages/week2Remnants/spookyMansion",
+      "name": "mansionNormal",
+      "assetPath": "stages/week2Remnants/Mansion",
+      "position": [-715, -140],
       "scroll": [1, 1],
-      "animations": [
-        {
-          "offsets": [0, 0],
-          "flipY": false,
-          "frameRate": 24,
-          "prefix": "idle0",
-          "looped": true,
-          "flipX": false,
-          "name": "idle"
-        },
-        {
-          "offsets": [0, 0],
-          "flipY": false,
-          "frameRate": 24,
-          "prefix": "lightning0",
-          "flipX": false,
-          "name": "lightning"
-        }
-      ]
+      "zIndex": 2
+    },
+    {
+      "name": "mansionThunder",
+      "assetPath": "stages/week2Remnants/Mansion-Lightning",
+      "position": [-715, -140],
+      "scroll": [1, 1],
+      "alpha": 0.0001,
+      "zIndex": 2
+    },
+    {
+      "name": "paintingNormal",
+      "assetPath": "stages/week2Remnants/Painting",
+      "position": [-716, -55],
+      "scroll": [1, 1],
+      "zIndex": 3
+    },
+    {
+      "name": "paintingThunder",
+      "assetPath": "stages/week2Remnants/Painting-Lightning",
+      "position": [-716, -55],
+      "scroll": [1, 1],
+      "alpha": 0.0001,
+      "zIndex": 3
+    },
+    {
+      "name": "coatNormal",
+      "assetPath": "stages/week2Remnants/Coat",
+      "position": [-757, 76],
+      "scroll": [1.05, 1.05],
+      "zIndex": 400,
+      "scale": 1.05
+    },
+    {
+      "name": "coatThunder",
+      "assetPath": "stages/week2Remnants/Coat-Lightning",
+      "position": [-757, 76],
+      "scroll": [1.05, 1.05],
+      "alpha": 0.0001,
+      "zIndex": 400,
+      "scale": 1.05
+    },
+    {
+      "name": "cabinetNormal",
+      "assetPath": "stages/week2Remnants/Cabinet",
+      "position": [1576, 674],
+      "scroll": [1.1, 1.1],
+      "zIndex": 400,
+      "scale": 1.1
+    },
+    {
+      "name": "cabinetThunder",
+      "assetPath": "stages/week2Remnants/Cabinet-Lightning",
+      "position": [1576, 674],
+      "scroll": [1.1, 1.1],
+      "alpha": 0.0001,
+      "scale": 1.1,
+      "zIndex": 400
     }
   ],
-  "cameraZoom": 1.0,
-  "version": "1.0.0",
   "characters": {
     "bf": {
-      "zIndex": 200,
-      "position": [989.5, 885],
-      "cameraOffsets": [-100, -100]
+      "cameraOffsets": [-100, -100],
+      "position": [985.5, 887],
+      "zIndex": 300
     },
-    "gf": { "zIndex": 100, "position": [751.5, 787], "cameraOffsets": [0, 0] },
     "dad": {
-      "zIndex": 200,
-      "position": [382, 831],
-      "cameraOffsets": [150, -100]
+      "cameraOffsets": [100, -20],
+      "position": [200, 877],
+      "zIndex": 200
+    },
+    "gf": {
+      "cameraOffsets": [0, 0],
+      "position": [620.5, 812],
+      "zIndex": 100
     }
   },
-  "name": "Spooky Mansion [Remnants]",
   "directory": "week2"
 }
