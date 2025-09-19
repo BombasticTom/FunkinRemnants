@@ -25,6 +25,16 @@ class RemnantsBumpers extends Module
     public var currentWeek:String = '';
 
     /**
+     * What was the last variation played?
+     */
+    public var lastVariation:String = '';
+
+    /**
+     * What's the current variation being played?
+     */
+    public var currentVariation:String = '';
+
+    /**
      * Is the current song the first one being played on the week?
      */
     public var isFirstOfWeek:Bool = null;
@@ -71,8 +81,11 @@ class RemnantsBumpers extends Module
     public function setupBumper():Bool
     {
         var songLowercase = PlayState.instance.currentSong.id.toLowerCase();
-        currentWeek = getWeek(songLowercase);
-        lastWeek = getWeek(lastSong);
+        currentVariation = getVariation();
+        lastVariation = getVariation();
+
+        currentWeek = getWeek(songLowercase, currentVariation);
+        lastWeek = getWeek(lastSong, lastVariation);
         hasChangedWeek();
 
         setIsFirstOfWeek();
@@ -113,7 +126,10 @@ class RemnantsBumpers extends Module
      */
     public function setIsFirstOfWeek()
     {
-        isFirstOfWeek = (currentWeek != null && currentWeek != lastWeek);
+        if (currentWeek != null && currentVariation != null)
+        {
+            isFirstOfWeek = (currentWeek != lastWeek || currentVariation != lastVariation);
+        }
     }
 
     /**
@@ -131,9 +147,28 @@ class RemnantsBumpers extends Module
      */
     public function hasChangedWeek()
     {
-        if (currentWeek != null && currentWeek != lastWeek)
+        if (currentWeek != null && currentVariation != null)
         {
-            playedBumper = false;
+            if (currentWeek != lastWeek || currentVariation != lastVariation)
+            {
+                playedBumper = false;
+            }
+        }
+    }
+
+    /**
+     * Get's the current song variation.
+     */
+    function getVariation():String
+    {
+        switch (PlayState.instance.currentVariation)
+        {
+            case 'bfremnants':
+                return '-bf';
+            case '', 'default':
+                return '';
+            default:
+                return '';
         }
     }
 
@@ -143,7 +178,7 @@ class RemnantsBumpers extends Module
      * This is also used for get the bumper video path.
      * @param song Song to check.
      */
-    function getWeek(song:String):String
+    function getWeek(song:String, variation:String):String
     {
         if (song == null || song == '') return null;
         for (weekName in weeks.keys())
@@ -151,12 +186,7 @@ class RemnantsBumpers extends Module
             var songs = weeks[weekName];
             if (songs.contains(song))
             {
-                if (PlayState.instance.currentVariation == 'bfremnants')
-                {
-                    return weekName + "-bf";
-                }
-                else
-                    return weekName;
+                return weekName + variation;
             }
         }
         return null;
