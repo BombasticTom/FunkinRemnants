@@ -2,6 +2,7 @@
   "version": "2.2.4",
   "songName": "Spookeez (Remnants Mix)",
   "artist": "ame.",
+  "charter": "RhysRJJ + Sammy The Goog",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -10,32 +11,26 @@
     "vocals": {    },
     "altVocals": {    }
   },
-  "charter": "RhysRJJ",
   "playData": {
     "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "spooky-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [
-        "pico",
-        ""
-      ]
+      "altInstrumentals": ["pico", ""],
+      "opponentVocals": ["spooky-remnants"],
+      "playerVocals": ["bf-remnants"]
     },
     "stage": "spookyMansionRemnants",
     "noteStyle": "funkin",
-    "ratings": { "easy": 1, "normal": 2, "hard": 3 },
+    "ratings": { "easy": 1, "normal": 1,"hard": 2 },
     "album": "remnants-week2",
     "previewStart": 0,
     "previewEnd": 15000
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.2",
+  "generatedBy": "Friday Night Funkin' - v0.7.5",
   "timeFormat": "ms",
   "timeChanges": [
     {
