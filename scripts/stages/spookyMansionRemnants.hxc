@@ -18,6 +18,13 @@ class SpookyMansionRemnantsStage extends Stage
 	var lightningStrikeBeat:Int = 0;
 	var lightningStrikeOffset:Int = 8;
 	var halloweenWhite:FunkinSprite;
+	var stopThunders:Bool = false;
+
+	function onCreate(event:ScriptEvent):Void
+	{
+		super.onCreate(event);
+		stopThunders = false;
+	}
 
 	override function buildStage()
 	{
@@ -53,9 +60,9 @@ class SpookyMansionRemnantsStage extends Stage
 		getNamedProp('coatThunder').alpha = 1;
 		getNamedProp('cabinetThunder').alpha = 1;
 
-		getGirlfriend().color = 0xFF000000;
-		getBoyfriend().color = 0xFF000000;
-		getDad().color = 0xFF000000;
+		getGirlfriend().alpha = 1;
+		getBoyfriend().alpha = 1;
+		getDad().alpha = 1;
 
 		new FlxTimer().start(0.06, _ -> {
 			getNamedProp('sky').color = 0xFF000000;
@@ -64,9 +71,9 @@ class SpookyMansionRemnantsStage extends Stage
 			getNamedProp('coatThunder').alpha = 0;
 			getNamedProp('cabinetThunder').alpha = 0;
 
-			getGirlfriend().color = 0xFFFFFFFF;
-			getBoyfriend().color = 0xFFFFFFFF;
-			getDad().color = 0xFFFFFFFF;
+			getGirlfriend().alpha = 0;
+			getBoyfriend().alpha = 0;
+			getDad().alpha = 0;
 		});
 
 		new FlxTimer().start(0.12, _ -> {
@@ -76,9 +83,9 @@ class SpookyMansionRemnantsStage extends Stage
 			getNamedProp('coatThunder').alpha = 1;
 			getNamedProp('cabinetThunder').alpha = 1;
 
-			getGirlfriend().color = 0xFF000000;
-			getBoyfriend().color = 0xFF000000;
-			getDad().color = 0xFF000000;
+			getGirlfriend().alpha = 1;
+			getBoyfriend().alpha = 1;
+			getDad().alpha = 1;
 
 			FlxTween.color(getNamedProp('sky'), 1.5, 0xFFFFFFFF, 0xFF000000);
 			FlxTween.tween(getNamedProp('mansionThunder'), {alpha: 0}, 1.5);
@@ -86,9 +93,9 @@ class SpookyMansionRemnantsStage extends Stage
 			FlxTween.tween(getNamedProp('coatThunder'), {alpha: 0}, 1.5);
 			FlxTween.tween(getNamedProp('cabinetThunder'), {alpha: 0}, 1.5);
 
-			FlxTween.color(getGirlfriend(), 1, 0xFF000000, 0xFFFFFFFF);
-			FlxTween.color(getBoyfriend(), 1, 0xFF000000, 0xFFFFFFFF);
-			FlxTween.color(getDad(), 1, 0xFF000000, 0xFFFFFFFF);
+			FlxTween.tween(getGirlfriend(), {alpha: 0}, 1.5);
+			FlxTween.tween(getBoyfriend(), {alpha: 0}, 1.5);
+			FlxTween.tween(getDad(), {alpha: 0}, 1.5);
 		});
 
 		lightningStrikeBeat = beat;
@@ -105,6 +112,15 @@ class SpookyMansionRemnantsStage extends Stage
 		}
 
 		triggerLightningHaptics();
+	}
+
+	function onSongStart(event:ScriptEvent):Void
+	{
+		super.onSongStart(event);
+
+		getBoyfriend().alpha = 0;
+		getGirlfriend().alpha = 0;
+		getDad().alpha = 0;
 	}
 
 	var doPostShockHaptics:Bool = false;
@@ -133,10 +149,33 @@ class SpookyMansionRemnantsStage extends Stage
 		super.onBeatHit(event);
 
 		// Play lightning at random intervals.
-		if (FlxG.random.bool(10) && event.beat > (lightningStrikeBeat + lightningStrikeOffset))
+		if (FlxG.random.bool(10) && event.beat > (lightningStrikeBeat + lightningStrikeOffset) && !stopThunders)
 		{
 			doLightningStrike(true, event.beat);
 		}
+
+		if (PlayState.instance.currentSong != null)
+		{
+			if (event.beat == 144 && PlayState.instance.currentSong.id == "spookeez")
+			{
+				stopThunders = true;
+				changeAmbiance(true, 0.5);
+			}
+		}
+	}
+
+	function changeAmbiance(goDark:Bool, duration:Float)
+	{
+		if (duration == null) duration = 1;
+		var targetAlpha:Float = goDark ? 1 : 0;
+		FlxTween.tween(getGirlfriend(), {alpha: targetAlpha}, duration);
+		FlxTween.tween(getBoyfriend(), {alpha: targetAlpha}, duration);
+		FlxTween.tween(getDad(), {alpha: targetAlpha}, duration);
+
+		FlxTween.tween(getNamedProp('mansionThunder'), {alpha: targetAlpha}, duration);
+		FlxTween.tween(getNamedProp('paintingThunder'), {alpha: targetAlpha}, duration);
+		FlxTween.tween(getNamedProp('coatThunder'), {alpha: targetAlpha}, duration);
+		FlxTween.tween(getNamedProp('cabinetThunder'), {alpha: targetAlpha}, duration);
 	}
 
 	var postShockCounter:Int = 0;
@@ -161,6 +200,12 @@ class SpookyMansionRemnantsStage extends Stage
 		}
 	}
 
+	function onGameOver(event:ScriptEvent)
+	{
+		super.onGameOver(event);
+		stopThunders = true;
+	}
+
 	function onSongRetry(event:ScriptEvent)
 	{
 		super.onSongRetry(event);
@@ -168,5 +213,6 @@ class SpookyMansionRemnantsStage extends Stage
 		// Properly reset lightning when restarting the song.
 		lightningStrikeBeat = 0;
 		lightningStrikeOffset = 8;
+		stopThunders = false;
 	}
 }

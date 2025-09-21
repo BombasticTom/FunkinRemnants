@@ -15,9 +15,9 @@
     "songVariations": [    ],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-      "player": "bf-remnants",
-      "girlfriend": "gf-remnants",
-      "opponent": "spooky-remnants",
+      "player": "bf-remnants-dark",
+      "girlfriend": "gf-remnants-dark",
+      "opponent": "spooky-remnants-dark",
       "instrumental": "remnants",
       "altInstrumentals": ["pico", ""],
       "opponentVocals": ["spooky-remnants"],

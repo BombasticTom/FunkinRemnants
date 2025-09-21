@@ -1,0 +1,98 @@
+{
+  "version": "1.0.0",
+  "name": "Remnants BF (Dark)",
+  "renderType": "multisparrow",
+  "assetPath": "characters/bf-remnants_dark",
+  "flipX": true,
+  "singTime": 8.0,
+  "healthIcon": {
+    "id": "bf-remnants"
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "BF idle dance",
+      "offsets": [4, 9]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "BF NOTE LEFT0",
+      "offsets": [14, 3]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "BF NOTE DOWN0",
+      "offsets": [-11, -43]
+    },
+    {
+      "name": "singUP",
+      "prefix": "BF NOTE UP0",
+      "offsets": [-30, 36]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "BF NOTE RIGHT0",
+      "offsets": [-39, 2]
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "BF NOTE LEFT MISS",
+      "offsets": [14, 19]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "BF NOTE DOWN MISS",
+      "offsets": [-13, -22]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "BF NOTE UP MISS",
+      "offsets": [-37, 36]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "BF NOTE RIGHT MISS",
+      "offsets": [-38, 21]
+    },
+    {
+      "name": "hey",
+      "prefix": "BF HEY!!",
+      "offsets": [6, 14]
+    },
+    {
+      "name": "cheer",
+      "prefix": "Boyfriend YEAH cheer",
+      "offsets": [-11, 39]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "BF dies",
+      "assetPath": "characters/bf-remnants",
+      "offsets": [23, 11]
+    },
+    {
+      "name": "fakeoutDeath",
+      "prefix": "BF dies",
+      "assetPath": "characters/bf-remnants",
+      "offsets": [23, 11]
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "BF Dead Loop",
+      "looped": true,
+      "assetPath": "characters/bf-remnants",
+      "offsets": [23, 4]
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "BF Dead confirm",
+      "assetPath": "characters/bf-remnants",
+      "offsets": [22, 67]
+    },
+    {
+      "name": "scared",
+      "prefix": "BF idle shaking",
+      "offsets": [3, 9]
+    }
+  ]
+}

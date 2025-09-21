@@ -23,7 +23,7 @@
       "name": "sad",
       "prefix": "gf sad0",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "offsets": [2, -21]
+      "offsets": [-2, -21]
     },
     {
       "name": "singLEFT",
@@ -33,7 +33,7 @@
     {
       "name": "singDOWN",
       "prefix": "GF Down Note0",
-      "offsets": [0, -20]
+      "offsets": [0, -21]
     },
     {
       "name": "singUP",
@@ -59,13 +59,13 @@
       "name": "drop70",
       "prefix": "gf sad0",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      "offsets": [2, -21]
+      "offsets": [-2, -21]
     },
     {
       "name": "hairBlow",
       "prefix": "GF Dancing Beat Hair blowing0",
       "frameIndices": [0, 1, 2, 3],
-      "offsets": [45, -8]
+      "offsets": [45, -9]
     },
     {
       "name": "hairFall",
@@ -76,7 +76,7 @@
     {
       "name": "scared",
       "prefix": "GF FEAR0",
-      "offsets": [-2, -17]
+      "offsets": [-2, -16]
     }
   ]
 }

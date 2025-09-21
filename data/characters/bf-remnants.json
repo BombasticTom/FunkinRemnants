@@ -143,12 +143,12 @@
       "name": "deathLoop",
       "prefix": "BF Dead Loop",
       "looped": true,
-      "offsets": [23, 5]
+      "offsets": [23, 4]
     },
     {
       "name": "deathConfirm",
       "prefix": "BF Dead confirm",
-      "offsets": [23, 69]
+      "offsets": [22, 67]
     },
     {
       "name": "scared",

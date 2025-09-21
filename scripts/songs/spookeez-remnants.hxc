@@ -11,7 +11,6 @@ import funkin.audio.FunkinSound;
 
 class SpookeezRemnantsMixSong extends Song
 {
-
 	var black:FunkinSprite;
 	var white:FunkinSprite;
 	var fadeBlackTween:FlxTween;
@@ -48,13 +47,13 @@ class SpookeezRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-if (fadeBlackTween != null) fadeBlackTween.cancel();
-if (fadeWhiteTween != null) fadeWhiteTween.cancel();
-if (hudTween != null) hudTween.cancel();
+		if (fadeBlackTween != null) fadeBlackTween.cancel();
+		if (fadeWhiteTween != null) fadeWhiteTween.cancel();
+		if (hudTween != null) hudTween.cancel();
 
-black.alpha = 1.0;
-white.alpha = 0;
-PlayState.instance.camHUD.alpha = 0;
+		black.alpha = 1.0;
+		white.alpha = 0;
+		PlayState.instance.camHUD.alpha = 0;
 
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
@@ -63,8 +62,10 @@ PlayState.instance.camHUD.alpha = 0;
     }
   }
 
-	function onCreate()
+	function onCreate(event:ScriptEvent):Void
 	{
+		super.onCreate(event);
+
 		black = new FunkinSprite(-20, -20);
 		black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
 		black.cameras = [PlayState.instance.camCutscene];
@@ -95,7 +96,7 @@ PlayState.instance.camHUD.alpha = 0;
 				fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 0.4, {ease: FlxEase.linear});
 
 			case 144:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.5, {ease: FlxEase.linear});
+				fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
 				fadeWhiteTween = FlxTween.tween(white, {alpha: 1.0}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
   				fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
 				}});

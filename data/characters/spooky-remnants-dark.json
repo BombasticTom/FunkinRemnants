@@ -1,48 +1,51 @@
 {
   "version": "1.0.0",
-  "name": "Remnants Spooky Kids",
-  "assetPath": "characters/spooky-remnants",
+  "name": "Remnants Spooky Kids (Dark)",
+  "assetPath": "characters/spooky-remnants_dark",
   "singTime": 8.0,
   "startingAnimation": "danceRight",
+  "healthIcon": {
+    "id": "spooky-remnants"
+  },
   "animations": [
     {
       "name": "danceLeft",
       "prefix": "Idle",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
       "frameRate": 24,
-      "offsets": [0, 0]
+      "offsets": [9, 9]
     },
     {
       "name": "danceRight",
       "prefix": "Idle",
       "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
       "frameRate": 24,
-      "offsets": [0, 0]
+      "offsets": [9, 9]
     },
     {
       "name": "singLEFT",
       "prefix": "SingLeft",
-      "offsets": [121, -14]
+      "offsets": [130, -5]
     },
     {
       "name": "singDOWN",
       "prefix": "SingDown",
-      "offsets": [-50, -144]
+      "offsets": [-50, -135]
     },
     {
       "name": "singUP",
       "prefix": "SingUp",
-      "offsets": [-20, 24]
+      "offsets": [-20, 33]
     },
     {
       "name": "singRIGHT",
       "prefix": "SingRight",
-      "offsets": [-142, -14]
+      "offsets": [-138, -6]
     },
     {
       "name": "cheer",
       "prefix": "Cheer",
-      "offsets": [54, 24]
+      "offsets": [54, 33]
     }
   ]
 }
