@@ -95,10 +95,10 @@ PlayState.instance.camHUD.alpha = 0;
 				fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 0.4, {ease: FlxEase.linear});
 
 			case 144:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.5, {ease: FlxEase.linear});
 				fadeWhiteTween = FlxTween.tween(white, {alpha: 1.0}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
   				fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
 				}});
+				fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.0001, {ease: FlxEase.instant});
 
 			case 240:
 				black.alpha = 1.0;
