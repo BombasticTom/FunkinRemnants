@@ -169,7 +169,7 @@ class SpookyMansionRemnantsStage extends Stage
 					case 32:
 						changeAmbiance(true, 0.0001);
 					case 62:
-						fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
+						// fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
 					case 64:
 						changeAmbiance(false, 1);
 					case 96:
