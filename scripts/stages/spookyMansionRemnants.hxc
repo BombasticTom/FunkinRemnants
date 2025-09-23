@@ -1,4 +1,5 @@
 import flixel.FlxG;
+import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import funkin.audio.FunkinSound;
 import funkin.graphics.FunkinSprite;
@@ -18,29 +19,28 @@ class SpookyMansionRemnantsStage extends Stage
 	var lightningStrikeBeat:Int = 0;
 	var lightningStrikeOffset:Int = 8;
 	var halloweenWhite:FunkinSprite;
+
+	// These are similar but are used for different things.
+	var wentDark:Bool = false;
 	var stopThunders:Bool = false;
 
 	function onCreate(event:ScriptEvent):Void
 	{
 		super.onCreate(event);
 		stopThunders = false;
+
+		halloweenWhite = new FunkinSprite(-20, -20);
+		halloweenWhite.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
+		halloweenWhite.cameras = [PlayState.instance.camCutscene];
+		PlayState.instance.add(halloweenWhite);
+		halloweenWhite.alpha = 0.0001;
+		halloweenWhite.blend = 0;
 	}
 
 	override function buildStage()
 	{
 		super.buildStage();
 		getNamedProp('sky').color = 0xFF000000;
-		
-		var gameScale = FullScreenScaleMode.wideScale;
-
-		halloweenWhite = new FunkinSprite();
-		halloweenWhite.makeSolidColor(gameScale.x * 2, gameScale.y * 2, 0xFFFFFFFF);
-		halloweenWhite.alpha = 0.00001;
-		halloweenWhite.zIndex = 500;
-		halloweenWhite.blend = 0;
-
-		PlayState.instance.currentStage.add(halloweenWhite);
-		PlayState.instance.currentStage.refresh();
 	}
 
 	function doLightningStrike(playSound:Bool, beat:Int):Void
@@ -50,33 +50,8 @@ class SpookyMansionRemnantsStage extends Stage
 			FunkinSound.playOnce(Paths.soundRandom('thunder_', 1, 2), 1.0);
 		}
 
-		halloweenWhite.alpha = 0.4;
-		FlxTween.tween(halloweenWhite, {alpha: 0.5}, 0.075);
-		FlxTween.tween(halloweenWhite, {alpha: 0}, 0.25, {startDelay: 0.15});
-
-		getNamedProp('sky').color = 0xFFFFFFFF;
-		getNamedProp('mansionThunder').alpha = 1;
-		getNamedProp('paintingThunder').alpha = 1;
-		getNamedProp('coatThunder').alpha = 1;
-		getNamedProp('cabinetThunder').alpha = 1;
-
-		getGirlfriend().alpha = 1;
-		getBoyfriend().alpha = 1;
-		getDad().alpha = 1;
-
-		new FlxTimer().start(0.06, _ -> {
-			getNamedProp('sky').color = 0xFF000000;
-			getNamedProp('mansionThunder').alpha = 0;
-			getNamedProp('paintingThunder').alpha = 0;
-			getNamedProp('coatThunder').alpha = 0;
-			getNamedProp('cabinetThunder').alpha = 0;
-
-			getGirlfriend().alpha = 0;
-			getBoyfriend().alpha = 0;
-			getDad().alpha = 0;
-		});
-
-		new FlxTimer().start(0.12, _ -> {
+		if (!wentDark)
+		{
 			getNamedProp('sky').color = 0xFFFFFFFF;
 			getNamedProp('mansionThunder').alpha = 1;
 			getNamedProp('paintingThunder').alpha = 1;
@@ -87,16 +62,57 @@ class SpookyMansionRemnantsStage extends Stage
 			getBoyfriend().alpha = 1;
 			getDad().alpha = 1;
 
-			FlxTween.color(getNamedProp('sky'), 1.5, 0xFFFFFFFF, 0xFF000000);
-			FlxTween.tween(getNamedProp('mansionThunder'), {alpha: 0}, 1.5);
-			FlxTween.tween(getNamedProp('paintingThunder'), {alpha: 0}, 1.5);
-			FlxTween.tween(getNamedProp('coatThunder'), {alpha: 0}, 1.5);
-			FlxTween.tween(getNamedProp('cabinetThunder'), {alpha: 0}, 1.5);
+			new FlxTimer().start(0.06, _ -> {
+				getNamedProp('sky').color = 0xFF000000;
+				getNamedProp('mansionThunder').alpha = 0;
+				getNamedProp('paintingThunder').alpha = 0;
+				getNamedProp('coatThunder').alpha = 0;
+				getNamedProp('cabinetThunder').alpha = 0;
 
-			FlxTween.tween(getGirlfriend(), {alpha: 0}, 1.5);
-			FlxTween.tween(getBoyfriend(), {alpha: 0}, 1.5);
-			FlxTween.tween(getDad(), {alpha: 0}, 1.5);
-		});
+				getGirlfriend().alpha = 0;
+				getBoyfriend().alpha = 0;
+				getDad().alpha = 0;
+			});
+
+			new FlxTimer().start(0.12, _ -> {
+				getNamedProp('sky').color = 0xFFFFFFFF;
+				getNamedProp('mansionThunder').alpha = 1;
+				getNamedProp('paintingThunder').alpha = 1;
+				getNamedProp('coatThunder').alpha = 1;
+				getNamedProp('cabinetThunder').alpha = 1;
+
+				getGirlfriend().alpha = 1;
+				getBoyfriend().alpha = 1;
+				getDad().alpha = 1;
+
+				FlxTween.color(getNamedProp('sky'), 1.5, 0xFFFFFFFF, 0xFF000000);
+				FlxTween.tween(getNamedProp('mansionThunder'), {alpha: 0}, 1.5);
+				FlxTween.tween(getNamedProp('paintingThunder'), {alpha: 0}, 1.5);
+				FlxTween.tween(getNamedProp('coatThunder'), {alpha: 0}, 1.5);
+				FlxTween.tween(getNamedProp('cabinetThunder'), {alpha: 0}, 1.5);
+
+				FlxTween.tween(getGirlfriend(), {alpha: 0}, 1.5);
+				FlxTween.tween(getBoyfriend(), {alpha: 0}, 1.5);
+				FlxTween.tween(getDad(), {alpha: 0}, 1.5);
+			});
+		}
+		else // Only flash the sky
+		{
+			getNamedProp('sky').color = 0xFFFFFFFF;
+
+			halloweenWhite.alpha = 0.3;
+			FlxTween.tween(halloweenWhite, {alpha: 0.4}, 0.075);
+			FlxTween.tween(halloweenWhite, {alpha: 0}, 0.25, {startDelay: 0.15, ease: FlxEase.quadInOut});
+
+			new FlxTimer().start(0.06, _ -> {
+				getNamedProp('sky').color = 0xFF000000;
+			});
+
+			new FlxTimer().start(0.12, _ -> {
+				getNamedProp('sky').color = 0xFFFFFFFF;
+				FlxTween.color(getNamedProp('sky'), 1.5, 0xFFFFFFFF, 0xFF000000);
+			});
+		}
 
 		lightningStrikeBeat = beat;
 		lightningStrikeOffset = FlxG.random.int(8, 24);
@@ -114,9 +130,9 @@ class SpookyMansionRemnantsStage extends Stage
 		triggerLightningHaptics();
 	}
 
-	function onSongStart(event:ScriptEvent):Void
+	public override function onCountdownStart(event:CountdownScriptEvent):Void
 	{
-		super.onSongStart(event);
+		super.onCountdownStart(event);
 
 		getBoyfriend().alpha = 0;
 		getGirlfriend().alpha = 0;
@@ -151,14 +167,16 @@ class SpookyMansionRemnantsStage extends Stage
 		// Play lightning at random intervals.
 		if (FlxG.random.bool(10) && event.beat > (lightningStrikeBeat + lightningStrikeOffset) && !stopThunders)
 		{
-			doLightningStrike(true, event.beat);
+			var leBeat = event.beat;
+			new FlxTimer().start(0.1, _ -> {
+				doLightningStrike(true, leBeat);
+			});
 		}
 
 		if (PlayState.instance.currentSong != null)
 		{
 			if (event.beat == 144 && PlayState.instance.currentSong.id == "spookeez")
 			{
-				stopThunders = true;
 				changeAmbiance(true, 0.5);
 			}
 
@@ -168,22 +186,10 @@ class SpookyMansionRemnantsStage extends Stage
 				{
 					case 32:
 						changeAmbiance(true, 0.0001);
-					case 62:
-						// fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
 					case 64:
 						changeAmbiance(false, 1);
 					case 96:
-						//fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1, {ease: FlxEase.linear});
-					case 123:
-						//fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
-					case 128:
-						//fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1, {ease: FlxEase.linear});
-					case 155:
-						//fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
-					case 158:
-						//fadeBlackTween = FlxTween.tween(black, {alpha: 0.9}, 0.7, {ease: FlxEase.linear});
-					case 160:
-						//fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.0001, {ease: FlxEase.instant});
+						changeAmbiance(true, 1);
 					case 192:
 						changeAmbiance(false, 1);
 					case 222:
@@ -197,6 +203,8 @@ class SpookyMansionRemnantsStage extends Stage
 	{
 		if (duration == null) duration = 1;
 		var targetAlpha:Float = goDark ? 1 : 0;
+		wentDark = goDark;
+
 		FlxTween.tween(getGirlfriend(), {alpha: targetAlpha}, duration);
 		FlxTween.tween(getBoyfriend(), {alpha: targetAlpha}, duration);
 		FlxTween.tween(getDad(), {alpha: targetAlpha}, duration);
