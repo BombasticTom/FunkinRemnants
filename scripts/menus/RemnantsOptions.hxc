@@ -1,0 +1,49 @@
+import flixel.FlxG;
+import funkin.modding.module.Module;
+import funkin.ui.options.OptionsState;
+import funkin.util.ReflectUtil;
+
+class RemnantsOptions extends Module
+{
+	public function new() {
+		super('RemnantsOptions');
+	}
+
+	override function onUpdate(event:UpdateScriptEvent)
+    {
+		super.onUpdate(event);
+
+        // Default the option to true if null.
+		if (FlxG.save.data.bumpers == null) FlxG.save.data.bumpers = true;
+	}
+
+    // Constants to prevent long code...
+    var OPTION_NAME:String = "Show Remnants Bumpers";
+    var OPTION_DESC:String = "If disabled, Remnants bumpers will no longer show.";
+
+	/**
+	 * Custom Option Injection.
+	 */
+	public function onStateChangeEnd(event:StateChangeScriptEvent)
+    {
+		if (Std.isOfType(event.targetState, OptionsState))
+        {
+			if (event.targetState.optionsCodex.pages.get("preferences") != null)
+            {
+				event.targetState.optionsCodex.pages.get("preferences").createPrefItemEnum(OPTION_NAME, OPTION_DESC,
+                [
+                    'Yes' => true,
+                    'No' => false
+                ],
+                function(value:String, oValue:String):Void {
+                    FlxG.save.data.bumpers = value;
+                    FlxG.save.data.flush;
+                }, FlxG.save.data.bumpers);
+			}
+		}
+	}
+
+	public function getBumperOption():Bool {
+		return FlxG.save.data.bumpers;
+	}
+}

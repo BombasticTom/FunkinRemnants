@@ -1,4 +1,5 @@
 import funkin.play.PlayState;
+import funkin.modding.module.ModuleHandler;
 import funkin.play.cutscene.VideoCutscene;
 import funkin.modding.module.Module;
 
@@ -92,6 +93,10 @@ class RemnantsBumpers extends Module
 
         // Prevent the bumper from playing if there's no video.
         if (getWeek(songLowercase) == null) return false;
+
+        // Prevent the bumper from playing if the option is set to off.
+        if (!ModuleHandler.getModule('RemnantsOptions').scriptCall('getBumperOption')) return false;
+
         if (isFirstOfWeek && !playedBumper)
         {
             VideoCutscene.play(Paths.videos(currentWeek));
