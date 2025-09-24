@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Remnants Spirit",
-  "assetPath": "characters/spirit",
+  "assetPath": "characters/spirit-remnants",
   "singTime": 8.0,
   "renderType": "packer",
   "isPixel": true,
