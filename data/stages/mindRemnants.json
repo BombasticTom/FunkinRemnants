@@ -19,7 +19,7 @@
         -1100,
         -600
       ],
-      "scale": 1,
+      "scale": 1.5,
       "scroll": [
         0.4,
         0.4
@@ -66,7 +66,7 @@
       "isPixel": false,
       "name": "Reflection",
       "position": [
-        -1172,
+        -1200,
         -651
       ],
       "scale": 1,
@@ -80,7 +80,7 @@
     {
       "name": "Corrupted BF",
       "assetPath": "stages/soulRemnants/corrupt",
-      "position": [500, -50],
+      "position": [485, -50],
       "scale": [1.5, 1.5],
       "zIndex": 40,
       "blend": "multiply",
@@ -93,7 +93,7 @@
     {
        "name": "Static",
       "assetPath": "stages/soulRemnants/static",
-      "position": [-1235, -1000],
+      "position": [-1275, -975],
       "scale": [1, 1],
       "zIndex": 50,
       "scroll": [0.8, 0.8],
@@ -116,7 +116,7 @@
       "isPixel": false,
       "name": "BGStatic",
       "position": [
-        -1065,
+        -1165,
         -575
       ],
       "scale": 1,
@@ -137,7 +137,7 @@
         -200
       ],
       "position": [
-        1213.5,
+        1113.5,
         915
       ],
       "scale": 1,
@@ -155,7 +155,7 @@
         -200
       ],
       "position": [
-        400,
+        300,
         900
       ],
       "scale": 1,
@@ -173,7 +173,7 @@
         0
       ],
       "position": [
-        676.5,
+        576.5,
         777
       ],
       "scale": 1,
