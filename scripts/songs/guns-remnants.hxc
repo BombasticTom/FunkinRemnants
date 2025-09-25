@@ -23,6 +23,11 @@ class GunsRemnantsMixSong extends Song
   var hasPlayedInGameCutscene:Bool;
   var isMobilePauseButtonPressed:Bool = false;
   var enableSkip:Bool = false;
+  var black:FunkinSprite;
+  var white:FunkinSprite;
+  var fadeBlackTween:FlxTween;
+  var fadeWhiteTween:FlxTween;
+  var hudTween:FlxTween;
 
   public function new()
   {
@@ -55,6 +60,14 @@ class GunsRemnantsMixSong extends Song
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
+
+	if (fadeBlackTween != null) fadeBlackTween.cancel();
+	if (fadeWhiteTween != null) fadeWhiteTween.cancel();
+	if (hudTween != null) hudTween.cancel();
+
+	black.alpha = 0;
+	white.alpha = 0;
+	hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
 
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
@@ -107,6 +120,16 @@ class GunsRemnantsMixSong extends Song
     cutsceneSkipped = false;
     canSkipCutscene = false;
     startedTalking = false;
+
+    black = new FunkinSprite(-20, -20);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(black);
+
+    white = new FunkinSprite(-20, -20);
+    white.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
+    white.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(white);
   }
 
   var startedTalking:Bool = false;
@@ -386,4 +409,46 @@ class GunsRemnantsMixSong extends Song
       PlayState.instance.mayPauseGame = true;
     });
   }
+
+function onBeatHit(event:ScriptEvent):Void
+{
+	super.onBeatHit(event);
+
+	switch (event.beat)
+	{		
+		case 31:
+			fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 0.25, {ease: FlxEase.linear});
+
+		case 32:
+			fadeWhiteTween = FlxTween.tween(white, {alpha: 1.0}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+  			fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
+			}});
+			fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 0.0001, {ease: FlxEase.instant});
+			PlayState.instance.camHUD.alpha = 1;
+
+		case 127:
+			fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 0.25, {ease: FlxEase.linear});
+
+		case 128:
+			fadeWhiteTween = FlxTween.tween(white, {alpha: 1.0}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+  			fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
+			}});
+			fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 0.0001, {ease: FlxEase.instant});
+
+		case 223:
+			fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 0.25, {ease: FlxEase.linear});
+
+		case 224:
+			fadeWhiteTween = FlxTween.tween(white, {alpha: 1.0}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+  			fadeWhiteTween = FlxTween.tween(white, {alpha: 0.05}, 2.6, {ease: FlxEase.linear});
+			}});
+			fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 0.0001, {ease: FlxEase.instant});
+
+		case 285:
+			fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 1, {ease: FlxEase.smoothStepInOut});
+
+		case 425:
+			fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 5, {ease: FlxEase.linear});
+		}
+	}
 }

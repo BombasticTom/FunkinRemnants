@@ -2,7 +2,8 @@
   "version": "2.2.4",
   "songName": "Guns (Remnants Mix)",
   "artist": "Zara",
-  "charter": "RhysRJJ + Sammy The Goog",
+  "charter": "Sammy The Goog + RhysRJJ",
+  "divisions": 96,
   "looped": false,
   "offsets": {
     "instrumental": 0,
@@ -12,33 +13,24 @@
   },
   "playData": {
     "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-tankmen-remnants",
       "opponent": "tankman-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [
-        "pico",
-        ""
-      ]
+      "altInstrumentals": ["pico", ""],
+      "opponentVocals": ["tankman-remnants"],
+      "playerVocals": ["bf-remnants"]
     },
     "stage": "tankmanBattlefieldRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 4,
-      "normal": 5,
-      "hard": 5
-    },
+    "ratings": { "easy": 5, "normal": 6, "hard": 7 },
     "album": "remnants-week7",
     "previewStart": 0,
     "previewEnd": 15000
   },
-  "generatedBy": "Friday Night Funkin' - v0.6.4",
+  "generatedBy": "Friday Night Funkin' - v0.7.5",
   "timeFormat": "ms",
   "timeChanges": [
     {
