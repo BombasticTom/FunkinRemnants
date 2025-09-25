@@ -130,6 +130,10 @@ class GunsRemnantsMixSong extends Song
     white.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
     white.cameras = [PlayState.instance.camCutscene];
     PlayState.instance.add(white);
+
+    black.alpha = 0.0;
+    white.alpha = 0.0;
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   var startedTalking:Bool = false;
@@ -203,8 +207,6 @@ class GunsRemnantsMixSong extends Song
     PlayState.instance.togglePauseButton();
     PlayState.instance.isInCutscene = true;
     PlayState.instance.mayPauseGame = false;
-
-    PlayState.instance.camHUD.visible = false;
 
     PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
     PlayState.instance.currentStage.getGirlfriend().animation.curAnim.curFrame = 14;
@@ -363,8 +365,6 @@ class GunsRemnantsMixSong extends Song
 
     new FlxTimer().start(0.5, _ ->
     {
-      PlayState.instance.camHUD.visible = true;
-
       if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
       PlayState.instance.currentStage.getGirlfriend().dance(true);
       PlayState.instance.currentStage.getDad().visible = true;
@@ -399,8 +399,7 @@ class GunsRemnantsMixSong extends Song
       remnantsTimerManager?.clear();
 
       PlayState.instance.justUnpaused = true;
-      PlayState.instance.tweenCameraZoom(0.86, 2, true, FlxEase.sineInOut);
-      PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.sineInOut);
+      PlayState.instance.tweenCameraZoom(0.86, 1.5, true, FlxEase.sineInOut);
       PlayState.instance.isInCutscene = false;
       PlayState.instance.startCountdown();
 
