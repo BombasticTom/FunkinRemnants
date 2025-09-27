@@ -78,39 +78,51 @@ class SoutRemnantsMixSong extends Song
 		{
 			case 30:
 				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1.0}, 0.7, {ease: FlxEase.linear});
+
 			case 32:
 				fadeWhiteTween = FlxTween.tween(white, {alpha: 1.0}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
 					fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
 				}});
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 0.0001, {ease: FlxEase.instant});
+
 			case 62:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
-			case 64:
+
+			case 64: 
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 1, {ease: FlxEase.linear});
+
 			case 96:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1, {ease: FlxEase.linear});
+
 			case 123:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
+
 			case 128:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1, {ease: FlxEase.linear});
+
 			case 155:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
+
 			case 158:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.9}, 0.7, {ease: FlxEase.linear});
+
 			case 160:
 				fadeWhiteTween = FlxTween.tween(white, {alpha: 1.0}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
 					fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
 				}});
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.0001, {ease: FlxEase.instant});
+
 			case 192:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 1, {ease: FlxEase.linear});
+
 			case 222:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.3, {ease: FlxEase.linear});
+				fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
+
 			case 224:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
+
 			case 239:
 				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
 		}
 	}
 }
-

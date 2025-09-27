@@ -5,9 +5,11 @@ import funkin.graphics.FunkinSprite;
 import funkin.modding.module.ModuleHandler;
 import funkin.audio.FunkinSound;
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
 import funkin.Preferences;
 import funkin.save.Save;
+import flixel.FlxG;
 
 class RosesRemnantsMixSong extends Song
 {
@@ -31,6 +33,8 @@ class RosesRemnantsMixSong extends Song
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
+
+    PlayState.instance.camHUD.alpha = 0;
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
@@ -113,5 +117,25 @@ class RosesRemnantsMixSong extends Song
   {
     // We may need to wait for the outro to play.
     Countdown.performCountdown();
+}
+
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+      case 14:
+	      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
+
+      case 192:
+	       var red = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFFFF1B31);
+               red.cameras = [PlayState.instance.camCutscene];
+               PlayState.instance.add(red);
+               red.alpha = 0.0;
+
+               FlxTween.tween(red, {alpha: 1}, 1, {ease: FlxEase.linear});
+    }
   }
 }

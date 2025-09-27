@@ -51,6 +51,7 @@ class PhillyNiceRemnantsMixSong extends Song
   function onBeatHit(event:ScriptEvent):Void
   {
     super.onBeatHit(event);
+
     if (event.beat == 352)
     {
       fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 3, {ease: FlxEase.linear});

@@ -45,6 +45,11 @@ class SenpaiRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
+    if (PlayState.instance.camHUD.alpha < 1)
+    {
+     FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.linear});
+    }
+
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedDialogue) hasPlayedDialogue = true;
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
@@ -82,6 +87,7 @@ class SenpaiRemnantsMixSong extends Song
 
     PlayState.instance.disableKeys = true;
 
+    PlayState.instance.camHUD.visible = false;
     PlayState.instance.camCutscene.visible = true;
 
     var black:FlxSprite = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
@@ -120,6 +126,7 @@ class SenpaiRemnantsMixSong extends Song
   function startDialogue()
   {
     PlayState.instance.disableKeys = false;
+    PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.startConversation('senpai-remnants');
   }
 

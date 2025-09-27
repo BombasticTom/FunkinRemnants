@@ -23,14 +23,14 @@ class TormentorSong extends Song
 		super('tormentor');
 	}
 
-	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+{
+	if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
 	{
-		if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
-		{
-			return !Save.instance.hasBeatenSong(this.id, null, '');
-		}
-		return false;
+		return !Save.instance.hasBeatenSong(this.id, null, '');
 	}
+	return false;
+}
 
 	function onCreate()
 	{
@@ -47,14 +47,15 @@ class TormentorSong extends Song
 		if (fadeBlackTween != null) fadeBlackTween.cancel();
 		if (hudTween != null) hudTween.cancel();
 
-		black.alpha = 1.0;
+		black.alpha = 1;
 		PlayState.instance.camHUD.alpha = 0;
 	}
 
 	function onSongStart(event:ScriptEvent):Void
 	{
 		super.onSongStart(event);
-		fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 3, {ease: FlxEase.linear});
+
+		fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 3, {ease: FlxEase.linear});
 	}
 
 	function onBeatHit(event:ScriptEvent):Void
@@ -64,14 +65,14 @@ class TormentorSong extends Song
 		switch (event.beat)
 		{
 			case 14:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 0.1, {ease: FlxEase.linear});
+				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.1, {ease: FlxEase.linear});
 			
 			case 16:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 0.1, {ease: FlxEase.linear});
-				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1.0}, 0.1, {ease: FlxEase.linear});
+				fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.1, {ease: FlxEase.linear});
+				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.1, {ease: FlxEase.linear});
 
 			case 320:
-				fadeBlackTween = fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 0.0001, {ease: FlxEase.linear});
+				fadeBlackTween = fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.0001, {ease: FlxEase.linear});
 		}
 	}
 }

@@ -25,10 +25,10 @@ class SpookeezRemnantsMixSong extends Song
       });
 	}
 
-  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
-  {
-    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
-    return false;
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+	{
+		if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+		return false;
 	}
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
@@ -43,15 +43,15 @@ class SpookeezRemnantsMixSong extends Song
     if (hasBeatenRemnantsMix) return results;
   }
 
-  function onCountdownStart(event:ScriptEvent):Void
-  {
-    super.onCountdownStart(event);
+	function onCountdownStart(event:ScriptEvent):Void
+	{
+		super.onCountdownStart(event);
 
 		if (fadeBlackTween != null) fadeBlackTween.cancel();
 		if (fadeWhiteTween != null) fadeWhiteTween.cancel();
 		if (hudTween != null) hudTween.cancel();
 
-		black.alpha = 1.0;
+		black.alpha = 1;
 		white.alpha = 0;
 		PlayState.instance.camHUD.alpha = 0;
 
@@ -80,7 +80,8 @@ class SpookeezRemnantsMixSong extends Song
 	function onSongStart(event:ScriptEvent):Void
 	{
 		super.onSongStart(event);
-		fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 3, {ease: FlxEase.linear});
+
+		fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 3, {ease: FlxEase.linear});
 	}
 
 	function onBeatHit(event:ScriptEvent):Void
@@ -90,21 +91,20 @@ class SpookeezRemnantsMixSong extends Song
 		switch (event.beat)
 		{
 			case 15:
-				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1.0}, 0.5, {ease: FlxEase.linear});
-			
+				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+
 			case 143:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 0.4, {ease: FlxEase.linear});
+				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.4, {ease: FlxEase.linear});
 
 			case 144:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
-				fadeWhiteTween = FlxTween.tween(white, {alpha: 1.0}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
-  				fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
+				fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+  					fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
 				}});
-				fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.0001, {ease: FlxEase.instant});
+				black.alpha = 0;
 
 			case 240:
-				black.alpha = 1.0;
-				FunkinSound.playOnce(Paths.soundRandom('thunder_', 1, 2), 1.0);
+				black.alpha = 1;
+				FunkinSound.playOnce(Paths.soundRandom('thunder_', 1, 2), 1);
 		}
 	}
 }

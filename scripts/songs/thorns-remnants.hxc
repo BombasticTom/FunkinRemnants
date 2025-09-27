@@ -9,11 +9,18 @@ import funkin.play.song.Song;
 import funkin.play.PlayState;
 import funkin.util.Constants;
 import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxG;
 
 class ThornsRemnantsMixSong extends Song
 {
   var bgSprite:FunkinSprite;
   var hasPlayedDialogue:Bool;
+  var black:FunkinSprite;
+  var white:FunkinSprite;
+  var fadeBlackTween:FlxTween;
+  var fadeWhiteTween:FlxTween;
 
   public function new()
   {
@@ -33,6 +40,17 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (fadeWhiteTween != null) fadeWhiteTween.cancel();
+
+    black.alpha = 0;
+    white.alpha = 0;
+
+    if (PlayState.instance.camHUD.alpha < 1)
+    {
+     FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.7, {ease: FlxEase.linear});
+    }
+    
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedDialogue) hasPlayedDialogue = true;
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
@@ -157,6 +175,7 @@ class ThornsRemnantsMixSong extends Song
   function startDialogue()
   {
     PlayState.instance.disableKeys = false;
+    PlayState.instance.camHUD.alpha = 0;
     var targetDialogue = 'thorns-remnants';
 
     trace('Playing dialogue...');
@@ -180,6 +199,18 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
+    black = new FunkinSprite(-20, -20);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(black);
+    black.alpha = 0;
+
+    white = new FunkinSprite(-20, -20);
+    white.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
+    white.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(white);
+    white.alpha = 0;
+
     hasPlayedDialogue = false;
   }
 
@@ -187,5 +218,43 @@ class ThornsRemnantsMixSong extends Song
   {
     // We may need to wait for the outro to play.
     Countdown.performCountdown();
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+      case 0:
+	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.smoothStepInOut});
+
+      case 28:
+	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1.25, {ease: FlxEase.smoothStepOut});
+
+      case 32:
+	       fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+  		fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+	       }});
+	       black.alpha = 0;
+
+      case 96:
+	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.sineOut});
+
+      case 127:
+	      fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.3, {ease: FlxEase.backIn});
+
+      case 256:
+	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1, {ease: FlxEase.sineOut});
+
+      case 320:
+	       fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+  		fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+	       }});
+	       black.alpha = 0;
+
+      case 384:
+	       black.alpha = 1;
+    }
   }
 }
