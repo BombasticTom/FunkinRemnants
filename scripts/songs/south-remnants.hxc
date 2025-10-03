@@ -67,6 +67,7 @@ class SoutRemnantsMixSong extends Song
 	function onSongStart(event:ScriptEvent):Void
 	{
 		super.onSongStart(event);
+
 		fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 5, {ease: FlxEase.linear});
 	}
 

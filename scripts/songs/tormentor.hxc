@@ -23,9 +23,9 @@ class TormentorSong extends Song
 		super('tormentor');
 	}
 
-public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
-{
-	if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+	{
+		if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
 	{
 		return !Save.instance.hasBeatenSong(this.id, null, '');
 	}
