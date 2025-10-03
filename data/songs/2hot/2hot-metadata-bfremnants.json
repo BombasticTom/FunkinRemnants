@@ -1,7 +1,7 @@
 {
   "version": "2.2.4",
   "songName": "2hot (BF Remnants Mix)",
-  "artist": "Zero",
+  "artist": "Zerolnx (ft. katsuki)",
   "charter": "Sammy The Goog",
   "divisions": 96,
   "looped": false,
@@ -13,33 +13,19 @@
   },
   "playData": {
     "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "darnell-remnants",
       "instrumental": "bfremnants",
-      "altInstrumentals": [
-        ""
-      ],
-      "opponentVocals": [
-        "darnell-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "altInstrumentals": [""],
+      "opponentVocals": ["darnell-remnants"],
+      "playerVocals": ["bf-remnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 3,
-      "normal": 4,
-      "hard": 5
-    },
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
     "album": "remnants-weekend1-bf",
     "previewStart": 0,
     "previewEnd": 15000
