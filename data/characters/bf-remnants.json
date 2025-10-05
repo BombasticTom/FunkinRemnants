@@ -59,7 +59,7 @@
     {
       "name": "attack",
       "prefix": "boyfriend attack",
-      "offsets": [298, 264]
+      "offsets": [298, 274]
     },
     {
       "name": "dodge",
