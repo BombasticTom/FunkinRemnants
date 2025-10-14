@@ -13,7 +13,9 @@
       "girlfriend": "gf-remnants",
       "opponent": "darnell-remnants",
       "instrumental": "bfremnants",
-      "altInstrumentals": []
+      "altInstrumentals": [
+        ""
+      ]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
