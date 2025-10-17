@@ -1,23 +1,28 @@
 {
-  "version": "1.0.0",
-  "name": "Pico (Blazin') [Remnants]",
-  "assetPath": "shared:characters/picoBlazinRemnants",
-  "healthIcon": {
-    "id": "pico-remnants"
-  },
-  "flipX": true,
-  "renderType": "animateatlas",
-  "singTime": 999.0,
-  "death": {
-    "preTransitionDelay": 0.125,
-    "cameraOffsets": [1700, 1550],
-    "cameraZoom": 0.8
-  },
-  "animations": [
+	"version": "1.0.0",
+	"name": "Boyfriend (Blazin') [Remnants]",
+	"assetPath": "shared:characters/bfBlazinRemnants",
+	"healthIcon": {
+		"id": "bf-remnants"
+	},
+	"flipX": true,
+	"renderType": "animateatlas",
+	"singTime": 999.0,
+	"death": {
+		"preTransitionDelay": 0.125,
+		"cameraOffsets": [1700, 1550],
+		"cameraZoom": 0.8
+	},
+	"animations": [
     {
       "name": "idle",
       "prefix": "Idle",
       "looped": true,
+      "offsets": [0, 0]
+    },
+    {
+      "name": "hey",
+      "prefix": "Hey",
       "offsets": [0, 0]
     },
     {
@@ -103,21 +108,61 @@
       "looped": true,
       "offsets": [0, 0]
     },
-    {
-      "name": "firstDeath",
-      "prefix": "Low Death Intro",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "deathLoop",
-      "prefix": "Low Death Loop",
-      "looped": true,
-      "offsets": [0, 0]
-    },
-    {
-      "name": "deathConfirm",
-      "prefix": "Low Death Confirm",
-      "offsets": [0, 0]
-    }
-  ]
+		{
+			"name": "singLEFT",
+			"prefix": "Left",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "singRIGHT",
+			"prefix": "Right",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "singUP",
+			"prefix": "Up",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "singDOWN",
+			"prefix": "Down",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "singLEFT-dodge",
+			"prefix": "Left Dodge",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "singRIGHT-dodge",
+			"prefix": "Right Dodge",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "singUP-dodge",
+			"prefix": "Up Dodge",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "singDOWN-dodge",
+			"prefix": "Down Dodge",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "firstDeath",
+			"prefix": "Low Death Intro",
+			"offsets": [0, 0]
+		},
+		{
+			"name": "deathLoop",
+			"prefix": "Low Death Loop",
+			"looped": true,
+			"offsets": [0, 0]
+		},
+		{
+			"name": "deathConfirm",
+			"prefix": "Low Death Confirm",
+			"offsets": [0, 0]
+		}
+	]
 }
