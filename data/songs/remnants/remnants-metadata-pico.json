@@ -20,15 +20,9 @@
     "characters": {
       "player": "pico-default-remnants",
       "girlfriend": "podium-girls",
-      "opponent": "bf-remnants-opponent",
+      "opponent": "pico-remnants",
       "instrumental": "pico",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "pico-remnants-opponent-remnants"
-      ],
-      "playerVocals": [
-        "pico-remnants"
-      ]
+      "altInstrumentals": [""]
     },
     "stage": "sketchRemnants",
     "noteStyle": "funkin",
