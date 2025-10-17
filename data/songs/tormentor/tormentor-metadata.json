@@ -2,27 +2,49 @@
   "version": "2.2.4",
   "songName": "Tormentor (Remnants Mix)",
   "artist": "FellowDesert51 (ft. kuronamii)",
-  "charter": "Plush",
+  "charter": "Plush + Sammy The Goog",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
   "playData": {
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "songVariations": [    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants-mind",
-      "opponent": "soul-remnants"
+      "girlfriend": "",
+      "opponent": "soul-remnants",
+      "instrumental": "",
+      "altInstrumentals": [      ],
+      "opponentVocals": ["soul-remnants"],
+      "playerVocals": ["bf-remnants-mind"]
     },
     "stage": "mindRemnants",
     "noteStyle": "corruption",
-    "ratings": {"easy": 4, "normal": 6, "hard": 8},
+    "ratings": { "easy": 2, "normal": 3, "hard": 4 },
+    "album": "remnants-corruption",
     "previewStart": 0,
-    "previewEnd": 11600,
-    "album": "remnants-corruption"
+    "previewEnd": 11600
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.3",
+  "generatedBy": "Friday Night Funkin' - v0.7.5",
   "timeFormat": "ms",
   "timeChanges": [
-    { "t": 0, "b": 0, "bpm": 165, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 165,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
   ]
 }

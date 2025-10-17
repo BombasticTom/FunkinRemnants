@@ -32,23 +32,30 @@ class TormentorSong extends Song
 	return false;
 }
 
-	function onCreate()
+	function onCreate(event:ScriptEvent):Void
 	{
+		super.onCreate(event);
+
 		black = new FunkinSprite(-20, -20);
 		black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
 		black.cameras = [PlayState.instance.camCutscene];
 		PlayState.instance.add(black);
+		black.alpha = 1;
+
+		PlayState.instance.camHUD.alpha = 0;
+    		PlayState.instance.disableKeys = true;
 	}
 
-	function onCountdownStart(event:ScriptEvent):Void
+	function onSongRetry(event:ScriptEvent)
 	{
-		super.onCountdownStart(event);
+		super.onSongRetry(event);
 
 		if (fadeBlackTween != null) fadeBlackTween.cancel();
 		if (hudTween != null) hudTween.cancel();
 
 		black.alpha = 1;
 		PlayState.instance.camHUD.alpha = 0;
+		PlayState.instance.disableKeys = true;
 	}
 
 	function onSongStart(event:ScriptEvent):Void
@@ -71,8 +78,11 @@ class TormentorSong extends Song
 				fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.1, {ease: FlxEase.linear});
 				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.1, {ease: FlxEase.linear});
 
+    				PlayState.instance.disableKeys = false;
+
 			case 320:
-				fadeBlackTween = fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.0001, {ease: FlxEase.linear});
+				black.alpha = 1;
+		  		PlayState.instance.disableKeys = true;
 		}
 	}
 }
