@@ -2,6 +2,7 @@
   "version": "2.2.4",
   "songName": "Remnants! (Pico Mix)",
   "artist": "LunarzNova",
+  "charter": "TRWario",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -22,11 +23,18 @@
       "girlfriend": "podium-girls",
       "opponent": "pico-remnants",
       "instrumental": "pico",
-      "altInstrumentals": [""]
+      "altInstrumentals": [
+        ""
+      ],
+      "opponentVocals": [
+        "pico-remnants"
+      ],
+      "playerVocals": [
+        "pico-default-remnants"
+      ]
     },
     "stage": "sketchRemnants",
     "noteStyle": "funkin",
-    "stickerPack": "remnants-test",
     "ratings": {
       "easy": 4,
       "hard": 7,
@@ -36,7 +44,7 @@
     "previewStart": 0,
     "previewEnd": 14000
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.4",
+  "generatedBy": "Friday Night Funkin' - v0.7.5",
   "timeFormat": "ms",
   "timeChanges": [
     {
