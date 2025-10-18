@@ -52,6 +52,30 @@
       "offsets": [-40, 21]
     },
     {
+      "name": "singLEFT-censor",
+      "prefix": "bf swear left0",
+      "assetPath": "characters/bf-remnants_Censored",
+      "offsets": [5, -6]
+    },
+    {
+      "name": "singDOWN-censor",
+      "prefix": "bf swear down0",
+      "assetPath": "characters/bf-remnants_Censored",
+      "offsets": [-20, -52]
+    },
+    {
+      "name": "singUP-censor",
+      "prefix": "bf swear up0",
+      "assetPath": "characters/bf-remnants_Censored",
+      "offsets": [-39, 27]
+    },
+    {
+      "name": "singRIGHT-censor",
+      "prefix": "bf swear right0",
+      "assetPath": "characters/bf-remnants_Censored",
+      "offsets": [-48, -7]
+    },
+    {
       "name": "preAttack",
       "prefix": "bf pre attack",
       "offsets": [-32, -38]
