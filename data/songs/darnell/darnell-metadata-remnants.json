@@ -23,10 +23,7 @@
       "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [
-        "bf",
-        ""
-      ]
+      "altInstrumentals": ["bf", "", "bfremnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
