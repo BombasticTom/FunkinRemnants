@@ -24,7 +24,7 @@
       "opponent": "pico-remnants",
       "instrumental": "pico",
       "altInstrumentals": [
-        ""
+        "default"
       ],
       "opponentVocals": [
         "pico-remnants"
