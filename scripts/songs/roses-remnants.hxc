@@ -34,8 +34,6 @@ class RosesRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    PlayState.instance.camHUD.alpha = 0;
-
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
 
@@ -101,6 +99,7 @@ class RosesRemnantsMixSong extends Song
     super.onSongRetry(event);
 
     hasPlayedCutscene = true;
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   /**
@@ -111,6 +110,7 @@ class RosesRemnantsMixSong extends Song
     super.onCreate(event);
 
     hasPlayedCutscene = false;
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   public override function onDialogueEnd()

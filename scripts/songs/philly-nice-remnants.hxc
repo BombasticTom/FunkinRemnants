@@ -26,20 +26,20 @@ class PhillyNiceRemnantsMixSong extends Song
     return false;
 	}
 
-  function onCreate()
+  function onCreate(event:ScriptEvent):Void
   {
+    super.onCreate(event);
+
     black = new FunkinSprite(-20, -20);
     black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
     black.cameras = [PlayState.instance.camCutscene];
     PlayState.instance.add(black);
+    black.alpha = 0;
   }
 
   function onCountdownStart(event:ScriptEvent):Void
   {
     super.onCountdownStart(event);
-
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
-    black.alpha = 0.0;
 
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
@@ -48,13 +48,21 @@ class PhillyNiceRemnantsMixSong extends Song
     }
   }
 
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    black.alpha = 0;
+  }
+
   function onBeatHit(event:ScriptEvent):Void
   {
     super.onBeatHit(event);
 
     if (event.beat == 352)
     {
-      fadeBlackTween = FlxTween.tween(black, {alpha: 1.0}, 3, {ease: FlxEase.linear});
+      fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 3, {ease: FlxEase.linear});
     }
   }
 }

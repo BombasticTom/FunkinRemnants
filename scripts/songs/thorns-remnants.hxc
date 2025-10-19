@@ -40,12 +40,6 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
-    if (fadeWhiteTween != null) fadeWhiteTween.cancel();
-
-    black.alpha = 0;
-    white.alpha = 0;
-
     if (PlayState.instance.camHUD.alpha < 1)
     {
      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.7, {ease: FlxEase.linear});
@@ -190,6 +184,12 @@ class ThornsRemnantsMixSong extends Song
     super.onSongRetry(event);
 
     hasPlayedDialogue = true;
+
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (fadeWhiteTween != null) fadeWhiteTween.cancel();
+
+    black.alpha = 0;
+    white.alpha = 0;
   }
 
   /**
@@ -233,8 +233,7 @@ class ThornsRemnantsMixSong extends Song
 	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1.25, {ease: FlxEase.smoothStepOut});
 
       case 32:
-	       fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
-  		fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+	       fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
 	       }});
 	       black.alpha = 0;
 
@@ -248,8 +247,7 @@ class ThornsRemnantsMixSong extends Song
 	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1, {ease: FlxEase.sineOut});
 
       case 320:
-	       fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
-  		fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+	       fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
 	       }});
 	       black.alpha = 0;
 
