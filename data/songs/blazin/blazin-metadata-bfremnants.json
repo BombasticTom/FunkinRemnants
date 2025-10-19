@@ -1,0 +1,55 @@
+{
+  "version": "2.2.4",
+  "songName": "Blazin' (BF Remnants Mix)",
+  "artist": "Zara",
+  "charter": "Plush",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
+    "characters": {
+      "player": "bf-remnants-blazin",
+      "girlfriend": "gf-remnants",
+      "opponent": "darnell-remnants-blazin",
+      "instrumental": "bfremnants"
+    },
+    "stage": "phillyBlazinRemnants",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 8,
+      "normal": 11,
+      "hard": 13
+    },
+    "album": "remnants-weekend1-bf",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.7.3",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 180,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}
