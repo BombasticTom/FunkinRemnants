@@ -12,7 +12,7 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": [    ],
+    "songVariations": [],
     "difficulties": [
       "easy",
       "normal",
@@ -20,9 +20,16 @@
     ],
     "characters": {
       "player": "bf-remnants-blazin",
-      "girlfriend": "gf-remnants",
+      "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants-blazin",
-      "instrumental": "bfremnants"
+      "instrumental": "bfremnants",
+      "altInstrumentals": [],
+      "opponentVocals": [
+        "darnell-remnants-blazin"
+      ],
+      "playerVocals": [
+        "bf-remnants-blazin"
+      ]
     },
     "stage": "phillyBlazinRemnants",
     "noteStyle": "funkin",
@@ -35,7 +42,7 @@
     "previewStart": 0,
     "previewEnd": 15000
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.3",
+  "generatedBy": "Friday Night Funkin' - v0.7.5",
   "timeFormat": "ms",
   "timeChanges": [
     {
@@ -44,12 +51,7 @@
       "bpm": 180,
       "n": 4,
       "d": 4,
-      "bt": [
-        4,
-        4,
-        4,
-        4
-      ]
+      "bt": [4, 4, 4, 4]
     }
   ]
 }
