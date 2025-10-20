@@ -1,8 +1,17 @@
 import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 
 class RemnantsPicoSong extends Song
 {
+	var black:FunkinSprite;
+	var fadeBlackTween:FlxTween;
+	var hudTween:FlxTween;
+
 	function new()
 	{
 		super('remnants',
@@ -26,4 +35,48 @@ class RemnantsPicoSong extends Song
 		var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
 		if (hasBeatenRemnantsMix) return results;
 	}
+
+	function onCreate(event:ScriptEvent):Void
+	{
+		super.onCreate(event);
+
+		black = new FunkinSprite(-20, -20);
+		black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+		black.cameras = [PlayState.instance.camCutscene];
+		PlayState.instance.add(black);
+
+		black.alpha = 0;
+		PlayState.instance.camHUD.alpha = 0;
+	}
+
+	function onSongRetry(event:ScriptEvent)
+	{
+		super.onSongRetry(event);
+
+		if (fadeBlackTween != null) fadeBlackTween.cancel();
+		if (hudTween != null) hudTween.cancel();
+
+		black.alpha = 0;
+		PlayState.instance.camHUD.alpha = 0;
+	}
+
+	function onBeatHit(event:ScriptEvent):Void
+	{
+		super.onBeatHit(event);
+
+		switch (event.beat)
+		{
+			case 12:
+				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.7, {ease: FlxEase.linear});
+
+			case 192:
+				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 6.8, {ease: FlxEase.linear});
+
+			case 223:
+				fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.4, {ease: FlxEase.quartIn});
+
+			case 288:
+				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.7, {ease: FlxEase.linear});
+		}
+  	}
 }

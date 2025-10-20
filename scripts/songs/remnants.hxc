@@ -1,8 +1,17 @@
 import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 
 class RemnantsSong extends Song
 {
+	var black:FunkinSprite;
+	var fadeBlackTween:FlxTween;
+	var hudTween:FlxTween;
+
 	function new()
 	{
 		super('remnants');
@@ -38,4 +47,42 @@ class RemnantsSong extends Song
 		// Hide all difficulties if the player has not beaten the week.
 		return [];
 	}
+
+	function onCreate(event:ScriptEvent):Void
+	{
+		super.onCreate(event);
+
+		black = new FunkinSprite(-20, -20);
+		black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+		black.cameras = [PlayState.instance.camCutscene];
+		PlayState.instance.add(black);
+
+		black.alpha = 0;
+		PlayState.instance.camHUD.alpha = 0;
+	}
+
+	function onSongRetry(event:ScriptEvent)
+	{
+		super.onSongRetry(event);
+
+		if (fadeBlackTween != null) fadeBlackTween.cancel();
+		if (hudTween != null) hudTween.cancel();
+
+		black.alpha = 0;
+		PlayState.instance.camHUD.alpha = 0;
+	}
+
+	function onBeatHit(event:ScriptEvent):Void
+	{
+		super.onBeatHit(event);
+
+		switch (event.beat)
+		{
+			case 14:
+				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.smootStepOut});
+
+			case 272:
+				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.7, {ease: FlxEase.linear});
+		}
+  	}
 }
