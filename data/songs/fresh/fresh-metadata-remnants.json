@@ -2,7 +2,7 @@
   "version": "2.2.4",
   "songName": "Fresh (Remnants Mix)",
   "artist": "fishgarden",
-  "charter": "fishgarden",
+  "charter": "fishgarden + Sammy The Goog",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -13,33 +13,19 @@
   },
   "playData": {
     "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "dad-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [
-        "default mix remnants cut"
-      ],
-      "opponentVocals": [
-        "dad-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "altInstrumentals": ["default mix remnants cut"],
+      "opponentVocals": ["dad-remnants"],
+      "playerVocals": ["bf-remnants"]
     },
     "stage": "mainStageRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 1,
-      "normal": 2,
-      "hard": 5
-    },
+    "ratings": { "easy": 5, "normal": 6, "hard": 7 },
     "album": "remnants-week1",
     "previewStart": 0,
     "previewEnd": 0

@@ -2,6 +2,7 @@
   "version": "2.2.4",
   "songName": "Bopeebo (Remnants Mix)",
   "artist": "Zero",
+  "charter": "President Barack Obama",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -12,28 +13,17 @@
   },
   "playData": {
     "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "dad-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [
-        "pico",
-        ""
-      ]
+      "altInstrumentals": ["pico", ""]
     },
     "stage": "mainStageRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 1,
-      "normal": 2,
-      "hard": 4
-    },
+    "ratings": { "easy": 1, "normal": 1, "hard": 2 },
     "album": "remnants-week1",
     "previewStart": 0,
     "previewEnd": 0
