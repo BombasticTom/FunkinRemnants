@@ -25,7 +25,7 @@
     },
     "stage": "spookyMansionRemnants",
     "noteStyle": "funkin",
-    "ratings": { "easy": 1, "normal": 1,"hard": 2 },
+    "ratings": { "easy": 1, "normal": 1, "hard": 2 },
     "album": "remnants-week2",
     "previewStart": 0,
     "previewEnd": 15000
