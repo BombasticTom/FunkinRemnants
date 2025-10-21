@@ -13,34 +13,19 @@
   },
   "playData": {
     "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "pico-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [
-        "pico",
-        ""
-      ],
-      "opponentVocals": [
-        "pico-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "altInstrumentals": ["pico", ""],
+      "opponentVocals": ["pico-remnants"],
+      "playerVocals": ["bf-remnants"]
     },
     "stage": "phillyTrainRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 4,
-      "normal": 6,
-      "hard": 7
-    },
+    "ratings": { "easy": 5, "normal": 6, "hard": 7 },
     "album": "remnants-week3",
     "previewStart": 0,
     "previewEnd": 15000
