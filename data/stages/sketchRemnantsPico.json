@@ -1,0 +1,56 @@
+{
+  "props": [
+    {
+      "name": "solid",
+      "assetPath": "#BBC7A7",
+      "position": [600, -1000],
+      "scroll": [0.975, 0.975],
+      "scale": [4000, 3000],
+      "zIndex": -500
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 20,
+      "position": [-1000, -600],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "frontSketch",
+      "isPixel": false,
+      "assetPath": "stages/sketchRemnantsPico/front",
+      "scroll": [0.975, 0.975],
+      "animations": []
+      },
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [-1000, -600],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "backSketch",
+      "isPixel": false,
+      "assetPath": "stages/sketchRemnantsPico/back",
+      "scroll": [0.9, 0.9],
+      "animations": []
+    }
+  ],
+  "cameraZoom": 0.725,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1089.5, 885],
+      "cameraOffsets": [-100, -100]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [135, 885],
+      "cameraOffsets": [150, -100]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [0, 0],
+      "position": [620, 747]
+    }
+  },
+  "name": "Sketch Stage (Pico)"
+}

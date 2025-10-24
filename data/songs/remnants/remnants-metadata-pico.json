@@ -33,7 +33,7 @@
         "pico-default-remnants"
       ]
     },
-    "stage": "sketchRemnants",
+    "stage": "sketchRemnantsPico",
     "noteStyle": "funkin",
     "ratings": {
       "easy": 4,
