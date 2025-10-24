@@ -140,6 +140,24 @@
       "offsets": [8, 188]
     },
     {
+      "name": "remnants",
+      "prefix": "BF funkin my remnants",
+      "assetPath": "characters/BFDarnellMix-remnants",
+      "offsets": [-5, 9]
+    },
+    {
+      "name": "sigma",
+      "prefix": "BF sigma",
+      "assetPath": "characters/BFDarnellMix-remnants",
+      "offsets": [-7, 5]
+    },
+    {
+      "name": "ligma",
+      "prefix": "BF ligma",
+      "assetPath": "characters/BFDarnellMix-remnants",
+      "offsets": [-12, 7]
+    },
+    {
       "name": "hit",
       "prefix": "BF hit",
       "assetPath": "characters/BOYFRIEND",
