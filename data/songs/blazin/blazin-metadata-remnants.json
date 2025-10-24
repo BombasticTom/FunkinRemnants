@@ -13,24 +13,18 @@
   },
   "playData": {
     "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "pico-remnants-blazin",
       "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants-blazin",
-      "instrumental": "remnants"
+      "instrumental": "remnants",
+      "opponentVocals": [],
+      "playerVocals": []
     },
     "stage": "phillyBlazinRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 8,
-      "normal": 11,
-      "hard": 13
-    },
+    "ratings": { "easy": 12, "normal": 13, "hard": 15 },
     "album": "remnants-weekend1",
     "previewStart": 0,
     "previewEnd": 15000
