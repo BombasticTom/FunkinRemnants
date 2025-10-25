@@ -35,9 +35,9 @@ class SketchRemnantsPicoStage extends Stage
     colorShaderDad = new AdjustColorShader();
     colorShaderGf = new AdjustColorShader();
 
-    colorShaderBf.brightness = 13;
+    colorShaderBf.brightness = -8;
     colorShaderBf.hue = -26;
-    colorShaderBf.contrast = -7;
+    colorShaderBf.contrast = 15;
     colorShaderBf.saturation = 5;
 
     colorShaderGf.brightness = -20;
@@ -48,7 +48,7 @@ class SketchRemnantsPicoStage extends Stage
     colorShaderDad.brightness = -33;
     colorShaderDad.hue = 0;
     colorShaderDad.contrast = -23;
-    colorShaderDad.saturation = 5;
+    colorShaderDad.saturation = 0;
 
   }
 
