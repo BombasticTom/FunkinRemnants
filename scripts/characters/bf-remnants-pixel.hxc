@@ -24,7 +24,7 @@ class BFRemnantsPixelCharacter extends MultiSparrowCharacter
 
 		// We use default, a custom one or the normal remnants theme?
 		// PauseSubState.musicSuffix = '-remnants-pixel';
-		PauseSubState.musicSuffix = '-remnants';
+		PauseSubState.musicSuffix = '-remnants-pixel';
 	}
 
 	function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
