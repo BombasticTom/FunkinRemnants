@@ -82,7 +82,7 @@ class RemnantsSong extends Song
 				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.smootStepOut});
 
 			case 272:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.7, {ease: FlxEase.linear});
+				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.00001, {ease: FlxEase.instant});
 		}
   	}
 }
