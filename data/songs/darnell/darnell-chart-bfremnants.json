@@ -265,7 +265,7 @@
       "e": "PlayAnimation",
       "v": {
 	"target": "boyfriend",
-	"force": true,
+	"force": false,
 	"anim": "sigma"
 }
     },
@@ -332,7 +332,7 @@
       "v": {
 	"target": "boyfriend",
 	"anim": "cheer",
-	"force": true
+	"force": false
 }
     },
     {
@@ -501,7 +501,7 @@
       "e": "PlayAnimation",
       "v": {
 	"target": "boyfriend",
-	"force": true,
+	"force": false,
 	"anim": "remnants"
 }
     },
@@ -715,7 +715,7 @@
       "e": "PlayAnimation",
       "v": {
 	"target": "boyfriend",
-	"force": true,
+	"force": false,
 	"anim": "ligma"
 }
     },
@@ -782,7 +782,7 @@
       "v": {
 	"target": "boyfriend",
 	"anim": "cheer",
-	"force": true
+	"force": false
 }
     },
     {
