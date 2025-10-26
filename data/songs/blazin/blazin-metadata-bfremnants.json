@@ -13,31 +13,19 @@
   },
   "playData": {
     "songVariations": [],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants-blazin",
       "girlfriend": "nene-remnants",
       "opponent": "darnell-remnants-blazin",
       "instrumental": "bfremnants",
       "altInstrumentals": [],
-      "opponentVocals": [
-        "darnell-remnants-blazin"
-      ],
-      "playerVocals": [
-        "bf-remnants-blazin"
-      ]
+      "opponentVocals": [],
+      "playerVocals": []
     },
     "stage": "phillyBlazinRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 8,
-      "normal": 11,
-      "hard": 13
-    },
+    "ratings": { "easy": 8, "normal": 11, "hard": 13 },
     "album": "remnants-weekend1-bf",
     "previewStart": 0,
     "previewEnd": 15000
