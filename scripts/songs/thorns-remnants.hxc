@@ -85,12 +85,12 @@ class ThornsRemnantsMixSong extends Song
     PlayState.instance.camHUD.visible = false;
     PlayState.instance.camCutscene.visible = true;
 
-    var red = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFFFFFFFF);
-    red.color = 0xFFFF1B31;
-    red.cameras = [PlayState.instance.camCutscene];
-    red.alpha = 1.0;
-    red.zIndex = -3;
-    PlayState.instance.add(red);
+    var darkness = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFFFFFFFF);
+    darkness.color = 0xFF000000;
+    darkness.cameras = [PlayState.instance.camCutscene];
+    darkness.alpha = 1.0;
+    darkness.zIndex = -3;
+    PlayState.instance.add(darkness);
 
     if (bgSprite != null)
     {
@@ -139,7 +139,7 @@ class ThornsRemnantsMixSong extends Song
           trace('Senpai death SFX done.');
           // Called when the sound completes. Clean up the cutscene here.
           // Hard cut to the cutscene.
-          PlayState.instance.remove(red);
+          PlayState.instance.remove(darkness);
 
           RetroCameraFade.fadeBlack(PlayState.instance.camCutscene, 6, 1.4);
           RetroCameraFade.fadeBlack(PlayState.instance.camGame, 6, 1.4);
@@ -153,7 +153,7 @@ class ThornsRemnantsMixSong extends Song
         new FlxTimer().start(3.2, function(deadTime:FlxTimer) {
           RetroCameraFade.fadeWhite(PlayState.instance.camCutscene, 8, 1.4);
           new FlxTimer().start(1.4, function(timer:FlxTimer) {
-            red.color = 0xFFFFFFFF;
+            darkness.color = 0xFFFFFFFF;
             PlayState.instance.remove(senpaiCrazy);
 
             PlayState.instance.camCutscene.filters = [];

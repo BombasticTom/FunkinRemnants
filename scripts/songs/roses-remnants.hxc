@@ -130,12 +130,12 @@ class RosesRemnantsMixSong extends Song
 	      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
 
       case 192:
-	       var red = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFFFF1B31);
-               red.cameras = [PlayState.instance.camCutscene];
-               PlayState.instance.add(red);
-               red.alpha = 0.0;
+	       var darkness = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
+               darkness.cameras = [PlayState.instance.camCutscene];
+               PlayState.instance.add(darkness);
+               darkness.alpha = 0.0;
 
-               FlxTween.tween(red, {alpha: 1}, 1, {ease: FlxEase.linear});
+               FlxTween.tween(darkness, {alpha: 1}, 1, {ease: FlxEase.linear});
     }
   }
 }
