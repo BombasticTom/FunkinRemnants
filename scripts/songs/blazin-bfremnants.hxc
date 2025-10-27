@@ -1,0 +1,156 @@
+import flixel.FlxG;
+import funkin.play.song.Song;
+import funkin.modding.module.ModuleHandler;
+import funkin.play.PlayState;
+import funkin.save.Save;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+
+/**
+ * Apply middlescroll to the song.
+ */
+class BlazinBFRemnantsMixSong extends Song
+{
+  var black:FunkinSprite;
+  var white:FunkinSprite;
+  var fadeBlackTween:FlxTween;
+  var fadeWhiteTween:FlxTween;
+  var hudTween:FlxTween;
+
+  public function new()
+  {
+    super('blazin',
+      {
+        variation: 'bfremnants'
+      });
+
+    this.hasHidden = false;
+    this.hasPlayedCutscene = false;
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    this.hasHidden = false;
+    this.hasPlayedCutscene = false;
+
+    black = new FunkinSprite(-1800, -500);
+    black.makeSolidColor(4200, 1800, 0xFF000000);
+    black.cameras = [PlayState.instance.camGame];
+    PlayState.instance.add(black);
+    black.alpha = 1;
+
+    white = new FunkinSprite(-1800, -500);
+    white.makeSolidColor(4200, 1800, 0xFFFFFFFF);
+    white.cameras = [PlayState.instance.camGame];
+    PlayState.instance.add(white);
+    white.alpha = 0;
+  }
+
+  function onDestroy(event:ScriptEvent):Void
+  {
+    super.onDestroy(event);
+
+    this.hasHidden = false;
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent):Void
+  {
+    super.onNoteHit(event);
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    return false;
+	}
+
+  var hasHidden = false;
+  var hasPlayedCutscene:Bool = false;
+
+  function onUpdate(event:ScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (!this.hasHidden)
+    {
+      this.hasHidden = true;
+      hideOpponentStrumline();
+      centerPlayerStrumline();
+    }
+  }
+
+  function hideOpponentStrumline()
+  {
+    var opponentStrumline:FlxSprite = PlayState.instance.opponentStrumline;
+    if (opponentStrumline != null)
+    {
+      for (arrow in opponentStrumline.members)
+      {
+        arrow.visible = false;
+      }
+    }
+  }
+
+  function centerPlayerStrumline()
+  {
+    // This is a song gimmick we are never making middlescroll an option.
+
+    var playerStrumline:FlxSprite = PlayState.instance.playerStrumline;
+    if (playerStrumline != null)
+    {
+      playerStrumline.x = FlxG.width / 2 - playerStrumline.width / 2;
+    }
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (fadeWhiteTween != null) fadeWhiteTween.cancel();
+    if (hudTween != null) hudTween.cancel();
+
+    black.alpha = 1;
+    white.alpha = 0;
+    PlayState.instance.camHUD.alpha = 1;
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 10.66, {ease: FlxEase.linear});
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+    case 32:
+             fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
+             }});
+             black.alpha = 0;
+
+    case 352:
+              fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 5.7, {ease: FlxEase.linear});
+              hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5.7, {ease: FlxEase.linear});
+    }
+  }
+}
+

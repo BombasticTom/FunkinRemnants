@@ -36,7 +36,7 @@ class BlammedRemnantsMixSong extends Song
     black.cameras = [PlayState.instance.camCutscene];
     PlayState.instance.add(black);
 
-    black.alpha = 1.0;
+    black.alpha = 1;
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -58,7 +58,7 @@ class BlammedRemnantsMixSong extends Song
     if (fadeBlackTween != null) fadeBlackTween.cancel();
     if (hudTween != null) hudTween.cancel();
 
-    black.alpha = 1.0;
+    black.alpha = 1;
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -75,7 +75,7 @@ class BlammedRemnantsMixSong extends Song
 
     if (event.beat == 30)
     {
-      hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1.0}, 0.6, {ease: FlxEase.sineOut});
+      hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.6, {ease: FlxEase.sineOut});
     }
   }
 }
