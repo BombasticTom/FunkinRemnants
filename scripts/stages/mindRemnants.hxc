@@ -31,12 +31,12 @@ class MindRemnantsStage extends Stage
 		trace('Applied stage shader to ' + character.characterName);
 
 		var rim = new DropShadowShader();
-		rim.setAdjustColor(-10, 0, -10, -10);
+		rim.setAdjustColor(-10, 0, -15, -20);
     rim.color = 0xFF676767;
                 rim.antialiasAmt = 0;
 		character.shader = rim;
 		rim.attachedSprite = character;
-                rim.strength = 1;
+                rim.strength = 1.2;
 
 		switch(charType){
 			case CharacterType.BF:
