@@ -106,7 +106,7 @@ class GunsRemnantsMixSong extends Song
 
     black.alpha = 0;
     white.alpha = 0;
-    hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
   }
 
   /**

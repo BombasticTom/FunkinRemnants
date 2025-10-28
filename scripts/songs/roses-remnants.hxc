@@ -99,7 +99,7 @@ class RosesRemnantsMixSong extends Song
     super.onSongRetry(event);
 
     hasPlayedCutscene = true;
-    PlayState.instance.camHUD.alpha = 0;
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
   }
 
   /**
