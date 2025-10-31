@@ -69,7 +69,7 @@ class RemnantsSong extends Song
 		if (hudTween != null) hudTween.cancel();
 
 		black.alpha = 0;
-		PlayState.instance.camHUD.alpha = 0;
+		FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
 	}
 
 	function onBeatHit(event:ScriptEvent):Void
@@ -82,7 +82,7 @@ class RemnantsSong extends Song
 				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.smootStepOut});
 
 			case 272:
-				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.00001, {ease: FlxEase.instant});
+				fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.8, {ease: FlxEase.linear});
 		}
   	}
 }

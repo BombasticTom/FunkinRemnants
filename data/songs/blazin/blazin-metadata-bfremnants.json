@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
   "songName": "Blazin' (BF Remnants Mix)",
-  "artist": "Zara",
-  "charter": "Plush",
+  "artist": "ZaraJan9th",
+  "charter": "Plush + Sammy The Goog",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -25,7 +25,7 @@
     },
     "stage": "phillyBlazinRemnants",
     "noteStyle": "funkin",
-    "ratings": { "easy": 8, "normal": 11, "hard": 13 },
+    "ratings": { "easy": 11, "normal": 12, "hard": 13 },
     "album": "remnants-weekend1-bf",
     "previewStart": 0,
     "previewEnd": 15000

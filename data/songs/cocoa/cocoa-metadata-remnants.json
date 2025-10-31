@@ -2,7 +2,7 @@
   "version": "2.2.4",
   "songName": "Cocoa (Remnants Mix)",
   "artist": "Ame",
-  "charter": "skibidi toilet",
+  "charter": "Sammy The Goog (Pleaase SPG I neeeed thissss)",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -12,12 +12,7 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": [    ],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants-christmas",
       "girlfriend": "gf-remnants-christmas",
@@ -26,11 +21,7 @@
     },
     "stage": "mallXmasRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 2,
-      "normal": 3,
-      "hard": 4
-    },
+    "ratings": { "easy": 0, "normal": 0, "hard": 0 },
     "album": "remnants-week5",
     "previewStart": 0,
     "previewEnd": 14000

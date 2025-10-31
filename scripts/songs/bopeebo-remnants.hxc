@@ -1,7 +1,5 @@
 import funkin.modding.module.ModuleHandler;
-import funkin.graphics.FunkinSprite;
 import funkin.play.song.Song;
-import funkin.play.PlayState;
 import funkin.save.Save;
 
 class BopeeboRemnantsMixSong extends Song

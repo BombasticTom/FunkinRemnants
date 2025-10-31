@@ -490,7 +490,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
 
 	function playHitSpinAnim()
 	{
-		this.playAnimation('hitSpin', true, false, true);
+		this.playAnimation('hitSpin', true, false);
 		PlayState.instance.camGame.shake(0.0025, 0.15);
 		moveToBack();
 	}

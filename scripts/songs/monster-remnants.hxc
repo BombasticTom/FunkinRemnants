@@ -1,0 +1,31 @@
+import funkin.modding.module.ModuleHandler;
+import funkin.play.song.Song;
+import funkin.save.Save;
+
+class MonsterRemnantsMixSong extends Song
+{
+	public function new()
+  {
+		super('monster',
+      {
+        variation: 'remnants'
+      });
+	}
+
+	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+	{
+		if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+		return false;
+	}
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+  }
+}
