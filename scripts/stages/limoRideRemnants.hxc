@@ -45,15 +45,15 @@ class LimoRideRemnantsStage extends Stage
 		colorShaderBf.contrast = 0;
 		colorShaderBf.saturation = -5;
 
-		colorShaderGf.brightness = -10;
-		colorShaderGf.hue = 10;
+		colorShaderGf.brightness = -5;
+		colorShaderGf.hue = 15;
 		colorShaderGf.contrast = 0;
-		colorShaderGf.saturation = -5;
+		colorShaderGf.saturation = -15;
 
-		colorShaderDad.brightness = -10;
-		colorShaderDad.hue = 10;
+		colorShaderDad.brightness = -15;
+		colorShaderDad.hue = 15;
 		colorShaderDad.contrast = 0;
-		colorShaderDad.saturation = -5;
+		colorShaderDad.saturation = -15;
 
 		mist1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
 		mist1.setPosition(-650, -100);
