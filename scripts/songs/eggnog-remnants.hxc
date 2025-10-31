@@ -2,11 +2,11 @@ import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
 
-class BopeeboRemnantsMixSong extends Song
+class EggnogRemnantsMixSong extends Song
 {
   public function new()
   {
-    super('bopeebo',
+    super('eggnog',
       {
         variation: 'remnants'
       });
@@ -17,18 +17,6 @@ class BopeeboRemnantsMixSong extends Song
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
 	}
-
-  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
-  {
-    var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
-    var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
-    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
-    {
-			var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
-      if (!hasBeatenPicoMix) results.remove('pico');
-    }
-    if (hasBeatenRemnantsMix) return results;
-  }
 
   function onCountdownStart(event:ScriptEvent):Void
   {
