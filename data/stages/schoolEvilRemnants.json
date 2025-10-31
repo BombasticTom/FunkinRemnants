@@ -1,11 +1,16 @@
 {
   "props": [
     {
-      "name": "solid",
-      "assetPath": "#000000",
-      "position": [-500, -1000],
-      "scale": [2400, 2000],
-      "scroll": [0, 0]
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [-626, -78],
+      "scale": [6, 6],
+      "animType": "sparrow",
+      "name": "sky",
+      "isPixel": true,
+      "assetPath": "stages/week6Remnants/evil/weebSky",
+      "scroll": [0.2, 0.2],
+      "animations": []
     },
     {
       "danceEvery": 0,
