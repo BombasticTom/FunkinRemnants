@@ -20,6 +20,7 @@ class SchoolEvilRemnantsStage extends Stage
 		super('schoolEvilRemnants');
 	}
 
+	var wiggleSky:FlxRuntimeShader = null;
 	var wiggleBack:FlxRuntimeShader = null;
 	var wiggleSchool:FlxRuntimeShader = null;
 	var wiggleGround:FlxRuntimeShader = null;
@@ -57,11 +58,13 @@ class SchoolEvilRemnantsStage extends Stage
 		colorShaderDad.contrast = 50;
 		colorShaderDad.saturation = -15;
 
+		wiggleSky = new WiggleEffectRuntime(2 * 0.8, 4 * 0.4, 0.011, WiggleEffectType.DREAMY);
 		wiggleBack = new WiggleEffectRuntime(2 * 0.8, 4 * 0.4, 0.011, WiggleEffectType.DREAMY);
 		wiggleSchool = new WiggleEffectRuntime(2, 4, 0.017, WiggleEffectType.DREAMY);
 		wiggleGround = new WiggleEffectRuntime(2, 4, 0.007, WiggleEffectType.DREAMY);
 		wiggleTrees = new WiggleEffectRuntime(2, 4, 0.007, WiggleEffectType.DREAMY);
 
+		getNamedProp('sky').shader = wiggleSky;
 		getNamedProp('backTrees').shader = wiggleBack;
 		getNamedProp('school').shader = wiggleSchool;
 		getNamedProp('street').shader = wiggleGround;
@@ -103,6 +106,7 @@ class SchoolEvilRemnantsStage extends Stage
 
 		if (wiggleBack != null)
 		{
+			wiggleSky.update(event.elapsed);
 			wiggleBack.update(event.elapsed);
 			wiggleSchool.update(event.elapsed);
 			wiggleGround.update(event.elapsed);
@@ -113,6 +117,7 @@ class SchoolEvilRemnantsStage extends Stage
 	function kill()
 	{
 		super.kill();
+		wiggleSky = null;
 		wiggleBack = null;
 		wiggleSchool = null;
 		wiggleGround = null;
