@@ -43,7 +43,8 @@ class RemnantsBumpers extends Module
     // Song / Weeks lists.
     public var tutorialList:Array<String> = ["tutorial"];
     public var week1List:Array<String> = ["bopeebo", "fresh", "dadbattle"];
-    public var week2List:Array<String> = ["spookeez", "south", "monster"];
+    public var week2List:Array<String> = ["spookeez", "south"];
+    public var week2ListScary:Array<String> = ["monster"];
     public var week3List:Array<String> = ["pico", "philly-nice", "blammed"];
     public var week4List:Array<String> = ["satin-panties", "high", "milf"];
     public var week5List:Array<String> = ["cocoa", "eggnog"];
@@ -62,6 +63,7 @@ class RemnantsBumpers extends Module
         "week6" => week6List,
         "week7" => week7List,
         "weekend1" => weekend1List,
+        "week2-scary" => week2ListScary,
         "week5-scary" => week5ListScary,
         "week6-scary" => week6ListScary
     ];
