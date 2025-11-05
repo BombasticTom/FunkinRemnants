@@ -12,9 +12,7 @@ import funkin.audio.FunkinSound;
 class SpookeezRemnantsMixSong extends Song
 {
 	var black:FunkinSprite;
-	var white:FunkinSprite;
 	var fadeBlackTween:FlxTween;
-	var fadeWhiteTween:FlxTween;
 	var hudTween:FlxTween;
 
 	public function new()
@@ -63,13 +61,7 @@ class SpookeezRemnantsMixSong extends Song
     black.cameras = [PlayState.instance.camCutscene];
     PlayState.instance.add(black);
 
-    white = new FunkinSprite(-20, -20);
-    white.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
-    white.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(white);
-
     black.alpha = 1;
-    white.alpha = 0;
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -78,11 +70,9 @@ class SpookeezRemnantsMixSong extends Song
     super.onSongRetry(event);
 
     if (fadeBlackTween != null) fadeBlackTween.cancel();
-    if (fadeWhiteTween != null) fadeWhiteTween.cancel();
     if (hudTween != null) hudTween.cancel();
 
     black.alpha = 1;
-    white.alpha = 0;
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -102,17 +92,16 @@ class SpookeezRemnantsMixSong extends Song
     case 15:
              hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
 
-    case 143:
-             fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.4, {ease: FlxEase.linear});
+    case 140:
+             black.alpha = 1; 
+	     PlayState.instance.camHUD.alpha = 0;
+	     fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.5, {ease: FlxEase.linear, startDelay: 0.2});
 
-    case 144:
-             fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
-             }});
-             black.alpha = 0;
+    case 143:
+             hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.4, {ease: FlxEase.linear});
 
     case 240:
-             black.alpha = 1;
-             FunkinSound.playOnce(Paths.soundRandom('thunder_', 1, 2), 1);
+             fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.6, {ease: FlxEase.sineOut});
     }
   }
 }
