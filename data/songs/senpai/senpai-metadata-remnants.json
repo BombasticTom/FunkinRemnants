@@ -12,23 +12,40 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": [    ],
-    "difficulties": ["easy", "normal", "hard"],
+    "songVariations": [],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
     "characters": {
       "player": "bf-remnants-pixel",
       "girlfriend": "gf-remnants-pixel",
       "opponent": "senpai-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": ["pico", ""]
+      "altInstrumentals": [
+        "pico",
+        ""
+      ],
+      "opponentVocals": [
+        "senpai-remnants"
+      ],
+      "playerVocals": [
+        "bf-remnants-pixel"
+      ]
     },
     "stage": "schoolRemnants",
     "noteStyle": "pixel",
-    "ratings": { "easy": 4, "normal": 5, "hard": 6 },
+    "ratings": {
+      "easy": 5,
+      "normal": 5,
+      "hard": 6
+    },
     "album": "remnants-week6",
     "previewStart": 0,
     "previewEnd": 13100
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.3",
+  "generatedBy": "Friday Night Funkin' - v0.7.5",
   "timeFormat": "ms",
   "timeChanges": [
     {
@@ -37,12 +54,15 @@
       "bpm": 144,
       "n": 4,
       "d": 4,
-      "bt": [
-        4,
-        4,
-        4,
-        4
-      ]
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 81500,
+      "b": 195.6,
+      "bpm": 144,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
     }
   ]
 }
