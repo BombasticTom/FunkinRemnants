@@ -12,6 +12,22 @@
       "offsets": [-5, 0]
     },
     {
+      "name": "danceLeft-spooky",
+      "prefix": "BF spooky dance",
+      "assetPath": "characters/BFSpooky-remnants",
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
+      "frameRate": 24,
+      "offsets": [-5, 0]
+    },
+    {
+      "name": "danceRight-spooky",
+      "prefix": "BF spooky dance",
+      "assetPath": "characters/BFSpooky-remnants",
+      "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
+      "frameRate": 24,
+      "offsets": [-5, 0]
+    },
+    {
       "name": "singLEFT",
       "prefix": "BF NOTE LEFT0",
       "offsets": [5, -6]
