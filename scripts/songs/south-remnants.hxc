@@ -95,8 +95,8 @@ class SoutRemnantsMixSong extends Song
              }});
              fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.0001, {ease: FlxEase.instant});
 
-    case 62:
-             fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
+    case 61:
+             fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.35, {ease: FlxEase.backIn});
 
     case 64: 
              fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.linear});
