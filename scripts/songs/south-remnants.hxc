@@ -77,7 +77,7 @@ class SoutRemnantsMixSong extends Song
   {
     super.onSongStart(event);
 
-    fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 5, {ease: FlxEase.linear});
+    fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 5.64, {ease: FlxEase.smootherStepOut});
   }
 
     function onBeatHit(event:ScriptEvent):Void
@@ -86,17 +86,17 @@ class SoutRemnantsMixSong extends Song
 
     switch (event.beat)
   {
-    case 30:
-             hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.7, {ease: FlxEase.linear});
+    case 29:
+             hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
 
     case 32:
              fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
              }});
-             fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.0001, {ease: FlxEase.instant});
+             black.alpha = 0;
 
     case 61:
-             fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.35, {ease: FlxEase.backIn});
+             fadeBlackTween = FlxTween.tween(black, {alpha: 0.7}, 0.35, {ease: FlxEase.backIn});
 
     case 64: 
              fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.linear});
@@ -105,28 +105,28 @@ class SoutRemnantsMixSong extends Song
              fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1, {ease: FlxEase.linear});
 
     case 123:
-             fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
+             fadeBlackTween = FlxTween.tween(black, {alpha: 0.7}, 0.3, {ease: FlxEase.linear});
 
     case 128:
              fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1, {ease: FlxEase.linear});
 
     case 155:
-             fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
+             fadeBlackTween = FlxTween.tween(black, {alpha: 0.7}, 0.3, {ease: FlxEase.linear});
 
-    case 158:
-             fadeBlackTween = FlxTween.tween(black, {alpha: 0.9}, 0.7, {ease: FlxEase.linear});
+    case 157:
+             fadeBlackTween = FlxTween.tween(black, {alpha: 0.9}, 1, {ease: FlxEase.linear});
 
     case 160:
              fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
              }});
-             fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.0001, {ease: FlxEase.instant});
+             black.alpha = 0.5;
 
     case 192:
              fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.linear});
 
     case 222:
-             fadeBlackTween = FlxTween.tween(black, {alpha: 0.75}, 0.3, {ease: FlxEase.linear});
+             fadeBlackTween = FlxTween.tween(black, {alpha: 0.7}, 0.3, {ease: FlxEase.linear});
 
     case 224:
              fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.5, {ease: FlxEase.linear});
