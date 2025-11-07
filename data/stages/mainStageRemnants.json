@@ -3,7 +3,7 @@
     {
       "danceEvery": 0,
       "zIndex": 10,
-      "position": [-600, -350],
+      "position": [-900, -350],
       "scale": [1, 1],
       "animType": "sparrow",
       "name": "stageBack",
@@ -39,7 +39,7 @@
     {
       "danceEvery": 0,
       "zIndex": 40,
-      "position": [-650, -300],
+      "position": [-950, -300],
       "scale": [1, 1],
       "animType": "sparrow",
       "name": "stageCurtains",
