@@ -115,7 +115,7 @@
 			"danceEvery": 0,
 			"zIndex": 50,
 			"position": [
-				0,
+				-300,
 				0
 			],
 			"scale": [
