@@ -5,12 +5,18 @@ import funkin.graphics.FunkinSprite;
 import flixel.FlxG;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.graphics.FunkinSprite;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.save.Save;
 
 class RemnantsSong extends Song
 {
 	var black:FunkinSprite;
 	var fadeBlackTween:FlxTween;
 	var hudTween:FlxTween;
+        var hasPlayedIntro:Bool;
 
 	function new()
 	{
@@ -59,7 +65,28 @@ class RemnantsSong extends Song
 
 		black.alpha = 0;
 		PlayState.instance.camHUD.alpha = 0;
+
+		hasPlayedIntro = false;
 	}
+
+	function onCountdownStart(event:ScriptEvent):Void
+  	{
+    	  super.onCountdownStart(event);
+
+    	  if (!hasPlayedIntro)
+   	  {
+      	    trace('Playing remnants presentation video!');
+
+      	    hasPlayedIntro = true;
+      	    event.cancel(); // CANCEL THE COUNTDOWN!
+
+      	    VideoCutscene.play(Paths.videos("remnants"));
+    	  }
+  	}
+
+	/**
+   	 * Don't replay the cutscene between restarts.
+  	 */
 
 	function onSongRetry(event:ScriptEvent)
 	{
@@ -70,7 +97,9 @@ class RemnantsSong extends Song
 
 		black.alpha = 0;
 		FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-	}
+
+		 hasPlayedIntro = true;
+  	   }
 
 	function onBeatHit(event:ScriptEvent):Void
 	{

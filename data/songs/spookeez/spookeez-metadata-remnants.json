@@ -12,7 +12,6 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": [    ],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants-dark",
@@ -20,8 +19,8 @@
       "opponent": "spooky-remnants-dark",
       "instrumental": "remnants",
       "altInstrumentals": ["pico", ""],
-      "opponentVocals": ["spooky-remnants"],
-      "playerVocals": ["bf-remnants"]
+      "opponentVocals": ["spooky-remnants-dark"],
+      "playerVocals": ["bf-remnants-dark"]
     },
     "stage": "spookyMansionRemnants",
     "noteStyle": "funkin",

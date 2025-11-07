@@ -31,7 +31,7 @@
     },
     {
       "zIndex": 30,
-      "position": [-600, -175],
+      "position": [-600, -275],
       "animType": "sparrow",
       "name": "phillyForegroundCity",
       "assetPath": "stages/weekEnd1Remnants/blazin/streetBlur",
@@ -40,7 +40,7 @@
     },
     {
       "zIndex": 31,
-      "position": [-600, -175],
+      "position": [-600, -275],
       "animType": "sparrow",
       "name": "foregroundMultiply",
       "assetPath": "stages/weekEnd1Remnants/blazin/streetBlur",
@@ -49,7 +49,7 @@
     },
     {
       "zIndex": 40,
-      "position": [-600, -175],
+      "position": [-600, -275],
       "animType": "sparrow",
       "name": "additionalLighten",
       "assetPath": "#FFFFFF",
