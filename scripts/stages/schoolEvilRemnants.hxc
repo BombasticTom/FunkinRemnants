@@ -44,8 +44,8 @@ class SchoolEvilRemnantsStage extends Stage
 		colorShaderGf = new AdjustColorShader();
 
 		colorShaderBf.brightness = 0;
-		colorShaderBf.hue = -10;
-		colorShaderBf.contrast = 25;
+		colorShaderBf.hue = -20;
+		colorShaderBf.contrast = 30;
 		colorShaderBf.saturation = -15;
 
 		colorShaderGf.brightness = 0;
