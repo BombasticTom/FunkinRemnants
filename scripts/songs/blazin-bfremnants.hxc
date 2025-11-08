@@ -36,13 +36,13 @@ class BlazinBFRemnantsMixSong extends Song
     this.hasHidden = false;
     this.hasPlayedCutscene = false;
 
-    black = new FunkinSprite(-1800, -500);
+    black = new FunkinSprite(-1600, -500);
     black.makeSolidColor(4200, 1800, 0xFF000000);
     black.cameras = [PlayState.instance.camGame];
     PlayState.instance.add(black);
     black.alpha = 1;
 
-    white = new FunkinSprite(-1800, -500);
+    white = new FunkinSprite(-1600, -500);
     white.makeSolidColor(4200, 1800, 0xFFFFFFFF);
     white.cameras = [PlayState.instance.camGame];
     PlayState.instance.add(white);
