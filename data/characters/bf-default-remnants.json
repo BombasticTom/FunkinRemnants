@@ -70,14 +70,6 @@
           "offsets": [-5, -15]
         },
         {
-          "name": "dodge-hold",
-          "prefix": "boyfriend dodge",
-          "frameIndices": [10, 11, 12],
-          "looped": true,
-          "assetPath": "characters/BOYFRIEND",
-          "offsets": [-5, -15]
-        },
-        {
           "name": "hey",
           "prefix": "BF HEY!!",
           "offsets": [-3, 5]

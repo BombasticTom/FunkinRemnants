@@ -12,7 +12,7 @@
       "offsets": [-5, 0]
     },
     {
-      "name": "danceLeft-spooky",
+      "name": "danceLeft",
       "prefix": "BF spooky dance",
       "assetPath": "characters/BFSpooky-remnants",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
@@ -20,7 +20,7 @@
       "offsets": [-5, 0]
     },
     {
-      "name": "danceRight-spooky",
+      "name": "danceRight",
       "prefix": "BF spooky dance",
       "assetPath": "characters/BFSpooky-remnants",
       "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
@@ -104,14 +104,6 @@
     {
       "name": "dodge",
       "prefix": "boyfriend dodge",
-      "offsets": [0, -20]
-    },
-    {
-      "name": "dodge-hold",
-      "prefix": "boyfriend dodge",
-      "frameIndices": [10, 11, 12],
-      "looped": true,
-      "assetPath": "characters/BOYFRIEND",
       "offsets": [0, -20]
     },
     {

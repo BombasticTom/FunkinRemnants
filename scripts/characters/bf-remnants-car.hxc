@@ -26,6 +26,7 @@ class BoyfriendRemnantsCarCharacter extends MultiSparrowCharacter
 		// GameOverSubState.musicSuffix = '-remnants';
 		// GameOverSubState.blueBallSuffix = '-remnants';
 		PauseSubState.musicSuffix = '-remnants';
+		shouldAlternate = false;
 	}
 
 	var loseSprite:FunkinSprite;
