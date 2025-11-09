@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "cameraZoom": 0.9,
+  "cameraZoom": 0.7,
   "props": [
     {
       "zIndex": 10,
       "danceEvery": 0,
-      "position": [-120, -50],
+      "position": [-650, -250],
       "scale": [1, 1],
       "name": "limoSunset",
       "animType": "sparrow",
@@ -14,7 +14,6 @@
       "assetPath": "stages/week4Remnants/limoSunset",
       "animations": []
     },
-
     {
       "zIndex": 15,
       "position": [-750, -20],
@@ -35,7 +34,6 @@
       "scroll": [1, 1],
       "assetPath": "stages/week4Remnants/highwayPoleTall"
     },
-
     {
       "zIndex": 15,
       "position": [-750, -50],
@@ -63,6 +61,26 @@
       "isPixel": false,
       "scroll": [1, 1],
       "assetPath": "stages/week4Remnants/highwayPole"
+    },
+    {
+      "zIndex": 145,
+      "position": [-650, 750],
+      "scale": [1, 1],
+      "alpha": 1,
+      "name": "highway1",
+      "isPixel": false,
+      "scroll": [0.75, 0.75],
+      "assetPath": "stages/week4Remnants/limoHighway1"
+    },
+    {
+      "zIndex": 17,
+      "position": [-700, 725],
+      "scale": [1, 1],
+      "alpha": 1,
+      "name": "highway2",
+      "isPixel": false,
+      "scroll": [0.325, 0.325],
+      "assetPath": "stages/week4Remnants/limoHighway2"
     },
     {
       "zIndex": 20,
@@ -114,7 +132,7 @@
       "zIndex": 500,
       "danceEvery": 0,
       "position": [-5000, 250],
-      "scale": [1, 1],
+      "scale": [1.4, 1.4],
       "name": "fastCar",
       "animType": "sparrow",
       "isPixel": false,
@@ -126,7 +144,7 @@
       "zIndex": 500,
       "danceEvery": 0,
       "position": [8000, 290],
-      "scale": [1, 1],
+      "scale": [1.4, 1.4],
       "name": "fastTruck",
       "animType": "sparrow",
       "isPixel": false,
@@ -427,7 +445,7 @@
     },
     "dad": {
       "zIndex": 200,
-      "position": [329.5, 913],
+      "position": [330, 875],
       "cameraOffsets": [150, 0]
     }
   },

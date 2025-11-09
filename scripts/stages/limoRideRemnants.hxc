@@ -60,7 +60,7 @@ class LimoRideRemnantsStage extends Stage
 		mist1.scrollFactor.set(1.1, 1.1);
 		mist1.zIndex = 400;
 		mist1.blend = 0;
-		mist1.color = 0xFFc6bfde;
+		mist1.color = 0xFF4a6ee0;
 		mist1.alpha = 0.4;
 		mist1.velocity.x = 1700;
 
@@ -97,7 +97,7 @@ class LimoRideRemnantsStage extends Stage
 		mist5.scrollFactor.set(0.2, 0.2);
 		mist5.zIndex = 15;
 		mist5.blend = 0;
-		mist5.color = 0xFFE7A480;
+		mist5.color = 0xFF8a3675;
 		mist5.velocity.x = 100;
 		mist5.scale.set(1.5, 1.5);
 
@@ -201,6 +201,13 @@ class LimoRideRemnantsStage extends Stage
 
 		if (FlxG.random.bool(5) && fastTruckCanDrive && !isDeath)
 			fastVehicleDrive(true);
+
+		if (event.beat == 72 && PlayState.instance.currentSong.id == "satin-panties")
+		{
+			if (getBoyfriend() != null && getBoyfriend().hasAnimation('dodge')) {
+				getBoyfriend().shouldAlternate = true;
+			}
+		}
 
 		if (event.beat == 166 && PlayState.instance.currentSong.id == "milf")
 		{
