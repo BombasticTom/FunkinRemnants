@@ -15,14 +15,14 @@
       "offsets": [4, 9]
     },
     {
-      "name": "danceLeft-spooky",
+      "name": "danceLeft",
       "prefix": "BF spooky dance",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
       "frameRate": 24,
       "offsets": [4, 9]
     },
     {
-      "name": "danceRight-spooky",
+      "name": "danceRight",
       "prefix": "BF spooky dance",
       "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
       "frameRate": 24,

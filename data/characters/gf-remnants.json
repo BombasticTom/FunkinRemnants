@@ -3,6 +3,7 @@
   "name": "Remnants GF",
   "assetPath": "characters/gf-remnants",
   "startingAnimation": "danceRight",
+  "renderType": "multisparrow",
   "singTime": 8.0,
   "animations": [
     {
