@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
   "songName": "Glitcher (Remnants Mix)",
-  "artist": "Unknown",
-  "charter": "trwario",
+  "artist": "LunarZNova",
+  "charter": "TRWario",
   "looped": false,
   "offsets": {
     "instrumental": 0,
@@ -29,7 +29,7 @@
         "bf-g"
       ]
     },
-    "stage": "wiresRemnants",
+    "stage": "glitcherRemnants",
     "noteStyle": "funkin",
     "ratings": {
       "hard": 0,

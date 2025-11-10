@@ -92,37 +92,6 @@
     },
     {
       "t": 49371.4285714286,
-      "e": "ChangeCharacter",
-      "v": {
-	"newchar": "bf-glitcher-normal",
-	"character": "bf"
-}
-    },
-    {
-      "t": 49371.4285714286,
-      "e": "ChangeCharacter",
-      "v": {
-	"newchar": "gf-glitcher-normal",
-	"character": "gf"
-}
-    },
-    {
-      "t": 49371.4285714286,
-      "e": "ChangeCharacter",
-      "v": {
-	"newchar": "hex-glitcher-normal",
-	"character": "dad"
-}
-    },
-    {
-      "t": 49371.4285714286,
-      "e": "ChangeStage",
-      "v": {
-	"stageid": "courtNormal"
-}
-    },
-    {
-      "t": 49371.4285714286,
       "e": "FocusCamera",
       "v": {
 	"char": 1
@@ -147,37 +116,6 @@
       "e": "FocusCamera",
       "v": {
 	"char": 0
-}
-    },
-    {
-      "t": 71314.2857142857,
-      "e": "ChangeCharacter",
-      "v": {
-	"newchar": "bf-remnants",
-	"character": "bf"
-}
-    },
-    {
-      "t": 71314.2857142857,
-      "e": "ChangeStage",
-      "v": {
-	"stageid": "wiresRemnants"
-}
-    },
-    {
-      "t": 71314.2857142857,
-      "e": "ChangeCharacter",
-      "v": {
-	"newchar": "gf-remnants",
-	"character": "gf"
-}
-    },
-    {
-      "t": 71314.2857142857,
-      "e": "ChangeCharacter",
-      "v": {
-	"newchar": "hex-glitcher-remnants",
-	"character": "dad"
 }
     },
     {
