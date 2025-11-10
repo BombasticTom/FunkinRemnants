@@ -440,12 +440,12 @@
     },
     "gf": {
       "zIndex": 100,
-      "position": [787, 779],
+      "position": [797, 779],
       "cameraOffsets": [0, 0]
     },
     "dad": {
       "zIndex": 200,
-      "position": [330, 875],
+      "position": [360, 875],
       "cameraOffsets": [150, 0]
     }
   },
