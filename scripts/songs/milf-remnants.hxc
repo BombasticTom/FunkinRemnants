@@ -104,6 +104,20 @@ class MILFRemnantsMixSong extends Song
 
 		// Properly reset lights and collision when starting the song.
 		this.hardResetSong();
+
+		black = new FunkinSprite(-20, -20);
+		black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+		black.cameras = [PlayState.instance.camCutscene];
+		PlayState.instance.add(black);
+
+		white = new FunkinSprite(-1600, -500);
+		white.makeSolidColor(4200, 1800, 0xFFFFFFFF);
+		white.cameras = [PlayState.instance.camGame];
+		PlayState.instance.add(white);
+
+		black.alpha = 1;
+		white.alpha = 0;
+		PlayState.instance.camHUD.alpha = 0;
 	}
 
 	/**
@@ -115,6 +129,14 @@ class MILFRemnantsMixSong extends Song
 
 		// Properly reset lights and collision when restarting the song.
 		this.hardResetSong();
+
+		if (fadeBlackTween != null) fadeBlackTween.cancel();
+		if (fadeWhiteTween != null) fadeWhiteTween.cancel();
+		if (hudTween != null) hudTween.cancel();
+
+		black.alpha = 1;
+		white.alpha = 0;
+		PlayState.instance.camHUD.alpha = 0;
 	}
 
 	function onCountdownStart(event:ScriptEvent)
@@ -576,4 +598,38 @@ class MILFRemnantsMixSong extends Song
 		destroyAllGibs();
 		hardResetLimo();
 	}
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 2.41, {ease: FlxEase.linear, startDelay: 0.25});
+  }
+
+    function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+  {
+    case 8:
+             fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+             fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+             }});
+             hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+
+    case 200:
+             fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+             fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+             }});
+
+    case 232:
+             fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {
+             fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+             }});
+
+    case 360:
+             fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.33, {ease: FlxEase.sineOut});
+    }
+  }
 }

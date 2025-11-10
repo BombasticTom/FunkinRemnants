@@ -1,9 +1,18 @@
 import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxG;
+import funkin.play.PlayState;
 
 class SatinPantiesRemnantsMixSong extends Song
 {
+	var black:FunkinSprite;
+	var fadeBlackTween:FlxTween;
+	var hudTween:FlxTween;
+
 	public function new()
   {
 		super('satin-panties',
@@ -26,6 +35,39 @@ class SatinPantiesRemnantsMixSong extends Song
     {
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    black = new FunkinSprite(-20, -20);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(black);
+    black.alpha = 0;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (hudTween != null) hudTween.cancel();
+
+    black.alpha = 0;
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (event.beat == 176)
+    {
+      fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 4.2, {ease: FlxEase.linear, startDelay: 0.07});
+      hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear, startDelay: 0.07});
     }
   }
 }

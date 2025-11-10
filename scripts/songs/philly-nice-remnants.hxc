@@ -1,11 +1,11 @@
-import flixel.FlxG;
-import funkin.play.PlayState;
-import funkin.play.song.Song;
 import funkin.modding.module.ModuleHandler;
+import funkin.play.song.Song;
+import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import funkin.save.Save;
+import flixel.FlxG;
+import funkin.play.PlayState;
 
 class PhillyNiceRemnantsMixSong extends Song
 {

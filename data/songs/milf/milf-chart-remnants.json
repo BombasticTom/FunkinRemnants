@@ -7,13 +7,26 @@
   },
   "events": [
     {
+      "t": 0,
+      "e": "FocusCamera",
+      "v": {
+	"x": -50,
+	"duration": 4,
+	"y": 100,
+	"ease": "INSTANT",
+	"char": 2,
+	"easeDir": "In"
+}
+    },
+    {
       "t": 250,
       "e": "ZoomCamera",
       "v": {
-	"ease": "INSTANT",
 	"duration": 0,
-	"mode": "direct",
-	"zoom": 0.91
+	"ease": "INSTANT",
+	"zoom": 0.71,
+	"easeDir": "In",
+	"mode": "direct"
 }
     },
     {
@@ -23,7 +36,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 0.92
+	"zoom": 0.72
 }
     },
     {
@@ -33,7 +46,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 0.93
+	"zoom": 0.73
 }
     },
     {
@@ -43,7 +56,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 0.94
+	"zoom": 0.74
 }
     },
     {
@@ -53,7 +66,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 0.95
+	"zoom": 0.75
 }
     },
     {
@@ -63,7 +76,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 0.96
+	"zoom": 0.76
 }
     },
     {
@@ -73,7 +86,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 0.97
+	"zoom": 0.77
 }
     },
     {
@@ -83,7 +96,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 0.98
+	"zoom": 0.78
 }
     },
     {
@@ -93,7 +106,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 0.99
+	"zoom": 0.79
 }
     },
     {
@@ -103,7 +116,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1
+	"zoom": 0.8
 }
     },
     {
@@ -113,7 +126,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.01
+	"zoom": 0.81
 }
     },
     {
@@ -123,7 +136,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.02
+	"zoom": 0.82
 }
     },
     {
@@ -133,7 +146,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.03
+	"zoom": 0.83
 }
     },
     {
@@ -143,7 +156,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.04
+	"zoom": 0.84
 }
     },
     {
@@ -153,7 +166,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.05
+	"zoom": 0.85
 }
     },
     {
@@ -163,7 +176,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.06
+	"zoom": 0.86
 }
     },
     {
@@ -173,7 +186,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.07
+	"zoom": 0.87
 }
     },
     {
@@ -183,7 +196,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.08
+	"zoom": 0.88
 }
     },
     {
@@ -193,7 +206,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.09
+	"zoom": 0.89
 }
     },
     {
@@ -203,7 +216,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.1
+	"zoom": 0.9
 }
     },
     {
@@ -213,7 +226,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.11
+	"zoom": 0.91
 }
     },
     {
@@ -223,7 +236,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.12
+	"zoom": 0.92
 }
     },
     {
@@ -233,7 +246,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.13
+	"zoom": 0.93
 }
     },
     {
@@ -243,7 +256,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.14
+	"zoom": 0.94
 }
     },
     {
@@ -253,7 +266,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.15
+	"zoom": 0.95
 }
     },
     {
@@ -263,7 +276,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.16
+	"zoom": 0.96
 }
     },
     {
@@ -273,7 +286,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.17
+	"zoom": 0.97
 }
     },
     {
@@ -283,17 +296,7 @@
 	"ease": "INSTANT",
 	"duration": 0,
 	"mode": "direct",
-	"zoom": 1.18
-}
-    },
-    {
-      "t": 2583.33333333333,
-      "e": "ZoomCamera",
-      "v": {
-	"ease": "INSTANT",
-	"duration": 0,
-	"mode": "direct",
-	"zoom": 1.19
+	"zoom": 0.98
 }
     },
     {
@@ -301,7 +304,19 @@
       "e": "SetCameraBop",
       "v": {
 	"rate": 1,
+	"offset": 0,
 	"intensity": 1
+}
+    },
+    {
+      "t": 2583.33333333333,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 0,
+	"ease": "INSTANT",
+	"zoom": 0.99,
+	"mode": "direct",
+	"easeDir": "In"
 }
     },
     {
@@ -310,9 +325,9 @@
       "v": {
 	"duration": 4,
 	"ease": "elastic",
-	"zoom": 1,
 	"easeDir": "Out",
-	"mode": "stage"
+	"mode": "stage",
+	"zoom": 1
 }
     },
     {
@@ -331,27 +346,19 @@
       "t": 8000,
       "e": "FocusCamera",
       "v": {
+	"duration": 16,
 	"x": 0,
+	"y": 0,
+	"ease": "expo",
 	"char": 0,
-	"y": 0
+	"easeDir": "Out"
 }
     },
     {
-      "t": 13333.3333333333,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 12,
-	"ease": "sine",
-	"zoom": 1.1,
-	"easeDir": "Out",
-	"mode": "stage"
-}
-    },
-    {
-      "t": 13333.3333333333,
+      "t": 13333.3259333333,
       "e": "FocusCamera",
       "v": {
-	"duration": 12,
+	"duration": 32,
 	"x": 0,
 	"y": 0,
 	"ease": "sine",
@@ -360,10 +367,22 @@
 }
     },
     {
-      "t": 13416.6666666667,
+      "t": 13333.3259333333,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 32,
+	"ease": "sine",
+	"mode": "direct",
+	"zoom": 0.8,
+	"easeDir": "Out"
+}
+    },
+    {
+      "t": 13416.6592666667,
       "e": "SetCameraBop",
       "v": {
 	"rate": 1,
+	"offset": 0,
 	"intensity": 0
 }
     },
@@ -376,25 +395,26 @@
 }
     },
     {
-      "t": 18666.6666666667,
+      "t": 18666.6592666667,
       "e": "ZoomCamera",
       "v": {
-	"ease": "linear",
 	"duration": 48,
-	"mode": "stage",
-	"zoom": 1.2
+	"ease": "linear",
+	"zoom": 1,
+	"mode": "direct",
+	"easeDir": "In"
 }
     },
     {
-      "t": 18666.6666666667,
+      "t": 18666.6592666667,
       "e": "FocusCamera",
       "v": {
-	"duration": 12,
+	"duration": 32,
 	"x": 50,
 	"y": 25,
 	"ease": "sine",
 	"char": 0,
-	"easeDir": "Out"
+	"easeDir": "InOut"
 }
     },
     {
@@ -406,18 +426,7 @@
 }
     },
     {
-      "t": 22666.6666666667,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 16,
-	"ease": "cube",
-	"zoom": 1.3,
-	"easeDir": "Out",
-	"mode": "stage"
-}
-    },
-    {
-      "t": 22666.6666666667,
+      "t": 22666.6592666667,
       "e": "FocusCamera",
       "v": {
 	"duration": 16,
@@ -426,6 +435,17 @@
 	"char": 0,
 	"ease": "cube",
 	"easeDir": "Out"
+}
+    },
+    {
+      "t": 22666.6592666667,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 16,
+	"ease": "cube",
+	"zoom": 1.15,
+	"easeDir": "Out",
+	"mode": "direct"
 }
     },
     {
@@ -442,9 +462,9 @@
       "v": {
 	"duration": 4,
 	"ease": "elastic",
-	"zoom": 1,
 	"easeDir": "Out",
-	"mode": "stage"
+	"mode": "stage",
+	"zoom": 1
 }
     },
     {
@@ -468,63 +488,63 @@
 }
     },
     {
-      "t": 27833.3333333333,
+      "t": 27833.3259333333,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
+	"duration": 6,
 	"ease": "cube",
-	"zoom": 1.1,
+	"zoom": 0.85,
 	"easeDir": "Out",
-	"mode": "stage"
+	"mode": "direct"
 }
     },
     {
-      "t": 29333.3333333333,
+      "t": 29333.3259333333,
       "e": "FocusCamera",
       "v": {
-	"duration": 8,
+	"duration": 16,
 	"x": 0,
 	"y": 0,
-	"ease": "cube",
+	"ease": "expo",
 	"char": 0,
 	"easeDir": "Out"
 }
     },
     {
-      "t": 29333.3333333333,
+      "t": 29333.3259333333,
       "e": "ZoomCamera",
       "v": {
-	"duration": 8,
-	"ease": "cube",
+	"duration": 16,
+	"ease": "expo",
+	"mode": "stage",
 	"zoom": 1,
-	"easeDir": "Out",
-	"mode": "stage"
+	"easeDir": "Out"
 }
     },
     {
-      "t": 33166.6666666667,
+      "t": 33166.6592666667,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
+	"duration": 6,
 	"ease": "cube",
-	"zoom": 1.1,
-	"easeDir": "Out",
-	"mode": "stage"
+	"mode": "direct",
+	"zoom": 0.85,
+	"easeDir": "Out"
 }
     },
     {
-      "t": 34666.6666666667,
+      "t": 34666.6592666667,
       "e": "ZoomCamera",
       "v": {
 	"duration": 8,
 	"ease": "expo",
-	"zoom": 0.9,
+	"zoom": 0.65,
 	"easeDir": "Out",
-	"mode": "stage"
+	"mode": "direct"
 }
     },
     {
-      "t": 34666.6666666667,
+      "t": 34666.6592666667,
       "e": "FocusCamera",
       "v": {
 	"duration": 8,
@@ -541,9 +561,9 @@
       "v": {
 	"duration": 16,
 	"ease": "cube",
-	"zoom": 1,
 	"easeDir": "InOut",
-	"mode": "stage"
+	"mode": "stage",
+	"zoom": 1
 }
     },
     {
@@ -559,18 +579,40 @@
 }
     },
     {
-      "t": 40000,
+      "t": 37333.3259333333,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 8,
+	"ease": "cube",
+	"mode": "direct",
+	"zoom": 0.8,
+	"easeDir": "Out"
+}
+    },
+    {
+      "t": 39333.3259333333,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 6,
+	"ease": "cube",
+	"zoom": 0.9,
+	"easeDir": "Out",
+	"mode": "direct"
+}
+    },
+    {
+      "t": 39999.9926,
       "e": "ZoomCamera",
       "v": {
 	"duration": 8,
 	"ease": "expo",
-	"mode": "stage",
+	"mode": "direct",
 	"easeDir": "Out",
-	"zoom": 1.1
+	"zoom": 1
 }
     },
     {
-      "t": 40000,
+      "t": 39999.9926,
       "e": "FocusCamera",
       "v": {
 	"x": 100,
@@ -582,7 +624,7 @@
 }
     },
     {
-      "t": 40333.3333333333,
+      "t": 40333.3259333333,
       "e": "FocusCamera",
       "v": {
 	"x": 0,
@@ -599,27 +641,49 @@
       "v": {
 	"duration": 16,
 	"ease": "cube",
-	"mode": "stage",
 	"easeDir": "InOut",
-	"zoom": 1
-}
-    },
-    {
-      "t": 45333.3333333333,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 16,
-	"ease": "sine",
-	"zoom": 1.1,
-	"easeDir": "Out",
+	"zoom": 1,
 	"mode": "stage"
 }
     },
     {
-      "t": 45333.3333333333,
+      "t": 42666.6592666667,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 8,
+	"ease": "cube",
+	"easeDir": "Out",
+	"mode": "direct",
+	"zoom": 0.8
+}
+    },
+    {
+      "t": 44666.6592666667,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 6,
+	"ease": "cube",
+	"mode": "direct",
+	"zoom": 0.9,
+	"easeDir": "Out"
+}
+    },
+    {
+      "t": 45333.3259333333,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 32,
+	"ease": "sine",
+	"easeDir": "Out",
+	"mode": "direct",
+	"zoom": 0.8
+}
+    },
+    {
+      "t": 45333.3259333333,
       "e": "FocusCamera",
       "v": {
-	"duration": 16,
+	"duration": 32,
 	"x": 0,
 	"y": 0,
 	"char": 1,
@@ -640,29 +704,31 @@
       "e": "SetCameraBop",
       "v": {
 	"rate": 1,
+	"offset": 0,
 	"intensity": 1
 }
     },
     {
-      "t": 50666.6666666667,
+      "t": 50666.6592666667,
       "e": "FocusCamera",
       "v": {
 	"x": 50,
-	"duration": 12,
+	"duration": 32,
 	"y": 25,
 	"char": 0,
 	"ease": "sine",
-	"easeDir": "Out"
+	"easeDir": "InOut"
 }
     },
     {
-      "t": 50666.6666666667,
+      "t": 50666.6592666667,
       "e": "ZoomCamera",
       "v": {
 	"duration": 48,
 	"ease": "linear",
-	"zoom": 1.3,
-	"mode": "stage"
+	"mode": "direct",
+	"zoom": 1,
+	"easeDir": "In"
 }
     },
     {
@@ -674,18 +740,7 @@
 }
     },
     {
-      "t": 54666.6666666667,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 8,
-	"ease": "cube",
-	"mode": "stage",
-	"easeDir": "Out",
-	"zoom": 1.4
-}
-    },
-    {
-      "t": 54666.6666666667,
+      "t": 54666.6592666667,
       "e": "FocusCamera",
       "v": {
 	"x": 150,
@@ -697,11 +752,23 @@
 }
     },
     {
-      "t": 55250,
+      "t": 54666.6666666667,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 8,
+	"ease": "cube",
+	"zoom": 1.2,
+	"mode": "direct",
+	"easeDir": "Out"
+}
+    },
+    {
+      "t": 55249.9926,
       "e": "SetCameraBop",
       "v": {
 	"rate": 1,
-	"intensity": 1.5
+	"intensity": 1.5,
+	"offset": 0
 }
     },
     {
@@ -709,11 +776,12 @@
       "e": "SetCameraBop",
       "v": {
 	"rate": 1,
-	"intensity": 2
+	"offset": 0,
+	"intensity": 2.5
 }
     },
     {
-      "t": 56000,
+      "t": 55999.9926,
       "e": "FocusCamera",
       "v": {
 	"duration": 4,
@@ -725,14 +793,14 @@
 }
     },
     {
-      "t": 56000,
+      "t": 55999.9926,
       "e": "ZoomCamera",
       "v": {
 	"duration": 4,
 	"ease": "elastic",
+	"zoom": 0.7,
 	"mode": "direct",
-	"easeDir": "Out",
-	"zoom": 0.9
+	"easeDir": "Out"
 }
     },
     {
@@ -741,7 +809,8 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 0.92,
+	"easeDir": "In",
+	"zoom": 0.72,
 	"mode": "direct"
 }
     },
@@ -751,7 +820,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 0.94,
+	"zoom": 0.74,
 	"mode": "direct"
 }
     },
@@ -761,7 +830,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 0.96,
+	"zoom": 0.76,
 	"mode": "direct"
 }
     },
@@ -771,7 +840,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 0.98,
+	"zoom": 0.78,
 	"mode": "direct"
 }
     },
@@ -781,7 +850,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.02,
+	"zoom": 0.8,
 	"mode": "direct"
 }
     },
@@ -791,7 +860,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.04,
+	"zoom": 0.82,
 	"mode": "direct"
 }
     },
@@ -801,7 +870,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.06,
+	"zoom": 0.84,
 	"mode": "direct"
 }
     },
@@ -823,7 +892,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.08,
+	"zoom": 0.86,
 	"mode": "direct"
 }
     },
@@ -833,7 +902,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.1,
+	"zoom": 0.88,
 	"mode": "direct"
 }
     },
@@ -843,7 +912,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.12,
+	"zoom": 0.9,
 	"mode": "direct"
 }
     },
@@ -853,7 +922,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.14,
+	"zoom": 0.92,
 	"mode": "direct"
 }
     },
@@ -863,7 +932,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.16,
+	"zoom": 0.94,
 	"mode": "direct"
 }
     },
@@ -873,7 +942,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.18,
+	"zoom": 0.96,
 	"mode": "direct"
 }
     },
@@ -883,7 +952,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.2,
+	"zoom": 0.98,
 	"mode": "direct"
 }
     },
@@ -893,7 +962,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.22,
+	"zoom": 1,
 	"mode": "direct"
 }
     },
@@ -903,7 +972,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.24,
+	"zoom": 1.02,
 	"mode": "direct"
 }
     },
@@ -925,7 +994,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.26,
+	"zoom": 1.04,
 	"mode": "direct"
 }
     },
@@ -935,7 +1004,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.28,
+	"zoom": 1.06,
 	"mode": "direct"
 }
     },
@@ -945,7 +1014,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.3,
+	"zoom": 1.08,
 	"mode": "direct"
 }
     },
@@ -955,7 +1024,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.32,
+	"zoom": 1.1,
 	"mode": "direct"
 }
     },
@@ -965,7 +1034,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.34,
+	"zoom": 1.12,
 	"mode": "direct"
 }
     },
@@ -975,7 +1044,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.36,
+	"zoom": 1.14,
 	"mode": "direct"
 }
     },
@@ -985,7 +1054,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.38,
+	"zoom": 1.16,
 	"mode": "direct"
 }
     },
@@ -1007,7 +1076,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.4,
+	"zoom": 1.18,
 	"mode": "direct"
 }
     },
@@ -1017,7 +1086,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.42,
+	"zoom": 1.2,
 	"mode": "direct"
 }
     },
@@ -1027,7 +1096,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.44,
+	"zoom": 1.22,
 	"mode": "direct"
 }
     },
@@ -1037,7 +1106,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.46,
+	"zoom": 1.24,
 	"mode": "direct"
 }
     },
@@ -1047,7 +1116,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.48,
+	"zoom": 1.26,
 	"mode": "direct"
 }
     },
@@ -1057,7 +1126,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.5,
+	"zoom": 1.28,
 	"mode": "direct"
 }
     },
@@ -1067,7 +1136,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.52,
+	"zoom": 1.3,
 	"mode": "direct"
 }
     },
@@ -1077,7 +1146,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.54,
+	"zoom": 1.32,
 	"mode": "direct"
 }
     },
@@ -1087,7 +1156,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.56,
+	"zoom": 1.34,
 	"mode": "direct"
 }
     },
@@ -1097,7 +1166,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.58,
+	"zoom": 1.36,
 	"mode": "direct"
 }
     },
@@ -1107,7 +1176,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.6,
+	"zoom": 1.38,
 	"mode": "direct"
 }
     },
@@ -1117,7 +1186,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.62,
+	"zoom": 1.4,
 	"mode": "direct"
 }
     },
@@ -1127,7 +1196,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.64,
+	"zoom": 1.42,
 	"mode": "direct"
 }
     },
@@ -1137,7 +1206,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.66,
+	"zoom": 1.44,
 	"mode": "direct"
 }
     },
@@ -1147,7 +1216,7 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.68,
+	"zoom": 1.46,
 	"mode": "direct"
 }
     },
@@ -1157,19 +1226,19 @@
       "v": {
 	"duration": 4,
 	"ease": "INSTANT",
-	"zoom": 1.7,
+	"zoom": 1.48,
 	"mode": "direct"
 }
     },
     {
-      "t": 66666.6666666667,
+      "t": 66666.6592666667,
       "e": "FocusCamera",
       "v": {
-	"x": 0,
+	"x": -50,
 	"duration": 4,
-	"y": 0,
-	"ease": "elastic",
-	"char": 1,
+	"y": 100,
+	"ease": "INSTANT",
+	"char": 2,
 	"easeDir": "Out"
 }
     },
@@ -1179,9 +1248,9 @@
       "v": {
 	"duration": 4,
 	"ease": "elastic",
-	"mode": "stage",
-	"easeDir": "Out",
-	"zoom": 1
+	"zoom": 0.75,
+	"mode": "direct",
+	"easeDir": "Out"
 }
     },
     {
@@ -1193,59 +1262,26 @@
 }
     },
     {
-      "t": 70500,
+      "t": 71999,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
-	"ease": "cube",
-	"easeDir": "Out",
-	"mode": "stage",
-	"zoom": 1.1
+	"duration": 64,
+	"ease": "smootherStep",
+	"mode": "direct",
+	"easeDir": "In",
+	"zoom": 1.3
 }
     },
     {
-      "t": 72000,
+      "t": 71999.9926,
       "e": "FocusCamera",
       "v": {
-	"x": 0,
-	"duration": 8,
-	"y": 0,
-	"char": 0,
-	"ease": "cube",
-	"easeDir": "Out"
-}
-    },
-    {
-      "t": 72000,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 8,
-	"ease": "cube",
-	"easeDir": "Out",
-	"mode": "stage",
-	"zoom": 1
-}
-    },
-    {
-      "t": 75833.3333333333,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 4,
-	"ease": "cube",
-	"easeDir": "Out",
-	"mode": "stage",
-	"zoom": 1.1
-}
-    },
-    {
-      "t": 77333.3333333333,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 8,
-	"ease": "expo",
-	"easeDir": "Out",
-	"mode": "stage",
-	"zoom": 0.95
+	"x": -100,
+	"duration": 64,
+	"y": 50,
+	"char": 1,
+	"ease": "smootherStep",
+	"easeDir": "In"
 }
     },
     {
@@ -1256,19 +1292,30 @@
 	"duration": 8,
 	"y": 100,
 	"char": 2,
-	"ease": "expo",
+	"ease": "INSTANT",
 	"easeDir": "Out"
+}
+    },
+    {
+      "t": 77333.3333333333,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 8,
+	"ease": "expo",
+	"zoom": 0.65,
+	"easeDir": "Out",
+	"mode": "direct"
 }
     },
     {
       "t": 78333.3333333333,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
+	"duration": 8,
 	"ease": "cube",
 	"easeDir": "Out",
-	"mode": "stage",
-	"zoom": 1
+	"mode": "direct",
+	"zoom": 0.75
 }
     },
     {
@@ -1277,42 +1324,42 @@
       "v": {
 	"duration": 8,
 	"ease": "expo",
-	"easeDir": "Out",
-	"mode": "stage",
-	"zoom": 0.95
+	"mode": "direct",
+	"zoom": 0.85,
+	"easeDir": "Out"
 }
     },
     {
       "t": 80000,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
-	"ease": "expo",
-	"easeDir": "Out",
-	"mode": "stage",
-	"zoom": 1.1
+	"duration": 8,
+	"ease": "cube",
+	"mode": "direct",
+	"zoom": 0.65,
+	"easeDir": "Out"
 }
     },
     {
       "t": 82000,
       "e": "ZoomCamera",
       "v": {
-	"duration": 8,
+	"duration": 12,
 	"ease": "expo",
 	"easeDir": "Out",
-	"mode": "stage",
-	"zoom": 1.2
+	"mode": "direct",
+	"zoom": 0.8
 }
     },
     {
-      "t": 82333.3333333333,
+      "t": 82666.6666666667,
       "e": "ZoomCamera",
       "v": {
 	"duration": 8,
 	"ease": "expo",
-	"easeDir": "Out",
-	"zoom": 1.4,
-	"mode": "stage"
+	"zoom": 1,
+	"mode": "direct",
+	"easeDir": "Out"
 }
     },
     {
@@ -1321,21 +1368,10 @@
       "v": {
 	"duration": 8,
 	"x": 100,
-	"y": 60,
+	"y": 70,
 	"ease": "expo",
 	"char": 0,
 	"easeDir": "Out"
-}
-    },
-    {
-      "t": 82666.6666666667,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 8,
-	"ease": "expo",
-	"easeDir": "Out",
-	"zoom": 1.1,
-	"mode": "stage"
 }
     },
     {
@@ -1343,10 +1379,10 @@
       "e": "FocusCamera",
       "v": {
 	"duration": 16,
-	"x": 0,
-	"y": 0,
+	"x": -50,
+	"y": 100,
 	"ease": "cube",
-	"char": 0,
+	"char": 2,
 	"easeDir": "InOut"
 }
     },
@@ -1356,9 +1392,9 @@
       "v": {
 	"duration": 16,
 	"ease": "cube",
+	"mode": "direct",
 	"easeDir": "InOut",
-	"zoom": 1,
-	"mode": "stage"
+	"zoom": 0.65
 }
     },
     {
@@ -1374,7 +1410,8 @@
       "e": "SetCameraBop",
       "v": {
 	"rate": 1,
-	"intensity": 1.75
+	"intensity": 1.75,
+	"offset": 0
 }
     },
     {
@@ -1388,103 +1425,90 @@
     },
     {
       "t": 88000,
-      "e": "FocusCamera",
+      "e": "ZoomCamera",
       "v": {
-	"duration": 8,
-	"x": 0,
-	"y": 0,
-	"char": 1,
+	"duration": 16,
 	"ease": "cube",
-	"easeDir": "Out"
+	"easeDir": "Out",
+	"mode": "direct",
+	"zoom": 0.85
 }
     },
     {
       "t": 93333.3333333333,
       "e": "ZoomCamera",
       "v": {
-	"duration": 8,
+	"duration": 6,
 	"ease": "cube",
 	"easeDir": "Out",
-	"zoom": 0.95,
-	"mode": "stage"
+	"zoom": 0.65,
+	"mode": "direct"
 }
     },
     {
-      "t": 93333.3333333333,
-      "e": "FocusCamera",
-      "v": {
-	"duration": 8,
-	"x": -50,
-	"y": 100,
-	"ease": "cube",
-	"char": 2,
-	"easeDir": "Out"
-}
-    },
-    {
-      "t": 94250,
+      "t": 94000,
       "e": "ZoomCamera",
       "v": {
 	"duration": 4,
 	"ease": "cube",
-	"easeDir": "Out",
-	"zoom": 1,
-	"mode": "stage"
+	"zoom": 0.75,
+	"mode": "direct",
+	"easeDir": "Out"
 }
     },
     {
       "t": 94500,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
+	"duration": 6,
 	"ease": "cube",
 	"easeDir": "Out",
-	"zoom": 0.95,
-	"mode": "stage"
+	"zoom": 0.65,
+	"mode": "direct"
 }
     },
     {
-      "t": 95666.6666666667,
+      "t": 95500,
       "e": "ZoomCamera",
       "v": {
 	"duration": 4,
 	"ease": "cube",
 	"easeDir": "Out",
-	"zoom": 1.05,
-	"mode": "stage"
+	"zoom": 0.8,
+	"mode": "direct"
 }
     },
     {
       "t": 96000,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
+	"duration": 6,
 	"ease": "cube",
 	"easeDir": "Out",
-	"zoom": 0.95,
-	"mode": "stage"
+	"zoom": 0.65,
+	"mode": "direct"
 }
     },
     {
-      "t": 96916.6666666667,
+      "t": 96666.6666666667,
       "e": "ZoomCamera",
       "v": {
 	"duration": 4,
 	"ease": "cube",
+	"mode": "direct",
 	"easeDir": "Out",
-	"zoom": 1,
-	"mode": "stage"
+	"zoom": 0.75
 }
     },
     {
       "t": 97333.3333333333,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
+	"duration": 12,
 	"ease": "cube",
 	"easeDir": "Out",
-	"zoom": 1.1,
-	"mode": "stage"
+	"zoom": 0.65,
+	"mode": "direct"
 }
     },
     {
@@ -1499,7 +1523,7 @@
       "t": 98666.6666666666,
       "e": "FocusCamera",
       "v": {
-	"duration": 12,
+	"duration": 16,
 	"x": 0,
 	"y": 0,
 	"ease": "sine",
@@ -1511,64 +1535,52 @@
       "t": 98666.6666666667,
       "e": "ZoomCamera",
       "v": {
-	"duration": 12,
+	"duration": 16,
 	"ease": "sine",
+	"mode": "stage",
 	"easeDir": "Out",
-	"zoom": 1,
-	"mode": "stage"
+	"zoom": 1
+}
+    },
+    {
+      "t": 104000,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 16,
+	"ease": "sine",
+	"zoom": 0.65,
+	"mode": "direct",
+	"easeDir": "Out"
 }
     },
     {
       "t": 104000,
       "e": "FocusCamera",
       "v": {
-	"duration": 12,
-	"x": 0,
-	"y": 0,
-	"ease": "sine",
-	"char": 0,
-	"easeDir": "Out"
-}
-    },
-    {
-      "t": 108000,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 16,
-	"ease": "cube",
-	"easeDir": "Out",
-	"zoom": 0.95,
-	"mode": "stage"
-}
-    },
-    {
-      "t": 108000,
-      "e": "FocusCamera",
-      "v": {
 	"duration": 16,
 	"x": -50,
-	"y": 50,
-	"ease": "cube",
+	"y": 100,
+	"ease": "sine",
 	"char": 2,
 	"easeDir": "Out"
 }
     },
     {
-      "t": 109333.333333333,
+      "t": 108000,
       "e": "ZoomCamera",
       "v": {
-	"duration": 16,
+	"duration": 12,
 	"ease": "sine",
-	"easeDir": "Out",
-	"zoom": 1.1,
-	"mode": "stage"
+	"zoom": 0.75,
+	"mode": "direct",
+	"easeDir": "Out"
 }
     },
     {
       "t": 109333.333333333,
       "e": "FocusCamera",
       "v": {
-	"duration": 16,
+	"duration": 32,
 	"x": 0,
 	"y": 0,
 	"char": 1,
@@ -1577,78 +1589,90 @@
 }
     },
     {
+      "t": 109333.333333333,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 32,
+	"ease": "sine",
+	"mode": "direct",
+	"easeDir": "Out",
+	"zoom": 0.8
+}
+    },
+    {
       "t": 109416.666666667,
       "e": "SetCameraBop",
       "v": {
 	"rate": 1,
-	"intensity": 0
+	"intensity": 0,
+	"offset": 0
 }
     },
     {
       "t": 113166.666666667,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
+	"duration": 6,
 	"ease": "cube",
 	"easeDir": "Out",
-	"zoom": 1.2,
-	"mode": "stage"
+	"mode": "direct",
+	"zoom": 0.95
+}
+    },
+    {
+      "t": 114666.666666667,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 32,
+	"ease": "sine",
+	"zoom": 0.8,
+	"easeDir": "Out",
+	"mode": "direct"
 }
     },
     {
       "t": 114666.666666667,
       "e": "FocusCamera",
       "v": {
-	"duration": 16,
-	"x": 100,
-	"y": 25,
+	"duration": 32,
+	"x": 0,
+	"y": 0,
 	"ease": "sine",
 	"char": 0,
 	"easeDir": "Out"
 }
     },
     {
-      "t": 114666.666666667,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 16,
-	"ease": "sine",
-	"easeDir": "Out",
-	"zoom": 1.1,
-	"mode": "stage"
-}
-    },
-    {
       "t": 118500,
       "e": "ZoomCamera",
       "v": {
-	"duration": 4,
+	"duration": 6,
 	"ease": "cube",
+	"zoom": 0.95,
 	"easeDir": "Out",
-	"zoom": 1.2,
-	"mode": "stage"
-}
-    },
-    {
-      "t": 120000,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 8,
-	"ease": "sine",
-	"easeDir": "Out",
-	"zoom": 1.4,
-	"mode": "stage"
+	"mode": "direct"
 }
     },
     {
       "t": 120000,
       "e": "FocusCamera",
       "v": {
-	"duration": 8,
-	"x": 200,
+	"duration": 16,
+	"x": 250,
 	"y": 60,
 	"ease": "sine",
 	"char": 0,
+	"easeDir": "Out"
+}
+    },
+    {
+      "t": 120000,
+      "e": "ZoomCamera",
+      "v": {
+	"duration": 16,
+	"ease": "sine",
+	"zoom": 1.5,
+	"mode": "direct",
 	"easeDir": "Out"
 }
     },
@@ -1659,29 +1683,6 @@
 	"rate": 1,
 	"intensity": 0
 }
-    },
-    {
-      "t": 120666.666666667,
-      "e": "FocusCamera",
-      "v": {
-	"duration": 20,
-	"x": -50,
-	"y": 50,
-	"char": 2,
-	"ease": "sine",
-	"easeDir": "InOut"
-}
-    },
-    {
-      "t": 120666.666666667,
-      "e": "ZoomCamera",
-      "v": {
-	"duration": 20,
-	"ease": "sine",
-	"easeDir": "InOut",
-	"zoom": 0.95,
-	"mode": "stage"
-}
     }
   ],
   "notes": {
@@ -1690,147 +1691,126 @@
         "t": 2666.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3416.66666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3583.33333333333,
         "d": 5,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3833.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 4166.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 4500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 4666.66666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 4833.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 5000,
         "d": 4,
         "l": 194.444444444443,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 5333.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 5667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6083.66666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6250.33333333333,
         "d": 5,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6500.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6833.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7167,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7333.66666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7500.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7666.66666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7833.33333333333,
         "d": 6,
         "l": 111.111111111113,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -1963,112 +1943,96 @@
         "t": 13333.3333333333,
         "d": 5,
         "l": 861.111111111143,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 14333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 14583.3333333333,
         "d": 5,
         "l": 444.444444444476,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 15166.6666666667,
         "d": 6,
         "l": 291.666666666631,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 15500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 15833.3333333333,
         "d": 7,
         "l": 236.111111111143,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 16166.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 16333.3333333333,
         "d": 5,
         "l": 291.6666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 16666.6666666667,
         "d": 6,
         "l": 291.666666666631,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17000,
         "d": 4,
         "l": 194.444444444443,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 18000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 18333.3259333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 18500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -2169,163 +2133,141 @@
         "p": []
       },
       {
-        "t": 24083.3333333333,
+        "t": 23999.9926,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 24250,
         "d": 5,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 24500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 24666.6592666667,
         "d": 4,
         "l": 361.111111111109,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25166.6666666667,
         "d": 5,
         "l": 291.666666666633,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25999.9926,
         "d": 5,
         "l": 361.111111111109,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 26500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
-        "t": 26833.3333333333,
+        "t": 26749.9926,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 27000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 27333.3259333333,
         "d": 4,
         "l": 361.111111111109,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 27833.3333333333,
         "d": 6,
         "l": 291.6666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 29000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 29166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
+        "p": []
+      },
+      {
+        "t": 29333.3259333333,
+        "d": 0,
+        "l": 0,
         "p": []
       },
       {
         "t": 29333.3333333333,
         "d": 6,
         "l": 916.6666666667,
-        "k": "week4-lightpole",
-        "p": []
-      },
-      {
-        "t": 29416.6666666667,
-        "d": 0,
-        "l": 0,
         "p": []
       },
       {
@@ -2350,7 +2292,6 @@
         "t": 30250.6592666667,
         "d": 4,
         "l": 361.111111111109,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -2444,16 +2385,10 @@
         "p": []
       },
       {
-        "t": 34250,
-        "d": 1,
-        "l": 0,
-        "k": "week4-lightpole",
-        "p": []
-      },
-      {
-        "t": 34333.3333333333,
+        "t": 34333.3259333333,
         "d": 3,
         "l": 0,
+        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -2465,140 +2400,121 @@
       {
         "t": 34666.6666666667,
         "d": 2,
-        "l": 916.666666666624,
+        "l": 944.437044444404,
         "p": []
       },
       {
         "t": 34666.6666666667,
         "d": 6,
-        "l": 583.333333333295,
-        "k": "week4-lightpole",
+        "l": 611.10371111107,
         "p": []
       },
       {
         "t": 35666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 35833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 36000,
         "d": 5,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 36333.3333333333,
         "d": 4,
         "l": 194.444444444476,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 36666.6666666667,
         "d": 6,
         "l": 194.444444444405,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 39000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 39333.3333333333,
         "d": 6,
         "l": 291.6666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 39666.6666666667,
         "d": 5,
         "l": 277.777777777734,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -2713,35 +2629,30 @@
         "t": 45333.3333333333,
         "d": 5,
         "l": 861.111111111133,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 46333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 46583.3333333333,
         "d": 5,
         "l": 444.444444444467,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 47166.6666666667,
         "d": 6,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 47500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -2754,77 +2665,66 @@
         "t": 48166.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 48333.3333333333,
         "d": 5,
         "l": 291.666666666695,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 48666.6666666667,
         "d": 6,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49000,
         "d": 4,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 50166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 50333.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 50500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -2936,203 +2836,174 @@
         "t": 56000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56666.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57500,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3145,14 +3016,12 @@
         "t": 61000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 61166.6666666667,
         "d": 4,
         "l": 111.111111111067,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3351,7 +3220,6 @@
         "t": 66749.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3364,14 +3232,12 @@
         "t": 66916,
         "d": 5,
         "l": 208.999999999994,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 67166,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3384,14 +3250,12 @@
         "t": 67333.3334333333,
         "d": 4,
         "l": 361.111111111095,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 67832.6666666667,
         "d": 5,
         "l": 292.333333333299,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3404,7 +3268,6 @@
         "t": 68166,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3417,14 +3280,12 @@
         "t": 68332.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 68500.0001,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3437,7 +3298,6 @@
         "t": 68666.6667666667,
         "d": 5,
         "l": 361.111111111095,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3456,7 +3316,6 @@
         "t": 69166,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3469,7 +3328,6 @@
         "t": 69499.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3482,7 +3340,6 @@
         "t": 69666,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3501,7 +3358,6 @@
         "t": 70499.3333333333,
         "d": 6,
         "l": 292.333333333355,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3514,7 +3370,6 @@
         "t": 70832.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3527,21 +3382,18 @@
         "t": 70999.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 71166,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 71332.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3554,7 +3406,6 @@
         "t": 71499.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3567,7 +3418,6 @@
         "t": 71666,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3580,7 +3430,6 @@
         "t": 71832.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3593,7 +3442,6 @@
         "t": 71999.3333333333,
         "d": 6,
         "l": 542.333333333355,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3624,7 +3472,6 @@
         "t": 73000,
         "d": 5,
         "l": 291.666666666657,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3637,7 +3484,6 @@
         "t": 73333.3333333333,
         "d": 6,
         "l": 541.666666666695,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3668,7 +3514,6 @@
         "t": 74333.3333333333,
         "d": 5,
         "l": 291.666666666695,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3681,7 +3526,6 @@
         "t": 74666.6666666667,
         "d": 6,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3700,7 +3544,6 @@
         "t": 75000,
         "d": 5,
         "l": 291.666666666657,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3719,14 +3562,12 @@
         "t": 75333.3333333333,
         "d": 6,
         "l": 291.666666666695,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 75666.6666666667,
         "d": 5,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3739,7 +3580,6 @@
         "t": 76000,
         "d": 6,
         "l": 291.666666666657,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3758,7 +3598,6 @@
         "t": 76333.3333333333,
         "d": 5,
         "l": 916.666666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3801,7 +3640,6 @@
         "t": 77333.6666666667,
         "d": 6,
         "l": 583.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3814,7 +3652,6 @@
         "t": 78333.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3827,7 +3664,6 @@
         "t": 78667,
         "d": 5,
         "l": 194.111111111094,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3840,7 +3676,6 @@
         "t": 79000.3333333333,
         "d": 4,
         "l": 194.111111111132,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3853,7 +3688,6 @@
         "t": 79333.6666666667,
         "d": 6,
         "l": 194.111111111065,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3866,7 +3700,6 @@
         "t": 79667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3879,7 +3712,6 @@
         "t": 79833.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3893,7 +3725,6 @@
         "t": 80000.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3906,7 +3737,6 @@
         "t": 80167,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3919,7 +3749,6 @@
         "t": 80333.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3932,7 +3761,6 @@
         "t": 80667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3945,7 +3773,6 @@
         "t": 80833.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3958,7 +3785,6 @@
         "t": 81000.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3971,7 +3797,6 @@
         "t": 81333.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3984,7 +3809,6 @@
         "t": 81500.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -3997,7 +3821,6 @@
         "t": 81667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4010,7 +3833,6 @@
         "t": 82000.3333333333,
         "d": 6,
         "l": 291.333333333351,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4023,7 +3845,6 @@
         "t": 82333.6666666667,
         "d": 5,
         "l": 277.444444444389,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4036,14 +3857,12 @@
         "t": 82833.3333333333,
         "d": 7,
         "l": 361.111111111105,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 83333.3333333333,
         "d": 4,
         "l": 361.111111111105,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4056,7 +3875,6 @@
         "t": 83833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4069,7 +3887,6 @@
         "t": 84166.6666666667,
         "d": 6,
         "l": 361.111111111105,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4088,14 +3905,12 @@
         "t": 84666.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 84916.6666666666,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4108,7 +3923,6 @@
         "t": 85083.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4121,7 +3935,6 @@
         "t": 85250,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4141,7 +3954,6 @@
         "t": 85500,
         "d": 6,
         "l": 361.111111111105,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4160,7 +3972,6 @@
         "t": 86000,
         "d": 6,
         "l": 361.111111111105,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4179,7 +3990,6 @@
         "t": 86583.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4210,7 +4020,6 @@
         "t": 87333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4223,7 +4032,6 @@
         "t": 87500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4236,14 +4044,12 @@
         "t": 87666.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 87833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4256,7 +4062,6 @@
         "t": 88000.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4275,7 +4080,6 @@
         "t": 88334,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4288,7 +4092,6 @@
         "t": 88750.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4301,7 +4104,6 @@
         "t": 88916.6666666667,
         "d": 5,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4314,7 +4116,6 @@
         "t": 89167.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4333,7 +4134,6 @@
         "t": 89500.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4346,7 +4146,6 @@
         "t": 89833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4359,14 +4158,12 @@
         "t": 90166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 90333.3333333333,
         "d": 5,
         "l": 291.666666666705,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4385,7 +4182,6 @@
         "t": 90666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4410,7 +4206,6 @@
         "t": 91000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4423,7 +4218,6 @@
         "t": 91416.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4436,7 +4230,6 @@
         "t": 91583.3333333333,
         "d": 5,
         "l": 208.333333333371,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4449,14 +4242,12 @@
         "t": 91833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 92000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4475,14 +4266,12 @@
         "t": 92166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 92333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4495,7 +4284,6 @@
         "t": 92500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4508,14 +4296,12 @@
         "t": 92666.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 92833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4528,7 +4314,6 @@
         "t": 93000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4541,7 +4326,6 @@
         "t": 93166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4554,7 +4338,6 @@
         "t": 93333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4573,7 +4356,6 @@
         "t": 93666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4586,14 +4368,12 @@
         "t": 94083.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 94250,
         "d": 7,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4606,7 +4386,6 @@
         "t": 94500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4619,7 +4398,6 @@
         "t": 94833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4638,14 +4416,12 @@
         "t": 95166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 95500,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4664,14 +4440,12 @@
         "t": 95666.6666666667,
         "d": 5,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 96000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4684,7 +4458,6 @@
         "t": 96333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4697,7 +4470,6 @@
         "t": 96750,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4716,7 +4488,6 @@
         "t": 96916.6666666667,
         "d": 7,
         "l": 208.333333333295,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4729,14 +4500,12 @@
         "t": 97166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 97333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4756,14 +4525,12 @@
         "t": 97666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 97833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4776,7 +4543,6 @@
         "t": 98000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4795,7 +4561,6 @@
         "t": 98166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4808,42 +4573,36 @@
         "t": 98333.3333333333,
         "d": 4,
         "l": 277.777777777771,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 98666.3333333333,
         "d": 5,
         "l": 861.444444444468,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 99666.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 99916.3333333333,
         "d": 5,
         "l": 444.777777777801,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 100499.666666667,
         "d": 6,
         "l": 291.999999999651,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 100833,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4856,84 +4615,72 @@
         "t": 101499.666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 101666.333333333,
         "d": 5,
         "l": 292.000000000333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 101999.666666667,
         "d": 6,
         "l": 291.999999999651,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 102333,
         "d": 4,
         "l": 194.777777777764,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 102666.333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 102833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 102999.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103166.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103500.666666667,
         "d": 7,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103833,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4946,35 +4693,30 @@
         "t": 104166.666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104333.333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104666.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104833.333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 105000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -4993,21 +4735,18 @@
         "t": 105333.333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 105500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 105666.666666667,
         "d": 7,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5020,7 +4759,6 @@
         "t": 106000,
         "d": 4,
         "l": 291.666666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5033,7 +4771,6 @@
         "t": 106333.333333333,
         "d": 6,
         "l": 250,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5046,14 +4783,12 @@
         "t": 106666.666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 106833.333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5072,14 +4807,12 @@
         "t": 107000,
         "d": 6,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 107333.333333333,
         "d": 4,
         "l": 291.666666667008,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5092,7 +4825,6 @@
         "t": 107666.666666667,
         "d": 6,
         "l": 250,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5105,7 +4837,6 @@
         "t": 108000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5124,7 +4855,6 @@
         "t": 108166.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5137,7 +4867,6 @@
         "t": 108333.333333333,
         "d": 6,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5150,7 +4879,6 @@
         "t": 108666.666666667,
         "d": 4,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5175,7 +4903,6 @@
         "t": 109000,
         "d": 5,
         "l": 250,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5189,154 +4916,132 @@
         "t": 109416.333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 109583,
         "d": 5,
         "l": 208.666666666659,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 109833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 110000,
         "d": 4,
         "l": 361.111111111105,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 110499.666666667,
         "d": 5,
         "l": 291.999999999651,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 110833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 110999.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 111166.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 111333.333333333,
         "d": 5,
         "l": 361.111111111105,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 111833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112166.333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112666,
         "d": 4,
         "l": 361.111111111105,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113166.333333333,
         "d": 6,
         "l": 292.000000000333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113499.666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113666.333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113833,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113999.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 114166.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 114333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 114499.666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 114666.333333333,
         "d": 6,
         "l": 916.666666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -5513,6 +5218,7 @@
         "t": 3583.33333333333,
         "d": 4,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -5541,13 +5247,14 @@
       },
       {
         "t": 4666.66666666667,
-        "d": 5,
+        "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 4666.66666666667,
-        "d": 7,
+        "d": 5,
         "l": 0,
         "p": []
       },
@@ -5567,6 +5274,7 @@
         "t": 5000,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -5612,9 +5320,10 @@
         "p": []
       },
       {
-        "t": 6250.33333333333,
+        "t": 6250,
         "d": 4,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -5636,14 +5345,15 @@
         "p": []
       },
       {
-        "t": 7333.66666666667,
-        "d": 5,
+        "t": 7333.33333333333,
+        "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 7333.66666666667,
-        "d": 7,
+        "d": 5,
         "l": 0,
         "p": []
       },
@@ -5655,13 +5365,14 @@
       },
       {
         "t": 7666.66666666667,
-        "d": 5,
+        "d": 4,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
-        "t": 7667,
-        "d": 4,
+        "t": 7666.66666666667,
+        "d": 5,
         "l": 0,
         "p": []
       },
@@ -5709,14 +5420,14 @@
       },
       {
         "t": 8916.66666666667,
-        "d": 1,
-        "l": 0,
+        "d": 0,
+        "l": 208.33333333333,
         "p": []
       },
       {
         "t": 8916.66666666667,
-        "d": 0,
-        "l": 208.33333333333,
+        "d": 1,
+        "l": 0,
         "p": []
       },
       {
@@ -5894,27 +5605,29 @@
         "p": []
       },
       {
+        "t": 14583.3259333333,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
+        "p": []
+      },
+      {
         "t": 14583.3333333333,
         "d": 5,
         "l": 444.444444444476,
         "p": []
       },
       {
-        "t": 14583.3333333333,
+        "t": 15166.6592666667,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 15166.6666666667,
         "d": 6,
         "l": 291.666666666631,
-        "p": []
-      },
-      {
-        "t": 15166.6666666667,
-        "d": 7,
-        "l": 0,
         "p": []
       },
       {
@@ -6039,14 +5752,14 @@
       },
       {
         "t": 20500,
-        "d": 1,
-        "l": 0,
+        "d": 0,
+        "l": 291.666666666664,
         "p": []
       },
       {
         "t": 20500,
-        "d": 0,
-        "l": 291.666666666664,
+        "d": 1,
+        "l": 0,
         "p": []
       },
       {
@@ -6183,9 +5896,10 @@
         "p": []
       },
       {
-        "t": 24666.6666666667,
+        "t": 24666.6592666667,
         "d": 5,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -6201,15 +5915,16 @@
         "p": []
       },
       {
-        "t": 25166.6666666667,
-        "d": 5,
-        "l": 291.666666666633,
+        "t": 25166.6592666667,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 25166.6666666667,
-        "d": 7,
-        "l": 0,
+        "d": 5,
+        "l": 291.666666666633,
         "p": []
       },
       {
@@ -6291,15 +6006,16 @@
         "p": []
       },
       {
-        "t": 27833.3333333333,
-        "d": 6,
-        "l": 291.6666666667,
+        "t": 27833.3259333333,
+        "d": 5,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 27833.3333333333,
-        "d": 5,
-        "l": 0,
+        "d": 6,
+        "l": 291.6666666667,
         "p": []
       },
       {
@@ -6558,13 +6274,13 @@
       {
         "t": 34666.6666666667,
         "d": 2,
-        "l": 916.666666666624,
+        "l": 944.437044444404,
         "p": []
       },
       {
         "t": 34666.6666666667,
         "d": 6,
-        "l": 583.333333333295,
+        "l": 611.10371111107,
         "p": []
       },
       {
@@ -6580,21 +6296,23 @@
         "p": []
       },
       {
+        "t": 35999.9926,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
+        "p": []
+      },
+      {
         "t": 36000,
         "d": 5,
         "l": 194.444444444438,
         "p": []
       },
       {
-        "t": 36000,
+        "t": 36333.3259333333,
         "d": 7,
         "l": 0,
-        "p": []
-      },
-      {
-        "t": 36333.3333333333,
-        "d": 7,
-        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -6604,15 +6322,16 @@
         "p": []
       },
       {
-        "t": 36666.6666666667,
-        "d": 6,
-        "l": 194.444444444405,
+        "t": 36666.6592666667,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 36666.6666666667,
-        "d": 7,
-        "l": 0,
+        "d": 6,
+        "l": 194.444444444405,
         "p": []
       },
       {
@@ -6634,14 +6353,15 @@
         "p": []
       },
       {
-        "t": 37333.3333333333,
-        "d": 6,
+        "t": 37333.3259333333,
+        "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 37333.3333333333,
-        "d": 7,
+        "d": 6,
         "l": 0,
         "p": []
       },
@@ -6712,15 +6432,16 @@
         "p": []
       },
       {
-        "t": 39333.3333333333,
-        "d": 6,
-        "l": 291.6666666667,
+        "t": 39333.3259333333,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 39333.3333333333,
-        "d": 7,
-        "l": 0,
+        "d": 6,
+        "l": 291.6666666667,
         "p": []
       },
       {
@@ -6917,27 +6638,29 @@
         "p": []
       },
       {
+        "t": 46583.3259333333,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
+        "p": []
+      },
+      {
         "t": 46583.3333333333,
         "d": 5,
         "l": 444.444444444467,
         "p": []
       },
       {
-        "t": 46583.3333333333,
+        "t": 47166.6592666667,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 47166.6666666667,
         "d": 6,
         "l": 291.666666666629,
-        "p": []
-      },
-      {
-        "t": 47166.6666666667,
-        "d": 7,
-        "l": 0,
         "p": []
       },
       {
@@ -7774,14 +7497,15 @@
       },
       {
         "t": 67332.6666666667,
-        "d": 5,
+        "d": 4,
         "l": 0,
         "p": []
       },
       {
-        "t": 67332.6666666667,
-        "d": 4,
+        "t": 67333.3259333333,
+        "d": 5,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -7809,9 +7533,10 @@
         "p": []
       },
       {
-        "t": 67832.6666666667,
+        "t": 67833.3259333333,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -7977,9 +7702,10 @@
         "p": []
       },
       {
-        "t": 70499.3333333333,
+        "t": 70499.9926,
         "d": 5,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -8127,15 +7853,16 @@
         "p": []
       },
       {
-        "t": 73000,
-        "d": 5,
-        "l": 291.666666666657,
+        "t": 72999.9926,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 73000,
-        "d": 4,
-        "l": 0,
+        "d": 5,
+        "l": 291.666666666657,
         "p": []
       },
       {
@@ -8187,15 +7914,16 @@
         "p": []
       },
       {
-        "t": 74333.3333333333,
-        "d": 5,
-        "l": 291.666666666695,
+        "t": 74333.3259333333,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 74333.3333333333,
-        "d": 4,
-        "l": 0,
+        "d": 5,
+        "l": 291.666666666695,
         "p": []
       },
       {
@@ -8235,15 +7963,16 @@
         "p": []
       },
       {
-        "t": 75000,
-        "d": 5,
-        "l": 291.666666666657,
+        "t": 74999.9926,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 75000,
-        "d": 4,
-        "l": 0,
+        "d": 5,
+        "l": 291.666666666657,
         "p": []
       },
       {
@@ -8277,15 +8006,16 @@
         "p": []
       },
       {
-        "t": 75666.6666666667,
-        "d": 5,
-        "l": 291.666666666629,
+        "t": 75666.6592666667,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 75666.6666666667,
-        "d": 4,
-        "l": 0,
+        "d": 5,
+        "l": 291.666666666629,
         "p": []
       },
       {
@@ -8313,9 +8043,10 @@
         "p": []
       },
       {
-        "t": 76333.3333333333,
+        "t": 76333.3259333333,
         "d": 4,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -8337,6 +8068,13 @@
         "p": []
       },
       {
+        "t": 76666.6592666667,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
+        "p": []
+      },
+      {
         "t": 76666.6666666667,
         "d": 5,
         "l": 250,
@@ -8345,12 +8083,6 @@
       {
         "t": 76666.6666666667,
         "d": 1,
-        "l": 0,
-        "p": []
-      },
-      {
-        "t": 76666.6666666667,
-        "d": 4,
         "l": 0,
         "p": []
       },
@@ -8368,12 +8100,6 @@
       },
       {
         "t": 77000,
-        "d": 4,
-        "l": 0,
-        "p": []
-      },
-      {
-        "t": 77000,
         "d": 3,
         "l": 0,
         "p": []
@@ -8382,6 +8108,13 @@
         "t": 77000,
         "d": 5,
         "l": 250,
+        "p": []
+      },
+      {
+        "t": 77000,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -8428,6 +8161,13 @@
       },
       {
         "t": 78666.6666666667,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
+        "p": []
+      },
+      {
+        "t": 78666.6666666667,
         "d": 0,
         "l": 0,
         "p": []
@@ -8445,12 +8185,6 @@
         "p": []
       },
       {
-        "t": 78667,
-        "d": 7,
-        "l": 0,
-        "p": []
-      },
-      {
         "t": 79000,
         "d": 0,
         "l": 0,
@@ -8463,9 +8197,10 @@
         "p": []
       },
       {
-        "t": 79000.3333333333,
+        "t": 79000,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -8487,15 +8222,16 @@
         "p": []
       },
       {
-        "t": 79333.6666666667,
-        "d": 6,
-        "l": 194.111111111065,
+        "t": 79333.3333333333,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 79333.6666666667,
-        "d": 7,
-        "l": 0,
+        "d": 6,
+        "l": 194.111111111065,
         "p": []
       },
       {
@@ -8548,14 +8284,15 @@
         "p": []
       },
       {
-        "t": 80000.3333333333,
-        "d": 6,
+        "t": 80000,
+        "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 80000.3333333333,
-        "d": 7,
+        "d": 6,
         "l": 0,
         "p": []
       },
@@ -8704,15 +8441,16 @@
         "p": []
       },
       {
-        "t": 82000.3333333333,
-        "d": 6,
-        "l": 291.333333333351,
+        "t": 82000,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
         "t": 82000.3333333333,
-        "d": 7,
-        "l": 0,
+        "d": 6,
+        "l": 291.333333333351,
         "p": []
       },
       {
@@ -9119,14 +8857,15 @@
       },
       {
         "t": 88916.6666666667,
-        "d": 5,
-        "l": 208.333333333333,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
-        "t": 88917.3333333333,
-        "d": 4,
-        "l": 0,
+        "t": 88916.6666666667,
+        "d": 5,
+        "l": 208.333333333333,
         "p": []
       },
       {
@@ -9215,14 +8954,15 @@
       },
       {
         "t": 90333.3333333333,
-        "d": 7,
+        "d": 2,
         "l": 0,
         "p": []
       },
       {
         "t": 90333.3333333333,
-        "d": 2,
+        "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -9299,14 +9039,15 @@
       },
       {
         "t": 91583.3333333333,
-        "d": 4,
-        "l": 0,
+        "d": 5,
+        "l": 208.333333333371,
         "p": []
       },
       {
         "t": 91583.3333333333,
-        "d": 5,
-        "l": 208.333333333371,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -9497,12 +9238,6 @@
       },
       {
         "t": 94250,
-        "d": 6,
-        "l": 0,
-        "p": []
-      },
-      {
-        "t": 94250,
         "d": 0,
         "l": 208.333333333333,
         "p": []
@@ -9514,6 +9249,13 @@
         "p": []
       },
       {
+        "t": 94250,
+        "d": 6,
+        "l": 0,
+        "k": "noanim",
+        "p": []
+      },
+      {
         "t": 94500,
         "d": 4,
         "l": 0,
@@ -9575,6 +9317,13 @@
       },
       {
         "t": 95666.6666666667,
+        "d": 4,
+        "l": 0,
+        "k": "noanim",
+        "p": []
+      },
+      {
+        "t": 95666.6666666667,
         "d": 3,
         "l": 0,
         "p": []
@@ -9589,12 +9338,6 @@
         "t": 95666.6666666667,
         "d": 5,
         "l": 291.666666666629,
-        "p": []
-      },
-      {
-        "t": 95666.6666666667,
-        "d": 4,
-        "l": 0,
         "p": []
       },
       {
@@ -9659,6 +9402,13 @@
       },
       {
         "t": 96916.6666666667,
+        "d": 6,
+        "l": 0,
+        "k": "noanim",
+        "p": []
+      },
+      {
+        "t": 96916.6666666667,
         "d": 1,
         "l": 0,
         "p": []
@@ -9673,12 +9423,6 @@
         "t": 96916.6666666667,
         "d": 7,
         "l": 208.333333333295,
-        "p": []
-      },
-      {
-        "t": 96916.6666666667,
-        "d": 6,
-        "l": 0,
         "p": []
       },
       {
@@ -9815,9 +9559,10 @@
         "p": []
       },
       {
-        "t": 99916.3333333333,
+        "t": 99916.6666666667,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -9827,9 +9572,10 @@
         "p": []
       },
       {
-        "t": 100499.666666667,
+        "t": 100500,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -10046,6 +9792,7 @@
         "t": 106000,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -10122,12 +9869,6 @@
       },
       {
         "t": 107333.333333333,
-        "d": 7,
-        "l": 0,
-        "p": []
-      },
-      {
-        "t": 107333.333333333,
         "d": 2,
         "l": 0,
         "p": []
@@ -10136,6 +9877,13 @@
         "t": 107333.333333333,
         "d": 3,
         "l": 291.666666667008,
+        "p": []
+      },
+      {
+        "t": 107333.333333333,
+        "d": 7,
+        "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -10303,14 +10051,15 @@
       },
       {
         "t": 109999.666666667,
-        "d": 5,
+        "d": 4,
         "l": 0,
         "p": []
       },
       {
-        "t": 109999.666666667,
-        "d": 4,
+        "t": 110000,
+        "d": 5,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -10326,9 +10075,10 @@
         "p": []
       },
       {
-        "t": 110499.666666667,
+        "t": 110500,
         "d": 7,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -10416,9 +10166,10 @@
         "p": []
       },
       {
-        "t": 113166.333333333,
+        "t": 113166.666666667,
         "d": 5,
         "l": 0,
+        "k": "noanim",
         "p": []
       },
       {
@@ -10691,175 +10442,144 @@
         "t": 2666.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3333.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3500,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3583.33333333333,
         "d": 5,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 3833.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 4166.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 4500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 4666.66666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 4833.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 5000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 5166.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 5333.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 5667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6000.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6167,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6250.33333333333,
         "d": 5,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6500.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 6833.66666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7167,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7333.66666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7500.33333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
-        "p": []
-      },
-      {
-        "t": 7666.66666666667,
-        "d": 5,
-        "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7750,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 7833.33333333333,
         "d": 6,
         "l": 111.111111111113,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -10995,14 +10715,8 @@
         "p": []
       },
       {
-        "t": 13000,
+        "t": 13083.3259333333,
         "d": 0,
-        "l": 0,
-        "p": []
-      },
-      {
-        "t": 13083.3333333333,
-        "d": 3,
         "l": 0,
         "p": []
       },
@@ -11016,133 +10730,114 @@
         "t": 13333.3333333333,
         "d": 5,
         "l": 861.111111111143,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 14333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 14500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 14583.3333333333,
         "d": 5,
         "l": 444.444444444476,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 15166.6666666667,
         "d": 6,
         "l": 291.666666666631,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 15500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 15833.3333333333,
         "d": 7,
         "l": 236.111111111143,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 16250,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 16333.3333333333,
         "d": 5,
         "l": 291.6666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 16666.6666666667,
         "d": 6,
         "l": 291.666666666631,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17000,
         "d": 4,
         "l": 194.444444444443,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 17833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 18000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 18166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 18333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 18500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -11264,196 +10959,168 @@
         "t": 24000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 24083.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 24250,
         "d": 5,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 24500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 24666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 24916.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25166.6666666667,
         "d": 5,
         "l": 291.666666666633,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 25833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 26000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 26250,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 26500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 26750,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 26833.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 27000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 27250,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 27333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 27583.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 27833.3333333333,
         "d": 6,
         "l": 291.6666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 28916.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 29000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 29166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 29333.3333333333,
         "d": 6,
         "l": 916.6666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -11628,161 +11295,139 @@
       {
         "t": 34666.6666666667,
         "d": 2,
-        "l": 916.666666666624,
+        "l": 944.437044444404,
         "p": []
       },
       {
         "t": 34666.6666666667,
         "d": 6,
-        "l": 583.333333333295,
-        "k": "week4-lightpole",
+        "l": 611.10371111107,
         "p": []
       },
       {
         "t": 35666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 35833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 36000,
         "d": 5,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 36333.3333333333,
         "d": 4,
         "l": 194.444444444476,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 36666.6666666667,
         "d": 6,
         "l": 194.444444444405,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37083.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 37833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38500,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 38833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 39000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 39166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 39333.3333333333,
         "d": 6,
         "l": 291.6666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 39666.6666666667,
         "d": 5,
         "l": 277.777777777734,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -11921,42 +11566,36 @@
         "t": 45333.3333333333,
         "d": 5,
         "l": 861.111111111133,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 46333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 46500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 46583.3333333333,
         "d": 5,
         "l": 444.444444444467,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 47166.6666666667,
         "d": 6,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 47500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -11969,84 +11608,72 @@
         "t": 48250,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 48333.3333333333,
         "d": 5,
         "l": 291.666666666695,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 48666.6666666667,
         "d": 6,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49000,
         "d": 4,
         "l": 194.444444444438,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 49833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 50000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 50166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 50333.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 50500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12171,210 +11798,180 @@
         "t": 56000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56666.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 56833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57083.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57500,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 57833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58416.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58749.9926,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 58833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59083.3259333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59416.6592666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59749.9926,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 59833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60083.3259333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60416.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60583.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 60666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12393,14 +11990,12 @@
         "t": 61083.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 61166.6666666667,
         "d": 4,
         "l": 111.111111111067,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12611,14 +12206,12 @@
         "t": 66666,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 66749.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12631,7 +12224,6 @@
         "t": 66916,
         "d": 5,
         "l": 208.999999999994,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12644,14 +12236,12 @@
         "t": 67166,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 67332.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12664,7 +12254,6 @@
         "t": 67582.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12677,7 +12266,6 @@
         "t": 67832.6666666667,
         "d": 5,
         "l": 292.333333333299,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12690,7 +12278,6 @@
         "t": 68166,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12703,7 +12290,6 @@
         "t": 68332.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12716,14 +12302,12 @@
         "t": 68499.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 68666,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12742,7 +12326,6 @@
         "t": 68916,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12761,7 +12344,6 @@
         "t": 69166,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12774,14 +12356,12 @@
         "t": 69416,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 69499.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12794,7 +12374,6 @@
         "t": 69666,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12807,14 +12386,12 @@
         "t": 69916,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 69999.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12827,7 +12404,6 @@
         "t": 70249.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12840,7 +12416,6 @@
         "t": 70499.3333333333,
         "d": 6,
         "l": 292.333333333355,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12859,7 +12434,6 @@
         "t": 70832.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12872,7 +12446,6 @@
         "t": 70999.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12885,14 +12458,12 @@
         "t": 71166,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 71332.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12911,14 +12482,12 @@
         "t": 71582.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 71666,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12931,7 +12500,6 @@
         "t": 71832.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12944,7 +12512,6 @@
         "t": 71999.3333333333,
         "d": 6,
         "l": 542.333333333355,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -12987,7 +12554,6 @@
         "t": 73000,
         "d": 5,
         "l": 291.666666666657,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13000,7 +12566,6 @@
         "t": 73333.3333333333,
         "d": 6,
         "l": 541.666666666695,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13037,7 +12602,6 @@
         "t": 74333.3333333333,
         "d": 5,
         "l": 291.666666666695,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13050,7 +12614,6 @@
         "t": 74666.6666666667,
         "d": 6,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13069,7 +12632,6 @@
         "t": 75000,
         "d": 5,
         "l": 291.666666666657,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13088,7 +12650,6 @@
         "t": 75333.3333333333,
         "d": 6,
         "l": 291.666666666695,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13107,7 +12668,6 @@
         "t": 75666.6666666667,
         "d": 5,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13120,7 +12680,6 @@
         "t": 76000,
         "d": 6,
         "l": 291.666666666657,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13139,7 +12698,6 @@
         "t": 76333.3333333333,
         "d": 5,
         "l": 250,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13152,7 +12710,6 @@
         "t": 76666.6592666667,
         "d": 4,
         "l": 250.333333333325,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13177,7 +12734,6 @@
         "t": 77000,
         "d": 5,
         "l": 250,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13196,7 +12752,6 @@
         "t": 77333.6666666667,
         "d": 6,
         "l": 583.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13209,7 +12764,6 @@
         "t": 78333.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13222,7 +12776,6 @@
         "t": 78500.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13235,7 +12788,6 @@
         "t": 78667,
         "d": 5,
         "l": 194.111111111094,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13248,7 +12800,6 @@
         "t": 79000.3333333333,
         "d": 4,
         "l": 194.111111111132,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13261,7 +12812,6 @@
         "t": 79333.6666666667,
         "d": 6,
         "l": 194.111111111065,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13274,7 +12824,6 @@
         "t": 79750.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13287,7 +12836,6 @@
         "t": 79833.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13301,7 +12849,6 @@
         "t": 80000.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13314,7 +12861,6 @@
         "t": 80167,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13327,7 +12873,6 @@
         "t": 80333.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13340,7 +12885,6 @@
         "t": 80500.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13353,7 +12897,6 @@
         "t": 80667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13366,7 +12909,6 @@
         "t": 80833.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13379,7 +12921,6 @@
         "t": 81000.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13392,7 +12933,6 @@
         "t": 81167,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13405,7 +12945,6 @@
         "t": 81333.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13418,7 +12957,6 @@
         "t": 81500.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13431,7 +12969,6 @@
         "t": 81667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13444,7 +12981,6 @@
         "t": 81833.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13457,7 +12993,6 @@
         "t": 82000.3333333333,
         "d": 6,
         "l": 291.333333333351,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13470,7 +13005,6 @@
         "t": 82333.6666666667,
         "d": 5,
         "l": 277.444444444389,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13489,28 +13023,24 @@
         "t": 82833.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 83083.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 83333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 83583.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13523,7 +13053,6 @@
         "t": 83833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13542,7 +13071,6 @@
         "t": 84166.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13555,7 +13083,6 @@
         "t": 84416.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13568,21 +13095,18 @@
         "t": 84666.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 84833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 84916.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13601,14 +13125,12 @@
         "t": 85083.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 85166.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13628,7 +13150,6 @@
         "t": 85500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13647,7 +13168,6 @@
         "t": 85750,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13660,7 +13180,6 @@
         "t": 86000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13679,7 +13198,6 @@
         "t": 86250,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13692,7 +13210,6 @@
         "t": 86500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13705,7 +13222,6 @@
         "t": 86583.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13718,7 +13234,6 @@
         "t": 86833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13737,7 +13252,6 @@
         "t": 87083.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13750,7 +13264,6 @@
         "t": 87333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13763,7 +13276,6 @@
         "t": 87500,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13776,14 +13288,12 @@
         "t": 87666.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 87833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13796,7 +13306,6 @@
         "t": 88000.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13815,7 +13324,6 @@
         "t": 88334,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13834,14 +13342,12 @@
         "t": 88667.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 88750.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13854,7 +13360,6 @@
         "t": 88916.6666666667,
         "d": 5,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13873,7 +13378,6 @@
         "t": 89167.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13892,7 +13396,6 @@
         "t": 89500.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13905,7 +13408,6 @@
         "t": 89833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13930,14 +13432,12 @@
         "t": 90250,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 90333.3333333333,
         "d": 5,
         "l": 291.666666666705,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13956,7 +13456,6 @@
         "t": 90666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -13981,7 +13480,6 @@
         "t": 91000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14000,14 +13498,12 @@
         "t": 91333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 91416.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14020,7 +13516,6 @@
         "t": 91583.3333333333,
         "d": 5,
         "l": 208.333333333371,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14033,7 +13528,6 @@
         "t": 91833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14046,7 +13540,6 @@
         "t": 92000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14065,14 +13558,12 @@
         "t": 92166.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 92333.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14085,7 +13576,6 @@
         "t": 92500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14104,14 +13594,12 @@
         "t": 92666.6666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 92833.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14124,7 +13612,6 @@
         "t": 93000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14137,7 +13624,6 @@
         "t": 93166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14150,7 +13636,6 @@
         "t": 93333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14169,14 +13654,12 @@
         "t": 93666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 94000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14189,7 +13672,6 @@
         "t": 94083.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14202,7 +13684,6 @@
         "t": 94250,
         "d": 7,
         "l": 208.333333333333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14215,7 +13696,6 @@
         "t": 94500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14228,7 +13708,6 @@
         "t": 94833.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14247,14 +13726,12 @@
         "t": 95166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 95583.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14273,14 +13750,12 @@
         "t": 95666.6666666667,
         "d": 5,
         "l": 291.666666666629,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 96000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14293,7 +13768,6 @@
         "t": 96333.3333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14312,14 +13786,12 @@
         "t": 96666.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 96750,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14338,7 +13810,6 @@
         "t": 96916.6666666667,
         "d": 7,
         "l": 208.333333333295,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14351,14 +13822,12 @@
         "t": 97166.6666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 97333.3333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14372,7 +13841,6 @@
         "t": 97500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14391,14 +13859,12 @@
         "t": 97666.6666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 97833.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14411,7 +13877,6 @@
         "t": 98000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14430,14 +13895,12 @@
         "t": 98166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 98333.3333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14450,7 +13913,6 @@
         "t": 98500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14463,42 +13925,36 @@
         "t": 98666.3333333333,
         "d": 5,
         "l": 861.444444444468,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 99666.3333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 99833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 99916.3333333333,
         "d": 5,
         "l": 444.777777777801,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 100499.666666667,
         "d": 6,
         "l": 291.999999999651,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 100833,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14511,91 +13967,78 @@
         "t": 101583.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 101666.333333333,
         "d": 5,
         "l": 292.000000000333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 101999.666666667,
         "d": 6,
         "l": 291.999999999651,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 102333,
         "d": 4,
         "l": 194.777777777764,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 102666.333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 102833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 102999.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103166.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103499.666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103666.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 103833,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104000,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14608,42 +14051,36 @@
         "t": 104166.666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104333.333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104666.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 104833.333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 105000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14662,7 +14099,6 @@
         "t": 105166.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14675,28 +14111,24 @@
         "t": 105333.333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 105500,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 105666.666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 105833.333333333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14709,7 +14141,6 @@
         "t": 106000,
         "d": 4,
         "l": 291.666666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14722,14 +14153,12 @@
         "t": 106333.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 106500,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14742,14 +14171,12 @@
         "t": 106666.666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 106833.333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14762,7 +14189,6 @@
         "t": 107000,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14775,14 +14201,12 @@
         "t": 107166.666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 107333.333333333,
         "d": 4,
         "l": 291.666666667008,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14801,21 +14225,18 @@
         "t": 107666.666666667,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 107833.333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 108000,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14834,14 +14255,12 @@
         "t": 108166.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 108333.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14854,7 +14273,6 @@
         "t": 108500,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14873,14 +14291,12 @@
         "t": 108666.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 108833.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14893,7 +14309,6 @@
         "t": 109000,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
@@ -14913,203 +14328,174 @@
         "t": 109166.666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 109333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 109416.333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 109583,
         "d": 5,
         "l": 208.666666666659,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 109833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 109999.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 110249.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 110499.666666667,
         "d": 5,
         "l": 291.999999999651,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 110833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 110999.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 111166.333333333,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 111333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 111583,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 111833,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112083,
         "d": 6,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112166.333333333,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112333,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112583,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112666.333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 112916.333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113166.333333333,
         "d": 6,
         "l": 292.000000000333,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113499.666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113666.333333333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113833,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 113999.666666667,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 114249.666666667,
         "d": 5,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 114333,
         "d": 4,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 114499.666666667,
         "d": 7,
         "l": 0,
-        "k": "week4-lightpole",
         "p": []
       },
       {
         "t": 114666.333333333,
         "d": 6,
         "l": 916.666666666667,
-        "k": "week4-lightpole",
         "p": []
       },
       {
