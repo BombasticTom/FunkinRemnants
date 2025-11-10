@@ -38,6 +38,22 @@
       "offsets": [75, 0]
     },
     {
+      "name": "danceLeft-hold",
+      "prefix": "BF limo dance",
+      "assetPath": "characters/BFLimo-remnants",
+      "frameIndices": [11, 12, 13, 14],
+      "frameRate": 24,
+      "offsets": [75, 0]
+    },
+    {
+      "name": "danceRight-hold",
+      "prefix": "BF limo dance",
+      "assetPath": "characters/BFLimo-remnants",
+      "frameIndices": [26, 27, 28, 29],
+      "frameRate": 24,
+      "offsets": [75, 0]
+    },
+    {
       "name": "singLEFT",
       "prefix": "BF NOTE LEFT0",
       "offsets": [12, -6]

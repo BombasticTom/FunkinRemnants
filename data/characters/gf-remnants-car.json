@@ -33,6 +33,12 @@
       "offsets": [2, -67]
     },
     {
+      "name": "duck-hold",
+      "prefix": "GF Duck Hair Blowing",
+      "frameIndices": [2, 3, 5, 6, 7],
+      "offsets": [2, -67]
+    },
+    {
       "name": "cheer",
       "prefix": "GF Cheer CAR",
       "offsets": [0, 5]

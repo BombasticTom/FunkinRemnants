@@ -204,15 +204,14 @@ class LimoRideRemnantsStage extends Stage
 
 		if (event.beat == 72 && PlayState.instance.currentSong.id == "satin-panties")
 		{
-			if (getBoyfriend() != null && getBoyfriend().hasAnimation('dodge')) {
+			if (getBoyfriend() != null && getBoyfriend().hasAnimation('danceLeft-hold')) {
 				getBoyfriend().shouldAlternate = true;
 			}
 		}
 
-		if (event.beat == 166 && PlayState.instance.currentSong.id == "milf")
+		if (event.beat == 168 && PlayState.instance.currentSong.id == "milf")
 		{
-			if (getBoyfriend() != null && getBoyfriend().hasAnimation('dodge')) {
-				getBoyfriend().playAnimation('dodge', true, true);
+			if (getBoyfriend() != null && getBoyfriend().hasAnimation('danceLeft-hold')) {
 				getBoyfriend().shouldAlternate = true;
 			}
 		}
