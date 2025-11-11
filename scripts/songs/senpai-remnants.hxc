@@ -7,6 +7,7 @@ import flixel.tweens.FlxTween;
 import funkin.play.PlayState;
 import funkin.play.song.Song;
 import flixel.util.FlxTimer;
+import funkin.Preferences;
 import funkin.save.Save;
 import flixel.FlxSprite;
 
@@ -125,9 +126,12 @@ class SenpaiRemnantsMixSong extends Song
 
   function startDialogue()
   {
+    var targetDialogue = 'senpai-remnants';
+    if (!Preferences.naughtyness) targetDialogue += "-censored";
     PlayState.instance.disableKeys = false;
     PlayState.instance.camHUD.alpha = 0;
-    PlayState.instance.startConversation('senpai-remnants');
+    trace('Playing dialogue...');
+    PlayState.instance.startConversation(targetDialogue);
   }
 
   /**

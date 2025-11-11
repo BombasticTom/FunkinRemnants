@@ -1,4 +1,5 @@
 import flixel.FlxG;
+import funkin.Preferences;
 import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
 import funkin.modding.module.ModuleHandler;
@@ -168,10 +169,10 @@ class ThornsRemnantsMixSong extends Song
 
   function startDialogue()
   {
+    var targetDialogue = 'thorns-remnants';
+    if (!Preferences.naughtyness) targetDialogue += "-censored";
     PlayState.instance.disableKeys = false;
     PlayState.instance.camHUD.alpha = 0;
-    var targetDialogue = 'thorns-remnants';
-
     trace('Playing dialogue...');
     PlayState.instance.startConversation(targetDialogue);
   }
