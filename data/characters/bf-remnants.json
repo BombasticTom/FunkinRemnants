@@ -94,16 +94,19 @@
     {
       "name": "preAttack",
       "prefix": "bf pre attack",
+      "assetPath": "characters/BFActions-remnants",
       "offsets": [-32, -38]
     },
     {
       "name": "attack",
       "prefix": "boyfriend attack",
+      "assetPath": "characters/BFActions-remnants",
       "offsets": [298, 274]
     },
     {
       "name": "dodge",
       "prefix": "boyfriend dodge",
+      "assetPath": "characters/BFActions-remnants",
       "offsets": [0, -20]
     },
     {
@@ -170,11 +173,13 @@
     {
       "name": "hit",
       "prefix": "BF hit",
+      "assetPath": "characters/BFActions-remnants",
       "offsets": [12, 18]
     },
     {
       "name": "hit-hold",
       "prefix": "BF hit",
+      "assetPath": "characters/BFActions-remnants",
       "frameIndices": [10, 11],
       "looped": true,
       "offsets": [12, 18]
@@ -182,6 +187,7 @@
     {
       "name": "firstDeath",
       "prefix": "BF dies",
+      "assetPath": "characters/bf-DEAD-remnants",
       "offsets": [23, 11]
     },
     {
@@ -192,12 +198,14 @@
     {
       "name": "deathLoop",
       "prefix": "BF Dead Loop",
+      "assetPath": "characters/bf-DEAD-remnants",
       "looped": true,
       "offsets": [23, 4]
     },
     {
       "name": "deathConfirm",
       "prefix": "BF Dead confirm",
+      "assetPath": "characters/bf-DEAD-remnants",
       "offsets": [22, 67]
     },
     {

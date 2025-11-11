@@ -124,13 +124,12 @@
     {
       "name": "dodge",
       "prefix": "boyfriend dodge",
-      "assetPath": "characters/bf-remnants",
+      "assetPath": "characters/BFActions-remnants",
       "offsets": [0, 0]
     },
     {
       "name": "hit",
       "prefix": "BF hit",
-      "assetPath": "characters/bf-remnants",
       "offsets": [0, 0]
     },
     {
@@ -138,26 +137,25 @@
       "prefix": "BF hit",
       "frameIndices": [10, 11],
       "looped": true,
-      "assetPath": "characters/bf-remnants",
       "offsets": [0, 0]
     },
     {
       "name": "firstDeath",
       "prefix": "BF dies",
-      "assetPath": "characters/bf-remnants",
+      "assetPath": "characters/bf-DEAD-remnants",
       "offsets": [-37, 11]
     },
     {
       "name": "deathLoop",
       "prefix": "BF Dead Loop",
-      "assetPath": "characters/bf-remnants",
+      "assetPath": "characters/bf-DEAD-remnants",
       "looped": true,
       "offsets": [-37, 5]
     },
     {
       "name": "deathConfirm",
       "prefix": "BF Dead confirm",
-      "assetPath": "characters/bf-remnants",
+      "assetPath": "characters/bf-DEAD-remnants",
       "offsets": [-37, 69]
     }
   ]

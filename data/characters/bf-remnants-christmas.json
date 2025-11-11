@@ -10,11 +10,6 @@
   "singTime": 8.0,
   "animations": [
     {
-      "name": "hey",
-      "prefix": "BF HEY!!",
-      "offsets": [-2, 5]
-    },
-    {
       "name": "idle",
       "prefix": "BF idle dance",
       "offsets": [-5, 0]
@@ -40,18 +35,6 @@
       "offsets": [-38, -7]
     },
     {
-      "name": "singDOWN-censor",
-      "assetPath": "characters/bfChristmas_Censored",
-      "prefix": "bf swear down",
-      "offsets": [-10, -50]
-    },
-    {
-      "name": "singRIGHT-censor",
-      "assetPath": "characters/bfChristmas_Censored",
-      "prefix": "bf swear right",
-      "offsets": [-38, -7]
-    },
-    {
       "name": "singLEFTmiss",
       "prefix": "BF NOTE LEFT MISS",
       "offsets": [12, 24]
@@ -72,22 +55,37 @@
       "offsets": [-30, 21]
     },
     {
+      "name": "hey",
+      "prefix": "BF HEY!!",
+      "offsets": [-2, 5]
+    },
+    {
+      "name": "ayo",
+      "prefix": "BF ayyyy",
+      "offsets": [-29, 6]
+    },
+    {
+      "name": "aww",
+      "prefix": "BF awww",
+      "offsets": [-2, 116]
+    },
+    {
       "name": "firstDeath",
       "prefix": "BF dies",
-      "assetPath": "characters/bf-remnants",
+      "assetPath": "characters/bf-DEAD-remnants",
       "offsets": [-37, 11]
     },
     {
       "name": "deathLoop",
       "prefix": "BF Dead Loop",
-      "assetPath": "characters/bf-remnants",
+      "assetPath": "characters/bf-DEAD-remnants",
       "looped": true,
       "offsets": [-37, 5]
     },
     {
       "name": "deathConfirm",
       "prefix": "BF Dead confirm",
-      "assetPath": "characters/bf-remnants",
+      "assetPath": "characters/bf-DEAD-remnants",
       "offsets": [-37, 69]
     }
   ]
