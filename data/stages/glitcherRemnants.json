@@ -19,7 +19,26 @@
       "scale": 1.5,
       "scroll": [1, 1],
       "startingAnimation": "",
-      "zIndex": 0
+      "zIndex": 10
+       },
+    {
+      "alpha": 0.0001,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [],
+      "assetPath": "stages/glitcherRemnants/stageback",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "Court Back",
+      "position": [-1226, -516],
+      "scale": 1.5,
+      "scroll": [1, 1],
+      "startingAnimation": "",
+      "zIndex": 20
     }
   ],
   "characters": {

@@ -4,7 +4,11 @@
   "renderType": "multisparrow",
   "assetPath": "characters/glitcherbf",
   "flipX": true,
-  "singTime": 8.0,
+  "singTime": 6.1,
+  "healthIcon": {
+		"id": "bf-remnants",
+		"isPixel": false
+	},
   "animations": [
     {
       "name": "idle",

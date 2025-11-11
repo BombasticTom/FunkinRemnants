@@ -3,6 +3,7 @@
   "songName": "Glitcher (Remnants Mix)",
   "artist": "LunarZNova",
   "charter": "TRWario",
+  "divisions": 96,
   "looped": false,
   "offsets": {
     "instrumental": 0,
@@ -18,15 +19,16 @@
       "hard"
     ],
     "characters": {
-      "player": "bf-remnants",
-      "girlfriend": "gf-remnants",
-      "opponent": "hex-glitcher-remnants",
+      "player": "bf-glitcher-normal",
+      "girlfriend": "gf-glitcher-normal",
+      "opponent": "hex-glitcher-normal",
       "instrumental": "",
+      "altInstrumentals": [],
       "opponentVocals": [
-        "hex-g"
+        "hex-glitcher-remnants"
       ],
       "playerVocals": [
-        "bf-g"
+        "bf-remnants"
       ]
     },
     "stage": "glitcherRemnants",
