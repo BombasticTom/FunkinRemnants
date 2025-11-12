@@ -4,9 +4,11 @@ import funkin.graphics.FunkinSprite;
 import funkin.modding.module.Module;
 import flixel.addons.display.FlxBackdrop;
 import funkin.graphics.shaders.TextureSwap;
+import flixel.graphics.frames.FlxBitmapFont;
 import funkin.ui.FullScreenScaleMode;
 import funkin.graphics.FunkinCamera;
 import flixel.effects.FlxFlicker;
+import flixel.math.FlxBasePoint;
 import funkin.util.ReflectUtil;
 import funkin.play.PlayState;
 import funkin.util.Constants;
@@ -79,11 +81,13 @@ class RemnantsResults extends Module
 					scorePopinRemnants.animation.play("score");
 					scorePopinRemnants.animation.onFinish.add(anim -> {});
 				});
-				
+
 				// Song Font
-				var swapFont = new TextureSwap();
-				swapFont.loadSwapImage("mods/Funkin' Remnants/shared/images/resultScreen/tardlingSpritesheet-remnants.png");
-				curState.songName.shader = swapFont;
+				var fontLetters:String = "AaBbCcDdEeFfGgHhiIJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz:1234567890";
+				var songText:String = curState.songName.text;
+				curState.songName.font = FlxBitmapFont.fromMonospace(Paths.image("resultScreen/tardlingSpritesheet-remnants"), fontLetters, FlxBasePoint.get(49, 62));
+				curState.songName.text = "i fucked up";
+				curState.songName.text = songText;
 
 				// Difficulty Sprite
 				var swapDiff = new TextureSwap();
