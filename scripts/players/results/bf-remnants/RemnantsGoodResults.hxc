@@ -19,6 +19,7 @@ class RemnantsGoodResults extends FlxAtlasSprite
 
   var picoOffset:Array<Float> = [350, 25];
   var boyfriend = PlayState.instance?.currentStage?.getBoyfriend();
+
   function new(x:Float, y:Float)
   {
     if (StringTools.contains(boyfriend?.characterId ?? 'bf-remnants', 'pico'))
@@ -121,8 +122,7 @@ class RemnantsGoodResults extends FlxAtlasSprite
     }
     else
     {
-      super(x, y, Paths.animateAtlas("resultScreen/results-bf-remnants/resultsGOOD/bf", "shared"),
-      {
+      super(x, y, Paths.animateAtlas("resultScreen/results-bf-remnants/resultsGOOD/bf", "shared"), {
         Reversed: false,
         // ?OnComplete:Void -> Void,
         ShowPivot: false,
@@ -158,3 +158,4 @@ class RemnantsGoodResults extends FlxAtlasSprite
     }
   }
 }
+

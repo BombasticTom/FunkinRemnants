@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Remnants Monster (Dark)",
   "assetPath": "characters/monster-remnants_dark",
-  "healthIcon": {"id": "monster-remnants"},
+  "healthIcon": { "id": "monster-remnants" },
   "animations": [
     {
       "name": "idle",

@@ -16,8 +16,7 @@ class RemnantsPerfectResults extends FlxAtlasSprite
       x = picoOffset[0] + (FullScreenScaleMode.gameCutoutSize.x / 2);
       y = picoOffset[1];
 
-      super(x, y, Paths.animateAtlas("resultScreen/results-pico-remnants/resultsPERFECT", "shared"),
-      {
+      super(x, y, Paths.animateAtlas("resultScreen/results-pico-remnants/resultsPERFECT", "shared"), {
         Reversed: false,
         // ?OnComplete:Void -> Void,
         ShowPivot: false,
@@ -51,14 +50,13 @@ class RemnantsPerfectResults extends FlxAtlasSprite
     }
     else
     {
-      super(x, y, Paths.animateAtlas("resultScreen/results-bf-remnants/resultsPERFECT/bed", "shared"),
-        {
-          Reversed: false,
-          // ?OnComplete:Void -> Void,
-          ShowPivot: false,
-          Antialiasing: true,
-          ScrollFactor: new FlxPoint(1, 1),
-        });
+      super(x, y, Paths.animateAtlas("resultScreen/results-bf-remnants/resultsPERFECT/bed", "shared"), {
+        Reversed: false,
+        // ?OnComplete:Void -> Void,
+        ShowPivot: false,
+        Antialiasing: true,
+        ScrollFactor: new FlxPoint(1, 1),
+      });
 
       onAnimationFrame.add((animation:String, frame:Int) -> {
         if (!HapticUtil.hapticsAvailable) return;
@@ -72,3 +70,4 @@ class RemnantsPerfectResults extends FlxAtlasSprite
     }
   }
 }
+

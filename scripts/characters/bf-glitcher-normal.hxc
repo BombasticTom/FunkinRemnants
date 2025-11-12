@@ -70,3 +70,4 @@ class BoyfriendGlitcherNormalCharacter extends MultiSparrowCharacter
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
 }
+

@@ -334,7 +334,7 @@ class PicoDefaultRemnantsCharacter extends MultiSparrowCharacter
       GameOverSubState.instance.startDeathMusic(1.0, false);
       // force the deathloop to play in here, since we are starting the music early it
       // doesn't check this in gameover substate !
-      // also no animation suffix 🤔
+      // also no animation suffix ????
       GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
     }
 
@@ -480,3 +480,4 @@ class PicoDefaultRemnantsCharacter extends MultiSparrowCharacter
     }
   }
 }
+

@@ -44,7 +44,7 @@ class BlazinRemnantsMixSong extends Song
   {
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-	}
+  }
 
   var hasHidden = false;
   var hasPlayedCutscene:Bool = false;
@@ -88,10 +88,12 @@ class BlazinRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
   }
 }
+

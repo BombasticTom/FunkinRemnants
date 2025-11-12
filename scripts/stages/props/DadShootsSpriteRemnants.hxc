@@ -35,3 +35,4 @@ class DadShootsSpriteRemnants extends FlxAtlasSprite
     this.anim.pause();
   }
 }
+

@@ -25,9 +25,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "enter",
 
-      "text": [
-        "I know what you are"
-      ],
+      "text": ["I know what you are"],
       "speed": 1.0
     },
     {
@@ -36,9 +34,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": [
-        ""
-      ]
+      "text": [""]
     },
     {
       "speaker": "spirit-remnants",
@@ -46,9 +42,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": [
-        ""
-      ]
+      "text": [""]
     },
     {
       "speaker": "bf-pixel-remnants",
@@ -56,9 +50,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": [
-        "Are we deadass?"
-      ]
+      "text": ["Are we deadass?"]
     }
   ]
 }

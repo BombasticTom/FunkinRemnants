@@ -35,7 +35,7 @@ class TwoHOTRemnantsMixSong extends Song
   {
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-	}
+  }
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
   {
@@ -53,7 +53,8 @@ class TwoHOTRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
@@ -335,12 +336,13 @@ class TwoHOTRemnantsMixSong extends Song
    */
   var HEALTH_LOSS = 0.25 * 2;
 
-  var canDamageVibrationPreset:VibrationPreset = {
-    period: 0.1,
-    duration: 0.1,
-    amplitude: 1,
-    sharpness: 1
-  };
+  var canDamageVibrationPreset:VibrationPreset =
+    {
+      period: 0.1,
+      duration: 0.1,
+      amplitude: 1,
+      sharpness: 1
+    };
 
   function takeCanDamage():Void
   {
@@ -358,8 +360,7 @@ class TwoHOTRemnantsMixSong extends Song
       GameOverSubState.musicSuffix = '-pico-explode-remnants';
       GameOverSubState.blueBallSuffix = '-pico-explode-remnants';
 
-      if (!PlayState.instance.isPracticeMode)
-        blackenStageProps();
+      if (!PlayState.instance.isPracticeMode) blackenStageProps();
     }
     else if (HapticUtil.hapticsAvailable)
     {
@@ -373,3 +374,4 @@ class TwoHOTRemnantsMixSong extends Song
     }
   }
 }
+

@@ -6,9 +6,9 @@
   "flipX": true,
   "singTime": 6.1,
   "healthIcon": {
-		"id": "bf-remnants",
-		"isPixel": false
-	},
+    "id": "bf-remnants",
+    "isPixel": false
+  },
   "animations": [
     {
       "name": "idle",

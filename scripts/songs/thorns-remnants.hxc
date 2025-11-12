@@ -35,7 +35,7 @@ class ThornsRemnantsMixSong extends Song
   {
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-	}
+  }
 
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
@@ -43,12 +43,13 @@ class ThornsRemnantsMixSong extends Song
 
     if (PlayState.instance.camHUD.alpha < 1)
     {
-     FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.7, {ease: FlxEase.linear});
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.7, {ease: FlxEase.linear});
     }
-    
+
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedDialogue) hasPlayedDialogue = true;
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       if (bgSprite == null)
       {
@@ -228,32 +229,43 @@ class ThornsRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 0:
-	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.smoothStepInOut});
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.smoothStepInOut});
 
       case 28:
-	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1.25, {ease: FlxEase.smoothStepOut});
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1.25, {ease: FlxEase.smoothStepOut});
 
       case 32:
-	       fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-	       }});
-	       black.alpha = 0;
+        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
+          {
+            ease: FlxEase.instant,
+            onComplete: function(_) {
+              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+            }
+          });
+        black.alpha = 0;
 
       case 96:
-	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.sineOut});
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.sineOut});
 
       case 127:
-	      fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.3, {ease: FlxEase.backIn});
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.3, {ease: FlxEase.backIn});
 
       case 256:
-	      fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1, {ease: FlxEase.sineOut});
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1, {ease: FlxEase.sineOut});
 
       case 320:
-	       fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-	       }});
-	       black.alpha = 0;
+        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
+          {
+            ease: FlxEase.instant,
+            onComplete: function(_) {
+              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+            }
+          });
+        black.alpha = 0;
 
       case 384:
-	       black.alpha = 1;
+        black.alpha = 1;
     }
   }
 }
+

@@ -3,30 +3,31 @@ import funkin.play.character.CharacterType;
 
 class BFRemnantsOpponentCharacter extends MultiSparrowCharacter
 {
-    function new()
+  function new()
+  {
+    super('bf-remnants-opponent');
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.eventCanceled) return;
+    if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
     {
-		super('bf-remnants-opponent');
-	}
+      switch (event.note.kind)
+      {
+        case "censor":
+          holdTimer = 0;
+          this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
 
-    function onNoteHit(event:HitNoteScriptEvent)
-    {
-        if (event.eventCanceled) return;
-        if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD) 
-        {
-            switch(event.note.kind)
-            {
-                case "censor":
-                    holdTimer = 0;
-                    this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
+        case "miss":
+          holdTimer = 0;
+          this.playSingAnimation(event.note.noteData.getDirection(), false, 'miss');
+          event.cancelEvent();
 
-                case "miss":
-                    holdTimer = 0;
-                    this.playSingAnimation(event.note.noteData.getDirection(), false, 'miss');
-                    event.cancelEvent();
-
-                default:
-                    super.onNoteHit(event);
-            }
-        }
+        default:
+          super.onNoteHit(event);
+      }
     }
+  }
 }
+

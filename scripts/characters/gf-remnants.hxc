@@ -9,16 +9,18 @@ class GirlfriendRemnantsCharacter extends MultiSparrowCharacter
     super('gf-remnants');
   }
 
-	function onCreate(event:ScriptEvent)
-	{
-		super.onCreate(event);
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
 
-		if (!this.debug) { // Gotta do it like this because the editor freaks out.
-			if (PlayState.instance.currentSong.id == null) return;
-			if (['spookeez', 'south'].contains(PlayState.instance.currentSong.id)) this.idleSuffix = '-spooky';
-			else this.idleSuffix = '';
-		}
-	}
+    if (!this.debug)
+    { // Gotta do it like this because the editor freaks out.
+      if (PlayState.instance.currentSong.id == null) return;
+      if (['spookeez', 'south'].contains(PlayState.instance.currentSong.id)) this.idleSuffix = '-spooky';
+      else
+        this.idleSuffix = '';
+    }
+  }
 
   override function onAdd()
   {
@@ -48,3 +50,4 @@ class GirlfriendRemnantsCharacter extends MultiSparrowCharacter
     super.dance(force);
   }
 }
+

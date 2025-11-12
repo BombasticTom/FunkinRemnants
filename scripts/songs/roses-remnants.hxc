@@ -28,7 +28,7 @@ class RosesRemnantsMixSong extends Song
   {
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-	}
+  }
 
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
@@ -37,7 +37,8 @@ class RosesRemnantsMixSong extends Song
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
 
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       if (bgSprite == null)
       {
@@ -75,7 +76,7 @@ class RosesRemnantsMixSong extends Song
         new FlxTimer().start(2, _ -> {
           startDialogue();
         });
-      } 
+      }
     }
   }
 
@@ -117,8 +118,7 @@ class RosesRemnantsMixSong extends Song
   {
     // We may need to wait for the outro to play.
     Countdown.performCountdown();
-}
-
+  }
 
   function onBeatHit(event:ScriptEvent):Void
   {
@@ -127,15 +127,16 @@ class RosesRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 14:
-	      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
 
       case 192:
-	       var darkness = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
-               darkness.cameras = [PlayState.instance.camCutscene];
-               PlayState.instance.add(darkness);
-               darkness.alpha = 0.0;
+        var darkness = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
+        darkness.cameras = [PlayState.instance.camCutscene];
+        PlayState.instance.add(darkness);
+        darkness.alpha = 0.0;
 
-               FlxTween.tween(darkness, {alpha: 1}, 1, {ease: FlxEase.linear});
+        FlxTween.tween(darkness, {alpha: 1}, 1, {ease: FlxEase.linear});
     }
   }
 }
+

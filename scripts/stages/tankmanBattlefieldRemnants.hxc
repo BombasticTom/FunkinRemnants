@@ -11,150 +11,151 @@ import flixel.tweens.FlxEase;
 
 class TankmanBattlefieldRemnantsStage extends Stage
 {
-	function new()
-	{
-		super('tankmanBattlefieldRemnants');
-	}
+  function new()
+  {
+    super('tankmanBattlefieldRemnants');
+  }
 
-	function onCreate(event:ScriptEvent):Void
-	{
-		super.onCreate(event);
-	}
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+  }
 
-	var clouds:FlxTiledSprite;
-	var tankParachute1:FlxBackdrop;
-	var tankParachute2:FlxBackdrop;
-	var tankParachute3:FlxBackdrop;
-	var boxParachute1:FlxBackdrop;
-	var boxParachute2:FlxBackdrop;
+  var clouds:FlxTiledSprite;
+  var tankParachute1:FlxBackdrop;
+  var tankParachute2:FlxBackdrop;
+  var tankParachute3:FlxBackdrop;
+  var boxParachute1:FlxBackdrop;
+  var boxParachute2:FlxBackdrop;
 
-	override function buildStage()
-	{
-		super.buildStage();
+  override function buildStage()
+  {
+    super.buildStage();
 
-		tankParachute1 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall1'), 0x10, 0, 5000);
-		tankParachute1.scrollFactor.set(0.40, 0.35);
-		tankParachute1.setPosition(583, -215);
-		tankParachute1.velocity.y = 150;
-		tankParachute1.zIndex = 39;
-		tankParachute1.angle = -5;
+    tankParachute1 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall1'), 0x10, 0, 5000);
+    tankParachute1.scrollFactor.set(0.40, 0.35);
+    tankParachute1.setPosition(583, -215);
+    tankParachute1.velocity.y = 150;
+    tankParachute1.zIndex = 39;
+    tankParachute1.angle = -5;
 
-		FlxTween.tween(tankParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+    FlxTween.tween(tankParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-		tankParachute2 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall2'), 0x10, 0, 5000);
-		tankParachute2.scrollFactor.set(0.35, 0.35);
-		tankParachute2.setPosition(989, -110);
-		tankParachute2.velocity.y = 125;
-		tankParachute2.zIndex = 39;
-		tankParachute2.angle = -5;
+    tankParachute2 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall2'), 0x10, 0, 5000);
+    tankParachute2.scrollFactor.set(0.35, 0.35);
+    tankParachute2.setPosition(989, -110);
+    tankParachute2.velocity.y = 125;
+    tankParachute2.zIndex = 39;
+    tankParachute2.angle = -5;
 
-		FlxTween.tween(tankParachute2, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+    FlxTween.tween(tankParachute2, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-		tankParachute3 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall3'), 0x10, 0, 5000);
-		tankParachute3.scrollFactor.set(0.35, 0.35);
-		tankParachute3.setPosition(1238, -104);
-		tankParachute3.velocity.y = 125;
-		tankParachute3.zIndex = 39;
-		tankParachute3.angle = -5;
+    tankParachute3 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall3'), 0x10, 0, 5000);
+    tankParachute3.scrollFactor.set(0.35, 0.35);
+    tankParachute3.setPosition(1238, -104);
+    tankParachute3.velocity.y = 125;
+    tankParachute3.zIndex = 39;
+    tankParachute3.angle = -5;
 
-		FlxTween.tween(tankParachute3, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+    FlxTween.tween(tankParachute3, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-		boxParachute1 = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall1'), 0x10, 0, 5000);
-		boxParachute1.scrollFactor.set(0.20, 0.35);
-		boxParachute1.setPosition(-79, -148);
-		boxParachute1.velocity.y = 125;
-		boxParachute1.zIndex = 39;
-		boxParachute1.angle = -5;
+    boxParachute1 = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall1'), 0x10, 0, 5000);
+    boxParachute1.scrollFactor.set(0.20, 0.35);
+    boxParachute1.setPosition(-79, -148);
+    boxParachute1.velocity.y = 125;
+    boxParachute1.zIndex = 39;
+    boxParachute1.angle = -5;
 
-		FlxTween.tween(boxParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+    FlxTween.tween(boxParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-		boxParachute2 = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall2'), 0x10, 0, 5000);
-		boxParachute2.scrollFactor.set(0.25, 0.35);
-		boxParachute2.setPosition(282, -27);
-		boxParachute2.velocity.y = 125;
-		boxParachute2.zIndex = 39;
+    boxParachute2 = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall2'), 0x10, 0, 5000);
+    boxParachute2.scrollFactor.set(0.25, 0.35);
+    boxParachute2.setPosition(282, -27);
+    boxParachute2.velocity.y = 125;
+    boxParachute2.zIndex = 39;
 
-		FlxTween.tween(boxParachute2, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
+    FlxTween.tween(boxParachute2, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
 
-		PlayState.instance.currentStage.add(tankParachute1);
-		PlayState.instance.currentStage.add(tankParachute2);
-		PlayState.instance.currentStage.add(tankParachute3);
-		PlayState.instance.currentStage.add(boxParachute1);
-		PlayState.instance.currentStage.add(boxParachute2);
+    PlayState.instance.currentStage.add(tankParachute1);
+    PlayState.instance.currentStage.add(tankParachute2);
+    PlayState.instance.currentStage.add(tankParachute3);
+    PlayState.instance.currentStage.add(boxParachute1);
+    PlayState.instance.currentStage.add(boxParachute2);
 
-		clouds = new FlxTiledSprite(Paths.image('stages/week7Remnants/tankClouds'), 3200, 235, true, false);
-		clouds.setPosition(-1100, 20);
-		clouds.scrollFactor.set(0.25, 0.25);
-		clouds.zIndex = 12;
+    clouds = new FlxTiledSprite(Paths.image('stages/week7Remnants/tankClouds'), 3200, 235, true, false);
+    clouds.setPosition(-1100, 20);
+    clouds.scrollFactor.set(0.25, 0.25);
+    clouds.zIndex = 12;
 
-		clouds.velocity.x = 8;
+    clouds.velocity.x = 8;
 
-		PlayState.instance.currentStage.add(clouds);
-		PlayState.instance.currentStage.refresh(); // Apply z-index.
+    PlayState.instance.currentStage.add(clouds);
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-		tankAngle = FlxG.random.int(-90, 45);
-		tankSpeed = FlxG.random.float(5, 7);
-	}
+    tankAngle = FlxG.random.int(-90, 45);
+    tankSpeed = FlxG.random.float(5, 7);
+  }
 
-	function onUpdate(event:UpdateScriptEvent):Void
-	{
-		super.onUpdate(event);
-		moveTank(event.elapsed);
-	}
+  function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+    moveTank(event.elapsed);
+  }
 
-	public override function onPause(event:PauseScriptEvent)
-	{
-		super.onPause(event);
+  public override function onPause(event:PauseScriptEvent)
+  {
+    super.onPause(event);
 
-		FlxTweenUtil.pauseTweensOf(tankParachute1);
-		FlxTweenUtil.pauseTweensOf(tankParachute2);
-		FlxTweenUtil.pauseTweensOf(tankParachute3);
-		FlxTweenUtil.pauseTweensOf(boxParachute1);
-		FlxTweenUtil.pauseTweensOf(boxParachute2);
-	}
+    FlxTweenUtil.pauseTweensOf(tankParachute1);
+    FlxTweenUtil.pauseTweensOf(tankParachute2);
+    FlxTweenUtil.pauseTweensOf(tankParachute3);
+    FlxTweenUtil.pauseTweensOf(boxParachute1);
+    FlxTweenUtil.pauseTweensOf(boxParachute2);
+  }
 
-	public override function onResume(event:ScriptEvent)
-	{
-		super.onResume(event);
+  public override function onResume(event:ScriptEvent)
+  {
+    super.onResume(event);
 
-		FlxTweenUtil.resumeTweensOf(tankParachute1);
-		FlxTweenUtil.resumeTweensOf(tankParachute2);
-		FlxTweenUtil.resumeTweensOf(tankParachute3);
-		FlxTweenUtil.resumeTweensOf(boxParachute1);
-		FlxTweenUtil.resumeTweensOf(boxParachute2);
-	}
+    FlxTweenUtil.resumeTweensOf(tankParachute1);
+    FlxTweenUtil.resumeTweensOf(tankParachute2);
+    FlxTweenUtil.resumeTweensOf(tankParachute3);
+    FlxTweenUtil.resumeTweensOf(boxParachute1);
+    FlxTweenUtil.resumeTweensOf(boxParachute2);
+  }
 
-	var tankMoving:Bool = false;
-	var tankAngle:Float = FlxG.random.int(-90, 45);
-	var tankAngle2:Float = tankAngle;
-	var tankSpeed:Float = FlxG.random.float(7, 10);
-	var tankSpeed2:Float = FlxG.random.float(9, 12);
-	var tankX:Float = 400;
+  var tankMoving:Bool = false;
+  var tankAngle:Float = FlxG.random.int(-90, 45);
+  var tankAngle2:Float = tankAngle;
+  var tankSpeed:Float = FlxG.random.float(7, 10);
+  var tankSpeed2:Float = FlxG.random.float(9, 12);
+  var tankX:Float = 400;
 
-	function onBeatHit(event:SongTimeScriptEvent):Void
-	{
-		super.onBeatHit(event);
-	}
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+  }
 
-	function moveTank(elapsed:Float):Void
-	{
-		var daAngleOffset:Float = 1;
-		tankAngle += elapsed * tankSpeed;
-		tankAngle2 += elapsed * tankSpeed2;
+  function moveTank(elapsed:Float):Void
+  {
+    var daAngleOffset:Float = 1;
+    tankAngle += elapsed * tankSpeed;
+    tankAngle2 += elapsed * tankSpeed2;
 
-		var tankRolling = getNamedProp('tankRolling');
-		tankRolling.angle = tankAngle - 90 + 15;
-		tankRolling.x = tankX + Math.cos(FlxAngle.asRadians((tankAngle * daAngleOffset) + 180)) * 1500;
-		tankRolling.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle * daAngleOffset) + 180)) * 1100;
+    var tankRolling = getNamedProp('tankRolling');
+    tankRolling.angle = tankAngle - 90 + 15;
+    tankRolling.x = tankX + Math.cos(FlxAngle.asRadians((tankAngle * daAngleOffset) + 180)) * 1500;
+    tankRolling.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle * daAngleOffset) + 180)) * 1100;
 
-		var tankRollingExtra = getNamedProp('tankRollingExtra');
-		tankRollingExtra.angle = tankAngle2 - 90 + 15;
-		tankRollingExtra.x = tankX + Math.cos(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1500;
-		tankRollingExtra.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1100;
-	}
+    var tankRollingExtra = getNamedProp('tankRollingExtra');
+    tankRollingExtra.angle = tankAngle2 - 90 + 15;
+    tankRollingExtra.x = tankX + Math.cos(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1500;
+    tankRollingExtra.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1100;
+  }
 
-	function onSongRetry(event:ScriptEvent)
-	{
-		super.onSongRetry(event);
-	}
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+  }
 }
+

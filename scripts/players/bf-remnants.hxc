@@ -3,13 +3,14 @@ import funkin.save.Save;
 
 class BFRemnantsPlayableCharacter extends PlayableCharacter
 {
-	function new()
-	{
-		super('bf-remnants');
-	}
+  function new()
+  {
+    super('bf-remnants');
+  }
 
-	override function isUnlocked():Bool
-	{
-		return Save.instance.hasBeatenLevel('remnants-week');
-	}
+  override function isUnlocked():Bool
+  {
+    return Save.instance.hasBeatenLevel('remnants-week');
+  }
 }
+

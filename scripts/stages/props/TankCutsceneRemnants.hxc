@@ -6,13 +6,15 @@ class TankCutsceneRemnants extends FlxAtlasSprite
 {
   function new(x:Float, y:Float)
   {
-    super(x, y, Paths.animateAtlas("stages/week7Remnants/cutscene/tankmanAtlas", "shared"), {
-      FrameRate: 24.0,
-      Reversed: false,
-      // ?OnComplete:Void -> Void,
-      ShowPivot: false,
-      Antialiasing: true,
-      ScrollFactor: new FlxPoint(1, 1),
-    });
+    super(x, y, Paths.animateAtlas("stages/week7Remnants/cutscene/tankmanAtlas", "shared"),
+      {
+        FrameRate: 24.0,
+        Reversed: false,
+        // ?OnComplete:Void -> Void,
+        ShowPivot: false,
+        Antialiasing: true,
+        ScrollFactor: new FlxPoint(1, 1),
+      });
   }
 }
+

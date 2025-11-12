@@ -365,15 +365,13 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
       var blendAnims:Array<Int> = [10, 0, 10, 0, 0, 10, 0, 0, 10, 0, 10];
       for (blendMode in 0...blendAnims.length)
       {
-      	new FlxTimer().start(blendMode / 60, function(_) {
+        new FlxTimer().start(blendMode / 60, function(_) {
+          if (blendAnims[blendMode] != 10) this.color = 0xFF0000FF;
+          else
+            this.color = 0xFFFFFFFF;
 
-      		if (blendAnims[blendMode] != 10)
-      			this.color = 0xFF0000FF;
-      		else
-      			this.color = 0xFFFFFFFF;
-      
-      		this.blend = blendAnims[blendMode];
-      	});
+          this.blend = blendAnims[blendMode];
+        });
       }
     }
 
@@ -450,19 +448,19 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
     moveToBack();
   }
 
-	function playPunchHighAnim()
-	{
-		var postfix:String = doAlternate();
-		this.playAnimation('punchHigh' + postfix, true, false);
-		moveToFront();
-	}
+  function playPunchHighAnim()
+  {
+    var postfix:String = doAlternate();
+    this.playAnimation('punchHigh' + postfix, true, false);
+    moveToFront();
+  }
 
-	function playPunchLowAnim()
-	{
-		var postfix:String = doAlternate();
-		this.playAnimation('punchLow' + postfix, true, false);
-		moveToFront();
-	}
+  function playPunchLowAnim()
+  {
+    var postfix:String = doAlternate();
+    this.playAnimation('punchLow' + postfix, true, false);
+    moveToFront();
+  }
 
   function playTauntConditionalAnim()
   {
@@ -482,3 +480,4 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
     moveToBack();
   }
 }
+

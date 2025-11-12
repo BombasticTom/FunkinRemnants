@@ -123,7 +123,7 @@ class PhillyBlazinRemnantsStage extends Stage
         PlayState.instance.currentStage.getGirlfriend().scriptGet("abot").color = 0xFF888888;
         trace('A-Bot exists!');
       }
-      catch(e:Exception)
+      catch (e:Exception)
       {
         trace('A-Bot does not exist!');
       }
@@ -267,3 +267,4 @@ class PhillyBlazinRemnantsStage extends Stage
     PlayState.instance.camGame.fade(0xFF000000, 1.5, true, null, true);
   }
 }
+

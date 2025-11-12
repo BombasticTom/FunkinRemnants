@@ -17,7 +17,7 @@ class DarnellBFRemnantsMixSong extends Song
   {
     if (currentVariation == 'bfremnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-	}
+  }
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
   {
@@ -30,7 +30,8 @@ class DarnellBFRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
@@ -56,3 +57,4 @@ class DarnellBFRemnantsMixSong extends Song
     }
   }
 }
+

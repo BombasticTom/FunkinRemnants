@@ -10,14 +10,13 @@ class RemnantsPerfectHearts extends FlxAtlasSprite
   {
     var picoOffset:Array<Float> = [385, 82];
     var boyfriend = PlayState.instance?.currentStage?.getBoyfriend();
-    super(x, y, Paths.animateAtlas("resultScreen/results-bf-remnants/resultsPERFECT/hearts", "shared"),
-      {
-        Reversed: false,
-        // ?OnComplete:Void -> Void,
-        ShowPivot: false,
-        Antialiasing: true,
-        ScrollFactor: new FlxPoint(1, 1),
-      });
+    super(x, y, Paths.animateAtlas("resultScreen/results-bf-remnants/resultsPERFECT/hearts", "shared"), {
+      Reversed: false,
+      // ?OnComplete:Void -> Void,
+      ShowPivot: false,
+      Antialiasing: true,
+      ScrollFactor: new FlxPoint(1, 1),
+    });
 
     if (StringTools.contains(boyfriend?.characterId ?? 'bf-remnants', 'pico'))
     {
@@ -25,3 +24,4 @@ class RemnantsPerfectHearts extends FlxAtlasSprite
     }
   }
 }
+

@@ -7,12 +7,12 @@
   "looped": false,
   "offsets": {
     "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
   },
   "playData": {
-    "songVariations": [    ],
+    "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "pico-remnants-playable",
@@ -25,7 +25,7 @@
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
-    "ratings": {"easy": 4, "normal": 5, "hard": 7 },
+    "ratings": { "easy": 4, "normal": 5, "hard": 7 },
     "album": "remnants-weekend1",
     "previewStart": 0,
     "previewEnd": 15000
@@ -39,12 +39,7 @@
       "bpm": 182,
       "n": 4,
       "d": 4,
-      "bt": [
-        4,
-        4,
-        4,
-        4
-      ]
+      "bt": [4, 4, 4, 4]
     }
   ]
 }

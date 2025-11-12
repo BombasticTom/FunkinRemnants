@@ -39,7 +39,7 @@ class UghRemnantsMixSong extends Song
   {
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-	}
+  }
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
   {
@@ -57,7 +57,8 @@ class UghRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       if (bgSprite == null)
       {
@@ -94,7 +95,7 @@ class UghRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    hasPlayedInGameCutscene = true;    
+    hasPlayedInGameCutscene = true;
   }
 
   /**
@@ -162,7 +163,7 @@ class UghRemnantsMixSong extends Song
         pressedSkip = true;
         endUghIntro();
         trace('skipped');
-      } 
+      }
     }
   }
 
@@ -274,8 +275,7 @@ class UghRemnantsMixSong extends Song
     /** Cutscene Time! */
     // Camera starts on Tankman.
     // It has a short delay for prevent lag.
-    new FlxTimer(remnantsTimerManager).start(0.001, _ ->
-    {
+    new FlxTimer(remnantsTimerManager).start(0.001, _ -> {
       PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 0.01, FlxEase.quadInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.15, 1.5, true, FlxEase.quadInOut);
 
@@ -289,42 +289,38 @@ class UghRemnantsMixSong extends Song
       }
     });
 
-    new FlxTimer(remnantsTimerManager).start(3, _ ->
-    {
+    new FlxTimer(remnantsTimerManager).start(3, _ -> {
       PlayState.instance.tweenCameraZoom(0.86 * 1.2, 1.5, true, FlxEase.quadInOut);
       PlayState.instance.tweenCameraToPosition(bfPos[0] + 150, bfPos[1], 1.5, FlxEase.quadInOut);
-      new FlxTimer(remnantsTimerManager).start(1.5, _ ->
-      {
+      new FlxTimer(remnantsTimerManager).start(1.5, _ -> {
         PlayState.instance.currentStage.getBoyfriend().playAnimation('singUP');
         bfBeep.play(true);
 
-        new FlxTimer(remnantsTimerManager).start(0.5, _ ->
-        {
+        new FlxTimer(remnantsTimerManager).start(0.5, _ -> {
           PlayState.instance.currentStage.getBoyfriend().playAnimation('idle');
           PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
         });
       });
 
-      new FlxTimer(remnantsTimerManager).start(3, _ ->
-			{
+      new FlxTimer(remnantsTimerManager).start(3, _ -> {
         PlayState.instance.tweenCameraZoom(0.86 * 1.15, 1.5, true, FlxEase.quadInOut);
         PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 1.5, FlxEase.quadInOut);
         tankmanCutscene.playAnimation("We should just kill you");
         tankTalk2.play(true);
 
-        new FlxTimer(remnantsTimerManager).start(1.5, _ ->
-        {
+        new FlxTimer(remnantsTimerManager).start(1.5, _ -> {
           // Cutting off skipping here.
           // Really don't think its needed after this point and it saves problems from happening.
-          FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadIn,
-            onComplete: _ -> {
-              skipText.visible = false;
-            }
-          });
+          FlxTween.tween(skipText, {alpha: 0}, 0.5,
+            {
+              ease: FlxEase.quadIn,
+              onComplete: _ -> {
+                skipText.visible = false;
+              }
+            });
         });
 
-        new FlxTimer(remnantsTimerManager).start(6.1, _ ->
-				{
+        new FlxTimer(remnantsTimerManager).start(6.1, _ -> {
           endUghIntro();
         });
       });
@@ -355,14 +351,11 @@ class UghRemnantsMixSong extends Song
     if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
 
     // fade out and stop the music!!!!!!
-    cutsceneMusic.fadeOut(0.5, 0.0, function()
-    {
-      if (cutsceneMusic != null)
-        cutsceneMusic.stop();
+    cutsceneMusic.fadeOut(0.5, 0.0, function() {
+      if (cutsceneMusic != null) cutsceneMusic.stop();
     });
 
-    new FlxTimer().start(0.5, _ ->
-    {
+    new FlxTimer().start(0.5, _ -> {
       PlayState.instance.camHUD.visible = true;
 
       if (pressedSkip) PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
@@ -410,3 +403,4 @@ class UghRemnantsMixSong extends Song
     });
   }
 }
+

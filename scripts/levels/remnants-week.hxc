@@ -3,14 +3,15 @@ import funkin.save.Save;
 
 class RemnantsWeekLevel extends Level
 {
-	function new()
-	{
-		super('remnants-week');
-	}
+  function new()
+  {
+    super('remnants-week');
+  }
 
-	// Reveal the name after beating the week ;)
-	override function getSongDisplayNames(difficultyId:String):Array<String>
-	{
-		return Save.instance.hasBeatenLevel('remnants-week') ? ["Remnants!"] : ["???"];
-	}
+  // Reveal the name after beating the week ;)
+  override function getSongDisplayNames(difficultyId:String):Array<String>
+  {
+    return Save.instance.hasBeatenLevel('remnants-week') ? ["Remnants!"] : ["???"];
+  }
 }
+

@@ -6,7 +6,11 @@
   "playData": {
     "ratings": { "easy": 0, "normal": 0, "hard": 0 },
     "stage": "mainStageRemnants",
-    "characters": { "player": "bf-remnants", "opponent": "gf-remnants", "instrumental": "remnants" },
+    "characters": {
+      "player": "bf-remnants",
+      "opponent": "gf-remnants",
+      "instrumental": "remnants"
+    },
     "difficulties": ["easy", "normal", "hard"],
     "noteStyle": "funkin",
     "album": "remnants-tutorial",

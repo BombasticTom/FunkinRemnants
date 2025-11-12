@@ -32,8 +32,8 @@ class RemnantsShitResults extends FlxAtlasSprite
           // overrides the loop anim frame to be pico's one
           onAnimationComplete.removeAll();
           onAnimationComplete.add((_name:String) -> {
-              anim.play(); // unpauses this anim, since it's on PlayOnce!
-              anim.curFrame = 0;
+            anim.play(); // unpauses this anim, since it's on PlayOnce!
+            anim.curFrame = 0;
           });
         }
       });
@@ -58,3 +58,4 @@ class RemnantsShitResults extends FlxAtlasSprite
     }
   }
 }
+

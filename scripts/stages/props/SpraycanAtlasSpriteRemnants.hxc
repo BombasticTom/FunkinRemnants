@@ -14,15 +14,14 @@ class SpraycanAtlasSpriteRemnants extends FlxAtlasSprite
 
   public function new(x:Float, y:Float)
   {
-    super(x, y, Paths.animateAtlas("stages/weekEnd1Remnants/mechanics/spraycanAtlas", "shared"),
-      {
-        FrameRate: 24.0,
-        Reversed: false,
-        // ?OnComplete:Void -> Void,
-        ShowPivot: false,
-        Antialiasing: true,
-        ScrollFactor: new FlxPoint(1, 1),
-      });
+    super(x, y, Paths.animateAtlas("stages/weekEnd1Remnants/mechanics/spraycanAtlas", "shared"), {
+      FrameRate: 24.0,
+      Reversed: false,
+      // ?OnComplete:Void -> Void,
+      ShowPivot: false,
+      Antialiasing: true,
+      ScrollFactor: new FlxPoint(1, 1),
+    });
 
     onAnimationComplete.add(finishCanAnimation);
   }
@@ -68,3 +67,4 @@ class SpraycanAtlasSpriteRemnants extends FlxAtlasSprite
     this.playAnimation('Hit Pico');
   }
 }
+

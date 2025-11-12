@@ -13,7 +13,7 @@
     "stickerPack": "bonus-tutorial",
     "previewStart": 0,
     "previewEnd": 15000,
-    "songVariations": [    ]
+    "songVariations": []
   },
   "songName": "Tutorial",
   "timeChanges": [{ "d": 4, "n": 4, "t": -1, "bt": [4, 4, 4, 4], "bpm": 100 }],

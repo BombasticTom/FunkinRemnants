@@ -25,9 +25,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "enter",
 
-      "text": [
-        "You know what I am"
-      ],
+      "text": ["You know what I am"],
       "speed": 1.0
     },
     {
@@ -36,9 +34,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": [
-        ""
-      ]
+      "text": [""]
     },
     {
       "speaker": "spirit-remnants",
@@ -46,9 +42,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": [
-        ""
-      ]
+      "text": [""]
     },
     {
       "speaker": "bf-pixel-remnants",
@@ -56,9 +50,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": [
-        "skull emoji"
-      ]
+      "text": ["skull emoji"]
     }
   ]
 }

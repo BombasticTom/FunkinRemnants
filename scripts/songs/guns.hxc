@@ -29,7 +29,7 @@ class GunsSong extends Song
     }
     return results;
   }
-  
+
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
@@ -73,3 +73,4 @@ class GunsSong extends Song
     hasPlayedCutscene = false;
   }
 }
+

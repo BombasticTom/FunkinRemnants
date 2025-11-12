@@ -1,10 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Remnants Pico",
-  "ownedChars": [
-    "pico-remnants-playable",
-    "pico-remnants-blazin"
-  ],
+  "ownedChars": ["pico-remnants-playable", "pico-remnants-blazin"],
   "showUnownedChars": false,
   "unlocked": true,
   "freeplayStyle": "pico-remnants",

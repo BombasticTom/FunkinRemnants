@@ -121,20 +121,21 @@ class MallEvilRemnantsStage extends Stage
   }
 
   public override function onPause(event:PauseScriptEvent)
-	{
-		super.onPause(event);
+  {
+    super.onPause(event);
     for (snow in 0...snowGroup.members.length)
     {
       FlxTweenUtil.pauseTweensOf(snowGroup.members[snow]);
     }
-	}
+  }
 
-	public override function onResume(event:ScriptEvent)
-	{
-		super.onResume(event);
+  public override function onResume(event:ScriptEvent)
+  {
+    super.onResume(event);
     for (snow in 0...snowGroup.members.length)
     {
       FlxTweenUtil.resumeTweensOf(snowGroup.members[snow]);
     }
   }
 }
+

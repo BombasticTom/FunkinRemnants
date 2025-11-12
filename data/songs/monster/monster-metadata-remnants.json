@@ -5,7 +5,12 @@
   "charter": "The Dee to my house",
   "playData": {
     "difficulties": ["easy", "normal", "hard"],
-    "characters": { "player": "bf-remnants-dark", "girlfriend": "gf-remnants-dark", "opponent": "monster-remnants-dark", "instrumental": "remnants" },
+    "characters": {
+      "player": "bf-remnants-dark",
+      "girlfriend": "gf-remnants-dark",
+      "opponent": "monster-remnants-dark",
+      "instrumental": "remnants"
+    },
     "stage": "spookyMansionRemnants",
     "noteStyle": "funkin",
     "ratings": { "easy": 0, "normal": 0, "hard": 0 },

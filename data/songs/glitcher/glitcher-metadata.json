@@ -7,29 +7,21 @@
   "looped": false,
   "offsets": {
     "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
   },
   "playData": {
     "songVariations": [],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-glitcher-normal",
       "girlfriend": "gf-glitcher-normal",
       "opponent": "hex-glitcher-normal",
       "instrumental": "",
       "altInstrumentals": [],
-      "opponentVocals": [
-        "hex-glitcher-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "opponentVocals": ["hex-glitcher-remnants"],
+      "playerVocals": ["bf-remnants"]
     },
     "stage": "glitcherRemnants",
     "noteStyle": "funkin",

@@ -49,3 +49,4 @@ class HexGlitcherNormalCharacter extends SparrowCharacter
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
 }
+

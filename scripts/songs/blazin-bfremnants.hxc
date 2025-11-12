@@ -65,7 +65,7 @@ class BlazinBFRemnantsMixSong extends Song
   {
     if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-	}
+  }
 
   var hasHidden = false;
   var hasPlayedCutscene:Bool = false;
@@ -109,7 +109,8 @@ class BlazinBFRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
@@ -142,14 +143,19 @@ class BlazinBFRemnantsMixSong extends Song
 
     switch (event.beat)
     {
-    case 32:
-             fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001, {ease: FlxEase.instant, onComplete: function(_) {fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
-             }});
-             black.alpha = 0;
+      case 32:
+        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
+          {
+            ease: FlxEase.instant,
+            onComplete: function(_) {
+              fadeWhiteTween = FlxTween.tween(white, {alpha: 0.0}, 0.5, {ease: FlxEase.linear});
+            }
+          });
+        black.alpha = 0;
 
-    case 352:
-              fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 5.7, {ease: FlxEase.linear});
-              hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5.7, {ease: FlxEase.linear});
+      case 352:
+        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 5.7, {ease: FlxEase.linear});
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5.7, {ease: FlxEase.linear});
     }
   }
 }

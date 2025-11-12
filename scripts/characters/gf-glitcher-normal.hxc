@@ -49,3 +49,4 @@ class GirlfrienGlitcherNormalCharacter extends SparrowCharacter
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
 }
+

@@ -33,7 +33,9 @@
       "name": "danceRight",
       "prefix": "BF limo dance",
       "assetPath": "characters/BFLimo-remnants",
-      "frameIndices": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+      "frameIndices": [
+        15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29
+      ],
       "frameRate": 24,
       "offsets": [75, 0]
     },

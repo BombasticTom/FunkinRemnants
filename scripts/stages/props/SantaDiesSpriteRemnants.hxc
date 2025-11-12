@@ -35,3 +35,4 @@ class SantaDiesSpriteRemnants extends FlxAtlasSprite
     this.anim.pause();
   }
 }
+

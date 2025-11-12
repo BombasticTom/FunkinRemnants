@@ -130,3 +130,4 @@ class DarnellRemnantsCharacter extends SparrowCharacter
     kneeCanSound.play(true, -timeToPlay);
   }
 }
+

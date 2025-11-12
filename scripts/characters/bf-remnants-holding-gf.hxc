@@ -13,97 +13,99 @@ import flixel.tweens.FlxTween;
 
 class BoyfriendRemnantsHoldingGFCharacter extends MultiSparrowCharacter
 {
-	function new()
-	{
-		super('bf-remnants-holding-gf');
-	}
+  function new()
+  {
+    super('bf-remnants-holding-gf');
+  }
 
-	function onCreate(event:ScriptEvent)
-	{
-		super.onCreate(event);
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
 
-		// Are we even getting a gameover theme or nah?
-		// GameOverSubState.musicSuffix = '-remnants';
-		// GameOverSubState.blueBallSuffix = '-remnants';
-		PauseSubState.musicSuffix = '-remnants';
-	}
+    // Are we even getting a gameover theme or nah?
+    // GameOverSubState.musicSuffix = '-remnants';
+    // GameOverSubState.blueBallSuffix = '-remnants';
+    PauseSubState.musicSuffix = '-remnants';
+  }
 
-	var loseSprite:FunkinSprite;
+  var loseSprite:FunkinSprite;
 
-	/**
-	* Initialize and cache sprites used for the death animation,
-	* for use later.
-	*/
-	function createDeathSprites()
-	{
-		loseSprite = FunkinSprite.createSparrow(700, -50, "gameover/loseText");
-		loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
-		loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
-		loseSprite.animation.onFinish.add(function(name:String) {
-			loseSprite.animation.play('idle', true);
-		});
+  /**
+   * Initialize and cache sprites used for the death animation,
+   * for use later.
+   */
+  function createDeathSprites()
+  {
+    loseSprite = FunkinSprite.createSparrow(700, -50, "gameover/loseText");
+    loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
+    loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
+    loseSprite.animation.onFinish.add(function(name:String) {
+      loseSprite.animation.play('idle', true);
+    });
 
-		// week 7 shader
-		if (shader != null)
-		{
-			loseSprite.shader = shader;
-		}
+    // week 7 shader
+    if (shader != null)
+    {
+      loseSprite.shader = shader;
+    }
 
-		loseSprite.zIndex = this.zIndex + 5;
-		loseSprite.visible = false;
-	}
+    loseSprite.zIndex = this.zIndex + 5;
+    loseSprite.visible = false;
+  }
 
-	override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
-	{
-		if (name == "firstDeath")
-		{
-			// Standard death animation.
-			createDeathSprites();
+  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+  {
+    if (name == "firstDeath")
+    {
+      // Standard death animation.
+      createDeathSprites();
 
-			GameOverSubState.instance.add(loseSprite);
-		}
-		else if (name == 'deathLoop')
-		{
-			loseSprite.visible = true;
-			loseSprite.animation.play('fall', true);
-		}
-		else if (name == "deathConfirm")
-		{
-			FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-		}
+      GameOverSubState.instance.add(loseSprite);
+    }
+    else if (name == 'deathLoop')
+    {
+      loseSprite.visible = true;
+      loseSprite.animation.play('fall', true);
+    }
+    else if (name == "deathConfirm")
+    {
+      FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+    }
 
-		super.playAnimation(name, restart, ignoreOther);
-	}
+    super.playAnimation(name, restart, ignoreOther);
+  }
 
-	function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
-	{
-		super.onAnimationFrame(name, frameNumber, frameIndex);
+  function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
+  {
+    super.onAnimationFrame(name, frameNumber, frameIndex);
 
-		if (!HapticUtil.hapticsAvailable) return;
+    if (!HapticUtil.hapticsAvailable) return;
 
-		// BF's mic drops.
-		if (name == 'firstDeath' && frameNumber == 27)
-		{
-			HapticUtil.vibrate(0, 0.1, 0.1, 1);
-		}
+    // BF's mic drops.
+    if (name == 'firstDeath' && frameNumber == 27)
+    {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    }
 
-		// BF's balls pulsating.
-		if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
-		{
-			HapticUtil.vibrate(0, 0.1, 0.1, 1);
-		}
-	}
+    // BF's balls pulsating.
+    if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
+    {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    }
+  }
 
-	override function getDeathQuote():Null<String>
-	{
-		if (PlayState.instance.currentStage == null) return;
-		switch (PlayState.instance.currentStage.getDad()?.characterId) {
-			case "tankman-remnants":
-				var randomCensor:Array<Int> = [];
-				if (!Preferences.naughtyness) randomCensor = [1, 3, 8, 13, 17, 21];
-				return Paths.sound('jeffGameover/jeffGameover-' + FlxG.random.int(1, 25, randomCensor));
-			default:
-				return null;
-		}
-	}
+  override function getDeathQuote():Null<String>
+  {
+    if (PlayState.instance.currentStage == null) return;
+    switch (PlayState.instance.currentStage.getDad()?.characterId)
+    {
+      case "tankman-remnants":
+        var randomCensor:Array<Int> = [];
+        if (!Preferences.naughtyness) randomCensor = [1, 3, 8, 13, 17, 21];
+        return Paths.sound('jeffGameover/jeffGameover-' + FlxG.random.int(1, 25, randomCensor));
+      default:
+        return null;
+    }
+  }
 }
+

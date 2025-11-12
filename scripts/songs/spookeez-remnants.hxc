@@ -10,23 +10,23 @@ import flixel.tweens.FlxEase;
 
 class SpookeezRemnantsMixSong extends Song
 {
-	var black:FunkinSprite;
-	var fadeBlackTween:FlxTween;
-	var hudTween:FlxTween;
+  var black:FunkinSprite;
+  var fadeBlackTween:FlxTween;
+  var hudTween:FlxTween;
 
-	public function new()
+  public function new()
   {
-		super('spookeez',
+    super('spookeez',
       {
         variation: 'remnants'
       });
-	}
+  }
 
-	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
-	{
-		if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
-		return false;
-	}
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    return false;
+  }
 
   public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
   {
@@ -44,7 +44,8 @@ class SpookeezRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
@@ -88,11 +89,12 @@ class SpookeezRemnantsMixSong extends Song
 
     switch (event.beat)
     {
-    case 15:
-             hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+      case 15:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
 
-    case 240:
-             fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.6, {ease: FlxEase.sineOut});
+      case 240:
+        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.6, {ease: FlxEase.sineOut});
     }
   }
 }
+

@@ -27,3 +27,4 @@ class TankmanRemnantsCharacter extends MultiSparrowCharacter
     }
   }
 }
+

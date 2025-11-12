@@ -10,72 +10,73 @@ import flixel.tweens.FlxEase;
 
 class GlitcherSong extends Song
 {
-	var hasPlayedCutscene:Bool;
-	var black:FunkinSprite;
-	var fadeBlackTween:FlxTween;
-	var hudTween:FlxTween;
+  var hasPlayedCutscene:Bool;
+  var black:FunkinSprite;
+  var fadeBlackTween:FlxTween;
+  var hudTween:FlxTween;
 
-	public function new()
-	{
-		super('glitcher');
-	}
+  public function new()
+  {
+    super('glitcher');
+  }
 
-	public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
-	{
-		if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
-	{
-		return !Save.instance.hasBeatenSong(this.id, null, '');
-	}
-	return false;
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
+    {
+      return !Save.instance.hasBeatenSong(this.id, null, '');
+    }
+    return false;
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    black = new FunkinSprite(-20, -20);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(black);
+    black.alpha = 1;
+
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.disableKeys = true;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (hudTween != null) hudTween.cancel();
+
+    black.alpha = 1;
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.disableKeys = true;
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 4, {ease: FlxEase.linear});
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+      case 14:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+
+        PlayState.instance.disableKeys = false;
+
+      case 467:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 4, {ease: FlxEase.linear});
+        PlayState.instance.disableKeys = true;
+    }
+  }
 }
 
-	function onCreate(event:ScriptEvent):Void
-	{
-		super.onCreate(event);
-
-		black = new FunkinSprite(-20, -20);
-		black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-		black.cameras = [PlayState.instance.camCutscene];
-		PlayState.instance.add(black);
-		black.alpha = 1;
-
-		PlayState.instance.camHUD.alpha = 0;
-    		PlayState.instance.disableKeys = true;
-	}
-
-	function onSongRetry(event:ScriptEvent)
-	{
-		super.onSongRetry(event);
-
-		if (fadeBlackTween != null) fadeBlackTween.cancel();
-		if (hudTween != null) hudTween.cancel();
-
-		black.alpha = 1;
-		PlayState.instance.camHUD.alpha = 0;
-		PlayState.instance.disableKeys = true;
-	}
-
-	function onSongStart(event:ScriptEvent):Void
-	{
-		super.onSongStart(event);
-
-		fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 4, {ease: FlxEase.linear});
-	}
-
-	function onBeatHit(event:ScriptEvent):Void
-	{
-		super.onBeatHit(event);
-
-		switch (event.beat)
-		{	
-			case 14:
-				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
-
-    				PlayState.instance.disableKeys = false;
-
-			case 467:
-				hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 4, {ease: FlxEase.linear});
-		  		PlayState.instance.disableKeys = true;
-		}
-	}
-}

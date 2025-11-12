@@ -25,7 +25,8 @@ class TankmanSprite extends FunkinSprite
     super();
 
     if (PlayState.instance.currentVariation == 'remnants') loadSparrow('stages/week7Remnants/tankmanKilled1');
-    else loadSparrow('tankmanKilled1');
+    else
+      loadSparrow('tankmanKilled1');
 
     animation.addByPrefix('run', 'tankman running', 24, true);
     animation.addByPrefix('shot', 'John Shot ' + FlxG.random.int(1, 2), 24, false);
@@ -44,7 +45,7 @@ class TankmanSprite extends FunkinSprite
   {
     // ERIC: You have to use super instead of this or it breaks.
     // This is because typeof(this) is PolymodAbstractClass.
-     tankmanFlicker = FlxFlicker.flicker(super, 0.3, 1 / 10, true, true, function(_) {
+    tankmanFlicker = FlxFlicker.flicker(super, 0.3, 1 / 10, true, true, function(_) {
       tankmanFlicker = FlxFlicker.flicker(super, 0.3, 1 / 20, false, true, function(_) {
         tankmanFlicker = null;
         kill();
@@ -145,3 +146,4 @@ class TankmanSprite extends FunkinSprite
     // 	visible = true;
   }
 }
+

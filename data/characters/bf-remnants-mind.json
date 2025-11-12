@@ -1,124 +1,103 @@
 {
-	"renderType": "multisparrow",
-	"version": "1.0.1",
-	"offsets": [
-		0,
-		0
-	],
-	"danceEvery": 2,
-	"scale": 1,
-	"name": "Remnants BF (Mind)",
-	"cameraOffsets": [
-		0,
-		-50
-	],
-	"flipX": true,
-	"isPixel": false,
-	"singTime": 8,
-	"startingAnimation": "idle",
-	"healthIcon": {
-		"id": "bf-remnants",
-		"isPixel": false
-	},
-	"assetPath": "characters/bf-remnants-mind",
-	"animations": [
-		{
-			"frameIndices": [],
-			"prefix": "BF idle dance",
-			"offsets": [
-				-4,
-				7
-			],
-			"frameRate": 24,
-			"name": "idle",
-			"looped": false
-		},
-		{
-			"frameIndices": [],
-			"prefix": "BF NOTE LEFT0",
-			"offsets": [
-				-4,
-				4
-			],
-			"frameRate": 24,
-			"name": "singLEFT",
-			"looped": false
-		},
-		{
-			"frameIndices": [],
-			"prefix": "BF NOTE DOWN0",
-			"offsets": [
-				-13,
-				-45
-			],
-			"frameRate": 24,
-			"name": "singDOWN",
-			"looped": false
-		},
-		{
-			"frameIndices": [],
-			"prefix": "BF NOTE UP0",
-			"offsets": [
-				-47,
-				26
-			],
-			"frameRate": 24,
-			"name": "singUP",
-			"looped": false
-		},
-		{
-			"frameIndices": [],
-			"prefix": "BF NOTE RIGHT0",
-			"offsets": [
-				-46,
-				-6
-			],
-			"frameRate": 24,
-			"name": "singRIGHT",
-			"looped": false
-		},
-		{
-			"name": "singLEFTmiss",
-			"prefix": "BF NOTE LEFT MISS",
-			"assetPath": "characters/bf-remnants",
-			"offsets": [12, 24]
-		},
-		{
-			"name": "singDOWNmiss",
-			"prefix": "BF NOTE DOWN MISS",
-			"assetPath": "characters/bf-remnants",
-			"offsets": [-11, -19]
-		},
-		{
-			"name": "singUPmiss",
-			"prefix": "BF NOTE UP MISS",
-			"assetPath": "characters/bf-remnants",
-			"offsets": [-29, 27]
-		},
-		{
-			"name": "singRIGHTmiss",
-			"prefix": "BF NOTE RIGHT MISS",
-			"assetPath": "characters/bf-remnants",
-			"offsets": [-30, 21]
-		},
-		{
-			"name": "firstDeath",
-			"prefix": "BF dies",
-			"assetPath": "characters/bf-DEAD-remnants",
-			"offsets": [-37, 11]
-		},
-		{
-			"name": "deathLoop",
-			"prefix": "BF Dead Loop",
-			"assetPath": "characters/bf-DEAD-remnants",
-			"looped": true,
-			"offsets": [-37, 5]
-		},
-		{
-			"name": "deathConfirm",
-			"prefix": "BF Dead confirm",
-			"assetPath": "characters/bf-DEAD-remnants",
-			"offsets": [-37, 69]
-		}
-	]
+  "renderType": "multisparrow",
+  "version": "1.0.1",
+  "offsets": [0, 0],
+  "danceEvery": 2,
+  "scale": 1,
+  "name": "Remnants BF (Mind)",
+  "cameraOffsets": [0, -50],
+  "flipX": true,
+  "isPixel": false,
+  "singTime": 8,
+  "startingAnimation": "idle",
+  "healthIcon": {
+    "id": "bf-remnants",
+    "isPixel": false
+  },
+  "assetPath": "characters/bf-remnants-mind",
+  "animations": [
+    {
+      "frameIndices": [],
+      "prefix": "BF idle dance",
+      "offsets": [-4, 7],
+      "frameRate": 24,
+      "name": "idle",
+      "looped": false
+    },
+    {
+      "frameIndices": [],
+      "prefix": "BF NOTE LEFT0",
+      "offsets": [-4, 4],
+      "frameRate": 24,
+      "name": "singLEFT",
+      "looped": false
+    },
+    {
+      "frameIndices": [],
+      "prefix": "BF NOTE DOWN0",
+      "offsets": [-13, -45],
+      "frameRate": 24,
+      "name": "singDOWN",
+      "looped": false
+    },
+    {
+      "frameIndices": [],
+      "prefix": "BF NOTE UP0",
+      "offsets": [-47, 26],
+      "frameRate": 24,
+      "name": "singUP",
+      "looped": false
+    },
+    {
+      "frameIndices": [],
+      "prefix": "BF NOTE RIGHT0",
+      "offsets": [-46, -6],
+      "frameRate": 24,
+      "name": "singRIGHT",
+      "looped": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "BF NOTE LEFT MISS",
+      "assetPath": "characters/bf-remnants",
+      "offsets": [12, 24]
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "BF NOTE DOWN MISS",
+      "assetPath": "characters/bf-remnants",
+      "offsets": [-11, -19]
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "BF NOTE UP MISS",
+      "assetPath": "characters/bf-remnants",
+      "offsets": [-29, 27]
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "BF NOTE RIGHT MISS",
+      "assetPath": "characters/bf-remnants",
+      "offsets": [-30, 21]
+    },
+    {
+      "name": "firstDeath",
+      "prefix": "BF dies",
+      "assetPath": "characters/bf-DEAD-remnants",
+      "offsets": [-37, 11]
+    },
+    {
+      "name": "deathLoop",
+      "prefix": "BF Dead Loop",
+      "assetPath": "characters/bf-DEAD-remnants",
+      "looped": true,
+      "offsets": [-37, 5]
+    },
+    {
+      "name": "deathConfirm",
+      "prefix": "BF Dead confirm",
+      "assetPath": "characters/bf-DEAD-remnants",
+      "offsets": [-37, 69]
+    }
+  ]
 }

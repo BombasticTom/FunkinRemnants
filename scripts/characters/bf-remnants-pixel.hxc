@@ -8,50 +8,53 @@ import flixel.FlxG;
 
 class BFRemnantsPixelCharacter extends MultiSparrowCharacter
 {
-	function new()
-	{
-		super('bf-remnants-pixel');
-	}
+  function new()
+  {
+    super('bf-remnants-pixel');
+  }
 
-	function onCreate(event:ScriptEvent) {
-		super.onCreate(event);
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
 
-		// Are we even getting a gameover theme or nah?
-		// GameOverSubState.musicSuffix = '-remnants-pixel';
-		// GameOverSubState.blueBallSuffix = '-remnants-pixel';
-		GameOverSubState.musicSuffix = '-pixel';
-		GameOverSubState.blueBallSuffix = '-pixel';
+    // Are we even getting a gameover theme or nah?
+    // GameOverSubState.musicSuffix = '-remnants-pixel';
+    // GameOverSubState.blueBallSuffix = '-remnants-pixel';
+    GameOverSubState.musicSuffix = '-pixel';
+    GameOverSubState.blueBallSuffix = '-pixel';
 
-		// We use default, a custom one or the normal remnants theme?
-		// PauseSubState.musicSuffix = '-remnants-pixel';
-		PauseSubState.musicSuffix = '-remnants-pixel';
-	}
+    // We use default, a custom one or the normal remnants theme?
+    // PauseSubState.musicSuffix = '-remnants-pixel';
+    PauseSubState.musicSuffix = '-remnants-pixel';
+  }
 
-	function playAnimation(name:String, restart:Bool, ignoreOther:Bool) {
+  function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+  {
+    if (name == "firstDeath")
+    {
+      this.shader = null;
+    }
 
-		if (name == "firstDeath") {
-			this.shader = null;
-		}
+    super.playAnimation(name, restart, ignoreOther);
+  }
 
-		super.playAnimation(name, restart, ignoreOther);
-	}
+  function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
+  {
+    super.onAnimationFrame(name, frameNumber, frameIndex);
 
-	function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
-	{
-		super.onAnimationFrame(name, frameNumber, frameIndex);
+    if (!HapticUtil.hapticsAvailable) return;
 
-		if (!HapticUtil.hapticsAvailable) return;
+    // BF's mic drops.
+    if (name == 'firstDeath' && frameNumber == 27)
+    {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    }
 
-		// BF's mic drops.
-		if (name == 'firstDeath' && frameNumber == 27)
-		{
-			HapticUtil.vibrate(0, 0.1, 0.1, 1);
-		}
-
-		// BF's balls pulsating.
-		if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
-		{
-			HapticUtil.vibrate(0, 0.1, 0.1, 1);
-		}
-	}
+    // BF's balls pulsating.
+    if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
+    {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    }
+  }
 }
+

@@ -57,3 +57,4 @@ class SC_ChangeStageEvent extends SongEvent
     return stageMap;
   }
 }
+

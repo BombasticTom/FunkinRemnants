@@ -66,21 +66,23 @@ class TankmanSpriteGroup extends FlxTypedSpriteGroup
       return FlxSort.byValues(FlxSort.ASCENDING, a.time, b.time);
     });
 
-		// Only one out of every 16 notes, on average, is a tankman.
-		var randomBool = FlxG.random.bool(1 / 16 * 100);
-		for (note in animNotes)
-		{
-			if (PlayState.instance.currentVariation == 'remnants') {
-				// Only one out of every 8 notes, on average, is a tankman.
-				randomBool = randomBool = FlxG.random.bool(1 / 8 * 100);
-			}
+    // Only one out of every 16 notes, on average, is a tankman.
+    var randomBool = FlxG.random.bool(1 / 16 * 100);
+    for (note in animNotes)
+    {
+      if (PlayState.instance.currentVariation == 'remnants')
+      {
+        // Only one out of every 8 notes, on average, is a tankman.
+        randomBool = randomBool = FlxG.random.bool(1 / 8 * 100);
+      }
 
-			if (randomBool) {
-				tankmanTimes.push(note.time);
-				var goingRight:Bool = (note.data == 2 || note.data == 3) ? false : true;
-				tankmanDirs.push(goingRight);
-			}
-		}
+      if (randomBool)
+      {
+        tankmanTimes.push(note.time);
+        var goingRight:Bool = (note.data == 2 || note.data == 3) ? false : true;
+        tankmanDirs.push(goingRight);
+      }
+    }
   }
 
   /**
@@ -150,3 +152,4 @@ class TankmanSpriteGroup extends FlxTypedSpriteGroup
     tankmanTimes = [];
   }
 }
+

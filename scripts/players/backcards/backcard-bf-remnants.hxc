@@ -100,8 +100,7 @@ class BFRemnantsCard extends BackingCard
     alsoOrangeLOL.color = 0xFF000000;
     orangeBackShit.color = 0xFF000000;
 
-    if (FlxG.state.subState.ostName != null)
-			FlxG.state.subState.ostName.text = "REMNANTS OST";
+    if (FlxG.state.subState.ostName != null) FlxG.state.subState.ostName.text = "REMNANTS OST";
 
     FlxSpriteUtil.alphaMaskFlxSprite(orangeBackShit, pinkBack, orangeBackShit);
     orangeBackShit.visible = false;
@@ -155,11 +154,13 @@ class BFRemnantsCard extends BackingCard
     funnyScroll3.speed = -3.8;
     add(funnyScroll3);
 
-    glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300, 330).loadGraphic(Paths.image('freeplay/backingCards/bf-remnants/glow'));
+    glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+      330).loadGraphic(Paths.image('freeplay/backingCards/bf-remnants/glow'));
     glowDark.blend = 9;
     add(glowDark);
 
-    glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300, 330).loadGraphic(Paths.image('freeplay/backingCards/bf-remnants/glow'));
+    glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+      330).loadGraphic(Paths.image('freeplay/backingCards/bf-remnants/glow'));
     glow.blend = 0;
     add(glow);
 
@@ -181,13 +182,14 @@ class BFRemnantsCard extends BackingCard
 
     super.update(elapsed);
 
-    if (FlxG.state.subState.dj != null) {
-      if (FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ Idle' && FlxG.state.subState.dj.anim.curFrame == 0)
-        glowBeat();
+    if (FlxG.state.subState.dj != null)
+    {
+      if (FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ Idle' && FlxG.state.subState.dj.anim.curFrame == 0) glowBeat();
     }
   }
-  
-  function glowBeat() {
+
+  function glowBeat()
+  {
     FlxTween.cancelTweensOf(glow);
     FlxTween.cancelTweensOf(glowDark);
 
@@ -242,3 +244,4 @@ class BFRemnantsCard extends BackingCard
     glow.visible = false;
   }
 }
+

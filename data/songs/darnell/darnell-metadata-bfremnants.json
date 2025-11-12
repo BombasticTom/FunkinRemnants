@@ -7,33 +7,21 @@
   "looped": false,
   "offsets": {
     "instrumental": 0,
-    "altInstrumentals": {    },
-    "vocals": {    },
-    "altVocals": {    }
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
   },
   "playData": {
     "songVariations": [],
-    "difficulties": [
-      "easy",
-      "normal",
-      "hard"
-    ],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "darnell-remnants",
       "instrumental": "bfremnants",
-      "altInstrumentals": [
-        "bf",
-        "",
-        "remnants"
-      ],
-      "opponentVocals": [
-        "darnell-remnants"
-      ],
-      "playerVocals": [
-        "bf-remnants"
-      ]
+      "altInstrumentals": ["bf", "", "remnants"],
+      "opponentVocals": ["darnell-remnants"],
+      "playerVocals": ["bf-remnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",

@@ -18,7 +18,7 @@ class SketchRemnantsPicoStage extends Stage
     super('sketchRemnantsPico');
   }
 
-   var colorShaderBf:AdjustColorShader;
+  var colorShaderBf:AdjustColorShader;
   var colorShaderDad:AdjustColorShader;
   var colorShaderGf:AdjustColorShader;
 
@@ -49,7 +49,6 @@ class SketchRemnantsPicoStage extends Stage
     colorShaderDad.hue = 0;
     colorShaderDad.contrast = -23;
     colorShaderDad.saturation = 0;
-
   }
 
   function onBeatHit(event:SongTimeScriptEvent):Void
@@ -81,3 +80,4 @@ class SketchRemnantsPicoStage extends Stage
     }
   }
 }
+

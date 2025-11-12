@@ -48,12 +48,13 @@ class SenpaiRemnantsMixSong extends Song
 
     if (PlayState.instance.camHUD.alpha < 1)
     {
-     FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.linear});
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.linear});
     }
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedDialogue) hasPlayedDialogue = true;
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper') && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       if (bgSprite == null)
       {
@@ -161,3 +162,4 @@ class SenpaiRemnantsMixSong extends Song
     Countdown.performCountdown();
   }
 }
+

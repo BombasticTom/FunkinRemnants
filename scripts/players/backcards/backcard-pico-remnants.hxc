@@ -81,8 +81,7 @@ class PicoRemnantsCard extends BackingCard
 
   public override function onCreate(event:ScriptEvent):Void
   {
-    if (FlxG.state.subState.ostName != null)
-			FlxG.state.subState.ostName.text = "REMNANTS OST";
+    if (FlxG.state.subState.ostName != null) FlxG.state.subState.ostName.text = "REMNANTS OST";
 
     FlxTween.tween(pinkBack, {x: 0}, 0.6, {ease: FlxEase.quartOut});
     add(pinkBack);
@@ -132,12 +131,13 @@ class PicoRemnantsCard extends BackingCard
     add(scrollMiddle);
     scrollMiddle.velocity.x = 220;
 
-    glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI)
-      + -300, 330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
+    glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+      330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
     glowDark.blend = 9;
     add(glowDark);
 
-    glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300, 330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
+    glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+      330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
     glow.blend = 0;
     add(glow);
 
@@ -277,9 +277,9 @@ class PicoRemnantsCard extends BackingCard
 
     super.update(elapsed);
 
-    if (FlxG.state.subState.dj != null) {
-      if (FlxG.state.subState.dj.getCurrentAnimation() == 'Pico DJ Idle' && FlxG.state.subState.dj.anim.curFrame == 0)
-        glowBeat();
+    if (FlxG.state.subState.dj != null)
+    {
+      if (FlxG.state.subState.dj.getCurrentAnimation() == 'Pico DJ Idle' && FlxG.state.subState.dj.anim.curFrame == 0) glowBeat();
     }
 
     var scrollProgress:Float = Math.abs(scrollTop.x % (scrollTop.frameWidth + 20));
@@ -308,7 +308,8 @@ class PicoRemnantsCard extends BackingCard
     }
   }
 
-  function glowBeat() {
+  function glowBeat()
+  {
     FlxTween.cancelTweensOf(glow);
     FlxTween.cancelTweensOf(glowDark);
 
@@ -318,3 +319,4 @@ class PicoRemnantsCard extends BackingCard
     FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
   }
 }
+
