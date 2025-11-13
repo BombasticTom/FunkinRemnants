@@ -53,6 +53,7 @@ class StressRemnantsMixSong extends Song
     cutsceneSkipped = false;
     canSkipCutscene = false;
     startedTalking = false;
+    gfFail = FlxG.random.bool(15);
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
