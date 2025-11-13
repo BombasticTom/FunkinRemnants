@@ -9,11 +9,12 @@ import funkin.ui.FullScreenScaleMode;
 import funkin.graphics.FunkinCamera;
 import flixel.effects.FlxFlicker;
 import flixel.math.FlxBasePoint;
-import funkin.util.ReflectUtil;
+import funkin.play.ResultState;
 import funkin.play.PlayState;
 import funkin.util.Constants;
 import flixel.util.FlxTimer;
 import StringTools;
+import Std;
 
 class RemnantsResults extends Module
 {
@@ -47,8 +48,7 @@ class RemnantsResults extends Module
   {
     super.onUpdate(event);
 
-    if (ReflectUtil.getClassNameOf(FlxG.state?.subState) == "funkin.play.ResultState"
-      && StringTools.contains(FlxG.state?.subState?.playerCharacterId, 'remnants'))
+    if (Std.isOfType(FlxG.state?.subState, ResultState) && StringTools.contains(FlxG.state?.subState?.playerCharacterId, 'remnants'))
     {
       var curState = FlxG.state?.subState;
       var isPico:Bool = StringTools.contains(PlayState.instance?.currentStage?.getBoyfriend()?.characterId, 'pico');

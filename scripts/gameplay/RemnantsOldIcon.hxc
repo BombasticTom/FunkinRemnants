@@ -1,10 +1,10 @@
 import flixel.FlxG;
 import funkin.play.PlayState;
 import funkin.modding.module.Module;
-import funkin.util.ReflectUtil;
 import funkin.util.TouchUtil;
 import flixel.util.FlxTimer;
 import StringTools;
+import Std;
 
 class RemnantsOldIcon extends Module
 {
@@ -35,7 +35,7 @@ class RemnantsOldIcon extends Module
     super.onUpdate(event);
 
     if (FlxG.keys.justPressed.F5) hotReloaded = true;
-    if (ReflectUtil.getClassNameOf(FlxG.state) == 'funkin.play.PlayState' && !hotReloaded)
+    if (Std.isOfType(FlxG.state, PlayState) && !hotReloaded)
     {
       if (FlxG.onMobile)
       {
