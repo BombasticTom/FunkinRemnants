@@ -194,7 +194,7 @@ class PhillyStreetsRemnantsStage extends Stage
     {
       if (paper != null)
       {
-        paper.alpha = 1;
+        paper.visible = true;
         paper.animation.play('paperBlow');
         paper.y = 608 + FlxG.random.float(-150, 150);
         FlxTween.tween(paper, {x: paper.x - 550}, 2);
@@ -254,7 +254,7 @@ class PhillyStreetsRemnantsStage extends Stage
     if (paper != null)
     {
       FlxTween.cancelTweensOf(paper);
-      paper.alpha = 0;
+      paper.visible = false;
       paper.x = 550;
     }
   }

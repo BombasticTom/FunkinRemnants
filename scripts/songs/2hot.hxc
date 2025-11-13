@@ -312,10 +312,11 @@ class TwoHOTSong extends Song
       }
 
       // If not excluded, darken.
+      var originalColor:Int = stageProp.color;
       stageProp.color = 0xFF111111;
       new FlxTimer().start(1 / 24, (tmr) -> {
         stageProp.color = 0xFF222222;
-        FlxTween.color(stageProp, 1.4, 0xFF222222, 0xFFFFFFFF);
+        FlxTween.color(stageProp, 1.4, 0xFF222222, originalColor);
       });
     }
   }

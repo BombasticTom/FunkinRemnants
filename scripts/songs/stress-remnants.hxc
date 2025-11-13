@@ -8,6 +8,7 @@ import flixel.text.FlxText;
 import flixel.text.FlxTextBorderStyle;
 import funkin.play.character.BaseCharacter;
 import funkin.play.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
 import funkin.data.song.SongRegistry;
 import funkin.modding.module.ModuleHandler;
 import funkin.modding.base.ScriptedFlxAtlasSprite;
@@ -146,7 +147,7 @@ class StressRemnantsMixSong extends Song
   var tankmanCutscene:ScriptedFlxAtlasSprite;
 
   var gfFaceplant:FunkinSprite;
-  var gfFail:Bool = FlxG.random.bool(15);
+  var gfFail:Bool = true;
 
   var skipText:FlxText;
   var cutsceneSkipped:Bool = false;
@@ -271,8 +272,8 @@ class StressRemnantsMixSong extends Song
     // Create a fake boyfriend.
     var boyfriend = PlayState.instance.currentStage.getBoyfriend();
     fakeBF = CharacterDataParser.fetchCharacter('bf-remnants');
-    fakeBF.animation.curAnim.curFrame = 12; // start on the last idle frame.
-    fakeBF.setPosition(boyfriend.x - 5, boyfriend.y + 20);
+    fakeBF.animation.curAnim.finish(); // start on the last idle frame.
+    setupCharacter(fakeBF, CharacterType.BF);
     fakeBF.zIndex = boyfriend.zIndex;
     fakeBF.flipX = false;
 
@@ -287,7 +288,7 @@ class StressRemnantsMixSong extends Song
 
     // Create a fake girlfriend.
     fakeGF = CharacterDataParser.fetchCharacter('gf-tankmen-remnants');
-    fakeGF.setPosition(gf.x + 15, gf.y + 135);
+    setupCharacter(fakeGF, CharacterType.GF);
     fakeGF.zIndex = gf.zIndex;
 
     // Add everything.
@@ -656,15 +657,6 @@ class StressRemnantsMixSong extends Song
         cutsceneMusic.fadeIn(5.0, 0.0, 0.25);
       }
     }
-    else
-    {
-      if (gfFail && fakeBF != null)
-      {
-        fakeBF.playAnimation(PlayState.instance.currentStage.getBoyfriend().getCurrentAnimation());
-        fakeBF.setPosition(PlayState.instance.currentStage.getBoyfriend().x - 5, PlayState.instance.currentStage.getBoyfriend().y + 20);
-        fakeBF.animation.curAnim.curFrame = PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame;
-      }
-    }
 
     if (enableSkip)
     {
@@ -733,7 +725,15 @@ class StressRemnantsMixSong extends Song
         gfFaceplant?.visible = (gfFail) ? true : false;
       }
 
-      PlayState.instance.currentStage.getBoyfriend().visible = (!gfFail) ? true : false;
+      // Use `fakeBF` as the real Boyfriend.
+      if (gfFail)
+      {
+        var oldBF:BaseCharacter = PlayState.instance.currentStage.getBoyfriend(true);
+        oldBF.destroy();
+        PlayState.instance.currentStage.characters.set('bf', fakeBF);
+      }
+
+      PlayState.instance.currentStage.getBoyfriend().visible = true;
       PlayState.instance.currentStage.getGirlfriend().visible = true;
       PlayState.instance.currentStage.getDad().visible = true;
 
@@ -802,6 +802,48 @@ class StressRemnantsMixSong extends Song
       PlayState.instance.isInCutscene = false;
       PlayState.instance.mayPauseGame = true;
     });
+  }
+
+  /**
+   * Stolen from Stage.hx
+   */
+  function setupCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    var stageCharData:StageDataCharacter = null;
+    switch (charType)
+    {
+      case CharacterType.BF:
+        stageCharData = PlayState.instance.currentStage._data.characters.bf;
+        character.flipX = !character.getDataFlipX();
+      case CharacterType.GF:
+        stageCharData = PlayState.instance.currentStage._data.characters.gf;
+        character.flipX = character.getDataFlipX();
+      case CharacterType.DAD:
+        stageCharData = PlayState.instance.currentStage._data.characters.dad;
+        character.flipX = character.getDataFlipX();
+    }
+
+    character.resetCharacter(true);
+
+    if (stageCharData == null) return;
+
+    character.zIndex = stageCharData.zIndex;
+
+    character.x = stageCharData.position[0] - character.characterOrigin.x;
+    character.y = stageCharData.position[1] - character.characterOrigin.y;
+
+    var finalScale = character.getBaseScale() * stageCharData.scale;
+    character.setScale(finalScale); // Don't use scale.set for characters!
+    character.cameraFocusPoint.x += stageCharData.cameraOffsets[0];
+    character.cameraFocusPoint.y += stageCharData.cameraOffsets[1];
+
+    character.scrollFactor.x = stageCharData.scroll[0];
+    character.scrollFactor.y = stageCharData.scroll[1];
+
+    character.alpha = stageCharData.alpha;
+    character.angle = stageCharData.angle;
+
+    character.characterType = charType;
   }
 
   function kill():Void
