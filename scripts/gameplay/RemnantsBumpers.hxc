@@ -11,6 +11,11 @@ class RemnantsBumpers extends Module
   public var playedBumper:Bool = false;
 
   /**
+   * Is the bumper currently playing?
+   */
+  public var isPlaying:Bool = false;
+
+  /**
    * What was the last song played?
    */
   public var lastSong:String = '';
@@ -101,8 +106,12 @@ class RemnantsBumpers extends Module
 
     if (isFirstOfWeek && !playedBumper)
     {
-      VideoCutscene.play(Paths.videos(currentWeek));
+      isPlaying = true;
       playedBumper = true;
+      VideoCutscene.play(Paths.videos(currentWeek));
+      VideoCutscene.onVideoEnded.add(() -> {
+        isPlaying = false;
+      });
 
       lastVariation = variation;
       lastSong = songLowercase;
@@ -120,6 +129,14 @@ class RemnantsBumpers extends Module
   public function getPlayedBumper():Bool
   {
     return playedBumper;
+  }
+
+  /**
+   * Returns ??isPlaying??.
+   */
+  public function getIsPlaying():Bool
+  {
+    return isPlaying;
   }
 
   /**
