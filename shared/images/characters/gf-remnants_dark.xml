@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="gf-remnants_dark.png">
-	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="GF Cheer0000" x="2" y="2" width="721" height="679" frameX="-2" frameY="0" frameWidth="725" frameHeight="680"/>
 	<SubTexture name="GF Cheer0001" x="725" y="2" width="725" height="680"/>
