@@ -26,7 +26,7 @@
       "assetPath": "characters/GFSpooky-remnants",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
       "frameRate": 24,
-      "offsets": [0, -9]
+      "offsets": [0, -21]
     },
     {
       "name": "danceRight-spooky",
@@ -34,7 +34,7 @@
       "assetPath": "characters/GFSpooky-remnants",
       "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
       "frameRate": 24,
-      "offsets": [0, -9]
+      "offsets": [0, -21]
     },
     {
       "name": "sad",
