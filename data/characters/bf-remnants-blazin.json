@@ -88,6 +88,12 @@
       "offsets": [0, 0]
     },
     {
+      "name": "hitSpin-hold",
+      "prefix": "Hit Spin Loop",
+      "looped": true,
+      "offsets": [0, 0]
+    },
+    {
       "name": "uppercutPrep",
       "prefix": "Uppercut Prep",
       "offsets": [0, 0]
