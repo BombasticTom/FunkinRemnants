@@ -225,7 +225,7 @@
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmen",
+      "assetPath": "stages/week4Remnants/henchmenAlt",
       "animations": [
         {
           "offsets": [0, 0],
@@ -333,7 +333,7 @@
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmen",
+      "assetPath": "stages/week4Remnants/henchmenAlt",
       "animations": [
         {
           "offsets": [0, 0],
