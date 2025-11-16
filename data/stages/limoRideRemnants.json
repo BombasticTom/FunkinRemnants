@@ -218,14 +218,14 @@
     {
       "zIndex": 30,
       "danceEvery": 1,
-      "position": [400, 100],
+      "position": [400, 80],
       "scale": [1, 1],
       "name": "limoDancer2",
       "animType": "sparrow",
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmen",
+      "assetPath": "stages/week4Remnants/henchmenAlt",
       "animations": [
         {
           "offsets": [0, 0],
@@ -326,14 +326,14 @@
     {
       "zIndex": 30,
       "danceEvery": 1,
-      "position": [1000, 100],
+      "position": [1000, 80],
       "scale": [1, 1],
       "name": "limoDancer4",
       "animType": "sparrow",
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmen",
+      "assetPath": "stages/week4Remnants/henchmenAlt",
       "animations": [
         {
           "offsets": [0, 0],

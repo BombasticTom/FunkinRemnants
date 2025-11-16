@@ -239,7 +239,11 @@ class MILFRemnantsMixSong extends Song
 
   function createGib(type:Int):FunkinSprite
   {
-    var gibSprite:FunkinSprite = FunkinSprite.createSparrow(0, 0, 'stages/week4Remnants/henchmen');
+    var henchPath = 'stages/week4Remnants/henchmen';
+    if (currentHenchmenIndex == 2 || currentHenchmenIndex == 4)
+      henchPath += 'Alt';
+
+    var gibSprite:FunkinSprite = FunkinSprite.createSparrow(0, 0, henchPath);
     gibSprite.angle = FlxG.random.int(0, 360);
     gibSprite.active = true;
     gibSprite.velocity.x = FlxG.random.int(-20, -1000);
