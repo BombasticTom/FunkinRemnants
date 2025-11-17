@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BFLightsAnim.png">
+	<!-- Created with Adobe Animate version 22.0.8.217 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF lights out0000" x="2" y="2" width="400" height="377" frameX="-53" frameY="-72" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0001" x="2" y="2" width="400" height="377" frameX="-53" frameY="-72" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0002" x="404" y="2" width="395" height="383" frameX="-40" frameY="-66" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0003" x="404" y="2" width="395" height="383" frameX="-40" frameY="-66" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0004" x="404" y="2" width="395" height="383" frameX="-40" frameY="-66" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0005" x="404" y="2" width="395" height="383" frameX="-40" frameY="-66" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0006" x="404" y="2" width="395" height="383" frameX="-40" frameY="-66" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0007" x="404" y="2" width="395" height="383" frameX="-40" frameY="-66" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0008" x="404" y="2" width="395" height="383" frameX="-40" frameY="-66" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0009" x="801" y="2" width="396" height="381" frameX="-42" frameY="-68" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0010" x="801" y="2" width="396" height="381" frameX="-42" frameY="-68" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0011" x="1199" y="2" width="388" height="390" frameX="-65" frameY="-59" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0012" x="1589" y="2" width="426" height="445" frameX="-63" frameY="0" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0013" x="1589" y="2" width="426" height="445" frameX="-63" frameY="0" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0014" x="2" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0015" x="2" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0016" x="2" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0017" x="2" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0018" x="2" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0019" x="425" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0020" x="2" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0021" x="2" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0022" x="425" y="449" width="421" height="438" frameX="-58" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0023" x="848" y="449" width="423" height="439" frameX="-60" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0024" x="848" y="449" width="423" height="439" frameX="-60" frameY="-7" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0025" x="1273" y="449" width="417" height="441" frameX="-76" frameY="-5" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0026" x="1692" y="449" width="417" height="441" frameX="-76" frameY="-5" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0027" x="2" y="892" width="418" height="437" frameX="-55" frameY="-9" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0028" x="422" y="892" width="477" height="404" frameX="0" frameY="-42" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0029" x="422" y="892" width="477" height="404" frameX="0" frameY="-42" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0030" x="901" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0031" x="901" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0032" x="901" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0033" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0034" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0035" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0036" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0037" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0038" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0039" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0040" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0041" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0042" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0043" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0044" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0045" x="1389" y="892" width="486" height="406" frameX="-7" frameY="-40" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0046" x="1877" y="892" width="485" height="406" frameX="-10" frameY="-39" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0047" x="1877" y="892" width="485" height="406" frameX="-10" frameY="-39" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0048" x="2" y="1331" width="469" height="406" frameX="-19" frameY="-39" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0049" x="2" y="1331" width="469" height="406" frameX="-19" frameY="-39" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0050" x="473" y="1331" width="421" height="440" frameX="-51" frameY="-6" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0051" x="896" y="1331" width="429" height="433" frameX="-41" frameY="-14" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0052" x="896" y="1331" width="429" height="433" frameX="-41" frameY="-14" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0053" x="1327" y="1331" width="431" height="434" frameX="-40" frameY="-11" frameWidth="495" frameHeight="449"/>
+	<SubTexture name="BF lights out0054" x="1327" y="1331" width="431" height="434" frameX="-40" frameY="-11" frameWidth="495" frameHeight="449"/>
+</TextureAtlas>
