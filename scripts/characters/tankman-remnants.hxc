@@ -9,6 +9,19 @@ class TankmanRemnantsCharacter extends MultiSparrowCharacter
     super('tankman-remnants');
   }
 
+    function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+
+    if (!this.debug)
+    { // Gotta do it like this because the editor freaks out.
+      if (PlayState.instance.currentSong.id == null) return;
+      if (['guns', 'stress'].contains(PlayState.instance.currentSong.id)) shouldAlternate = true;
+      else
+        shouldAlternate = false;
+    }
+  }
+
   function onNoteHit(event:HitNoteScriptEvent)
   {
     super.onNoteHit(event);
