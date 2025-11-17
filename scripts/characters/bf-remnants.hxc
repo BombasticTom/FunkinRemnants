@@ -31,7 +31,7 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
     if (!this.debug)
     { // Gotta do it like this because the editor freaks out.
       if (PlayState.instance.currentSong.id == null) return;
-      if (['spookeez', 'south'].contains(PlayState.instance.currentSong.id)) shouldAlternate = true;
+      if (['south'].contains(PlayState.instance.currentSong.id)) shouldAlternate = true;
       else
         shouldAlternate = false;
     }

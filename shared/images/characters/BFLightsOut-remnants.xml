@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="BFLightsAnim.png">
+<TextureAtlas imagePath="BFLightsOut-remnants.png">
 	<!-- Created with Adobe Animate version 22.0.8.217 -->
 	<!-- http://www.adobe.com/products/animate.html -->
 	<SubTexture name="BF lights out0000" x="2" y="2" width="400" height="377" frameX="-53" frameY="-72" frameWidth="495" frameHeight="449"/>

@@ -79,6 +79,12 @@
       "offsets": [-11, 39]
     },
     {
+      "name": "lights",
+      "prefix": "BF lights out",
+      "assetPath": "characters/BFLightsOut-remnants",
+      "offsets": [43, 19]
+    },
+    {
       "name": "firstDeath",
       "prefix": "BF dies",
       "assetPath": "characters/bf-remnants",
