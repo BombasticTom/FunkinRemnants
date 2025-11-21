@@ -154,8 +154,8 @@ class BlazinBFRemnantsMixSong extends Song
         black.alpha = 0;
 
       case 352:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 5.7, {ease: FlxEase.linear});
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5.7, {ease: FlxEase.linear});
+        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 5, {ease: FlxEase.linear});
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5, {ease: FlxEase.linear});
     }
   }
 }
