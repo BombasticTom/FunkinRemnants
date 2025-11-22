@@ -1,6 +1,12 @@
 import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.play.PlayState;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 
 class MonsterRemnantsMixSong extends Song
 {
@@ -29,5 +35,82 @@ class MonsterRemnantsMixSong extends Song
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
   }
-}
 
+function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    black = new FunkinSprite(-20, -20);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(black);
+
+    white = new FunkinSprite(-20, -20);
+    white.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
+    white.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(white);
+
+    black.alpha = 1;
+    white.alpha = 0;
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (fadeWhiteTween != null) fadeWhiteTween.cancel();
+    if (hudTween != null) hudTween.cancel();
+
+    black.alpha = 1;
+    white.alpha = 0;
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    fadeBlackTween = FlxTween.tween(black, {alpha: 0.8}, 7, {ease: FlxEase.smootherStepOut});
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+      case 8:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 3, {ease: FlxEase.linear});
+
+      case 128:
+        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
+          {
+            ease: FlxEase.instant,
+            onComplete: function(_) {
+              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+            }
+          });
+        black.alpha = 0;
+
+      case 60:
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 6, {ease: FlxEase.backIn});
+
+      case 96:
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.3}, 8, {ease: FlxEase.backIn});
+
+      case 227:
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.3}, 0.3, {ease: FlxEase.linear});
+
+      case 322:
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 0.5, {ease: FlxEase.linear});
+
+      case 340:
+        fadeBlackTween = FlxTween.tween(black, {alpha: 0.7}, 6, {ease: FlxEase.linear});
+
+      case 356:
+        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.4, {ease: FlxEase.linear});
+    }
+  }
+}

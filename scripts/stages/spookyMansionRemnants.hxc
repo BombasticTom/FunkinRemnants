@@ -199,13 +199,13 @@ class SpookyMansionRemnantsStage extends Stage
           case 222:
             changeAmbiance(true, 0.3);
         }
-
+      }
       if (PlayState.instance.currentSong.id == "monster")
       {
         switch (event.beat)
         {
-          case 1:
-            changeAmbiance(true, 0.01);
+          case 0:
+            changeAmbiance(true, 0.00001);
           case 128:
             changeAmbiance(false, 0.1);
           case 227:
@@ -213,8 +213,7 @@ class SpookyMansionRemnantsStage extends Stage
       }
     }
   }
-    }
-  }
+}
 
   function changeAmbiance(goDark:Bool, duration:Float)
   {
