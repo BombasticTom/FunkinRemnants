@@ -1,5 +1,6 @@
 [
   { "op": "add", "path": "/playData/songVariations/-", "value": "pico" },
+  { "op": "add", "path": "/playData/songVariations/-", "value": "erect" },
   {
     "op": "add",
     "path": "/playData/characters/altInstrumentals/-",
