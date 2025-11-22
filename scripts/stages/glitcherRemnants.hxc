@@ -113,8 +113,6 @@ class GlitcherRemnantsStage extends Stage
   {
     super.onBeatHit(event);
 
-    // Play lightning at random intervals.
-
     if (PlayState.instance.currentSong != null)
     {
       if (PlayState.instance.currentSong.id == "glitcher")
