@@ -35,8 +35,8 @@
   "noteStyle": "funkin",
   "ratings": {
    "easy": 0,
-   "normal": 0,
-   "hard": 0
+   "hard": 0,
+   "normal": 0
   },
   "album": "remnants-week2-scary",
   "previewStart": 0,
@@ -48,6 +48,14 @@
   {
    "t": 0,
    "b": 0,
+   "bpm": 106,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 62890.3397,
+   "b": 111.1063,
    "bpm": 106,
    "n": 4,
    "d": 4,
