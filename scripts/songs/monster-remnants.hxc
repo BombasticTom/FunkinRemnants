@@ -53,6 +53,7 @@ function onCreate(event:ScriptEvent):Void
     black.alpha = 1;
     white.alpha = 0;
     PlayState.instance.camHUD.alpha = 0;
+    if (PlayState.instance.comboPopUps != null) PlayState.instance.comboPopUps.offsets =  [550, 350];
   }
 
   function onSongRetry(event:ScriptEvent)
