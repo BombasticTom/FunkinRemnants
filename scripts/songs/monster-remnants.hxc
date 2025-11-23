@@ -7,9 +7,16 @@ import funkin.graphics.FunkinSprite;
 import flixel.FlxG;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import funkin.Preferences;
 
 class MonsterRemnantsMixSong extends Song
 {
+  var black:FunkinSprite;
+  var white:FunkinSprite;
+  var fadeBlackTween:FlxTween;
+  var fadeWhiteTween:FlxTween;
+  var hudTween:FlxTween;
+
   public function new()
   {
     super('monster',
@@ -53,7 +60,15 @@ function onCreate(event:ScriptEvent):Void
     black.alpha = 1;
     white.alpha = 0;
     PlayState.instance.camHUD.alpha = 0;
-    if (PlayState.instance.comboPopUps != null) PlayState.instance.comboPopUps.offsets =  [550, 350];
+
+    if (!Preferences.downscroll)
+    {
+    PlayState.instance.comboPopUps.offsets =  [550, 350];
+    }
+    else
+    {
+    PlayState.instance.comboPopUps.offsets =  [550, -190];
+    }
   }
 
   function onSongRetry(event:ScriptEvent)
