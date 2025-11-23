@@ -15,14 +15,14 @@
     {
       "name": "mansionNormal",
       "assetPath": "stages/week2Remnants/Mansion",
-      "position": [-1015, -140],
+      "position": [-1015, -340],
       "scroll": [1, 1],
       "zIndex": 2
     },
     {
       "name": "mansionThunder",
       "assetPath": "stages/week2Remnants/Mansion-Lightning",
-      "position": [-1015, -140],
+      "position": [-1015, -340],
       "scroll": [1, 1],
       "alpha": 0.0001,
       "zIndex": 2
