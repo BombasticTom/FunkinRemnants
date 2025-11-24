@@ -1,0 +1,102 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.graphics.FunkinSprite;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.save.Save;
+
+class RemnantsErectSong extends Song
+{
+  var black:FunkinSprite;
+  var fadeBlackTween:FlxTween;
+  var hudTween:FlxTween;
+  var hasPlayedIntro:Bool;
+
+  function new()
+  {
+    super('remnants',
+      {
+        variation: 'erect'
+      });
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
+    {
+      return !Save.instance.hasBeatenSong(this.id, null, '');
+    }
+    return false;
+  }
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+    {
+      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+      if (!hasBeatenPicoMix) results.remove('pico');
+    }
+    return results;
+  }
+
+  public function listDifficulties(variationId:String, variationIds:Array<String>, showLocked:Bool):Array<String>
+  {
+    if (showLocked || Save.instance.hasBeatenLevel('remnants-week'))
+    {
+      return super.listDifficulties(variationId, variationIds);
+    }
+
+    // Hide all difficulties if the player has not beaten the week.
+    return [];
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    black = new FunkinSprite(-20, -20);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(black);
+
+    black.alpha = 0;
+    PlayState.instance.camHUD.alpha = 0;
+
+    hasPlayedIntro = false;
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (hudTween != null) hudTween.cancel();
+
+    black.alpha = 0;
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+
+    hasPlayedIntro = true;
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+      case 16:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.1, {ease: FlxEase.smootStepOut});
+    }
+  }
+}
+

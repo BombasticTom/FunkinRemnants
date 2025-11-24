@@ -22,7 +22,7 @@
       "opponentVocals": ["bf-remnants-opponent-remnants"],
       "playerVocals": ["bf-remnants"]
     },
-    "stage": "sketchRemnants",
+    "stage": "sketchRemnantsErect",
     "noteStyle": "funkin",
     "stickerPack": "remnants-test",
     "ratings": { "erect": 6, "nightmare": 7 },
