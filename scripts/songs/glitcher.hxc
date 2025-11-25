@@ -8,7 +8,7 @@ import flixel.FlxG;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 
-class GlitcherSong extends Song
+class GlitcherRemnantsSong extends Song
 {
   var hasPlayedCutscene:Bool;
   var black:FunkinSprite;
@@ -17,7 +17,7 @@ class GlitcherSong extends Song
 
   public function new()
   {
-    super('glitcher');
+    super('glitcher-remnants');
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool

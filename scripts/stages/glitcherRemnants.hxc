@@ -115,7 +115,7 @@ class GlitcherRemnantsStage extends Stage
 
     if (PlayState.instance.currentSong != null)
     {
-      if (PlayState.instance.currentSong.id == "glitcher")
+      if (PlayState.instance.currentSong.id == "glitcher-remnants")
       {
         switch (event.beat)
         {
