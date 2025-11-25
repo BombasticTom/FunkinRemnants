@@ -21,10 +21,11 @@
       "instrumental": "erect",
       "altInstrumentals": [],
       "opponentVocals": ["bf-remnants-opponent"],
-      "playerVocals": ["bf-default-remnants"]
+      "playerVocals": ["bf-remnants"]
     },
     "stage": "sketchRemnantsErect",
     "noteStyle": "funkin",
+    "stickerPack": "remnants-test",
     "ratings": {
       "erect": 6,
       "nightmare": 7
