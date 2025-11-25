@@ -1,9 +1,15 @@
 import funkin.modding.module.ModuleHandler;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxEase;
 import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.Conductor;
 
 class WinterHorrorlandRemnantsMixSong extends Song
 {
+  var monsterCame:Bool;
+
   public function new()
   {
     super('winter-horrorland',
@@ -18,6 +24,11 @@ class WinterHorrorlandRemnantsMixSong extends Song
     return false;
   }
 
+  function onCreate(event:ScriptEvent):Void
+  {
+    monsterCame = false;
+  }
+
   function onCountdownStart(event:ScriptEvent):Void
   {
     super.onCountdownStart(event);
@@ -26,7 +37,63 @@ class WinterHorrorlandRemnantsMixSong extends Song
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
       event.cancel();
+      PlayState.instance.camHUD.visible = false;
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+    else if (!monsterCame)
+    {
+      monsterCame = true;
+      PlayState.instance.currentStage.getDad().visible = false;
+      PlayState.instance.camHUD.visible = false;
+
+      var santaDead:ScriptedFlxAtlasSprite = null;
+
+      try
+      {
+        santaDead = PlayState.instance.currentStage.scriptGet('santaDead');
+      }
+      catch (e:Exception)
+      {
+        PlayState.instance.currentStage.getDad().visible = true;
+        PlayState.instance.camHUD.visible = true;
+        return;
+      }
+
+      santaDead.scriptCall('playMonsterComingOut');
+      santaDead.anim.pause();
+
+      var bfPos:Array<Float> = [
+        PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+        PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+      ];
+
+      var santaPos:Array<Float> = [
+        PlayState.instance.currentStage.getDad().cameraFocusPoint.x - 200,
+        PlayState.instance.currentStage.getDad().cameraFocusPoint.y + 150
+      ];
+
+      PlayState.instance.resetCamera(false, false, false);
+      PlayState.instance.cancelCameraFollowTween();
+      PlayState.instance.cameraFollowPoint.setPosition(santaPos[0], santaPos[1]);
+
+      var durSeconds:Float = Conductor.instance.stepLengthMs * 8 / 1000;
+      PlayState.instance.tweenCameraZoom(1.8, durSeconds, false, FlxEase.smootherStepOut);
+
+      new FlxTimer().start(3, (tmr:FlxTimer) -> {
+        santaDead.anim.resume();
+        santaDead.onAnimationComplete.add(() -> {
+          santaDead.scriptCall("playDeadSanta");
+          PlayState.instance.currentStage.getDad().visible = true;
+          PlayState.instance.camHUD.visible = true;
+          PlayState.instance.startCountdown();
+
+          PlayState.instance.resetCamera(false, false, false);
+          PlayState.instance.cancelCameraFollowTween();
+          PlayState.instance.cameraFollowPoint.setPosition(bfPos[0], bfPos[1]);
+        });
+      });
+
+      event.cancel();
     }
   }
 }

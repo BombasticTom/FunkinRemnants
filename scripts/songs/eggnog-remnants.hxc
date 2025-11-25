@@ -121,7 +121,7 @@ class EggnogRemnantsMixSong extends Song
     PlayState.instance.currentStage.add(santaDead);
     PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-    santaDead.scriptCall('playCutscene');
+    santaDead.scriptCall('playSantaSpeaks');
 
     PlayState.instance.currentStage.getDad().visible = false;
     var parentsShoot:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('DadShootsSpriteRemnants', 0, 0);

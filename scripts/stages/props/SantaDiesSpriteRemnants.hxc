@@ -23,11 +23,22 @@ class SantaDiesSpriteRemnants extends FlxAtlasSprite
     // onAnimationFinish.add(finishCanAnimation);
   }
 
-  public function playCutscene():Void
+  public function playSantaSpeaks():Void
   {
-    // this.visible = true;
     this.playAnimation("santa whole scene", false, false, false, 0);
-    onAnimationComplete.add(onFinishAnim);
+    onAnimationComplete.addOnce(onFinishAnim);
+  }
+
+  public function playMonsterComingOut():Void
+  {
+    this.playAnimation("Monster coming out Santa", false, false, false, 0);
+    onAnimationComplete.addOnce(onFinishAnim);
+  }
+
+  function playDeadSanta():Void
+  {
+    this.playAnimation("santa dead with hole", false, false, false, 0);
+    this.anim.pause();
   }
 
   function onFinishAnim():Void
