@@ -194,7 +194,8 @@ class EggnogRemnantsMixSong extends Song
   {
     super.onUpdate(event);
 
-    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getIsPlaying')) {
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getIsPlaying'))
+    {
       if (FlxG.onMobile)
       {
         isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;

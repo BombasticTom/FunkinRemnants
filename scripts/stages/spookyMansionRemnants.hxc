@@ -210,10 +210,10 @@ class SpookyMansionRemnantsStage extends Stage
             changeAmbiance(false, 0.1);
           case 227:
             changeAmbiance(true, 0.5);
+        }
       }
     }
   }
-}
 
   function changeAmbiance(goDark:Bool, duration:Float)
   {

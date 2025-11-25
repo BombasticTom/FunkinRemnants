@@ -9,7 +9,7 @@ class TankmanRemnantsCharacter extends MultiSparrowCharacter
     super('tankman-remnants');
   }
 
-    function onCreate(event:ScriptEvent)
+  function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
 

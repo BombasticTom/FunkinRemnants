@@ -43,7 +43,7 @@ class MonsterRemnantsMixSong extends Song
     }
   }
 
-function onCreate(event:ScriptEvent):Void
+  function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
 
@@ -63,11 +63,11 @@ function onCreate(event:ScriptEvent):Void
 
     if (!Preferences.downscroll)
     {
-    PlayState.instance.comboPopUps.offsets =  [550, 350];
+      PlayState.instance.comboPopUps.offsets = [550, 350];
     }
     else
     {
-    PlayState.instance.comboPopUps.offsets =  [550, -190];
+      PlayState.instance.comboPopUps.offsets = [550, -190];
     }
   }
 
@@ -130,3 +130,4 @@ function onCreate(event:ScriptEvent):Void
     }
   }
 }
+

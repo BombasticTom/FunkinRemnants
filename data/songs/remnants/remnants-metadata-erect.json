@@ -1,55 +1,48 @@
 {
- "version": "2.2.4",
- "songName": "Remnants Erect!",
- "artist": "MarkedAman",
- "charter": "RhysRJJ + Plush + Sammy The Goog",
- "divisions": 96,
- "looped": false,
- "offsets": {
-  "instrumental": 0,
-  "altInstrumentals": {  },
-  "vocals": {  },
-  "altVocals": {  }
- },
- "playData": {
-  "songVariations": [],
-  "difficulties": [
-   "erect",
-   "nightmare"
-  ],
-  "characters": {
-   "player": "bf-default-remnants",
-   "girlfriend": "podium-girls",
-   "opponent": "bf-remnants-opponent",
-   "instrumental": "erect",
-   "altInstrumentals": [],
-   "opponentVocals": [
-    "bf-remnants-opponent"
-   ],
-   "playerVocals": [
-    "bf-default-remnants"
-   ]
+  "version": "2.2.4",
+  "songName": "Remnants Erect!",
+  "artist": "MarkedAman",
+  "charter": "RhysRJJ + Plush + Sammy The Goog",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
   },
-  "stage": "sketchRemnantsErect",
-  "noteStyle": "funkin",
-  "ratings": {
-   "erect": 6,
-   "nightmare": 7
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["erect", "nightmare"],
+    "characters": {
+      "player": "bf-default-remnants",
+      "girlfriend": "podium-girls",
+      "opponent": "bf-remnants-opponent",
+      "instrumental": "erect",
+      "altInstrumentals": [],
+      "opponentVocals": ["bf-remnants-opponent"],
+      "playerVocals": ["bf-default-remnants"]
+    },
+    "stage": "sketchRemnantsErect",
+    "noteStyle": "funkin",
+    "ratings": {
+      "erect": 6,
+      "nightmare": 7
+    },
+    "album": "remnants-general",
+    "previewStart": 0,
+    "previewEnd": 6400
   },
-  "album": "remnants-general",
-  "previewStart": 0,
-  "previewEnd": 6400
- },
- "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
- "timeFormat": "ms",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 150,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+  "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 150,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
 }
