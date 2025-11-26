@@ -31,20 +31,19 @@ class RemnantsMusicReplacer extends Module
       return StringTools.contains(FreeplayState.rememberedCharacterId, 'remnants');
     });
 
-      addReplacement('freakyMenu', 'freakyMenu-remnants', () -> {
-        // Look through all new characters + the current selected character.
-        // If one of them is Funkin' their Remnants, replace the music.
-        var characters:Array<String> = PlayerRegistry.instance.listNewCharacters();
-        characters.push(FreeplayState.rememberedCharacterId);
+    addReplacement('freakyMenu', 'freakyMenu-remnants', () -> {
+      // Look through all new characters + the current selected character.
+      // If one of them is Funkin' their Remnants, replace the music.
+      var characters:Array<String> = PlayerRegistry.instance.listNewCharacters();
+      characters.push(FreeplayState.rememberedCharacterId);
 
-        for (charId in characters)
-        {
-          if (charId != null && StringTools.contains(charId, 'remnants'))
-            return true;
-        }
+      for (charId in characters)
+      {
+        if (charId != null && StringTools.contains(charId, 'remnants')) return true;
+      }
 
-        return false;
-      });
+      return false;
+    });
   }
 
   /**
@@ -62,11 +61,11 @@ class RemnantsMusicReplacer extends Module
       sound = FlxG.assets.getSoundUnsafe(path);
     }
 
-    musicReplaceRegistry.push([original, condition, path, sound]);
+    musicReplaceRegistry.push([original, condition, sound]);
   }
 
   /**
-   * Array index goes: Original, Condition, Path, Sound
+   * Array index goes: Original, Condition, Sound
    * Would use an `ObjectMap`, but it would always return `null`?
    */
   var musicReplaceRegistry:Array<Array<Dynamic>>;
@@ -98,7 +97,7 @@ class RemnantsMusicReplacer extends Module
       var musicID:String = entry[0];
 
       var musicPath:String = Paths.music(musicID + "/" + musicID);
-      if (sound._label == musicPath)
+      if (sound._label == musicPath && sound._sound != entry[2])
       {
         musicReplaceEntry = entry;
         break;
@@ -114,8 +113,7 @@ class RemnantsMusicReplacer extends Module
 
     // Hackily replace the internal sound with our replaced sound.
     trace('Replacing ' + musicReplaceEntry[0] + '...');
-    sound._label = musicReplaceEntry[2];
-    replaceSound(sound, musicReplaceEntry[3]);
+    replaceSound(sound, musicReplaceEntry[2]);
     trace('Replaced successfully!');
   }
 
