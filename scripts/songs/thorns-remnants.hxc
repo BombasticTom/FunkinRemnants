@@ -101,7 +101,7 @@ class ThornsRemnantsMixSong extends Song
       });
     }
 
-    var senpaiCrazy = FunkinSprite.createSparrow(0, 0, 'stages/week6Remnants/evil/cutscene/senpaiCrazy-remnants');
+    var senpaiCrazy = FunkinSprite.createSparrow(0, 0, 'remnants/evil/cutscene/senpaiCrazy-remnants');
     senpaiCrazy.cameras = [PlayState.instance.camCutscene];
     senpaiCrazy.animation.addByPrefix('idle', 'Senpai Pre Explosion instance 1', 24, false);
     senpaiCrazy.setGraphicSize(Std.int(senpaiCrazy.width * Constants.PIXEL_ART_SCALE));

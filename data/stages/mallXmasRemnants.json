@@ -7,7 +7,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/TopLevel",
+      "assetPath": "remnants/TopLevel",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -38,7 +38,7 @@
           "prefix": "top ceiling"
         }
       ],
-      "assetPath": "stages/week5Remnants/CeilingWindow",
+      "assetPath": "remnants/CeilingWindow",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -69,7 +69,7 @@
           "prefix": "Boppers Top"
         }
       ],
-      "assetPath": "stages/week5Remnants/TopBoppers",
+      "assetPath": "remnants/TopBoppers",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 1,
@@ -88,7 +88,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/MiddleLevel",
+      "assetPath": "remnants/MiddleLevel",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -119,7 +119,7 @@
           "prefix": "Boppers Middle 1"
         }
       ],
-      "assetPath": "stages/week5Remnants/MiddleBoppers1",
+      "assetPath": "remnants/MiddleBoppers1",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 1,
@@ -150,7 +150,7 @@
           "prefix": "Boppers Middle 2"
         }
       ],
-      "assetPath": "stages/week5Remnants/MiddleBoppers2",
+      "assetPath": "remnants/MiddleBoppers2",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 1,
@@ -181,7 +181,7 @@
           "prefix": "Boppers Middle 3"
         }
       ],
-      "assetPath": "stages/week5Remnants/MiddleBoppers3",
+      "assetPath": "remnants/MiddleBoppers3",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 1,
@@ -200,7 +200,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/BottomLevel",
+      "assetPath": "remnants/BottomLevel",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -219,7 +219,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/MallEscalators",
+      "assetPath": "remnants/MallEscalators",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -238,7 +238,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/RedCarpet",
+      "assetPath": "remnants/RedCarpet",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -257,7 +257,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/MallChristmasTree",
+      "assetPath": "remnants/MallChristmasTree",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -276,7 +276,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/SnowGround",
+      "assetPath": "remnants/SnowGround",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -295,7 +295,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/CandyCane",
+      "assetPath": "remnants/CandyCane",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -314,7 +314,7 @@
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
-      "assetPath": "stages/week5Remnants/RolusStand",
+      "assetPath": "remnants/RolusStand",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 0,
@@ -345,7 +345,7 @@
           "prefix": "Phanto Bop"
         }
       ],
-      "assetPath": "stages/week5Remnants/PhantoBopper",
+      "assetPath": "remnants/PhantoBopper",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 1,
@@ -376,7 +376,7 @@
           "prefix": "spg boppin"
         }
       ],
-      "assetPath": "stages/week5Remnants/SPG64Bopper",
+      "assetPath": "remnants/SPG64Bopper",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 1,
@@ -407,7 +407,7 @@
           "prefix": "These guys"
         }
       ],
-      "assetPath": "stages/week5Remnants/FrenchieHankBoppers",
+      "assetPath": "remnants/FrenchieHankBoppers",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 1,
@@ -438,7 +438,7 @@
           "prefix": "santa idle in fear"
         }
       ],
-      "assetPath": "stages/week5Remnants/santa",
+      "assetPath": "remnants/santa",
       "blend": "",
       "color": "#FFFFFF",
       "danceEvery": 1,

@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Senpai (Angry) [Remnants]",
-  "assetPath": "stages/week6Remnants/dialogue/portrait-senpai-remnants-angry",
+  "assetPath": "remnants/dialogue/portrait-senpai-remnants-angry",
   "flipX": false,
   "isPixel": true,
   "scale": 5.4,

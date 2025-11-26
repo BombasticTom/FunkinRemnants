@@ -32,7 +32,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
   {
     super.buildStage();
 
-    tankParachute1 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall1'), 0x10, 0, 5000);
+    tankParachute1 = new FlxBackdrop(Paths.image('remnants/tankmanFall1'), 0x10, 0, 5000);
     tankParachute1.scrollFactor.set(0.40, 0.35);
     tankParachute1.setPosition(583, -215);
     tankParachute1.velocity.y = 150;
@@ -41,7 +41,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
     FlxTween.tween(tankParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-    tankParachute2 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall2'), 0x10, 0, 5000);
+    tankParachute2 = new FlxBackdrop(Paths.image('remnants/tankmanFall2'), 0x10, 0, 5000);
     tankParachute2.scrollFactor.set(0.35, 0.35);
     tankParachute2.setPosition(989, -110);
     tankParachute2.velocity.y = 125;
@@ -50,7 +50,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
     FlxTween.tween(tankParachute2, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-    tankParachute3 = new FlxBackdrop(Paths.image('stages/week7Remnants/tankmanFall3'), 0x10, 0, 5000);
+    tankParachute3 = new FlxBackdrop(Paths.image('remnants/tankmanFall3'), 0x10, 0, 5000);
     tankParachute3.scrollFactor.set(0.35, 0.35);
     tankParachute3.setPosition(1238, -104);
     tankParachute3.velocity.y = 125;
@@ -59,7 +59,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
     FlxTween.tween(tankParachute3, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-    boxParachute1 = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall1'), 0x10, 0, 5000);
+    boxParachute1 = new FlxBackdrop(Paths.image('remnants/boxFall1'), 0x10, 0, 5000);
     boxParachute1.scrollFactor.set(0.20, 0.35);
     boxParachute1.setPosition(-79, -148);
     boxParachute1.velocity.y = 125;
@@ -68,7 +68,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
     FlxTween.tween(boxParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-    boxParachute2 = new FlxBackdrop(Paths.image('stages/week7Remnants/boxFall2'), 0x10, 0, 5000);
+    boxParachute2 = new FlxBackdrop(Paths.image('remnants/boxFall2'), 0x10, 0, 5000);
     boxParachute2.scrollFactor.set(0.25, 0.35);
     boxParachute2.setPosition(282, -27);
     boxParachute2.velocity.y = 125;
@@ -82,7 +82,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     PlayState.instance.currentStage.add(boxParachute1);
     PlayState.instance.currentStage.add(boxParachute2);
 
-    clouds = new FlxTiledSprite(Paths.image('stages/week7Remnants/tankClouds'), 3200, 235, true, false);
+    clouds = new FlxTiledSprite(Paths.image('remnants/tankClouds'), 3200, 235, true, false);
     clouds.setPosition(-1100, 20);
     clouds.scrollFactor.set(0.25, 0.25);
     clouds.zIndex = 12;

@@ -14,14 +14,14 @@
     },
     {
       "name": "mansionNormal",
-      "assetPath": "stages/week2Remnants/Mansion",
+      "assetPath": "remnants/Mansion",
       "position": [-1015, -340],
       "scroll": [1, 1],
       "zIndex": 2
     },
     {
       "name": "mansionThunder",
-      "assetPath": "stages/week2Remnants/Mansion-Lightning",
+      "assetPath": "remnants/Mansion-Lightning",
       "position": [-1015, -340],
       "scroll": [1, 1],
       "alpha": 0.0001,
@@ -29,14 +29,14 @@
     },
     {
       "name": "paintingNormal",
-      "assetPath": "stages/week2Remnants/Painting",
+      "assetPath": "remnants/Painting",
       "position": [-1016, -55],
       "scroll": [1, 1],
       "zIndex": 3
     },
     {
       "name": "paintingThunder",
-      "assetPath": "stages/week2Remnants/Painting-Lightning",
+      "assetPath": "remnants/Painting-Lightning",
       "position": [-1016, -55],
       "scroll": [1, 1],
       "alpha": 0.0001,
@@ -44,7 +44,7 @@
     },
     {
       "name": "coatNormal",
-      "assetPath": "stages/week2Remnants/Coat",
+      "assetPath": "remnants/Coat",
       "position": [-1057, 76],
       "scroll": [1.05, 1.05],
       "zIndex": 400,
@@ -52,7 +52,7 @@
     },
     {
       "name": "coatThunder",
-      "assetPath": "stages/week2Remnants/Coat-Lightning",
+      "assetPath": "remnants/Coat-Lightning",
       "position": [-1057, 76],
       "scroll": [1.05, 1.05],
       "alpha": 0.0001,
@@ -61,7 +61,7 @@
     },
     {
       "name": "cabinetNormal",
-      "assetPath": "stages/week2Remnants/Cabinet",
+      "assetPath": "remnants/Cabinet",
       "position": [1576, 674],
       "scroll": [1.1, 1.1],
       "zIndex": 400,
@@ -69,7 +69,7 @@
     },
     {
       "name": "cabinetThunder",
-      "assetPath": "stages/week2Remnants/Cabinet-Lightning",
+      "assetPath": "remnants/Cabinet-Lightning",
       "position": [1576, 674],
       "scroll": [1.1, 1.1],
       "alpha": 0.0001,

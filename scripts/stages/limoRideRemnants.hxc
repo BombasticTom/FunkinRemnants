@@ -110,7 +110,7 @@ class LimoRideRemnantsStage extends Stage
 
     // Apply sky shader.
     var skyOverlay:OverlayBlend = new OverlayBlend();
-    var sunOverlay:FlxSprite = new FlxSprite().loadGraphic(Paths.image('stages/week4Remnants/limoOverlay'));
+    var sunOverlay:FlxSprite = new FlxSprite().loadGraphic(Paths.image('remnants/limoOverlay'));
     sunOverlay.setGraphicSize(Std.int(sunOverlay.width * 2));
     sunOverlay.updateHitbox();
     skyOverlay.funnyShit.input = sunOverlay.pixels;
@@ -278,7 +278,7 @@ class LimoRideRemnantsStage extends Stage
 
   function fastVehicleDrive(isTruck:Bool):Void
   {
-    var vehicleSound:String = isTruck ? 'week4/truckPass' : 'carPass';
+    var vehicleSound:String = isTruck ? 'truckPass' : 'carPass';
     FunkinSound.playOnce(Paths.soundRandom(vehicleSound, 0, 1), 0.7);
 
     var vehicle = isTruck ? getNamedProp('fastTruck') : getNamedProp('fastCar');
@@ -305,12 +305,12 @@ class LimoRideRemnantsStage extends Stage
     var results:Array<String> = super.fetchAssetPaths();
 
     // This graphic is applied by shader to the background, so it's not included in the default stage function.
-    results.push(Paths.image('stages/week4Remnants/limoOverlay'));
+    results.push(Paths.image('remnants/limoOverlay'));
     results.push(Paths.sound('carPass0'));
     results.push(Paths.sound('carPass1'));
 
-    results.push(Paths.sound('week4/truckPass0'));
-    results.push(Paths.sound('week4/truckPass1'));
+    results.push(Paths.sound('truckPass0'));
+    results.push(Paths.sound('truckPass1'));
 
     return results;
   }

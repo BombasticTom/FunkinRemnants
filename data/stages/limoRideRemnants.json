@@ -11,7 +11,7 @@
       "animType": "sparrow",
       "isPixel": false,
       "scroll": [0.1, 0.1],
-      "assetPath": "stages/week4Remnants/limoSunset",
+      "assetPath": "remnants/limoSunset",
       "animations": []
     },
     {
@@ -22,7 +22,7 @@
       "name": "bgPole1",
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/highwayPoleTall"
+      "assetPath": "remnants/highwayPoleTall"
     },
     {
       "zIndex": 15,
@@ -32,7 +32,7 @@
       "name": "bgPole2",
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/highwayPoleTall"
+      "assetPath": "remnants/highwayPoleTall"
     },
     {
       "zIndex": 15,
@@ -41,7 +41,7 @@
       "name": "bgLight1",
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/highwayLight"
+      "assetPath": "remnants/highwayLight"
     },
     {
       "zIndex": 15,
@@ -50,7 +50,7 @@
       "name": "bgLight2",
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/highwayLight"
+      "assetPath": "remnants/highwayLight"
     },
 
     {
@@ -60,7 +60,7 @@
       "name": "boyfriendLightPole",
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/highwayPole"
+      "assetPath": "remnants/highwayPole"
     },
     {
       "zIndex": 145,
@@ -70,7 +70,7 @@
       "name": "highway1",
       "isPixel": false,
       "scroll": [0.75, 0.75],
-      "assetPath": "stages/week4Remnants/limoHighway1"
+      "assetPath": "remnants/limoHighway1"
     },
     {
       "zIndex": 17,
@@ -80,7 +80,7 @@
       "name": "highway2",
       "isPixel": false,
       "scroll": [0.325, 0.325],
-      "assetPath": "stages/week4Remnants/limoHighway2"
+      "assetPath": "remnants/limoHighway2"
     },
     {
       "zIndex": 20,
@@ -92,7 +92,7 @@
       "isPixel": false,
       "startingAnimation": "drive",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/bgLimo",
+      "assetPath": "remnants/bgLimo",
       "animations": [
         {
           "offsets": [0, 0],
@@ -115,7 +115,7 @@
       "isPixel": false,
       "startingAnimation": "drive",
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/limoDrive",
+      "assetPath": "remnants/limoDrive",
       "animations": [
         {
           "offsets": [0, 0],
@@ -137,7 +137,7 @@
       "animType": "sparrow",
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/fastCarLol",
+      "assetPath": "remnants/fastCarLol",
       "animations": []
     },
     {
@@ -149,7 +149,7 @@
       "animType": "sparrow",
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/fastTruckLol",
+      "assetPath": "remnants/fastTruckLol",
       "animations": []
     },
     {
@@ -159,7 +159,7 @@
       "name": "boyfriendLight",
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/week4Remnants/highwayLight"
+      "assetPath": "remnants/highwayLight"
     },
     {
       "zIndex": 30,
@@ -171,7 +171,7 @@
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmen",
+      "assetPath": "remnants/henchmen",
       "animations": [
         {
           "offsets": [0, 0],
@@ -225,7 +225,7 @@
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmenAlt",
+      "assetPath": "remnants/henchmenAlt",
       "animations": [
         {
           "offsets": [0, 0],
@@ -279,7 +279,7 @@
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmen",
+      "assetPath": "remnants/henchmen",
       "animations": [
         {
           "offsets": [0, 0],
@@ -333,7 +333,7 @@
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmenAlt",
+      "assetPath": "remnants/henchmenAlt",
       "animations": [
         {
           "offsets": [0, 0],
@@ -387,7 +387,7 @@
       "isPixel": false,
       "startingAnimation": "danceLeft",
       "scroll": [0.4, 0.4],
-      "assetPath": "stages/week4Remnants/henchmen",
+      "assetPath": "remnants/henchmen",
       "animations": [
         {
           "offsets": [0, 0],

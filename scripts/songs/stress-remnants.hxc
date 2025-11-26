@@ -236,13 +236,13 @@ class StressRemnantsMixSong extends Song
     cutsceneMusic.volume = 0;
 
     // Setup the audios.
-    tankTalk = FunkinSound.load(Paths.sound('week7/stressCutscene1'), 1.0);
-    tankTalk2 = FunkinSound.load(Paths.sound('week7/stressCutscene2'), 1.0);
-    if (!Preferences.naughtyness) censorBeep = FunkinSound.load(Paths.sound("week7/censorBeep"), 1.0);
-    gunPoint = FunkinSound.load(Paths.sound("week7/gunPoint"), 1.0);
-    demonEye = FunkinSound.load(Paths.sound("week7/demonEye"), 1.0);
-    gunHit = FunkinSound.load(Paths.sound("week7/picoArrives"), 1.0);
-    steveDies = FunkinSound.load(Paths.sound("week7/steveDies"), 1.0);
+    tankTalk = FunkinSound.load(Paths.sound('stressCutscene1'), 1.0);
+    tankTalk2 = FunkinSound.load(Paths.sound('stressCutscene2'), 1.0);
+    if (!Preferences.naughtyness) censorBeep = FunkinSound.load(Paths.sound("censorBeep"), 1.0);
+    gunPoint = FunkinSound.load(Paths.sound("gunPoint"), 1.0);
+    demonEye = FunkinSound.load(Paths.sound("demonEye"), 1.0);
+    gunHit = FunkinSound.load(Paths.sound("picoArrives"), 1.0);
+    steveDies = FunkinSound.load(Paths.sound("steveDies"), 1.0);
 
     // For Fake GF dancing.
     cutsceneConductor = new Conductor();
@@ -280,7 +280,7 @@ class StressRemnantsMixSong extends Song
 
     if (gfFail)
     {
-      gfFaceplant = FunkinSprite.createSparrow(0, 0, "stages/week7Remnants/cutscene/gfFail");
+      gfFaceplant = FunkinSprite.createSparrow(0, 0, "remnants/cutscene/gfFail");
       gfFaceplant.setPosition(gf.originalPosition.x + 475, gf.originalPosition.y + 550);
       gfFaceplant.animation.addByPrefix('faceplant', "girlfriend face plant0", 24, false);
       gfFaceplant.zIndex = boyfriend.zIndex + 1;
@@ -468,7 +468,7 @@ class StressRemnantsMixSong extends Song
     if (!Preferences.naughtyness)
     {
       var dad = PlayState.instance.currentStage.getDad();
-      censorSprite = FunkinSprite.createSparrow(0, 0, "stages/week7Remnants/cutscene/censor");
+      censorSprite = FunkinSprite.createSparrow(0, 0, "remnants/cutscene/censor");
       censorSprite.animation.addByPrefix('censor', "mouth censor0", 24, true);
       censorSprite.animation.play('censor');
       censorSprite.zIndex = dad.zIndex + 2;

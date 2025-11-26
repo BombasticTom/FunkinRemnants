@@ -9,7 +9,7 @@
       "position": [-600, -175],
       "animType": "sparrow",
       "name": "skyAdditive",
-      "assetPath": "stages/weekEnd1Remnants/blazin/skyBlur",
+      "assetPath": "remnants/blazin/skyBlur",
       "scroll": [0.0, 0.0],
       "scale": [1.75, 1.75]
     },
@@ -18,7 +18,7 @@
       "position": [50, -300],
       "animType": "sparrow",
       "name": "lightning",
-      "assetPath": "stages/weekEnd1Remnants/blazin/lightning",
+      "assetPath": "remnants/blazin/lightning",
       "scroll": [0.0, 0.0],
       "scale": [1.75, 1.75],
       "animations": [
@@ -34,7 +34,7 @@
       "position": [-600, -275],
       "animType": "sparrow",
       "name": "phillyForegroundCity",
-      "assetPath": "stages/weekEnd1Remnants/blazin/streetBlur",
+      "assetPath": "remnants/blazin/streetBlur",
       "scroll": [0.0, 0.0],
       "scale": [1.75, 1.75]
     },
@@ -43,7 +43,7 @@
       "position": [-600, -275],
       "animType": "sparrow",
       "name": "foregroundMultiply",
-      "assetPath": "stages/weekEnd1Remnants/blazin/streetBlur",
+      "assetPath": "remnants/blazin/streetBlur",
       "scroll": [0.0, 0.0],
       "scale": [1.75, 1.75]
     },

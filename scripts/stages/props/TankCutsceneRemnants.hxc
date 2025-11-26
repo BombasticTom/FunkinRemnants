@@ -6,7 +6,7 @@ class TankCutsceneRemnants extends FlxAtlasSprite
 {
   function new(x:Float, y:Float)
   {
-    super(x, y, Paths.animateAtlas("stages/week7Remnants/cutscene/tankmanAtlas", "shared"),
+    super(x, y, Paths.animateAtlas("remnants/cutscene/tankmanAtlas", "week7"),
       {
         FrameRate: 24.0,
         Reversed: false,

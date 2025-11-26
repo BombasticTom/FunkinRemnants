@@ -122,7 +122,7 @@ class DarnellRemnantsMixSong extends Song
 
     cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
 
-    var cutsceneCan:FunkinSprite = FunkinSprite.createSparrow(darnellPos[0], darnellPos[1], 'stages/weekEnd1Remnants/cutscenes/wked1_cutscene_1_can-remnants');
+    var cutsceneCan:FunkinSprite = FunkinSprite.createSparrow(darnellPos[0], darnellPos[1], 'remnants/cutscenes/wked1_cutscene_1_can-remnants');
     cutsceneCan.animation.addByPrefix('forward', "can kick quick0", 24, false);
     cutsceneCan.animation.addByPrefix('up', "can kicked up0", 24, false);
     PlayState.instance.currentStage.add(cutsceneCan);
@@ -214,13 +214,13 @@ class DarnellRemnantsMixSong extends Song
     // darnell laughs
     new FlxTimer().start(cutsceneDelay + 5.9, function(tmr) {
       PlayState.instance.currentStage.getDad().playAnimation('laughCutscene', true);
-      FunkinSound.playOnce(Paths.sound('weekend1/cutscene/darnell_laugh'), 0.6);
+      FunkinSound.playOnce(Paths.sound('cutscene/remnants/darnell_laugh'), 0.6);
     });
 
     // nene spits and laughs
     new FlxTimer().start(cutsceneDelay + 6.2, function(tmr) {
       PlayState.instance.currentStage.getGirlfriend().playAnimation('laughCutscene', true);
-      FunkinSound.playOnce(Paths.sound('weekend1/cutscene/nene_laugh'), 0.6);
+      FunkinSound.playOnce(Paths.sound('cutscene/remnants/nene_laugh'), 0.6);
     });
 
     // camera returns to normal, cutscene flags set and countdown starts.

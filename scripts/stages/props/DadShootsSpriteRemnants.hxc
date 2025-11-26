@@ -10,7 +10,7 @@ class DadShootsSpriteRemnants extends FlxAtlasSprite
 {
   public function new(x:Float, y:Float)
   {
-    super(x, y, Paths.animateAtlas("stages/week5Remnants/parents_shoot_assets", "shared"),
+    super(x, y, Paths.animateAtlas("remnants/parents_shoot_assets", "week5"),
       {
         FrameRate: 24.0,
         Reversed: false,

@@ -8,7 +8,7 @@
       "animType": "sparrow",
       "name": "sky",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/weebSky",
+      "assetPath": "remnants/weebSky",
       "scroll": [0.2, 0.2],
       "animations": []
     },
@@ -20,7 +20,7 @@
       "animType": "sparrow",
       "name": "school",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/weebSchool",
+      "assetPath": "remnants/weebSchool",
       "scroll": [0.75, 0.75],
       "animations": []
     },
@@ -32,7 +32,7 @@
       "animType": "sparrow",
       "name": "backTrees",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/weebBackTrees",
+      "assetPath": "remnants/weebBackTrees",
       "scroll": [0.5, 0.5],
       "animations": []
     },
@@ -44,7 +44,7 @@
       "animType": "sparrow",
       "name": "street",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/weebStreet",
+      "assetPath": "remnants/weebStreet",
       "scroll": [1, 1],
       "animations": []
     },
@@ -56,7 +56,7 @@
       "animType": "sparrow",
       "name": "treesFG",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/weebTreesBack",
+      "assetPath": "remnants/weebTreesBack",
       "scroll": [1, 1],
       "animations": []
     },
@@ -69,7 +69,7 @@
       "name": "treesBG",
       "startingAnimation": "treeLoop",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/weebTrees",
+      "assetPath": "remnants/weebTrees",
       "scroll": [1, 1],
       "animations": [
         {
@@ -94,7 +94,7 @@
       "name": "petals",
       "startingAnimation": "leaves",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/petals",
+      "assetPath": "remnants/petals",
       "scroll": [0.85, 0.85],
       "animations": [
         {
@@ -117,7 +117,7 @@
       "name": "freaks",
       "startingAnimation": "danceLeft",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/bgFreaks",
+      "assetPath": "remnants/bgFreaks",
       "scroll": [1, 1],
       "animations": [
         {

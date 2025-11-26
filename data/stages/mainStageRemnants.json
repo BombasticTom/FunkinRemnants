@@ -8,7 +8,7 @@
       "animType": "sparrow",
       "name": "stageBack",
       "isPixel": false,
-      "assetPath": "stages/week1Remnants/Stage",
+      "assetPath": "remnants/Stage",
       "scroll": [0.9, 0.9],
       "animations": []
     },
@@ -20,7 +20,7 @@
       "animType": "sparrow",
       "name": "stageLights",
       "isPixel": false,
-      "assetPath": "stages/week1Remnants/StageLights",
+      "assetPath": "remnants/StageLights",
       "scroll": [0.975, 0.975],
       "animations": []
     },
@@ -32,7 +32,7 @@
       "animType": "sparrow",
       "name": "frontLights",
       "isPixel": false,
-      "assetPath": "stages/week1Remnants/FrontLights",
+      "assetPath": "remnants/FrontLights",
       "scroll": [0.9, 0.9],
       "animations": []
     },
@@ -44,7 +44,7 @@
       "animType": "sparrow",
       "name": "stageCurtains",
       "isPixel": false,
-      "assetPath": "stages/week1Remnants/Curtains",
+      "assetPath": "remnants/Curtains",
       "scroll": [1.1, 1.1],
       "animations": []
     },
@@ -58,7 +58,7 @@
       "isPixel": false,
       "startingAnimation": "crowdcheer",
       "scroll": [1.4, 1.4],
-      "assetPath": "stages/week1Remnants/Crowd",
+      "assetPath": "remnants/Crowd",
       "animations": [
         {
           "offsets": [0, 0],
@@ -91,5 +91,6 @@
       "position": [751.5, 787]
     }
   },
-  "name": "Main Stage (Remnants)"
+  "name": "Main Stage (Remnants)",
+  "directory": "week1"
 }

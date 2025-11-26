@@ -10,7 +10,7 @@ class SantaDiesSpriteRemnants extends FlxAtlasSprite
 {
   public function new(x:Float, y:Float)
   {
-    super(x, y, Paths.animateAtlas("stages/week5Remnants/santa_speaks_assets", "shared"),
+    super(x, y, Paths.animateAtlas("remnants/santa_speaks_assets", "week5"),
       {
         FrameRate: 24.0,
         Reversed: false,

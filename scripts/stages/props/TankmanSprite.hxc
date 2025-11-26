@@ -24,7 +24,7 @@ class TankmanSprite extends FunkinSprite
   {
     super();
 
-    if (PlayState.instance.currentVariation == 'remnants') loadSparrow('stages/week7Remnants/tankmanKilled1');
+    if (PlayState.instance.currentVariation == 'remnants') loadSparrow('remnants/tankmanKilled1');
     else
       loadSparrow('tankmanKilled1');
 

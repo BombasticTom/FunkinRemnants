@@ -41,7 +41,7 @@ class MallEvilRemnantsStage extends Stage
 
     for (snow in 1...8)
     {
-      var snowFall:FlxBackdrop = new FlxBackdrop(Paths.image('stages/week5Remnants/Snow' + snow), 0x11, 800, FlxG.random.float(500, 700));
+      var snowFall:FlxBackdrop = new FlxBackdrop(Paths.image('remnants/Snow' + snow), 0x11, 800, FlxG.random.float(500, 700));
       snowFall.color = 0xFFD273B1;
       snowFall.blend = 0;
 

@@ -6,7 +6,7 @@
   "props": [
     {
       "name": "tankSky",
-      "assetPath": "stages/week7Remnants/tankSky",
+      "assetPath": "remnants/tankSky",
       "position": [-2000, -400],
       "scale": [4, 1],
       "zIndex": 10,
@@ -14,7 +14,7 @@
     },
     {
       "name": "mountains",
-      "assetPath": "stages/week7Remnants/mountains2",
+      "assetPath": "remnants/mountains2",
       "position": [-445, 35],
       "scale": [1.2, 1.2],
       "zIndex": 11,
@@ -22,7 +22,7 @@
     },
     {
       "name": "buildings",
-      "assetPath": "stages/week7Remnants/tankBuildings",
+      "assetPath": "remnants/tankBuildings",
       "position": [-260, 0],
       "scale": [1.1, 1.1],
       "zIndex": 13,
@@ -30,7 +30,7 @@
     },
     {
       "name": "ruins",
-      "assetPath": "stages/week7Remnants/cityruins2",
+      "assetPath": "remnants/cityruins2",
       "position": [-200, 200],
       "scale": [1.1, 1.1],
       "zIndex": 13,
@@ -38,7 +38,7 @@
     },
     {
       "name": "clouds2",
-      "assetPath": "stages/week7Remnants/tankClouds",
+      "assetPath": "remnants/tankClouds",
       "scale": [1.15, 1.15],
       "position": [-150, -125],
       "zIndex": 10,
@@ -47,7 +47,7 @@
     },
     {
       "name": "smokeLeft",
-      "assetPath": "stages/week7Remnants/smokeLeft",
+      "assetPath": "remnants/smokeLeft",
       "position": [-380, -40],
       "scale": [1, 1],
       "scroll": [0.4, 0.4],
@@ -59,7 +59,7 @@
     },
     {
       "name": "smokeRight",
-      "assetPath": "stages/week7Remnants/smokeRight",
+      "assetPath": "remnants/smokeRight",
       "position": [1050, -35],
       "scale": [1, 1],
       "zIndex": 15,
@@ -71,7 +71,7 @@
     },
     {
       "name": "watchtower",
-      "assetPath": "stages/week7Remnants/tankWatchtower",
+      "assetPath": "remnants/tankWatchtower",
       "position": [-35, 110],
       "scroll": [0.5, 0.5],
       "scale": [0.85, 0.85],
@@ -87,7 +87,7 @@
     },
     {
       "name": "tankRollingExtra",
-      "assetPath": "stages/week7Remnants/tankRollingExtra",
+      "assetPath": "remnants/tankRollingExtra",
       "position": [300, 300],
       "scale": [1, 1],
       "zIndex": 22,
@@ -99,7 +99,7 @@
     },
     {
       "name": "tankRolling",
-      "assetPath": "stages/week7Remnants/tankRolling",
+      "assetPath": "remnants/tankRolling",
       "position": [300, 300],
       "scale": [1, 1],
       "zIndex": 22,
@@ -111,7 +111,7 @@
     },
     {
       "name": "tankGround",
-      "assetPath": "stages/week7Remnants/tankGround",
+      "assetPath": "remnants/tankGround",
       "position": [-620, 500],
       "scroll": [1, 1],
       "scale": [1.15, 1.15],
@@ -119,7 +119,7 @@
     },
     {
       "name": "tankBricks",
-      "assetPath": "stages/week7Remnants/bricksGround",
+      "assetPath": "remnants/bricksGround",
       "position": [438, 715],
       "scroll": [1, 1],
       "scale": [1.15, 1.15],
@@ -127,7 +127,7 @@
     },
     {
       "name": "tankTable1",
-      "assetPath": "stages/week7Remnants/table1",
+      "assetPath": "remnants/table1",
       "position": [-275, 795],
       "scroll": [1.25, 1.25],
       "scale": [1.15, 1.15],
@@ -135,7 +135,7 @@
     },
     {
       "name": "tankTable2",
-      "assetPath": "stages/week7Remnants/table2",
+      "assetPath": "remnants/table2",
       "position": [100, 550],
       "scroll": [1, 1],
       "scale": [1.15, 1.15],
@@ -143,7 +143,7 @@
     },
     {
       "name": "tankTable3",
-      "assetPath": "stages/week7Remnants/table3",
+      "assetPath": "remnants/table3",
       "position": [1250, 800],
       "scroll": [1.1, 1.1],
       "scale": [1.2, 1.2],
@@ -151,7 +151,7 @@
     },
     {
       "name": "tankBoxClose1",
-      "assetPath": "stages/week7Remnants/boxClose1",
+      "assetPath": "remnants/boxClose1",
       "position": [-275, 600],
       "scroll": [1.1, 1.05],
       "scale": [1.15, 1.15],
@@ -159,7 +159,7 @@
     },
     {
       "name": "tankmanBopperCheer1",
-      "assetPath": "stages/week7Remnants/tankBopperCheer",
+      "assetPath": "remnants/tankBopperCheer",
       "zIndex": 43,
       "position": [1300, 375],
       "scale": [1.15, 1.15],
@@ -176,7 +176,7 @@
     },
     {
       "name": "tankmanAudience0",
-      "assetPath": "stages/week7Remnants/tank0",
+      "assetPath": "remnants/tank0",
       "zIndex": 1000,
       "position": [-500, 700],
       "scale": [1, 1],
@@ -193,7 +193,7 @@
     },
     {
       "name": "tankmanAudience2",
-      "assetPath": "stages/week7Remnants/tank2",
+      "assetPath": "remnants/tank2",
       "zIndex": 1002,
       "position": [360, 980],
       "scale": [1, 1],
@@ -210,7 +210,7 @@
     },
     {
       "name": "tankmanAudience3",
-      "assetPath": "stages/week7Remnants/tank3",
+      "assetPath": "remnants/tank3",
       "zIndex": 1016,
       "position": [1050, 1240],
       "scale": [1, 1],
@@ -227,7 +227,7 @@
     },
     {
       "name": "tankmanAudience4",
-      "assetPath": "stages/week7Remnants/tank4",
+      "assetPath": "remnants/tank4",
       "zIndex": 1004,
       "position": [1200, 900],
       "scale": [1, 1],
@@ -244,7 +244,7 @@
     },
     {
       "name": "tankmanAudience5",
-      "assetPath": "stages/week7Remnants/tank5",
+      "assetPath": "remnants/tank5",
       "zIndex": 1003,
       "position": [1550, 700],
       "scale": [1, 1],
@@ -261,7 +261,7 @@
     },
     {
       "name": "tankmanAudience1",
-      "assetPath": "stages/week7Remnants/tank1",
+      "assetPath": "remnants/tank1",
       "zIndex": 1100,
       "position": [-300, 750],
       "scale": [1, 1],

@@ -257,9 +257,9 @@ class UghRemnantsMixSong extends Song
     cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
 
     // Setup the audios.
-    tankTalk = FunkinSound.load(Paths.sound('week7/ughCutscene1'), 1.0);
-    tankTalk2 = FunkinSound.load(Paths.sound('week7/ughCutscene2'), 1.0);
-    bfBeep = FunkinSound.load(Paths.sound('week7/bfBeep'), 1.0);
+    tankTalk = FunkinSound.load(Paths.sound('wellWellWell'), 1.0);
+    tankTalk2 = FunkinSound.load(Paths.sound('killYou'), 1.0);
+    bfBeep = FunkinSound.load(Paths.sound('bfBeep'), 1.0);
 
     // Create the Tankman atlas.
     var dad = PlayState.instance.currentStage.getDad();

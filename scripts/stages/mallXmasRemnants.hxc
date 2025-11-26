@@ -32,7 +32,7 @@ class MallXmasRemnantsStage extends Stage
 
     for (snow in 1...8)
     {
-      var snowFall:FlxBackdrop = new FlxBackdrop(Paths.image('stages/week5Remnants/Snow' + snow), 0x11, 800, FlxG.random.float(500, 700));
+      var snowFall:FlxBackdrop = new FlxBackdrop(Paths.image('remnants/Snow' + snow), 0x11, 800, FlxG.random.float(500, 700));
       snowFall.blend = 0;
 
       // Holy shit this is maybe the worst code i have ever written. -Honton129

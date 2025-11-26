@@ -28,7 +28,7 @@ class TwoHOTRemnantsMixSong extends Song
     super.onCreate(event);
 
     // Precache the spraycan atlas.
-    FunkinMemory.cacheTexture(Paths.image("stages/weekEnd1Remnants/mechanics/spraycanAtlas/spritemap1", "shared"));
+    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1", "shared"));
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -291,7 +291,7 @@ class TwoHOTRemnantsMixSong extends Song
 
   function spawnImpactParticle()
   {
-    var impactParticle = FunkinSprite.createSparrow(0, 0, 'stages/weekEnd1Remnants/mechanics/CanImpactParticle');
+    var impactParticle = FunkinSprite.createSparrow(0, 0, 'remnants/mechanics/CanImpactParticle');
     impactParticle.animation.addByPrefix('idle', 'CanImpactParticle0', 24, false);
     impactParticle.animation.play('idle');
     impactParticle.x = PlayState.instance.currentStage.getBoyfriend().x + 400;

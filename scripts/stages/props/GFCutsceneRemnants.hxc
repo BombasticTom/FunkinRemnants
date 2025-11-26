@@ -6,7 +6,7 @@ class GFCutsceneRemnants extends FlxAtlasSprite
 {
   function new(x:Float, y:Float)
   {
-    super(x, y, Paths.animateAtlas("stages/week7Remnants/cutscene/gfCutscene", "shared"),
+    super(x, y, Paths.animateAtlas("remnants/cutscene/gfCutscene", "week7"),
       {
         FrameRate: 24.0,
         Reversed: false,

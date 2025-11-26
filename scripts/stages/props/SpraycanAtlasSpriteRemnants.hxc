@@ -14,7 +14,7 @@ class SpraycanAtlasSpriteRemnants extends FlxAtlasSprite
 
   public function new(x:Float, y:Float)
   {
-    super(x, y, Paths.animateAtlas("stages/weekEnd1Remnants/mechanics/spraycanAtlas", "shared"), {
+    super(x, y, Paths.animateAtlas("remnants/mechanics/spraycanAtlas", "weekend1"), {
       FrameRate: 24.0,
       Reversed: false,
       // ?OnComplete:Void -> Void,
@@ -42,7 +42,7 @@ class SpraycanAtlasSpriteRemnants extends FlxAtlasSprite
 
   public function playHitExplosion():Void
   {
-    var explodeEZ:FunkinSprite = FunkinSprite.createSparrow(this.x + 1050, this.y + 150, "stages/weekEnd1Remnants/mechanics/spraypaintExplosionEZ");
+    var explodeEZ:FunkinSprite = FunkinSprite.createSparrow(this.x + 1050, this.y + 150, "remnants/mechanics/spraypaintExplosionEZ");
     explodeEZ.animation.addByPrefix("idle", "explosion round 1 short0", 24, false);
     explodeEZ.animation.play("idle");
 

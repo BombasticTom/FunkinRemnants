@@ -1,7 +1,7 @@
 {
   "version": "1.1.0",
   "name": "Remnants (Thorns) [Pixel]",
-  "assetPath": "stages/week6Remnants/dialogue/dialogueBox-evil-remnants",
+  "assetPath": "remnants/dialogue/dialogueBox-evil-remnants",
   "isPixel": true,
   "flipX": false,
   "flipY": false,

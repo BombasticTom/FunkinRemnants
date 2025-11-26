@@ -11,7 +11,7 @@
       "animType": "sparrow",
       "isPixel": false,
       "scroll": [0.5, 0.5],
-      "assetPath": "stages/weekEnd1Remnants/Sky",
+      "assetPath": "remnants/Sky",
       "animations": []
     },
     {
@@ -23,7 +23,7 @@
       "animType": "sparrow",
       "isPixel": false,
       "scroll": [0.65, 0.65],
-      "assetPath": "stages/weekEnd1Remnants/Buildings",
+      "assetPath": "remnants/Buildings",
       "animations": []
     },
     {
@@ -37,7 +37,7 @@
       "flipY": false,
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/weekEnd1Remnants/StreetlightsBack",
+      "assetPath": "remnants/StreetlightsBack",
       "animations": []
     },
     {
@@ -51,7 +51,7 @@
       "flipY": false,
       "isPixel": false,
       "scroll": [1, 1],
-      "assetPath": "stages/weekEnd1Remnants/StreetlightsFront",
+      "assetPath": "remnants/StreetlightsFront",
       "animations": []
     },
     {
@@ -62,7 +62,7 @@
       "animType": "sparrow",
       "name": "fence",
       "isPixel": false,
-      "assetPath": "stages/weekEnd1Remnants/Fence",
+      "assetPath": "remnants/Fence",
       "scroll": [0.95, 1],
       "animations": []
     },
@@ -74,7 +74,7 @@
       "animType": "sparrow",
       "name": "street",
       "isPixel": false,
-      "assetPath": "stages/weekEnd1Remnants/Streets",
+      "assetPath": "remnants/Streets",
       "scroll": [1, 1],
       "animations": []
     },
@@ -87,7 +87,7 @@
       "name": "paper",
       "isPixel": false,
       "startingAnimation": "paperBlow",
-      "assetPath": "stages/weekEnd1Remnants/paper",
+      "assetPath": "remnants/paper",
       "scroll": [1.1, 1.1],
       "alpha": 0,
       "animations": [
@@ -108,7 +108,7 @@
       "animType": "sparrow",
       "name": "spraycanPile",
       "isPixel": false,
-      "assetPath": "stages/weekEnd1Remnants/SpraycanPile",
+      "assetPath": "remnants/SpraycanPile",
       "scroll": [1, 1],
       "alpha": 1,
       "animations": []

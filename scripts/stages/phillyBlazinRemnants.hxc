@@ -79,7 +79,7 @@ class PhillyBlazinRemnantsStage extends Stage
     additionalLighten.blend = 0; // ADD
     additionalLighten.visible = false;
 
-    scrollingSky = new FlxTiledSprite(Paths.image('stages/weekEnd1Remnants/blazin/skyBlur'), 4000, 495, true, false);
+    scrollingSky = new FlxTiledSprite(Paths.image('remnants/blazin/skyBlur'), 4000, 495, true, false);
     scrollingSky.setPosition(-700, -120);
     scrollingSky.scrollFactor.set(0, 0);
     scrollingSky.zIndex = 10;

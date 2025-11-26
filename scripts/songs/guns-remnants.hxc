@@ -274,7 +274,7 @@ class GunsRemnantsMixSong extends Song
     cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
 
     // Setup the audios.
-    tankTalk = FunkinSound.load(Paths.sound('week7/gunsCutscene'), 1.0);
+    tankTalk = FunkinSound.load(Paths.sound('tankSong2'), 1.0);
 
     // Create the Tankman atlas.
     var dad = PlayState.instance.currentStage.getDad();

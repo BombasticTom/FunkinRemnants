@@ -8,7 +8,7 @@
       "animType": "sparrow",
       "name": "sky",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/evil/weebSky",
+      "assetPath": "remnants/evil/weebSky",
       "scroll": [0.2, 0.2],
       "animations": []
     },
@@ -20,7 +20,7 @@
       "animType": "sparrow",
       "name": "school",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/evil/weebSchool",
+      "assetPath": "remnants/evil/weebSchool",
       "scroll": [0.75, 0.75],
       "animations": []
     },
@@ -32,7 +32,7 @@
       "animType": "sparrow",
       "name": "backTrees",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/evil/weebBackTrees",
+      "assetPath": "remnants/evil/weebBackTrees",
       "scroll": [0.5, 0.5],
       "animations": []
     },
@@ -44,7 +44,7 @@
       "animType": "sparrow",
       "name": "street",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/evil/weebStreet",
+      "assetPath": "remnants/evil/weebStreet",
       "scroll": [1, 1],
       "animations": []
     },
@@ -56,7 +56,7 @@
       "animType": "sparrow",
       "name": "trees",
       "isPixel": true,
-      "assetPath": "stages/week6Remnants/evil/weebTrees",
+      "assetPath": "remnants/evil/weebTrees",
       "scroll": [1, 1],
       "animations": []
     }
