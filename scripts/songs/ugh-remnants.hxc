@@ -247,7 +247,7 @@ class UghRemnantsMixSong extends Song
     PlayState.instance.camCutscene.fade(0xFF000000, 1.5, true, null, true);
 
     // Create the music instance.
-    cutsceneMusic = FunkinSound.load(Paths.music("distorto/distorto", "shared"), true);
+    cutsceneMusic = FunkinSound.load(Paths.music("distorto/distorto", "week7"), true);
     cutsceneMusic.volume = 0;
 
     // For BF idle.
