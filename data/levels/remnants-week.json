@@ -10,7 +10,13 @@
       "animations": [
         {
           "name": "idle",
-          "prefix": "BF idle dance",
+          "prefix": "remnants bf idle",
+          "frameRate": 24
+        },
+        {
+          "name": "confirm",
+          "prefix": "remnants bf hey",
+          "offsets": [5, 5],
           "frameRate": 24
         }
       ]
