@@ -78,8 +78,8 @@
       "PERFECT_GOLD": "resultsPERFECT-remnants-pico",
       "PERFECT": "resultsPERFECT-remnants-pico",
       "EXCELLENT": "resultsEXCELLENT-remnants-pico",
-      "GREAT": "resultsNORMAL-pico",
-      "GOOD": "resultsNORMAL-pico",
+      "GREAT": "resultsGOOD-remnants-pico",
+      "GOOD": "resultsGOOD-remnants-pico",
       "SHIT": "resultsSHIT-pico"
     },
     "perfectGold": [
