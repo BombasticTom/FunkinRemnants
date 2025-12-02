@@ -38,6 +38,13 @@ class DarnellBFRemnantsMixSong extends Song
     }
   }
 
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+  }
+
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);

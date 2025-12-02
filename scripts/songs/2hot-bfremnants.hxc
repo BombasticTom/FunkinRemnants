@@ -29,6 +29,8 @@ class TwoHOTRemnantsMixSong extends Song
 
     // Precache the spraycan atlas.
     FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1", "shared"));
+
+    PlayState.instance.currentStage.getGirlfriend().x = 1050;
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool

@@ -38,5 +38,12 @@ class LitUpBFRemnantsMixSong extends Song
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
   }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+  }
 }
 
