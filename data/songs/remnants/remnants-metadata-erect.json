@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
   "songName": "Remnants Erect!",
-  "artist": "MarkedAman",
-  "charter": "RhysRJJ + Plush + Sammy The Goog",
+  "artist": "Jotacast (ft. MarkedAman)",
+  "charter": "It's the chart editor daddy!",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -26,10 +26,7 @@
     "stage": "sketchRemnantsErect",
     "noteStyle": "funkin",
     "stickerPack": "remnants-test",
-    "ratings": {
-      "erect": 6,
-      "nightmare": 7
-    },
+    "ratings": { "erect": 8, "nightmare": 9 },
     "album": "remnants-general",
     "previewStart": 0,
     "previewEnd": 6400

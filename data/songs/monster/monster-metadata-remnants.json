@@ -25,11 +25,7 @@
     },
     "stage": "spookyMansionRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 0,
-      "hard": 0,
-      "normal": 0
-    },
+    "ratings": { "easy": 1, "normal": 2, "hard": 3 },
     "album": "remnants-week2-scary",
     "previewStart": 0,
     "previewEnd": 15000
