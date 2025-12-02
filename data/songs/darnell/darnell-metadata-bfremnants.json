@@ -13,35 +13,19 @@
  },
  "playData": {
   "songVariations": [],
-  "difficulties": [
-   "easy",
-   "normal",
-   "hard"
-  ],
+  "difficulties": ["easy", "normal", "hard"],
   "characters": {
    "player": "bf-remnants",
    "girlfriend": "gf-remnants",
    "opponent": "darnell-remnants",
    "instrumental": "bfremnants",
-   "altInstrumentals": [
-    "bf",
-    "",
-    "remnants"
-   ],
-   "opponentVocals": [
-    "darnell-remnants"
-   ],
-   "playerVocals": [
-    "bf-remnants"
-   ]
+   "altInstrumentals": ["bf", "", "remnants"],
+   "opponentVocals": ["darnell-remnants"],
+   "playerVocals": ["bf-remnants"]
   },
-  "stage": "phillyStreetsRemnants",
+  "stage": "phillyStreetsRemnantsBF",
   "noteStyle": "funkin",
-  "ratings": {
-   "easy": 8,
-   "normal": 9,
-   "hard": 10
-  },
+  "ratings": { "easy": 8, "normal": 9, "hard": 10 },
   "album": "remnants-weekend1-bf",
   "previewStart": 0,
   "previewEnd": 0

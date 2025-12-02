@@ -23,7 +23,7 @@
       "opponentVocals": ["darnell-remnants"],
       "playerVocals": ["bf-remnants"]
     },
-    "stage": "phillyStreetsRemnants",
+    "stage": "phillyStreetsRemnantsBF",
     "noteStyle": "funkin",
     "ratings": { "easy": 5, "normal": 6, "hard": 7 },
     "album": "remnants-weekend1-bf",
