@@ -33,6 +33,9 @@ class BlazinBFRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
+    PlayState.instance.currentStage.getGirlfriend().x = 1110;
+    PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x = 1400;
+
     this.hasHidden = false;
     this.hasPlayedCutscene = false;
 
