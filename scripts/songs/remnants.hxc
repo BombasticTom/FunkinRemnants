@@ -6,10 +6,6 @@ import flixel.FlxG;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.play.cutscene.VideoCutscene;
-import funkin.graphics.FunkinSprite;
-import funkin.play.song.Song;
-import funkin.play.PlayState;
-import funkin.save.Save;
 
 class RemnantsSong extends Song
 {
@@ -114,4 +110,3 @@ class RemnantsSong extends Song
     }
   }
 }
-
