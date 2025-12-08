@@ -4,7 +4,7 @@
   "assetPath": "characters/bfChristmas-remnants",
   "flipX": true,
   "healthIcon": {
-    "id": "bf-remnants"
+    "id": "bf-christmas-remnants"
   },
   "renderType": "multisparrow",
   "singTime": 8.0,
