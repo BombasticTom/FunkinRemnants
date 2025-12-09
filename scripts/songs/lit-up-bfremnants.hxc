@@ -45,5 +45,11 @@ class LitUpBFRemnantsMixSong extends Song
 
     PlayState.instance.currentStage.getGirlfriend().x = 1050;
   }
-}
 
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+  }
+}

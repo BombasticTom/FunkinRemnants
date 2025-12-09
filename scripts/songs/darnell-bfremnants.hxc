@@ -49,6 +49,8 @@ class DarnellBFRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
+    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+
     PlayState.instance.camGame.visible = true;
     PlayState.instance.camHUD.visible = true;
   }

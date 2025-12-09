@@ -124,6 +124,9 @@ class BlazinBFRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
+    PlayState.instance.currentStage.getGirlfriend().x = 1110;
+    PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x = 1400;
+
     if (fadeBlackTween != null) fadeBlackTween.cancel();
     if (fadeWhiteTween != null) fadeWhiteTween.cancel();
     if (hudTween != null) hudTween.cancel();
