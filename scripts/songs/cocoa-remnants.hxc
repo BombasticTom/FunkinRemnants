@@ -1,9 +1,18 @@
 import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 
 class CocoaRemnantsMixSong extends Song
 {
+  var black:FunkinSprite;
+  var blackTween:FlxTween;
+  var hudTween:FlxTween;
+
   public function new()
   {
     super('cocoa',
@@ -29,5 +38,44 @@ class CocoaRemnantsMixSong extends Song
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
   }
-}
 
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    FlxG.camera.stopFX();
+    if (hudTween != null) hudTween.cancel();
+
+    blackTween = FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    FlxG.camera.fade(0xFF000000, 4.8, true);
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+      case 16:
+        FlxG.camera.flash(0xFFFFFFFF, 1);
+
+      case 29:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.2, {ease: FlxEase.linear});
+    }
+  }
+}
