@@ -384,11 +384,42 @@
       "flipY": false,
       "isPixel": false,
       "name": "spgBop",
-      "position": [2310, 129],
+      "position": [2320, 135],
       "scale": 1,
       "scroll": [1, 1],
       "startingAnimation": "idle",
       "zIndex": 16
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [0, 0],
+          "prefix": "zara boppin"
+        }
+      ],
+      "assetPath": "remnants/ZaraBopper",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "zaraBop",
+      "position": [2075, -50],
+      "scale": 1,
+      "scroll": [1, 1],
+      "startingAnimation": "idle",
+      "zIndex": 13
     },
     {
       "alpha": 1,
