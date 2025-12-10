@@ -54,12 +54,7 @@ class RemnantsSong extends Song
   {
     super.onCreate(event);
 
-    black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(black);
-
-    black.alpha = 0;
+    FlxG.camera.fade(0xFF000000, 0, true);
     PlayState.instance.camHUD.alpha = 0;
 
     hasPlayedIntro = false;
@@ -87,11 +82,12 @@ class RemnantsSong extends Song
   {
     super.onSongRetry(event);
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    FlxG.camera.stopFX();
     if (hudTween != null) hudTween.cancel();
 
-    black.alpha = 0;
+    FlxG.camera.fade(0xFF000000, 0, true);
     FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+    PlayState.instance.camGame.visible = true;
 
     hasPlayedIntro = true;
   }
@@ -106,7 +102,11 @@ class RemnantsSong extends Song
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.smootStepOut});
 
       case 272:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.8, {ease: FlxEase.linear});
+	FlxG.camera.fade(0xFF000000, 0.8, false);
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.8, {ease: FlxEase.linear});
+
+      case 294:
+        PlayState.instance.camGame.visible = false;
     }
   }
 }

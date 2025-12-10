@@ -10,9 +10,6 @@ import flixel.tweens.FlxEase;
 
 class GlitcherRemnantsSong extends Song
 {
-  var hasPlayedCutscene:Bool;
-  var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
   var hudTween:FlxTween;
 
   public function new()
@@ -33,12 +30,7 @@ class GlitcherRemnantsSong extends Song
   {
     super.onCreate(event);
 
-    black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(black);
-    black.alpha = 1;
-
+    FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.disableKeys = true;
   }
@@ -47,10 +39,10 @@ class GlitcherRemnantsSong extends Song
   {
     super.onSongRetry(event);
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    FlxG.camera.stopFX();
     if (hudTween != null) hudTween.cancel();
 
-    black.alpha = 1;
+    FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.disableKeys = true;
   }
@@ -59,7 +51,7 @@ class GlitcherRemnantsSong extends Song
   {
     super.onSongStart(event);
 
-    fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 4, {ease: FlxEase.linear});
+    FlxG.camera.fade(0xFF000000, 4, true);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -79,4 +71,3 @@ class GlitcherRemnantsSong extends Song
     }
   }
 }
-

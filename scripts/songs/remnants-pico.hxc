@@ -9,7 +9,7 @@ import flixel.tweens.FlxEase;
 class RemnantsPicoSong extends Song
 {
   var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
+  var blackTween:FlxTween;
   var hudTween:FlxTween;
 
   function new()
@@ -53,7 +53,7 @@ class RemnantsPicoSong extends Song
   {
     super.onSongRetry(event);
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (blackTween != null) blackTween.cancel();
     if (hudTween != null) hudTween.cancel();
 
     black.alpha = 0;
@@ -70,14 +70,16 @@ class RemnantsPicoSong extends Song
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.7, {ease: FlxEase.linear});
 
       case 192:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 6.8, {ease: FlxEase.linear});
+        blackTween = FlxTween.tween(black, {alpha: 1}, 6.8, {ease: FlxEase.linear});
 
       case 223:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.4, {ease: FlxEase.quartIn});
+        blackTween = FlxTween.tween(black, {alpha: 0}, 0.4, {ease: FlxEase.quartIn});
+
+      case 273:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1.7, {ease: FlxEase.linear});
 
       case 288:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.7, {ease: FlxEase.linear});
+        blackTween = FlxTween.tween(black, {alpha: 1}, 1.7, {ease: FlxEase.linear});
     }
   }
 }
-

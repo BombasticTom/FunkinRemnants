@@ -19,9 +19,7 @@ class ThornsRemnantsMixSong extends Song
   var bgSprite:FunkinSprite;
   var hasPlayedDialogue:Bool;
   var black:FunkinSprite;
-  var white:FunkinSprite;
   var fadeBlackTween:FlxTween;
-  var fadeWhiteTween:FlxTween;
 
   public function new()
   {
@@ -187,11 +185,10 @@ class ThornsRemnantsMixSong extends Song
 
     hasPlayedDialogue = true;
 
+    FlxG.camera.stopFX();
     if (fadeBlackTween != null) fadeBlackTween.cancel();
-    if (fadeWhiteTween != null) fadeWhiteTween.cancel();
 
     black.alpha = 0;
-    white.alpha = 0;
   }
 
   /**
@@ -206,12 +203,6 @@ class ThornsRemnantsMixSong extends Song
     black.cameras = [PlayState.instance.camCutscene];
     PlayState.instance.add(black);
     black.alpha = 0;
-
-    white = new FunkinSprite(-20, -20);
-    white.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
-    white.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(white);
-    white.alpha = 0;
 
     hasPlayedDialogue = false;
   }
@@ -235,13 +226,7 @@ class ThornsRemnantsMixSong extends Song
         fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1.25, {ease: FlxEase.smoothStepOut});
 
       case 32:
-        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
-          {
-            ease: FlxEase.instant,
-            onComplete: function(_) {
-              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-            }
-          });
+        FlxG.camera.flash(0xFFFFFFFF, 0.5);
         black.alpha = 0;
 
       case 96:
@@ -254,13 +239,7 @@ class ThornsRemnantsMixSong extends Song
         fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1, {ease: FlxEase.sineOut});
 
       case 320:
-        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
-          {
-            ease: FlxEase.instant,
-            onComplete: function(_) {
-              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-            }
-          });
+        FlxG.camera.flash(0xFFFFFFFF, 0.5);
         black.alpha = 0;
 
       case 384:
@@ -268,4 +247,3 @@ class ThornsRemnantsMixSong extends Song
     }
   }
 }
-

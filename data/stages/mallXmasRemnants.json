@@ -415,7 +415,7 @@
       "flipY": false,
       "isPixel": false,
       "name": "zaraBop",
-      "position": [2565, -1391 ],
+      "position": [2565, 500],
       "scale": 1,
       "scroll": [1, 1],
       "startingAnimation": "idle",

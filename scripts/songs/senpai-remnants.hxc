@@ -162,4 +162,3 @@ class SenpaiRemnantsMixSong extends Song
     Countdown.performCountdown();
   }
 }
-

@@ -10,9 +10,6 @@ import flixel.tweens.FlxEase;
 
 class TormentorSong extends Song
 {
-  var hasPlayedCutscene:Bool;
-  var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
   var hudTween:FlxTween;
 
   public function new()
@@ -33,12 +30,7 @@ class TormentorSong extends Song
   {
     super.onCreate(event);
 
-    black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(black);
-    black.alpha = 1;
-
+    FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.disableKeys = true;
   }
@@ -47,11 +39,12 @@ class TormentorSong extends Song
   {
     super.onSongRetry(event);
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    FlxG.camera.stopFX();
     if (hudTween != null) hudTween.cancel();
 
-    black.alpha = 1;
+    FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camGame.alpha = 1;
     PlayState.instance.disableKeys = true;
   }
 
@@ -59,7 +52,7 @@ class TormentorSong extends Song
   {
     super.onSongStart(event);
 
-    fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 3, {ease: FlxEase.linear});
+    FlxG.camera.fade(0xFF000000, 3, true);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -69,18 +62,20 @@ class TormentorSong extends Song
     switch (event.beat)
     {
       case 14:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 0.1, {ease: FlxEase.linear});
+        FlxG.camera.fade(0xFF000000, 0.15, false);
 
       case 16:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.1, {ease: FlxEase.linear});
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.1, {ease: FlxEase.linear});
+        FlxG.camera.fade(0xFF000000, 0.15, true);
 
         PlayState.instance.disableKeys = false;
 
+      case 27:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.81, {ease: FlxEase.linear});
+
       case 320:
-        black.alpha = 1;
+        PlayState.instance.camHUD.alpha = 0;
+        PlayState.instance.camGame.alpha = 0;
         PlayState.instance.disableKeys = true;
     }
   }
 }
-

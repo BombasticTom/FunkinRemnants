@@ -54,7 +54,7 @@ class CocoaRemnantsMixSong extends Song
     FlxG.camera.stopFX();
     if (hudTween != null) hudTween.cancel();
 
-    blackTween = FlxG.camera.fade(0xFF000000, 0, false);
+    FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
   }
 

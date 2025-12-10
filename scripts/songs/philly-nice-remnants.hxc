@@ -11,6 +11,7 @@ class PhillyNiceRemnantsMixSong extends Song
 {
   var black:FunkinSprite;
   var fadeBlackTween:FlxTween;
+  var hudTween:FlxTween;
 
   public function new()
   {
@@ -30,11 +31,8 @@ class PhillyNiceRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(black);
-    black.alpha = 0;
+    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onCountdownStart(event:ScriptEvent):Void
@@ -53,18 +51,34 @@ class PhillyNiceRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
-    black.alpha = 0;
+    FlxG.camera.stopFX();
+    if (hudTween != null) hudTween.cancel();
+
+    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camGame.visible = true;
   }
 
   function onBeatHit(event:ScriptEvent):Void
   {
     super.onBeatHit(event);
 
-    if (event.beat == 352)
+    switch (event.beat)
     {
-      fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 3, {ease: FlxEase.linear});
+      case 3:
+        FlxG.camera.fade(0xFF000000, 1.72, true);
+
+      case 6:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.69, {ease: FlxEase.linear});
+
+      case 328:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.74, {ease: FlxEase.smootherStepOut});
+
+      case 352:
+        FlxG.camera.fade(0xFF000000, 2.74, false);
+
+      case 367:
+        PlayState.instance.camGame.visible = false;
     }
   }
 }
-

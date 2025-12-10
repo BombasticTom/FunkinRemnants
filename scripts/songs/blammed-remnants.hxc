@@ -9,8 +9,6 @@ import funkin.save.Save;
 
 class BlammedRemnantsMixSong extends Song
 {
-  var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
   var hudTween:FlxTween;
 
   public function new()
@@ -31,12 +29,7 @@ class BlammedRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(black);
-
-    black.alpha = 1;
+    FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -56,10 +49,10 @@ class BlammedRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    FlxG.camera.stopFX();
     if (hudTween != null) hudTween.cancel();
 
-    black.alpha = 1;
+    FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -67,7 +60,7 @@ class BlammedRemnantsMixSong extends Song
   {
     super.onSongStart(event);
 
-    fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 10, {ease: FlxEase.linear});
+    FlxG.camera.fade(0xFF000000, 10, true);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -80,4 +73,3 @@ class BlammedRemnantsMixSong extends Song
     }
   }
 }
-

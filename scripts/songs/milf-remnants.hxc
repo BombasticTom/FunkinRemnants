@@ -624,36 +624,17 @@ class MILFRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 8:
-        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
-          {
-            ease: FlxEase.instant,
-            onComplete: function(_) {
-              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-            }
-          });
+        FlxG.camera.flash(0xFFFFFFFF, 0.5);
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
 
       case 200:
-        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
-          {
-            ease: FlxEase.instant,
-            onComplete: function(_) {
-              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-            }
-          });
+        FlxG.camera.flash(0xFFFFFFFF, 0.5);
 
       case 232:
-        fadeWhiteTween = FlxTween.tween(white, {alpha: 1}, 0.0001,
-          {
-            ease: FlxEase.instant,
-            onComplete: function(_) {
-              fadeWhiteTween = FlxTween.tween(white, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-            }
-          });
+        FlxG.camera.flash(0xFFFFFFFF, 0.5);
 
       case 360:
         fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.33, {ease: FlxEase.sineOut});
     }
   }
 }
-

@@ -133,10 +133,9 @@ class RosesRemnantsMixSong extends Song
         var darkness = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
         darkness.cameras = [PlayState.instance.camCutscene];
         PlayState.instance.add(darkness);
-        darkness.alpha = 0.0;
+        darkness.alpha = 0;
 
         FlxTween.tween(darkness, {alpha: 1}, 1, {ease: FlxEase.linear});
     }
   }
 }
-

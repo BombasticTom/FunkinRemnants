@@ -11,7 +11,7 @@ import flixel.tweens.FlxEase;
 class SpookeezRemnantsMixSong extends Song
 {
   var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
+  var blackTween:FlxTween;
   var hudTween:FlxTween;
 
   public function new()
@@ -69,7 +69,7 @@ class SpookeezRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
+    if (blackTween != null) blackTween.cancel();
     if (hudTween != null) hudTween.cancel();
 
     black.alpha = 1;
@@ -80,7 +80,7 @@ class SpookeezRemnantsMixSong extends Song
   {
     super.onSongStart(event);
 
-    fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 3, {ease: FlxEase.linear});
+    blackTween = FlxTween.tween(black, {alpha: 0}, 3, {ease: FlxEase.linear});
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -93,8 +93,7 @@ class SpookeezRemnantsMixSong extends Song
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
 
       case 240:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.6, {ease: FlxEase.sineOut});
+        blackTween = FlxTween.tween(black, {alpha: 1}, 1.6, {ease: FlxEase.sineOut});
     }
   }
 }
-
