@@ -477,7 +477,7 @@
       "flipY": false,
       "isPixel": false,
       "name": "santa",
-      "position": [-840, 150],
+      "position": [-1158, -1400],
       "scale": 1,
       "scroll": [1, 1],
       "startingAnimation": "idle",
@@ -498,7 +498,7 @@
       "alpha": 1,
       "angle": 0,
       "cameraOffsets": [0, -150],
-      "position": [42, 882],
+      "position": [-255, -575],
       "scale": 1,
       "scroll": [1, 1],
       "zIndex": 200

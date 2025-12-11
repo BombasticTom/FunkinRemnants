@@ -126,8 +126,8 @@ class EggnogRemnantsMixSong extends Song
     PlayState.instance.currentStage.getDad().visible = false;
     var parentsShoot:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('DadShootsSpriteRemnants', 0, 0);
 
-    parentsShoot.x = -516;
-    parentsShoot.y = 503;
+    parentsShoot.x = -813;
+    parentsShoot.y = -954;
     parentsShoot.zIndex = santaDead.zIndex - 1;
     parentsShoot.shader = normalSanta.shader;
 
