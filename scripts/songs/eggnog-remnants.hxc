@@ -113,8 +113,8 @@ class EggnogRemnantsMixSong extends Song
 
     var santaDead:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('SantaDiesSpriteRemnants', 0, 0);
 
-    santaDead.x = -458;
-    santaDead.y = 498;
+    santaDead.x = -775;
+    santaDead.y = -1000;
     santaDead.zIndex = normalSanta.zIndex - 1;
     santaDead.shader = normalSanta.shader;
 
