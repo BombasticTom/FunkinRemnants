@@ -1,0 +1,78 @@
+import funkin.play.song.Song;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.play.stage.Stage;
+
+class PlaytimeRemnantsSong extends Song
+{
+  var hudTween:FlxTween;
+
+  public function new()
+  {
+    super('playtime-remnants');
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
+    {
+      return !Save.instance.hasBeatenSong(this.id, null, '');
+    }
+    return false;
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    FlxG.camera.stopFX();
+    if (hudTween != null) hudTween.cancel();
+
+    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camGame.visible = true;
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    FlxG.camera.fade(0xFF000000, 5, true);
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+      case 27:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 2.1, {ease: FlxEase.smootherStepInOut});
+
+      case 31:
+        PlayState.instance.camHUD.alpha = 0;
+
+      case 32:
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.54, {ease: FlxEase.linear});
+
+      case 192:
+	FlxG.camera.fade(0xFF000000, 0.54, false);
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.54, {ease: FlxEase.linear});
+
+      case 193:
+	PlayState.instance.camGame.visible = false;
+    }
+  }
+}

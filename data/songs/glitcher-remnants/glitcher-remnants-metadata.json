@@ -13,31 +13,19 @@
  },
  "playData": {
   "songVariations": [],
-  "difficulties": [
-   "easy",
-   "normal",
-   "hard"
-  ],
+  "difficulties": ["easy", "normal", "hard"],
   "characters": {
    "player": "bf-glitcher-normal",
    "girlfriend": "gf-glitcher-normal",
    "opponent": "hex-glitcher-normal",
    "instrumental": "",
    "altInstrumentals": [],
-   "opponentVocals": [
-    "hex-glitcher-normal"
-   ],
-   "playerVocals": [
-    "bf-glitcher-normal"
-   ]
+   "opponentVocals": ["hex-glitcher-normal"],
+   "playerVocals": ["bf-glitcher-normal"]
   },
   "stage": "glitcherRemnants",
   "noteStyle": "funkin",
-  "ratings": {
-   "easy": 0,
-   "hard": 0,
-   "normal": 0
-  },
+  "ratings": { "easy": 2, "normal": 3, "hard": 4 },
   "album": "remnants-glitcher",
   "previewStart": 0,
   "previewEnd": 0
