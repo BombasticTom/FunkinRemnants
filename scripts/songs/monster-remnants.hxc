@@ -2,7 +2,6 @@ import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
 import funkin.play.PlayState;
-import flixel.FlxSprite;
 import funkin.graphics.FunkinSprite;
 import flixel.FlxG;
 import flixel.tweens.FlxTween;
