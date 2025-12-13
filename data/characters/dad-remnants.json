@@ -75,6 +75,16 @@
       "offsets": [71, -16]
     },
     {
+      "name": "preAttack",
+      "prefix": "preAttack0",
+      "offsets": [-5, -25]
+    },
+    {
+      "name": "attack",
+      "prefix": "attack0",
+      "offsets": [-2, -4]
+    },
+    {
       "name": "block",
       "prefix": "block0",
       "offsets": [-5, 17]
