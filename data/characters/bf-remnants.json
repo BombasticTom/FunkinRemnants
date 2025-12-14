@@ -51,25 +51,25 @@
       "name": "singLEFT-perfect",
       "prefix": "BF LEFT PERFECT0",
       "assetPath": "characters/bf-remnants_Perfect",
-      "offsets": [12, -6]
+      "offsets": [20, -7]
     },
     {
       "name": "singDOWN-perfect",
       "prefix": "BF DOWN PERFECT0",
       "assetPath": "characters/bf-remnants_Perfect",
-      "offsets": [-10, -50]
+      "offsets": [0, -47]
     },
     {
       "name": "singUP-perfect",
       "prefix": "BF UP PERFECT0",
       "assetPath": "characters/bf-remnants_Perfect",
-      "offsets": [-29, 27]
+      "offsets": [-14, 17]
     },
     {
       "name": "singRIGHT-perfect",
       "prefix": "BF RIGHT PERFECT0",
       "assetPath": "characters/bf-remnants_Perfect",
-      "offsets": [-38, -7]
+      "offsets": [-48, -7]
     },
     {
       "name": "singLEFTmiss",

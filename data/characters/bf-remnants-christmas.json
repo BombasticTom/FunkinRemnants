@@ -38,25 +38,25 @@
       "name": "singLEFT-perfect",
       "prefix": "BF LEFT PERFECT0",
       "assetPath": "characters/bfChristmas-remnants_Perfect",
-      "offsets": [12, -6]
+      "offsets": [26, -6]
     },
     {
       "name": "singDOWN-perfect",
       "prefix": "BF DOWN PERFECT0",
       "assetPath": "characters/bfChristmas-remnants_Perfect",
-      "offsets": [-10, -50]
+      "offsets": [9, -43]
     },
     {
       "name": "singUP-perfect",
       "prefix": "BF UP PERFECT0",
       "assetPath": "characters/bfChristmas-remnants_Perfect",
-      "offsets": [-29, 27]
+      "offsets": [-5, 17]
     },
     {
       "name": "singRIGHT-perfect",
       "prefix": "BF RIGHT PERFECT0",
       "assetPath": "characters/bfChristmas-remnants_Perfect",
-      "offsets": [-38, -7]
+      "offsets": [-39, -7]
     },
     {
       "name": "singLEFTmiss",
