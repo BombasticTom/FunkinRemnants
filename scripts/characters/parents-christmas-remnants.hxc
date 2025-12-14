@@ -30,4 +30,3 @@ class ParentsChristmasRemnantsCharacter extends SparrowCharacter
     super.onNoteHit(event);
   }
 }
-

@@ -207,6 +207,10 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
           holdTimer = 0;
           this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
           return;
+        case "perfect":
+          holdTimer = 0;
+          this.playSingAnimation(event.note.noteData.getDirection(), false, 'perfect');
+          return;
 
         default:
           super.onNoteHit(event);

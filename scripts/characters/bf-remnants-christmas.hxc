@@ -27,28 +27,6 @@ class BoyfriendRemnantsChristmasCharacter extends MultiSparrowCharacter
     PauseSubState.musicSuffix = '-remnants';
   }
 
-  /*
-    // Censor Notes for Jolly Remnants BF?
-    function onNoteHit(event:HitNoteScriptEvent)
-    {
-      if (event.eventCanceled) {
-        // onNoteHit event was cancelled by the gameplay module.
-        return;
-      }
-
-      if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF) {
-        // Override the hit note animation.
-        switch(event.note.kind) {
-          case "censor":
-            holdTimer = 0;
-            this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
-            return;
-          default:
-            super.onNoteHit(event);
-        }
-      }
-    }
-   */
   var loseSprite:FunkinSprite;
 
   /**
@@ -114,5 +92,22 @@ class BoyfriendRemnantsChristmasCharacter extends MultiSparrowCharacter
       HapticUtil.vibrate(0, 0.1, 0.1, 1);
     }
   }
-}
 
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+    {
+      // Override the hit note animation.
+      switch (event.note.kind)
+      {
+        case "perfect":
+          holdTimer = 0;
+          this.playSingAnimation(event.note.noteData.getDirection(), false, 'perfect');
+          return;
+
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+}

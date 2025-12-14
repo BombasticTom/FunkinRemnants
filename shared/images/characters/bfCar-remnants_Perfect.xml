@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bfCar-remnants_Perfect.png">
+	<!-- Created with Adobe Animate version 24.0.3.19 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF DOWN PERFECT0000" x="2" y="2" width="390" height="360" frameX="-3" frameY="-8" frameWidth="393" frameHeight="368"/>
+	<SubTexture name="BF DOWN PERFECT0001" x="394" y="2" width="390" height="360" frameX="-3" frameY="-8" frameWidth="393" frameHeight="368"/>
+	<SubTexture name="BF DOWN PERFECT0002" x="786" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0003" x="1181" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0004" x="1576" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0005" x="1971" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0006" x="786" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0007" x="1181" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0008" x="1576" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0009" x="1971" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0010" x="786" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0011" x="1181" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0012" x="1576" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0013" x="1971" y="2" width="393" height="368"/>
+	<SubTexture name="BF DOWN PERFECT0014" x="786" y="2" width="393" height="368"/>
+	<SubTexture name="BF LEFT PERFECT0000" x="2" y="372" width="421" height="404" frameX="0" frameY="-1" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0001" x="425" y="372" width="421" height="404" frameX="0" frameY="-1" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0002" x="848" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0003" x="1285" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0004" x="1722" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0005" x="2159" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0006" x="848" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0007" x="1285" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0008" x="1722" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0009" x="2159" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0010" x="848" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0011" x="1285" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0012" x="1722" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0013" x="2159" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF LEFT PERFECT0014" x="848" y="372" width="435" height="405" frameX="-7" frameY="0" frameWidth="442" frameHeight="405"/>
+	<SubTexture name="BF RIGHT PERFECT0000" x="2" y="779" width="421" height="403" frameX="-1" frameY="-4" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0001" x="425" y="779" width="421" height="403" frameX="-1" frameY="-4" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0002" x="848" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0003" x="1263" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0004" x="1678" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0005" x="2093" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0006" x="848" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0007" x="1263" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0008" x="1678" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0009" x="2093" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0010" x="848" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0011" x="1263" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0012" x="1678" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0013" x="2093" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF RIGHT PERFECT0014" x="848" y="779" width="413" height="407" frameX="0" frameY="0" frameWidth="422" frameHeight="407"/>
+	<SubTexture name="BF UP PERFECT0000" x="2" y="1188" width="400" height="437" frameX="0" frameY="0" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0001" x="404" y="1188" width="400" height="437" frameX="0" frameY="0" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0002" x="806" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0003" x="1209" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0004" x="1612" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0005" x="2015" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0006" x="806" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0007" x="1209" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0008" x="1612" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0009" x="2015" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0010" x="806" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0011" x="1209" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0012" x="1612" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0013" x="2015" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+	<SubTexture name="BF UP PERFECT0014" x="806" y="1188" width="401" height="431" frameX="0" frameY="-6" frameWidth="401" frameHeight="437"/>
+</TextureAtlas>

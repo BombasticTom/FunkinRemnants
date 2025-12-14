@@ -104,6 +104,62 @@
       "offsets": [-38, -7]
     },
     {
+      "name": "singLEFT-perfect",
+      "prefix": "BF LEFT PERFECT0",
+      "assetPath": "characters/bfCar-remnants_Perfect",
+      "offsets": [12, -6]
+    },
+    {
+      "name": "singLEFT-perfect-hold",
+      "prefix": "BF LEFT PERFECT0",
+      "assetPath": "characters/bfCar-remnants_Perfect",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true,
+      "offsets": [12, -6]
+    },
+    {
+      "name": "singDOWN-perfect",
+      "prefix": "BF DOWN PERFECT0",
+      "assetPath": "characters/bfCar-remnants_Perfect",
+      "offsets": [-10, -50]
+    },
+    {
+      "name": "singDOWN-perfect-hold",
+      "prefix": "BF DOWN PERFECT0",
+      "assetPath": "characters/bfCar-remnants_Perfect",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true,
+      "offsets": [-10, -50]
+    },
+    {
+      "name": "singUP-perfect",
+      "prefix": "BF UP PERFECT0",
+      "assetPath": "characters/bfCar-remnants_Perfect",
+      "offsets": [-29, 27]
+    },
+    {
+      "name": "singUP-perfect-hold",
+      "prefix": "BF UP PERFECT0",
+      "assetPath": "characters/bfCar-remnants_Perfect",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true,
+      "offsets": [-29, 27]
+    },
+    {
+      "name": "singRIGHT-perfect",
+      "prefix": "BF RIGHT PERFECT0",
+      "assetPath": "characters/bfCar-remnants_Perfect",
+      "offsets": [-38, -7]
+    },
+    {
+      "name": "singRIGHT-perfect-hold",
+      "prefix": "BF RIGHT PERFECT0",
+      "assetPath": "characters/bfCar-remnants_Perfect",
+      "frameIndices": [10, 11, 12, 13],
+      "looped": true,
+      "offsets": [-38, -7]
+    },
+    {
       "name": "singLEFTmiss",
       "prefix": "BF NOTE LEFT MISS",
       "offsets": [12, 24]

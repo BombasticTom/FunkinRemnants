@@ -35,6 +35,30 @@
       "offsets": [-38, -7]
     },
     {
+      "name": "singLEFT-perfect",
+      "prefix": "BF LEFT PERFECT0",
+      "assetPath": "characters/bfChristmas-remnants_Perfect",
+      "offsets": [12, -6]
+    },
+    {
+      "name": "singDOWN-perfect",
+      "prefix": "BF DOWN PERFECT0",
+      "assetPath": "characters/bfChristmas-remnants_Perfect",
+      "offsets": [-10, -50]
+    },
+    {
+      "name": "singUP-perfect",
+      "prefix": "BF UP PERFECT0",
+      "assetPath": "characters/bfChristmas-remnants_Perfect",
+      "offsets": [-29, 27]
+    },
+    {
+      "name": "singRIGHT-perfect",
+      "prefix": "BF RIGHT PERFECT0",
+      "assetPath": "characters/bfChristmas-remnants_Perfect",
+      "offsets": [-38, -7]
+    },
+    {
       "name": "singLEFTmiss",
       "prefix": "BF NOTE LEFT MISS",
       "offsets": [12, 24]
