@@ -75,5 +75,22 @@ class BoyfriendRemnantsDarkCharacter extends MultiSparrowCharacter
         shouldAlternate = false;
     }
   }
-}
 
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+    {
+      // Override the hit note animation.
+      switch (event.note.kind)
+      {
+        case "perfect":
+          holdTimer = 0;
+          this.playSingAnimation(event.note.noteData.getDirection(), false, 'perfect');
+          return;
+
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+}

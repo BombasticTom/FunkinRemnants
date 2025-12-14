@@ -49,6 +49,26 @@
       "offsets": [-39, 2]
     },
     {
+      "name": "singLEFT-perfect",
+      "prefix": "BF LEFT PERFECT0",
+      "offsets": [29, 2]
+    },
+    {
+      "name": "singDOWN-perfect",
+      "prefix": "BF DOWN PERFECT0",
+      "offsets": [9, -38]
+    },
+    {
+      "name": "singUP-perfect",
+      "prefix": "BF UP PERFECT0",
+      "offsets": [-5, 26]
+    },
+    {
+      "name": "singRIGHT-perfect",
+      "prefix": "BF RIGHT PERFECT0",
+      "offsets": [-39, 2]
+    },
+    {
       "name": "singLEFTmiss",
       "prefix": "BF NOTE LEFT MISS",
       "offsets": [14, 19]
