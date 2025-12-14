@@ -72,9 +72,6 @@ class CocoaRemnantsMixSong extends Song
 
     switch (event.beat)
     {
-      case 32:
-        FlxG.camera.flash(0xFFFFFFFF, 1);
-
       case 60:
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.2, {ease: FlxEase.linear});
 
