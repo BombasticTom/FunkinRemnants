@@ -35,6 +35,30 @@
       "offsets": [-50, -5]
     },
     {
+      "name": "singLEFT-perfect",
+      "prefix": "BF LEFT PERFECT0",
+      "assetPath": "characters/BFPerfect",
+      "offsets": [20, -7]
+    },
+    {
+      "name": "singDOWN-perfect",
+      "prefix": "BF DOWN PERFECT0",
+      "assetPath": "characters/BFPerfect",
+      "offsets": [-3, -44]
+    },
+    {
+      "name": "singUP-perfect",
+      "prefix": "BF UP PERFECT0",
+      "assetPath": "characters/BFPerfect",
+      "offsets": [-24, 21]
+    },
+    {
+      "name": "singRIGHT-perfect",
+      "prefix": "BF RIGHT PERFECT0",
+      "assetPath": "characters/BFPerfect",
+      "offsets": [-51, -5]
+    },
+    {
       "name": "singLEFTmiss",
       "prefix": "BF NOTE LEFT MISS",
       "offsets": [6, 18]

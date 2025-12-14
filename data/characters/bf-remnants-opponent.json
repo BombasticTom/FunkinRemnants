@@ -61,6 +61,30 @@
       "flipX": false
     },
     {
+      "name": "singLEFT-perfect",
+      "prefix": "BF LEFT PERFECT0",
+      "assetPath": "characters/bf-remnants-opponent_Perfect",
+      "offsets": [55, -7]
+    },
+    {
+      "name": "singDOWN-perfect",
+      "prefix": "BF DOWN PERFECT0",
+      "assetPath": "characters/bf-remnants-opponent_Perfect",
+      "offsets": [-16, -47]
+    },
+    {
+      "name": "singUP-perfect",
+      "prefix": "BF UP PERFECT0",
+      "assetPath": "characters/bf-remnants-opponent_Perfect",
+      "offsets": [6, 21]
+    },
+    {
+      "name": "singRIGHT-perfect",
+      "prefix": "BF RIGHT PERFECT0",
+      "assetPath": "characters/bf-remnants-opponent_Perfect",
+      "offsets": [5, -7]
+    },
+    {
       "offsets": [2, 5],
       "flipY": false,
       "frameRate": 24,
