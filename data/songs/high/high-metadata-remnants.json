@@ -1,26 +1,57 @@
 {
-  "version": "2.2.4",
-  "songName": "High (Remnants Mix)",
-  "artist": "TRAF",
-  "charter": "Plush",
-  "playData": {
-    "difficulties": ["easy", "normal", "hard"],
-    "characters": {
-      "player": "bf-remnants-car",
-      "girlfriend": "gf-remnants-car",
-      "opponent": "mom-remnants-car",
-      "instrumental": "remnants"
-    },
-    "stage": "limoRideRemnants",
-    "noteStyle": "funkin",
-    "ratings": { "easy": 0, "noraml": 0, "hard": 0 },
-    "album": "remnants-week4",
-    "previewStart": 0,
-    "previewEnd": 15000
+ "version": "2.2.4",
+ "songName": "High (Remnants Mix)",
+ "artist": "TRAF",
+ "charter": "Plush",
+ "divisions": 96,
+ "looped": false,
+ "offsets": {
+  "instrumental": 0,
+  "altInstrumentals": {  },
+  "vocals": {  },
+  "altVocals": {  }
+ },
+ "playData": {
+  "songVariations": [],
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-remnants-car",
+   "girlfriend": "gf-remnants-car",
+   "opponent": "mom-remnants-car",
+   "instrumental": "remnants",
+   "altInstrumentals": [],
+   "opponentVocals": [
+    "mom-remnants-car"
+   ],
+   "playerVocals": [
+    "bf-remnants-car"
+   ]
   },
-  "generatedBy": "Friday Night Funkin' - v0.3.0 (rewrite/master:9c19d95) PROTOTYPE",
-  "timeFormat": "ms",
-  "timeChanges": [
-    { "t": 0, "b": 0, "bpm": 125, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }
-  ]
+  "stage": "limoRideRemnants",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 0,
+   "noraml": 0,
+   "hard": 0
+  },
+  "album": "remnants-week4",
+  "previewStart": 0,
+  "previewEnd": 15000
+ },
+ "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
+ "timeFormat": "ms",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 132,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
 }
