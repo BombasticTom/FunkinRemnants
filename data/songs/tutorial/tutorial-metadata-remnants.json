@@ -13,19 +13,31 @@
  },
  "playData": {
   "songVariations": [],
-  "difficulties": ["easy", "normal", "hard"],
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
   "characters": {
    "player": "bf-remnants",
    "girlfriend": "",
    "opponent": "gf-remnants",
    "instrumental": "remnants",
    "altInstrumentals": [],
-   "opponentVocals": ["gf-remnants"],
-   "playerVocals": ["bf-remnants"]
+   "opponentVocals": [
+    "gf-remnants"
+   ],
+   "playerVocals": [
+    "bf-remnants"
+   ]
   },
   "stage": "mainStageRemnants",
   "noteStyle": "funkin",
-  "ratings": { "easy": 1, "normal": 1, "hard": 1 },
+  "ratings": {
+   "easy": 1,
+   "hard": 1,
+   "normal": 1
+  },
   "album": "remnants-tutorial",
   "previewStart": 0,
   "previewEnd": 0
