@@ -56,6 +56,7 @@ class CocoaRemnantsMixSong extends Song
 
     FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camGame.visible = true;
   }
 
   function onSongStart(event:ScriptEvent):Void
@@ -71,11 +72,18 @@ class CocoaRemnantsMixSong extends Song
 
     switch (event.beat)
     {
-      case 16:
+      case 32:
         FlxG.camera.flash(0xFFFFFFFF, 1);
 
-      case 29:
+      case 60:
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.2, {ease: FlxEase.linear});
+
+      case 458:
+	FlxG.camera.fade(0xFF000000, 0.6, false);
+        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.6, {ease: FlxEase.linear});
+
+      case 465:
+        PlayState.instance.camGame.visible = false;
     }
   }
 }
