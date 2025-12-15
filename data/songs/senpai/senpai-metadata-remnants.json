@@ -13,34 +13,19 @@
  },
  "playData": {
   "songVariations": [],
-  "difficulties": [
-   "easy",
-   "normal",
-   "hard"
-  ],
+  "difficulties": ["easy", "normal", "hard"],
   "characters": {
    "player": "bf-remnants-pixel",
    "girlfriend": "gf-remnants-pixel",
    "opponent": "senpai-remnants",
    "instrumental": "remnants",
-   "altInstrumentals": [
-    "pico",
-    ""
-   ],
-   "opponentVocals": [
-    "senpai-remnants"
-   ],
-   "playerVocals": [
-    "bf-remnants-pixel"
-   ]
+   "altInstrumentals": ["pico", ""],
+   "opponentVocals": ["senpai-remnants"],
+   "playerVocals": ["bf-remnants-pixel"]
   },
   "stage": "schoolRemnants",
   "noteStyle": "pixel",
-  "ratings": {
-   "easy": 3,
-   "normal": 4,
-   "hard": 5
-  },
+  "ratings": { "easy": 3, "normal": 4, "hard": 5 },
   "album": "remnants-week6",
   "previewStart": 0,
   "previewEnd": 13100

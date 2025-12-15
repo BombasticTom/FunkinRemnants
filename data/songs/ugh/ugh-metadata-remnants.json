@@ -13,34 +13,19 @@
  },
  "playData": {
   "songVariations": [],
-  "difficulties": [
-   "easy",
-   "normal",
-   "hard"
-  ],
+  "difficulties": ["easy", "normal", "hard"],
   "characters": {
    "player": "bf-remnants",
    "girlfriend": "gf-tankmen-remnants",
    "opponent": "tankman-remnants",
    "instrumental": "remnants",
-   "altInstrumentals": [
-    "pico mix remnants cut",
-    "default mix remnants cut"
-   ],
-   "opponentVocals": [
-    "tankman-remnants"
-   ],
-   "playerVocals": [
-    "bf-remnants"
-   ]
+   "altInstrumentals": ["pico mix remnants cut", "default mix remnants cut"],
+   "opponentVocals": ["tankman-remnants"],
+   "playerVocals": ["bf-remnants"]
   },
   "stage": "tankmanBattlefieldRemnants",
   "noteStyle": "funkin",
-  "ratings": {
-   "easy": 3,
-   "normal": 4,
-   "hard": 5
-  },
+  "ratings": { "easy": 3, "normal": 4, "hard": 5 },
   "album": "remnants-week7",
   "previewStart": 0,
   "previewEnd": 15000
