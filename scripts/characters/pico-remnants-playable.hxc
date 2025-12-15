@@ -29,7 +29,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
     // NOTE: this.x and this.y are not properly set here.
 
-    GameOverSubState.musicSuffix = '-pico';
+    GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico';
 
     PauseSubState.musicSuffix = '-remnants';
