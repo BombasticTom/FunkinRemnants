@@ -13,31 +13,19 @@
  },
  "playData": {
   "songVariations": [],
-  "difficulties": [
-   "easy",
-   "normal",
-   "hard"
-  ],
+  "difficulties": ["easy", "normal", "hard"],
   "characters": {
    "player": "bf-remnants-car",
    "girlfriend": "gf-remnants-car",
    "opponent": "mom-remnants-car",
    "instrumental": "remnants",
    "altInstrumentals": [],
-   "opponentVocals": [
-    "mom-remnants-car"
-   ],
-   "playerVocals": [
-    "bf-remnants-car"
-   ]
+   "opponentVocals": ["mom-remnants-car"],
+   "playerVocals": ["bf-remnants-car"]
   },
   "stage": "limoRideRemnants",
   "noteStyle": "funkin",
-  "ratings": {
-   "easy": 0,
-   "noraml": 0,
-   "hard": 0
-  },
+  "ratings": { "easy": 5, "noraml": 6, "hard": 7 },
   "album": "remnants-week4",
   "previewStart": 0,
   "previewEnd": 15000

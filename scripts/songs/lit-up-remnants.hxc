@@ -9,6 +9,8 @@ import funkin.play.PlayState;
 
 class LitUpRemnantsMixSong extends Song
 {
+  var hudTween:FlxTween;
+
   public function new()
   {
     super('lit-up',

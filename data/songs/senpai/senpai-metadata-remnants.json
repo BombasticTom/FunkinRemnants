@@ -2,7 +2,7 @@
   "version": "2.2.4",
   "songName": "Senpai (Remnants Mix)",
   "artist": "fishgarden",
-  "charter": "fishgarden + Sammy The Goog",
+  "charter": "fishgarden",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -24,7 +24,7 @@
     },
     "stage": "schoolRemnants",
     "noteStyle": "pixel",
-    "ratings": { "easy": 4, "normal": 5, "hard": 6 },
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
     "album": "remnants-week6",
     "previewStart": 0,
     "previewEnd": 13100

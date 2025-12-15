@@ -21,6 +21,10 @@ import funkin.Conductor;
  */
 class MILFRemnantsMixSong extends Song
 {
+  var black:FunkinSprite;
+  var blackTween:FlxTween;
+  var hudTween:FlxTween;
+
   public function new()
   {
     super('milf',
@@ -110,13 +114,7 @@ class MILFRemnantsMixSong extends Song
     black.cameras = [PlayState.instance.camCutscene];
     PlayState.instance.add(black);
 
-    white = new FunkinSprite(-1600, -500);
-    white.makeSolidColor(4200, 1800, 0xFFFFFFFF);
-    white.cameras = [PlayState.instance.camGame];
-    PlayState.instance.add(white);
-
     black.alpha = 1;
-    white.alpha = 0;
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -130,12 +128,11 @@ class MILFRemnantsMixSong extends Song
     // Properly reset lights and collision when restarting the song.
     this.hardResetSong();
 
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
-    if (fadeWhiteTween != null) fadeWhiteTween.cancel();
+    FlxG.camera.stopFX();
+    if (blackTween != null) blackTween.cancel();
     if (hudTween != null) hudTween.cancel();
 
     black.alpha = 1;
-    white.alpha = 0;
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -614,7 +611,7 @@ class MILFRemnantsMixSong extends Song
   {
     super.onSongStart(event);
 
-    fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 2.41, {ease: FlxEase.linear, startDelay: 0.25});
+    blackTween = FlxTween.tween(black, {alpha: 0}, 2.41, {ease: FlxEase.linear, startDelay: 0.25});
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -634,7 +631,7 @@ class MILFRemnantsMixSong extends Song
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
 
       case 360:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 1}, 1.33, {ease: FlxEase.sineOut});
+        blackTween = FlxTween.tween(black, {alpha: 1}, 1.33, {ease: FlxEase.sineOut});
     }
   }
 }

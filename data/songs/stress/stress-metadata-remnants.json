@@ -25,7 +25,7 @@
     },
     "stage": "tankmanBattlefieldRemnants",
     "noteStyle": "funkin",
-    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "ratings": { "easy": 2, "normal": 3, "hard": 4 },
     "album": "remnants-week7",
     "previewStart": 0,
     "previewEnd": 15000
