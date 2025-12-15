@@ -294,7 +294,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     clearCasings();
 
     // Reset to standard death animation.
-    GameOverSubState.musicSuffix = '-pico';
+    GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico';
 
     PauseSubState.musicSuffix = '-pico';
