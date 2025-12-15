@@ -1,7 +1,6 @@
 import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
-import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.FlxG;
@@ -9,8 +8,6 @@ import funkin.play.PlayState;
 
 class SatinPantiesRemnantsMixSong extends Song
 {
-  var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
   var hudTween:FlxTween;
 
   public function new()
@@ -46,7 +43,7 @@ class SatinPantiesRemnantsMixSong extends Song
     FlxG.camera.stopFX();
     if (hudTween != null) hudTween.cancel();
 
-    FlxG.camera.fade(0xFF000000, 0.5, true);
+    FlxG.camera.fade(0xFF000000, 0, true);
     FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
     PlayState.instance.camGame.visible = true;
   }
