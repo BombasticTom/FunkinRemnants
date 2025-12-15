@@ -161,7 +161,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
   {
     super.onNoteMiss(event);
 
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-dodge") {
+    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-dodge")
+    {
       holdTimer = 0;
       PlayState.instance.health -= 0.15 * 2;
       this.playAnimation('hit', true, true);
@@ -179,19 +180,22 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
       return;
     }
 
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-dodge") {
+    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-dodge")
+    {
       holdTimer = 0;
       this.playAnimation('dodge', true, true);
       return;
     }
 
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-prepare") {
+    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-prepare")
+    {
       holdTimer = 0;
       this.playAnimation('preAttack', true, false);
       return;
     }
 
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-attack") {
+    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-attack")
+    {
       holdTimer = 0;
       this.playAnimation('attack', true, true);
       bfAttackSound.play(true);

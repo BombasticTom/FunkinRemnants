@@ -20,7 +20,7 @@ class ParentsChristmasRemnantsCharacter extends SparrowCharacter
           holdTimer = 0;
           this.playSingAnimation(event.note.noteData.getDirection(), false, 'alt');
           return;
-         case "duet":
+        case "duet":
           holdTimer = 0;
           this.playSingAnimation(event.note.noteData.getDirection(), false, 'duet');
           return;
@@ -30,3 +30,4 @@ class ParentsChristmasRemnantsCharacter extends SparrowCharacter
     super.onNoteHit(event);
   }
 }
+

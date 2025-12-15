@@ -1,45 +1,45 @@
 {
- "version": "2.2.4",
- "songName": "High (Remnants Mix)",
- "artist": "TRAF (ft. Loopy & LunarzNova)",
- "charter": "Plush",
- "divisions": 96,
- "looped": false,
- "offsets": {
-  "instrumental": 0,
-  "altInstrumentals": {  },
-  "vocals": {  },
-  "altVocals": {  }
- },
- "playData": {
-  "songVariations": [],
-  "difficulties": ["easy", "normal", "hard"],
-  "characters": {
-   "player": "bf-remnants-car",
-   "girlfriend": "gf-remnants-car",
-   "opponent": "mom-remnants-car",
-   "instrumental": "remnants",
-   "altInstrumentals": [],
-   "opponentVocals": ["mom-remnants-car"],
-   "playerVocals": ["bf-remnants-car"]
+  "version": "2.2.4",
+  "songName": "High (Remnants Mix)",
+  "artist": "TRAF (ft. Loopy & LunarzNova)",
+  "charter": "Plush",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
   },
-  "stage": "limoRideRemnants",
-  "noteStyle": "funkin",
-  "ratings": { "easy": 5, "noraml": 6, "hard": 7 },
-  "album": "remnants-week4",
-  "previewStart": 0,
-  "previewEnd": 15000
- },
- "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
- "timeFormat": "ms",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 132,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf-remnants-car",
+      "girlfriend": "gf-remnants-car",
+      "opponent": "mom-remnants-car",
+      "instrumental": "remnants",
+      "altInstrumentals": [],
+      "opponentVocals": ["mom-remnants-car"],
+      "playerVocals": ["bf-remnants-car"]
+    },
+    "stage": "limoRideRemnants",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 5, "noraml": 6, "hard": 7 },
+    "album": "remnants-week4",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 132,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
 }
