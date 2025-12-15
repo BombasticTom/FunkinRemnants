@@ -39,6 +39,30 @@
       "offsets": [84, -11]
     },
     {
+      "name": "singRIGHT-perfect",
+      "prefix": "PICO RIGHT PERFECT0",
+      "assetPath": "characters/PicoPerfect",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singDOWN-perfect",
+      "prefix": "PICO DOWN PERFECT0",
+      "assetPath": "characters/PicoPerfect",
+      "offsets": [57, -8]
+    },
+    {
+      "name": "singUP-perfect",
+      "prefix": "PICO UP PERFECT0",
+      "assetPath": "characters/PicoPerfect",
+      "offsets": [16, 28]
+    },
+    {
+      "name": "singLEFT-perfect",
+      "prefix": "PICO LEFT PERFECT0",
+      "assetPath": "characters/PicoPerfect",
+      "offsets": [105, 0]
+    },
+    {
       "name": "singRIGHT-censor",
       "prefix": "pico swear right",
       "assetPath": "characters/Pico_Censored",

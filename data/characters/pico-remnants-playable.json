@@ -69,6 +69,30 @@
       "name": "singLEFT"
     },
     {
+      "name": "singRIGHT-perfect",
+      "prefix": "PICO RIGHT PERFECT0",
+      "assetPath": "characters/pico-remnants_Perfect",
+      "offsets": [20, -10]
+    },
+    {
+      "name": "singDOWN-perfect",
+      "prefix": "PICO DOWN PERFECT0",
+      "assetPath": "characters/pico-remnants_Perfect",
+      "offsets": [82, -19]
+    },
+    {
+      "name": "singUP-perfect",
+      "prefix": "PICO UP PERFECT0",
+      "assetPath": "characters/pico-remnants_Perfect",
+      "offsets": [42, 56]
+    },
+    {
+      "name": "singLEFT-perfect",
+      "prefix": "PICO LEFT PERFECT0",
+      "assetPath": "characters/pico-remnants_Perfect",
+      "offsets": [153, -5]
+    },
+    {
       "flipY": false,
       "offsets": [-58, 1],
       "frameRate": 24,
