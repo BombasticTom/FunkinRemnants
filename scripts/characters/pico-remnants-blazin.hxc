@@ -302,7 +302,7 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
     cantUppercut = false;
     playIdleAnim();
 
-    GameOverSubState.musicSuffix = '-pico';
+    GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico-gutpunch-remnants';
 
     PauseSubState.musicSuffix = '-pico';
