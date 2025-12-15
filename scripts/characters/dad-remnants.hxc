@@ -41,10 +41,10 @@ class DadRemnantsCharacter extends SparrowCharacter
   {
     if (event.eventCanceled) return;
 
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-attack") {
+    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-attack")
+    {
       holdTimer = 0;
-      if (FlxG.random.bool(50))
-        this.playHitAnim();
+      if (FlxG.random.bool(50)) this.playHitAnim();
       else
         this.playBlockAnim();
 
@@ -58,6 +58,7 @@ class DadRemnantsCharacter extends SparrowCharacter
         case "dad-prepare":
           holdTimer = 0;
           playPreKickAnim();
+          return;
 
         case "dad-attack":
           holdTimer = 0;
@@ -71,21 +72,20 @@ class DadRemnantsCharacter extends SparrowCharacter
           // then do the tween to move it.
           FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: 450}, 0.5, {ease: FlxEase.quintOut});
 
-          if (returnTimer != null)
-            returnTimer.cancel();
+          if (returnTimer != null) returnTimer.cancel();
 
           returnTimer = new FlxTimer().start(1, _ -> {
             // cancel any tween of this object.
             FlxTween.cancelTweensOf(PlayState.instance.currentStage.getDad());
 
             // then do the tween to move it.
-            FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: defaultX}, 0.5, {ease: FlxEase.quintIn});         
+            FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: defaultX}, 0.5, {ease: FlxEase.quintIn});
           });
-
-        default:
-          super.onNoteHit(event);
+          return;
       }
     }
+
+    super.onNoteHit(event);
   }
 
   function onNoteIncoming(event:NoteScriptEvent)

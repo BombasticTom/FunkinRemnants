@@ -68,11 +68,12 @@ class PlaytimeRemnantsSong extends Song
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.54, {ease: FlxEase.linear});
 
       case 192:
-	FlxG.camera.fade(0xFF000000, 0.54, false);
+        FlxG.camera.fade(0xFF000000, 0.54, false);
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.54, {ease: FlxEase.linear});
 
       case 193:
-	PlayState.instance.camGame.visible = false;
+        PlayState.instance.camGame.visible = false;
     }
   }
 }
+

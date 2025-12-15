@@ -60,7 +60,6 @@ class RemnantsErectSong extends Song
     PlayState.instance.camHUD.alpha = 0;
   }
 
-
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
@@ -78,8 +77,9 @@ class RemnantsErectSong extends Song
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.linear});
 
       case 284:
-	PlayState.instance.camGame.alpha = 0;
-	PlayState.instance.camHUD.alpha = 0;
+        PlayState.instance.camGame.alpha = 0;
+        PlayState.instance.camHUD.alpha = 0;
     }
   }
 }
+

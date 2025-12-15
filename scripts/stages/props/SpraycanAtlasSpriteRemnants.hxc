@@ -14,14 +14,15 @@ class SpraycanAtlasSpriteRemnants extends FlxAtlasSprite
 
   public function new(x:Float, y:Float)
   {
-    super(x, y, Paths.animateAtlas("remnants/mechanics/spraycanAtlas", "weekend1"), {
-      FrameRate: 24.0,
-      Reversed: false,
-      // ?OnComplete:Void -> Void,
-      ShowPivot: false,
-      Antialiasing: true,
-      ScrollFactor: new FlxPoint(1, 1),
-    });
+    super(x, y, Paths.animateAtlas("remnants/mechanics/spraycanAtlas", "weekend1"),
+      {
+        FrameRate: 24.0,
+        Reversed: false,
+        // ?OnComplete:Void -> Void,
+        ShowPivot: false,
+        Antialiasing: true,
+        ScrollFactor: new FlxPoint(1, 1),
+      });
 
     onAnimationComplete.add(finishCanAnimation);
   }

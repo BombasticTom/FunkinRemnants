@@ -73,3 +73,4 @@ class BlammedRemnantsMixSong extends Song
     }
   }
 }
+

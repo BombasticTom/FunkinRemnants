@@ -6,7 +6,7 @@
       "alpha": 1,
       "angle": 0,
       "animType": "sparrow",
-      "animations": [      ],
+      "animations": [],
       "assetPath": "stages/huggyRemnants/floor",
       "blend": "",
       "color": "#FFFFFF",
@@ -15,15 +15,9 @@
       "flipY": false,
       "isPixel": false,
       "name": "Floor",
-      "position": [
-        -2219,
-        -1577
-      ],
+      "position": [-2219, -1577],
       "scale": 3,
-      "scroll": [
-        1,
-        1
-      ],
+      "scroll": [1, 1],
       "startingAnimation": "",
       "zIndex": 0
     },
@@ -31,7 +25,7 @@
       "alpha": 1,
       "angle": 0,
       "animType": "sparrow",
-      "animations": [      ],
+      "animations": [],
       "assetPath": "stages/huggyRemnants/sun",
       "blend": "add",
       "color": "#FFFFFF",
@@ -40,15 +34,9 @@
       "flipY": false,
       "isPixel": false,
       "name": "Sun",
-      "position": [
-        -1654,
-        -1249
-      ],
+      "position": [-1654, -1249],
       "scale": 2,
-      "scroll": [
-        0.9,
-        0.9
-      ],
+      "scroll": [0.9, 0.9],
       "startingAnimation": "",
       "zIndex": 5
     },
@@ -56,7 +44,7 @@
       "alpha": 0.15,
       "angle": 0,
       "animType": "sparrow",
-      "animations": [      ],
+      "animations": [],
       "assetPath": "stages/huggyRemnants/clouds",
       "blend": "",
       "color": "#FFFFFF",
@@ -65,15 +53,9 @@
       "flipY": false,
       "isPixel": false,
       "name": "Clouds",
-      "position": [
-        -2216,
-        -1509
-      ],
+      "position": [-2216, -1509],
       "scale": 3,
-      "scroll": [
-        0.95,
-        0.95
-      ],
+      "scroll": [0.95, 0.95],
       "startingAnimation": "",
       "zIndex": 6
     },
@@ -81,7 +63,7 @@
       "alpha": 0.35,
       "angle": 0,
       "animType": "sparrow",
-      "animations": [      ],
+      "animations": [],
       "assetPath": "stages/huggyRemnants/rainbow",
       "blend": "add",
       "color": "#FFFFFF",
@@ -90,15 +72,9 @@
       "flipY": false,
       "isPixel": false,
       "name": "Rainbow",
-      "position": [
-        -1504,
-        -1249
-      ],
+      "position": [-1504, -1249],
       "scale": 2,
-      "scroll": [
-        0.9,
-        0.9
-      ],
+      "scroll": [0.9, 0.9],
       "startingAnimation": "",
       "zIndex": 7
     },
@@ -106,7 +82,7 @@
       "alpha": 1,
       "angle": 0,
       "animType": "sparrow",
-      "animations": [      ],
+      "animations": [],
       "assetPath": "stages/huggyRemnants/buildings",
       "blend": "",
       "color": "#FFFFFF",
@@ -115,15 +91,9 @@
       "flipY": false,
       "isPixel": false,
       "name": "Buildings",
-      "position": [
-        -2216,
-        -1509
-      ],
+      "position": [-2216, -1509],
       "scale": 3,
-      "scroll": [
-        1,
-        1
-      ],
+      "scroll": [1, 1],
       "startingAnimation": "",
       "zIndex": 10
     },
@@ -131,7 +101,7 @@
       "alpha": 1,
       "angle": 0,
       "animType": "sparrow",
-      "animations": [      ],
+      "animations": [],
       "assetPath": "stages/huggyRemnants/lampPosts",
       "blend": "",
       "color": "#FFFFFF",
@@ -140,15 +110,9 @@
       "flipY": false,
       "isPixel": false,
       "name": "LampPosts",
-      "position": [
-        -2161,
-        -1584
-      ],
+      "position": [-2161, -1584],
       "scale": 3,
-      "scroll": [
-        1,
-        1
-      ],
+      "scroll": [1, 1],
       "startingAnimation": "",
       "zIndex": 900
     },
@@ -156,7 +120,7 @@
       "alpha": 1,
       "angle": 0,
       "animType": "sparrow",
-      "animations": [      ],
+      "animations": [],
       "assetPath": "stages/huggyRemnants/car",
       "blend": "",
       "color": "#FFFFFF",
@@ -165,15 +129,9 @@
       "flipY": false,
       "isPixel": false,
       "name": "Car",
-      "position": [
-        -2547,
-        -1579
-      ],
+      "position": [-2547, -1579],
       "scale": 3,
-      "scroll": [
-        0.95,
-        0.95
-      ],
+      "scroll": [0.95, 0.95],
       "startingAnimation": "",
       "zIndex": 1000
     },
@@ -181,7 +139,7 @@
       "alpha": 0.2,
       "angle": 0,
       "animType": "sparrow",
-      "animations": [      ],
+      "animations": [],
       "assetPath": "stages/huggyRemnants/overlay",
       "blend": "",
       "color": "#FFFFFF",
@@ -190,15 +148,9 @@
       "flipY": false,
       "isPixel": false,
       "name": "Overlay",
-      "position": [
-        -2216,
-        -1509
-      ],
+      "position": [-2216, -1509],
       "scale": 3,
-      "scroll": [
-        0.95,
-        0.95
-      ],
+      "scroll": [0.95, 0.95],
       "startingAnimation": "",
       "zIndex": 1200
     }
@@ -207,55 +159,28 @@
     "bf": {
       "alpha": 1,
       "angle": 0,
-      "cameraOffsets": [
-        -500,
-        -250
-      ],
-      "position": [
-        1495.5,
-        817
-      ],
+      "cameraOffsets": [-500, -250],
+      "position": [1495.5, 817],
       "scale": 1,
-      "scroll": [
-        1,
-        1
-      ],
+      "scroll": [1, 1],
       "zIndex": 300
     },
     "dad": {
       "alpha": 1,
       "angle": 0,
-      "cameraOffsets": [
-        500,
-        -100
-      ],
-      "position": [
-        -166,
-        843
-      ],
+      "cameraOffsets": [500, -100],
+      "position": [-166, 843],
       "scale": 1,
-      "scroll": [
-        1,
-        1
-      ],
+      "scroll": [1, 1],
       "zIndex": 200
     },
     "gf": {
       "alpha": 1,
       "angle": 0,
-      "cameraOffsets": [
-        0,
-        0
-      ],
-      "position": [
-        660.5,
-        538
-      ],
+      "cameraOffsets": [0, 0],
+      "position": [660.5, 538],
       "scale": 1,
-      "scroll": [
-        1,
-        1
-      ],
+      "scroll": [1, 1],
       "zIndex": 100
     }
   },

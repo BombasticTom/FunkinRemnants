@@ -71,3 +71,4 @@ class GlitcherRemnantsSong extends Song
     }
   }
 }
+

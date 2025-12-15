@@ -33,51 +33,52 @@ import openfl.display.BitmapData;
 
 class PlaytimeRmenantsStage extends Stage
 {
-	var colorShaderBf:AdjustColorShader;
-    var colorShaderDad:AdjustColorShader;
-    var colorShaderGf:AdjustColorShader;
-	var rainShader:RuntimeRainShader = new RuntimeRainShader();
-	var rainShaderFilter:ShaderFilter;
-    var rainDropTimer:Float = 500;
-	var rainDropWait:Float = 900;
-	var blurFilter:BlurFilter = new BlurFilter(300, 300);
+  var colorShaderBf:AdjustColorShader;
+  var colorShaderDad:AdjustColorShader;
+  var colorShaderGf:AdjustColorShader;
+  var rainShader:RuntimeRainShader = new RuntimeRainShader();
+  var rainShaderFilter:ShaderFilter;
+  var rainDropTimer:Float = 500;
+  var rainDropWait:Float = 900;
+  var blurFilter:BlurFilter = new BlurFilter(300, 300);
 
-	// As the song goes on, this is used to make the rain more intense throughout the song
-	var rainShaderStartIntensity:Float;
-	var rainShaderEndIntensity:Float;
+  // As the song goes on, this is used to make the rain more intense throughout the song
+  var rainShaderStartIntensity:Float;
+  var rainShaderEndIntensity:Float;
 
-   	function new()
-	{
-		super('playtimeRemnants'); // Change name to match internal stage ID
-	}
-    override function onCreate(event:ScriptEvent):Void
-	{
-		super.onCreate(event);
+  function new()
+  {
+    super('playtimeRemnants'); // Change name to match internal stage ID
+  }
 
-		var bmp = BitmapData.fromFile("mods/Funkin' Remnants/week5/images/remnants/ZaraBopper.png");
+  override function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
 
-		zara = new FunkinSprite(-400, 2500);
-		zara.loadGraphic(bmp);
-		zara.cameras = [PlayState.instance.camGame];
-		PlayState.instance.add(zara);
+    var bmp = BitmapData.fromFile("mods/Funkin' Remnants/week5/images/remnants/ZaraBopper.png");
 
-		rainShader.scale = FlxG.height / 300; // Increase rain scale
+    zara = new FunkinSprite(-400, 2500);
+    zara.loadGraphic(bmp);
+    zara.cameras = [PlayState.instance.camGame];
+    PlayState.instance.add(zara);
 
-        FlxG.console.registerObject("rainShader", rainShader); // Don't change name of this unless you have a custom rain shader in modName/shaders
-		switch (PlayState.instance.currentSong.id)
-        {
-			case "playtime-remnants": // Change to the song ID you want the shader to be used on
-			// You can copy this and put another one right under it, used for Weekend 1.
-				rainShaderStartIntensity = 0;
-				rainShaderEndIntensity = 0.1;
-		}
-        rainShader.intensity = rainShaderStartIntensity;
-        rainShaderFilter = new ShaderFilter(rainShader);
-		FlxG.camera.filters = [rainShaderFilter];
-		
-		super.buildStage();
+    rainShader.scale = FlxG.height / 300; // Increase rain scale
 
-	colorShaderBf = new AdjustColorShader();
+    FlxG.console.registerObject("rainShader", rainShader); // Don't change name of this unless you have a custom rain shader in modName/shaders
+    switch (PlayState.instance.currentSong.id)
+    {
+      case "playtime-remnants": // Change to the song ID you want the shader to be used on
+        // You can copy this and put another one right under it, used for Weekend 1.
+        rainShaderStartIntensity = 0;
+        rainShaderEndIntensity = 0.1;
+    }
+    rainShader.intensity = rainShaderStartIntensity;
+    rainShaderFilter = new ShaderFilter(rainShader);
+    FlxG.camera.filters = [rainShaderFilter];
+
+    super.buildStage();
+
+    colorShaderBf = new AdjustColorShader();
     colorShaderDad = new AdjustColorShader();
     colorShaderGf = new AdjustColorShader();
 
@@ -95,16 +96,18 @@ class PlaytimeRmenantsStage extends Stage
     colorShaderDad.hue = 20;
     colorShaderDad.contrast = 5;
     colorShaderDad.saturation = 5;
-	}
-    override function onUpdate(event:UpdateScriptEvent)
-	{
-		super.onUpdate(event);
+  }
 
-		var remappedIntensityValue:Float = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music != null ? FlxG.sound.music.length : 0.0, rainShaderStartIntensity, rainShaderEndIntensity);
-		rainShader.intensity = remappedIntensityValue;
-		rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
-		rainShader.update(event.elapsed);
-	}
+  override function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    var remappedIntensityValue:Float = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music != null ? FlxG.sound.music.length : 0.0,
+      rainShaderStartIntensity, rainShaderEndIntensity);
+    rainShader.intensity = remappedIntensityValue;
+    rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
+    rainShader.update(event.elapsed);
+  }
 
   /**
    * Apply the shader to the character as it is added.
@@ -132,16 +135,17 @@ class PlaytimeRmenantsStage extends Stage
     switch (event.beat)
     {
       case 96:
-	if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.6}, 4.36, {ease: FlxEase.sineInOut});
+        if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.6}, 4.36, {ease: FlxEase.sineInOut});
 
       case 128:
-	if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.2}, 4.36, {ease: FlxEase.sineInOut});
+        if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.2}, 4.36, {ease: FlxEase.sineInOut});
 
       case 160:
-	if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.4}, 3.27, {ease: FlxEase.cubeOut});
+        if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.4}, 3.27, {ease: FlxEase.cubeOut});
 
       case 192:
-	if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 1}, 0.54, {ease: FlxEase.linear});
+        if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 1}, 0.54, {ease: FlxEase.linear});
     }
   }
 }
+

@@ -4,49 +4,49 @@ import Math;
 
 class GoodRemnantsModule extends Module
 {
-	public function new()
-	{
-		super('goodRemnants');
-	}
+  public function new()
+  {
+    super('goodRemnants');
+  }
 
-	public function onUpdate(event:UpdateScriptEvent)
-	{
-		if(FlxG.keys.justPressed.F10)
-		{
-			resetSpriteThing(FlxG.state);
-		}
-	}
+  public function onUpdate(event:UpdateScriptEvent)
+  {
+    if (FlxG.keys.justPressed.F10)
+    {
+      resetSpriteThing(FlxG.state);
+    }
+  }
 
-	public function resetSpriteThing(spr:Dynamic):Void
-	{
-		var lookThrough:Array<Dynamic> = [spr];
+  public function resetSpriteThing(spr:Dynamic):Void
+  {
+    var lookThrough:Array<Dynamic> = [spr];
 
-		while(lookThrough.length > 0)
-		{
-			var thing:Dynamic = lookThrough.shift();
+    while (lookThrough.length > 0)
+    {
+      var thing:Dynamic = lookThrough.shift();
 
-			if(thing == null)
-				continue;
+      if (thing == null) continue;
 
-			try
-			{
-				if(thing.members != null)
-				{
-					for(i in thing.members) lookThrough.push(i);
-				}
+      try
+      {
+        if (thing.members != null)
+        {
+          for (i in thing.members)
+            lookThrough.push(i);
+        }
 
-				if(thing.subState != null && thing.subState.members != null)
-				{
-					for(i in thing.subState.members) lookThrough.push(i);
-				}
-			}
-			catch(e:Exception) {}
+        if (thing.subState != null && thing.subState.members != null)
+        {
+          for (i in thing.subState.members)
+            lookThrough.push(i);
+        }
+      }
+      catch (e:Exception) {}
 
-			if (thing.scale != null)
-				thing.scale.set(FlxG.random.float(0, 2), FlxG.random.float(0, 2));
+      if (thing.scale != null) thing.scale.set(FlxG.random.float(0, 2), FlxG.random.float(0, 2));
 
-			if (thing.angle != null)
-				thing.angle = FlxG.random.float(0, 360);
-		}
-	}
+      if (thing.angle != null) thing.angle = FlxG.random.float(0, 360);
+    }
+  }
 }
+
