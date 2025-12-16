@@ -122,6 +122,18 @@
     },
     {
       "danceEvery": 0,
+      "zIndex": 70,
+      "position": [-250, 250],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "door",
+      "isPixel": false,
+      "assetPath": "remnants/door",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
       "zIndex": 350,
       "position": [25, 825],
       "scale": [1, 1],
@@ -131,6 +143,29 @@
       "assetPath": "remnants/hatch",
       "scroll": [1, 1],
       "animations": []
+    },
+    {
+      "zIndex": 70,
+      "danceEvery": 0,
+      "position": [1250, 450],
+      "scale": [1, 1],
+      "name": "fan",
+      "animType": "sparrow",
+      "isPixel": false,
+      "startingAnimation": "Spin",
+      "scroll": [1, 1],
+      "assetPath": "remnants/phillyfan",
+      "animations": [
+        {
+          "offsets": [0, 0],
+          "flipY": false,
+          "frameRate": 24,
+          "prefix": "phillyfan spin",
+          "name": "Spin",
+          "looped": true,
+          "flipX": false
+        }
+      ]
     }
   ],
   "cameraZoom": 1.1,
@@ -138,7 +173,7 @@
   "characters": {
     "bf": {
       "zIndex": 300,
-      "position": [1020.5, 885],
+      "position": [1070.5, 885],
       "cameraOffsets": [-200, -100]
     },
     "dad": {
@@ -149,7 +184,7 @@
     "gf": {
       "zIndex": 100,
       "cameraOffsets": [0, 0],
-      "position": [751.5, 787]
+      "position": [801.5, 787]
     }
   },
   "name": "Philly (Train) [Remnants]",
