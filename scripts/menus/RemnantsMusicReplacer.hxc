@@ -44,6 +44,18 @@ class RemnantsMusicReplacer extends Module
 
       return false;
     });
+
+    addReplacement('girlfriendsRingtone', 'tutorialTitle', () -> {
+      var characters:Array<String> = PlayerRegistry.instance.listNewCharacters();
+      characters.push(FreeplayState.rememberedCharacterId);
+
+      for (charId in characters)
+      {
+        if (charId != null && StringTools.contains(charId, 'remnants')) return true;
+      }
+
+      return false;
+    });
   }
 
   /**
