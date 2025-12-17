@@ -25,8 +25,8 @@
       "box": "remnants-thorns",
       "boxAnimation": "enter",
 
-      "text": ["You know what I am"],
-      "speed": 1.0
+      "text": ["*crys* why..."],
+      "speed": 0.25
     },
     {
       "speaker": "bf-pixel-remnants",
@@ -34,7 +34,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": [""]
+      "text": ["Dude this is like FNF Corruption."]
     },
     {
       "speaker": "spirit-remnants",
@@ -50,7 +50,7 @@
       "box": "remnants-thorns",
       "boxAnimation": "idle",
 
-      "text": ["skull emoji"]
+      "text": ["Yeah we're not even trying with this dialogue LOL"]
     }
   ]
 }
