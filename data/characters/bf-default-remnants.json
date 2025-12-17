@@ -99,6 +99,12 @@
       "offsets": [-3, 5]
     },
     {
+      "name": "boyfriend",
+      "prefix": "BOYFRIEND",
+      "assetPath": "characters/boyfriendfridaynightfunkin",
+      "offsets": [27, 58]
+    },
+    {
       "name": "shrug",
       "prefix": "BF shrug",
       "assetPath": "characters/BFShrug",

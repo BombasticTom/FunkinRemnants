@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="boyfriendfridaynightfunkin.png" width="409" height="416">
+<SubTexture name="BOYFRIEND0000" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0001" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0002" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0003" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0004" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0005" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0006" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0007" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0008" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+<SubTexture name="BOYFRIEND0009" x="1" y="1" width="407" height="414" frameX="-34" frameY="-56" frameWidth="476" frameHeight="503"/>
+</TextureAtlas>
