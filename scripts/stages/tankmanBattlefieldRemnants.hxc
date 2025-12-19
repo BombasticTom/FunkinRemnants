@@ -21,6 +21,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     super.onCreate(event);
   }
 
+  var mist1:FlxBackdrop;
   var clouds:FlxTiledSprite;
   var tankParachute1:FlxBackdrop;
   var tankParachute2:FlxBackdrop;
@@ -31,6 +32,66 @@ class TankmanBattlefieldRemnantsStage extends Stage
   override function buildStage()
   {
     super.buildStage();
+
+    mist0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist0.setPosition(-650, -850);
+    mist0.scrollFactor.set(1.1, 1.1);
+    mist0.zIndex = 5001;
+    mist0.blend = 0;
+    mist0.color = 0xFFad9e76;
+    mist0.alpha = 0.8;
+    mist0.velocity.x = -1700;
+    mist0.scale.set(3, 3);
+
+    mist1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist1.setPosition(-650, -100);
+    mist1.scrollFactor.set(1.1, 1.1);
+    mist1.zIndex = 5001;
+    mist1.blend = 0;
+    mist1.color = 0xFFad9e76;
+    mist1.alpha = 0.4;
+    mist1.velocity.x = 1900;
+    mist1.scale.set(1.4, 1.4);
+
+    mist2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
+    mist2.setPosition(-650, 100);
+    mist2.scrollFactor.set(1.2, 1.2);
+    mist2.zIndex = 5000;
+    mist2.blend = 0;
+    mist2.color = 0xFF614621;
+    mist2.alpha = 1;
+    mist2.velocity.x = -2100;
+    mist2.scale.set(1.2, 1.2);
+
+    mist3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist3.setPosition(-650, -500);
+    mist3.scrollFactor.set(0.8, 0.8);
+    mist3.zIndex = 39;
+    mist3.blend = 0;
+    mist3.color = 0xFF614621;
+    mist3.alpha = 0.5;
+    mist3.velocity.x = 900;
+    mist3.scale.set(1.5, 1.5);
+
+    mist4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
+    mist4.setPosition(-650, -580);
+    mist4.scrollFactor.set(0.6, 0.6);
+    mist4.zIndex = 39;
+    mist4.blend = 0;
+    mist4.color = 0xFF614621;
+    mist4.alpha = 0.5;
+    mist4.velocity.x = 700;
+    mist4.scale.set(1.5, 1.5);
+
+    mist5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist5.setPosition(-650, -500);
+    mist5.scrollFactor.set(0.2, 0.2);
+    mist5.zIndex = 39;
+    mist5.blend = 0;
+    mist5.color = 0xFF614621;
+    mist5.alpha = 0.5;
+    mist5.velocity.x = 100;
+    mist5.scale.set(1.5, 1.5);
 
     tankParachute1 = new FlxBackdrop(Paths.image('remnants/tankmanFall1'), 0x10, 0, 5000);
     tankParachute1.scrollFactor.set(0.40, 0.35);
@@ -75,6 +136,13 @@ class TankmanBattlefieldRemnantsStage extends Stage
     boxParachute2.zIndex = 39;
 
     FlxTween.tween(boxParachute2, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
+
+    PlayState.instance.currentStage.add(mist0);
+    PlayState.instance.currentStage.add(mist1);
+    PlayState.instance.currentStage.add(mist2);
+    PlayState.instance.currentStage.add(mist3);
+    PlayState.instance.currentStage.add(mist4);
+    PlayState.instance.currentStage.add(mist5);
 
     PlayState.instance.currentStage.add(tankParachute1);
     PlayState.instance.currentStage.add(tankParachute2);
