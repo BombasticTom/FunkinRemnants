@@ -32,7 +32,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico';
 
-    PauseSubState.musicSuffix = '-remnants';
+    PauseSubState.musicSuffix = '-remnants-pico';
   }
 
   var deathSpriteRetry:FunkinSprite;
@@ -297,7 +297,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico';
 
-    PauseSubState.musicSuffix = '-pico';
+    PauseSubState.musicSuffix = '-remnants-pico';
 
     picoDeathExplosion = null;
     this.visible = true;

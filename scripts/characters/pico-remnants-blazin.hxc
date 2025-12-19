@@ -27,7 +27,7 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
     GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico-gutpunch-remnants';
 
-    PauseSubState.musicSuffix = '-pico';
+    PauseSubState.musicSuffix = '-remnants-pico';
 
     // Precache the death anim.
     FunkinMemory.cacheTexture(Paths.image('characters/picoBlazinDeathConfirm-remnants', 'shared'));
@@ -305,7 +305,7 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
     GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico-gutpunch-remnants';
 
-    PauseSubState.musicSuffix = '-pico';
+    PauseSubState.musicSuffix = '-remnants-pico';
   }
 
   function getDarnell()
