@@ -8,6 +8,19 @@ import flixel.group.FlxTypedSpriteGroup;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.ui.FullScreenScaleMode;
+import funkin.play.stage.Stage;
+import funkin.util.HapticUtil;
+import funkin.play.PlayState;
+import flixel.util.FlxTimer;
+import funkin.util.FlxTweenUtil;
+import funkin.util.Constants;
+import funkin.play.character.BaseCharacter;
+import funkin.data.character.CharacterDataParser;
+import funkin.play.character.CharacterType;
+
 
 class TankmanBattlefieldRemnantsStage extends Stage
 {
@@ -16,12 +29,23 @@ class TankmanBattlefieldRemnantsStage extends Stage
     super('tankmanBattlefieldRemnants');
   }
 
+  var lightningStrikeBeat:Int = 0;
+  var lightningStrikeOffset:Int = 8;
+  var halloweenWhite:FunkinSprite;
+
+  var wentDark:Bool = false;
+  var stopThunders:Bool = false;
+
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
-  }
 
-  var mist1:FlxBackdrop;
+  var storm0:FlxBackdrop;
+  var storm1:FlxBackdrop;
+  var storm2:FlxBackdrop;
+  var storm3:FlxBackdrop;
+  var storm4:FlxBackdrop;
+  var storm5:FlxBackdrop;
   var clouds:FlxTiledSprite;
   var tankParachute1:FlxBackdrop;
   var tankParachute2:FlxBackdrop;
@@ -29,69 +53,77 @@ class TankmanBattlefieldRemnantsStage extends Stage
   var boxParachute1:FlxBackdrop;
   var boxParachute2:FlxBackdrop;
 
+  halloweenWhite = new FunkinSprite(-20, -20);
+    halloweenWhite.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
+    halloweenWhite.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(halloweenWhite);
+    halloweenWhite.alpha = 0.0001;
+    halloweenWhite.blend = 0;
+  }
+
   override function buildStage()
   {
     super.buildStage();
 
-    mist0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    mist0.setPosition(-650, -850);
-    mist0.scrollFactor.set(1.1, 1.1);
-    mist0.zIndex = 5001;
-    mist0.blend = 0;
-    mist0.color = 0xFFad9e76;
-    mist0.alpha = 0.8;
-    mist0.velocity.x = -1700;
-    mist0.scale.set(3, 3);
+    storm0 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm0.setPosition(-650, -850);
+    storm0.scrollFactor.set(1.1, 1.1);
+    storm0.zIndex = 5001;
+    storm0.blend = 0;
+    storm0.color = 0xFFad9e76;
+    storm0.alpha = 1;
+    storm0.velocity.x = -4000;
+    storm0.scale.set(3, 3);
 
-    mist1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    mist1.setPosition(-650, -100);
-    mist1.scrollFactor.set(1.1, 1.1);
-    mist1.zIndex = 5001;
-    mist1.blend = 0;
-    mist1.color = 0xFFad9e76;
-    mist1.alpha = 0.4;
-    mist1.velocity.x = 1900;
-    mist1.scale.set(1.4, 1.4);
+    storm1 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm1.setPosition(-650, -100);
+    storm1.scrollFactor.set(1.1, 1.1);
+    storm1.zIndex = 5001;
+    storm1.blend = 0;
+    storm1.color = 0xFFad9e76;
+    storm1.alpha = 0.9;
+    storm1.velocity.x = 2700;
+    storm1.scale.set(1.4, 1.4);
 
-    mist2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
-    mist2.setPosition(-650, 100);
-    mist2.scrollFactor.set(1.2, 1.2);
-    mist2.zIndex = 5000;
-    mist2.blend = 0;
-    mist2.color = 0xFF614621;
-    mist2.alpha = 1;
-    mist2.velocity.x = -2100;
-    mist2.scale.set(1.2, 1.2);
+    storm2 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
+    storm2.setPosition(-650, 100);
+    storm2.scrollFactor.set(1.2, 1.2);
+    storm2.zIndex = 5000;
+    storm2.blend = 0;
+    storm2.color = 0xFF614621;
+    storm2.alpha = 1;
+    storm2.velocity.x = -2100;
+    storm2.scale.set(1.2, 1.2);
 
-    mist3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    mist3.setPosition(-650, -500);
-    mist3.scrollFactor.set(0.8, 0.8);
-    mist3.zIndex = 39;
-    mist3.blend = 0;
-    mist3.color = 0xFF614621;
-    mist3.alpha = 0.5;
-    mist3.velocity.x = 900;
-    mist3.scale.set(1.5, 1.5);
+    storm3 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm3.setPosition(-650, -500);
+    storm3.scrollFactor.set(0.8, 0.8);
+    storm3.zIndex = 39;
+    storm3.blend = 0;
+    storm3.color = 0xFF614621;
+    storm3.alpha = 0.5;
+    storm3.velocity.x = 900;
+    storm3.scale.set(1.5, 1.5);
 
-    mist4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
-    mist4.setPosition(-650, -580);
-    mist4.scrollFactor.set(0.6, 0.6);
-    mist4.zIndex = 39;
-    mist4.blend = 0;
-    mist4.color = 0xFF614621;
-    mist4.alpha = 0.5;
-    mist4.velocity.x = 700;
-    mist4.scale.set(1.5, 1.5);
+    storm4 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
+    storm4.setPosition(-650, -580);
+    storm4.scrollFactor.set(0.6, 0.6);
+    storm4.zIndex = 39;
+    storm4.blend = 0;
+    storm4.color = 0xFF614621;
+    storm4.alpha = 0.5;
+    storm4.velocity.x = 01300;
+    storm4.scale.set(1.5, 1.5);
 
-    mist5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    mist5.setPosition(-650, -500);
-    mist5.scrollFactor.set(0.2, 0.2);
-    mist5.zIndex = 39;
-    mist5.blend = 0;
-    mist5.color = 0xFF614621;
-    mist5.alpha = 0.5;
-    mist5.velocity.x = 100;
-    mist5.scale.set(1.5, 1.5);
+    storm5 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm5.setPosition(-650, -500);
+    storm5.scrollFactor.set(0.2, 0.2);
+    storm5.zIndex = 39;
+    storm5.blend = 0;
+    storm5.color = 0xFF614621;
+    storm5.alpha = 0.5;
+    storm5.velocity.x = 1200;
+    storm5.scale.set(1.5, 1.5);
 
     tankParachute1 = new FlxBackdrop(Paths.image('remnants/tankmanFall1'), 0x10, 0, 5000);
     tankParachute1.scrollFactor.set(0.40, 0.35);
@@ -137,12 +169,12 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
     FlxTween.tween(boxParachute2, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
 
-    PlayState.instance.currentStage.add(mist0);
-    PlayState.instance.currentStage.add(mist1);
-    PlayState.instance.currentStage.add(mist2);
-    PlayState.instance.currentStage.add(mist3);
-    PlayState.instance.currentStage.add(mist4);
-    PlayState.instance.currentStage.add(mist5);
+    PlayState.instance.currentStage.add(storm0);
+    PlayState.instance.currentStage.add(storm1);
+    PlayState.instance.currentStage.add(storm2);
+    PlayState.instance.currentStage.add(storm3);
+    PlayState.instance.currentStage.add(storm4);
+    PlayState.instance.currentStage.add(storm5);
 
     PlayState.instance.currentStage.add(tankParachute1);
     PlayState.instance.currentStage.add(tankParachute2);
@@ -164,12 +196,56 @@ class TankmanBattlefieldRemnantsStage extends Stage
     tankSpeed = FlxG.random.float(5, 7);
   }
 
+  function doLightningStrike(playSound:Bool, beat:Int):Void
+  {
+    if (!wentDark)
+    {
+      getNamedProp('stormFront')?.alpha = 1;
+      getNamedProp('stormBack')?.alpha = 1;	
+      getNamedProp('stormMid')?.alpha = 1;
+
+      new FlxTimer().start(0.06, _ -> {
+        getNamedProp('stormFront')?.alpha = 0;
+        getNamedProp('stormBack')?.alpha = 0;	
+        getNamedProp('stormMid')?.alpha = 0;
+
+      });
+
+      new FlxTimer().start(0.12, _ -> {
+        getNamedProp('stormFront')?.alpha = 1;
+        getNamedProp('stormBack')?.alpha = 1;	
+        getNamedProp('stormMid')?.alpha = 1;
+
+        if (getNamedProp('stormFront') != null) FlxTween.tween(getNamedProp('stormFront'), {alpha: 0}, 1.5);
+        if (getNamedProp('stormBack') != null) FlxTween.tween(getNamedProp('stormBack'), {alpha: 0}, 1.5);
+        if (getNamedProp('stormMid') != null) FlxTween.tween(getNamedProp('stormMid'), {alpha: 0}, 1.5);
+      });
+    }
+
+    lightningStrikeBeat = beat;
+    lightningStrikeOffset = FlxG.random.int(8, 24);
+
+  }
+
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    changeAmbiance(false, 0.0001);
+
+  var _timer:Float = 0;
+
   function onUpdate(event:UpdateScriptEvent):Void
   {
     super.onUpdate(event);
+
+    _timer += event.elapsed;
+	storm0.y = -500 + (Math.sin(_timer)*300);
+
     moveTank(event.elapsed);
   }
-
+  }
   public override function onPause(event:PauseScriptEvent)
   {
     super.onPause(event);
@@ -199,6 +275,15 @@ class TankmanBattlefieldRemnantsStage extends Stage
   var tankSpeed2:Float = FlxG.random.float(9, 12);
   var tankX:Float = 400;
 
+  function fetchAssetPaths():Array<String>
+  {
+    var results:Array<String> = super.fetchAssetPaths();
+    results.push(Paths.assets('stormFront'));
+    results.push(Paths.assets('stormBack'));
+    results.push(Paths.assets('stormMid'));
+    return results;
+  }
+
   function onBeatHit(event:SongTimeScriptEvent):Void
   {
     super.onBeatHit(event);
@@ -219,6 +304,48 @@ class TankmanBattlefieldRemnantsStage extends Stage
     tankRollingExtra.angle = tankAngle2 - 90 + 15;
     tankRollingExtra.x = tankX + Math.cos(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1500;
     tankRollingExtra.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1100;
+
+    if (PlayState.instance.currentSong != null)
+    {
+      if (PlayState.instance.currentSong.id == "ugh")
+      {
+        switch (event.beat)
+        {
+          case 36:
+            changeAmbiance(true, 0.2);
+          case 60:
+            changeAmbiance(false, 0.2);
+          case 80:
+            changeAmbiance(true, 0.2);
+          case 110:
+            changeAmbiance(false, 0.2);
+        }
+      }
+    }
+  }
+
+  function changeAmbiance(goDark:Bool, duration:Float)
+  {
+    if (duration == null) duration = 1;
+    var targetAlpha:Float = goDark ? 1 : 0;
+    wentDark = goDark;
+
+    if (getNamedProp('stormFront') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: targetAlpha}, duration);
+    if (getNamedProp('stormBack') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: targetAlpha}, duration);
+    if (getNamedProp('stormMid') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: targetAlpha}, duration);
+
+  }
+
+  var postShockCounter:Int = 0;
+  var counterTargetNum:Int = 10;
+
+  function onStepHit(event:SongTimeScriptEvent)
+    super.onStepHit(event)
+
+  function onGameOver(event:ScriptEvent)
+  {
+    super.onGameOver(event);
+    stopThunders = true;
   }
 
   function onSongRetry(event:ScriptEvent)
@@ -226,4 +353,3 @@ class TankmanBattlefieldRemnantsStage extends Stage
     super.onSongRetry(event);
   }
 }
-

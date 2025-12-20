@@ -18,20 +18,20 @@
       "name": "firstDeath",
       "prefix": "BF Dies with GF",
       "assetPath": "characters/bfHoldingGF-DEAD-remnants",
-      "offsets": [37, 14]
+      "offsets": [26, 28]
     },
     {
       "name": "deathConfirm",
       "prefix": "RETRY confirm holding gf",
       "assetPath": "characters/bfHoldingGF-DEAD-remnants",
-      "offsets": [37, 28]
+      "offsets": [24, 40]
     },
     {
       "name": "deathLoop",
       "prefix": "BF Dead with GF Loop",
       "looped": true,
       "assetPath": "characters/bfHoldingGF-DEAD-remnants",
-      "offsets": [37, -3]
+      "offsets": [26, 11]
     },
     {
       "name": "idle",
