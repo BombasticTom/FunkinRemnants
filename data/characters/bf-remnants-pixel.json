@@ -68,20 +68,20 @@
     {
       "name": "firstDeath",
       "prefix": "BF Dies pixel",
-      "assetPath": "characters/bfPixelsDEAD",
+      "assetPath": "characters/bfPixelDEAD-remnants",
       "offsets": [8.33, 0]
     },
     {
       "name": "deathLoop",
       "prefix": "Retry Loop",
-      "assetPath": "characters/bfPixelsDEAD",
+      "assetPath": "characters/bfPixelDEAD-remnants",
       "looped": true,
       "offsets": [3.33, -2.08]
     },
     {
       "name": "deathConfirm",
       "prefix": "RETRY CONFIRM",
-      "assetPath": "characters/bfPixelsDEAD",
+      "assetPath": "characters/bfPixelDEAD-remnants",
       "offsets": [3.33, -2.08]
     }
   ]
