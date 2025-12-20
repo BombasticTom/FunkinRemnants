@@ -1363,7 +1363,7 @@
       "v": {
         "duration": 32,
         "x": 0,
-        "y": 55,
+        "y": 60,
         "ease": "smoothStep",
         "char": 2,
         "easeDir": "InOut"

@@ -8,19 +8,6 @@ import flixel.group.FlxTypedSpriteGroup;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import funkin.audio.FunkinSound;
-import funkin.graphics.FunkinSprite;
-import funkin.ui.FullScreenScaleMode;
-import funkin.play.stage.Stage;
-import funkin.util.HapticUtil;
-import funkin.play.PlayState;
-import flixel.util.FlxTimer;
-import funkin.util.FlxTweenUtil;
-import funkin.util.Constants;
-import funkin.play.character.BaseCharacter;
-import funkin.data.character.CharacterDataParser;
-import funkin.play.character.CharacterType;
-
 
 class TankmanBattlefieldRemnantsStage extends Stage
 {
@@ -29,37 +16,31 @@ class TankmanBattlefieldRemnantsStage extends Stage
     super('tankmanBattlefieldRemnants');
   }
 
-  var lightningStrikeBeat:Int = 0;
-  var lightningStrikeOffset:Int = 8;
-  var halloweenWhite:FunkinSprite;
-
-  var wentDark:Bool = false;
-  var stopThunders:Bool = false;
-
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
 
-  var storm0:FlxBackdrop;
-  var storm1:FlxBackdrop;
-  var storm2:FlxBackdrop;
-  var storm3:FlxBackdrop;
-  var storm4:FlxBackdrop;
-  var storm5:FlxBackdrop;
-  var clouds:FlxTiledSprite;
-  var tankParachute1:FlxBackdrop;
-  var tankParachute2:FlxBackdrop;
-  var tankParachute3:FlxBackdrop;
-  var boxParachute1:FlxBackdrop;
-  var boxParachute2:FlxBackdrop;
+    var storm0:FlxBackdrop;
+    var storm1:FlxBackdrop;
+    var storm2:FlxBackdrop;
+    var storm3:FlxBackdrop;
+    var storm4:FlxBackdrop;
+    var storm5:FlxBackdrop;
+    var clouds:FlxTiledSprite;
+    var tankParachute1:FlxBackdrop;
+    var tankParachute2:FlxBackdrop;
+    var tankParachute3:FlxBackdrop;
+    var boxParachute1:FlxBackdrop;
+    var boxParachute2:FlxBackdrop;
 
-  halloweenWhite = new FunkinSprite(-20, -20);
-    halloweenWhite.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
-    halloweenWhite.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(halloweenWhite);
-    halloweenWhite.alpha = 0.0001;
-    halloweenWhite.blend = 0;
+  if (PlayState.instance.currentSong != null)
+  {
+    if (PlayState.instance.currentSong.id == "guns")
+    {
+      stormOn(0.0001);
+    }
   }
+}
 
   override function buildStage()
   {
@@ -71,7 +52,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     storm0.zIndex = 5001;
     storm0.blend = 0;
     storm0.color = 0xFFad9e76;
-    storm0.alpha = 1;
+    storm0.alpha = 0;
     storm0.velocity.x = -4000;
     storm0.scale.set(3, 3);
 
@@ -81,7 +62,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     storm1.zIndex = 5001;
     storm1.blend = 0;
     storm1.color = 0xFFad9e76;
-    storm1.alpha = 0.9;
+    storm1.alpha = 0;
     storm1.velocity.x = 2700;
     storm1.scale.set(1.4, 1.4);
 
@@ -91,7 +72,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     storm2.zIndex = 5000;
     storm2.blend = 0;
     storm2.color = 0xFF614621;
-    storm2.alpha = 1;
+    storm2.alpha = 0;
     storm2.velocity.x = -2100;
     storm2.scale.set(1.2, 1.2);
 
@@ -101,7 +82,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     storm3.zIndex = 39;
     storm3.blend = 0;
     storm3.color = 0xFF614621;
-    storm3.alpha = 0.5;
+    storm3.alpha = 0;
     storm3.velocity.x = 900;
     storm3.scale.set(1.5, 1.5);
 
@@ -111,7 +92,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     storm4.zIndex = 39;
     storm4.blend = 0;
     storm4.color = 0xFF614621;
-    storm4.alpha = 0.5;
+    storm4.alpha = 0;
     storm4.velocity.x = 01300;
     storm4.scale.set(1.5, 1.5);
 
@@ -121,7 +102,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     storm5.zIndex = 39;
     storm5.blend = 0;
     storm5.color = 0xFF614621;
-    storm5.alpha = 0.5;
+    storm5.alpha = 0;
     storm5.velocity.x = 1200;
     storm5.scale.set(1.5, 1.5);
 
@@ -196,45 +177,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     tankSpeed = FlxG.random.float(5, 7);
   }
 
-  function doLightningStrike(playSound:Bool, beat:Int):Void
-  {
-    if (!wentDark)
-    {
-      getNamedProp('stormFront')?.alpha = 1;
-      getNamedProp('stormBack')?.alpha = 1;	
-      getNamedProp('stormMid')?.alpha = 1;
-
-      new FlxTimer().start(0.06, _ -> {
-        getNamedProp('stormFront')?.alpha = 0;
-        getNamedProp('stormBack')?.alpha = 0;	
-        getNamedProp('stormMid')?.alpha = 0;
-
-      });
-
-      new FlxTimer().start(0.12, _ -> {
-        getNamedProp('stormFront')?.alpha = 1;
-        getNamedProp('stormBack')?.alpha = 1;	
-        getNamedProp('stormMid')?.alpha = 1;
-
-        if (getNamedProp('stormFront') != null) FlxTween.tween(getNamedProp('stormFront'), {alpha: 0}, 1.5);
-        if (getNamedProp('stormBack') != null) FlxTween.tween(getNamedProp('stormBack'), {alpha: 0}, 1.5);
-        if (getNamedProp('stormMid') != null) FlxTween.tween(getNamedProp('stormMid'), {alpha: 0}, 1.5);
-      });
-    }
-
-    lightningStrikeBeat = beat;
-    lightningStrikeOffset = FlxG.random.int(8, 24);
-
-  }
-
-
-  public override function onCountdownStart(event:CountdownScriptEvent):Void
-  {
-    super.onCountdownStart(event);
-
-    changeAmbiance(false, 0.0001);
-
-  var _timer:Float = 0;
+    var _timer:Float = 0;
 
   function onUpdate(event:UpdateScriptEvent):Void
   {
@@ -245,7 +188,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
     moveTank(event.elapsed);
   }
-  }
+
   public override function onPause(event:PauseScriptEvent)
   {
     super.onPause(event);
@@ -275,20 +218,6 @@ class TankmanBattlefieldRemnantsStage extends Stage
   var tankSpeed2:Float = FlxG.random.float(9, 12);
   var tankX:Float = 400;
 
-  function fetchAssetPaths():Array<String>
-  {
-    var results:Array<String> = super.fetchAssetPaths();
-    results.push(Paths.assets('stormFront'));
-    results.push(Paths.assets('stormBack'));
-    results.push(Paths.assets('stormMid'));
-    return results;
-  }
-
-  function onBeatHit(event:SongTimeScriptEvent):Void
-  {
-    super.onBeatHit(event);
-  }
-
   function moveTank(elapsed:Float):Void
   {
     var daAngleOffset:Float = 1;
@@ -304,52 +233,77 @@ class TankmanBattlefieldRemnantsStage extends Stage
     tankRollingExtra.angle = tankAngle2 - 90 + 15;
     tankRollingExtra.x = tankX + Math.cos(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1500;
     tankRollingExtra.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1100;
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
 
     if (PlayState.instance.currentSong != null)
     {
-      if (PlayState.instance.currentSong.id == "ugh")
+      if (event.beat == 159 && PlayState.instance.currentSong.id == "ugh")
+      {
+	stormOn(1);
+      }
+
+      if (event.beat == 224 && PlayState.instance.currentSong.id == "guns")
+      {
+	stormOff(2.6);
+      }
+
+      if (PlayState.instance.currentSong.id == "stress")
       {
         switch (event.beat)
         {
-          case 36:
-            changeAmbiance(true, 0.2);
-          case 60:
-            changeAmbiance(false, 0.2);
-          case 80:
-            changeAmbiance(true, 0.2);
-          case 110:
-            changeAmbiance(false, 0.2);
+          case 96:
+	    stormOn(1);
+          case 160:
+	    stormOff(1);
+          case 224:
+	    stormOn(1);
         }
       }
     }
   }
 
-  function changeAmbiance(goDark:Bool, duration:Float)
+  function stormOn(duration:Float)
   {
-    if (duration == null) duration = 1;
-    var targetAlpha:Float = goDark ? 1 : 0;
-    wentDark = goDark;
+   if (duration == null) duration = 1;
 
-    if (getNamedProp('stormFront') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: targetAlpha}, duration);
-    if (getNamedProp('stormBack') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: targetAlpha}, duration);
-    if (getNamedProp('stormMid') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: targetAlpha}, duration);
-
+   FlxTween.tween(storm0, {alpha: 1}, duration);
+   FlxTween.tween(storm1, {alpha: 0.9}, duration);
+   FlxTween.tween(storm2, {alpha: 1}, duration);
+   FlxTween.tween(storm3, {alpha: 0.5}, duration);
+   FlxTween.tween(storm4, {alpha: 0.5}, duration);
+   FlxTween.tween(storm5, {alpha: 0.5}, duration);
   }
 
-  var postShockCounter:Int = 0;
-  var counterTargetNum:Int = 10;
-
-  function onStepHit(event:SongTimeScriptEvent)
-    super.onStepHit(event)
-
-  function onGameOver(event:ScriptEvent)
+  function stormOff(duration:Float)
   {
-    super.onGameOver(event);
-    stopThunders = true;
+   var storms = [storm0, storm1, storm2, storm3, storm4, storm5];
+   if (duration == null) duration = 1;
+
+    for (storm in storms)
+    {
+        if (storm != null)
+            FlxTween.tween(storm, {alpha: 0}, duration);
+    }
   }
 
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
+
+    if (PlayState.instance.currentSong != null)
+    {
+      if (PlayState.instance.currentSong.id == "ugh" || PlayState.instance.currentSong.id == "stress")
+      {
+	stormOff(1);
+      }
+      else
+      {
+        stormOn(1);
+      }
+    }
   }
 }
