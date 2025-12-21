@@ -1,160 +1,51 @@
 import funkin.play.character.SparrowCharacter;
-import funkin.play.character.CharacterType;
-import funkin.audio.FunkinSound;
-import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.play.PlayState;
-import flixel.util.FlxTimer;
-import funkin.Conductor;
+import flixel.math.FlxMath;
 import flixel.FlxG;
 
 class DadRemnantsCharacter extends SparrowCharacter
 {
-  function new()
+  /**
+   * How far dad should go when the kick animation is played.
+   */
+  var KICK_OFFSET:Float = 350;
+
+  /**
+   * Extra offset factor for kicking.
+   */
+  var curKickOffset:Float = 0;
+
+  public function new()
   {
     super('dad-remnants');
   }
 
-  function onCreate(event:ScriptEvent)
+  override public function onAnimationFrame(name:String = "", frameNumber:Int = -1, frameIndex:Int = -1):Void
   {
-    super.onCreate(event);
+    curKickOffset = 0;
+    super.onAnimationFrame(name, frameNumber, frameIndex);
+    if (name != "attack") return;
 
-    dadKickSound = FunkinSound.load(Paths.sound('dadKick'), 1.0);
-  }
+    curKickOffset = KICK_OFFSET;
 
-  /**
-   * Stores the default x position of this character.
-   */
-  var defaultX:Float = 100;
-
-  /**
-   * Timer instance that will return this character to it's original position.
-   */
-  var returnTimer:FlxTimer = null;
-
-  /**
-   * Tween instance that will move this character.
-   */
-  var kickTween:FlxTween = null;
-
-  function onNoteHit(event:HitNoteScriptEvent)
-  {
-    if (event.eventCanceled) return;
-
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-attack")
+    if (frameNumber <= 3)
     {
-      holdTimer = 0;
-      if (FlxG.random.bool(50)) this.playHitAnim();
-      else
-        this.playBlockAnim();
-
-      return;
+      curKickOffset *= FlxEase.quintOut(frameNumber / 3);
+      trace(curKickOffset);
     }
-
-    if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
+    else if (frameNumber >= 6 && frameNumber <= 14)
     {
-      switch (event.note.kind)
-      {
-        case "dad-prepare":
-          holdTimer = 0;
-          playPreKickAnim();
-          return;
-
-        case "dad-attack":
-          holdTimer = 0;
-          playKickAnim();
-
-          dadKickSound.play(true);
-
-          // cancel any tween of this object.
-          FlxTween.cancelTweensOf(PlayState.instance.currentStage.getDad());
-
-          // then do the tween to move it.
-          FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: 450}, 0.5, {ease: FlxEase.quintOut});
-
-          if (returnTimer != null) returnTimer.cancel();
-
-          returnTimer = new FlxTimer().start(1, _ -> {
-            // cancel any tween of this object.
-            FlxTween.cancelTweensOf(PlayState.instance.currentStage.getDad());
-
-            // then do the tween to move it.
-            FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: defaultX}, 0.5, {ease: FlxEase.quintIn});
-          });
-          return;
-      }
-    }
-
-    super.onNoteHit(event);
-  }
-
-  function onNoteIncoming(event:NoteScriptEvent)
-  {
-    if (!event.note.noteData.getMustHitNote()
-      && characterType == CharacterType.DAD
-      || event.note.noteData.getMustHitNote()
-      && characterType == CharacterType.BF)
-    {
-      // Get how long until it's time to strum the note.
-      var msTilStrum = event.note.strumTime - Conductor.instance.songPosition;
-
-      switch (event.note.kind)
-      {
-        case "dad-attack":
-          scheduleDadSound(msTilStrum - 22);
-        default:
-          super.onNoteIncoming(event);
-      }
+      curKickOffset *= (1 - FlxEase.quadInOut(FlxMath.remapToRange(frameNumber, 6, 14, 0, 1)));
+      trace(curKickOffset);
     }
   }
 
-  var dadKickSound:FunkinSound;
-  var loadedDadKickSound:Bool = false;
-
-  /**
-   * Schedule the can-lighting sound to play in X ms
-   */
-  function scheduleDadSound(timeToPlay:Float)
+  override function getScreenPosition(?result:FlxPoint, ?camera:FlxCamera):FlxPoint
   {
-    if (!loadedDadKickSound)
-    {
-      dadKickSound = FunkinSound.load(Paths.sound('dadKick'), 1.0);
-      loadedDadKickSound = true;
-    }
-
-    dadKickSound.play(true, -timeToPlay);
-  }
-
-  /**
-   * Play the animation where Dad prepares to kick BF's blueballs.
-   */
-  function playPreKickAnim()
-  {
-    this.playAnimation('preAttack', true, false);
-  }
-
-  /**
-   * Play the animation where Dad blocks BF's microphone attack.
-   */
-  function playBlockAnim()
-  {
-    this.playAnimation('block', true, true);
-  }
-
-  /**
-   * Play the animation where Dad gets hit by BF's microphone attack.
-   */
-  function playHitAnim()
-  {
-    this.playAnimation('hit', true, true);
-  }
-
-  /**
-   * Play the animation where Dad kicks BF's blueballs.
-   */
-  function playKickAnim()
-  {
-    this.playAnimation('attack', true, true);
+    var output:FlxPoint = super.getScreenPosition(result, camera);
+    output.x += curKickOffset;
+    return output;
   }
 }
 

@@ -24,8 +24,6 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
   {
     super.onCreate(event);
 
-    bfAttackSound = FunkinSound.load(Paths.sound('bfAttack'), 1.0);
-
     // Are we even getting a gameover theme or nah?
     // GameOverSubState.musicSuffix = '-remnants';
     // GameOverSubState.blueBallSuffix = '-remnants';
@@ -157,50 +155,10 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
     return PlayState.instance.currentStage.getDad();
   }
 
-  function onNoteMiss(event:NoteScriptEvent)
-  {
-    super.onNoteMiss(event);
-
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-dodge")
-    {
-      holdTimer = 0;
-      PlayState.instance.health -= 0.15 * 2;
-      this.playAnimation('hit', true, true);
-      return;
-    }
-  }
-
-  var bfAttackSound:FunkinSound;
-
   function onNoteHit(event:HitNoteScriptEvent)
   {
-    if (event.eventCanceled)
-    {
-      // onNoteHit event was cancelled by the gameplay module.
-      return;
-    }
-
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-dodge")
-    {
-      holdTimer = 0;
-      this.playAnimation('dodge', true, true);
-      return;
-    }
-
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-prepare")
-    {
-      holdTimer = 0;
-      this.playAnimation('preAttack', true, false);
-      return;
-    }
-
-    if (event.note.noteData.getMustHitNote() && event.note.kind == "bf-attack")
-    {
-      holdTimer = 0;
-      this.playAnimation('attack', true, true);
-      bfAttackSound.play(true);
-      return;
-    }
+    // onNoteHit event was cancelled by the gameplay module.
+    if (event.eventCanceled) return;
 
     if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
     {
@@ -210,11 +168,9 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
         case "censor":
           holdTimer = 0;
           this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
-          return;
         case "perfect":
           holdTimer = 0;
           this.playSingAnimation(event.note.noteData.getDirection(), false, 'perfect');
-          return;
 
         default:
           super.onNoteHit(event);
