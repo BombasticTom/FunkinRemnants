@@ -79,7 +79,7 @@
    "e": "PlayAnimation",
    "v": {
 	"target": "boyfriend",
-	"force": true,
+	"force": false,
 	"anim": "ayo"
 }
   },
@@ -99,7 +99,7 @@
    "e": "PlayAnimation",
    "v": {
 	"target": "boyfriend",
-	"force": true,
+	"force": false,
 	"anim": "aww"
 }
   },
