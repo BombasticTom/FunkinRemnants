@@ -1,0 +1,60 @@
+name: Mobile Compression
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  compress:
+    name: Run ASTC Compressor
+    runs-on: self-hosted
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Download Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@master
+        with:
+          haxe-version: 4.3.7
+
+      - name: Install ASTC Compressor
+        run: haxelib --quiet --always git astc-compressor https://github.com/TechnikTil/astc-compressor fix-cwd
+
+      - name: Retrieve Asset Cache
+        id: fetch-asset-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: astc-textures/**
+          key: asset-cache
+
+      - name: Run ASTC Compressor
+        run: haxelib run astc-compressor compress-from-json -json ./astc-compression-data.json
+
+      - name: Save Asset Cache
+        id: save-asset-cache
+        uses: actions/cache/save@v4
+        with:
+          path: astc-textures/**
+          key: asset-cache
+
+      - name: Overwrite PNGs with ASTCs
+        run: |
+          rsync -a astc-textures/ ./
+          rm -fr astc-textures/
+          find "./" -name "*.astc" -exec sh -c 'rm "${0%.*}.png"' {} \;
+
+      - name: Push ASTC Files to `mobile` branch
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: Compress Images using ASTC
+          branch: mobile
+          push_options: '--force'
+
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
