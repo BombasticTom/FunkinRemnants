@@ -1,61 +1,61 @@
 {
-  "input": "./funkin-windows-64bit/mods/Funkin' Remnants",
+  "input": "./",
   "output": "./astc-textures/",
   "quality": "medium",
   "blocksize": "10x10",
   "colorprofile": "cl",
   "custom": [
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/resultScreen/results-pico-remnants/resultsGOOD/spritemap1.png",
+      "asset": "shared/images/resultScreen/results-pico-remnants/resultsGOOD/spritemap1.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/resultScreen/results-bf-remnants/resultsEXCELLENT/spritemap1.png",
+      "asset": "shared/images/resultScreen/results-bf-remnants/resultsEXCELLENT/spritemap1.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/NOTE_hold_assets_corruption.png",
+      "asset": "shared/images/NOTE_hold_assets_corruption.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/holdCoverBlue_corruption.png",
+      "asset": "shared/images/holdCoverBlue_corruption.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/holdCoverGreen_corruption.png",
+      "asset": "shared/images/holdCoverGreen_corruption.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/holdCoverPurple_corruption.png",
+      "asset": "shared/images/holdCoverPurple_corruption.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/holdCoverRed_corruption.png",
+      "asset": "shared/images/holdCoverRed_corruption.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/noteSplashes_corruption.png",
+      "asset": "shared/images/noteSplashes_corruption.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/noteStrumline_corruption.png",
+      "asset": "shared/images/noteStrumline_corruption.png",
       "blocksize": "4x4"
     },
     {
-      "asset": "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/notes_corruption.png",
+      "asset": "shared/images/notes_corruption.png",
       "blocksize": "4x4"
     }
   ],
   "excludes": [
-    "funkin-windows-64bit/mods/Funkin' Remnants/images/freeplay/",
-    "funkin-windows-64bit/mods/Funkin' Remnants/images/icons/",
-    "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/characters/bfPixel-remnants.png",
-    "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/characters/gfPixel-remnants.png",
-    "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/characters/senpai-remnants.png",
-    "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/characters/spirit-remnants.png",
-    "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/resultScreen/*",
-    "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/resultScreen/rankText/",
-    "funkin-windows-64bit/mods/Funkin' Remnants/shared/images/stages/week6Remnants/",
-    "funkin-windows-64bit/mods/Funkin' Remnants/_polymod_icon.png"
+    "images/freeplay/",
+    "images/icons/",
+    "shared/images/characters/bfPixel-remnants.png",
+    "shared/images/characters/gfPixel-remnants.png",
+    "shared/images/characters/senpai-remnants.png",
+    "shared/images/characters/spirit-remnants.png",
+    "shared/images/resultScreen/*",
+    "shared/images/resultScreen/rankText/",
+    "shared/images/stages/week6Remnants/",
+    "_polymod_icon.png"
   ]
 }
