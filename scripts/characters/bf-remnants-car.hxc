@@ -23,9 +23,7 @@ class BoyfriendRemnantsCarCharacter extends MultiSparrowCharacter
   {
     super.onCreate(event);
 
-    // Are we even getting a gameover theme or nah?
-    // GameOverSubState.musicSuffix = '-remnants';
-    // GameOverSubState.blueBallSuffix = '-remnants';
+    GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
     shouldAlternate = false;
   }

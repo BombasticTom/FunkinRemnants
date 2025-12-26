@@ -23,6 +23,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
 
     // NOTE: this.x and this.y are not properly set here.
 
+    GameOverSubState.musicSuffix = '-remnants';
     GameOverSubState.blueBallSuffix = '-bf-gutpunch';
 
     this.zIndex = 2000;
@@ -331,6 +332,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     cantUppercut = false;
     playIdleAnim();
 
+    GameOverSubState.musicSuffix = '-remnants';
     GameOverSubState.blueBallSuffix = '-bf-gutpunch';
   }
 
