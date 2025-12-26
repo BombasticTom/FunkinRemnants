@@ -33,14 +33,14 @@ class TankmanBattlefieldRemnantsStage extends Stage
     var boxParachute1:FlxBackdrop;
     var boxParachute2:FlxBackdrop;
 
-  if (PlayState.instance.currentSong != null)
-  {
-    if (PlayState.instance.currentSong.id == "guns")
+    if (PlayState.instance.currentSong != null)
     {
-      stormOn(0.0001);
+      if (PlayState.instance.currentSong.id == "guns")
+      {
+        stormOn(0.0001);
+      }
     }
   }
-}
 
   override function buildStage()
   {
@@ -93,7 +93,8 @@ class TankmanBattlefieldRemnantsStage extends Stage
     storm4.blend = 0;
     storm4.color = 0xFF614621;
     storm4.alpha = 0;
-    storm4.velocity.x = 01300;
+    storm4.velocity.x = 0
+    1300;
     storm4.scale.set(1.5, 1.5);
 
     storm5 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
@@ -177,14 +178,14 @@ class TankmanBattlefieldRemnantsStage extends Stage
     tankSpeed = FlxG.random.float(5, 7);
   }
 
-    var _timer:Float = 0;
+  var _timer:Float = 0;
 
   function onUpdate(event:UpdateScriptEvent):Void
   {
     super.onUpdate(event);
 
     _timer += event.elapsed;
-	storm0.y = -500 + (Math.sin(_timer)*300);
+    storm0.y = -500 + (Math.sin(_timer) * 300);
 
     moveTank(event.elapsed);
   }
@@ -243,12 +244,12 @@ class TankmanBattlefieldRemnantsStage extends Stage
     {
       if (event.beat == 159 && PlayState.instance.currentSong.id == "ugh")
       {
-	stormOn(1);
+        stormOn(1);
       }
 
       if (event.beat == 224 && PlayState.instance.currentSong.id == "guns")
       {
-	stormOff(2.6);
+        stormOff(2.6);
       }
 
       if (PlayState.instance.currentSong.id == "stress")
@@ -256,11 +257,11 @@ class TankmanBattlefieldRemnantsStage extends Stage
         switch (event.beat)
         {
           case 96:
-	    stormOn(1);
+            stormOn(1);
           case 160:
-	    stormOff(1);
+            stormOff(1);
           case 224:
-	    stormOn(1);
+            stormOn(1);
         }
       }
     }
@@ -268,25 +269,24 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
   function stormOn(duration:Float)
   {
-   if (duration == null) duration = 1;
+    if (duration == null) duration = 1;
 
-   FlxTween.tween(storm0, {alpha: 1}, duration);
-   FlxTween.tween(storm1, {alpha: 0.9}, duration);
-   FlxTween.tween(storm2, {alpha: 1}, duration);
-   FlxTween.tween(storm3, {alpha: 0.5}, duration);
-   FlxTween.tween(storm4, {alpha: 0.5}, duration);
-   FlxTween.tween(storm5, {alpha: 0.5}, duration);
+    FlxTween.tween(storm0, {alpha: 1}, duration);
+    FlxTween.tween(storm1, {alpha: 0.9}, duration);
+    FlxTween.tween(storm2, {alpha: 1}, duration);
+    FlxTween.tween(storm3, {alpha: 0.5}, duration);
+    FlxTween.tween(storm4, {alpha: 0.5}, duration);
+    FlxTween.tween(storm5, {alpha: 0.5}, duration);
   }
 
   function stormOff(duration:Float)
   {
-   var storms = [storm0, storm1, storm2, storm3, storm4, storm5];
-   if (duration == null) duration = 1;
+    var storms = [storm0, storm1, storm2, storm3, storm4, storm5];
+    if (duration == null) duration = 1;
 
     for (storm in storms)
     {
-        if (storm != null)
-            FlxTween.tween(storm, {alpha: 0}, duration);
+      if (storm != null) FlxTween.tween(storm, {alpha: 0}, duration);
     }
   }
 
@@ -298,7 +298,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     {
       if (PlayState.instance.currentSong.id == "ugh" || PlayState.instance.currentSong.id == "stress")
       {
-	stormOff(1);
+        stormOff(1);
       }
       else
       {
@@ -307,3 +307,4 @@ class TankmanBattlefieldRemnantsStage extends Stage
     }
   }
 }
+

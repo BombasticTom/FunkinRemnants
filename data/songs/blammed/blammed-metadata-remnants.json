@@ -1,101 +1,101 @@
 {
- "version": "2.2.4",
- "songName": "Blammed (Remnants Mix)",
- "artist": "fishgarden",
- "charter": "fishgarden + Sammy The Goog",
- "divisions": 96,
- "looped": false,
- "offsets": {
-  "instrumental": 0,
-  "altInstrumentals": {  },
-  "vocals": {  },
-  "altVocals": {  }
- },
- "playData": {
-  "songVariations": [],
-  "difficulties": ["easy", "normal", "hard"],
-  "characters": {
-   "player": "bf-remnants",
-   "girlfriend": "gf-remnants",
-   "opponent": "pico-remnants",
-   "instrumental": "remnants",
-   "altInstrumentals": [],
-   "opponentVocals": ["pico-remnants"],
-   "playerVocals": ["bf-remnants"]
+  "version": "2.2.4",
+  "songName": "Blammed (Remnants Mix)",
+  "artist": "fishgarden",
+  "charter": "fishgarden + Sammy The Goog",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
   },
-  "stage": "phillyTrainRemnants",
-  "noteStyle": "funkin",
-  "ratings": { "easy": 5, "normal": 6, "hard": 7 },
-  "album": "remnants-week3",
-  "previewStart": 0,
-  "previewEnd": 0
- },
- "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
- "timeFormat": "ms",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 184,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf-remnants",
+      "girlfriend": "gf-remnants",
+      "opponent": "pico-remnants",
+      "instrumental": "remnants",
+      "altInstrumentals": [],
+      "opponentVocals": ["pico-remnants"],
+      "playerVocals": ["bf-remnants"]
+    },
+    "stage": "phillyTrainRemnants",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 5, "normal": 6, "hard": 7 },
+    "album": "remnants-week3",
+    "previewStart": 0,
+    "previewEnd": 0
   },
-  {
-   "t": 53694,
-   "b": 164.6616,
-   "bpm": 184,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 55166,
-   "b": 169.1757,
-   "bpm": 184,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 65892.2066,
-   "b": 202.0694,
-   "bpm": 184,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 65934.8346,
-   "b": 202.2001,
-   "bpm": 184,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 65964.1196,
-   "b": 202.2899,
-   "bpm": 184,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 66448.1052,
-   "b": 203.7741,
-   "bpm": 184,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 97492.0001,
-   "b": 298.9754,
-   "bpm": 184,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+  "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 184,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 53694,
+      "b": 164.6616,
+      "bpm": 184,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 55166,
+      "b": 169.1757,
+      "bpm": 184,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 65892.2066,
+      "b": 202.0694,
+      "bpm": 184,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 65934.8346,
+      "b": 202.2001,
+      "bpm": 184,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 65964.1196,
+      "b": 202.2899,
+      "bpm": 184,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 66448.1052,
+      "b": 203.7741,
+      "bpm": 184,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 97492.0001,
+      "b": 298.9754,
+      "bpm": 184,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
 }

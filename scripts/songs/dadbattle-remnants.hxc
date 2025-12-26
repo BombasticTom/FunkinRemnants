@@ -50,9 +50,9 @@ class DadBattleRemnantsMixSong extends Song
   {
     attackerHitTimes = [];
 
-    for(note in event.notes)
+    for (note in event.notes)
     {
-      switch(note.kind)
+      switch (note.kind)
       {
         case 'battle-dodge-remnants':
           attackerHitTimes.push(note.time);
@@ -63,10 +63,9 @@ class DadBattleRemnantsMixSong extends Song
 
   function onUpdate(event:UpdateScriptEvent):Void
   {
-    while(attackerHitTimes.length > 0)
+    while (attackerHitTimes.length > 0)
     {
-      if (Conductor.instance.songPosition < attackerHitTimes[0])
-        break;
+      if (Conductor.instance.songPosition < attackerHitTimes[0]) break;
 
       var time:Float = attackerHitTimes.shift();
 

@@ -33,7 +33,9 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": ["You're the face of the niche gimmick account Funkin' Remnants huh?"],
+      "text": [
+        "You're the face of the niche gimmick account Funkin' Remnants huh?"
+      ],
       "speed": 0.5
     },
     {
@@ -82,7 +84,9 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": ["On top of that you decided to make a full remix mod for your following too?!"]
+      "text": [
+        "On top of that you decided to make a full remix mod for your following too?!"
+      ]
     },
     {
       "speaker": "senpai-remnants-angry",
@@ -130,7 +134,9 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": ["Let's just sing Roses (Remnants Mix) by LunarzNova already. You're yapping."]
+      "text": [
+        "Let's just sing Roses (Remnants Mix) by LunarzNova already. You're yapping."
+      ]
     }
   ]
 }

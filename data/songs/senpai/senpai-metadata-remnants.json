@@ -1,77 +1,77 @@
 {
- "version": "2.2.4",
- "songName": "Senpai (Remnants Mix)",
- "artist": "fishgarden",
- "charter": "fishgarden",
- "divisions": 96,
- "looped": false,
- "offsets": {
-  "instrumental": 0,
-  "altInstrumentals": {  },
-  "vocals": {  },
-  "altVocals": {  }
- },
- "playData": {
-  "songVariations": [],
-  "difficulties": ["easy", "normal", "hard"],
-  "characters": {
-   "player": "bf-remnants-pixel",
-   "girlfriend": "gf-remnants-pixel",
-   "opponent": "senpai-remnants",
-   "instrumental": "remnants",
-   "altInstrumentals": ["pico", ""],
-   "opponentVocals": ["senpai-remnants"],
-   "playerVocals": ["bf-remnants-pixel"]
+  "version": "2.2.4",
+  "songName": "Senpai (Remnants Mix)",
+  "artist": "fishgarden",
+  "charter": "fishgarden",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
   },
-  "stage": "schoolRemnants",
-  "noteStyle": "pixel",
-  "ratings": { "easy": 3, "normal": 4, "hard": 5 },
-  "album": "remnants-week6",
-  "previewStart": 0,
-  "previewEnd": 13100
- },
- "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
- "timeFormat": "ms",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 144,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf-remnants-pixel",
+      "girlfriend": "gf-remnants-pixel",
+      "opponent": "senpai-remnants",
+      "instrumental": "remnants",
+      "altInstrumentals": ["pico", ""],
+      "opponentVocals": ["senpai-remnants"],
+      "playerVocals": ["bf-remnants-pixel"]
+    },
+    "stage": "schoolRemnants",
+    "noteStyle": "pixel",
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "album": "remnants-week6",
+    "previewStart": 0,
+    "previewEnd": 13100
   },
-  {
-   "t": 13158.0001,
-   "b": 31.5792,
-   "bpm": 144,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 35444.9584,
-   "b": 85.0679,
-   "bpm": 144,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 74620.125,
-   "b": 179.0883,
-   "bpm": 144,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 81500,
-   "b": 195.6,
-   "bpm": 144,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+  "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 144,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 13158.0001,
+      "b": 31.5792,
+      "bpm": 144,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 35444.9584,
+      "b": 85.0679,
+      "bpm": 144,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 74620.125,
+      "b": 179.0883,
+      "bpm": 144,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 81500,
+      "b": 195.6,
+      "bpm": 144,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
 }

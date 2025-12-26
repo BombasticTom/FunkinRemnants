@@ -437,26 +437,26 @@ class GunsRemnantsMixSong extends Song
           });
         FlxG.camera.fade(0xFF000000, 0, true);
 
-	if (FlxG.random.bool(10))
-	{
-	 ascensionTween = FlxTween.tween(PlayState.instance.currentStage.getDad(), {y: 50}, 10.38, {ease: FlxEase.smoothStepInOut});
-	 ascension = true;
-	}
+        if (FlxG.random.bool(10))
+        {
+          ascensionTween = FlxTween.tween(PlayState.instance.currentStage.getDad(), {y: 50}, 10.38, {ease: FlxEase.smoothStepInOut});
+          ascension = true;
+        }
 
       case 256:
-	if (!ascension) return;
-	{
-	 ascensionTween = FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {y: 215}, 9.41, {ease: FlxEase.smoothStepInOut});
-	}
+        if (!ascension) return;
+        {
+          ascensionTween = FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {y: 215}, 9.41, {ease: FlxEase.smoothStepInOut});
+        }
 
       case 285:
         whiteTween = FlxTween.tween(white, {alpha: 0}, 1, {ease: FlxEase.smoothStepInOut});
 
-	if (!ascension) return;
-	{
-	 FlxTween.tween(PlayState.instance.currentStage.getDad(), {y: 344}, 1, {ease: FlxEase.smoothStepInOut});
-	 FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {y: 470}, 1, {ease: FlxEase.smoothStepInOut});
-	}
+        if (!ascension) return;
+        {
+          FlxTween.tween(PlayState.instance.currentStage.getDad(), {y: 344}, 1, {ease: FlxEase.smoothStepInOut});
+          FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {y: 470}, 1, {ease: FlxEase.smoothStepInOut});
+        }
 
       case 416:
         hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 3, {ease: FlxEase.smoothStepInOut});
