@@ -251,11 +251,11 @@ class StressRemnantsMixSong extends Song
     cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
 
     // Create the Tankman atlas.
-    var dad = PlayState.instance.currentStage.getDad();
+    var pos:FlxPoint = PlayState.instance.currentStage.getDadPosition();
     tankmanCutscene = ScriptedFlxAtlasSprite.init('TankCutsceneRemnants', 0, 0);
-    tankmanCutscene.setPosition(dad.x + 425, dad.y + 215);
+    tankmanCutscene.zIndex = PlayState.instance.currentStage.getDad().zIndex + 1;
     tankmanCutscene.playAnimation("GOD EFFING DAMMIT"); // Loading purpose!
-    tankmanCutscene.zIndex = dad.zIndex + 1;
+    tankmanCutscene.setPosition(pos.x + 243, pos.y - 419);
 
     // Create the Girlfriend atlas.
     var gf = PlayState.instance.currentStage.getGirlfriend();
@@ -275,6 +275,7 @@ class StressRemnantsMixSong extends Song
     fakeBF = CharacterDataParser.fetchCharacter('bf-remnants');
     fakeBF.animation.curAnim.finish(); // start on the last idle frame.
     setupCharacter(fakeBF, CharacterType.BF);
+    fakeBF.animation.curAnim.curFrame = 12; // Make the idle start on the last frame.
     fakeBF.zIndex = boyfriend.zIndex;
     fakeBF.flipX = false;
 
@@ -305,8 +306,9 @@ class StressRemnantsMixSong extends Song
     // Camera starts on Tankman.
     // It has a short delay for prevent lag.
     new FlxTimer(remnantsTimerManager).start(0.1, function(tmr) {
-      PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 1.5, FlxEase.quadInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.15, 0.01, true, FlxEase.quadInOut);
+      PlayState.instance.cameraFollowPoint.setPosition(dadPos[0] - 100, dadPos[1]);
+      PlayState.instance.resetCamera(false, false, false);
 
       // Play the dialogue.
       tankmanCutscene.playAnimation("GOD EFFING DAMMIT");
@@ -320,8 +322,9 @@ class StressRemnantsMixSong extends Song
 
     // Focus camera on GF.
     new FlxTimer(remnantsTimerManager).start(15.9, function(tmr:FlxTimer) {
-      PlayState.instance.tweenCameraToPosition(gfPos[0] - 150, gfPos[1], 0.5, FlxEase.elasticInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.3, 2.1, true, FlxEase.quadInOut);
+      PlayState.instance.cameraFollowPoint.setPosition(gfPos[0] - 150, gfPos[1]);
+      PlayState.instance.resetCamera(false, false, false);
       gunPoint.play(true);
 
       // Destroy Fake GF.
@@ -412,7 +415,8 @@ class StressRemnantsMixSong extends Song
 
           // focus camera to tankman
           new FlxTimer(remnantsTimerManager).start(3, function(weedShitBaby:FlxTimer) {
-            PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 2, FlxEase.quadInOut);
+            PlayState.instance.cameraFollowPoint.setPosition(dadPos[0] - 100, dadPos[1]);
+            PlayState.instance.resetCamera(false, false, false);
           });
         });
       });
@@ -420,12 +424,13 @@ class StressRemnantsMixSong extends Song
 
     // Cunt scene.
     new FlxTimer(remnantsTimerManager).start(32.3, function(cunt:FlxTimer) {
-      // Set the zoom to this value instantly.
-      PlayState.instance.tweenCameraZoom(0.86 * 1.4, 0.1, true);
+      // Focus to boyfriend.
+      PlayState.instance.cameraFollowPoint.setPosition(bfPos[0] + 150, bfPos[1]);
+      PlayState.instance.resetCamera(false, false);
 
-      // Elastic out the zoom a bit and focus to boyfriend.
-      PlayState.instance.tweenCameraToPosition(bfPos[0] + 150, bfPos[1], 0.1);
-      PlayState.instance.tweenCameraZoom(0.86 * 1.4 + 0.1, 0.5, true, FlxEase.elasticOut);
+      // Set the zoom to this value instantly and elastic out the zoom a bit.
+      PlayState.instance.currentCameraZoom = 1.26;
+      PlayState.instance.tweenCameraZoom(1.36, 0.5, true, FlxEase.elasticOut);
 
       // Cutting off skipping here.
       // Really don't think its needed after this point and it saves problems from happening.
@@ -445,13 +450,15 @@ class StressRemnantsMixSong extends Song
         {
           whichBF.playAnimation('singUPmiss', true, true);
         }
-        whichBF.animation.onFinish.add(function(name:String = '') {
+        whichBF.animation.onFinish.addOnce(() -> {
           // fast focus to tankman.
-          PlayState.instance.tweenCameraToPosition(dadPos[0], dadPos[1], 0.01);
-          PlayState.instance.tweenCameraZoom((0.86 * 1.5) / 1.4, 0.01, true);
+          PlayState.instance.cameraFollowPoint.setPosition(590, 510);
+          PlayState.instance.resetCamera(false, false);
+          PlayState.instance.currentCameraZoom = 0.97;
 
-          // remove the callback after it's done.
-          whichBF.animation.onFinish.removeAll();
+          // Make BF return to it's idle animation.
+          whichBF.dance(true);
+          whichBF.animation.curAnim.curFrame = 12;
         });
       }
     });
@@ -532,28 +539,7 @@ class StressRemnantsMixSong extends Song
     {
       PlayState.instance.currentStage.getBoyfriend().dance(true);
       PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
-
-      if (!gfFail)
-      {
-        if (PlayState.instance.currentStage.getBoyfriend().getCurrentAnimation() == 'singUPmiss')
-        {
-          // Making sure to remove the callback after it's done.
-          PlayState.instance.currentStage.getBoyfriend().animation.onFinish = null;
-        }
-      }
     }
-
-    var sniper = PlayState.instance.currentStage.getNamedProp('watchtower');
-    if (sniper != null && sniper.isAnimationFinished()) sniper.dance(true);
-
-    for (man in 0...6)
-    {
-      var tank = PlayState.instance.currentStage.getNamedProp('tankmanAudience' + man);
-      if (tank.isAnimationFinished()) tank.dance(true);
-    }
-
-    var steveCheer = PlayState.instance.currentStage.getNamedProp('tankmanBopperCheer1');
-    if (steveCheer.isAnimationFinished()) steveCheer.dance(true);
 
     if (fakeBF != null)
     {
@@ -561,15 +547,6 @@ class StressRemnantsMixSong extends Song
       {
         fakeBF.dance(true);
         fakeBF.animation.curAnim.curFrame = 12;
-
-        if (gfFail)
-        {
-          if (fakeBF.getCurrentAnimation() == 'singUPmiss')
-          {
-            // making sure to remove the callback after it's done.
-            fakeBF.animation.onFinish = null;
-          }
-        }
       }
     }
 
@@ -655,7 +632,7 @@ class StressRemnantsMixSong extends Song
 
         // Play the music.
         cutsceneMusic.play(false);
-        cutsceneMusic.fadeIn(5.0, 0.0, 0.25);
+        cutsceneMusic.fadeIn(5.0, 0.0, 0.1);
       }
     }
 

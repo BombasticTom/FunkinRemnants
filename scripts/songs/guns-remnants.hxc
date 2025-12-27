@@ -275,11 +275,11 @@ class GunsRemnantsMixSong extends Song
     tankTalk = FunkinSound.load(Paths.sound('tankSong2'), 1.0);
 
     // Create the Tankman atlas.
-    var dad = PlayState.instance.currentStage.getDad();
+    var pos:FlxPoint = PlayState.instance.currentStage.getDadPosition();
     tankmanCutscene = ScriptedFlxAtlasSprite.init('TankCutsceneRemnants', 0, 0);
-    tankmanCutscene.setPosition(dad.x + 425, dad.y + 215);
+    tankmanCutscene.zIndex = PlayState.instance.currentStage.getDad().zIndex + 1;
     tankmanCutscene.playAnimation("In Game Cutscene 2"); // Loading purpose!
-    tankmanCutscene.zIndex = dad.zIndex + 1;
+    tankmanCutscene.setPosition(pos.x + 243, pos.y - 419);
 
     // Add tankman.
     PlayState.instance.currentStage.add(tankmanCutscene);
@@ -289,8 +289,9 @@ class GunsRemnantsMixSong extends Song
     // Camera starts on Tankman.
     // It has a short delay for prevent lag.
     new FlxTimer(remnantsTimerManager).start(0.001, _ -> {
-      PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 0.01, FlxEase.quadInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.3, 4, true, FlxEase.quadInOut);
+      PlayState.instance.cameraFollowPoint.setPosition(dadPos[0] - 100, dadPos[1]);
+      PlayState.instance.resetCamera(false, false, false);
 
       // Play the dialogue.
       tankmanCutscene.playAnimation("In Game Cutscene 2");

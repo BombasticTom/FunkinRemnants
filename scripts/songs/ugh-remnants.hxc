@@ -262,11 +262,11 @@ class UghRemnantsMixSong extends Song
     bfBeep = FunkinSound.load(Paths.sound('bfBeep'), 1.0);
 
     // Create the Tankman atlas.
-    var dad = PlayState.instance.currentStage.getDad();
+    var pos:FlxPoint = PlayState.instance.currentStage.getDadPosition();
     tankmanCutscene = ScriptedFlxAtlasSprite.init('TankCutsceneRemnants', 0, 0);
-    tankmanCutscene.setPosition(dad.x + 425, dad.y + 215);
+    tankmanCutscene.zIndex = PlayState.instance.currentStage.getDad().zIndex + 1;
     tankmanCutscene.playAnimation("What do we got here"); // Loading purpose!
-    tankmanCutscene.zIndex = dad.zIndex + 1;
+    tankmanCutscene.setPosition(pos.x + 243, pos.y - 419);
 
     // Add tankman.
     PlayState.instance.currentStage.add(tankmanCutscene);
@@ -276,8 +276,9 @@ class UghRemnantsMixSong extends Song
     // Camera starts on Tankman.
     // It has a short delay for prevent lag.
     new FlxTimer(remnantsTimerManager).start(0.001, _ -> {
-      PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 0.01, FlxEase.quadInOut);
       PlayState.instance.tweenCameraZoom(0.86 * 1.15, 1.5, true, FlxEase.quadInOut);
+      PlayState.instance.cameraFollowPoint.setPosition(dadPos[0] - 100, dadPos[1]);
+      PlayState.instance.resetCamera(false, false, false);
 
       // Play the dialogue.
       tankmanCutscene.playAnimation("What do we got here");
@@ -291,7 +292,8 @@ class UghRemnantsMixSong extends Song
 
     new FlxTimer(remnantsTimerManager).start(3, _ -> {
       PlayState.instance.tweenCameraZoom(0.86 * 1.2, 1.5, true, FlxEase.quadInOut);
-      PlayState.instance.tweenCameraToPosition(bfPos[0] + 150, bfPos[1], 1.5, FlxEase.quadInOut);
+      PlayState.instance.cameraFollowPoint.setPosition(bfPos[0] + 150, bfPos[1]);
+      PlayState.instance.resetCamera(false, false, false);
       new FlxTimer(remnantsTimerManager).start(1.5, _ -> {
         PlayState.instance.currentStage.getBoyfriend().playAnimation('singUP');
         bfBeep.play(true);
@@ -304,7 +306,8 @@ class UghRemnantsMixSong extends Song
 
       new FlxTimer(remnantsTimerManager).start(3, _ -> {
         PlayState.instance.tweenCameraZoom(0.86 * 1.15, 1.5, true, FlxEase.quadInOut);
-        PlayState.instance.tweenCameraToPosition(dadPos[0] - 100, dadPos[1], 1.5, FlxEase.quadInOut);
+        PlayState.instance.cameraFollowPoint.setPosition(dadPos[0] - 100, dadPos[1]);
+        PlayState.instance.resetCamera(false, false, false);
         tankmanCutscene.playAnimation("We should just kill you");
         tankTalk2.play(true);
 
