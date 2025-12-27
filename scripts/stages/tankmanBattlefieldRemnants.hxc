@@ -93,8 +93,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
     storm4.blend = 0;
     storm4.color = 0xFF614621;
     storm4.alpha = 0;
-    storm4.velocity.x = 0
-    1300;
+    storm4.velocity.x = 1300;
     storm4.scale.set(1.5, 1.5);
 
     storm5 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);

@@ -1,4 +1,5 @@
 import flixel.FlxG;
+import funkin.save.Save;
 import funkin.modding.module.Module;
 import funkin.ui.options.OptionsState;
 import funkin.util.ReflectUtil;
@@ -10,12 +11,14 @@ class RemnantsOptions extends Module
     super('RemnantsOptions');
   }
 
-  override function onUpdate(event:UpdateScriptEvent)
+  public function onCreate(event:ScriptEvent)
   {
-    super.onUpdate(event);
-
-    // Default the option to true if null.
-    if (FlxG.save.data.bumpers == null) FlxG.save.data.bumpers = true;
+    // Set the option to true if it doesnt exist.
+    if (!Save.instance.modOptions.exists('remnantsBumpers'))
+    {
+      Save.instance.modOptions.set('remnantsBumpers', true);
+      Save.instance.flush();
+    }
   }
 
   // Constants to prevent long code...
@@ -27,22 +30,22 @@ class RemnantsOptions extends Module
    */
   public function onStateChangeEnd(event:StateChangeScriptEvent)
   {
-    if (Std.isOfType(event.targetState, OptionsState))
-    {
-      if (event.targetState.optionsCodex.pages.get("preferences") != null)
-      {
-        event.targetState.optionsCodex.pages.get("preferences")
-          .createPrefItemEnum(OPTION_NAME, OPTION_DESC, ['Yes' => true, 'No' => false], function(value:String, oValue:String):Void {
-            FlxG.save.data.bumpers = value;
-            FlxG.save.data.flush;
-          }, FlxG.save.data.bumpers);
-      }
-    }
+    if (!Std.isOfType(event.targetState, OptionsState) || event.targetState.optionsCodex.pages.get("preferences") == null) return;
+
+    event.targetState.optionsCodex.pages.get("preferences")
+      .createPrefItemCheckbox(OPTION_NAME, OPTION_DESC, function(value:Bool):Void {
+        Save.instance.modOptions.set('remnantsBumpers', value);
+        Save.instance.flush();
+      }, Save.instance.modOptions.get('remnantsBumpers'));
   }
 
+  /**
+   * Silly Getter Lol
+   * @return Bool
+   */
   public function getBumperOption():Bool
   {
-    return FlxG.save.data.bumpers;
+    return Save.instance.modOptions.get('remnantsBumpers');
   }
 }
 
