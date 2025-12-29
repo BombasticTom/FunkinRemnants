@@ -1,42 +1,57 @@
 {
-  "version": "2.2.4",
-  "songName": "Winter Horrorland (Remnants Mix)",
-  "artist": "PrinceLOLZ (ft. GENZU & ???)",
-  "charter": "RhysRJJ",
-  "divisions": 96,
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {},
-    "vocals": {},
-    "altVocals": {}
+ "version": "2.2.4",
+ "songName": "Winter Horrorland (Remnants Mix)",
+ "artist": "PrinceLOLZ (ft. GENZU & ???)",
+ "charter": "RhysRJJ",
+ "divisions": 96,
+ "looped": false,
+ "offsets": {
+  "instrumental": 0,
+  "altInstrumentals": {  },
+  "vocals": {  },
+  "altVocals": {  }
+ },
+ "playData": {
+  "songVariations": [],
+  "difficulties": [
+   "easy",
+   "normal",
+   "hard"
+  ],
+  "characters": {
+   "player": "bf-remnants-christmas",
+   "girlfriend": "gf-remnants-christmas",
+   "opponent": "monster-remnants-christmas",
+   "instrumental": "remnants",
+   "altInstrumentals": [],
+   "opponentVocals": [
+    "monster-remnants-christmas"
+   ],
+   "playerVocals": [
+    "bf-remnants-christmas"
+   ]
   },
-  "playData": {
-    "songVariations": [],
-    "difficulties": ["easy", "normal", "hard"],
-    "characters": {
-      "player": "bf-remnants-christmas",
-      "girlfriend": "gf-remnants-christmas",
-      "opponent": "monster-remnants-christmas",
-      "instrumental": "remnants"
-    },
-    "stage": "mallEvilRemnants",
-    "noteStyle": "funkin",
-    "ratings": { "easy": 21, "normal": 21, "hard": 21 },
-    "album": "remnants-week5-scary",
-    "previewStart": 0,
-    "previewEnd": 15000
+  "stage": "mallEvilRemnants",
+  "noteStyle": "funkin",
+  "ratings": {
+   "easy": 15,
+   "normal": 15,
+   "hard": 15
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.3",
-  "timeFormat": "ms",
-  "timeChanges": [
-    {
-      "t": 0,
-      "b": 0,
-      "bpm": 110,
-      "n": 4,
-      "d": 4,
-      "bt": [4, 4, 4, 4]
-    }
-  ]
+  "album": "remnants-week5-scary",
+  "previewStart": 0,
+  "previewEnd": 15000
+ },
+ "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
+ "timeFormat": "ms",
+ "timeChanges": [
+  {
+   "t": 0,
+   "b": 0,
+   "bpm": 160,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  }
+ ]
 }
