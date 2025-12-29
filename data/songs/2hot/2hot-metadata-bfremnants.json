@@ -25,6 +25,7 @@
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
+    "stickerPack": "remnants-weekend1",
     "ratings": { "easy": 6, "normal": 7, "hard": 8 },
     "album": "remnants-weekend1-bf",
     "previewStart": 0,

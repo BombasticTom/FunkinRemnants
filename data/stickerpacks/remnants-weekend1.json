@@ -1,16 +1,20 @@
 {
   "version": "1.0.0",
-  "name": "Remnants (WeekEnd 1)",
+  "name": "Remnants (Weekend 1 - BF)",
   "artist": "PhantomArcade3K, SPG64, Honton129",
   "stickers": [
-    "transitionSwag/remnants-set-2/neneRemnantsSticker1",
-    "transitionSwag/remnants-set-2/picoRemnantsSticker1",
-    "transitionSwag/remnants-set-2/picoRemnantsSticker2",
-    "transitionSwag/remnants-set-2/picoRemnantsSticker3",
+    "transitionSwag/remnants-set-1/gfRemnantsSticker1",
+    "transitionSwag/remnants-set-1/gfRemnantsSticker2",
+    "transitionSwag/remnants-set-1/gfRemnantsSticker3",
+    "transitionSwag/remnants-set-1/bfRemnantsSticker1",
+    "transitionSwag/remnants-set-1/bfRemnantsSticker2",
+    "transitionSwag/remnants-set-1/bfRemnantsSticker3",
+    "transitionSwag/remnants-set-2/darnellRemnantsSticker1",
+    "transitionSwag/remnants-set-2/darnellRemnantsSticker2",
+    "transitionSwag/remnants-set-2/darnellRemnantsSticker3",
     "transitionSwag/remnants-set-2/miscRemnantsSticker1",
     "transitionSwag/remnants-set-2/miscRemnantsSticker2",
     "transitionSwag/remnants-set-2/miscRemnantsSticker3",
-    "transitionSwag/remnants-set-2/miscRemnantsSticker4",
-    "transitionSwag/remnants-set-2/miscRemnantsSticker5"
+    "transitionSwag/remnants-set-2/miscRemnantsSticker4"
   ]
 }
