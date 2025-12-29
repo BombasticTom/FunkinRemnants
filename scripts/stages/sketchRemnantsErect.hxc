@@ -35,20 +35,20 @@ class SketchRemnantsErectStage extends Stage
     colorShaderDad = new AdjustColorShader();
     colorShaderGf = new AdjustColorShader();
 
-    colorShaderBf.brightness = -8;
-    colorShaderBf.hue = -26;
-    colorShaderBf.contrast = 15;
-    colorShaderBf.saturation = 5;
+    colorShaderBf.brightness = -3;
+    colorShaderBf.hue = 12;
+    colorShaderBf.contrast = 7;
+    colorShaderBf.saturation = 0;
 
-    colorShaderGf.brightness = -8;
-    colorShaderGf.hue = -26;
-    colorShaderGf.contrast = 15;
-    colorShaderGf.saturation = 5;
+    colorShaderGf.brightness = -10;
+    colorShaderGf.hue = -9;
+    colorShaderGf.contrast = -4;
+    colorShaderGf.saturation = 0;
 
-    colorShaderDad.brightness = -8;
-    colorShaderDad.hue = -26;
-    colorShaderDad.contrast = 15;
-    colorShaderDad.saturation = 5;
+    colorShaderDad.brightness = -10;
+    colorShaderDad.hue = -9;
+    colorShaderDad.contrast = -23;
+    colorShaderDad.saturation = 0;
   }
 
   function onBeatHit(event:SongTimeScriptEvent):Void
