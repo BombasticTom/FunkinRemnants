@@ -25,6 +25,7 @@
     },
     "stage": "mainStageRemnants",
     "noteStyle": "funkin",
+    "stickerPack": "remnants-tutorial",
     "ratings": {
       "easy": 1,
       "hard": 1,
