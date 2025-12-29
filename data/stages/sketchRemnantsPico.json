@@ -16,7 +16,7 @@
       "animType": "sparrow",
       "name": "frontSketch",
       "isPixel": false,
-      "assetPath": "stages/sketchRemnantsPico/front",
+      "assetPath": "stages/sketchRemnants/pico/StreetsFront",
       "scroll": [0.975, 0.975],
       "animations": []
     },
@@ -28,8 +28,8 @@
       "animType": "sparrow",
       "name": "backSketch",
       "isPixel": false,
-      "assetPath": "stages/sketchRemnantsPico/back",
-      "scroll": [0.9, 0.9],
+      "assetPath": "stages/sketchRemnants/pico/StreetsBack",
+      "scroll": [0.925, 0.9],
       "animations": []
     }
   ],
