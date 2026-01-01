@@ -261,7 +261,7 @@
     },
     {
       "flipY": false,
-      "offsets": [620, 230],
+      "offsets": [680, 230],
       "frameRate": 24,
       "assetPath": "characters/Pico_Shooting-remnants",
       "prefix": "pico fire animation 1",
