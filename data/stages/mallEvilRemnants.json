@@ -270,6 +270,37 @@
       "alpha": 1,
       "angle": 0,
       "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [0, 0],
+          "prefix": "lz boppin"
+        }
+      ],
+      "assetPath": "remnants/evil/LZDigiArtsBopper",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "lzBop",
+      "position": [-1725, -1250],
+      "scale": 1,
+      "scroll": [1, 1],
+      "startingAnimation": "idle",
+      "zIndex": 12
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
       "animations": [],
       "assetPath": "remnants/evil/SantaScaryDead",
       "blend": "",
