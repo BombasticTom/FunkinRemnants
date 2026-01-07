@@ -36,6 +36,11 @@
       "offsets": [0, 0]
     },
     {
+      "name": "cringe",
+      "prefix": "Cringe",
+      "offsets": [0, 0]
+    },
+    {
       "name": "fakeout",
       "prefix": "Fake Hit",
       "offsets": [0, 0]
