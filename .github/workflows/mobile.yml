@@ -55,7 +55,7 @@ jobs:
           branch: mobile
           push_options: '--force'
 
-          file_pattern: '*.astc'
+          file_pattern: '*.astc *.png'
 
           commit_user_name: github-actions[bot]
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
