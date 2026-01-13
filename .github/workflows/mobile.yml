@@ -15,32 +15,32 @@ jobs:
 
     steps:
       - name: Download Source Code
-        uses: actions/checkout@v4
+        uses: FunkinCrew/ci-checkout@v7.3.3
 
-      - name: Setup Haxe
-        uses: krdlab/setup-haxe@master
+      - uses: FunkinCrew/ci-haxe@v3
         with:
           haxe-version: 4.3.7
 
       - name: Install ASTC Compressor
         run: haxelib --quiet --always git astc-compressor https://github.com/TechnikTil/astc-compressor fix-cwd
 
-      - name: Retrieve Asset Cache
-        id: fetch-asset-cache
-        uses: actions/cache/restore@v4
-        with:
-          path: astc-textures/**
-          key: asset-cache
+      # Maybe not, since it keeps stuff that was ignored before...
+      #- name: Retrieve Asset Cache
+      #  id: fetch-asset-cache
+      #  uses: actions/cache/restore@v4
+      #  with:
+      #    path: astc-textures/**
+      #    key: asset-cache
 
       - name: Run ASTC Compressor
         run: haxelib run astc-compressor compress-from-json -json ./astc-compression-data.json
 
-      - name: Save Asset Cache
-        id: save-asset-cache
-        uses: actions/cache/save@v4
-        with:
-          path: astc-textures/**
-          key: asset-cache
+      # - name: Save Asset Cache
+      #  id: save-asset-cache
+      #  uses: actions/cache/save@v4
+      #  with:
+      #    path: astc-textures/**
+      #    key: asset-cache
 
       - name: Overwrite PNGs with ASTCs
         run: |
@@ -54,6 +54,8 @@ jobs:
           commit_message: Compress Images using ASTC
           branch: mobile
           push_options: '--force'
+
+          file_pattern: '*.astc'
 
           commit_user_name: github-actions[bot]
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
