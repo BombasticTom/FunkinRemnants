@@ -49,6 +49,8 @@ class BoyfriendRemnantsDarkCharacter extends MultiSparrowCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
+    if (name == "hey" || name == "cheer" || name == "lights") PlayState.instance.vocals.playerVolume = 1;
+
     super.playAnimation(name, restart, ignoreOther);
     if (normalChar != null)
     {

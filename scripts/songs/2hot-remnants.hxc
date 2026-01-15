@@ -28,7 +28,7 @@ class TwoHOTRemnantsMixSong extends Song
     super.onCreate(event);
 
     // Precache the spraycan atlas.
-    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1", "shared"));
+    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1"));
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool

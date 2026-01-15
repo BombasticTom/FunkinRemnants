@@ -10,6 +10,7 @@ import funkin.play.song.Song;
 import funkin.play.PlayState;
 import funkin.FunkinMemory;
 import funkin.save.Save;
+import funkin.audio.FunkinSound;
 
 class TwoHOTRemnantsMixSong extends Song
 {
@@ -28,7 +29,7 @@ class TwoHOTRemnantsMixSong extends Song
     super.onCreate(event);
 
     // Precache the spraycan atlas.
-    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1", "shared"));
+    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1"));
 
     PlayState.instance.currentStage.getGirlfriend().x = 1050;
   }
@@ -70,7 +71,7 @@ class TwoHOTRemnantsMixSong extends Song
     PlayState.instance.currentStage.getGirlfriend().x = 1050;
 
     removeCans();
-    gunCocked = false;
+    micCocked = false;
   }
 
   function removeCans()
@@ -96,10 +97,10 @@ class TwoHOTRemnantsMixSong extends Song
   function hardClear()
   {
     removeCans();
-    gunCocked = false;
+    micCocked = false;
   }
 
-  var gunCocked:Bool = false;
+  var micCocked:Bool = false;
   var spawnedCans:Array<ScriptedFlxAtlasSprite> = [];
 
   function onNoteHit(event:HitNoteScriptEvent)
@@ -130,13 +131,13 @@ class TwoHOTRemnantsMixSong extends Song
         spawnedCans.push(newCan);
       case "weekend-1-kneecan":
         // Do nothing, but place this such that the animation plays at the right time.
-      case "weekend-1-cockgun": // lol
-        gunCocked = true;
+      case "bf-prep":
+        micCocked = true;
         new FlxTimer().start(1.0, function() {
-          gunCocked = false;
+          micCocked = false;
         });
-      case "weekend-1-firegun":
-        if (gunCocked)
+      case "bf-attack":
+        if (micCocked)
         {
           trace('Firing gun!');
           shootNextCan();
@@ -276,6 +277,7 @@ class TwoHOTRemnantsMixSong extends Song
     {
       can.scriptSet('currentState', STATE_SHOT);
       can.scriptCall('playCanShot');
+      FunkinSound.playOnce(Paths.sound('bfAttack', "week1"), 1);
 
       new FlxTimer().start(1 / 24, function(tmr) {
         darkenStageProps();
@@ -315,20 +317,10 @@ class TwoHOTRemnantsMixSong extends Song
 
     switch (event.note.kind)
     {
-      case "weekend-1-cockgun":
+      case "bf-prep":
         event.healthChange = 0.0; // We cause health loss later.
-      case "weekend-1-firegun":
-        gunCocked = false;
-        event.healthChange = 0.0; // We cause health loss elsewhere.
-        missNextCan();
-        takeCanDamage();
-      case "weekend-1-firegun-hip":
-        gunCocked = false;
-        event.healthChange = 0.0; // We cause health loss elsewhere.
-        missNextCan();
-        takeCanDamage();
-      case "weekend-1-firegun-far":
-        gunCocked = false;
+      case "bf-attack":
+        micCocked = false;
         event.healthChange = 0.0; // We cause health loss elsewhere.
         missNextCan();
         takeCanDamage();
@@ -352,6 +344,9 @@ class TwoHOTRemnantsMixSong extends Song
   {
     trace('Taking damage from can exploding!');
 
+    PlayState.instance.currentStage.getBoyfriend().playAnimation('hit', true, false);
+    FunkinSound.playOnce(Paths.sound('Pico_Bonk'), 1.0);
+
     PlayState.instance.health -= HEALTH_LOSS;
     // TODO: This is jank as hell! Add some better way to prevent onNoteMiss's normal health loss.
     // PlayState.instance.health += 0.0775;
@@ -361,14 +356,14 @@ class TwoHOTRemnantsMixSong extends Song
       trace('Died to the can! Use special death animation.');
 
       // Reset to standard death animation.
-      GameOverSubState.musicSuffix = '-pico-explode-remnants';
-      GameOverSubState.blueBallSuffix = '-pico-explode-remnants';
+      GameOverSubState.musicSuffix = '-bf-explode-remnants';
+      GameOverSubState.blueBallSuffix = '-bf-explode-remnants';
 
       if (!PlayState.instance.isPracticeMode) blackenStageProps();
     }
     else if (HapticUtil.hapticsAvailable)
     {
-      // Can hits pico.
+      // Can hits bf.
       HapticUtil.vibrateByPreset(canDamageVibrationPreset);
 
       new FlxTimer().start(0.45, function(tmr) {
