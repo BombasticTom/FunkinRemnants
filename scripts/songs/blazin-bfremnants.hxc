@@ -145,6 +145,18 @@ class BlazinBFRemnantsMixSong extends Song
     fadeOut = false;
   }
 
+  function onPause()
+  {
+    FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);

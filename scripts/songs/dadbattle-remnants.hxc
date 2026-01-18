@@ -42,8 +42,8 @@ class DadBattleRemnantsMixSong extends Song
 
   function onCreate():Void
   {
-    bfAttackSound = FunkinSound.load(Paths.sound('bfAttack'), 1.0);
-    dadKickSound = FunkinSound.load(Paths.sound('dadKick'), 1.0);
+    bfAttackSound = FunkinSound.load(Paths.sound('bfAttack'), 0.5);
+    dadKickSound = FunkinSound.load(Paths.sound('dadKick'), 0.5);
   }
 
   function onSongLoaded(event:SongLoadScriptEvent)

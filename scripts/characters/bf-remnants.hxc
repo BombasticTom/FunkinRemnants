@@ -15,9 +15,12 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import funkin.Preferences;
 import flixel.effects.FlxFlicker;
+import funkin.util.FlxTweenUtil;
 
 class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
 {
+  var fade:Bool = false;
+
   function new()
   {
     super('bf-remnants');
@@ -29,6 +32,7 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
 
     GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
+    fade = false;
 
     if (!this.debug)
     { // Gotta do it like this because the editor freaks out.
@@ -131,6 +135,12 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
   {
     super.onPause(event);
 
+    if (fade)
+    {
+    FlxTweenUtil.pauseTweensOf(bfFade);
+    FlxTweenUtil.pauseTweensOf(bfFade.scale);
+    }
+
     if (bfFlicker != null)
     {
       bfFlicker.pause();
@@ -141,6 +151,12 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
   public override function onResume(event:ScriptEvent)
   {
     super.onResume(event);
+
+    if (fade)
+    {
+    FlxTweenUtil.resumeTweensOf(bfFade);
+    FlxTweenUtil.resumeTweensOf(bfFade.scale);
+    }
 
     if (bfFlicker != null)
     {
@@ -285,7 +301,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
           this.playSingAnimation(event.note.noteData.getDirection(), false, 'perfect');
         case "bf-prep":
           holdTimer = 0;
-          playCockMicAnim();
+          this.playAnimation('preAttack', true, false);
+          playCockAura();
         case "bf-attack":
           holdTimer = 0;
           this.playAnimation('attack', true, false);
@@ -294,16 +311,17 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
           holdTimer = 0;
           this.playAnimation('dodge', true, false);
           return;
+        case "battle-prepare-remnants":
+          playCockAura();
         default:
           super.onNoteHit(event);
       }
     }
   }
 
-  function playCockMicAnim()
+  function playCockAura()
   {
-    this.playAnimation('preAttack', true, false);
-
+    fade = true;
     bfFade = new FlxSprite(0, 0);
     bfFade.frames = this.frames;
     bfFade.frame = this.frame;
@@ -315,7 +333,9 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
     bfFade.zIndex = this.zIndex - 3;
     addToStage(bfFade);
     FlxTween.tween(bfFade.scale, {x: 1.3, y: 1.3}, 0.4);
-    FlxTween.tween(bfFade, {alpha: 0}, 0.4);
+    FlxTween.tween(bfFade, {alpha: 0}, 0.4, {ease: FlxEase.linear, onComplete: (_) -> {
+      fade = false;
+    }});
   }
 
   function addToStage(sprite:FlxSprite)
@@ -331,7 +351,7 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
     }
     else
     {
-      trace('Could not add Pico sprite to stage.');
+      trace('Could not add BF sprite to stage.');
     }
   }
 }
