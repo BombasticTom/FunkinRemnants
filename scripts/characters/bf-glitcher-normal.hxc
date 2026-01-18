@@ -1,5 +1,4 @@
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
-import flixel.FlxG;
 import funkin.audio.FunkinSound;
 import funkin.play.character.SparrowCharacter;
 import funkin.play.GameOverSubState;
@@ -9,6 +8,8 @@ import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
 import funkin.play.character.MultiSparrowCharacter;
 import funkin.util.HapticUtil;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxG;
 
 class BoyfriendGlitcherNormalCharacter extends MultiSparrowCharacter
 {
@@ -50,8 +51,6 @@ class BoyfriendGlitcherNormalCharacter extends MultiSparrowCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
-    if (name == "hey" || name == "cheer") PlayState.instance.vocals.playerVolume = 1;
-
     super.playAnimation(name, restart, ignoreOther);
     if (normalChar != null)
     {
@@ -71,5 +70,23 @@ class BoyfriendGlitcherNormalCharacter extends MultiSparrowCharacter
     PlayState.instance.currentStage.add(normalChar);
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
-}
 
+
+  // Remnants Gameover instead of normal
+  var RemnantsDeath:FunkinSprite;
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    return; // I dont have enough smarts to get this working
+    if (normalChar.alpha >= 0.5)
+    {
+    RemnantsDeath = FunkinSprite.createSparrow(0, 0, "characters/bf-DEAD-remnants", "shared");
+    PlayState.instance.add(RemnantsDeath);
+    RemnantsDeath.zIndex = 1000;
+    RemnantsDeath.visible = true;
+    this.visible = false;
+
+    RemnantsDeath.anim.play('BF dies');
+    }
+  }
+}

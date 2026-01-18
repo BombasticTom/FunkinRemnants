@@ -1,11 +1,12 @@
-import flixel.FlxG;
 import funkin.play.song.Song;
 import funkin.modding.module.ModuleHandler;
 import funkin.play.PlayState;
 import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
+import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.FlxG;
 
 /**
  * Apply middlescroll to the song.
@@ -13,8 +14,7 @@ import flixel.tweens.FlxTween;
 class BlazinBFRemnantsMixSong extends Song
 {
   var black:FunkinSprite;
-  var blackTween:FlxTween;
-  var hudTween:FlxTween;
+  var fadeOut:Bool = false;
 
   public function new()
   {
@@ -36,6 +36,7 @@ class BlazinBFRemnantsMixSong extends Song
 
     this.hasHidden = false;
     this.hasPlayedCutscene = false;
+    fadeOut = false;
 
     black = new FunkinSprite(-1600, -500);
     black.makeSolidColor(4200, 1800, 0xFF000000);
@@ -119,18 +120,36 @@ class BlazinBFRemnantsMixSong extends Song
     PlayState.instance.currentStage.getGirlfriend().x = 1110;
     PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x = 1400;
 
-    if (blackTween != null) blackTween.cancel();
-    if (hudTween != null) hudTween.cancel();
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    FlxTween.cancelTweensOf(black);
 
+    if (fadeOut)
+    {
+    FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+    fadeOut = false;
+    }
+    else
+    {
     black.alpha = 1;
-    PlayState.instance.camHUD.alpha = 1;
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
   }
 
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
 
-    blackTween = FlxTween.tween(black, {alpha: 0.5}, 10.66, {ease: FlxEase.linear});
+    FlxTween.tween(black, {alpha: 0.5}, 10.66, {ease: FlxEase.linear});
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -142,10 +161,12 @@ class BlazinBFRemnantsMixSong extends Song
       case 32:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
         black.alpha = 0;
+        fadeOut = true;
 
       case 352:
-        blackTween = FlxTween.tween(black, {alpha: 1}, 5, {ease: FlxEase.linear});
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5, {ease: FlxEase.linear});
+        FlxTween.tween(black, {alpha: 1}, 5, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5, {ease: FlxEase.linear});
+        fadeOut = false;
     }
   }
 }

@@ -2,15 +2,14 @@ import funkin.play.song.Song;
 import funkin.save.Save;
 import funkin.play.PlayState;
 import funkin.graphics.FunkinSprite;
-import flixel.FlxG;
+import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import flixel.FlxG;
 
 class RemnantsErectSong extends Song
 {
-  var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
-  var hudTween:FlxTween;
+  var fadeOut:Bool = false;
 
   function new()
   {
@@ -46,6 +45,7 @@ class RemnantsErectSong extends Song
 
     FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
   }
 
   function onSongRetry(event:ScriptEvent)
@@ -53,11 +53,29 @@ class RemnantsErectSong extends Song
     super.onSongRetry(event);
 
     FlxG.camera.stopFX();
-    if (hudTween != null) hudTween.cancel();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.disableKeys = false;
 
+    if (fadeOut)
+    {
+    FlxG.camera.fade(0xFF000000, 0.5, false);
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+    fadeOut = false;
+    }
+    else
+    {
     FlxG.camera.fade(0xFF000000, 0, false);
-    PlayState.instance.camGame.alpha = 1;
     PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.disableKeys = false;
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
   }
 
   function onSongStart(event:ScriptEvent):Void
@@ -74,11 +92,16 @@ class RemnantsErectSong extends Song
     switch (event.beat)
     {
       case 14:
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.linear});
+        fadeOut = true;
+
+      case 279:
+        PlayState.instance.disableKeys = true;
 
       case 284:
-        PlayState.instance.camGame.alpha = 0;
+        FlxG.camera.fade(0xFF000000, 0, false);
         PlayState.instance.camHUD.alpha = 0;
+        fadeOut = false;
     }
   }
 }

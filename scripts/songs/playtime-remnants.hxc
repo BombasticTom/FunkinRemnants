@@ -1,15 +1,14 @@
-import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.play.song.Song;
 import funkin.play.PlayState;
-import funkin.graphics.FunkinSprite;
-import flixel.FlxG;
+import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import funkin.play.stage.Stage;
+import flixel.FlxG;
 
 class PlaytimeRemnantsSong extends Song
 {
-  var hudTween:FlxTween;
+  var fadeOut:Bool = false;
 
   public function new()
   {
@@ -31,6 +30,7 @@ class PlaytimeRemnantsSong extends Song
 
     FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
   }
 
   function onSongRetry(event:ScriptEvent)
@@ -38,11 +38,44 @@ class PlaytimeRemnantsSong extends Song
     super.onSongRetry(event);
 
     FlxG.camera.stopFX();
-    if (hudTween != null) hudTween.cancel();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
+    if (fadeOut)
+    {
+    FlxG.camera.fade(0xFF000000, 0.5, false);
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+    fadeOut = false;
+    }
+    else
+    {
     FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
-    PlayState.instance.camGame.visible = true;
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+  }
+
+  function onPause()
+  {
+    FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongEnd(event:ScriptEvent):Void
+  {
+   FlxG.camera.stopFX();
   }
 
   function onSongStart(event:ScriptEvent):Void
@@ -59,20 +92,19 @@ class PlaytimeRemnantsSong extends Song
     switch (event.beat)
     {
       case 27:
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 2.1, {ease: FlxEase.smootherStepInOut});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 2.1, {ease: FlxEase.smootherStepInOut});
 
       case 31:
         PlayState.instance.camHUD.alpha = 0;
 
       case 32:
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.54, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.54, {ease: FlxEase.linear});
+        fadeOut = true;
 
       case 192:
         FlxG.camera.fade(0xFF000000, 0.54, false);
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.54, {ease: FlxEase.linear});
-
-      case 193:
-        PlayState.instance.camGame.visible = false;
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.54, {ease: FlxEase.linear});
+       fadeOut = false;
     }
   }
 }

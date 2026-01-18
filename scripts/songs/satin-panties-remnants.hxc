@@ -1,14 +1,15 @@
 import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.FlxG;
-import funkin.play.PlayState;
 
 class SatinPantiesRemnantsMixSong extends Song
 {
-  var hudTween:FlxTween;
+  var outro:Bool = false;
 
   public function new()
   {
@@ -36,30 +37,55 @@ class SatinPantiesRemnantsMixSong extends Song
     }
   }
 
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    outro = false;
+  }
+
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
 
+    if (!outro) return;
     FlxG.camera.stopFX();
-    if (hudTween != null) hudTween.cancel();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
-    FlxG.camera.fade(0xFF000000, 0, true);
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
-    PlayState.instance.camGame.visible = true;
+    FlxG.camera.fade(0xFF000000, 1, true);
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
+    PlayState.instance.tweenCameraToPosition(787, 400, 0, FlxEase.instant);
+    PlayState.instance.disableKeys = false;
+    outro = false;
+  }
+
+  function onPause()
+  {
+    FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongEnd(event:ScriptEvent):Void
+  {
+   FlxG.camera.stopFX();
   }
 
   function onBeatHit(event:ScriptEvent):Void
   {
     super.onBeatHit(event);
 
-    switch (event.beat)
+    if (event.beat == 176)
     {
-      case 176:
-        FlxG.camera.fade(0xFF000000, 4.2, false);
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
-
-      case 195:
-        PlayState.instance.camGame.visible = false;
+      FlxG.camera.fade(0xFF000000, 4.2, false);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
+      PlayState.instance.disableKeys = true;
+      outro = true;
     }
   }
 }

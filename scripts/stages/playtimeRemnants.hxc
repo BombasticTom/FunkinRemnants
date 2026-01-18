@@ -1,35 +1,18 @@
-import flixel.FlxG;
-import flixel.FlxSprite;
+import funkin.Conductor;
+import funkin.play.stage.Stage;
+import funkin.util.FlxTweenUtil;
+import funkin.graphics.FunkinSprite;
+import funkin.play.character.CharacterType;
+import funkin.graphics.shaders.RuntimeRainShader;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.PlayState;
 import flixel.math.FlxMath;
-import flixel.math.FlxPoint;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import flixel.util.FlxTimer;
-import funkin.audio.FunkinSound;
-import funkin.audio.FunkinSound;
-import funkin.Conductor;
-import funkin.graphics.framebuffer.BitmapDataUtil;
-import funkin.graphics.framebuffer.FixedBitmapData;
-import funkin.graphics.shaders.OverlayBlend;
-import funkin.graphics.shaders.RuntimeRainShader;
-import funkin.modding.base.ScriptedFlxRuntimeShader;
-import funkin.Paths;
-import funkin.play.PlayState;
-import funkin.play.stage.Stage;
 import openfl.filters.BlurFilter;
 import openfl.filters.ShaderFilter;
-import funkin.util.FlxTweenUtil;
-import openfl.utils.Assets;
-import flixel.addons.display.FlxTiledSprite;
-import StringTools;
-import flixel.addons.display.FlxRuntimeShader;
-import flixel.sound.FlxSound;
-import funkin.graphics.shaders.AdjustColorShader;
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
-import funkin.play.character.CharacterType;
-import funkin.graphics.FunkinSprite;
 import openfl.display.BitmapData;
+import flixel.FlxG;
 
 class PlaytimeRmenantsStage extends Stage
 {
@@ -126,6 +109,16 @@ class PlaytimeRmenantsStage extends Stage
       case CharacterType.GF:
         character.shader = colorShaderGf;
     }
+  }
+
+  function onPause()
+  {
+    FlxTweenUtil.pauseTweensOf(getNamedProp('Overlay'));
+  }
+
+  function onResume()
+  {
+    FlxTweenUtil.resumeTweensOf(getNamedProp('Overlay'));
   }
 
   function onBeatHit(event:ScriptEvent):Void
