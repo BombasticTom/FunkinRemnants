@@ -20,7 +20,7 @@
       "t": 4200,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -39,7 +39,7 @@
       "t": 9000,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -58,7 +58,7 @@
       "t": 13800,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -134,7 +134,7 @@
       "t": 23400,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -153,7 +153,7 @@
       "t": 28200,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -162,7 +162,7 @@
       "t": 28500,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -187,7 +187,7 @@
       "t": 33000,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -212,7 +212,7 @@
       "t": 37800,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -250,7 +250,7 @@
       "t": 42600,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -290,7 +290,7 @@
       "t": 52200,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -309,7 +309,7 @@
       "t": 57000,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -345,7 +345,7 @@
       "t": 61800,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -381,7 +381,7 @@
       "t": 66600,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -390,7 +390,7 @@
       "t": 66900,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -409,7 +409,7 @@
       "t": 71400,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -428,7 +428,7 @@
       "t": 76200,
       "e": "PlayAnimation",
       "v": {
-        "force": true,
+        "force": false,
         "anim": "hey",
         "target": "bf"
       }
@@ -449,7 +449,7 @@
       "e": "PlayAnimation",
       "v": {
         "anim": "hey",
-        "force": true,
+        "force": false,
         "target": "boyfriend"
       }
     }
