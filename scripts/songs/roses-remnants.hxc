@@ -157,7 +157,7 @@ class RosesRemnantsMixSong extends Song
     PlayState.instance.camHUD.alpha = 0;
     dead = true;
 
-    if (!outro) return;
+    if (outro)
     outro = false;
   }
 
@@ -175,7 +175,7 @@ class RosesRemnantsMixSong extends Song
 
   function onSongEnd(event:ScriptEvent):Void
   {
-   FlxG.camera.stopFX();
+    PlayState.instance.camGame.visible = false;
   }
 
   function onSongStart(event:ScriptEvent):Void

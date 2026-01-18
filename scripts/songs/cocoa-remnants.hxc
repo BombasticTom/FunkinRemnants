@@ -89,7 +89,7 @@ class CocoaRemnantsMixSong extends Song
 
   function onSongEnd(event:ScriptEvent):Void
   {
-   FlxG.camera.stopFX();
+    PlayState.instance.camGame.visible = false;
   }
 
   function onSongStart(event:ScriptEvent):Void

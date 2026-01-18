@@ -89,7 +89,7 @@ class PhillyNiceRemnantsMixSong extends Song
 
   function onSongEnd(event:ScriptEvent):Void
   {
-   FlxG.camera.stopFX();
+    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
