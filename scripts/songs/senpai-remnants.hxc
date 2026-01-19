@@ -147,9 +147,9 @@ class SenpaiRemnantsMixSong extends Song
 
     if (!dead) return;
     {
-    FlxG.camera.stopFX();
-    RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-    dead = false;
+      FlxG.camera.stopFX();
+      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      dead = false;
     }
   }
 

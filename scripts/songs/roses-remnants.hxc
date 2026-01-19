@@ -112,21 +112,21 @@ class RosesRemnantsMixSong extends Song
 
     if (intro)
     {
-    PlayState.instance.tweenCameraToPosition(710, 520, 0.001, FlxEase.instant);
+      PlayState.instance.tweenCameraToPosition(710, 520, 0.001, FlxEase.instant);
     }
 
     if (outro)
     {
-    FlxG.camera.fade(0xFF000000, 0, true);
-    RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-    FlxG.camera.stopFX();
-    outro = false;
+      FlxG.camera.fade(0xFF000000, 0, true);
+      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      FlxG.camera.stopFX();
+      outro = false;
     }
 
     if (dead)
     {
-    RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-    dead = false;
+      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      dead = false;
     }
   }
 
@@ -157,8 +157,7 @@ class RosesRemnantsMixSong extends Song
     PlayState.instance.camHUD.alpha = 0;
     dead = true;
 
-    if (outro)
-    outro = false;
+    if (outro) outro = false;
   }
 
   function onPause()

@@ -191,8 +191,8 @@ class ThornsRemnantsMixSong extends Song
 
     if (!dead) return;
     {
-    RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-    dead = false;
+      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      dead = false;
     }
   }
 

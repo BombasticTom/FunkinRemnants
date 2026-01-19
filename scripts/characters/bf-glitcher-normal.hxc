@@ -71,7 +71,6 @@ class BoyfriendGlitcherNormalCharacter extends MultiSparrowCharacter
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
 
-
   // Remnants Gameover instead of normal
   var RemnantsDeath:FunkinSprite;
 
@@ -80,13 +79,14 @@ class BoyfriendGlitcherNormalCharacter extends MultiSparrowCharacter
     return; // I dont have enough smarts to get this working
     if (normalChar.alpha >= 0.5)
     {
-    RemnantsDeath = FunkinSprite.createSparrow(0, 0, "characters/bf-DEAD-remnants", "shared");
-    PlayState.instance.add(RemnantsDeath);
-    RemnantsDeath.zIndex = 1000;
-    RemnantsDeath.visible = true;
-    this.visible = false;
+      RemnantsDeath = FunkinSprite.createSparrow(0, 0, "characters/bf-DEAD-remnants", "shared");
+      PlayState.instance.add(RemnantsDeath);
+      RemnantsDeath.zIndex = 1000;
+      RemnantsDeath.visible = true;
+      this.visible = false;
 
-    RemnantsDeath.anim.play('BF dies');
+      RemnantsDeath.anim.play('BF dies');
     }
   }
 }
+

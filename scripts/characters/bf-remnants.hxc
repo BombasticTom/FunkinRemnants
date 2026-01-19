@@ -70,7 +70,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
-    if (name == "hey" || name == "cheer" || name == "ugh" || name == "sigma" || name == "remnants" || name == "ligma") PlayState.instance.vocals.playerVolume = 1;
+    if (name == "hey" || name == "cheer" || name == "ugh" || name == "sigma" || name == "remnants" || name == "ligma")
+      PlayState.instance.vocals.playerVolume = 1;
 
     if (name == "fakeoutDeath" && !this.debug)
     {
@@ -85,8 +86,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
         doExplosionDeath();
       }
       else
-      // Standard death animation.
-      createDeathSprites();
+        // Standard death animation.
+        createDeathSprites();
 
       GameOverSubState.instance.add(loseSprite);
     }
@@ -107,11 +108,11 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
       }
     }
 
-      if (name != "fakeoutDeath")
-      {
-        super.playAnimation(name, restart, ignoreOther);
-      }
+    if (name != "fakeoutDeath")
+    {
+      super.playAnimation(name, restart, ignoreOther);
     }
+  }
 
   var bfFlicker:FlxFlicker = null;
 
@@ -137,8 +138,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
 
     if (fade)
     {
-    FlxTweenUtil.pauseTweensOf(bfFade);
-    FlxTweenUtil.pauseTweensOf(bfFade.scale);
+      FlxTweenUtil.pauseTweensOf(bfFade);
+      FlxTweenUtil.pauseTweensOf(bfFade.scale);
     }
 
     if (bfFlicker != null)
@@ -154,8 +155,8 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
 
     if (fade)
     {
-    FlxTweenUtil.resumeTweensOf(bfFade);
-    FlxTweenUtil.resumeTweensOf(bfFade.scale);
+      FlxTweenUtil.resumeTweensOf(bfFade);
+      FlxTweenUtil.resumeTweensOf(bfFade.scale);
     }
 
     if (bfFlicker != null)
@@ -333,9 +334,13 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
     bfFade.zIndex = this.zIndex - 3;
     addToStage(bfFade);
     FlxTween.tween(bfFade.scale, {x: 1.3, y: 1.3}, 0.4);
-    FlxTween.tween(bfFade, {alpha: 0}, 0.4, {ease: FlxEase.linear, onComplete: (_) -> {
-      fade = false;
-    }});
+    FlxTween.tween(bfFade, {alpha: 0}, 0.4,
+      {
+        ease: FlxEase.linear,
+        onComplete: (_) -> {
+          fade = false;
+        }
+      });
   }
 
   function addToStage(sprite:FlxSprite)
@@ -355,3 +360,4 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
     }
   }
 }
+
