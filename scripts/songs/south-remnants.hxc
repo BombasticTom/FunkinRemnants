@@ -63,14 +63,14 @@ class SoutRemnantsMixSong extends Song
 
     if (fadeOut)
     {
-    FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-    fadeOut = false;
+      FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      fadeOut = false;
     }
     else
     {
-    black.alpha = 1;
-    PlayState.instance.camHUD.alpha = 0;
+      black.alpha = 1;
+      PlayState.instance.camHUD.alpha = 0;
     }
   }
 
@@ -82,14 +82,14 @@ class SoutRemnantsMixSong extends Song
     fadeOut = false;
   }
 
-  function onPause() 
+  function onPause()
   {
     FlxG.camera?.active = false;
     FlxTweenUtil.pauseTweensOf(black);
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
-  function onResume() 
+  function onResume()
   {
     FlxG.camera?.active = true;
     FlxTweenUtil.resumeTweensOf(black);
@@ -155,3 +155,4 @@ class SoutRemnantsMixSong extends Song
     }
   }
 }
+

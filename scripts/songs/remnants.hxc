@@ -82,11 +82,11 @@ class RemnantsSong extends Song
 
     if (outro)
     {
-    FlxG.camera.stopFX();
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+      FlxG.camera.stopFX();
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
-    FlxG.camera.fade(0xFF000000, 1, true);
-    outro = false;
+      FlxG.camera.fade(0xFF000000, 1, true);
+      outro = false;
     }
     FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
     hasPlayedIntro = true;
@@ -128,7 +128,7 @@ class RemnantsSong extends Song
       case 272:
         FlxG.camera.fade(0xFF000000, 0.8, false);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.8, {ease: FlxEase.linear});
-	outro = true;
+        outro = true;
     }
   }
 }

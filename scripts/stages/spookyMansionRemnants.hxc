@@ -121,7 +121,10 @@ class SpookyMansionRemnantsStage extends Stage
     lightningStrikeBeat = beat;
     lightningStrikeOffset = FlxG.random.int(8, 24);
 
-    if (getBoyfriend().hasAnimation('scared') && getBoyfriend().animation.name != 'hey' && getBoyfriend().animation.name != 'cheer' && getBoyfriend().animation.name != 'lights')
+    if (getBoyfriend().hasAnimation('scared')
+      && getBoyfriend().animation.name != 'hey'
+      && getBoyfriend().animation.name != 'cheer'
+      && getBoyfriend().animation.name != 'lights')
     {
       getBoyfriend().playAnimation('scared', true, false);
     }

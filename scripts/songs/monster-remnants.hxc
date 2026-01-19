@@ -87,7 +87,7 @@ class MonsterRemnantsMixSong extends Song
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
-  function onResume() 
+  function onResume()
   {
     FlxG.camera?.active = true;
     FlxTweenUtil.resumeTweensOf(black);
@@ -134,3 +134,4 @@ class MonsterRemnantsMixSong extends Song
     }
   }
 }
+

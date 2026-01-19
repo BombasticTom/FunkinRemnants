@@ -42,14 +42,14 @@ class PlaytimeRemnantsSong extends Song
 
     if (fadeOut)
     {
-    FlxG.camera.fade(0xFF000000, 0.5, false);
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-    fadeOut = false;
+      FlxG.camera.fade(0xFF000000, 0.5, false);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      fadeOut = false;
     }
     else
     {
-    FlxG.camera.fade(0xFF000000, 0, false);
-    PlayState.instance.camHUD.alpha = 0;
+      FlxG.camera.fade(0xFF000000, 0, false);
+      PlayState.instance.camHUD.alpha = 0;
     }
   }
 
@@ -104,7 +104,7 @@ class PlaytimeRemnantsSong extends Song
       case 192:
         FlxG.camera.fade(0xFF000000, 0.54, false);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.54, {ease: FlxEase.linear});
-       fadeOut = false;
+        fadeOut = false;
     }
   }
 }

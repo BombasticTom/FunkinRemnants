@@ -126,14 +126,14 @@ class BlazinBFRemnantsMixSong extends Song
 
     if (fadeOut)
     {
-    FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
-    fadeOut = false;
+      FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+      fadeOut = false;
     }
     else
     {
-    black.alpha = 1;
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+      black.alpha = 1;
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
     }
   }
 
