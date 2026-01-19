@@ -25,7 +25,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     // NOTE: this.x and this.y are not properly set here.
 
     GameOverSubState.musicSuffix = '-remnants';
-    GameOverSubState.blueBallSuffix = '-bf-gutpunch';
+    GameOverSubState.blueBallSuffix = '-bf-nutpunch';
     PauseSubState.musicSuffix = '-remnants';
 
     this.zIndex = 2000;
@@ -39,8 +39,8 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
 
     if (!StringTools.startsWith(event?.note?.kind ?? '', 'weekend-1-')) return;
 
-    // SPECIAL CASE: If Pico hits a poor note at low health (at 30% chance),
-    // Pico may instead punch high (but Darnell will duck below Pico to attempt an uppercut)
+    // SPECIAL CASE: If BF hits a poor note at low health (at 30% chance),
+    // BF may instead punch high (but Darnell will duck below BF to attempt an uppercut)
     // TODO: Maybe add a cooldown to this?
     // NOTE: This relies on scripts dispatching to opponents first, which is true at time of writing.
     var shouldDoUppercutPrep = wasNoteHitPoorly(event) && isPlayerLowHealth() && isDarnellPreppingUppercut();
@@ -93,7 +93,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-dodgespin":
         playDodgeAnim();
 
-      // Pico ALWAYS gets punched.
+      // BF ALWAYS gets punched.
       case "weekend-1-hithigh":
         playHitHighAnim();
       case "weekend-1-hitlow":
@@ -101,9 +101,9 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-hitspin":
         playHitSpinAnim();
 
-      case "weekend-1-picouppercutprep":
+      case "weekend-1-bfuppercutprep":
         playUppercutPrepAnim();
-      case "weekend-1-picouppercut":
+      case "weekend-1-bfuppercut":
         playUppercutAnim(true);
 
       case "weekend-1-darnelluppercutprep":
@@ -144,7 +144,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       // TODO: ACTUALLY play one of the three death animations here.
 
       // Make sure the death music plays with PERFECT timing.
-      new FlxTimer().start(1.25, afterPicoDeathGutPunchIntro);
+      new FlxTimer().start(2.54, afterBFDeathNutPunchIntro);
     }
     else if (name == "deathConfirm")
     {
@@ -158,7 +158,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     super.playAnimation(name, restart, ignoreOther);
   }
 
-  function afterPicoDeathGutPunchIntro():Void
+  function afterBFDeathNutPunchIntro():Void
   {
     GameOverSubState.instance.startDeathMusic(1.0, false);
     playAnimation('deathLoop', true, false);
@@ -166,17 +166,17 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
 
   function doDeathConfirm():Void
   {
-    var picoDeathConfirm:FunkinSprite = FunkinSprite.createSparrow(this.x + 905, this.y + 1030, 'characters/bfBlazinDeathConfirm');
-    picoDeathConfirm.animation.addByPrefix('confirm', "BF Gut Punch Death0", 24, false);
-    picoDeathConfirm.animation.play('confirm');
-    picoDeathConfirm.scale.set(1.75, 1.75);
-    picoDeathConfirm.zIndex = 1000;
-    FlxG.state.subState.add(picoDeathConfirm);
-    picoDeathConfirm.visible = true;
+    var bfDeathConfirm:FunkinSprite = FunkinSprite.createSparrow(this.x + 905, this.y + 1030, 'characters/bfBlazinDeathConfirm');
+    bfDeathConfirm.animation.addByPrefix('confirm', "BF Nut Punch Death0", 24, false);
+    bfDeathConfirm.animation.play('confirm');
+    bfDeathConfirm.scale.set(1.75, 1.75);
+    bfDeathConfirm.zIndex = 1000;
+    FlxG.state.subState.add(bfDeathConfirm);
+    bfDeathConfirm.visible = true;
     this.visible = false;
 
-    picoDeathConfirm.animation.finishCallback = () -> {
-      picoDeathConfirm.visible = false;
+    bfDeathConfirm.animation.finishCallback = () -> {
+      bfDeathConfirm.visible = false;
       this.visible = true;
     }
   }
@@ -185,7 +185,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
   {
     holdTimer = 0;
 
-    // SPECIAL CASE: Darnell prepared to uppercut last time and Pico missed! FINISH HIM!
+    // SPECIAL CASE: Darnell prepared to uppercut last time and BF missed! FINISH HIM!
     if (isDarnellInUppercut())
     {
       playUppercutHitAnim();
@@ -207,7 +207,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     // Override the hit note animation.
     switch (event.note.kind)
     {
-      // Pico fails to punch, and instead gets hit!
+      // BF fails to punch, and instead gets hit!
       case "weekend-1-punchlow":
         playHitLowAnim();
       case "weekend-1-punchlowblocked":
@@ -217,7 +217,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-punchlowspin":
         playHitSpinAnim();
 
-      // Pico fails to punch, and instead gets hit!
+      // BF fails to punch, and instead gets hit!
       case "weekend-1-punchhigh":
         playHitHighAnim();
       case "weekend-1-punchhighblocked":
@@ -227,7 +227,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-punchhighspin":
         playHitSpinAnim();
 
-      // Pico fails to block, and instead gets hit!
+      // BF fails to block, and instead gets hit!
       case "weekend-1-blockhigh":
         playHitHighAnim();
       case "weekend-1-blocklow":
@@ -235,7 +235,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-blockspin":
         playHitSpinAnim();
 
-      // Pico fails to dodge, and instead gets hit!
+      // BF fails to dodge, and instead gets hit!
       case "weekend-1-dodgehigh":
         playHitHighAnim();
       case "weekend-1-dodgelow":
@@ -243,7 +243,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-dodgespin":
         playHitSpinAnim();
 
-      // Pico ALWAYS gets punched.
+      // BF ALWAYS gets punched.
       case "weekend-1-hithigh":
         playHitHighAnim();
       case "weekend-1-hitlow":
@@ -252,13 +252,13 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
         playHitSpinAnim();
 
       // Fail to dodge the uppercut.
-      case "weekend-1-picouppercutprep":
+      case "weekend-1-bfuppercutprep":
         playPunchHighAnim();
         cantUppercut = true;
-      case "weekend-1-picouppercut":
+      case "weekend-1-bfuppercut":
         playUppercutAnim(false);
 
-      // Darnell's attempt to uppercut, Pico dodges or gets hit.
+      // Darnell's attempt to uppercut, BF dodges or gets hit.
       case "weekend-1-darnelluppercutprep":
         playIdleAnim();
       case "weekend-1-darnelluppercut":
@@ -313,12 +313,12 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
   {
     if (willMissBeLethal(event))
     {
-      // Darnell throws a punch so that Pico dies.
+      // Darnell throws a punch so that BF dies.
       playHitLowAnim();
     }
     else
     {
-      // Pico wildly throws punches but Darnell dodges.
+      // BF wildly throws punches but Darnell dodges.
       playPunchHighAnim();
     }
   }
@@ -335,7 +335,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     playIdleAnim();
 
     GameOverSubState.musicSuffix = '-remnants';
-    GameOverSubState.blueBallSuffix = '-bf-gutpunch';
+    GameOverSubState.blueBallSuffix = '-bf-nutpunch';
   }
 
   function getDarnell()
