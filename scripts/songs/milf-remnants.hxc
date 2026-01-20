@@ -428,7 +428,7 @@ class MILFRemnantsMixSong extends Song
 
           // Have GF play the duck animation.
           PlayState.instance.currentStage.getGirlfriend().playAnimation('duck', true, true);
-          PlayState.instance.currentStage.getDad().playAnimation('singDOWN', true, true);
+          PlayState.instance.currentStage.getDad().playAnimation('dodge', true, true);
         }
 
         // Move the lamp across the screen
