@@ -34,10 +34,11 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
     PauseSubState.musicSuffix = '-remnants';
     fade = false;
 
-    if (!this.debug)
-    { // Gotta do it like this because the editor freaks out.
+    if (!this.debug) // Gotta do it like this because the editor freaks out.
+    {
       if (PlayState.instance.currentSong.id == null) return;
-      if (['south'].contains(PlayState.instance.currentSong.id)) shouldAlternate = true;
+      if (['south'].contains(PlayState.instance.currentSong.id))
+        shouldAlternate = true;
       else
         shouldAlternate = false;
     }

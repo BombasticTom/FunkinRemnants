@@ -62,17 +62,21 @@ class BoyfriendRemnantsDarkCharacter extends MultiSparrowCharacter
   function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
-    normalChar = CharacterDataParser.fetchCharacter('bf-remnants');
-    normalChar.flipX = false;
-    normalChar.zIndex = 299;
 
-    PlayState.instance.currentStage.add(normalChar);
-    PlayState.instance.currentStage.refresh(); // Apply z-index.
+    if (!this.debug) // Gotta do it like this because the editor freaks out.
+    {
+      normalChar = CharacterDataParser.fetchCharacter('bf-remnants');
+      normalChar.flipX = false;
+      normalChar.zIndex = 299;
 
-    if (!this.debug)
-    { // Gotta do it like this because the editor freaks out.
-      if (PlayState.instance.currentSong.id == null) return;
-      if (['south'].contains(PlayState.instance.currentSong.id)) shouldAlternate = true;
+      if (PlayState.instance.currentSong.id == null)
+        return;
+
+      PlayState.instance.currentStage.add(normalChar);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+      if (['south'].contains(PlayState.instance.currentSong.id))
+        shouldAlternate = true;
       else
         shouldAlternate = false;
     }
