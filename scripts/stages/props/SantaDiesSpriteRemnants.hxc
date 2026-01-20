@@ -1,6 +1,7 @@
 import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import flixel.math.FlxPoint;
 import flixel.FlxSprite;
+import funkin.audio.FunkinSound;
 import funkin.graphics.FunkinSprite;
 import funkin.play.PlayState;
 import flixel.FlxG;
@@ -31,6 +32,8 @@ class SantaDiesSpriteRemnants extends FlxAtlasSprite
 
   public function playMonsterComingOut():Void
   {
+    FunkinSound.playOnce(Paths.sound("spookBeforeChristmas"), 1.0);
+
     this.playAnimation("Monster coming out Santa", false, false, false, 0);
     onAnimationComplete.addOnce(onFinishAnim);
   }
