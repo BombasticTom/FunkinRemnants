@@ -1,9 +1,10 @@
+import funkin.ui.freeplay.FreeplayState;
 import funkin.modding.module.Module;
 import funkin.audio.FunkinSound;
 import funkin.util.ReflectUtil;
 import funkin.Paths;
 import flixel.FlxG;
-// remnants specific imports, you can remove these.
+import StringTools;
 
 /**
  * A Module that replaces music with different audio.
