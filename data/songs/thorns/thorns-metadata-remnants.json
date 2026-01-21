@@ -2,7 +2,7 @@
   "version": "2.2.4",
   "songName": "Thorns (Remnants Mix)",
   "artist": "LunarzNova",
-  "charter": "RhysRJJ + Sammy The Goog",
+  "charter": "RhysRJJ",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -25,7 +25,7 @@
     },
     "stage": "schoolEvilRemnants",
     "noteStyle": "pixel",
-    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "ratings": { "easy": 9, "normal": 10, "hard": 11 },
     "album": "remnants-week6",
     "previewStart": 0,
     "previewEnd": 15000

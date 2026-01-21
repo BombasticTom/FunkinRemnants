@@ -1,8 +1,13 @@
 import funkin.play.character.SparrowCharacter;
+import funkin.play.character.CharacterType;
 import flixel.tweens.FlxEase;
 import funkin.play.PlayState;
 import flixel.math.FlxMath;
 import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.tweens.FlxTween;
+import funkin.util.FlxTweenUtil;
+import flixel.effects.FlxFlicker;
 
 class DadRemnantsCharacter extends SparrowCharacter
 {
@@ -15,6 +20,8 @@ class DadRemnantsCharacter extends SparrowCharacter
    * Extra offset factor for kicking.
    */
   var curKickOffset:Float = 0;
+
+  var fade:Bool = false;
 
   public function new()
   {
@@ -46,6 +53,112 @@ class DadRemnantsCharacter extends SparrowCharacter
     var output:FlxPoint = super.getScreenPosition(result, camera);
     output.x += curKickOffset;
     return output;
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (event.eventCanceled) return;
+
+    switch (event.note.kind)
+    {
+      case "battle-prepare-remnants":
+        playDadCockAura();
+      default:
+        super.onNoteHit(event);
+    }
+  }
+
+  function onCreate(event:ScriptEvent)
+  {
+    super.onCreate(event);
+    fade = false;
+  }
+
+  function playDadCockAura()
+  {
+    fade = true;
+    dadFade = new FlxSprite(0, 0);
+    dadFade.frames = this.frames;
+    dadFade.frame = this.frame;
+    dadFade.updateHitbox();
+    dadFade.x = this.x;
+    dadFade.y = this.y;
+    // dadFade.stamp(this, 0, 0);
+    dadFade.alpha = 0.3;
+    dadFade.zIndex = this.zIndex - 3;
+    addToStage(dadFade);
+    FlxTween.tween(dadFade.scale, {x: 1.3, y: 1.3}, 0.4);
+    FlxTween.tween(dadFade, {alpha: 0}, 0.4,
+      {
+        ease: FlxEase.linear,
+        onComplete: (_) -> {
+          fade = false;
+        }
+      });
+  }
+
+  var dadFlicker:FlxFlicker = null;
+
+  override function onAnimationFinished(name:String)
+  {
+    super.onAnimationFinished(name);
+
+    if (name == 'hit')
+    {
+      // ERIC: You have to use super instead of this or it breaks.
+      // This is because typeof(this) is PolymodAbstractClass.
+      dadFlicker = FlxFlicker.flicker(super, 1, 1 / 30, true, true, function(_) {
+        dadFlicker = FlxFlicker.flicker(super, 0.5, 1 / 60, true, true, function(_) {
+          dadFlicker = null;
+        });
+      });
+    }
+  }
+
+  function onPause()
+  {
+    if (fade)
+    {
+      FlxTweenUtil.pauseTweensOf(dadFade);
+      FlxTweenUtil.pauseTweensOf(dadFade.scale);
+    }
+
+    if (dadFlicker != null)
+    {
+      dadFlicker.pause();
+      this.visible = true;
+    }
+  }
+
+  function onResume()
+  {
+    if (fade)
+    {
+      FlxTweenUtil.resumeTweensOf(dadFade);
+      FlxTweenUtil.resumeTweensOf(dadFade.scale);
+    }
+
+    if (dadFlicker != null)
+    {
+      dadFlicker.resume();
+    }
+  }
+
+  function addToStage(sprite:FlxSprite)
+  {
+    if (this.debug)
+    {
+      // We are in the chart editor or something.
+      // TODO: Make this work properly.
+    }
+    else if (PlayState.instance != null && PlayState.instance.currentStage != null)
+    {
+      PlayState.instance.currentStage.add(sprite);
+    }
+    else
+    {
+      trace('Could not add Dad sprite to stage.');
+    }
   }
 }
 

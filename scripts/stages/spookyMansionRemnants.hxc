@@ -1,13 +1,14 @@
 import flixel.FlxG;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
 import funkin.audio.FunkinSound;
 import funkin.graphics.FunkinSprite;
 import funkin.ui.FullScreenScaleMode;
 import funkin.play.stage.Stage;
-import funkin.util.HapticUtil;
 import funkin.play.PlayState;
-import flixel.util.FlxTimer;
+import funkin.util.HapticUtil;
+import funkin.util.FlxTweenUtil;
 
 class SpookyMansionRemnantsStage extends Stage
 {
@@ -120,14 +121,17 @@ class SpookyMansionRemnantsStage extends Stage
     lightningStrikeBeat = beat;
     lightningStrikeOffset = FlxG.random.int(8, 24);
 
-    if (getBoyfriend().hasAnimation('scared') && getBoyfriend().animation.name != 'cheer')
+    if (getBoyfriend().hasAnimation('scared')
+      && getBoyfriend().animation.name != 'hey'
+      && getBoyfriend().animation.name != 'cheer'
+      && getBoyfriend().animation.name != 'lights')
     {
-      getBoyfriend().playAnimation('scared', true, true);
+      getBoyfriend().playAnimation('scared', true, false);
     }
 
     if (getGirlfriend().hasAnimation('scared'))
     {
-      getGirlfriend().playAnimation('scared', true, true);
+      getGirlfriend().playAnimation('scared', true, false);
     }
 
     triggerLightningHaptics();
@@ -164,6 +168,32 @@ class SpookyMansionRemnantsStage extends Stage
     return results;
   }
 
+  function onPause()
+  {
+    FlxTweenUtil.pauseTweensOf(getGirlfriend());
+    FlxTweenUtil.pauseTweensOf(getBoyfriend());
+    FlxTweenUtil.pauseTweensOf(getDad());
+    FlxTweenUtil.pauseTweensOf(getNamedProp('sky'));
+    FlxTweenUtil.pauseTweensOf(getNamedProp('mansionThunder'));
+    FlxTweenUtil.pauseTweensOf(getNamedProp('paintingThunder'));
+    FlxTweenUtil.pauseTweensOf(getNamedProp('coatThunder'));
+    FlxTweenUtil.pauseTweensOf(getNamedProp('cabinetThunder'));
+    FlxTweenUtil.pauseTweensOf(halloweenWhite);
+  }
+
+  function onResume()
+  {
+    FlxTweenUtil.resumeTweensOf(getGirlfriend());
+    FlxTweenUtil.resumeTweensOf(getBoyfriend());
+    FlxTweenUtil.resumeTweensOf(getDad());
+    FlxTweenUtil.resumeTweensOf(getNamedProp('sky'));
+    FlxTweenUtil.resumeTweensOf(getNamedProp('mansionThunder'));
+    FlxTweenUtil.resumeTweensOf(getNamedProp('paintingThunder'));
+    FlxTweenUtil.resumeTweensOf(getNamedProp('coatThunder'));
+    FlxTweenUtil.resumeTweensOf(getNamedProp('cabinetThunder'));
+    FlxTweenUtil.resumeTweensOf(halloweenWhite);
+  }
+
   function onBeatHit(event:SongTimeScriptEvent)
   {
     super.onBeatHit(event);
@@ -179,11 +209,12 @@ class SpookyMansionRemnantsStage extends Stage
 
     if (PlayState.instance.currentSong != null)
     {
-      if (event.beat == 140 && PlayState.instance.currentSong.id == "spookeez")
+      if (event.beat == 139 && PlayState.instance.currentSong.id == "spookeez")
       {
-        changeAmbiance(true, 0.1);
+        new FlxTimer().start(0.3, _ -> {
+          changeAmbiance(true, 0.1);
+        });
       }
-
       if (PlayState.instance.currentSong.id == "south")
       {
         switch (event.beat)
@@ -221,6 +252,15 @@ class SpookyMansionRemnantsStage extends Stage
     var targetAlpha:Float = goDark ? 1 : 0;
     wentDark = goDark;
 
+    // Cancel tweens just in case thunder strikes so they can actaully work here
+    FlxTween.cancelTweensOf(getGirlfriend());
+    FlxTween.cancelTweensOf(getBoyfriend());
+    FlxTween.cancelTweensOf(getDad());
+    FlxTween.cancelTweensOf(getNamedProp('mansionThunder'));
+    FlxTween.cancelTweensOf(getNamedProp('paintingThunder'));
+    FlxTween.cancelTweensOf(getNamedProp('coatThunder'));
+    FlxTween.cancelTweensOf(getNamedProp('cabinetThunder'));
+
     if (getGirlfriend() != null) FlxTween.tween(getGirlfriend(), {alpha: targetAlpha}, duration);
     if (getBoyfriend() != null) FlxTween.tween(getBoyfriend(), {alpha: targetAlpha}, duration);
     if (getDad() != null) FlxTween.tween(getDad(), {alpha: targetAlpha}, duration);
@@ -256,7 +296,12 @@ class SpookyMansionRemnantsStage extends Stage
   function onGameOver(event:ScriptEvent)
   {
     super.onGameOver(event);
+
     stopThunders = true;
+
+    // Makes bros death actaully visible
+    FlxTween.cancelTweensOf(getBoyfriend());
+    getBoyfriend()?.alpha = 1;
   }
 
   function onSongRetry(event:ScriptEvent)

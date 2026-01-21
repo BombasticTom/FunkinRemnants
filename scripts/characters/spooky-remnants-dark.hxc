@@ -1,13 +1,8 @@
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
-import flixel.FlxG;
-import funkin.audio.FunkinSound;
-import funkin.play.GameOverSubState;
 import funkin.play.character.BaseCharacter;
+import funkin.play.character.SparrowCharacter;
 import funkin.data.character.CharacterDataParser;
 import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
-import funkin.play.character.SparrowCharacter;
-import funkin.util.HapticUtil;
 
 class SpookyRemnantsDarkCharacter extends SparrowCharacter
 {
@@ -37,17 +32,33 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
       normalChar.playAnimation(name, restart, ignoreOther);
       normalChar.setPosition(this.x, this.y);
     }
+
+    if (name == 'idleToDance')
+      shouldAlternate = true;
+
+    if (name == 'danceToIdle')
+      shouldAlternate = false;
   }
 
   function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
-    normalChar = CharacterDataParser.fetchCharacter('spooky-remnants');
-    normalChar.flipX = false;
-    normalChar.zIndex = 199;
+    if (!this.debug)
+    {
+      normalChar = CharacterDataParser.fetchCharacter('spooky-remnants');
+      normalChar.flipX = false;
+      normalChar.zIndex = 199;
 
-    PlayState.instance.currentStage.add(normalChar);
-    PlayState.instance.currentStage.refresh(); // Apply z-index.
+      if (PlayState.instance.currentSong.id == null)
+        return;
+
+      PlayState.instance.currentStage.add(normalChar);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+      if (['spookeez'].contains(PlayState.instance.currentSong.id))
+        shouldAlternate = false;
+      else
+        shouldAlternate = true;
+    }
   }
 }
 

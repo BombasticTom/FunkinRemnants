@@ -1,17 +1,16 @@
 import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
+import funkin.play.PlayState;
 import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
+import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.FlxG;
-import funkin.play.PlayState;
 
 class PhillyNiceRemnantsMixSong extends Song
 {
-  var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
-  var hudTween:FlxTween;
+  var fadeOut:Bool = false;
 
   public function new()
   {
@@ -33,6 +32,7 @@ class PhillyNiceRemnantsMixSong extends Song
 
     FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
   }
 
   function onCountdownStart(event:ScriptEvent):Void
@@ -52,11 +52,44 @@ class PhillyNiceRemnantsMixSong extends Song
     super.onSongRetry(event);
 
     FlxG.camera.stopFX();
-    if (hudTween != null) hudTween.cancel();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
-    FlxG.camera.fade(0xFF000000, 0, false);
+    if (fadeOut)
+    {
+      FlxG.camera.fade(0xFF000000, 0.5, false);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      fadeOut = false;
+    }
+    else
+    {
+      FlxG.camera.fade(0xFF000000, 0, false);
+      PlayState.instance.camHUD.alpha = 0;
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camHUD.alpha = 0;
-    PlayState.instance.camGame.visible = true;
+    fadeOut = false;
+  }
+
+  function onPause()
+  {
+    FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongEnd(event:ScriptEvent):Void
+  {
+    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -69,16 +102,17 @@ class PhillyNiceRemnantsMixSong extends Song
         FlxG.camera.fade(0xFF000000, 1.72, true);
 
       case 6:
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.69, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.69, {ease: FlxEase.linear});
+
+      case 75:
+        fadeOut = true;
 
       case 328:
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.74, {ease: FlxEase.smootherStepOut});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.74, {ease: FlxEase.smootherStepOut});
+        fadeOut = false;
 
       case 352:
         FlxG.camera.fade(0xFF000000, 2.74, false);
-
-      case 367:
-        PlayState.instance.camGame.visible = false;
     }
   }
 }

@@ -32,11 +32,10 @@ class RemnantsOptions extends Module
   {
     if (!Std.isOfType(event.targetState, OptionsState) || event.targetState.optionsCodex.pages.get("preferences") == null) return;
 
-    event.targetState.optionsCodex.pages.get("preferences")
-      .createPrefItemCheckbox(OPTION_NAME, OPTION_DESC, function(value:Bool):Void {
-        Save.instance.modOptions.set('remnantsBumpers', value);
-        Save.instance.flush();
-      }, Save.instance.modOptions.get('remnantsBumpers'));
+    event.targetState.optionsCodex.pages.get("preferences").createPrefItemCheckbox(OPTION_NAME, OPTION_DESC, function(value:Bool):Void {
+      Save.instance.modOptions.set('remnantsBumpers', value);
+      Save.instance.flush();
+    }, Save.instance.modOptions.get('remnantsBumpers'));
   }
 
   /**

@@ -1,0 +1,115 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import funkin.save.Save;
+import funkin.graphics.FunkinSprite;
+import funkin.util.FlxTweenUtil;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxSprite;
+import flixel.FlxG;
+
+class TormentorSong extends Song
+{
+  var fadeOut:Bool = false;
+
+  public function new()
+  {
+    super('tormentor');
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
+    {
+      return !Save.instance.hasBeatenSong(this.id, null, '');
+    }
+    return false;
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.disableKeys = true;
+    fadeOut = false;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+
+    PlayState.instance.disableKeys = true;
+
+    if (fadeOut)
+    {
+      FlxG.camera.fade(0xFF000000, 0.5, false);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      fadeOut = false;
+    }
+    else
+    {
+      FlxG.camera.fade(0xFF000000, 0, false);
+      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camGame.alpha = 1;
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+  }
+
+  function onPause()
+  {
+    FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    FlxG.camera.fade(0xFF000000, 3, true);
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    switch (event.beat)
+    {
+      case 14:
+        FlxG.camera.fade(0xFF000000, 0.15, false);
+
+      case 16:
+        FlxG.camera.fade(0xFF000000, 0.15, true);
+        PlayState.instance.disableKeys = false;
+        fadeOut = true;
+
+      case 27:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.81, {ease: FlxEase.linear});
+
+      case 320:
+        PlayState.instance.camHUD.alpha = 0;
+        PlayState.instance.camGame.alpha = 0;
+        PlayState.instance.disableKeys = true;
+        fadeOut = false;
+    }
+  }
+}
+

@@ -1,0 +1,141 @@
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.util.FlxColor;
+import flixel.util.FlxGradient;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.module.Module;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.data.freeplay.player.PlayerRegistry;
+import flixel.addons.display.FlxBackdrop;
+import funkin.graphics.shaders.TextureSwap;
+import flixel.graphics.frames.FlxBitmapFont;
+import funkin.ui.title.TitleState;
+import funkin.graphics.FunkinCamera;
+import flixel.effects.FlxFlicker;
+import flixel.math.FlxBasePoint;
+import funkin.play.ResultState;
+import funkin.play.PlayState;
+import funkin.util.Constants;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import funkin.util.TouchUtil;
+import funkin.util.SwipeUtil;
+import StringTools;
+import Std;
+
+@:privateAccess
+class RemnantsTitle extends Module
+{
+  // Thing to prevent the code from running more than one time.
+  var codeWasRun:Bool = false;
+
+  var remnantsGF:FunkinSprite;
+  var danceLeft:Bool = false;
+  var confirmed:Bool = false;
+
+  public function new()
+  {
+    super('RemnantsTitle');
+  }
+
+  override function onStateChangeEnd(event:ScriptEvent):Void
+  {
+    super.onStateChangeEnd(event);
+    codeWasRun = false;
+    confirmed = false;
+  }
+
+  override function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    if (Std.isOfType(FlxG.state, TitleState))
+    {
+      if (!codeWasRun)
+      {
+        codeWasRun = true;
+
+        // Just replace the assets when the player is a remnants player!
+        var characters:Array<String> = PlayerRegistry.instance.listNewCharacters();
+        characters.push(FreeplayState.rememberedCharacterId);
+
+        for (charId in characters)
+        {
+          if (charId != null && StringTools.contains(charId, 'remnants'))
+          {
+            FlxG.state.gfDance.visible = false;
+            FlxG.state.logoBl.visible = false;
+
+            var stageBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("remnants/Stage", "week1"));
+            stageBG.setGraphicSize(FlxG.width);
+            stageBG.updateHitbox();
+            stageBG.y += 100;
+
+            remnantsGF = FunkinSprite.createSparrow(0, 0, 'characters/gf-remnants');
+            remnantsGF.animation.addByIndices('danceLeft', 'GF Dancing Beat0', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+            remnantsGF.animation.addByIndices('danceRight', 'GF Dancing Beat0', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+            remnantsGF.animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+            remnantsGF.setGraphicSize(Std.int(remnantsGF.width * 0.55));
+            remnantsGF.updateHitbox();
+            remnantsGF.screenCenter();
+            remnantsGF.y += 75;
+
+            var remnantsLogo:FunkinSprite = FunkinSprite.create(0, 0, 'remnantsLogo');
+            remnantsLogo.setGraphicSize(Std.int(remnantsLogo.width * 0.1));
+            remnantsLogo.antialiasing = true;
+            remnantsLogo.updateHitbox();
+            remnantsLogo.screenCenter();
+            remnantsLogo.y -= 225;
+
+            var logoTrail:FunkinSprite = FunkinSprite.create(0, 0, 'remnantsLogo');
+            logoTrail.setGraphicSize(Std.int(logoTrail.width * 0.1));
+            logoTrail.antialiasing = true;
+            logoTrail.color = 0xFF0C2F5D;
+            logoTrail.updateHitbox();
+            logoTrail.screenCenter();
+            logoTrail.y -= 225;
+
+            FlxTween.tween(remnantsLogo, {y: remnantsLogo.y + 25}, 0.6, {ease: FlxEase.quadInOut, type: 4});
+            FlxTween.tween(logoTrail, {y: logoTrail.y + 25}, 0.6, {ease: FlxEase.quadInOut, type: 4, startDelay: 0.1});
+
+            FlxG.state.insert(5, stageBG);
+            FlxG.state.insert(6, remnantsGF);
+            FlxG.state.insert(7, logoTrail);
+            FlxG.state.insert(8, remnantsLogo);
+
+            stageBG.shader = FlxG.state?.swagShader?.shader;
+            remnantsGF.shader = FlxG.state?.swagShader?.shader;
+            remnantsLogo.shader = FlxG.state?.swagShader?.shader;
+            logoTrail.shader = FlxG.state?.swagShader?.shader;
+          }
+        }
+      }
+
+      var pressedEnter:Bool = FlxG.keys.justPressed.ENTER;
+      if (FlxG.onMobile) pressedEnter = (TouchUtil.justReleased && !SwipeUtil.justSwipedAny);
+
+      if (pressedEnter && remnantsGF != null && !confirmed)
+      {
+        confirmed = true;
+        remnantsGF?.animation?.play('cheer', true);
+      }
+    }
+  }
+
+  override function onBeatHit(event)
+  {
+    super.onBeatHit(event);
+
+    if (Std.isOfType(FlxG.state, TitleState))
+    {
+      danceLeft = !danceLeft;
+
+      if (remnantsGF != null && remnantsGF.animation != null && !confirmed)
+      {
+        if (danceLeft) remnantsGF?.animation?.play('danceRight');
+        else remnantsGF?.animation?.play('danceLeft');
+      }
+    }
+  }
+}

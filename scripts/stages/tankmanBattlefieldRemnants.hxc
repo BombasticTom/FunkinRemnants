@@ -198,6 +198,12 @@ class TankmanBattlefieldRemnantsStage extends Stage
     FlxTweenUtil.pauseTweensOf(tankParachute3);
     FlxTweenUtil.pauseTweensOf(boxParachute1);
     FlxTweenUtil.pauseTweensOf(boxParachute2);
+    FlxTweenUtil.pauseTweensOf(storm0);
+    FlxTweenUtil.pauseTweensOf(storm1);
+    FlxTweenUtil.pauseTweensOf(storm2);
+    FlxTweenUtil.pauseTweensOf(storm3);
+    FlxTweenUtil.pauseTweensOf(storm4);
+    FlxTweenUtil.pauseTweensOf(storm5);
   }
 
   public override function onResume(event:ScriptEvent)
@@ -209,6 +215,12 @@ class TankmanBattlefieldRemnantsStage extends Stage
     FlxTweenUtil.resumeTweensOf(tankParachute3);
     FlxTweenUtil.resumeTweensOf(boxParachute1);
     FlxTweenUtil.resumeTweensOf(boxParachute2);
+    FlxTweenUtil.resumeTweensOf(storm0);
+    FlxTweenUtil.resumeTweensOf(storm1);
+    FlxTweenUtil.resumeTweensOf(storm2);
+    FlxTweenUtil.resumeTweensOf(storm3);
+    FlxTweenUtil.resumeTweensOf(storm4);
+    FlxTweenUtil.resumeTweensOf(storm5);
   }
 
   var tankMoving:Bool = false;
@@ -270,6 +282,14 @@ class TankmanBattlefieldRemnantsStage extends Stage
   {
     if (duration == null) duration = 1;
 
+    // Prevent new tweens from being overridden
+    FlxTween.cancelTweensOf(storm0);
+    FlxTween.cancelTweensOf(storm1);
+    FlxTween.cancelTweensOf(storm2);
+    FlxTween.cancelTweensOf(storm3);
+    FlxTween.cancelTweensOf(storm4);
+    FlxTween.cancelTweensOf(storm5);
+
     FlxTween.tween(storm0, {alpha: 1}, duration);
     FlxTween.tween(storm1, {alpha: 0.9}, duration);
     FlxTween.tween(storm2, {alpha: 1}, duration);
@@ -280,13 +300,22 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
   function stormOff(duration:Float)
   {
-    var storms = [storm0, storm1, storm2, storm3, storm4, storm5];
     if (duration == null) duration = 1;
 
-    for (storm in storms)
-    {
-      if (storm != null) FlxTween.tween(storm, {alpha: 0}, duration);
-    }
+    // Prevent new tweens from being overridden
+    FlxTween.cancelTweensOf(storm0);
+    FlxTween.cancelTweensOf(storm1);
+    FlxTween.cancelTweensOf(storm2);
+    FlxTween.cancelTweensOf(storm3);
+    FlxTween.cancelTweensOf(storm4);
+    FlxTween.cancelTweensOf(storm5);
+
+    FlxTween.tween(storm0, {alpha: 0}, duration);
+    FlxTween.tween(storm1, {alpha: 0}, duration);
+    FlxTween.tween(storm2, {alpha: 0}, duration);
+    FlxTween.tween(storm3, {alpha: 0}, duration);
+    FlxTween.tween(storm4, {alpha: 0}, duration);
+    FlxTween.tween(storm5, {alpha: 0}, duration);
   }
 
   function onSongRetry(event:ScriptEvent)

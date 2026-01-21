@@ -3,7 +3,220 @@
   "description": "A Remix Mod with a cool style and nods to Early Funkin' Content.",
   "contributors": [
     {
-      "name": "SPG64"
+      "name": "SPG64",
+      "role": "Director, Artist, Animator, Coder, Charter",
+      "email": null,
+      "url": "https://spg64.straw.page"
+    },
+    {
+      "name": "Ame",
+      "role": "Composer",
+      "email": null,
+      "url": "https://yusxki.carrd.co"
+    },
+    {
+      "name": "ChazbillYT",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://x.com/ChazbillYT"
+    },
+    {
+      "name": "CoolJ4334",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://x.com/CoolJ4334"
+    },
+    {
+      "name": "DagaiTai",
+      "role": "Composer",
+      "email": null,
+      "url": "https://dagaitai.carrd.co"
+    },
+    {
+      "name": "DigitLuck",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://digitluck.straw.page"
+    },
+    {
+      "name": "FellowDesert51",
+      "role": "Guest Composer",
+      "email": null,
+      "url": "https://www.youtube.com/@FDesert51"
+    },
+    {
+      "name": "fishgarden",
+      "role": "Composer, Extra Artwork",
+      "email": null,
+      "url": "https://x.com/fishgarden"
+    },
+    {
+      "name": "FrenchOtter",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://www.youtube.com/@frenchotter"
+    },
+    {
+      "name": "FrikkoFrik",
+      "role": "Composer",
+      "email": null,
+      "url": "https://frikkofrik.straw.page"
+    },
+    {
+      "name": "GENZU",
+      "role": "Composer",
+      "email": null,
+      "url": "https://gen-zu.carrd.co"
+    },
+    {
+      "name": "Honton129",
+      "role": "Coder, Art, Animation",
+      "email": null,
+      "url": "https://x.com/honton129"
+    },
+    {
+      "name": "Jotacast",
+      "role": "Composer",
+      "email": null,
+      "url": "https://jotacast.straw.page"
+    },
+    {
+      "name": "JRetrioX",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://jretriox.newgrounds.com"
+    },
+    {
+      "name": "katsuki",
+      "role": "Composer",
+      "email": null,
+      "url": "https://katsukimedia.carrd.co"
+    },
+    {
+      "name": "KazKazzi9",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://x.com/KazKazzi9"
+    },
+    {
+      "name": "kuronamii",
+      "role": "Composer",
+      "email": null,
+      "url": "https://x.com/kuronamiiz"
+    },
+    {
+      "name": "LinkstormZ",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://www.youtube.com/@Linkstormz"
+    },
+    {
+      "name": "Loopy Boop",
+      "role": "Composer",
+      "email": null,
+      "url": "https://x.com/loopyboop_"
+    },
+    {
+      "name": "LunarzNova",
+      "role": "Composer",
+      "email": null,
+      "url": "https://x.com/LunarzNova"
+    },
+    {
+      "name": "MarkedAman",
+      "role": "Composer, Editing",
+      "email": null,
+      "url": "https://www.youtube.com/@mrkedaman"
+    },
+    {
+      "name": "Mykarm",
+      "role": "Artist/Animator",
+      "email": null,
+      "url": "https://x.com/Mykarm09"
+    },
+    {
+      "name": "PhantoAnimo",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://x.com/duffbeerphanto"
+    },
+    {
+      "name": "Plush",
+      "role": "Charter, Extra Coder",
+      "email": null,
+      "url": "https://x.com/PlusherX"
+    },
+    {
+      "name": "PrinceLOLz",
+      "role": "Composer",
+      "email": null,
+      "url": "https://linktr.ee/prod.princelolz"
+    },
+    {
+      "name": "PsykoEvie",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://linktr.ee/psykoevie"
+    },
+    {
+      "name": "RhysRJJ",
+      "role": "Charter",
+      "email": null,
+      "url": "https://rhysrjj.straw.page"
+    },
+    {
+      "name": "RubyyyButCool",
+      "role": "Composer",
+      "email": null,
+      "url": "https://linktr.ee/RubyyyDubyyy"
+    },
+    {
+      "name": "Sammy The Goog",
+      "role": "Charter, Extra Coder",
+      "email": "sammytheman61@gmail.com",
+      "url": "https://www.youtube.com/@SammyTheGoog"
+    },
+    {
+      "name": "Shinidami1",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": "https://x.com/Shinidami1"
+    },
+    {
+      "name": "SS-SoStupidCool",
+      "role": "Artist, Animator",
+      "email": null,
+      "url": null
+    },
+    {
+      "name": "TechnikTil",
+      "role": "Coder and Lipsync Animator",
+      "email": null,
+      "url": null
+    },
+    {
+      "name": "Timson",
+      "role": "Charter",
+      "email": null,
+      "url": "https://timson-charts.carrd.co"
+    },
+    {
+      "name": "TRAF",
+      "role": "Composer",
+      "email": null,
+      "url": "https://linktr.ee/trafalgaru"
+    },
+    {
+      "name": "TRWario",
+      "role": "Charter",
+      "email": null,
+      "url": "https://www.roblox.com/users/3993594071"
+    },
+    {
+      "name": "ZaraJan9th",
+      "role": "Composer",
+      "email": null,
+      "url": "https://x.com/ZaraJan9th"
     }
   ],
   "api_version": "0.6.3",

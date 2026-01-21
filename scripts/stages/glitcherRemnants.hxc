@@ -1,89 +1,14 @@
-import flixel.FlxG;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import funkin.audio.FunkinSound;
-import funkin.graphics.FunkinSprite;
-import funkin.ui.FullScreenScaleMode;
-import funkin.play.stage.Stage;
-import funkin.util.HapticUtil;
-import funkin.play.PlayState;
-import flixel.util.FlxTimer;
-import funkin.util.FlxTweenUtil;
-import funkin.util.Constants;
-import funkin.play.character.BaseCharacter;
-import funkin.data.character.CharacterDataParser;
-import funkin.play.character.CharacterType;
 
 class GlitcherRemnantsStage extends Stage
 {
   function new()
   {
     super('glitcherRemnants');
-  }
-
-  var lightningStrikeBeat:Int = 0;
-  var lightningStrikeOffset:Int = 8;
-  var halloweenWhite:FunkinSprite;
-
-  // These are similar but are used for different things.
-  var wentDark:Bool = false;
-  var stopThunders:Bool = false;
-
-  function onCreate(event:ScriptEvent):Void
-  {
-    super.onCreate(event);
-    stopThunders = false;
-
-    halloweenWhite = new FunkinSprite(-20, -20);
-    halloweenWhite.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
-    halloweenWhite.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(halloweenWhite);
-    halloweenWhite.alpha = 0.0001;
-    halloweenWhite.blend = 0;
-  }
-
-  override function buildStage()
-  {
-    super.buildStage();
-  }
-
-  function doLightningStrike(playSound:Bool, beat:Int):Void
-  {
-    if (!wentDark)
-    {
-      getNamedProp('Court Back')?.alpha = 1;
-
-      getGirlfriend()?.alpha = 1;
-      getBoyfriend()?.alpha = 1;
-      getDad()?.alpha = 1;
-
-      new FlxTimer().start(0.06, _ -> {
-        getNamedProp('Court Back')?.alpha = 0;
-
-        getGirlfriend()?.alpha = 0;
-        getBoyfriend()?.alpha = 0;
-        getDad()?.alpha = 0;
-      });
-
-      new FlxTimer().start(0.12, _ -> {
-        getNamedProp('Court Back')?.alpha = 1;
-
-        getGirlfriend()?.alpha = 1;
-        getBoyfriend()?.alpha = 1;
-        getDad()?.alpha = 1;
-
-        if (getNamedProp('Court Back') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: 0}, 1.5);
-
-        if (getGirlfriend() != null) FlxTween.tween(getGirlfriend(), {alpha: 0}, 1.5);
-        if (getBoyfriend() != null) FlxTween.tween(getBoyfriend(), {alpha: 0}, 1.5);
-        if (getDad() != null) FlxTween.tween(getDad(), {alpha: 0}, 1.5);
-      });
-    }
-
-    lightningStrikeBeat = beat;
-    lightningStrikeOffset = FlxG.random.int(8, 24);
-
-    triggerLightningHaptics();
   }
 
   public override function onCountdownStart(event:CountdownScriptEvent):Void
@@ -96,19 +21,34 @@ class GlitcherRemnantsStage extends Stage
     changeAmbiance(false, 0.0001);
   }
 
-  var doPostShockHaptics:Bool = false;
-
-  function triggerLightningHaptics()
+  function changeAmbiance(goDark:Bool, duration:Float)
   {
-    if (!HapticUtil.hapticsAvailable) return;
-    HapticUtil.vibrate(0, 0.05, 1);
-    doPostShockHaptics = true;
+    if (duration == null) duration = 1;
+    var targetAlpha:Float = goDark ? 1 : 0;
+
+    if (getGirlfriend() != null) FlxTween.tween(getGirlfriend(), {alpha: targetAlpha}, duration);
+    if (getBoyfriend() != null) FlxTween.tween(getBoyfriend(), {alpha: targetAlpha}, duration);
+    if (getDad() != null) FlxTween.tween(getDad(), {alpha: targetAlpha}, duration);
+
+    if (getNamedProp('Court Back') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: targetAlpha}, duration);
   }
 
-  /**
-   * If your stage uses additional assets not specified in the JSON,
-   * make sure to specify them like this, or they won't get cached in the loading screen.
-   */
+  function onPause()
+  {
+    FlxTweenUtil.pauseTweensOf(getGirlfriend());
+    FlxTweenUtil.pauseTweensOf(getBoyfriend());
+    FlxTweenUtil.pauseTweensOf(getDad());
+    FlxTweenUtil.pauseTweensOf(getNamedProp('Court Back'));
+  }
+
+  function onResume()
+  {
+    FlxTweenUtil.resumeTweensOf(getGirlfriend());
+    FlxTweenUtil.resumeTweensOf(getBoyfriend());
+    FlxTweenUtil.resumeTweensOf(getDad());
+    FlxTweenUtil.resumeTweensOf(getNamedProp('Court Back'));
+  }
+
   function onBeatHit(event:SongTimeScriptEvent)
   {
     super.onBeatHit(event);
@@ -130,57 +70,6 @@ class GlitcherRemnantsStage extends Stage
         }
       }
     }
-  }
-
-  function changeAmbiance(goDark:Bool, duration:Float)
-  {
-    if (duration == null) duration = 1;
-    var targetAlpha:Float = goDark ? 1 : 0;
-    wentDark = goDark;
-
-    if (getGirlfriend() != null) FlxTween.tween(getGirlfriend(), {alpha: targetAlpha}, duration);
-    if (getBoyfriend() != null) FlxTween.tween(getBoyfriend(), {alpha: targetAlpha}, duration);
-    if (getDad() != null) FlxTween.tween(getDad(), {alpha: targetAlpha}, duration);
-
-    if (getNamedProp('Court Back') != null) FlxTween.tween(getNamedProp('Court Back'), {alpha: targetAlpha}, duration);
-  }
-
-  var postShockCounter:Int = 0;
-  var counterTargetNum:Int = 10;
-
-  function onStepHit(event:SongTimeScriptEvent)
-  {
-    super.onStepHit(event);
-
-    if (doPostShockHaptics)
-    {
-      postShockCounter++;
-
-      var postShockAmplitude:Float = 0.05 * (counterTargetNum - postShockCounter) * 2.5;
-      HapticUtil.vibrate(0, 0.01, postShockAmplitude, 0);
-
-      if (postShockCounter == counterTargetNum)
-      {
-        doPostShockHaptics = false;
-        postShockCounter = 0;
-      }
-    }
-  }
-
-  function onGameOver(event:ScriptEvent)
-  {
-    super.onGameOver(event);
-    stopThunders = true;
-  }
-
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    // Properly reset lightning when restarting the song.
-    lightningStrikeBeat = 0;
-    lightningStrikeOffset = 8;
-    stopThunders = false;
   }
 }
 

@@ -2,15 +2,14 @@ import funkin.play.song.Song;
 import funkin.save.Save;
 import funkin.play.PlayState;
 import funkin.graphics.FunkinSprite;
-import flixel.FlxG;
+import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import flixel.FlxG;
 
 class RemnantsPicoSong extends Song
 {
-  var black:FunkinSprite;
-  var blackTween:FlxTween;
-  var hudTween:FlxTween;
+  var fadeOut:Bool = false;
 
   function new()
   {
@@ -40,24 +39,50 @@ class RemnantsPicoSong extends Song
   {
     super.onCreate(event);
 
-    black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(black);
-
-    black.alpha = 0;
     PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
   }
 
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
 
-    if (blackTween != null) blackTween.cancel();
-    if (hudTween != null) hudTween.cancel();
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
-    black.alpha = 0;
     FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+
+    if (!fadeOut) return;
+    {
+      FlxG.camera.fade(0xFF000000, 0.5, true);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      fadeOut = false;
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+  }
+
+  function onPause()
+  {
+    FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongEnd(event:ScriptEvent):Void
+  {
+    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -67,19 +92,24 @@ class RemnantsPicoSong extends Song
     switch (event.beat)
     {
       case 12:
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.7, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.7, {ease: FlxEase.linear});
 
       case 192:
-        blackTween = FlxTween.tween(black, {alpha: 1}, 6.8, {ease: FlxEase.linear});
+        FlxG.camera.fade(0xFF000000, 6.8, false);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 6.8, {ease: FlxEase.linear});
+        fadeOut = true;
 
       case 223:
-        blackTween = FlxTween.tween(black, {alpha: 0}, 0.4, {ease: FlxEase.quartIn});
+        FlxG.camera.fade(0xFF000000, 0.4, true);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.4, {ease: FlxEase.linear});
+        fadeOut = false;
 
       case 273:
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1.7, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1.7, {ease: FlxEase.linear});
 
       case 288:
-        blackTween = FlxTween.tween(black, {alpha: 1}, 1.7, {ease: FlxEase.linear});
+        FlxG.camera.fade(0xFF000000, 1.7, false);
+        fadeOut = true;
     }
   }
 }

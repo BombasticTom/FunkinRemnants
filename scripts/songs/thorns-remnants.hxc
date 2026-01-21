@@ -19,7 +19,7 @@ class ThornsRemnantsMixSong extends Song
   var bgSprite:FunkinSprite;
   var hasPlayedDialogue:Bool;
   var black:FunkinSprite;
-  var fadeBlackTween:FlxTween;
+  var dead:Bool = false;
 
   public function new()
   {
@@ -186,9 +186,20 @@ class ThornsRemnantsMixSong extends Song
     hasPlayedDialogue = true;
 
     FlxG.camera.stopFX();
-    if (fadeBlackTween != null) fadeBlackTween.cancel();
-
+    FlxTween.cancelTweensOf(black);
     black.alpha = 0;
+
+    if (!dead) return;
+    {
+      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      dead = false;
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxG.camera.stopFX();
+    dead = true;
   }
 
   /**
@@ -205,6 +216,7 @@ class ThornsRemnantsMixSong extends Song
     black.alpha = 0;
 
     hasPlayedDialogue = false;
+    dead = false;
   }
 
   public override function onDialogueEnd()
@@ -220,23 +232,23 @@ class ThornsRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 0:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.smoothStepInOut});
+        FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.smoothStepInOut});
 
       case 28:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 0.5}, 1.25, {ease: FlxEase.smoothStepOut});
+        FlxTween.tween(black, {alpha: 0.5}, 1.25, {ease: FlxEase.smoothStepOut});
 
       case 32:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
         black.alpha = 0;
 
       case 96:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.sineOut});
+        FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.sineOut});
 
       case 127:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 0}, 0.3, {ease: FlxEase.backIn});
+        FlxTween.tween(black, {alpha: 0}, 0.3, {ease: FlxEase.backIn});
 
       case 256:
-        fadeBlackTween = FlxTween.tween(black, {alpha: 0.25}, 1, {ease: FlxEase.sineOut});
+        FlxTween.tween(black, {alpha: 0.25}, 1, {ease: FlxEase.sineOut});
 
       case 320:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);

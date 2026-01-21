@@ -203,14 +203,6 @@
       "offsets": [12, 18]
     },
     {
-      "name": "hit-hold",
-      "prefix": "BF hit",
-      "assetPath": "characters/BFActions-remnants",
-      "frameIndices": [10, 11],
-      "looped": true,
-      "offsets": [12, 18]
-    },
-    {
       "name": "firstDeath",
       "prefix": "BF dies",
       "assetPath": "characters/bf-DEAD-remnants",

@@ -1,15 +1,16 @@
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.util.FlxTimer;
-import funkin.play.song.Song;
-import funkin.play.PlayState;
-import funkin.graphics.FunkinSprite;
-import funkin.modding.module.ModuleHandler;
-import funkin.audio.FunkinSound;
-import flixel.tweens.FlxTween;
-import flixel.tweens.FlxEase;
 import funkin.save.Save;
 import funkin.Conductor;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.module.ModuleHandler;
+import funkin.util.FlxTweenUtil;
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.FlxSprite;
+import flixel.FlxG;
 
 /**
  * Hey, Eric here!
@@ -21,9 +22,8 @@ import funkin.Conductor;
  */
 class MILFRemnantsMixSong extends Song
 {
-  var black:FunkinSprite;
-  var blackTween:FlxTween;
-  var hudTween:FlxTween;
+  var fadeOut:Bool = false;
+  var dead:Bool = false;
 
   public function new()
   {
@@ -109,13 +109,10 @@ class MILFRemnantsMixSong extends Song
     // Properly reset lights and collision when starting the song.
     this.hardResetSong();
 
-    black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(black);
-
-    black.alpha = 1;
+    FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+    dead = false;
   }
 
   /**
@@ -129,11 +126,29 @@ class MILFRemnantsMixSong extends Song
     this.hardResetSong();
 
     FlxG.camera.stopFX();
-    if (blackTween != null) blackTween.cancel();
-    if (hudTween != null) hudTween.cancel();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
-    black.alpha = 1;
+    if (fadeOut)
+    {
+      FlxG.camera.fade(0xFF000000, 0.5, false);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      fadeOut = false;
+    }
+    else
+    {
+      FlxG.camera.fade(0xFF000000, 0, false);
+      PlayState.instance.camHUD.alpha = 0;
+      dead = false;
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+    dead = true;
   }
 
   function onCountdownStart(event:ScriptEvent)
@@ -358,6 +373,9 @@ class MILFRemnantsMixSong extends Song
   {
     super.onPause(event);
 
+    FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+
     if (limoTween != null)
     {
       trace("Pausing limo tween");
@@ -368,6 +386,9 @@ class MILFRemnantsMixSong extends Song
   function onResume(event:ScriptEvent)
   {
     super.onResume(event);
+
+    FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
 
     if (limoTween != null)
     {
@@ -407,7 +428,7 @@ class MILFRemnantsMixSong extends Song
 
           // Have GF play the duck animation.
           PlayState.instance.currentStage.getGirlfriend().playAnimation('duck', true, true);
-          PlayState.instance.currentStage.getDad().playAnimation('singDOWN', true, true);
+          PlayState.instance.currentStage.getDad().playAnimation('dodge', true, true);
         }
 
         // Move the lamp across the screen
@@ -611,7 +632,14 @@ class MILFRemnantsMixSong extends Song
   {
     super.onSongStart(event);
 
-    blackTween = FlxTween.tween(black, {alpha: 0}, 2.41, {ease: FlxEase.linear, startDelay: 0.25});
+    new FlxTimer().start(0.25, function() {
+      FlxG.camera.fade(0xFF000000, 2.41, true);
+    });
+  }
+
+  function onSongEnd(event:ScriptEvent):Void
+  {
+    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -622,7 +650,10 @@ class MILFRemnantsMixSong extends Song
     {
       case 8:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
-        hudTween = FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+
+        if (dead) return;
+        fadeOut = true;
 
       case 200:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
@@ -631,7 +662,11 @@ class MILFRemnantsMixSong extends Song
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
 
       case 360:
-        blackTween = FlxTween.tween(black, {alpha: 1}, 1.33, {ease: FlxEase.sineOut});
+        FlxG.camera.fade(0xFF000000, 1.33, false);
+        fadeOut = false;
+
+      case 363:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
     }
   }
 }
