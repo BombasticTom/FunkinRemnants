@@ -155,7 +155,6 @@ class GunsRemnantsMixSong extends Song
     FlxTween.cancelTweensOf(PlayState.instance.currentStage.getBoyfriend());
     FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {y: -300}, 0.5, {ease: FlxEase.backIn});
     FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {angle: 720}, 0.5, {ease: FlxEase.linear});
-    ascension = false;
   }
 
   function onPause()
@@ -501,13 +500,10 @@ class GunsRemnantsMixSong extends Song
 
       case 256:
         if (!ascension) return;
-        {
           FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {y: 215}, 9.41, {ease: FlxEase.smoothStepInOut});
-        }
 
       case 285:
         if (!ascension) return;
-        {
           FlxTween.tween(PlayState.instance.currentStage.getDad(), {y: PlayState.instance.currentStage.getDad().originalPosition.y}, 1,
             {ease: FlxEase.smoothStepInOut});
 
@@ -518,7 +514,6 @@ class GunsRemnantsMixSong extends Song
                 ascension = false;
               }
             });
-        }
 
       case 416:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 3, {ease: FlxEase.smoothStepInOut});
