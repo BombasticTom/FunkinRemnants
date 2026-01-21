@@ -1,0 +1,39 @@
+import funkin.ui.freeplay.FreeplayState;
+import funkin.data.freeplay.player.PlayerRegistry;
+import funkin.save.Save;
+import StringTools;
+
+class RemnantsContentUtil
+{
+  public static function remnantsContentEnabled():Bool
+  {
+    // Look through all new characters + the current selected character.
+    // If one of them is Funkin' their Remnants, enable remnants content.
+    var characters:Array<String> = PlayerRegistry.instance.listNewCharacters();
+    characters.push(FreeplayState.rememberedCharacterId);
+
+    for (charId in characters)
+    {
+      if (charId != null && StringTools.contains(charId, 'remnants')) return true;
+    }
+
+    return false;
+  }
+
+  public static function loadLastRemnantsChar():Void
+  {
+    if (!Save.instance.modOptions.exists('lastRemnantsChar')) return;
+
+    FreeplayState.rememberedCharacterId = Save.instance.modOptions.get('lastRemnantsChar');
+    Save.instance.modOptions.remove('lastRemnantsChar');
+    Save.instance.flush();
+  }
+
+  public static function saveLastRemnantsChar():Void
+  {
+    if (!StringTools.contains(FreeplayState.rememberedCharacterId, 'remnants')) return;
+
+    Save.instance.modOptions.set('lastRemnantsChar', FreeplayState.rememberedCharacterId);
+    Save.instance.flush();
+  }
+}

@@ -4,9 +4,6 @@ import funkin.util.ReflectUtil;
 import funkin.Paths;
 import flixel.FlxG;
 // remnants specific imports, you can remove these.
-import funkin.ui.freeplay.FreeplayState;
-import funkin.data.freeplay.player.PlayerRegistry;
-import StringTools;
 
 /**
  * A Module that replaces music with different audio.
@@ -31,31 +28,8 @@ class RemnantsMusicReplacer extends Module
       return StringTools.contains(FreeplayState.rememberedCharacterId, 'remnants');
     });
 
-    addReplacement('freakyMenu', 'freakyMenu-remnants', () -> {
-      // Look through all new characters + the current selected character.
-      // If one of them is Funkin' their Remnants, replace the music.
-      var characters:Array<String> = PlayerRegistry.instance.listNewCharacters();
-      characters.push(FreeplayState.rememberedCharacterId);
-
-      for (charId in characters)
-      {
-        if (charId != null && StringTools.contains(charId, 'remnants')) return true;
-      }
-
-      return false;
-    });
-
-    addReplacement('girlfriendsRingtone', 'tutorialTitle', () -> {
-      var characters:Array<String> = PlayerRegistry.instance.listNewCharacters();
-      characters.push(FreeplayState.rememberedCharacterId);
-
-      for (charId in characters)
-      {
-        if (charId != null && StringTools.contains(charId, 'remnants')) return true;
-      }
-
-      return false;
-    });
+    addReplacement('freakyMenu', 'freakyMenu-remnants', RemnantsContentUtil.remnantsContentEnabled);
+    addReplacement('girlfriendsRingtone', 'tutorialTitle', RemnantsContentUtil.remnantsContentEnabled);
   }
 
   /**
