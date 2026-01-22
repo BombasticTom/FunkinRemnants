@@ -47,7 +47,7 @@ class SketchRemnantsErectStage extends Stage
 
     colorShaderDad.brightness = -10;
     colorShaderDad.hue = -9;
-    colorShaderDad.contrast = -23;
+    colorShaderDad.contrast = -4;
     colorShaderDad.saturation = 0;
   }
 
