@@ -1,46 +1,53 @@
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import flixel.FlxG;
-import flixel.FlxSprite;
 import funkin.Conductor;
 import funkin.util.HapticUtil;
 import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import funkin.play.PauseSubState;
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.BaseCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
+import funkin.util.Constants;
 import funkin.Preferences;
-import flixel.effects.FlxFlicker;
-import funkin.util.FlxTweenUtil;
 
-class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
+class BoyfriendRemnantsCharacter extends BaseCharacter
 {
-  var fade:Bool = false;
-
   function new()
   {
-    super('bf-remnants');
+    super('bf-remnants', 'custom');
   }
 
   function onCreate(event:ScriptEvent)
   {
+    buildSprite();
     super.onCreate(event);
 
     GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
-    fade = false;
 
-    if (!this.debug) // Gotta do it like this because the editor freaks out.
+    this.shouldAlternate = ['south'].contains(PlayState?.instance?.currentSong?.id);
+  }
+
+  function buildSprite():Void
+  {
+    RemnantsFramesUtil.buildMultiSparrowAnimateCharacterSpritesheet(super);
+    RemnantsFramesUtil.buildMultiSparrowAnimateCharacterAnimations(super);
+
+    if (_data.isPixel)
     {
-      if (PlayState.instance.currentSong.id == null) return;
-      if (['south'].contains(PlayState.instance.currentSong.id))
-        shouldAlternate = true;
-      else
-        shouldAlternate = false;
+      this.isPixel = true;
+      this.antialiasing = false;
+      // pixelPerfectRender = true;
+      // pixelPerfectPosition = true;
+    }
+    else
+    {
+      this.isPixel = false;
+      this.antialiasing = true;
     }
   }
 
@@ -70,30 +77,22 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
-    if (name == "hey" || name == "cheer" || name == "ugh" || name == "sigma" || name == "remnants" || name == "ligma" || name == "lights")
-      PlayState.instance.vocals.playerVolume = 1;
+    if (["hey", "cheer", "ugh", "sigma", "remnants", "ligma", "lights"].contains(name))
+    {
+      PlayState.instance?.vocals?.playerVolume = 1;
+    }
 
-    if (name == "fakeoutDeath" && !this.debug)
+    if (name == 'fakeoutDeath')
     {
       doFakeoutDeath();
     }
-
-    if (name == "firstDeath")
+    else if (name == "firstDeath")
     {
-      if (GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
-      {
-        // Explosion death animation... ngl idk if I even implented this right I only half know what im doing lmao. All I know is that the game over song dosent loop peroperly, so Till plz save me
-        doExplosionDeath();
-      }
-      else
-      {
-        // Standard death animation.
-        createDeathSprites();
-        GameOverSubState.instance.add(loseSprite);
-      }
+      // Standard death animation.
+      createDeathSprites();
+      GameOverSubState.instance.add(loseSprite);
     }
-
-    if (name == 'deathLoop')
+    else if (name == 'deathLoop')
     {
       if (bfDeathExplosion == null)
       {
@@ -101,153 +100,14 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
         loseSprite.animation.play('fall', true);
       }
     }
-
-    if (name == "deathConfirm")
+    else if (name == "deathConfirm")
     {
-      if (bfDeathExplosion != null || GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
-      {
-        doExplosionConfirm();
-      }
-      else
-      {
-        FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-      }
+      FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
     }
 
-    if (name != "fakeoutDeath")
-    {
-      super.playAnimation(name, restart, ignoreOther);
-    }
-  }
+    super.playAnimation(name, restart, ignoreOther);
 
-  var bfFlicker:FlxFlicker = null;
-
-  override function onAnimationFinished(name:String)
-  {
-    super.onAnimationFinished(name);
-
-    if (name == 'hit' && PlayState.instance.health > 0.0 && !PlayState.instance.isPlayerDying)
-    {
-      // ERIC: You have to use super instead of this or it breaks.
-      // This is because typeof(this) is PolymodAbstractClass.
-      bfFlicker = FlxFlicker.flicker(super, 1, 1 / 30, true, true, function(_) {
-        bfFlicker = FlxFlicker.flicker(super, 0.5, 1 / 60, true, true, function(_) {
-          bfFlicker = null;
-        });
-      });
-    }
-  }
-
-  public override function onPause(event:PauseScriptEvent)
-  {
-    super.onPause(event);
-
-    if (fade)
-    {
-      FlxTweenUtil.pauseTweensOf(bfFade);
-      FlxTweenUtil.pauseTweensOf(bfFade.scale);
-    }
-
-    if (bfFlicker != null)
-    {
-      bfFlicker.pause();
-      this.visible = true;
-    }
-  }
-
-  public override function onResume(event:ScriptEvent)
-  {
-    super.onResume(event);
-
-    if (fade)
-    {
-      FlxTweenUtil.resumeTweensOf(bfFade);
-      FlxTweenUtil.resumeTweensOf(bfFade.scale);
-    }
-
-    if (bfFlicker != null)
-    {
-      bfFlicker.resume();
-    }
-  }
-
-  function doFakeoutDeath():Void
-  {
-    if (bfFlicker != null)
-    {
-      bfFlicker.stop(); // this sets visible to true, but we make it false a few lines down anyways
-    }
-
-    FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1);
-
-    var bfFakeout:FlxAtlasSprite = new FlxAtlasSprite(this.x - 440, this.y - 240, Paths.animateAtlas("characters/bfFakeOut-remnants", "shared"));
-    FlxG.state.subState.add(bfFakeout);
-    bfFakeout.zIndex = 1000;
-    bfFakeout.playAnimation('');
-    // We don't want people to miss this.
-    FlxG.state.subState.mustNotExit = true;
-    bfFakeout.onAnimationComplete.add(() -> {
-      bfFakeout.visible = false;
-      this.visible = true;
-      FlxG.state.subState.mustNotExit = false;
-      this.playAnimation('firstDeath', true, true);
-      // Play the "blue balled" sound. May play a variant if one has been assigned.
-      GameOverSubState.playBlueBalledSFX();
-    });
-    bfFakeout.visible = true;
-    this.visible = false;
-  }
-
-  var bfDeathExplosion:FlxAtlasSprite;
-
-  function doExplosionDeath()
-  {
-    if (bfFlicker != null)
-    {
-      bfFlicker.stop(); // this sets visible to true, but we make it false a few lines down anyways
-    }
-
-    // Suffixed death sound will already play.
-    GameOverSubState.instance.resetCameraZoom();
-
-    HapticUtil.vibrate(0, 0.5);
-
-    new FlxTimer().start(3.0, afterBFDeathExplosionIntro);
-  }
-
-  var singed:FunkinSound;
-
-  function afterBFDeathExplosionIntro(timer:FlxTimer)
-  {
-    // Start the (standard) death music, 3.5 seconds after the explosion starts,
-    // not when the explosion sound finishes or when the loop starts.
-    GameOverSubState.instance.startDeathMusic(1, true);
-    singed = FunkinSound.load(Paths.sound('singed_loop'), true, false, true);
-    // singed.fadeIn(0.5, 0.3, 1.0);
-  }
-
-  function doExplosionConfirm()
-  {
-    // Suffixed confirm music will already play.
-    picoDeathExplosion.playAnimation('Confirm');
-    if (singed != null)
-    {
-      singed.stop();
-      singed = null;
-    }
-  }
-
-  override function onSongRetry(event:ScriptEvent):Void
-  {
-    super.onSongRetry(event);
-
-    GameOverSubState.musicSuffix = '-remnants';
-    GameOverSubState.blueBallSuffix = '';
-
-    PauseSubState.musicSuffix = '-remnants';
-
-    picoDeathExplosion = null;
-    this.visible = true;
+    if (name == 'preAttack') playCockAura();
   }
 
   function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
@@ -269,25 +129,46 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
     }
   }
 
-  // Fartman Quotes
+  function doFakeoutDeath():Void
+  {
+    FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
+
+    // We don't want people to miss this.
+    GameOverSubState.instance.mustNotExit = true;
+    this.animation.onFinish.addOnce(() -> {
+      GameOverSubState.instance.mustNotExit = false;
+      this.playAnimation('firstDeath', true);
+      // Play the "blue balled" sound. May play a variant if one has been assigned.
+      GameOverSubState.playBlueBalledSFX();
+    });
+  }
+
   override function getDeathQuote():Null<String>
   {
-    if (PlayState.instance.currentStage == null) return;
-    switch (PlayState.instance.currentStage.getDad().characterId)
+    switch (PlayState.instance?.currentStage?.getDad()?.characterId)
     {
-      case "tankman-remnants":
+      case "tankman":
         var randomCensor:Array<Int> = [];
-        if (!Preferences.naughtyness) randomCensor = [1, 3, 8, 13, 17, 21];
+
+        if (!Preferences.naughtyness)
+        {
+          // 1 - cock
+          // 3 - shitty
+          // 8 - shit
+          // 13 - fuck
+          // 17 - shit, asshole
+          // 21 - fucking
+          randomCensor = [1, 3, 8, 13, 17, 21];
+        }
+        else if (Constants.CENSOR_EXPLETIVES)
+        {
+          randomCensor = [13, 21];
+        }
+
         return Paths.sound('jeffGameover/jeffGameover-' + FlxG.random.int(1, 25, randomCensor));
       default:
         return null;
     }
-  }
-
-  function getDad()
-  {
-    if (this.debug) return null;
-    return PlayState.instance.currentStage.getDad();
   }
 
   function onNoteHit(event:HitNoteScriptEvent)
@@ -309,7 +190,7 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
         case "bf-prep":
           holdTimer = 0;
           this.playAnimation('preAttack', true, false);
-          playCockAura();
+          return;
         case "bf-attack":
           holdTimer = 0;
           this.playAnimation('attack', true, false);
@@ -318,52 +199,52 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
           holdTimer = 0;
           this.playAnimation('dodge', true, false);
           return;
-        case "battle-prepare-remnants":
-          playCockAura();
         default:
           super.onNoteHit(event);
       }
     }
   }
 
+  var bfFade:FunkinSprite;
+  var fadeTween:FlxTween;
+
   function playCockAura()
   {
-    fade = true;
-    bfFade = new FlxSprite(0, 0);
-    bfFade.frames = this.frames;
-    bfFade.frame = this.frame;
+    if (debug) return;
+
+    if (bfFade != null) bfFade.destroy();
+    bfFade = new FunkinSprite(this.x, this.y);
+    bfFade.x -= this.animOffsets[0] + this.globalOffsets[0];
+    bfFade.y -= this.animOffsets[1] + this.globalOffsets[1];
+    bfFade.pixels = updateFramePixels();
     bfFade.updateHitbox();
-    bfFade.x = this.x;
-    bfFade.y = this.y;
-    // bfFade.stamp(this, 0, 0);
     bfFade.alpha = 0.3;
     bfFade.zIndex = this.zIndex - 3;
-    addToStage(bfFade);
-    FlxTween.tween(bfFade.scale, {x: 1.3, y: 1.3}, 0.4);
-    FlxTween.tween(bfFade, {alpha: 0}, 0.4,
+    PlayState.instance?.currentStage?.add(bfFade);
+    PlayState.instance?.currentStage?.refresh();
+
+    if (fadeTween != null) fadeTween.cancel();
+    fadeTween = FlxTween.num(0, 1, 0.4,
       {
-        ease: FlxEase.linear,
         onComplete: (_) -> {
-          fade = false;
+          fadeTween = null;
         }
+      }, (num:Float) -> {
+        bfFade.scale.set(1 + (0.3 * num), 1 + (0.3 * num));
+        bfFade.alpha = 0.3 - (0.3 * num);
       });
   }
 
-  function addToStage(sprite:FlxSprite)
+  override function onPause(event:ScriptEvent):Void
   {
-    if (this.debug)
-    {
-      // We are in the chart editor or something.
-      // TODO: Make this work properly.
-    }
-    else if (PlayState.instance != null && PlayState.instance.currentStage != null)
-    {
-      PlayState.instance.currentStage.add(sprite);
-    }
-    else
-    {
-      trace('Could not add BF sprite to stage.');
-    }
+    super.onPause(event);
+    if (fadeTween != null) fadeTween.active = false;
+  }
+
+  override function onResume(event:ScriptEvent):Void
+  {
+    super.onResume(event);
+    if (fadeTween != null) fadeTween.active = true;
   }
 }
 

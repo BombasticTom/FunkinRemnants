@@ -6,9 +6,8 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import funkin.audio.FunkinSound;
 import funkin.Conductor;
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFunkinSprite;
 import funkin.play.cutscene.CutsceneType;
 import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
@@ -26,7 +25,7 @@ import funkin.Preferences;
 // We have to use FlxBasePoint in scripts because FlxPoint is inlined and not available in scripts
 class EggnogRemnantsMixSong extends Song
 {
-  // var santaDead:ScriptedFlxAtlasSprite;
+  // var santaDead:ScriptedFunkinSprite;
   var hasPlayedCutscene:Bool = false;
   var cutsceneSkipped:Bool = false;
   var canSkipCutscene:Bool = false;
@@ -106,7 +105,7 @@ class EggnogRemnantsMixSong extends Song
     var normalSanta = PlayState.instance.currentStage.getNamedProp('santa');
     normalSanta.visible = false;
 
-    var santaDead:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('SantaDiesSpriteRemnants', 0, 0);
+    var santaDead:ScriptedFunkinSprite = ScriptedFunkinSprite.init('SantaDiesSpriteRemnants', 0, 0);
 
     santaDead.x = -775;
     santaDead.y = -1000;
@@ -119,7 +118,7 @@ class EggnogRemnantsMixSong extends Song
     santaDead.scriptCall('playSantaSpeaks');
 
     PlayState.instance.currentStage.getDad().visible = false;
-    var parentsShoot:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('DadShootsSpriteRemnants', 0, 0);
+    var parentsShoot:ScriptedFunkinSprite = ScriptedFunkinSprite.init('DadShootsSpriteRemnants', 0, 0);
 
     parentsShoot.x = -813;
     parentsShoot.y = -954;

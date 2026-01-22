@@ -1,3 +1,6 @@
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import funkin.play.GameOverSubState;
 import funkin.play.character.BaseCharacter;
 import funkin.play.character.SparrowCharacter;
 import funkin.data.character.CharacterDataParser;
@@ -49,15 +52,9 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
       normalChar.flipX = false;
       normalChar.zIndex = 199;
 
-      if (PlayState.instance.currentSong.id == null)
-        return;
-
       PlayState.instance.currentStage.add(normalChar);
       PlayState.instance.currentStage.refresh(); // Apply z-index.
-      if (['spookeez'].contains(PlayState.instance.currentSong.id))
-        shouldAlternate = false;
-      else
-        shouldAlternate = true;
+      shouldAlternate = !['spookeez'].contains(PlayState.instance?.currentSong?.id);
     }
   }
 }

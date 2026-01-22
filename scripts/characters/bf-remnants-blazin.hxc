@@ -25,7 +25,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     // NOTE: this.x and this.y are not properly set here.
 
     GameOverSubState.musicSuffix = '-remnants';
-    GameOverSubState.blueBallSuffix = '-bf-nutpunch';
+    GameOverSubState.blueBallSuffix = '-bf-nutpunch-remnants';
     PauseSubState.musicSuffix = '-remnants';
 
     this.zIndex = 2000;
@@ -120,7 +120,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-tauntforce":
         playTauntAnim();
       case "weekend-1-reversefakeout":
-        playIdleAnim(); // TODO: Which anim?
+        playCringeAnim();
 
       // Singing Note kinds
       case "weekend-1-bf-blazin":
@@ -146,14 +146,6 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       // Make sure the death music plays with PERFECT timing.
       new FlxTimer().start(2.54, afterBFDeathNutPunchIntro);
     }
-    else if (name == "deathConfirm")
-    {
-      doDeathConfirm();
-    }
-    else
-    {
-      super.playAnimation(name, restart, ignoreOther);
-    }
 
     super.playAnimation(name, restart, ignoreOther);
   }
@@ -162,23 +154,6 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
   {
     GameOverSubState.instance.startDeathMusic(1.0, false);
     playAnimation('deathLoop', true, false);
-  }
-
-  function doDeathConfirm():Void
-  {
-    var bfDeathConfirm:FunkinSprite = FunkinSprite.createSparrow(this.x + 905, this.y + 1030, 'characters/bfBlazinDeathConfirm');
-    bfDeathConfirm.animation.addByPrefix('confirm', "BF Nut Punch Death0", 24, false);
-    bfDeathConfirm.animation.play('confirm');
-    bfDeathConfirm.scale.set(1.75, 1.75);
-    bfDeathConfirm.zIndex = 1000;
-    FlxG.state.subState.add(bfDeathConfirm);
-    bfDeathConfirm.visible = true;
-    this.visible = false;
-
-    bfDeathConfirm.animation.finishCallback = () -> {
-      bfDeathConfirm.visible = false;
-      this.visible = true;
-    }
   }
 
   function onNoteMiss(event:NoteScriptEvent)
@@ -273,7 +248,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-tauntforce":
         playTauntAnim();
       case "weekend-1-reversefakeout":
-        playIdleAnim();
+        playCringeAnim(); // TODO: Which anim?
 
       // Singing Note kinds
       case "weekend-1-bf-blazin":
@@ -335,7 +310,7 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     playIdleAnim();
 
     GameOverSubState.musicSuffix = '-remnants';
-    GameOverSubState.blueBallSuffix = '-bf-nutpunch';
+    GameOverSubState.blueBallSuffix = '-bf-nutpunch-remnants';
   }
 
   function getDarnell()
@@ -527,6 +502,13 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
   {
     this.playAnimation('taunt', true, false);
     moveToBack();
+  }
+
+  override public function isOnScreen(?camera:FlxCamera):Bool
+  {
+    // this is currently really fucky for whatever reason, so just render it all the time for now.
+    // what can go wrong?
+    return true;
   }
 }
 

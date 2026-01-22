@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Remnants BF",
-  "renderType": "multisparrow",
+  "renderType": "custom",
   "assetPath": "characters/bf-remnants",
   "flipX": true,
   "singTime": 8.0,
@@ -213,9 +213,11 @@
       "offsets": [23, 11]
     },
     {
+      "assetPath": "shared:characters/bfFakeOut-remnants",
       "name": "fakeoutDeath",
-      "prefix": "BF dies",
-      "offsets": [23, 11]
+      "prefix": "fake out death BF",
+      "animType": "symbol",
+      "offsets": [22, 8]
     },
     {
       "name": "deathLoop",

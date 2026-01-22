@@ -88,10 +88,10 @@ class DarnellRemnantsBlazinCharacter extends AnimateAtlasCharacter
         playPunchHighAnim();
 
       // Fail to dodge the uppercut.
-      case "weekend-1-picouppercutprep":
+      case "weekend-1-picouppercutprep", "weekend-1-bfuppercutprep":
         // Continue whatever animation was playing before
         // playIdleAnim();
-      case "weekend-1-picouppercut":
+      case "weekend-1-picouppercut", "weekend-1-bfuppercut":
         playUppercutHitAnim();
 
       // Attempt to punch, Pico dodges or gets hit.
@@ -213,10 +213,10 @@ class DarnellRemnantsBlazinCharacter extends AnimateAtlasCharacter
         playPunchHighAnim();
 
       // Successfully dodge the uppercut.
-      case "weekend-1-picouppercutprep":
+      case "weekend-1-picouppercutprep", "weekend-1-bfuppercut":
         playHitHighAnim();
         cantUppercut = true;
-      case "weekend-1-picouppercut":
+      case "weekend-1-picouppercut", "weekend-1-bfuppercut":
         playDodgeAnim();
 
       // Attempt to punch, Pico dodges or gets hit.

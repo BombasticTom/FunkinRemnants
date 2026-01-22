@@ -1001,7 +1001,7 @@
         "t": 10666.6666666667,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -1686,7 +1686,7 @@
         "t": 21333.3333333333,
         "d": 1,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -2022,7 +2022,7 @@
         "t": 26666.6666666667,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -2273,7 +2273,7 @@
         "t": 30666.6666666667,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -4617,42 +4617,42 @@
         "t": 77166.6666666667,
         "d": 5,
         "l": 0,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77333.3333333333,
         "d": 0,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77500,
         "d": 5,
         "l": 0,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77583.3333333333,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77750,
         "d": 5,
         "l": 0,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77833.3333333333,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -4757,7 +4757,7 @@
         "t": 79666.6666666667,
         "d": 1,
         "l": 291.666666666676,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -6868,14 +6868,14 @@
         "t": 117000,
         "d": 1,
         "l": 291.666666666667,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 117333.333333333,
         "d": 2,
         "l": 5291.66666666701,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       }
     ],
@@ -7493,14 +7493,14 @@
         "t": 10666.6666666667,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 10666.6666666667,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -8283,14 +8283,14 @@
         "t": 21333.3333333333,
         "d": 1,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 21333.3333333333,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -8689,14 +8689,14 @@
         "t": 26666.6666666667,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 26666.6666666667,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -9024,14 +9024,14 @@
         "t": 30666.6666666667,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 30666.6666666667,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -12199,84 +12199,84 @@
         "t": 77166.6666666667,
         "d": 0,
         "l": 125,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77333.3333333333,
         "d": 0,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77333.3333333333,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77333.3333333333,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77500,
         "d": 1,
         "l": 0,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77583.3333333333,
         "d": 0,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77583.3333333333,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77583.3333333333,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77750,
         "d": 1,
         "l": 0,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77833.3333333333,
         "d": 0,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77833.3333333333,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77833.3333333333,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -15176,42 +15176,42 @@
         "t": 117000,
         "d": 2,
         "l": 291.666666666667,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 117000,
         "d": 1,
         "l": 291.666666666667,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 117333.333333333,
         "d": 0,
         "l": 5291.66666666701,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 117333.333333333,
         "d": 1,
         "l": 3958.33333333367,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 117333.333333333,
         "d": 2,
         "l": 2625.00000000034,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 117333.333333333,
         "d": 3,
         "l": 1291.66666666701,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       }
     ],
@@ -15745,7 +15745,7 @@
         "t": 10666.6666666667,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -16423,7 +16423,7 @@
         "t": 21333.3333333333,
         "d": 1,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -16759,7 +16759,7 @@
         "t": 26666.6666666667,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -17010,7 +17010,7 @@
         "t": 30666.6666666667,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -19485,63 +19485,63 @@
         "t": 77166.6666666667,
         "d": 0,
         "l": 125,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77333.3333333333,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77333.3333333333,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77500,
         "d": 1,
         "l": 0,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77583.3333333333,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77583.3333333333,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77750,
         "d": 1,
         "l": 0,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 77833.3333333333,
         "d": 2,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
         "t": 77833.3333333333,
         "d": 3,
         "l": 0,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {
@@ -21860,14 +21860,14 @@
         "t": 117000,
         "d": 2,
         "l": 291.666666666667,
-        "k": "weekend-1-picouppercutprep",
+        "k": "weekend-1-bfuppercutprep",
         "p": []
       },
       {
         "t": 117333.333333333,
         "d": 3,
         "l": 1291.66666666701,
-        "k": "weekend-1-picouppercut",
+        "k": "weekend-1-bfuppercut",
         "p": []
       },
       {

@@ -46,7 +46,7 @@ class WinterHorrorlandRemnantsMixSong extends Song
       PlayState.instance.currentStage.getDad().visible = false;
       PlayState.instance.camHUD.visible = false;
 
-      var santaDead:ScriptedFlxAtlasSprite = null;
+      var santaDead:ScriptedFunkinSprite = null;
 
       try
       {
@@ -81,7 +81,7 @@ class WinterHorrorlandRemnantsMixSong extends Song
 
       new FlxTimer().start(3, (tmr:FlxTimer) -> {
         santaDead.anim.resume();
-        santaDead.onAnimationComplete.add(() -> {
+        santaDead.anim.onFinish.addOnce((anim:String) -> {
           santaDead.scriptCall("playDeadSanta");
           PlayState.instance.currentStage.getDad().visible = true;
           PlayState.instance.camHUD.visible = true;

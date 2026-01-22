@@ -1,21 +1,22 @@
-import funkin.play.character.MultiSparrowCharacter;
-import funkin.play.character.CharacterType;
-import funkin.play.PlayState;
-import funkin.play.GameOverSubState;
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
-import flixel.util.FlxTimer;
-import funkin.graphics.FunkinSprite;
-import funkin.audio.FunkinSound;
-import flixel.FlxSprite;
-import flixel.FlxG;
-import funkin.util.HapticUtil;
-import funkin.modding.base.ScriptedFunkinSprite;
-import flixel.group.FlxTypedSpriteGroup;
 import flixel.effects.FlxFlicker;
-import funkin.play.PauseSubState;
-import funkin.modding.module.ModuleHandler;
-import flixel.tweens.FlxEase;
+import flixel.FlxG;
+import flixel.FlxSprite;
+import flixel.group.FlxTypedSpriteGroup;
 import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFunkinSprite;
+import funkin.modding.module.ModuleHandler;
+import funkin.play.character.CharacterType;
+import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.GameOverSubState;
+import funkin.play.PauseSubState;
+import funkin.play.PlayState;
+import funkin.util.Constants;
+import funkin.util.HapticUtil;
+import funkin.Preferences;
+import funkin.FunkinMemory;
 
 class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 {
@@ -35,6 +36,29 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     GameOverSubState.blueBallSuffix = '-pico';
 
     PauseSubState.musicSuffix = '-remnants-pico';
+
+    // Precache images and sounds.
+    var imgs:Array<String> = [
+      "characters/Pico_Death_Retry-remnants",
+      "characters/neneKnife-remnants",
+      "weekend1:characters/picoExplosionDeath-remnants/spritemap1",
+      "weekend1:PicoBullet"
+    ];
+
+    var snds:Array<String> = ["singed_loop", "Gun_Prep", "Pico_Bonk", "shot1", "shot2", "shot3", "shot4"];
+
+    for (img in imgs)
+    {
+      var lib:String = Paths.getLibrary(img);
+      var file:String = Paths.stripLibrary(img);
+
+      FunkinMemory.cacheTexture(Paths.image(file, lib == 'preload' ? null : lib));
+    }
+
+    for (snd in snds)
+    {
+      FunkinMemory.cacheSound(Paths.sound(snd, "weekend1"));
+    }
   }
 
   var deathSpriteRetry:FunkinSprite;
@@ -99,28 +123,29 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       return;
     }
 
-    if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
+    // Override the hit note animation.
+    switch (event.note.kind)
     {
-      // Override the hit note animation.
-      switch (event.note.kind)
-      {
-        case "censor":
-          holdTimer = 0;
-          this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
-          return;
-        case "perfect":
-          holdTimer = 0;
-          this.playSingAnimation(event.note.noteData.getDirection(), false, 'perfect');
-          return;
-        case "weekend-1-cockgun": // HE'S PULLING HIS COCK OUT
-          holdTimer = 0;
-          playCockGunAnim();
-        case "weekend-1-firegun":
-          holdTimer = 0;
-          playFireGunAnim();
-        default:
-          super.onNoteHit(event);
-      }
+      case "hey":
+        holdTimer = 0;
+        this.playAnimation('hey', true, true);
+        return;
+      case "cheer":
+        holdTimer = 0;
+        this.playAnimation('cheer', true, true);
+        return;
+      case "censor":
+        holdTimer = 0;
+        this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
+        return;
+      case "weekend-1-cockgun": // HE'S PULLING HIS COCK OUT
+        holdTimer = 0;
+        playCockGunAnim();
+      case "weekend-1-firegun":
+        holdTimer = 0;
+        playFireGunAnim();
+      default:
+        super.onNoteHit(event);
     }
   }
 
@@ -146,7 +171,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
     if (name == "firstDeath")
     {
-      if (GameOverSubState.blueBallSuffix == '-pico-explode-remnants')
+      if (GameOverSubState.blueBallSuffix == '-pico-explode')
       {
         // Explosion death animation.
         doExplosionDeath();
@@ -228,7 +253,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
   {
     var result = super.getDeathCameraOffsets();
 
-    if (GameOverSubState.blueBallSuffix == '-pico-explode-remnants')
+    if (GameOverSubState.blueBallSuffix == '-pico-explode')
     {
       return [result[0], result[1] + 100];
     }
@@ -236,7 +261,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     return [result[0], result[1]];
   }
 
-  var picoDeathExplosion:FlxAtlasSprite;
+  var picoDeathExplosion:FunkinSprite;
 
   function doExplosionDeath()
   {
@@ -259,17 +284,16 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       HapticUtil.vibrate(0, 0.1, 0.1, 1);
     });
 
-    var picoDeathExplosionPath = Paths.animateAtlas("characters/picoExplosionDeath-remnants", "shared");
-    picoDeathExplosion = new FlxAtlasSprite(this.x - 640, this.y - 340, picoDeathExplosionPath);
+    picoDeathExplosion = FunkinSprite.createTextureAtlas(this.x - 1100, this.y - 1000, "characters/picoExplosionDeath-remnants", "weekend1");
     PlayState.instance.subState.add(picoDeathExplosion);
     picoDeathExplosion.zIndex = 1000;
-    picoDeathExplosion.onAnimationComplete.add(onExplosionFinishAnim);
+    picoDeathExplosion.anim.onFinish.add(onExplosionFinishAnim);
     picoDeathExplosion.visible = true;
     this.visible = false;
 
     new FlxTimer().start(3.0, afterPicoDeathExplosionIntro);
 
-    picoDeathExplosion.playAnimation('intro');
+    picoDeathExplosion.anim.play('intro');
   }
 
   var singed:FunkinSound;
@@ -286,7 +310,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
   function doExplosionConfirm()
   {
     // Suffixed confirm music will already play.
-    picoDeathExplosion.playAnimation('Confirm');
+    picoDeathExplosion.anim.play('Confirm');
     if (singed != null)
     {
       singed.stop();
@@ -298,7 +322,8 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
   {
     if (animLabel == 'intro')
     {
-      picoDeathExplosion.playAnimation('Loop Start', true, false, true);
+      picoDeathExplosion.anim.play('Loop Start', true);
+      picoDeathExplosion.anim.curAnim.looped = true;
     }
     else if (animLabel == 'Confirm')
     {
@@ -333,8 +358,6 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
   {
     super.onAnimationFrame(name, frameNumber, frameIndex);
 
-    trace('onAnimationFrame: ' + name + ' ' + frameNumber + ' ' + frameIndex);
-
     if (name == "firstDeath" && frameNumber == 36 - 1)
     {
       if (deathSpriteRetry != null && deathSpriteRetry.animation != null)
@@ -359,6 +382,23 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     if (name == "cock" && frameNumber == 3)
     {
       createCasing();
+    }
+
+    if (!HapticUtil.hapticsAvailable || picoDeathExplosion != null) return;
+
+    // Pico falls on his back.
+    if (name == 'firstDeath' && frameNumber == 20)
+    {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    }
+
+    // Blood firework woohoo!!!!
+    if (name == 'deathLoop' && frameNumber % 2 == 0)
+    {
+      final randomAmplitude:Float = FlxG.random.float(0.1, 0.5);
+      final randomDuration:Float = FlxG.random.float(0.1, 0.3);
+
+      HapticUtil.vibrate(0, randomDuration, randomAmplitude);
     }
   }
 
@@ -431,13 +471,6 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     FunkinSound.playOnce(Paths.sound('Pico_Bonk'), 1.0);
   }
 
-  function onUpdate(event:ScriptEvent)
-  {
-    super.onUpdate(event);
-
-    if (deathSpriteRetry != null) trace('deathSpriteRetry: ' + deathSpriteRetry.visible + ' (' + deathSpriteRetry.x + ', ' + deathSpriteRetry.y + ')');
-  }
-
   function addToStage(sprite:FlxSprite)
   {
     if (this.debug)
@@ -452,6 +485,32 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     else
     {
       trace('Could not add Pico sprite to stage.');
+    }
+  }
+
+  function getDeathQuote():Null<String>
+  {
+    switch (PlayState.instance?.currentStage?.getDad()?.characterId)
+    {
+      case "tankman":
+        var randomCensor:Array<Int> = [];
+
+        if (!Preferences.naughtyness)
+        {
+          // 4 - fucking
+          // 7 - goddamn, ass
+          // 8 - fuck
+          // 9 - ass, bitch
+          randomCensor = [4, 7, 8, 9];
+        }
+        else if (Constants.CENSOR_EXPLETIVES)
+        {
+          randomCensor = [4, 8];
+        }
+
+        return Paths.sound('jeffGameover-pico/jeffGameover-' + FlxG.random.int(1, 10, randomCensor));
+      default:
+        return null;
     }
   }
 }

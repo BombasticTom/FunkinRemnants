@@ -1,5 +1,6 @@
 import flixel.FlxG;
 import flixel.util.FlxTimer;
+import funkin.util.HapticUtil;
 import funkin.play.PlayState;
 import funkin.play.PauseSubState;
 import funkin.graphics.FunkinSprite;
@@ -21,6 +22,7 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
 
     this.danceEvery = 0;
     this.playAnimation('idle', true, false);
+    this.alpha = 0.9999999; // Force render texture.
 
     // NOTE: this.x and this.y are not properly set here.
 
@@ -40,6 +42,15 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
     holdTimer = 0;
 
     if (!StringTools.startsWith(event?.note?.kind ?? '', 'weekend-1-')) return;
+
+    while (blockEffectTimers.length > 0)
+    {
+      var tmr:Null<FlxTimer> = blockEffectTimers.shift();
+      tmr.cancel();
+
+      this.color = 0xFFFFFFFF;
+      this.blend = null;
+    }
 
     // SPECIAL CASE: If Pico hits a poor note at low health (at 30% chance),
     // Pico may instead punch high (but Darnell will duck below Pico to attempt an uppercut)
@@ -122,7 +133,7 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-tauntforce":
         playTauntAnim();
       case "weekend-1-reversefakeout":
-        playIdleAnim(); // TODO: Which anim?
+        playCringeAnim();
 
       default:
         // trace('Unknown note kind: ' + event.note.kind);
@@ -137,14 +148,19 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
 
       // Make sure the death music plays with PERFECT timing.
       new FlxTimer().start(1.25, afterPicoDeathGutPunchIntro);
-    }
-    else if (name == "deathConfirm")
-    {
-      doDeathConfirm();
-    }
-    else
-    {
-      super.playAnimation(name, restart, ignoreOther);
+
+      if (HapticUtil.hapticsAvailable)
+      {
+        new FlxTimer().start(0.5, function(tmr:FlxTimer) {
+          // Pico falls on his knees.
+          HapticUtil.vibrate(0, 0.1, 0.1, 1);
+
+          new FlxTimer().start(0.6, function(tmr:FlxTimer) {
+            // Pico falls "asleep". :)
+            HapticUtil.vibrate(0, 0.1, 0.1, 1);
+          });
+        });
+      }
     }
 
     super.playAnimation(name, restart, ignoreOther);
@@ -154,23 +170,6 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
   {
     GameOverSubState.instance.startDeathMusic(1.0, false);
     playAnimation('deathLoop', true, false);
-  }
-
-  function doDeathConfirm():Void
-  {
-    var picoDeathConfirm:FunkinSprite = FunkinSprite.createSparrow(this.x + 1045, this.y + 1540, 'characters/picoBlazinDeathConfirm-remnants');
-    picoDeathConfirm.animation.addByPrefix('confirm', "Pico Gut Punch Death0", 24, false);
-    picoDeathConfirm.animation.play('confirm');
-    picoDeathConfirm.scale.set(1.75, 1.75);
-    picoDeathConfirm.zIndex = 1000;
-    FlxG.state.subState.add(picoDeathConfirm);
-    picoDeathConfirm.visible = true;
-    this.visible = false;
-
-    picoDeathConfirm.animation.finishCallback = () -> {
-      picoDeathConfirm.visible = false;
-      this.visible = true;
-    }
   }
 
   function onNoteMiss(event:NoteScriptEvent)
@@ -265,7 +264,7 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
       case "weekend-1-tauntforce":
         playTauntAnim();
       case "weekend-1-reversefakeout":
-        playIdleAnim();
+        playCringeAnim(); // TODO: Which anim?
 
       default:
         trace('Unknown note kind: ' + event.note.kind);
@@ -350,6 +349,7 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
 
   // ANIMATIONS
   var alternate:Bool = false;
+  var blockEffectTimers:Array<FlxTimer> = [];
 
   function doAlternate():String
   {
@@ -365,13 +365,13 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
       var blendAnims:Array<Int> = [10, 0, 10, 0, 0, 10, 0, 0, 10, 0, 10];
       for (blendMode in 0...blendAnims.length)
       {
-        new FlxTimer().start(blendMode / 60, function(_) {
+        blockEffectTimers.push(new FlxTimer().start(blendMode / 60, function(_) {
           if (blendAnims[blendMode] != 10) this.color = 0xFF0000FF;
           else
             this.color = 0xFFFFFFFF;
 
           this.blend = blendAnims[blendMode];
-        });
+        }));
       }
     }
 

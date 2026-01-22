@@ -3,7 +3,7 @@
   "name": "Remnants Nene",
   "assetPath": "characters/nene-remnants",
   "startingAnimation": "danceRight",
-  "renderType": "multisparrow",
+  "renderType": "sparrow",
   "offsets": [25, -96],
   "animations": [
     {
@@ -66,36 +66,6 @@
       "name": "lowerKnife",
       "prefix": "KnifeLower0",
       "offsets": [-39, 52]
-    },
-    {
-      "name": "hairBlowNormal",
-      "prefix": "HairBlow0",
-      "assetPath": "characters/Nene_Hair_Blowing",
-      "frameIndices": [0, 1, 2, 3, 0, 1, 2, 3],
-      "offsets": [0, 0]
-    },
-    {
-      "name": "hairFallNormal",
-      "prefix": "HairBlow0",
-      "assetPath": "characters/Nene_Hair_Blowing",
-      "frameIndices": [
-        0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
-      ],
-      "offsets": [0, 0]
-    },
-    {
-      "name": "hairBlowKnife",
-      "prefix": "HairBlowKnife0",
-      "frameIndices": [0, 1, 2, 3, 0, 1, 2, 3],
-      "assetPath": "characters/Nene_Hair_Blowing",
-      "offsets": [-79, 51]
-    },
-    {
-      "name": "hairFallKnife",
-      "prefix": "HairBlowKnife0",
-      "assetPath": "characters/Nene_Hair_Blowing",
-      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-      "offsets": [-79, 51]
     }
   ]
 }

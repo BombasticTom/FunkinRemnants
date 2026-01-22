@@ -1,6 +1,6 @@
 import funkin.graphics.FunkinSprite;
 import funkin.modding.module.ModuleHandler;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFunkinSprite;
 import funkin.play.cutscene.VideoCutscene;
 import funkin.data.song.SongRegistry;
 import funkin.play.stage.StageProp;
@@ -134,11 +134,11 @@ class DarnellRemnantsMixSong extends Song
     cutsceneCan.zIndex = spraycanPile.zIndex - 1;
     PlayState.instance.currentStage.refresh();
 
-    var newCan:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('SpraycanAtlasSpriteRemnants', 0, 0);
+    var newCan:ScriptedFunkinSprite = ScriptedFunkinSprite.init('SpraycanAtlasSpriteRemnants', 0, 0);
     var spraycanPile = PlayState.instance.currentStage.getNamedProp('spraycanPile');
     if (newCan != null)
     {
-      newCan.x = spraycanPile.x - 430;
+      newCan.x = spraycanPile.x + 30;
       newCan.y = spraycanPile.y - 840;
       newCan.zIndex = 300;
       PlayState.instance.currentStage.add(newCan);
