@@ -114,14 +114,14 @@ class SpookeezRemnantsMixSong extends Song
 
   function onBeatHit(event:ScriptEvent):Void
   {
-    super.onBeatHit(event);
+    super.onBeatHit();
 
+    if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
       case 15:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
         fadeOut = true;
-
       case 240:
         FlxTween.tween(black, {alpha: 1}, 1.6, {ease: FlxEase.sineOut});
         fadeOut = false;

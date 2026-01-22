@@ -96,21 +96,18 @@ class PhillyNiceRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
       case 3:
         FlxG.camera.fade(0xFF000000, 1.72, true);
-
       case 6:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.69, {ease: FlxEase.linear});
-
       case 75:
         fadeOut = true;
-
       case 328:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.74, {ease: FlxEase.smootherStepOut});
         fadeOut = false;
-
       case 352:
         FlxG.camera.fade(0xFF000000, 2.74, false);
     }

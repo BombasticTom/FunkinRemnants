@@ -103,12 +103,12 @@ class CocoaRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
       case 60:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.2, {ease: FlxEase.linear});
         fadeOut = true;
-
       case 458:
         FlxG.camera.fade(0xFF000000, 0.6, false);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.6, {ease: FlxEase.linear});

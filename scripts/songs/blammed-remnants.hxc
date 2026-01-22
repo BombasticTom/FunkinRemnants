@@ -98,6 +98,7 @@ class BlammedRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     if (event.beat == 30)
     {
       FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.6, {ease: FlxEase.sineOut});

@@ -168,13 +168,13 @@ class BlazinBFRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
       case 32:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
         black.alpha = 0;
         fadeOut = true;
-
       case 352:
         FlxTween.tween(black, {alpha: 1}, 5, {ease: FlxEase.linear});
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5, {ease: FlxEase.linear});

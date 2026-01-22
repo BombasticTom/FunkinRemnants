@@ -91,19 +91,17 @@ class TormentorSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
       case 14:
         FlxG.camera.fade(0xFF000000, 0.15, false);
-
       case 16:
         FlxG.camera.fade(0xFF000000, 0.15, true);
         PlayState.instance.disableKeys = false;
         fadeOut = true;
-
       case 27:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.81, {ease: FlxEase.linear});
-
       case 320:
         PlayState.instance.camHUD.alpha = 0;
         PlayState.instance.camGame.alpha = 0;

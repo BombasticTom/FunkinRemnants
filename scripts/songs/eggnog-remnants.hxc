@@ -63,11 +63,6 @@ class EggnogRemnantsMixSong extends Song
     }
   }
 
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-  }
-
   public override function onSongEnd(event:CountdownScriptEvent):Void
   {
     super.onSongEnd(event);

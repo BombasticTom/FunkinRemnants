@@ -80,6 +80,7 @@ class SatinPantiesRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     if (event.beat == 176)
     {
       FlxG.camera.fade(0xFF000000, 4.2, false);

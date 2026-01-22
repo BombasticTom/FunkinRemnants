@@ -103,52 +103,42 @@ class SoutRemnantsMixSong extends Song
 
   function onBeatHit(event:ScriptEvent):Void
   {
+    super.onBeatHit();
+
+    if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
       case 29:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
         fadeOut = true;
-
       case 32:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
         black.alpha = 0;
-
       case 61:
         FlxTween.tween(black, {alpha: 0.7}, 0.35, {ease: FlxEase.backIn});
-
       case 64:
         FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.linear});
-
       case 96:
         FlxTween.tween(black, {alpha: 0.5}, 1, {ease: FlxEase.linear});
-
       case 123:
         FlxTween.tween(black, {alpha: 0.7}, 0.3, {ease: FlxEase.linear});
-
       case 128:
         FlxTween.tween(black, {alpha: 0.5}, 1, {ease: FlxEase.linear});
-
       case 155:
         FlxTween.tween(black, {alpha: 0.7}, 0.3, {ease: FlxEase.linear});
-
       case 157:
         FlxTween.tween(black, {alpha: 0.9}, 1, {ease: FlxEase.linear});
         fadeOut = false;
-
       case 160:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
         black.alpha = 0.5;
         fadeOut = true;
-
       case 192:
         FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.linear});
-
       case 222:
         FlxTween.tween(black, {alpha: 0.7}, 0.3, {ease: FlxEase.linear});
-
       case 224:
         FlxTween.tween(black, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-
       case 239:
         FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
         fadeOut = false;

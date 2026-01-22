@@ -59,6 +59,7 @@ class DarnellBFRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     if (event.beat == 320)
     {
       PlayState.instance.camGame.visible = false;

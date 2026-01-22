@@ -120,11 +120,11 @@ class RemnantsSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
       case 14:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.smoothStepOut});
-
       case 272:
         FlxG.camera.fade(0xFF000000, 0.8, false);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.8, {ease: FlxEase.linear});

@@ -24,7 +24,6 @@ import flixel.FlxG;
 class MILFRemnantsMixSong extends Song
 {
   var fadeOut:Bool = false;
-  var dead:Bool = false;
 
   public function new()
   {
@@ -152,7 +151,6 @@ class MILFRemnantsMixSong extends Song
     FlxG.camera.fade(0xFF000000, 0, false);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
-    dead = false;
   }
 
   /**
@@ -179,7 +177,6 @@ class MILFRemnantsMixSong extends Song
     {
       FlxG.camera.fade(0xFF000000, 0, false);
       PlayState.instance.camHUD.alpha = 0;
-      dead = false;
     }
   }
 
@@ -196,7 +193,6 @@ class MILFRemnantsMixSong extends Song
     PlayState.instance.currentStage.refresh();
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
-    dead = true;
   }
 
   function onCountdownStart(event:ScriptEvent)
@@ -674,30 +670,22 @@ class MILFRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
-    if (!dead)
+    if (PlayState.instance.isGameOverState) return;
+    switch (event.beat)
     {
-      switch (event.beat)
-      {
-        case 8:
-          FlxG.camera.flash(0xFFFFFFFF, 0.5);
-          FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
-
-          if (dead) return;
-          fadeOut = true;
-
-        case 200:
-          FlxG.camera.flash(0xFFFFFFFF, 0.5);
-
-        case 232:
-          FlxG.camera.flash(0xFFFFFFFF, 0.5);
-
-        case 360:
-          FlxG.camera.fade(0xFF000000, 1.33, false);
-          fadeOut = false;
-
-        case 363:
-          FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-      }
+      case 8:
+        FlxG.camera.flash(0xFFFFFFFF, 0.5);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+        fadeOut = true;
+      case 200:
+        FlxG.camera.flash(0xFFFFFFFF, 0.5);
+      case 232:
+        FlxG.camera.flash(0xFFFFFFFF, 0.5);
+      case 360:
+        FlxG.camera.fade(0xFF000000, 1.33, false);
+        fadeOut = false;
+      case 363:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
     }
   }
 }

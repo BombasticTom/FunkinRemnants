@@ -254,12 +254,12 @@ class DadBattleRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
       case 12:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.5, {ease: FlxEase.linear});
         fadeOut = true;
-
       case 300:
         FlxG.camera.fade(0xFF000000, 1.5, false);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1.5, {ease: FlxEase.linear});

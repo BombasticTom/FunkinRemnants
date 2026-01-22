@@ -86,6 +86,7 @@ class LitUpRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     if (event.beat == 323)
     {
       FlxG.camera.fade(0xFF000000, 9.29, false);

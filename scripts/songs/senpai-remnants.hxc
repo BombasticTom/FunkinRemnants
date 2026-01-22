@@ -15,7 +15,6 @@ class SenpaiRemnantsMixSong extends Song
 {
   var bgSprite:FunkinSprite;
   var hasPlayedDialogue:Bool;
-  var dead:Bool = false;
 
   public function new()
   {
@@ -145,17 +144,11 @@ class SenpaiRemnantsMixSong extends Song
 
     hasPlayedDialogue = true;
 
-    if (!dead) return;
+    if (PlayState.instance.isGameOverState)
     {
       FlxG.camera.stopFX();
       RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-      dead = false;
     }
-  }
-
-  function onGameOver(event:ScriptEvent):Void
-  {
-    dead = true;
   }
 
   /**
@@ -166,7 +159,6 @@ class SenpaiRemnantsMixSong extends Song
     super.onCreate(event);
 
     hasPlayedDialogue = false;
-    dead = false;
   }
 
   public override function onDialogueEnd()

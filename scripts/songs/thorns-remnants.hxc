@@ -19,7 +19,6 @@ class ThornsRemnantsMixSong extends Song
   var bgSprite:FunkinSprite;
   var hasPlayedDialogue:Bool;
   var black:FunkinSprite;
-  var dead:Bool = false;
 
   public function new()
   {
@@ -189,17 +188,15 @@ class ThornsRemnantsMixSong extends Song
     FlxTween.cancelTweensOf(black);
     black.alpha = 0;
 
-    if (!dead) return;
+    if (PlayState.instance.isGameOverState)
     {
       RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-      dead = false;
     }
   }
 
   function onGameOver(event:ScriptEvent):Void
   {
     FlxG.camera.stopFX();
-    dead = true;
   }
 
   /**
@@ -216,7 +213,6 @@ class ThornsRemnantsMixSong extends Song
     black.alpha = 0;
 
     hasPlayedDialogue = false;
-    dead = false;
   }
 
   public override function onDialogueEnd()
