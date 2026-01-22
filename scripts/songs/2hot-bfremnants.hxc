@@ -12,7 +12,7 @@ import funkin.FunkinMemory;
 import funkin.save.Save;
 import funkin.audio.FunkinSound;
 
-class TwoHOTRemnantsMixSong extends Song
+class TwoHOTRemnantsBFMixSong extends Song
 {
   function new()
   {
