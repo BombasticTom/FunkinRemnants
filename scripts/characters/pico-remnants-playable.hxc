@@ -8,6 +8,7 @@ import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import flixel.FlxSprite;
 import flixel.FlxG;
+import funkin.util.HapticUtil;
 import funkin.modding.base.ScriptedFunkinSprite;
 import flixel.group.FlxTypedSpriteGroup;
 import flixel.effects.FlxFlicker;
