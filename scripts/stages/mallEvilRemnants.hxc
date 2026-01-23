@@ -3,7 +3,7 @@ import funkin.play.PlayState;
 import funkin.play.stage.Stage;
 import flixel.addons.display.FlxBackdrop;
 import flixel.group.FlxTypedSpriteGroup;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFunkinSprite;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
@@ -16,13 +16,13 @@ class MallEvilRemnantsStage extends Stage
   }
 
   var snowGroup:FlxTypedSpriteGroup;
-  var santaDead:ScriptedFlxAtlasSprite;
+  var santaDead:ScriptedFunkinSprite;
 
   function buildStage()
   {
     super.buildStage();
 
-    santaDead = ScriptedFlxAtlasSprite.init('SantaDiesSpriteRemnants', 0, 0);
+    santaDead = ScriptedFunkinSprite.init('SantaDiesSpriteRemnants', 0, 0);
     santaDead.setPosition(-810, -965);
     santaDead.zIndex = 301;
     PlayState.instance.currentStage.add(santaDead);

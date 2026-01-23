@@ -2,7 +2,7 @@ import flixel.util.FlxTimer;
 import funkin.util.HapticUtil;
 import flixel.tweens.FlxTween;
 import funkin.modding.module.ModuleHandler;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFunkinSprite;
 import funkin.graphics.FunkinSprite;
 import funkin.play.GameOverSubState;
 import funkin.play.stage.StageProp;
@@ -101,7 +101,7 @@ class TwoHOTRemnantsBFMixSong extends Song
   }
 
   var micCocked:Bool = false;
-  var spawnedCans:Array<ScriptedFlxAtlasSprite> = [];
+  var spawnedCans:Array<ScriptedFunkinSprite> = [];
 
   function onNoteHit(event:HitNoteScriptEvent)
   {
@@ -116,11 +116,10 @@ class TwoHOTRemnantsBFMixSong extends Song
         // This creates the can and starts the animation.
         // We define the behavior of the can in a separate scripted class,
         // which allows the can to track and manage its own properties.
-        var newCan:ScriptedFlxAtlasSprite = ScriptedFlxAtlasSprite.init('SpraycanAtlasSpriteRemnants', 0, 0);
-
+        var newCan:ScriptedFunkinSprite = ScriptedFunkinSprite.init('SpraycanAtlasSpriteRemnants', 0, 0);
         var spraycanPile = PlayState.instance.currentStage.getNamedProp('spraycanPile');
 
-        newCan.x = spraycanPile.x - 430;
+        newCan.x = spraycanPile.x + 30;
         newCan.y = spraycanPile.y - 840;
         newCan.zIndex = spraycanPile.zIndex - 1;
 
@@ -356,8 +355,8 @@ class TwoHOTRemnantsBFMixSong extends Song
       trace('Died to the can! Use special death animation.');
 
       // Reset to standard death animation.
-      GameOverSubState.musicSuffix = '-bf-explode-remnants';
-      GameOverSubState.blueBallSuffix = '-bf-explode-remnants';
+      // GameOverSubState.musicSuffix = '-bf-explode-remnants';
+      // GameOverSubState.blueBallSuffix = '-bf-explode-remnants';
 
       if (!PlayState.instance.isPracticeMode) blackenStageProps();
     }

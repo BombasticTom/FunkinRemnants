@@ -1,160 +1,257 @@
 {
-  "version": "1.0.0",
-  "name": "Boyfriend (Default) [Remnants]",
-  "renderType": "multisparrow",
-  "assetPath": "characters/BOYFRIEND",
-  "flipX": true,
-  "singTime": 8.0,
-  "healthIcon": {
-    "id": "bf"
+  "renderType": "custom",
+  "offsets": [17, 14],
+  "applyStageMatrix": false,
+  "startingAnimation": "idle",
+  "death": {
+    "cameraOffsets": [-73, 42]
   },
+  "healthIcon": {
+    "isPixel": false,
+    "offsets": [0, 0],
+    "scale": 1,
+    "id": "bf",
+    "flipX": false
+  },
+  "assetPath": "shared:characters/bf",
+  "version": "1.0.0",
+  "danceEvery": 1,
+  "scale": 1,
+  "name": "Boyfriend (Default) [Remnants]",
+  "flipX": true,
+  "cameraOffsets": [-18, 36],
+  "singTime": 8,
+  "isPixel": false,
   "animations": [
     {
-      "name": "idle",
-      "prefix": "BF idle dance",
-      "offsets": [-5, 0]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Idle",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "idle"
     },
     {
-      "name": "singLEFT",
-      "prefix": "BF NOTE LEFT0",
-      "offsets": [5, -7]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Left",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singLEFT"
     },
     {
-      "name": "singDOWN",
-      "prefix": "BF NOTE DOWN0",
-      "offsets": [-20, -52]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Down",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singDOWN"
     },
     {
-      "name": "singUP",
-      "prefix": "BF NOTE UP0",
-      "offsets": [-45, 30]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Up",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singUP"
     },
     {
-      "name": "singRIGHT",
-      "prefix": "BF NOTE RIGHT0",
-      "offsets": [-50, -5]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Right",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singRIGHT"
     },
     {
-      "name": "singLEFT-perfect",
+      "offsets": [11, -80],
       "prefix": "BF LEFT PERFECT0",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singLEFT-perfect",
+      "flipY": false,
       "assetPath": "characters/BFPerfect",
-      "offsets": [20, -7]
+      "frameRate": 24
     },
     {
-      "name": "singDOWN-perfect",
+      "offsets": [-8, -115],
       "prefix": "BF DOWN PERFECT0",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singDOWN-perfect",
+      "flipY": false,
       "assetPath": "characters/BFPerfect",
-      "offsets": [-3, -44]
+      "frameRate": 24
     },
     {
-      "name": "singUP-perfect",
+      "offsets": [-30, -53],
       "prefix": "BF UP PERFECT0",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singUP-perfect",
+      "flipY": false,
       "assetPath": "characters/BFPerfect",
-      "offsets": [-24, 21]
+      "frameRate": 24
     },
     {
-      "name": "singRIGHT-perfect",
+      "offsets": [-60, -78],
       "prefix": "BF RIGHT PERFECT0",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singRIGHT-perfect",
+      "flipY": false,
       "assetPath": "characters/BFPerfect",
-      "offsets": [-51, -5]
+      "frameRate": 24
     },
     {
-      "name": "singLEFTmiss",
-      "prefix": "BF NOTE LEFT MISS",
-      "offsets": [6, 18]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Left Miss",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singLEFTmiss"
     },
     {
-      "name": "singDOWNmiss",
-      "prefix": "BF NOTE DOWN MISS",
-      "offsets": [-19, -22]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Down Miss",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singDOWNmiss"
     },
     {
-      "name": "singUPmiss",
-      "prefix": "BF NOTE UP MISS",
-      "offsets": [-41, 27]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Up Miss",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singUPmiss"
     },
     {
-      "name": "singRIGHTmiss",
-      "prefix": "BF NOTE RIGHT MISS",
-      "offsets": [-40, 21]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Right Miss",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "singRIGHTmiss"
     },
     {
-      "name": "preAttack",
-      "prefix": "bf pre attack",
-      "offsets": [-45, -37]
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Hey",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "hey"
     },
     {
-      "name": "attack",
-      "prefix": "boyfriend attack",
-      "offsets": [295, 268]
-    },
-    {
-      "name": "dodge",
-      "prefix": "boyfriend dodge",
-      "offsets": [-5, -15]
-    },
-    {
-      "name": "hey",
-      "prefix": "BF HEY!!",
-      "offsets": [-3, 5]
-    },
-    {
-      "name": "boyfriend",
+      "offsets": [17, -14],
       "prefix": "BOYFRIEND",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "boyfriend",
+      "flipY": false,
       "assetPath": "characters/boyfriendfridaynightfunkin",
-      "offsets": [27, 58]
+      "frameRate": 24
     },
     {
-      "name": "shrug",
+      "offsets": [100, -70],
       "prefix": "BF shrug",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "shrug",
+      "flipY": false,
       "assetPath": "characters/BFShrug",
-      "offsets": [110, 2]
+      "frameRate": 24
     },
     {
-      "name": "cheer",
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
       "prefix": "Cheer",
-      "assetPath": "characters/BFCheer",
-      "offsets": [-20, 30]
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "cheer"
     },
     {
-      "name": "hit",
-      "prefix": "BF hit",
-      "assetPath": "characters/BOYFRIEND",
-      "offsets": [16, 19]
-    },
-    {
-      "name": "hit-hold",
-      "prefix": "BF hit",
-      "frameIndices": [10, 11],
-      "looped": true,
-      "assetPath": "characters/BOYFRIEND",
-      "offsets": [16, 19]
-    },
-    {
+      "offsets": [22, 15],
+      "asset": "shared:characters/bf-death",
+      "prefix": "Death Intro",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
       "name": "firstDeath",
-      "prefix": "BF dies",
-      "offsets": [23, 6]
+      "flipY": false,
+      "frameRate": 24
     },
     {
-      "name": "fakeoutDeath",
-      "prefix": "BF dies",
-      "offsets": [23, 6]
-    },
-    {
+      "offsets": [22, 15],
+      "prefix": "Death Loop",
+      "animType": "framelabel",
+      "flipX": false,
       "name": "deathLoop",
-      "prefix": "BF Dead Loop",
       "looped": true,
-      "offsets": [23, 0]
+      "flipY": false,
+      "assetPath": "shared:characters/bf-death",
+      "frameRate": 24
     },
     {
+      "offsets": [22, 15],
+      "asset": "shared:characters/bf-death",
+      "prefix": "Death Confirm",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
       "name": "deathConfirm",
-      "prefix": "BF Dead confirm",
-      "offsets": [23, 64]
+      "flipY": false,
+      "frameRate": 24
     },
     {
-      "name": "scared",
-      "prefix": "BF idle shaking",
-      "offsets": [-6, 1]
+      "offsets": [-3, -65],
+      "prefix": "fake out death BF",
+      "flipX": false,
+      "looped": false,
+      "name": "fakeoutDeath",
+      "animType": "symbol",
+      "flipY": false,
+      "assetPath": "shared:characters/bfFakeOut",
+      "frameRate": 24
+    },
+    {
+      "flipY": false,
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "prefix": "Scared",
+      "animType": "framelabel",
+      "flipX": false,
+      "looped": false,
+      "name": "scared"
     }
   ]
 }

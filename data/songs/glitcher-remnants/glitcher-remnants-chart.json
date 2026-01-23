@@ -332,19 +332,6 @@
     },
     {
       "t": 45000.0001,
-      "e": "SetHealthIcon",
-      "v": {
-        "isPixel": false,
-        "offsetX": 0,
-        "char": 1,
-        "scale": 1,
-        "offsetY": 0,
-        "flipX": false,
-        "id": "hex-g"
-      }
-    },
-    {
-      "t": 45000.0001,
       "e": "ZoomCamera",
       "v": {
         "duration": 32,
@@ -373,19 +360,6 @@
         "rate": 2,
         "intensity": 1.5,
         "offset": 0
-      }
-    },
-    {
-      "t": 45000.0001,
-      "e": "SetHealthIcon",
-      "v": {
-        "isPixel": false,
-        "offsetX": 0,
-        "scale": 1,
-        "offsetY": 0,
-        "char": 0,
-        "flipX": true,
-        "id": "bf"
       }
     },
     {
@@ -582,32 +556,6 @@
     },
     {
       "t": 65000.0001,
-      "e": "SetHealthIcon",
-      "v": {
-        "isPixel": false,
-        "offsetX": 0,
-        "offsetY": 0,
-        "char": 0,
-        "scale": 1,
-        "flipX": true,
-        "id": "bf-remnants"
-      }
-    },
-    {
-      "t": 65000.0001,
-      "e": "SetHealthIcon",
-      "v": {
-        "isPixel": false,
-        "offsetX": 0,
-        "char": 1,
-        "scale": 1,
-        "offsetY": 0,
-        "flipX": false,
-        "id": "hex-g-remnants"
-      }
-    },
-    {
-      "t": 65000.0001,
       "e": "SetCameraBop",
       "v": {
         "rate": 4,
@@ -773,32 +721,6 @@
         "rate": 2,
         "intensity": 1.5,
         "offset": 0
-      }
-    },
-    {
-      "t": 85000,
-      "e": "SetHealthIcon",
-      "v": {
-        "isPixel": false,
-        "offsetX": 0,
-        "scale": 1,
-        "char": 0,
-        "offsetY": 0,
-        "flipX": true,
-        "id": "bf"
-      }
-    },
-    {
-      "t": 85000,
-      "e": "SetHealthIcon",
-      "v": {
-        "isPixel": false,
-        "offsetX": 0,
-        "scale": 1,
-        "char": 1,
-        "offsetY": 0,
-        "flipX": false,
-        "id": "hex-g"
       }
     },
     {
@@ -991,32 +913,6 @@
         "zoom": 1,
         "easeDir": "InOut",
         "mode": "stage"
-      }
-    },
-    {
-      "t": 105000,
-      "e": "SetHealthIcon",
-      "v": {
-        "isPixel": false,
-        "offsetX": 0,
-        "scale": 1,
-        "offsetY": 0,
-        "char": 1,
-        "id": "hex-g-remnants",
-        "flipX": false
-      }
-    },
-    {
-      "t": 105000,
-      "e": "SetHealthIcon",
-      "v": {
-        "isPixel": false,
-        "offsetX": 0,
-        "char": 0,
-        "scale": 1,
-        "offsetY": 0,
-        "id": "bf-remnants",
-        "flipX": true
       }
     },
     {

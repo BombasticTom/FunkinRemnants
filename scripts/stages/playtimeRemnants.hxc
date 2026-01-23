@@ -11,7 +11,12 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import openfl.filters.BlurFilter;
 import openfl.filters.ShaderFilter;
-import openfl.display.BitmapData;
+import funkin.util.FlxTweenUtil;
+import openfl.utils.Assets;
+import flixel.sound.FlxSound;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.character.CharacterType;
+import funkin.graphics.FunkinSprite;
 import flixel.FlxG;
 
 class PlaytimeRmenantsStage extends Stage
@@ -38,23 +43,16 @@ class PlaytimeRmenantsStage extends Stage
   {
     super.onCreate(event);
 
-    var bmp = BitmapData.fromFile("mods/Funkin' Remnants/week5/images/remnants/ZaraBopper.png");
-
-    zara = new FunkinSprite(-400, 2500);
-    zara.loadGraphic(bmp);
+    zara = FunkinSprite.create(-400, 2500);
+    zara.loadGraphic(Paths.image('remnants/ZaraBopper', 'week5'));
     zara.cameras = [PlayState.instance.camGame];
     PlayState.instance.add(zara);
 
     rainShader.scale = FlxG.height / 300; // Increase rain scale
 
     FlxG.console.registerObject("rainShader", rainShader); // Don't change name of this unless you have a custom rain shader in modName/shaders
-    switch (PlayState.instance.currentSong.id)
-    {
-      case "playtime-remnants": // Change to the song ID you want the shader to be used on
-        // You can copy this and put another one right under it, used for Weekend 1.
-        rainShaderStartIntensity = 0;
-        rainShaderEndIntensity = 0.1;
-    }
+    rainShaderStartIntensity = 0;
+    rainShaderEndIntensity = 0.1;
     rainShader.intensity = rainShaderStartIntensity;
     rainShaderFilter = new ShaderFilter(rainShader);
     FlxG.camera.filters = [rainShaderFilter];

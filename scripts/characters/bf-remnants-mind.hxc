@@ -1,4 +1,3 @@
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import flixel.FlxG;
 import funkin.util.HapticUtil;
 import funkin.graphics.FunkinSprite;
@@ -6,10 +5,8 @@ import funkin.audio.FunkinSound;
 import funkin.play.PauseSubState;
 import funkin.play.character.MultiSparrowCharacter;
 import funkin.play.GameOverSubState;
-import funkin.play.PlayState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-import funkin.Preferences;
 
 class BoyfriendRemnantsMindCharacter extends MultiSparrowCharacter
 {
@@ -52,53 +49,43 @@ class BoyfriendRemnantsMindCharacter extends MultiSparrowCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
-    if (name == "fakeoutDeath" && !this.debug)
+    if (!this.debug)
     {
-      doFakeoutDeath();
+      switch (name)
+      {
+        case "fakeoutDeath":
+          doFakeoutDeath();
+
+        case "firstDeath":
+          // Standard death animation.
+          createDeathSprites();
+
+          GameOverSubState.instance.add(loseSprite);
+
+        case "deathLoop":
+          loseSprite.visible = true;
+          loseSprite.animation.play('fall', true);
+
+        case "deathConfirm":
+          FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+      }
     }
 
-    if (name == "firstDeath")
-    {
-      // Standard death animation.
-      createDeathSprites();
-      GameOverSubState.instance.add(loseSprite);
-    }
-    else if (name == 'deathLoop')
-    {
-      loseSprite.visible = true;
-      loseSprite.animation.play('fall', true);
-    }
-    else if (name == "deathConfirm")
-    {
-      FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-    }
-
-    if (name != "fakeoutDeath")
-    {
-      super.playAnimation(name, restart, ignoreOther);
-    }
+    super.playAnimation(name, restart, ignoreOther);
   }
 
   function doFakeoutDeath():Void
   {
     FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
 
-    var bfFakeout:FlxAtlasSprite = new FlxAtlasSprite(this.x - 440, this.y - 240, Paths.animateAtlas("characters/bfFakeOut-remnants", "shared"));
-    FlxG.state.subState.add(bfFakeout);
-    bfFakeout.zIndex = 1000;
-    bfFakeout.playAnimation('');
     // We don't want people to miss this.
-    FlxG.state.subState.mustNotExit = true;
-    bfFakeout.onAnimationComplete.add(() -> {
-      bfFakeout.visible = false;
-      this.visible = true;
-      FlxG.state.subState.mustNotExit = false;
-      this.playAnimation('firstDeath', true, true);
+    GameOverSubState.instance.mustNotExit = true;
+    this.animation.onFinish.addOnce(() -> {
+      GameOverSubState.instance.mustNotExit = false;
+      this.playAnimation('firstDeath', true);
       // Play the "blue balled" sound. May play a variant if one has been assigned.
       GameOverSubState.playBlueBalledSFX();
     });
-    bfFakeout.visible = true;
-    this.visible = false;
   }
 
   function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
@@ -117,21 +104,6 @@ class BoyfriendRemnantsMindCharacter extends MultiSparrowCharacter
     if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
     {
       HapticUtil.vibrate(0, 0.1, 0.1, 1);
-    }
-  }
-
-  // Fartman Quotes
-  override function getDeathQuote():Null<String>
-  {
-    if (PlayState.instance.currentStage == null) return;
-    switch (PlayState.instance.currentStage.getDad().characterId)
-    {
-      case "tankman-remnants":
-        var randomCensor:Array<Int> = [];
-        if (!Preferences.naughtyness) randomCensor = [1, 3, 8, 13, 17, 21];
-        return Paths.sound('jeffGameover/jeffGameover-' + FlxG.random.int(1, 25, randomCensor));
-      default:
-        return null;
     }
   }
 }

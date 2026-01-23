@@ -1,17 +1,16 @@
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.SparrowCharacter;
 import funkin.play.PlayState;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxTypedSpriteGroup;
 import funkin.graphics.FunkinSprite;
 import funkin.graphics.shaders.AdjustColorShader;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
+import funkin.modding.base.ScriptedFunkinSprite;
 import funkin.modding.base.ScriptedFlxSprite;
 import funkin.modding.base.ScriptedFlxSpriteGroup;
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
 import funkin.audio.visualize.ABotVis;
 
-class NeneRemnantsCharacter extends MultiSparrowCharacter
+class NeneRemnantsCharacter extends SparrowCharacter
 {
   function new()
   {
@@ -23,11 +22,11 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter
   var PUPIL_STATE_NORMAL = 0;
   var PUPIL_STATE_LEFT = 1;
 
-  var abot:FlxAtlasSprite;
+  var abot:FunkinSprite;
   var abotViz:ABotVis;
   var stereoBG:FlxSprite;
   var eyeWhites:FlxSprite;
-  var pupil:FlxAtlasSprite;
+  var pupil:FunkinSprite;
 
   var vizAdjustColor:AdjustColorShader;
 
@@ -39,12 +38,19 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter
 
     eyeWhites = new FunkinSprite().makeSolidColor(160, 60, 0xFF000000);
 
-    pupil = new FlxAtlasSprite(0, 0, Paths.animateAtlas("characters/abot-remnants/systemEyes", "shared"));
+    pupil = FunkinSprite.createTextureAtlas(0, 0, "characters/abot-remnants/systemEyes", "shared");
     pupil.x = this.x;
     pupil.y = this.y;
     pupil.zIndex = this.zIndex - 5;
 
-    abot = ScriptedFlxAtlasSprite.init('ABotAtlasSpriteRemnants', 0, 0);
+    pupil.anim.onFrameChange.add(function(name:String, frameNumber:Int, frameIndex:Int) {
+      if (frameNumber == 16)
+      {
+        pupil.anim.pause();
+      }
+    });
+
+    abot = ScriptedFunkinSprite.init('ABotAtlasSpriteRemnants', 0, 0);
     abot.x = this.x;
     abot.y = this.y;
     abot.zIndex = this.zIndex - 1;
@@ -188,10 +194,10 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter
 
   function dance(forceRestart:Bool)
   {
-    if (abot != null)
+    if (abot?.anim != null)
     {
-      abot.playAnimation("");
-      abot.anim.curFrame = 0; // We start on frame zero manually so it bumps every beat.
+      // we start on frame 1, since from Flash the symbol has a non-bumpin frame on frame 0
+      abot.anim.play("", true, false, 1);
     }
 
     // Then, perform the appropriate animation for the current state.
@@ -254,25 +260,14 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter
 
   function movePupilsLeft():Void
   {
-    if (pupilState == PUPIL_STATE_LEFT) return;
     trace('Move pupils left');
-    pupil.playAnimation('');
-    pupil.anim.curFrame = 0;
-    // pupilState = PUPIL_STATE_LEFT;
+    pupil.anim.play('', true, false, 0);
   }
 
   function movePupilsRight():Void
   {
-    if (pupilState == PUPIL_STATE_NORMAL) return;
     trace('Move pupils right');
-    pupil.playAnimation('');
-    pupil.anim.curFrame = 17;
-    // pupilState = PUPIL_STATE_NORMAL;
-  }
-
-  public function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false):Void
-  {
-    super.playAnimation(name, restart, ignoreOther, reversed);
+    pupil.anim.play('', true, false, 17);
   }
 
   function moveByNoteKind(kind:String)
@@ -341,13 +336,13 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter
     // refreshes just for the zIndex shit!
     if (!refershedLol)
     {
-      abot.x = this.x - 100;
-      abot.y = this.y + 216; // 764 - 740
+      abot.x = this.x - 135;
+      abot.y = this.y + 210;
       abot.zIndex = this.zIndex - 10;
 
       PlayState.instance.currentStage.add(abot);
 
-      abotViz.x = abot.x + 200;
+      abotViz.x = abot.x + 207;
       abotViz.y = abot.y + 84;
       abotViz.zIndex = abot.zIndex - 1;
       PlayState.instance.currentStage.add(abotViz);
@@ -357,8 +352,8 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter
       eyeWhites.zIndex = abot.zIndex - 10;
       PlayState.instance.currentStage.add(eyeWhites);
 
-      pupil.x = abot.x - 507;
-      pupil.y = abot.y - 492;
+      pupil.x = abot.x + 50;
+      pupil.y = abot.y + 238;
       pupil.zIndex = eyeWhites.zIndex + 5;
       PlayState.instance.currentStage.add(pupil);
 
@@ -394,42 +389,9 @@ class NeneRemnantsCharacter extends MultiSparrowCharacter
 
     switch (currentState)
     {
-      case STATE_RAISE:
-        if (name == "raiseKnife")
-        {
-          animationFinished = true;
-          transitionState();
-        }
-      case STATE_LOWER:
-        if (name == "lowerKnife")
-        {
-          animationFinished = true;
-          transitionState();
-        }
-      case STATE_HAIR_BLOWING:
-        if (name == "hairBlowNormal")
-        {
-          animationFinished = true;
-          transitionState();
-        }
-      case STATE_HAIR_FALLING:
-        if (name == "hairFallNormal")
-        {
-          animationFinished = true;
-          transitionState();
-        }
-      case STATE_HAIR_BLOWING_RAISE:
-        if (name == "hairBlowKnife")
-        {
-          animationFinished = true;
-          transitionState();
-        }
-      case STATE_HAIR_FALLING_RAISE:
-        if (name == "hairFallKnife")
-        {
-          animationFinished = true;
-          transitionState();
-        }
+      case STATE_RAISE, STATE_LOWER, STATE_HAIR_BLOWING, STATE_HAIR_FALLING, STATE_HAIR_BLOWING_RAISE, STATE_HAIR_FALLING_RAISE:
+        animationFinished = true;
+        transitionState();
       default:
         // Ignore.
     }

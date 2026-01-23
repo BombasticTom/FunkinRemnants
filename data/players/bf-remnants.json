@@ -50,47 +50,47 @@
       {
         "name": "intro",
         "prefix": "boyfriend dj intro",
-        "offsets": [-13.3, 2.6]
+        "offsets": [3.8943, -359.75]
       },
       {
         "name": "idle",
-        "prefix": "Boyfriend DJ Idle",
-        "offsets": [-20, 0]
+        "prefix": "Boyfriend DJ",
+        "offsets": [10.6, 289.8585]
       },
       {
         "name": "idleEasterEgg",
         "prefix": "bf dj afk",
-        "offsets": [629.5, 58.5]
+        "offsets": [10.5, 127.106]
       },
       {
         "name": "confirm",
         "prefix": "Boyfriend DJ confirm",
-        "offsets": [-20, 0]
+        "offsets": [-39.708, 289.444]
       },
       {
         "name": "fistPump",
         "prefix": "Boyfriend DJ fist pump",
-        "offsets": [-20, 0]
+        "offsets": [10.6, 278.1951]
       },
       {
         "name": "cartoon",
         "prefix": "Boyfriend DJ watchin tv OG",
-        "offsets": [-20, 0]
+        "offsets": [-9.3, -167.6297]
       },
       {
         "name": "loss",
         "prefix": "Boyfriend DJ loss reaction 1",
-        "offsets": [-20, 0]
+        "offsets": [10.6, 277.166]
       },
       {
         "name": "charSelect",
         "prefix": "Boyfriend DJ to CS",
-        "offsets": [-20, 0]
+        "offsets": [-51.1036, 210.15]
       },
       {
         "name": "newUnlock",
         "prefix": "Boyfriend DJ new character ",
-        "offsets": [-20, 0]
+        "offsets": [-130.5, 12.85]
       }
     ]
   },
@@ -114,38 +114,38 @@
     "perfectGold": [
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsPerfectResults",
+        "scriptClass": "BFRemnantsBedPerfectResults",
         "startFrameLabel": "INTRO",
         "filter": "naughty",
         "zIndex": 500,
-        "offsets": [1342, 370],
+        "offsets": [403, -305],
         "loopFrameLabel": "LOOP START"
       },
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsPerfectHearts",
+        "assetPath": "shared:resultScreen/results-bf-remnants/resultsPERFECT/hearts",
         "filter": "naughty",
         "zIndex": 501,
         "delay": 4.41,
-        "offsets": [1342, 370],
+        "offsets": [630, 300],
         "loopFrame": 43
       },
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsPerfectResults",
+        "scriptClass": "BFRemnantsBedPerfectResults",
         "startFrameLabel": "INTRO 2",
         "filter": "safe",
         "zIndex": 500,
-        "offsets": [1342, 370],
+        "offsets": [403, -305],
         "loopFrameLabel": "LOOP 2"
       },
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsTickleFight",
+        "assetPath": "shared:resultScreen/results-bf-remnants/resultsPERFECT/tickleFight",
         "filter": "safe",
         "zIndex": 501,
         "delay": 4.41,
-        "offsets": [650, 370],
+        "offsets": [413, 314],
         "scale": 0.6,
         "sound": "shared:tickleFight",
         "loopFrameLabel": "LOOP START"
@@ -154,38 +154,38 @@
     "perfect": [
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsPerfectResults",
+        "scriptClass": "BFRemnantsBedPerfectResults",
         "startFrameLabel": "INTRO",
         "filter": "naughty",
         "zIndex": 500,
-        "offsets": [1342, 370],
+        "offsets": [403, -305],
         "loopFrameLabel": "LOOP START"
       },
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsPerfectHearts",
+        "assetPath": "shared:resultScreen/results-bf-remnants/resultsPERFECT/hearts",
         "filter": "naughty",
         "zIndex": 501,
         "delay": 4.41,
-        "offsets": [1342, 370],
+        "offsets": [630, 300],
         "loopFrame": 43
       },
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsPerfectResults",
+        "scriptClass": "BFRemnantsBedPerfectResults",
         "startFrameLabel": "INTRO 2",
         "filter": "safe",
         "zIndex": 500,
-        "offsets": [1342, 370],
+        "offsets": [403, -305],
         "loopFrameLabel": "LOOP 2"
       },
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsTickleFight",
+        "assetPath": "shared:resultScreen/results-bf-remnants/resultsPERFECT/tickleFight",
         "filter": "safe",
         "zIndex": 501,
         "delay": 4.41,
-        "offsets": [650, 370],
+        "offsets": [413, 314],
         "scale": 0.6,
         "sound": "shared:tickleFight",
         "loopFrameLabel": "LOOP START"
@@ -194,9 +194,9 @@
     "excellent": [
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsExcellentResults",
+        "assetPath": "shared:resultScreen/results-bf-remnants/resultsEXCELLENT",
         "zIndex": 500,
-        "offsets": [1329, 429],
+        "offsets": [560.85, -410.35],
 
         "loopFrame": 29
       }
@@ -204,20 +204,20 @@
     "great": [
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsGFResultsGreat",
+        "assetPath": "shared:resultScreen/results-bf-remnants/resultsGREAT/gf",
         "scale": 0.93,
         "delay": 0.25,
-        "offsets": [802, 331],
+        "offsets": [563.364, -123.186],
         "zIndex": 499,
 
         "loopFrame": 9
       },
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsGreatResults",
+        "assetPath": "shared:resultScreen/results-bf-remnants/resultsGREAT/bf",
         "scale": 0.93,
         "zIndex": 500,
-        "offsets": [929, 363],
+        "offsets": [655.3, -247.95],
 
         "loopFrame": 15
       }
@@ -225,15 +225,15 @@
     "good": [
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsGoodResults",
+        "assetPath": "shared:resultScreen/results-bf-remnants/resultsGOOD/bf",
         "zIndex": 501,
-        "offsets": [662, 371],
+        "offsets": [645.4, -214.8],
 
         "loopFrame": 14
       },
       {
         "renderType": "sparrow",
-        "scriptClass": "RemnantsGFResultsGood",
+        "assetPath": "resultScreen/results-bf-remnants/resultsGOOD/resultGirlfriendGOOD",
         "zIndex": 500,
         "delay": 0.91,
         "offsets": [629, 323],
@@ -243,9 +243,9 @@
     "loss": [
       {
         "renderType": "animateatlas",
-        "scriptClass": "RemnantsShitResults",
+        "scriptClass": "BFRemnantsShitResults",
         "zIndex": 500,
-        "offsets": [0, 20],
+        "offsets": [570.5, -390.5],
         "loopFrameLabel": "Loop Start"
       }
     ]

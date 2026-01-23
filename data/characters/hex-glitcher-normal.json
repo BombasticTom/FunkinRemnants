@@ -11,7 +11,7 @@
   "singTime": 6.1,
   "startingAnimation": "idle",
   "healthIcon": {
-    "id": "Hex-g-remnants",
+    "id": "Hex-g",
     "isPixel": false
   },
   "assetPath": "characters/glitcherhex-virus",
