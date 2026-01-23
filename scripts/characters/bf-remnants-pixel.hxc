@@ -1,6 +1,10 @@
 import funkin.play.character.MultiSparrowCharacter;
 import funkin.play.PlayState;
 import funkin.util.HapticUtil;
+import funkin.util.Constants;
+import flixel.tweens.FlxEase;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
 import funkin.play.GameOverSubState;
 import funkin.play.PauseSubState;
 import flixel.FlxSprite;
@@ -23,6 +27,29 @@ class BFRemnantsPixelCharacter extends MultiSparrowCharacter
     PauseSubState.musicSuffix = '-remnants-pixel';
   }
 
+  var loseSprite:FunkinSprite;
+
+  /**
+   * Initialize and cache sprites used for the death animation,
+   */
+  function createDeathSprites()
+  {
+    loseSprite = FunkinSprite.createSparrow(1125, 15, "gameover/losePixel");
+    loseSprite.setGraphicSize(Std.int(loseSprite.width * Constants.PIXEL_ART_SCALE - 1));
+    loseSprite.antialiasing = false;
+    loseSprite.pixelPerfectRender = true;
+    loseSprite.pixelPerfectPosition = true;
+
+    loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
+    loseSprite.animation.addByPrefix('idle', "lose loop0", 12, true);
+    loseSprite.animation.onFinish.add(function(name:String) {
+      loseSprite.animation.play('idle', true);
+    });
+
+    loseSprite.zIndex = this.zIndex + 5;
+    loseSprite.visible = false;
+  }
+
   function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     if (name == "hey") PlayState.instance.vocals.playerVolume = 1;
@@ -30,6 +57,19 @@ class BFRemnantsPixelCharacter extends MultiSparrowCharacter
     if (name == "firstDeath")
     {
       this.shader = null;
+
+      // Standard death animation.
+      createDeathSprites();
+      GameOverSubState.instance.add(loseSprite);
+    }
+    else if (name == 'deathLoop')
+    {
+      loseSprite.visible = true;
+      loseSprite.animation.play('fall', true);
+    }
+    else if (name == "deathConfirm")
+    {
+      FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
     }
 
     super.playAnimation(name, restart, ignoreOther);

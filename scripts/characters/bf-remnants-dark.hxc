@@ -36,6 +36,30 @@ class BoyfriendRemnantsDarkCharacter extends MultiSparrowCharacter
     }
   }
 
+  var loseSprite:FunkinSprite;
+
+  /**
+   * Initialize and cache sprites used for the death animation,
+   */
+  function createDeathSprites()
+  {
+    loseSprite = FunkinSprite.createSparrow(this.x - 125, this.y - 600, "gameover/loseText");
+    loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
+    loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
+    loseSprite.animation.onFinish.add(function(name:String) {
+      loseSprite.animation.play('idle', true);
+    });
+
+    // week 3 shader
+    if (shader != null)
+    {
+      loseSprite.shader = shader;
+    }
+
+    loseSprite.zIndex = this.zIndex + 5;
+    loseSprite.visible = false;
+  }
+
   var normalChar:BaseCharacter;
 
   override function set_alpha(val:Float):Float
@@ -56,6 +80,23 @@ class BoyfriendRemnantsDarkCharacter extends MultiSparrowCharacter
     {
       normalChar.playAnimation(name, restart, ignoreOther);
       normalChar.setPosition(this.x, this.y);
+    }
+
+    if (name == "firstDeath")
+    {
+      // Standard death animation.
+      createDeathSprites();
+
+      GameOverSubState.instance.add(loseSprite);
+    }
+    else if (name == 'deathLoop')
+    {
+      loseSprite.visible = true;
+      loseSprite.animation.play('fall', true);
+    }
+    else if (name == "deathConfirm")
+    {
+      FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
     }
   }
 

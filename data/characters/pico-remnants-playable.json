@@ -8,8 +8,8 @@
   "flipX": true,
   "cameraOffsets": [0, 0],
   "death": {
-    "cameraZoom": 1.3,
-    "cameraOffsets": [0, -40]
+    "cameraZoom": 1,
+    "cameraOffsets": [0, -100]
   },
   "startingAnimation": "idle",
   "isPixel": false,

@@ -7,6 +7,10 @@
   "healthIcon": {
     "id": "bf-remnants"
   },
+  "death": {
+    "cameraOffsets": [0, -85],
+    "cameraZoom": 0.85
+  },
   "animations": [
     {
       "name": "singUP",

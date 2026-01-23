@@ -559,44 +559,6 @@ class StressRemnantsMixSong extends Song
     }
   }
 
-  var deathBFNormal:FunkinSprite;
-
-  override function onGameOver(event:ScriptEvent):Void
-  {
-    super.onGameOver(event);
-
-    if (gfFail) // Default BF death when GF faceplant.
-    {
-      new FlxTimer().start(0.05, _ -> {
-        deathBFNormal = FunkinSprite.createSparrow(0, 0, "characters/bf-remnants");
-        deathBFNormal.animation.addByPrefix('firstDeath', "BF dies", 24, false);
-        deathBFNormal.animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-        deathBFNormal.animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
-        deathBFNormal.setPosition(GameOverSubState.instance.boyfriend.x, GameOverSubState.instance.boyfriend.y);
-        deathBFNormal.zIndex = GameOverSubState.instance.boyfriend.zIndex + 1;
-        deathBFNormal.animation.play("firstDeath");
-        deathBFNormal.animation.onFinish.add(function(name:String) {
-          deathBFNormal.animation.play("deathLoop");
-        });
-
-        GameOverSubState.instance.add(deathBFNormal);
-        GameOverSubState.instance.refresh();
-      });
-    }
-
-    if (GameOverSubState.instance != null)
-    {
-      if ((GameOverSubState.instance.controls.ACCEPT
-        || (TouchUtil.pressAction() && !TouchUtil.overlaps(backButton) && GameOverSubState.instance.canInput)))
-      {
-        deathBFNormal?.animation.onFinish.removeAll();
-        deathBFNormal?.animation.onFinish = null;
-
-        deathBFNormal?.animation.play("deathConfirm");
-      }
-    }
-  }
-
   /**
    * Don't replay the cutscene between restarts.
    */

@@ -14,6 +14,10 @@
     "id": "bf-remnants",
     "isPixel": false
   },
+  "death": {
+    "cameraOffsets": [10, -85],
+    "cameraZoom": 0.85
+  },
   "assetPath": "characters/bf-remnants-mind",
   "animations": [
     {

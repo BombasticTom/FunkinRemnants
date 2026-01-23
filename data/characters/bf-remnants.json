@@ -5,6 +5,10 @@
   "assetPath": "characters/bf-remnants",
   "flipX": true,
   "singTime": 8.0,
+  "death": {
+    "cameraOffsets": [10, -85],
+    "cameraZoom": 0.85
+  },
   "animations": [
     {
       "name": "idle",

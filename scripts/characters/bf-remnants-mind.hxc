@@ -30,11 +30,10 @@ class BoyfriendRemnantsMindCharacter extends MultiSparrowCharacter
 
   /**
    * Initialize and cache sprites used for the death animation,
-   * for use later.
    */
   function createDeathSprites()
   {
-    loseSprite = FunkinSprite.createSparrow(800, -50, "gameover/loseText");
+    loseSprite = FunkinSprite.createSparrow(this.x - 125, this.y - 600, "gameover/loseText");
     loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
     loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
     loseSprite.animation.onFinish.add(function(name:String) {
@@ -62,7 +61,6 @@ class BoyfriendRemnantsMindCharacter extends MultiSparrowCharacter
     {
       // Standard death animation.
       createDeathSprites();
-
       GameOverSubState.instance.add(loseSprite);
     }
     else if (name == 'deathLoop')

@@ -6,6 +6,10 @@
   "healthIcon": {
     "id": "bf-christmas-remnants"
   },
+  "death": {
+    "cameraOffsets": [10, -85],
+    "cameraZoom": 0.85
+  },
   "renderType": "multisparrow",
   "singTime": 8.0,
   "animations": [

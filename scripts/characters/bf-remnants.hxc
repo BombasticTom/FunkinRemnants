@@ -47,12 +47,11 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
   var loseSprite:FunkinSprite;
 
   /**
-   * Initialize and cache sprites used for the death animation,
-   * for use later.
+   * Initialize and cache sprites used for the death animation.
    */
   function createDeathSprites()
   {
-    loseSprite = FunkinSprite.createSparrow(650, -50, "gameover/loseText");
+    loseSprite = FunkinSprite.createSparrow(this.x - 125, this.y - 600, "gameover/loseText");
     loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
     loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
     loseSprite.animation.onFinish.add(function(name:String) {
@@ -71,7 +70,7 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
-    if (name == "hey" || name == "cheer" || name == "ugh" || name == "sigma" || name == "remnants" || name == "ligma")
+    if (name == "hey" || name == "cheer" || name == "ugh" || name == "sigma" || name == "remnants" || name == "ligma" || name == "lights")
       PlayState.instance.vocals.playerVolume = 1;
 
     if (name == "fakeoutDeath" && !this.debug)
@@ -87,19 +86,25 @@ class BoyfriendRemnantsCharacter extends MultiSparrowCharacter
         doExplosionDeath();
       }
       else
+      {
         // Standard death animation.
         createDeathSprites();
+        GameOverSubState.instance.add(loseSprite);
+      }
+    }
 
-      GameOverSubState.instance.add(loseSprite);
-    }
-    else if (name == 'deathLoop' && !GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+    if (name == 'deathLoop')
     {
-      loseSprite.visible = true;
-      loseSprite.animation.play('fall', true);
+      if (bfDeathExplosion == null)
+      {
+        loseSprite.visible = true;
+        loseSprite.animation.play('fall', true);
+      }
     }
-    else if (name == "deathConfirm" && !GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+
+    if (name == "deathConfirm")
     {
-      if (bfDeathExplosion != null)
+      if (bfDeathExplosion != null || GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
       {
         doExplosionConfirm();
       }

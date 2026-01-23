@@ -14,6 +14,7 @@ import flixel.group.FlxTypedSpriteGroup;
 import flixel.effects.FlxFlicker;
 import funkin.play.PauseSubState;
 import funkin.modding.module.ModuleHandler;
+import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 
 class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
@@ -38,11 +39,11 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
   var deathSpriteRetry:FunkinSprite;
   var deathSpriteNene:FunkinSprite;
-
+  var loseSprite:FunkinSprite;
   var picoFade:FunkinSprite;
 
   /**
-     * Initialize and cache sprites used for the death animation,
+   * Initialize and cache sprites used for the death animation,
    * for use later.
    */
   function createDeathSprites()
@@ -54,15 +55,12 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     {
       deathSpriteRetry.shader = shader;
     }
+
     // Reminder: The position for this is set in `onAnimationFrame`
     deathSpriteRetry.animation.addByPrefix('idle', "Retry Text Loop0", 24, true);
     deathSpriteRetry.animation.addByPrefix('confirm', "Retry Text Confirm0", 24, false);
-
     deathSpriteRetry.zIndex = this.zIndex + 5;
-
     deathSpriteRetry.visible = false;
-
-    // FlxG.debugger.track(deathSpriteRetry);
 
     deathSpriteNene = FunkinSprite.createSparrow(0, 0, "characters/neneKnife-remnants");
     var gf = PlayState.instance.currentStage.getGirlfriend();
@@ -74,6 +72,23 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     deathSpriteNene.animation.onFinish.add(function(name:String) {
       deathSpriteNene.visible = false;
     });
+
+    loseSprite = FunkinSprite.createSparrow(1750, 300, "gameover/loseText");
+
+    // week 3 shader
+    if (shader != null)
+    {
+      loseSprite.shader = shader;
+    }
+
+    loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
+    loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
+    loseSprite.animation.onFinish.add(function(name:String) {
+      loseSprite.animation.play('idle', true);
+    });
+
+    loseSprite.zIndex = this.zIndex + 5;
+    loseSprite.visible = false;
   }
 
   function onNoteHit(event:HitNoteScriptEvent)
@@ -140,6 +155,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       {
         // Standard death animation.
         createDeathSprites();
+        GameOverSubState.instance.add(loseSprite);
 
         GameOverSubState.instance.add(deathSpriteRetry);
         GameOverSubState.instance.add(deathSpriteNene);
@@ -154,6 +170,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       }
       else
       {
+        FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
         deathSpriteRetry.animation.play('confirm');
         // I think the glow makes the overall animation larger,
         // but a plain FlxSprite doesn't have an animation offset option so we do it manually.
@@ -334,6 +351,9 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       // doesn't check this in gameover substate !
       // also no animation suffix ????
       GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
+
+      loseSprite.visible = true;
+      loseSprite.animation.play('fall', true);
     }
 
     if (name == "cock" && frameNumber == 3)
