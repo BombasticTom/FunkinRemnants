@@ -104,8 +104,8 @@
   },
   "results": {
     "music": {
-      "PERFECT_GOLD": "resultsPERFECT",
-      "PERFECT": "resultsPERFECT",
+      "PERFECT_GOLD": "resultsPERFECT-remnants",
+      "PERFECT": "resultsPERFECT-remnants",
       "EXCELLENT": "resultsEXCELLENT-remnants",
       "GREAT": "resultsGREAT-remnants",
       "GOOD": "resultsGOOD-remnants",
