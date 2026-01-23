@@ -29,23 +29,35 @@ class GoodRemnantsModule extends Module
 
       try
       {
-        if (thing.members != null)
-        {
-          for (i in thing.members)
-            lookThrough.push(i);
-        }
-
-        if (thing.subState != null && thing.subState.members != null)
-        {
-          for (i in thing.subState.members)
-            lookThrough.push(i);
-        }
+        for (i in thing.members)
+          lookThrough.push(i);
       }
       catch (e:Exception) {}
 
-      if (thing.scale != null) thing.scale.set(FlxG.random.float(0, 2), FlxG.random.float(0, 2));
+      try
+      {
+        for (i in thing.subState.members)
+          lookThrough.push(i);
+      }
+      catch (e:Exception) {}
 
-      if (thing.angle != null) thing.angle = FlxG.random.float(0, 360);
+      try
+      {
+        thing.scale.set(FlxG.random.float(0, 2), FlxG.random.float(0, 2));
+      }
+      catch (e:Exception) {}
+
+      try
+      {
+        thing.angle = FlxG.random.float(0, 360);
+      }
+      catch (e:Exception) {}
+
+      try
+      {
+        thing.skew.set(FlxG.random.float(-5, 5), FlxG.random.float(-5, 5));
+      }
+      catch (e:Exception) {}
     }
   }
 }
