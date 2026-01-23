@@ -13,12 +13,13 @@ import flixel.util.FlxTimer;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.FlxG;
+import funkin.util.FlxTweenUtil;
 
 class ThornsRemnantsMixSong extends Song
 {
   var bgSprite:FunkinSprite;
   var hasPlayedDialogue:Bool;
-  var black:FunkinSprite;
+  var fadeOut:Bool = false;
 
   public function new()
   {
@@ -37,11 +38,6 @@ class ThornsRemnantsMixSong extends Song
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
-
-    if (PlayState.instance.camHUD.alpha < 1)
-    {
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.7, {ease: FlxEase.linear});
-    }
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedDialogue) hasPlayedDialogue = true;
@@ -185,8 +181,19 @@ class ThornsRemnantsMixSong extends Song
     hasPlayedDialogue = true;
 
     FlxG.camera.stopFX();
-    FlxTween.cancelTweensOf(black);
-    black.alpha = 0;
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+
+    if (fadeOut)
+    {
+      FlxG.camera.fade(0xFF000000, 0.5, false);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      fadeOut = false;
+    }
+    else
+    {
+      FlxG.camera.fade(0xFF000000, 0, false);
+      PlayState.instance.camHUD.alpha = 0;
+    }
 
     if (PlayState.instance.isGameOverState)
     {
@@ -197,6 +204,26 @@ class ThornsRemnantsMixSong extends Song
   function onGameOver(event:ScriptEvent):Void
   {
     FlxG.camera.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+  }
+
+  function onPause()
+  {
+    FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongEnd(event:ScriptEvent):Void
+  {
+    PlayState.instance.camGame.visible = false;
   }
 
   /**
@@ -206,13 +233,11 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    PlayState.instance.add(black);
-    black.alpha = 0;
-
     hasPlayedDialogue = false;
+
+    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
   }
 
   public override function onDialogueEnd()
@@ -221,38 +246,28 @@ class ThornsRemnantsMixSong extends Song
     Countdown.performCountdown();
   }
 
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    FlxG.camera.fade(0xFF000000, 8.34, true);
+  }
+
   function onBeatHit(event:ScriptEvent):Void
   {
     super.onBeatHit(event);
 
     switch (event.beat)
     {
-      case 0:
-        FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.smoothStepInOut});
+      case 14:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 4.17, {ease: FlxEase.linear, onComplete: (_) -> {
+          fadeOut = true;
+    }});
 
-      case 28:
-        FlxTween.tween(black, {alpha: 0.5}, 1.25, {ease: FlxEase.smoothStepOut});
-
-      case 32:
-        FlxG.camera.flash(0xFFFFFFFF, 0.5);
-        black.alpha = 0;
-
-      case 96:
-        FlxTween.tween(black, {alpha: 0.25}, 1.25, {ease: FlxEase.sineOut});
-
-      case 127:
-        FlxTween.tween(black, {alpha: 0}, 0.3, {ease: FlxEase.backIn});
-
-      case 256:
-        FlxTween.tween(black, {alpha: 0.25}, 1, {ease: FlxEase.sineOut});
-
-      case 320:
-        FlxG.camera.flash(0xFFFFFFFF, 0.5);
-        black.alpha = 0;
-
-      case 384:
-        black.alpha = 1;
+      case 464:
+        FlxG.camera.fade(0xFF000000, 1.04, false);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1.04, {ease: FlxEase.linear});
+        fadeOut = false;
     }
   }
 }
-

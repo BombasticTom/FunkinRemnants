@@ -90,16 +90,16 @@ class RemnantsErectSong extends Song
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 
+  function onSongEnd(event:ScriptEvent):Void
+  {
+    PlayState.instance.camGame.visible = false;
+  }
+
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
 
     FlxG.camera.fade(0xFF000000, 1, true);
-  }
-
-  function onSongEnd(event:ScriptEvent):Void
-  {
-    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
