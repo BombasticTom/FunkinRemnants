@@ -3,7 +3,6 @@ import flixel.util.FlxGradient;
 import funkin.graphics.FunkinSprite;
 import funkin.modding.module.Module;
 import flixel.addons.display.FlxBackdrop;
-import funkin.graphics.shaders.TextureSwap;
 import flixel.graphics.frames.FlxBitmapFont;
 import funkin.ui.FullScreenScaleMode;
 import funkin.graphics.FunkinCamera;
@@ -48,6 +47,7 @@ class RemnantsResults extends Module
   {
     super.onUpdate(event);
 
+    // This doesn't works on the results debug if the mode is Freeplay or Story... (Debug works btw)
     if (Std.isOfType(FlxG.state?.subState, ResultState) && StringTools.contains(FlxG.state?.subState?.playerCharacterId, 'remnants'))
     {
       var curState = FlxG.state?.subState;
@@ -91,10 +91,8 @@ class RemnantsResults extends Module
         curState.songName.text = songText;
 
         // Difficulty Sprite
-        var swapDiff = new TextureSwap();
         var diffSpr:String = 'diff_' + curState.params?.difficultyId ?? Constants.DEFAULT_DIFFICULTY;
-        swapDiff.loadSwapImage("mods/Funkin' Remnants/shared/images/resultScreen/" + diffSpr + "-remnants.png");
-        curState.difficulty.shader = swapDiff;
+        curState.difficulty.loadGraphic(Paths.image("resultScreen/" + diffSpr + "-remnants"));
 
         // Ratings Popin
         var ratingsPopinRemnants = FunkinSprite.createSparrow(curState.ratingsPopin.x - 25, 135, "resultScreen/ratingsPopin-remnants");
