@@ -25,7 +25,7 @@
     },
     "stage": "schoolEvilRemnants",
     "noteStyle": "pixel",
-    "ratings": { "easy": 9, "normal": 10, "hard": 11 },
+    "ratings": { "easy": 10, "normal": 12, "hard": 13 },
     "album": "remnants-week6",
     "previewStart": 0,
     "previewEnd": 15000

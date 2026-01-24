@@ -185,7 +185,7 @@ class ThornsRemnantsMixSong extends Song
 
     if (fadeOut)
     {
-      FlxG.camera.fade(0xFF000000, 0.5, false);
+      RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 0.5);
       FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
       fadeOut = false;
     }
@@ -250,7 +250,8 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onSongStart(event);
 
-    FlxG.camera.fade(0xFF000000, 8.34, true);
+    RetroCameraFade.fadeBlack(PlayState.instance.camGame, 15, 3);
+    FlxG.camera.fade(0xFF000000, 0, true);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -259,13 +260,21 @@ class ThornsRemnantsMixSong extends Song
 
     switch (event.beat)
     {
-      case 14:
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 4.17, {ease: FlxEase.linear, onComplete: (_) -> {
+      case 24:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 2.08, {ease: FlxEase.linear, onComplete: (_) -> {
           fadeOut = true;
-    }});
+        }});
+
+      case 331:
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 8, 0.3);
+        fadeOut = false;
+
+      case 334:
+        RetroCameraFade.fadeBlack(PlayState.instance.camGame, 4, 0.3);
+        fadeOut = true;
 
       case 464:
-        FlxG.camera.fade(0xFF000000, 1.04, false);
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 1.04);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1.04, {ease: FlxEase.linear});
         fadeOut = false;
     }

@@ -193,7 +193,7 @@ class RosesRemnantsMixSong extends Song
       case 184:
         intro = true;
       case 192:
-        FlxG.camera.fade(0xFF000000, 1, false);
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 1);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
         outro = true;
     }
