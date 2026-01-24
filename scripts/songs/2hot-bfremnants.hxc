@@ -355,8 +355,8 @@ class TwoHOTRemnantsBFMixSong extends Song
       trace('Died to the can! Use special death animation.');
 
       // Reset to standard death animation.
-      // GameOverSubState.musicSuffix = '-bf-explode-remnants';
-      // GameOverSubState.blueBallSuffix = '-bf-explode-remnants';
+      GameOverSubState.musicSuffix = '-bf-explode-remnants';
+      GameOverSubState.blueBallSuffix = '-bf-explode-remnants';
 
       if (!PlayState.instance.isPracticeMode) blackenStageProps();
     }

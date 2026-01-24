@@ -287,9 +287,13 @@ class PicoRemnantsCard extends BackingCard
 
     super.update(elapsed);
 
-    if (FlxG.state.subState.dj != null)
+    final curDJ = FlxG.state?.subState?.dj;
+    if (curDJ != null)
     {
-      if (FlxG.state.subState.dj.getCurrentAnimation() == 'Pico DJ Idle' && FlxG.state.subState.dj.anim.curFrame == 0) glowBeat();
+      if (curDJ.getCurrentAnimation() == 'Pico DJ' && curDJ.animation.curAnim.curFrame == 0)
+      {
+        glowBeat();
+      }
     }
 
     var scrollProgress:Float = Math.abs(scrollTop.x % (scrollTop.frameWidth + 20));

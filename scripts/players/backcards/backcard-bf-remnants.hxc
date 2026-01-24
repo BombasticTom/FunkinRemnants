@@ -182,9 +182,13 @@ class BFRemnantsCard extends BackingCard
 
     super.update(elapsed);
 
-    if (FlxG.state.subState.dj != null)
+    final curDJ = FlxG.state?.subState?.dj;
+    if (curDJ != null)
     {
-      if (FlxG.state.subState.dj.getCurrentAnimation() == 'Boyfriend DJ Idle' && FlxG.state.subState.dj.anim.curFrame == 0) glowBeat();
+      if (curDJ.getCurrentAnimation() == 'Boyfriend DJ' && curDJ.animation.curAnim.curFrame == 0)
+      {
+        glowBeat();
+      }
     }
   }
 

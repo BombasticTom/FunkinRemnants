@@ -51,7 +51,23 @@ class BoyfriendRemnantsCharacter extends BaseCharacter
     }
   }
 
-  var loseSprite:FunkinSprite;
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+
+    // Reset to standard death animation.
+    GameOverSubState.musicSuffix = '-remnants';
+    GameOverSubState.blueBallSuffix = "";
+
+    PauseSubState.musicSuffix = '-remnants';
+
+    bfDeathExplosion = null;
+    this.visible = true;
+  }
+
+  var singed:FunkinSound = null;
+  var loseSprite:FunkinSprite = null;
+  var bfDeathExplosion:FunkinSprite = null;
 
   /**
    * Initialize and cache sprites used for the death animation.
@@ -88,9 +104,17 @@ class BoyfriendRemnantsCharacter extends BaseCharacter
     }
     else if (name == "firstDeath")
     {
-      // Standard death animation.
-      createDeathSprites();
-      GameOverSubState.instance.add(loseSprite);
+      if (GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+      {
+        // Explosion death animation... ngl idk if I even implented this right I only half know what im doing lmao. All I know is that the game over song dosent loop peroperly, so Till plz save me
+        doExplosionDeath();
+      }
+      else
+      {
+        // Standard death animation.
+        createDeathSprites();
+        GameOverSubState.instance.add(loseSprite);
+      }
     }
     else if (name == 'deathLoop')
     {
@@ -102,12 +126,85 @@ class BoyfriendRemnantsCharacter extends BaseCharacter
     }
     else if (name == "deathConfirm")
     {
-      FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+      if (bfDeathExplosion != null || GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+      {
+        doExplosionConfirm();
+      }
+      else
+      {
+        FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+      }
     }
 
     super.playAnimation(name, restart, ignoreOther);
 
-    if (name == 'preAttack') playCockAura();
+    if (name == 'preAttack')
+    {
+      // Devious animation name...
+      playCockAura();
+    }
+  }
+
+  function doExplosionDeath()
+  {
+    if (fadeTween != null && fadeTween.active)
+      fadeTween.cancel();
+
+    // Suffixed death sound will already play.
+    GameOverSubState.instance.resetCameraZoom();
+
+    // Move the camera up.
+    GameOverSubState.instance.cameraFollowPoint.y -= 100;
+    HapticUtil.vibrate(0, 0.5);
+
+    // Death by Darnell's can.
+    new FlxTimer().start(1.85, function(tmr:FlxTimer) {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1); // Pico falls on his knees.
+    });
+
+    bfDeathExplosion = FunkinSprite.createTextureAtlas(this.x - 1100, this.y - 1000, "characters/picoExplosionDeath", "weekend1");
+    PlayState.instance.subState.add(bfDeathExplosion);
+    bfDeathExplosion.zIndex = 1000;
+    bfDeathExplosion.animation.onFinish.add(onExplosionFinishAnim);
+    bfDeathExplosion.visible = true;
+    this.visible = false;
+
+    new FlxTimer().start(3.0, afterExplosionIntro);
+    bfDeathExplosion.anim.play('intro');
+  }
+
+  function doExplosionConfirm()
+  {
+    // Suffixed confirm music will already play.
+    bfDeathExplosion.animation.play('Confirm', true);
+    if (singed != null)
+    {
+      singed.stop();
+      singed = null;
+    }
+  }
+
+  function onExplosionFinishAnim(animLabel:String)
+  {
+    if (animLabel == 'intro')
+    {
+      bfDeathExplosion.animation.play('Loop Start', true);
+      bfDeathExplosion.animation.curAnim.looped = true;
+    }
+    else if (animLabel == 'Confirm')
+    {
+      // Do nothing, the animation will just play.
+    }
+
+    trace("Explosion animation finished: " + animLabel);
+  }
+
+  function afterExplosionIntro(timer:FlxTimer)
+  {
+    // Start the (standard) death music, 3.5 seconds after the explosion starts,
+    // not when the explosion sound finishes or when the loop starts.
+    GameOverSubState.instance.startDeathMusic(1, true);
+    singed = FunkinSound.load(Paths.sound('singed_loop'), true, false, true);
   }
 
   function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
