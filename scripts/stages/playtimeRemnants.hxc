@@ -84,7 +84,7 @@ class PlaytimeRmenantsStage extends Stage
     super.onUpdate(event);
 
     var remappedIntensityValue:Float = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music != null ? FlxG.sound.music.length : 0.0,
-      rainShaderStartIntensity, rainShaderEndIntensity);
+    rainShaderStartIntensity, rainShaderEndIntensity);
     rainShader.intensity = remappedIntensityValue;
     rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
     rainShader.update(event.elapsed);
@@ -117,5 +117,19 @@ class PlaytimeRmenantsStage extends Stage
   function onResume()
   {
     FlxTweenUtil.resumeTweensOf(getNamedProp('Overlay'));
+  }
+
+  override function onGameOver(event:ScriptEvent):Void
+  {
+    super.onGameOver(event);
+    // Make it so the rain shader doesn't show over the game over screen
+    FlxG.camera.filters = [];
+  }
+
+  override function onSongRetry(event:ScriptEvent):Void
+  {
+    super.onSongRetry(event);
+    // Make it so the rain shader doesn't show over the game over screen
+    FlxG.camera.filters = [rainShaderFilter];
   }
 }
