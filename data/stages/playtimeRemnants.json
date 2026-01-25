@@ -136,12 +136,12 @@
       "zIndex": 1000
     },
     {
-      "alpha": 0.2,
+      "alpha": 0.4,
       "angle": 0,
       "animType": "sparrow",
       "animations": [],
       "assetPath": "stages/huggyRemnants/overlay",
-      "blend": "",
+      "blend": "add",
       "color": "#FFFFFF",
       "danceEvery": 0,
       "flipX": false,

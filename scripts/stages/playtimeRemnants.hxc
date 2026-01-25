@@ -118,25 +118,4 @@ class PlaytimeRmenantsStage extends Stage
   {
     FlxTweenUtil.resumeTweensOf(getNamedProp('Overlay'));
   }
-
-  function onBeatHit(event:ScriptEvent):Void
-  {
-    super.onBeatHit(event);
-
-    switch (event.beat)
-    {
-      case 96:
-        if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.6}, 4.36, {ease: FlxEase.sineInOut});
-
-      case 128:
-        if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.2}, 4.36, {ease: FlxEase.sineInOut});
-
-      case 160:
-        if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 0.4}, 3.27, {ease: FlxEase.cubeOut});
-
-      case 192:
-        if (getNamedProp('Overlay') != null) FlxTween.tween(getNamedProp('Overlay'), {alpha: 1}, 0.54, {ease: FlxEase.linear});
-    }
-  }
 }
-

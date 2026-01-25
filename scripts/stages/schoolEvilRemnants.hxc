@@ -25,6 +25,7 @@ class SchoolEvilRemnantsStage extends Stage
   var wiggleSchool:FlxRuntimeShader = null;
   var wiggleGround:FlxRuntimeShader = null;
   var wiggleTrees:FlxRuntimeShader = null;
+  var wiggleOverlay:FlxRuntimeShader = null;
 
   var colorShaderBf:AdjustColorShader;
   var colorShaderDad:AdjustColorShader;
@@ -63,12 +64,14 @@ class SchoolEvilRemnantsStage extends Stage
     wiggleSchool = new WiggleEffectRuntime(2, 4, 0.017, WiggleEffectType.DREAMY);
     wiggleGround = new WiggleEffectRuntime(2, 4, 0.007, WiggleEffectType.DREAMY);
     wiggleTrees = new WiggleEffectRuntime(2, 4, 0.007, WiggleEffectType.DREAMY);
+    wiggleOverlay =  new WiggleEffectRuntime(50, 90, 0.7, WiggleEffectType.DREAMY);
 
     getNamedProp('sky').shader = wiggleSky;
     getNamedProp('backTrees').shader = wiggleBack;
     getNamedProp('school').shader = wiggleSchool;
     getNamedProp('street').shader = wiggleGround;
     getNamedProp('trees').shader = wiggleTrees;
+    getNamedProp('pixeloverlay').shader = wiggleOverlay;
   }
 
   function onBeatHit(event:SongTimeScriptEvent):Void
@@ -111,6 +114,7 @@ class SchoolEvilRemnantsStage extends Stage
       wiggleSchool.update(event.elapsed);
       wiggleGround.update(event.elapsed);
       wiggleTrees.update(event.elapsed);
+      wiggleOverlay.update(event.elapsed);
     }
   }
 
@@ -122,6 +126,7 @@ class SchoolEvilRemnantsStage extends Stage
     wiggleSchool = null;
     wiggleGround = null;
     wiggleTrees = null;
+    wiggleOverlay = null;
   }
 }
 

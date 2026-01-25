@@ -99,11 +99,17 @@ class PlaytimeRemnantsSong extends Song
       case 32:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.54, {ease: FlxEase.linear});
         fadeOut = true;
+      case 96:
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('Overlay'), {alpha: 1}, 4.36, {ease: FlxEase.sineInOut});
+      case 128:
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('Overlay'), {alpha: 0.4}, 4.36, {ease: FlxEase.sineInOut});
+      case 160:
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('Overlay'), {alpha: 0.75}, 3.27, {ease: FlxEase.cubeOut});
       case 192:
         FlxG.camera.fade(0xFF000000, 0.54, false);
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('Overlay'), {alpha: 1}, 0.54, {ease: FlxEase.linear});
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.54, {ease: FlxEase.linear});
         fadeOut = false;
     }
   }
 }
-
