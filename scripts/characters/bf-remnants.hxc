@@ -4,7 +4,7 @@ import funkin.util.HapticUtil;
 import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import funkin.play.PauseSubState;
-import funkin.play.character.BaseCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
@@ -14,41 +14,21 @@ import flixel.util.FlxTimer;
 import funkin.util.Constants;
 import funkin.Preferences;
 
-class BoyfriendRemnantsCharacter extends BaseCharacter
+class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
 {
   function new()
   {
-    super('bf-remnants', 'custom');
+    super('bf-remnants');
   }
 
   function onCreate(event:ScriptEvent)
   {
-    buildSprite();
     super.onCreate(event);
 
     GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
 
     this.shouldAlternate = ['south'].contains(PlayState?.instance?.currentSong?.id);
-  }
-
-  function buildSprite():Void
-  {
-    RemnantsFramesUtil.buildMultiSparrowAnimateCharacterSpritesheet(super);
-    RemnantsFramesUtil.buildMultiSparrowAnimateCharacterAnimations(super);
-
-    if (_data.isPixel)
-    {
-      this.isPixel = true;
-      this.antialiasing = false;
-      // pixelPerfectRender = true;
-      // pixelPerfectPosition = true;
-    }
-    else
-    {
-      this.isPixel = false;
-      this.antialiasing = true;
-    }
   }
 
   override function onSongRetry(event:ScriptEvent):Void
@@ -118,11 +98,8 @@ class BoyfriendRemnantsCharacter extends BaseCharacter
     }
     else if (name == 'deathLoop')
     {
-      if (bfDeathExplosion == null)
-      {
-        loseSprite.visible = true;
-        loseSprite.animation.play('fall', true);
-      }
+      loseSprite.visible = true;
+      loseSprite.animation.play('fall', true);
     }
     else if (name == "deathConfirm")
     {

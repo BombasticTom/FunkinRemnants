@@ -1,5 +1,5 @@
 {
-  "renderType": "custom",
+  "renderType": "multianimateatlas",
   "offsets": [17, 14],
   "applyStageMatrix": false,
   "startingAnimation": "idle",
@@ -74,47 +74,47 @@
       "name": "singRIGHT"
     },
     {
-      "offsets": [11, -80],
-      "prefix": "BF LEFT PERFECT0",
+      "offsets": [102, -44],
+      "prefix": "Perfect Left",
       "animType": "framelabel",
       "flipX": false,
       "looped": false,
       "name": "singLEFT-perfect",
       "flipY": false,
-      "assetPath": "characters/BFPerfect",
+      "assetPath": "shared:characters/bf extra remnants",
       "frameRate": 24
     },
     {
-      "offsets": [-8, -115],
-      "prefix": "BF DOWN PERFECT0",
+      "offsets": [102, -44],
+      "prefix": "Perfect Down",
       "animType": "framelabel",
       "flipX": false,
       "looped": false,
       "name": "singDOWN-perfect",
       "flipY": false,
-      "assetPath": "characters/BFPerfect",
+      "assetPath": "shared:characters/bf extra remnants",
       "frameRate": 24
     },
     {
-      "offsets": [-30, -53],
-      "prefix": "BF UP PERFECT0",
+      "offsets": [102, -44],
+      "prefix": "Perfect Up",
       "animType": "framelabel",
       "flipX": false,
       "looped": false,
       "name": "singUP-perfect",
       "flipY": false,
-      "assetPath": "characters/BFPerfect",
+      "assetPath": "shared:characters/bf extra remnants",
       "frameRate": 24
     },
     {
-      "offsets": [-60, -78],
-      "prefix": "BF RIGHT PERFECT0",
+      "offsets": [102, -44],
+      "prefix": "Perfect Right",
       "animType": "framelabel",
       "flipX": false,
       "looped": false,
       "name": "singRIGHT-perfect",
       "flipY": false,
-      "assetPath": "characters/BFPerfect",
+      "assetPath": "shared:characters/bf extra remnants",
       "frameRate": 24
     },
     {
@@ -168,25 +168,25 @@
       "name": "hey"
     },
     {
-      "offsets": [17, -14],
-      "prefix": "BOYFRIEND",
+      "offsets": [102, -44],
+      "prefix": "Boyfriend Friday Night Funkin'",
       "animType": "framelabel",
       "flipX": false,
       "looped": false,
       "name": "boyfriend",
       "flipY": false,
-      "assetPath": "characters/boyfriendfridaynightfunkin",
+      "assetPath": "shared:characters/bf extra remnants",
       "frameRate": 24
     },
     {
-      "offsets": [100, -70],
-      "prefix": "BF shrug",
+      "offsets": [102, -44],
+      "prefix": "Shrug",
       "animType": "framelabel",
       "flipX": false,
       "looped": false,
       "name": "shrug",
       "flipY": false,
-      "assetPath": "characters/BFShrug",
+      "assetPath": "shared:characters/bf extra remnants",
       "frameRate": 24
     },
     {

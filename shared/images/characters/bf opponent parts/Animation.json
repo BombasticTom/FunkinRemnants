@@ -1,0 +1,100 @@
+{
+"AN":{
+"N":"remnants bf opponent",
+"SN":"what are we doing",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"bf body default flipped",
+"FF":0,
+"ST":"G",
+"TRP":{"x":-134.8,"y":15.55},
+"LP":"LP",
+"MX":[1,0,0,1,-300.5,-109.2]
+}},
+{"SI":{
+"SN":"BF Body Down Flipped",
+"FF":0,
+"ST":"G",
+"TRP":{"x":-548.95,"y":-126.15},
+"LP":"LP",
+"MX":[1,0,0,1,-722.45,-256.2]
+}},
+{"SI":{
+"SN":"BF Body Up Flipped",
+"FF":0,
+"ST":"G",
+"TRP":{"x":378.3,"y":-93.9},
+"LP":"LP",
+"MX":[1,0,0,1,214.5,-229.2]
+}}]}
+]}
+]}},
+"SD":{
+"S":[
+{
+"SN":"bf body default flipped",
+"TL":{
+"L":[
+{
+"LN":"Layer_2",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-0.25,0.15],
+"N":"0"
+}}]}
+]}
+]}},{
+"SN":"BF Body Down Flipped",
+"TL":{
+"L":[
+{
+"LN":"Layer_2",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-1,-0.15],
+"N":"1"
+}}]}
+]}
+]}},{
+"SN":"BF Body Up Flipped",
+"TL":{
+"L":[
+{
+"LN":"Layer_2",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"2"
+}}]}
+]}
+]}}
+]},
+"MD":{
+"V":"BTA 1.2.0",
+"N":"remnants bf opponent",
+"BGC":"#151515",
+"W":1920,
+"H":1080,
+"ASV":3,
+"FRT":24
+}}

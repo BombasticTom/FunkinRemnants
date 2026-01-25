@@ -1,39 +1,14 @@
-import funkin.play.character.BaseCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
 
 using StringTools;
 
-class BoyfriendDefaultRemnantsCharacter extends BaseCharacter
+class BoyfriendDefaultRemnantsCharacter extends MultiAnimateAtlasCharacter
 {
   function new()
   {
     super('bf-default-remnants', 'custom');
-  }
-
-  function onCreate(event:ScriptEvent)
-  {
-    buildSprite();
-    super.onCreate(event);
-  }
-
-  function buildSprite():Void
-  {
-    RemnantsFramesUtil.buildMultiSparrowAnimateCharacterSpritesheet(super);
-    RemnantsFramesUtil.buildMultiSparrowAnimateCharacterAnimations(super);
-
-    if (_data.isPixel)
-    {
-      this.isPixel = true;
-      this.antialiasing = false;
-      // pixelPerfectRender = true;
-      // pixelPerfectPosition = true;
-    }
-    else
-    {
-      this.isPixel = false;
-      this.antialiasing = true;
-    }
   }
 
   function onNoteHit(event:HitNoteScriptEvent)

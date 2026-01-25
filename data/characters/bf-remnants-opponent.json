@@ -1,188 +1,114 @@
 {
   "version": "1.0.0",
   "name": "Remnants BF (Opponent)",
-  "renderType": "multisparrow",
-  "assetPath": "characters/bf-remnants-opponent",
-  "flipX": false,
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/dismemberment",
+  "flipX": true,
   "singTime": 8.0,
+  "cameraOffsets": [0, 146],
+  "offsets": [153, 12],
   "healthIcon": {
     "id": "bf-remnants",
     "isPixel": false
   },
+  "atlasSettings": {
+    "uniqueInCache": true
+  },
   "animations": [
     {
-      "offsets": [0, 0],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF idle dance",
-      "indices": [],
       "name": "idle",
-      "looped": false,
-      "flipX": false
+      "prefix": "Idle",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [42, -7],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF NOTE LEFT0",
-      "indices": [],
       "name": "singLEFT",
-      "looped": false,
-      "flipX": false
+      "prefix": "Pose Right",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [-15, -53],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF NOTE DOWN0",
-      "indices": [],
       "name": "singDOWN",
-      "looped": false,
-      "flipX": false
+      "prefix": "Pose Down",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [3, 31],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF NOTE UP0",
-      "indices": [],
       "name": "singUP",
-      "looped": false,
-      "flipX": false
+      "prefix": "Pose Up",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [-34, -6],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF NOTE RIGHT0",
-      "indices": [],
       "name": "singRIGHT",
-      "looped": false,
-      "flipX": false
+      "prefix": "Pose Left",
+      "offsets": [0, 0]
     },
     {
       "name": "singLEFT-perfect",
-      "prefix": "BF LEFT PERFECT0",
-      "assetPath": "characters/bf-remnants-opponent_Perfect",
-      "offsets": [55, -7]
+      "prefix": "Perfect Right",
+      "offsets": [0, 0]
     },
     {
       "name": "singDOWN-perfect",
-      "prefix": "BF DOWN PERFECT0",
-      "assetPath": "characters/bf-remnants-opponent_Perfect",
-      "offsets": [-16, -47]
+      "prefix": "Perfect Down",
+      "offsets": [0, 0]
     },
     {
       "name": "singUP-perfect",
-      "prefix": "BF UP PERFECT0",
-      "assetPath": "characters/bf-remnants-opponent_Perfect",
-      "offsets": [6, 21]
+      "prefix": "Perfect Up",
+      "offsets": [0, 0]
     },
     {
       "name": "singRIGHT-perfect",
-      "prefix": "BF RIGHT PERFECT0",
-      "assetPath": "characters/bf-remnants-opponent_Perfect",
-      "offsets": [5, -7]
+      "prefix": "Perfect Left",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [2, 5],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF HEY!!0",
-      "indices": [],
-      "name": "hey",
-      "looped": false,
-      "flipX": false
+      "name": "singLEFTmiss",
+      "prefix": "Miss Right",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [30, 30],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "Boyfriend YEAH cheer0",
-      "indices": [],
-      "name": "cheer",
-      "looped": false,
-      "flipX": false
+      "name": "singDOWNmiss",
+      "prefix": "Miss Down",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [41, 20],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF NOTE LEFT MISS0",
-      "indices": [],
-      "name": "singLEFT-miss",
-      "looped": false,
-      "flipX": false
+      "name": "singUPmiss",
+      "prefix": "Miss Up",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [-15, -25],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF NOTE DOWN MISS0",
-      "indices": [],
-      "name": "singDOWN-miss",
-      "looped": false,
-      "flipX": false
+      "name": "singRIGHTmiss",
+      "prefix": "Miss Left",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [1, 29],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF NOTE UP MISS0",
-      "indices": [],
-      "name": "singUP-miss",
-      "looped": false,
-      "flipX": false
-    },
-    {
-      "offsets": [-33, 20],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF NOTE RIGHT MISS0",
-      "indices": [],
-      "name": "singRIGHT-miss",
-      "looped": false,
-      "flipX": false
-    },
-    {
-      "offsets": [42, -7],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF Censor Left0",
-      "indices": [],
       "name": "singLEFT-censor",
-      "looped": false,
-      "flipX": false
+      "prefix": "Censor Right",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [-15, -53],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF Censor Down0",
-      "indices": [],
       "name": "singDOWN-censor",
-      "looped": false,
-      "flipX": false
+      "prefix": "Censor Down",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [3, 31],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF Censor Up0",
-      "indices": [],
       "name": "singUP-censor",
-      "looped": false,
-      "flipX": false
+      "prefix": "Censor Up",
+      "offsets": [0, 0]
     },
     {
-      "offsets": [-34, -6],
-      "flipY": false,
-      "frameRate": 24,
-      "prefix": "BF Censor Right0",
-      "indices": [],
       "name": "singRIGHT-censor",
-      "looped": false,
-      "flipX": false
+      "prefix": "Censor Left",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "hey",
+      "prefix": "Hey",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "cheer",
+      "prefix": "Cheer",
+      "offsets": [0, 0]
     }
   ]
 }

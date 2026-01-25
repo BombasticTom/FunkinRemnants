@@ -1,11 +1,25 @@
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.AnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
+import funkin.Paths;
 
-class BFRemnantsOpponentCharacter extends MultiSparrowCharacter
+class BFRemnantsOpponentCharacter extends AnimateAtlasCharacter
 {
   function new()
   {
     super('bf-remnants-opponent');
+  }
+
+  var flippedParts:FlxAnimateFrames;
+
+  override function loadAtlas():Void
+  {
+    super.loadAtlas();
+
+    flippedParts = Paths.getAnimateAtlas("characters/bf opponent parts", "shared", _data.atlasSettings);
+    flippedParts.parent.destroyOnNoUse = false;
+    this.library.addAtlas(flippedParts);
+
+    replaceWithFlipped();
   }
 
   function onNoteHit(event:HitNoteScriptEvent)
@@ -31,6 +45,21 @@ class BFRemnantsOpponentCharacter extends MultiSparrowCharacter
         default:
           super.onNoteHit(event);
       }
+    }
+  }
+
+  function replaceWithFlipped():Void
+  {
+    var symbols:Array<String> = ["bf body default", "BF Body Down", "BF Body Up"];
+    var flippedSymbol:Array<String> = ["bf body default flipped", "BF Body Down Flipped", "BF Body Up Flipped"];
+
+    for (i in 0...symbols.length)
+    {
+      var symbol:SymbolItem = this.library.getSymbol(symbols[i]);
+      var flippedSymbol:SymbolItem = this.library.getSymbol(flippedSymbol[i]);
+
+      symbol.timeline = flippedSymbol.timeline;
+      trace('replaced ' + symbol.name + ' with ' + flippedSymbol.name);
     }
   }
 }
