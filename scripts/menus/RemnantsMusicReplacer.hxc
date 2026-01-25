@@ -31,6 +31,7 @@ class RemnantsMusicReplacer extends Module
 
     addReplacement('freakyMenu', 'freakyMenu-remnants', RemnantsContentUtil.remnantsContentEnabled);
     addReplacement('girlfriendsRingtone', 'tutorialTitle', RemnantsContentUtil.remnantsContentEnabled);
+    addReplacement('offsetsLoop', 'offsetsLoop-remnants', RemnantsContentUtil.remnantsContentEnabled);
   }
 
   /**
