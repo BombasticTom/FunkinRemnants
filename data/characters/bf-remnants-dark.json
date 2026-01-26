@@ -1,13 +1,14 @@
 {
   "version": "1.0.0",
   "name": "Remnants BF (Dark)",
-  "renderType": "multisparrow",
-  "assetPath": "characters/bf-remnants_dark",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/bf-remnants-dark",
   "flipX": true,
   "singTime": 8.0,
   "healthIcon": {
     "id": "bf-remnants"
   },
+  "offsets": [5, 20],
   "death": {
     "cameraOffsets": [10, -85],
     "cameraZoom": 0.85
@@ -15,128 +16,125 @@
   "animations": [
     {
       "name": "idle",
-      "prefix": "BF idle dance",
-      "offsets": [4, 9]
+      "prefix": "Idle",
+      "offsets": [0, 0]
     },
     {
       "name": "danceLeft",
-      "prefix": "BF spooky dance",
+      "prefix": "Spooky Dance",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
-      "frameRate": 24,
-      "offsets": [4, 9]
+      "offsets": [0, 0]
     },
     {
       "name": "danceRight",
-      "prefix": "BF spooky dance",
+      "prefix": "Spooky Dance",
       "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
-      "frameRate": 24,
-      "offsets": [4, 9]
+      "offsets": [0, 0]
     },
     {
       "name": "singLEFT",
-      "prefix": "BF NOTE LEFT0",
-      "offsets": [14, 3]
+      "prefix": "Pose Left",
+      "offsets": [0, 0]
     },
     {
       "name": "singDOWN",
-      "prefix": "BF NOTE DOWN0",
-      "offsets": [-11, -43]
+      "prefix": "Pose Down",
+      "offsets": [0, 0]
     },
     {
       "name": "singUP",
-      "prefix": "BF NOTE UP0",
-      "offsets": [-30, 36]
+      "prefix": "Pose Up",
+      "offsets": [0, 0]
     },
     {
       "name": "singRIGHT",
-      "prefix": "BF NOTE RIGHT0",
-      "offsets": [-39, 2]
+      "prefix": "Pose Right",
+      "offsets": [0, 0]
     },
     {
       "name": "singLEFT-perfect",
-      "prefix": "BF LEFT PERFECT0",
-      "offsets": [29, 2]
+      "prefix": "Perfect Left",
+      "offsets": [0, 0]
     },
     {
       "name": "singDOWN-perfect",
-      "prefix": "BF DOWN PERFECT0",
-      "offsets": [9, -38]
+      "prefix": "Perfect Down",
+      "offsets": [0, 0]
     },
     {
       "name": "singUP-perfect",
-      "prefix": "BF UP PERFECT0",
-      "offsets": [-5, 26]
+      "prefix": "Perfect Up",
+      "offsets": [0, 0]
     },
     {
       "name": "singRIGHT-perfect",
-      "prefix": "BF RIGHT PERFECT0",
-      "offsets": [-39, 2]
+      "prefix": "Perfect Right",
+      "offsets": [0, 0]
     },
     {
       "name": "singLEFTmiss",
-      "prefix": "BF NOTE LEFT MISS",
-      "offsets": [14, 19]
+      "prefix": "Miss Left",
+      "offsets": [0, 0]
     },
     {
       "name": "singDOWNmiss",
-      "prefix": "BF NOTE DOWN MISS",
-      "offsets": [-13, -22]
+      "prefix": "Miss Down",
+      "offsets": [0, 0]
     },
     {
       "name": "singUPmiss",
-      "prefix": "BF NOTE UP MISS",
-      "offsets": [-37, 36]
+      "prefix": "Miss Up",
+      "offsets": [0, 0]
     },
     {
       "name": "singRIGHTmiss",
-      "prefix": "BF NOTE RIGHT MISS",
-      "offsets": [-38, 21]
+      "prefix": "Miss Right",
+      "offsets": [0, 0]
     },
     {
       "name": "hey",
-      "prefix": "BF HEY!!",
-      "offsets": [6, 14]
+      "prefix": "Hey",
+      "offsets": [0, 0]
     },
     {
       "name": "cheer",
-      "prefix": "Boyfriend YEAH cheer",
-      "offsets": [-11, 39]
+      "prefix": "Cheer",
+      "offsets": [0, 0]
     },
     {
       "name": "lights",
-      "prefix": "BF lights out",
-      "assetPath": "characters/BFLightsOut-remnants",
-      "offsets": [43, 19]
+      "prefix": "Lights Out",
+      "offsets": [0, 0]
     },
     {
-      "name": "firstDeath",
-      "prefix": "BF dies",
-      "assetPath": "characters/bf-remnants",
-      "offsets": [23, 11]
-    },
-    {
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "fakeoutDeath",
-      "prefix": "BF dies",
-      "assetPath": "characters/bf-remnants",
-      "offsets": [23, 11]
+      "prefix": "Fakeout",
+      "offsets": [-278, -126]
     },
     {
+      "assetPath": "shared:characters/bf-remnants-death",
+      "name": "firstDeath",
+      "prefix": "Death",
+      "offsets": [-278, -126]
+    },
+    {
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "deathLoop",
-      "prefix": "BF Dead Loop",
+      "prefix": "Loop Death",
       "looped": true,
-      "assetPath": "characters/bf-remnants",
-      "offsets": [23, 4]
+      "offsets": [-278, -126]
     },
     {
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "deathConfirm",
-      "prefix": "BF Dead confirm",
-      "assetPath": "characters/bf-remnants",
-      "offsets": [22, 67]
+      "prefix": "Retry",
+      "offsets": [-278, -126]
     },
     {
       "name": "scared",
-      "prefix": "BF idle shaking",
-      "offsets": [3, 9]
+      "prefix": "Scared",
+      "offsets": [0, 0]
     }
   ]
 }

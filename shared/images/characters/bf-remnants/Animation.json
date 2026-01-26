@@ -1,6 +1,6 @@
 {
 "AN":{
-"N":"remnants bf",
+"N":"remnants bf TA export",
 "SN":"Boyfriend ALL ANIMS",
 "TL":{
 "L":[
@@ -33,148 +33,128 @@
 "DU":12,
 "E":[]
 },{
-"N":"Miss Left",
+"N":"Censor Left",
 "I":76,
 "DU":12,
 "E":[]
 },{
-"N":"Miss Down",
+"N":"Censor Down",
 "I":88,
 "DU":12,
 "E":[]
 },{
-"N":"Miss Up",
+"N":"Censor Up",
 "I":100,
 "DU":12,
 "E":[]
 },{
-"N":"Miss Right",
+"N":"Censor Right",
 "I":112,
 "DU":12,
 "E":[]
 },{
-"N":"Censor Left",
-"I":124,
-"DU":12,
-"E":[]
-},{
-"N":"Censor Down",
-"I":136,
-"DU":12,
-"E":[]
-},{
-"N":"Censor Up",
-"I":148,
-"DU":12,
-"E":[]
-},{
-"N":"Censor Right",
-"I":160,
-"DU":12,
-"E":[]
-},{
 "N":"Spooky Dance",
-"I":172,
+"I":124,
 "DU":16,
 "E":[]
 },{
 "N":"Limo Dance",
-"I":188,
+"I":140,
 "DU":30,
 "E":[]
 },{
 "N":"Hey",
-"I":218,
+"I":170,
 "DU":12,
 "E":[]
 },{
 "N":"Ayo",
-"I":230,
+"I":182,
 "DU":12,
 "E":[]
 },{
 "N":"Aww",
-"I":242,
+"I":194,
 "DU":12,
 "E":[]
 },{
 "N":"Scared",
-"I":254,
+"I":206,
 "DU":12,
 "E":[]
 },{
 "N":"Cheer",
-"I":266,
+"I":218,
 "DU":7,
 "E":[]
 },{
 "N":"Pre-Attack",
-"I":273,
+"I":225,
 "DU":12,
 "E":[]
 },{
 "N":"Attack",
-"I":285,
+"I":237,
 "DU":7,
 "E":[]
 },{
 "N":"Dodge",
-"I":292,
+"I":244,
 "DU":12,
 "E":[]
 },{
 "N":"Hurt",
-"I":304,
+"I":256,
 "DU":12,
 "E":[]
 },{
 "N":"Super Jump",
-"I":316,
+"I":268,
 "DU":37,
 "E":[]
 },{
 "N":"Head Turn",
-"I":353,
+"I":305,
 "DU":56,
 "E":[]
 },{
 "N":"Ugh",
-"I":409,
+"I":361,
 "DU":16,
 "E":[]
 },{
 "N":"Perfect Down",
-"I":425,
+"I":377,
 "DU":15,
 "E":[]
 },{
 "N":"Perfect Left",
-"I":440,
+"I":392,
 "DU":15,
 "E":[]
 },{
 "N":"Perfect Right",
-"I":455,
+"I":407,
 "DU":15,
 "E":[]
 },{
 "N":"Perfect Up",
-"I":470,
+"I":422,
 "DU":15,
 "E":[]
 },{
 "N":"Funkin' Mah Remnants",
-"I":485,
+"I":437,
 "DU":22,
 "E":[]
 },{
 "N":"Sigma",
-"I":507,
+"I":459,
 "DU":18,
 "E":[]
 },{
 "N":"Ligma",
-"I":525,
+"I":477,
 "DU":14,
 "E":[]
 }
@@ -241,7 +221,7 @@
 "DU":12,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF NOTE LEFT MISS",
+"SN":"<-- Export -->/(Swearing Assets)/bf swear left",
 "FF":0,
 "ST":"G",
 "TRP":{"x":499.45,"y":5.15},
@@ -252,7 +232,7 @@
 "DU":12,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF NOTE DOWN MISS",
+"SN":"<-- Export -->/(Swearing Assets)/bf swear down",
 "FF":0,
 "ST":"G",
 "TRP":{"x":810.7,"y":-157.35},
@@ -263,7 +243,7 @@
 "DU":12,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF NOTE UP MISS",
+"SN":"<-- Export -->/(Swearing Assets)/bf swear up",
 "FF":0,
 "ST":"G",
 "TRP":{"x":802.95,"y":-261.9},
@@ -274,50 +254,6 @@
 "DU":12,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF NOTE RIGHT MISS",
-"FF":0,
-"ST":"G",
-"TRP":{"x":499.45,"y":5.15},
-"LP":"LP",
-"MX":[1,0,0,1,0,0]
-}}]},{
-"I":124,
-"DU":12,
-"E":[
-{"SI":{
-"SN":"<-- Export -->/(Swearing Assets)/bf swear left",
-"FF":0,
-"ST":"G",
-"TRP":{"x":499.45,"y":5.15},
-"LP":"LP",
-"MX":[1,0,0,1,0,0]
-}}]},{
-"I":136,
-"DU":12,
-"E":[
-{"SI":{
-"SN":"<-- Export -->/(Swearing Assets)/bf swear down",
-"FF":0,
-"ST":"G",
-"TRP":{"x":810.7,"y":-157.35},
-"LP":"LP",
-"MX":[1,0,0,1,311.25,-162.5]
-}}]},{
-"I":148,
-"DU":12,
-"E":[
-{"SI":{
-"SN":"<-- Export -->/(Swearing Assets)/bf swear up",
-"FF":0,
-"ST":"G",
-"TRP":{"x":802.95,"y":-261.9},
-"LP":"LP",
-"MX":[1,0,0,1,303.5,-267.05]
-}}]},{
-"I":160,
-"DU":12,
-"E":[
-{"SI":{
 "SN":"<-- Export -->/(Swearing Assets)/bf swear right",
 "FF":0,
 "ST":"G",
@@ -325,7 +261,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,0,0]
 }}]},{
-"I":172,
+"I":124,
 "DU":16,
 "E":[
 {"SI":{
@@ -336,7 +272,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,0,-66.4]
 }}]},{
-"I":188,
+"I":140,
 "DU":30,
 "E":[
 {"SI":{
@@ -347,7 +283,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,0,0]
 }}]},{
-"I":218,
+"I":170,
 "DU":12,
 "E":[
 {"SI":{
@@ -358,7 +294,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,0,0]
 }}]},{
-"I":230,
+"I":182,
 "DU":12,
 "E":[
 {"SI":{
@@ -369,7 +305,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,-0.8,0]
 }}]},{
-"I":242,
+"I":194,
 "DU":12,
 "E":[
 {"SI":{
@@ -380,7 +316,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,-0.8,0]
 }}]},{
-"I":254,
+"I":206,
 "DU":12,
 "E":[
 {"SI":{
@@ -391,7 +327,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,-0.8,0]
 }}]},{
-"I":266,
+"I":218,
 "DU":7,
 "E":[
 {"SI":{
@@ -402,7 +338,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,-192.05,-77.5]
 }}]},{
-"I":273,
+"I":225,
 "DU":12,
 "E":[
 {"SI":{
@@ -413,7 +349,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,332.95,-165]
 }}]},{
-"I":285,
+"I":237,
 "DU":7,
 "E":[
 {"SI":{
@@ -424,7 +360,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,45.45,-115]
 }}]},{
-"I":292,
+"I":244,
 "DU":12,
 "E":[
 {"SI":{
@@ -435,7 +371,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,306.7,-190]
 }}]},{
-"I":304,
+"I":256,
 "DU":12,
 "E":[
 {"SI":{
@@ -446,7 +382,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,65.45,-120]
 }}]},{
-"I":316,
+"I":268,
 "DU":37,
 "E":[
 {"SI":{
@@ -457,18 +393,18 @@
 "LP":"LP",
 "MX":[1,0,0,1,-0.8,0]
 }}]},{
-"I":353,
+"I":305,
 "DU":56,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF head turn",
+"SN":"edits/BF head turn",
 "FF":0,
 "ST":"G",
 "TRP":{"x":498.65,"y":5.15},
 "LP":"LP",
 "MX":[1,0,0,1,-0.8,0]
 }}]},{
-"I":409,
+"I":361,
 "DU":16,
 "E":[
 {"SI":{
@@ -479,7 +415,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,-0.8,0]
 }}]},{
-"I":425,
+"I":377,
 "DU":15,
 "E":[
 {"SI":{
@@ -490,7 +426,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,297.75,-165.5]
 }}]},{
-"I":440,
+"I":392,
 "DU":15,
 "E":[
 {"SI":{
@@ -501,7 +437,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,-12.55,0.05]
 }}]},{
-"I":455,
+"I":407,
 "DU":15,
 "E":[
 {"SI":{
@@ -512,7 +448,7 @@
 "LP":"LP",
 "MX":[1,0,0,1,-13.1,10.7]
 }}]},{
-"I":470,
+"I":422,
 "DU":15,
 "E":[
 {"SI":{
@@ -523,33 +459,33 @@
 "LP":"LP",
 "MX":[1,0,0,1,295.55,-268.4]
 }}]},{
-"I":485,
+"I":437,
 "DU":22,
 "E":[
 {"SI":{
-"SN":"Export/BF funkin my remnants",
+"SN":"<-- Export -->/BF funkin my remnants",
 "FF":0,
 "ST":"G",
 "TRP":{"x":505.55,"y":-0.45},
 "LP":"LP",
 "MX":[1,0,0,1,301,-201.2]
 }}]},{
-"I":507,
+"I":459,
 "DU":18,
 "E":[
 {"SI":{
-"SN":"Export/BF sigma",
+"SN":"<-- Export -->/BF sigma",
 "FF":0,
 "ST":"G",
 "TRP":{"x":518.8,"y":-3.3},
 "LP":"LP",
 "MX":[1,0,0,1,299.3,-201.05]
 }}]},{
-"I":525,
+"I":477,
 "DU":14,
 "E":[
 {"SI":{
-"SN":"Export/BF ligma",
+"SN":"<-- Export -->/BF ligma",
 "FF":0,
 "ST":"G",
 "TRP":{"x":508.3,"y":1.15},
@@ -1230,388 +1166,6 @@
 }}]}
 ]}
 ]}},{
-"SN":"<-- Export -->/BF NOTE LEFT MISS",
-"TL":{
-"L":[
-{
-"LN":"Layer 6",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[]
-},{
-"I":1,
-"DU":2,
-"E":[
-{"SI":{
-"SN":"miss left f color",
-"FF":0,
-"ST":"G",
-"TRP":{"x":506.2,"y":192.05},
-"LP":"LP",
-"MX":[1,0,-0.018,1,308.55,-189.15]
-}}]},{
-"I":3,
-"DU":31,
-"E":[
-{"SI":{
-"SN":"miss left f color",
-"FF":2,
-"ST":"G",
-"TRP":{"x":486.15,"y":10},
-"LP":"LP",
-"MX":[1,0,0,1,301.55,-189.15]
-}}]}
-]},{
-"LN":"Layer 5",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[]
-}
-]},{
-"LN":"BF HEY!! Layer",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"mic hand",
-"FF":0,
-"ST":"G",
-"TRP":{"x":378.7,"y":64.8},
-"LP":"LP",
-"MX":[0.998,-0.034,0.034,0.998,285.6,4.7]
-}}]}
-]},{
-"LN":"BF idle dance Layer",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,401.15,-123],
-"N":"7"
-}}]}
-]},{
-"LN":"Layer 3",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"arm default",
-"FF":0,
-"ST":"G",
-"TRP":{"x":425.35,"y":43.5},
-"LP":"LP",
-"MX":[0.948,-0.314,0.314,0.948,343.75,16.6]
-}},
-{"SI":{
-"SN":"bf body default",
-"FF":0,
-"ST":"G",
-"TRP":{"x":520.05,"y":193.65},
-"LP":"LP",
-"MX":[1,0,0.198,1,297.4,-37.95]
-}},
-{"SI":{
-"SN":"BF Head defalt",
-"FF":0,
-"ST":"G",
-"TRP":{"x":503.2,"y":-87.55},
-"LP":"LP",
-"MX":[0.992,0.123,-0.123,0.992,348.7,-208.95]
-}}]}
-]}
-]}},{
-"SN":"<-- Export -->/BF NOTE DOWN MISS",
-"TL":{
-"L":[
-{
-"LN":"Layer 7",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[]
-},{
-"I":1,
-"DU":2,
-"E":[
-{"SI":{
-"SN":"down miss purp dude",
-"FF":0,
-"ST":"G",
-"TRP":{"x":203.2,"y":344.85},
-"LP":"LP",
-"MX":[0.995,0,0,1.011,12.8,14.7]
-}}]},{
-"I":3,
-"DU":26,
-"E":[
-{"SI":{
-"SN":"down miss purp dude",
-"FF":2,
-"ST":"G",
-"TRP":{"x":200.2,"y":195.85},
-"LP":"LP",
-"MX":[1,0,0,1,11.75,18.35]
-}}]}
-]},{
-"LN":"Layer 5",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[]
-}
-]},{
-"LN":"Layer 3",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"mic hand",
-"FF":0,
-"ST":"G",
-"TRP":{"x":106.65,"y":249.5},
-"LP":"LP",
-"MX":[0.93,0.358,-0.358,0.93,44.45,158]
-}}]}
-]},{
-"LN":"Layer 4",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,109.55,66.95],
-"N":"8"
-}}]}
-]},{
-"LN":"Layer 2",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"BF Head defalt",
-"FF":0,
-"ST":"G",
-"TRP":{"x":210.15,"y":116.15},
-"LP":"LP",
-"MX":[0.992,-0.101,0.101,0.992,32.9,32.35]
-}}]}
-]},{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"BF Body Down",
-"FF":0,
-"ST":"G",
-"TRP":{"x":206.55,"y":355.75},
-"LP":"LP",
-"MX":[1.023,0,0,0.979,29.55,118.5]
-}}]}
-]}
-]}},{
-"SN":"<-- Export -->/BF NOTE UP MISS",
-"TL":{
-"L":[
-{
-"LN":"Layer 6",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[]
-},{
-"I":1,
-"DU":2,
-"E":[
-{"SI":{
-"SN":"purp mizz combine",
-"FF":0,
-"ST":"G",
-"TRP":{"x":206.55,"y":466.95},
-"LP":"LP",
-"MX":[1.011,0,0,0.993,33.1,53.45]
-}}]},{
-"I":3,
-"DU":21,
-"E":[
-{"SI":{
-"SN":"purp mizz combine",
-"FF":2,
-"ST":"G",
-"TRP":{"x":212.5,"y":262.95},
-"LP":"LP",
-"MX":[1,0,0,1,34.95,50.5]
-}}]}
-]},{
-"LN":"Layer 4",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,193.25,96.3],
-"N":"9"
-}}]}
-]},{
-"LN":"Layer 3",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"mic hand",
-"FF":0,
-"ST":"G",
-"TRP":{"x":114.15,"y":269.75},
-"LP":"LP",
-"MX":[0.853,-0.519,0.519,0.853,3.5,263.25]
-}}]}
-]},{
-"LN":"Layer 2",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"BF Head defalt",
-"FF":0,
-"ST":"G",
-"TRP":{"x":284.55,"y":162.45},
-"LP":"LP",
-"MX":[0.88,0.471,-0.471,0.88,184.2,-6.3]
-}}]}
-]},{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"arm default",
-"FF":0,
-"ST":"G",
-"TRP":{"x":170.1,"y":278.5},
-"LP":"LP",
-"MX":[0.999,0.035,-0.035,0.999,102.75,224.85]
-}},
-{"SI":{
-"SN":"BF Body Up",
-"FF":0,
-"ST":"G",
-"TRP":{"x":201.4,"y":449},
-"LP":"LP",
-"MX":[0.988,0,0,1.017,42.55,206.7]
-}}]}
-]}
-]}},{
-"SN":"<-- Export -->/BF NOTE RIGHT MISS",
-"TL":{
-"L":[
-{
-"LN":"Layer 5",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[]
-},{
-"I":1,
-"DU":2,
-"E":[
-{"SI":{
-"SN":"right note miss colorsawddwa",
-"FF":0,
-"ST":"G",
-"TRP":{"x":539.75,"y":198.7},
-"LP":"LP",
-"MX":[1,0,0.023,1,330.25,-187.4]
-}}]},{
-"I":3,
-"DU":43,
-"E":[
-{"SI":{
-"SN":"right note miss colorsawddwa",
-"FF":2,
-"ST":"G",
-"TRP":{"x":538.75,"y":10.65},
-"LP":"LP",
-"MX":[1,0,0,1,339.25,-187.4]
-}}]}
-]},{
-"LN":"BF HEY!! Layer",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"mic hand",
-"FF":0,
-"ST":"G",
-"TRP":{"x":444.65,"y":44.5},
-"LP":"LP",
-"MX":[0.982,0.184,-0.184,0.982,366.65,-34.5]
-}}]}
-]},{
-"LN":"BF idle dance Layer",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,471.85,-129.15],
-"N":"10"
-}}]}
-]},{
-"LN":"Layer 3",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"SI":{
-"SN":"bf body default",
-"FF":0,
-"ST":"G",
-"TRP":{"x":512.05,"y":177.65},
-"LP":"LP",
-"MX":[1,0,-0.163,1,378.3,-37.95]
-}},
-{"SI":{
-"SN":"BF Head defalt right",
-"FF":0,
-"ST":"G",
-"TRP":{"x":580.2,"y":-94.55},
-"LP":"LP",
-"MX":[0.992,-0.115,0.115,0.992,401.6,-175.95]
-}}]}
-]}
-]}},{
 "SN":"<-- Export -->/(Swearing Assets)/bf swear left",
 "TL":{
 "L":[
@@ -1698,7 +1252,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,401.15,-123],
-"N":"11"
+"N":"7"
 }}]},{
 "I":2,
 "DU":12,
@@ -1873,14 +1427,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,109.55,66.95],
-"N":"12"
+"N":"8"
 }}]},{
 "I":2,
 "DU":28,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,114.85,66.55],
-"N":"13"
+"N":"9"
 }}]}
 ]},{
 "LN":"Layer_2",
@@ -1974,14 +1528,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,193.25,96.3],
-"N":"14"
+"N":"10"
 }}]},{
 "I":2,
 "DU":13,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,193.15,105.6],
-"N":"15"
+"N":"11"
 }}]}
 ]},{
 "LN":"Layer_3",
@@ -2143,14 +1697,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,471.85,-129.15],
-"N":"16"
+"N":"12"
 }}]},{
 "I":2,
 "DU":60,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,475.85,-132.7],
-"N":"17"
+"N":"13"
 }}]}
 ]},{
 "LN":"Layer_3",
@@ -2821,7 +2375,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,415.25,-2.65],
-"N":"19"
+"N":"15"
 }},
 {"SI":{
 "SN":"arm default front",
@@ -3643,21 +3197,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,446.3,-128.75],
-"N":"22"
+"N":"18"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,443.1,-121.75],
-"N":"23"
+"N":"19"
 }}]},{
 "I":4,
 "DU":22,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,445.4,-122.3],
-"N":"24"
+"N":"20"
 }}]}
 ]},{
 "LN":"Layer 3",
@@ -3752,7 +3306,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,455.95,-108.2],
-"N":"25"
+"N":"21"
 }}]},{
 "I":2,
 "DU":2,
@@ -4267,21 +3821,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,498.95,-155.5],
-"N":"27"
+"N":"23"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,501,-134.35],
-"N":"28"
+"N":"24"
 }}]},{
 "I":4,
 "DU":5,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,497.85,-141.45],
-"N":"29"
+"N":"25"
 }}]}
 ]}
 ]}},{
@@ -4435,7 +3989,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,62.95,-150.35],
-"N":"31"
+"N":"27"
 }},
 {"SI":{
 "SN":"mictied",
@@ -4450,7 +4004,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,129,-229.8],
-"N":"32"
+"N":"28"
 }},
 {"SI":{
 "SN":"mictied",
@@ -4465,7 +4019,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,209.85,-239.7],
-"N":"33"
+"N":"29"
 }},
 {"SI":{
 "SN":"mictied",
@@ -4480,7 +4034,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,196.65,-215.6],
-"N":"34"
+"N":"30"
 }},
 {"SI":{
 "SN":"mictied",
@@ -6172,7 +5726,7 @@
 }
 ]}
 ]}},{
-"SN":"<-- Export -->/BF head turn",
+"SN":"edits/BF head turn",
 "TL":{
 "L":[
 {
@@ -6762,28 +6316,28 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,451.25,-112.95],
-"N":"39"
+"N":"35"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,432.15,-122.75],
-"N":"40"
+"N":"36"
 }}]},{
 "I":4,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,437.95,-120.55],
-"N":"41"
+"N":"37"
 }}]},{
 "I":6,
 "DU":10,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,437.95,-118.2],
-"N":"42"
+"N":"38"
 }}]}
 ]},{
 "LN":"Layer_4",
@@ -6794,28 +6348,28 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,506.5,-23.25],
-"N":"43"
+"N":"39"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,480.5,-33.8],
-"N":"44"
+"N":"40"
 }}]},{
 "I":4,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,494.65,-34.85],
-"N":"45"
+"N":"41"
 }}]},{
 "I":6,
 "DU":10,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,492.95,-35.65],
-"N":"46"
+"N":"42"
 }}]}
 ]},{
 "LN":"Layer_1",
@@ -7488,7 +7042,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"Export/BF funkin my remnants",
+"SN":"<-- Export -->/BF funkin my remnants",
 "TL":{
 "L":[
 {
@@ -7499,7 +7053,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":225.2,"y":172.7},
@@ -7507,7 +7061,7 @@
 "MX":[1,-0.012,0.012,1,-0.05,146.65]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -7515,7 +7069,7 @@
 "MX":[1,0,-0.003,1,42.25,162.75]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":0,
 "ST":"G",
 "TRP":{"x":247.45,"y":191.75},
@@ -7523,7 +7077,7 @@
 "MX":[1,-0.008,0.008,1,71.15,2.35]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":0,
 "ST":"G",
 "TRP":{"x":223.15,"y":156.3},
@@ -7531,7 +7085,7 @@
 "MX":[0.989,-0.008,0.008,1.015,177.35,156.7]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":0,
 "ST":"G",
 "TRP":{"x":205.4,"y":174.2},
@@ -7542,7 +7096,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":225.2,"y":172.7},
@@ -7550,7 +7104,7 @@
 "MX":[1,-0.012,0.012,1,-0.05,146.65]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -7558,7 +7112,7 @@
 "MX":[1,0,-0.003,1,42.25,162.75]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":0,
 "ST":"G",
 "TRP":{"x":247.45,"y":191.75},
@@ -7566,7 +7120,7 @@
 "MX":[1,-0.008,0.008,1,71.15,2.35]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":2,
 "ST":"G",
 "TRP":{"x":223.15,"y":156.3},
@@ -7574,7 +7128,7 @@
 "MX":[0.989,-0.008,0.008,1.015,177.35,156.7]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":0,
 "ST":"G",
 "TRP":{"x":205.4,"y":174.2},
@@ -7585,7 +7139,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":235.3,"y":172.8},
@@ -7593,7 +7147,7 @@
 "MX":[0.966,-0.258,0.258,0.966,10.55,202.95]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.2,"y":411},
@@ -7601,7 +7155,7 @@
 "MX":[1,0,-0.133,1,74.55,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":290.95,"y":170.4},
@@ -7609,7 +7163,7 @@
 "MX":[0.998,-0.06,0.06,0.998,288.55,166.4]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":260.7,"y":188.6},
@@ -7617,7 +7171,7 @@
 "MX":[1,-0.012,0.012,1,83.55,0.05]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":6,
 "ST":"G",
 "TRP":{"x":253.2,"y":149.05},
@@ -7625,7 +7179,7 @@
 "MX":[1,-0.012,0.012,1,206.85,149.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":2,
 "ST":"G",
 "TRP":{"x":237.8,"y":165.35},
@@ -7633,7 +7187,7 @@
 "MX":[1,-0.012,0.012,1,174.3,58.1]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":370.65,"y":210.8},
@@ -7644,7 +7198,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":235.3,"y":172.8},
@@ -7652,7 +7206,7 @@
 "MX":[0.966,-0.258,0.258,0.966,10.55,202.95]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.2,"y":411},
@@ -7660,7 +7214,7 @@
 "MX":[1,0,-0.133,1,74.55,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":290.95,"y":170.4},
@@ -7668,7 +7222,7 @@
 "MX":[0.998,-0.06,0.06,0.998,288.55,166.4]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":260.7,"y":188.6},
@@ -7676,7 +7230,7 @@
 "MX":[1,-0.012,0.012,1,83.55,0.05]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":1,
 "ST":"G",
 "TRP":{"x":251.25,"y":149.05},
@@ -7684,7 +7238,7 @@
 "MX":[1,-0.012,0.012,1,204.9,149.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":2,
 "ST":"G",
 "TRP":{"x":237.8,"y":165.35},
@@ -7692,7 +7246,7 @@
 "MX":[1,-0.012,0.012,1,174.3,58.1]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":370.65,"y":210.8},
@@ -7703,7 +7257,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -7711,7 +7265,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -7719,7 +7273,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -7727,7 +7281,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -7735,7 +7289,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":0,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -7743,7 +7297,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -7751,7 +7305,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -7762,7 +7316,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -7770,7 +7324,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -7778,7 +7332,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -7786,7 +7340,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -7794,7 +7348,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":9,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -7802,7 +7356,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -7810,7 +7364,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -7821,7 +7375,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -7829,7 +7383,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -7837,7 +7391,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -7845,7 +7399,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -7853,7 +7407,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":3,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -7861,7 +7415,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -7869,7 +7423,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -7880,7 +7434,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -7888,7 +7442,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -7896,7 +7450,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -7904,7 +7458,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -7912,7 +7466,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":12,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -7920,7 +7474,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -7928,7 +7482,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -7939,7 +7493,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -7947,7 +7501,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -7955,7 +7509,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -7963,7 +7517,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -7971,7 +7525,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":3,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -7979,7 +7533,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -7987,7 +7541,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -7998,7 +7552,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8006,7 +7560,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8014,7 +7568,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8022,7 +7576,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8030,7 +7584,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":2,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -8038,7 +7592,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8046,7 +7600,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8057,7 +7611,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8065,7 +7619,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8073,7 +7627,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8081,7 +7635,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8089,7 +7643,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":1,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -8097,7 +7651,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8105,7 +7659,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8116,7 +7670,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8124,7 +7678,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8132,7 +7686,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8140,7 +7694,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8148,7 +7702,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":3,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -8156,7 +7710,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8164,7 +7718,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8175,7 +7729,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8183,7 +7737,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8191,7 +7745,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8199,7 +7753,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8207,7 +7761,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":12,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -8215,7 +7769,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8223,7 +7777,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8234,7 +7788,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8242,7 +7796,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8250,7 +7804,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8258,7 +7812,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8266,7 +7820,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":3,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -8274,7 +7828,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8282,7 +7836,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8293,7 +7847,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8301,7 +7855,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8309,7 +7863,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8317,7 +7871,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8325,7 +7879,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":2,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -8333,7 +7887,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8341,7 +7895,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8352,7 +7906,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8360,7 +7914,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8368,7 +7922,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8376,7 +7930,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8384,7 +7938,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":1,
 "ST":"G",
 "TRP":{"x":254.4,"y":150.55},
@@ -8392,7 +7946,7 @@
 "MX":[1,0,0,1,208.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8400,7 +7954,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8411,7 +7965,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8419,7 +7973,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8427,7 +7981,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8435,7 +7989,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8443,7 +7997,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":0,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -8451,7 +8005,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8459,7 +8013,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8470,7 +8024,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8478,7 +8032,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8486,7 +8040,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8494,7 +8048,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8502,7 +8056,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":6,
 "ST":"G",
 "TRP":{"x":248.4,"y":150.55},
@@ -8510,7 +8064,7 @@
 "MX":[1,0,0,1,202.1,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8518,7 +8072,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8529,7 +8083,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8537,7 +8091,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8545,7 +8099,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8553,7 +8107,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8561,7 +8115,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":3,
 "ST":"G",
 "TRP":{"x":250.9,"y":150.55},
@@ -8569,7 +8123,7 @@
 "MX":[1,0,0,1,204.6,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8577,7 +8131,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8588,7 +8142,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8596,7 +8150,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8604,7 +8158,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8612,7 +8166,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8620,7 +8174,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":11,
 "ST":"G",
 "TRP":{"x":250.9,"y":150.55},
@@ -8628,7 +8182,7 @@
 "MX":[1,0,0,1,204.6,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8636,7 +8190,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8647,7 +8201,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":233.35,"y":172.75},
@@ -8655,7 +8209,7 @@
 "MX":[0.969,-0.246,0.246,0.969,8.25,200.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.1,"y":411},
@@ -8663,7 +8217,7 @@
 "MX":[1,0,-0.128,1,73.3,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":289.5,"y":169.55},
@@ -8671,7 +8225,7 @@
 "MX":[1,0,0,1,287.45,165.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":258.65,"y":190.25},
@@ -8679,7 +8233,7 @@
 "MX":[1,0,0,1,83.9,-0.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":12,
 "ST":"G",
 "TRP":{"x":250.9,"y":150.55},
@@ -8687,7 +8241,7 @@
 "MX":[1,0,0,1,204.6,150.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":1,
 "ST":"G",
 "TRP":{"x":236.05,"y":166.7},
@@ -8695,7 +8249,7 @@
 "MX":[1,0,0,1,173.9,58.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "FF":0,
 "ST":"G",
 "TRP":{"x":366.7,"y":214.55},
@@ -8704,7 +8258,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"Export/BF sigma",
+"SN":"<-- Export -->/BF sigma",
 "TL":{
 "L":[
 {
@@ -8715,7 +8269,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":225.95,"y":173.5},
@@ -8723,7 +8277,7 @@
 "MX":[1,-0.017,0.017,1,0.65,148.65]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":204.15,"y":411},
@@ -8731,7 +8285,7 @@
 "MX":[1,0,-0.003,1,42.35,162.75]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":0,
 "ST":"G",
 "TRP":{"x":247.4,"y":191.1},
@@ -8739,7 +8293,7 @@
 "MX":[1,-0.008,0.008,1,71.1,1.7]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":0,
 "ST":"G",
 "TRP":{"x":223.1,"y":155.6},
@@ -8747,7 +8301,7 @@
 "MX":[1,-0.008,0.008,1,176.8,156.05]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":0,
 "ST":"G",
 "TRP":{"x":205.2,"y":173.5},
@@ -8758,7 +8312,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":229.2,"y":173.5},
@@ -8766,7 +8320,7 @@
 "MX":[0.998,-0.061,0.061,0.998,3.05,158.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":204.2,"y":411},
@@ -8774,7 +8328,7 @@
 "MX":[1,0,-0.016,1,45.6,162.75]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":247.9,"y":193},
@@ -8782,7 +8336,7 @@
 "MX":[0.999,-0.046,0.046,0.999,64.4,10.5]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":0,
 "ST":"G",
 "TRP":{"x":235,"y":156.6},
@@ -8790,7 +8344,7 @@
 "MX":[0.999,-0.046,0.046,0.999,188.7,158.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":0,
 "ST":"G",
 "TRP":{"x":221,"y":175.15},
@@ -8801,7 +8355,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":229.2,"y":173.5},
@@ -8809,7 +8363,7 @@
 "MX":[0.998,-0.061,0.061,0.998,3.05,158.45]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":0,
 "ST":"G",
 "TRP":{"x":204.2,"y":411},
@@ -8817,7 +8371,7 @@
 "MX":[1,0,-0.016,1,45.6,162.75]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":247.9,"y":193},
@@ -8825,7 +8379,7 @@
 "MX":[0.999,-0.046,0.046,0.999,64.4,10.5]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":10,
 "ST":"G",
 "TRP":{"x":235,"y":156.6},
@@ -8833,7 +8387,7 @@
 "MX":[0.999,-0.046,0.046,0.999,188.7,158.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":0,
 "ST":"G",
 "TRP":{"x":221,"y":175.15},
@@ -8844,7 +8398,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":251.3,"y":181.8},
@@ -8852,7 +8406,7 @@
 "MX":[0.986,-0.168,0.168,0.986,24.65,191.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.15,"y":411},
@@ -8860,7 +8414,7 @@
 "MX":[1,0,-0.177,1,85.4,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":316.4,"y":172.8},
@@ -8868,7 +8422,7 @@
 "MX":[0.866,0.5,-0.5,0.866,317.25,150]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":275.05,"y":193.25},
@@ -8876,7 +8430,7 @@
 "MX":[0.995,-0.103,0.103,0.995,81.45,21.5]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":12,
 "ST":"G",
 "TRP":{"x":264.2,"y":159.45},
@@ -8884,7 +8438,7 @@
 "MX":[0.995,-0.103,0.103,0.995,218.1,164.25]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":4,
 "ST":"G",
 "TRP":{"x":245.25,"y":178.25},
@@ -8892,7 +8446,7 @@
 "MX":[0.995,-0.103,0.103,0.995,172.25,77.3]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 7",
+"SN":"edits/Symbol 7",
 "FF":0,
 "ST":"G",
 "TRP":{"x":384.7,"y":255.1},
@@ -8903,7 +8457,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":251.3,"y":181.8},
@@ -8911,7 +8465,7 @@
 "MX":[0.986,-0.168,0.168,0.986,24.65,191.15]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.15,"y":411},
@@ -8919,7 +8473,7 @@
 "MX":[1,0,-0.177,1,85.4,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":314.75,"y":173.55},
@@ -8927,7 +8481,7 @@
 "MX":[0.948,0.317,-0.317,0.948,311.05,151.05]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":275.05,"y":193.25},
@@ -8935,7 +8489,7 @@
 "MX":[0.995,-0.103,0.103,0.995,81.45,21.5]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":11,
 "ST":"G",
 "TRP":{"x":264.2,"y":157.05},
@@ -8943,7 +8497,7 @@
 "MX":[0.995,-0.103,0.103,0.995,218.1,161.85]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":4,
 "ST":"G",
 "TRP":{"x":245.25,"y":178.25},
@@ -8951,7 +8505,7 @@
 "MX":[0.995,-0.103,0.103,0.995,172.25,77.3]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 7",
+"SN":"edits/Symbol 7",
 "FF":0,
 "ST":"G",
 "TRP":{"x":398.1,"y":240.55},
@@ -8962,7 +8516,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":249.75,"y":181.85},
@@ -8970,7 +8524,7 @@
 "MX":[0.986,-0.163,0.167,0.987,23,189.9]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.25,"y":411},
@@ -8978,7 +8532,7 @@
 "MX":[1,0,-0.167,1,82.9,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":314.2,"y":173.1},
@@ -8986,7 +8540,7 @@
 "MX":[0.941,0.341,-0.338,0.94,310.95,150.5]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":273.5,"y":193.1},
@@ -8994,7 +8548,7 @@
 "MX":[0.995,-0.098,0.101,0.995,80.15,20.25]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":3,
 "ST":"G",
 "TRP":{"x":254.1,"y":159.2},
@@ -9002,7 +8556,7 @@
 "MX":[0.968,-0.095,0.078,1.015,209,163.55]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":4,
 "ST":"G",
 "TRP":{"x":243.75,"y":178.1},
@@ -9010,7 +8564,7 @@
 "MX":[0.998,-0.066,0.096,0.939,171.2,80.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 7",
+"SN":"edits/Symbol 7",
 "FF":0,
 "ST":"G",
 "TRP":{"x":396,"y":242.25},
@@ -9021,7 +8575,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":249.75,"y":181.85},
@@ -9029,7 +8583,7 @@
 "MX":[0.986,-0.163,0.167,0.987,23,189.9]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.25,"y":411},
@@ -9037,7 +8591,7 @@
 "MX":[1,0,-0.167,1,82.9,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":314.2,"y":173.1},
@@ -9045,7 +8599,7 @@
 "MX":[0.941,0.341,-0.338,0.94,310.95,150.5]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":273.5,"y":193.1},
@@ -9053,7 +8607,7 @@
 "MX":[0.995,-0.098,0.101,0.995,80.15,20.25]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":3,
 "ST":"G",
 "TRP":{"x":253.9,"y":159.2},
@@ -9061,7 +8615,7 @@
 "MX":[0.995,-0.098,0.101,0.995,207.75,163.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":4,
 "ST":"G",
 "TRP":{"x":243.75,"y":178.1},
@@ -9069,7 +8623,7 @@
 "MX":[0.998,-0.066,0.096,0.939,171.2,80.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 7",
+"SN":"edits/Symbol 7",
 "FF":0,
 "ST":"G",
 "TRP":{"x":396,"y":242.25},
@@ -9080,7 +8634,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":246.25,"y":181.85},
@@ -9088,7 +8642,7 @@
 "MX":[0.984,-0.163,0.181,0.987,19.6,189.9]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.15,"y":411},
@@ -9096,7 +8650,7 @@
 "MX":[1,0,-0.152,1,79.1,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":0,
 "ST":"G",
 "TRP":{"x":312.5,"y":169.65},
@@ -9104,7 +8658,7 @@
 "MX":[0.86,0.523,-0.504,0.857,313.45,146.75]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":270.15,"y":193.1},
@@ -9112,7 +8666,7 @@
 "MX":[0.993,-0.098,0.116,0.995,74.25,20.25]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":2,
 "ST":"G",
 "TRP":{"x":250.05,"y":159.2},
@@ -9120,7 +8674,7 @@
 "MX":[0.993,-0.098,0.116,0.995,203.95,163.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":4,
 "ST":"G",
 "TRP":{"x":240.2,"y":178.1},
@@ -9128,7 +8682,7 @@
 "MX":[0.997,-0.066,0.11,0.939,166.15,80.65]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 7",
+"SN":"edits/Symbol 7",
 "FF":0,
 "ST":"G",
 "TRP":{"x":379.95,"y":253.95},
@@ -9139,7 +8693,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":240.45,"y":181.8},
@@ -9147,7 +8701,7 @@
 "MX":[0.998,-0.062,0.062,0.998,14.15,166.8]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.2,"y":411},
@@ -9155,7 +8709,7 @@
 "MX":[1,0,-0.071,1,59,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":1,
 "ST":"G",
 "TRP":{"x":300.55,"y":174.4},
@@ -9163,7 +8717,7 @@
 "MX":[0.711,0.71,-0.703,0.705,307.1,152.6]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":262.6,"y":191.65},
@@ -9171,7 +8725,7 @@
 "MX":[0.999,-0.039,0.039,0.999,80.35,7.9]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":2,
 "ST":"G",
 "TRP":{"x":245.25,"y":156.6},
@@ -9179,7 +8733,7 @@
 "MX":[0.999,-0.039,0.075,0.976,198.8,158.45]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":3,
 "ST":"G",
 "TRP":{"x":233.9,"y":174.9},
@@ -9187,7 +8741,7 @@
 "MX":[1.009,-0.04,0.038,0.953,167,74.4]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 8",
+"SN":"edits/Symbol 8",
 "FF":0,
 "ST":"G",
 "TRP":{"x":357.05,"y":253.55},
@@ -9198,7 +8752,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":240.45,"y":181.8},
@@ -9206,7 +8760,7 @@
 "MX":[0.998,-0.062,0.062,0.998,14.15,166.8]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.2,"y":411},
@@ -9214,7 +8768,7 @@
 "MX":[1,0,-0.071,1,59,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":1,
 "ST":"G",
 "TRP":{"x":300.55,"y":174.4},
@@ -9222,7 +8776,7 @@
 "MX":[0.711,0.71,-0.703,0.705,307.1,152.6]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":262.6,"y":191.65},
@@ -9230,7 +8784,7 @@
 "MX":[0.999,-0.039,0.039,0.999,80.35,7.9]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":1,
 "ST":"G",
 "TRP":{"x":253.2,"y":156.65},
@@ -9238,7 +8792,7 @@
 "MX":[0.999,-0.039,0.039,0.999,206.85,158.55]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":3,
 "ST":"G",
 "TRP":{"x":233.9,"y":174.9},
@@ -9246,7 +8800,7 @@
 "MX":[1.009,-0.04,0.038,0.953,167,74.4]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 8",
+"SN":"edits/Symbol 8",
 "FF":0,
 "ST":"G",
 "TRP":{"x":357.05,"y":253.55},
@@ -9257,7 +8811,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":241.2,"y":181.75},
@@ -9265,7 +8819,7 @@
 "MX":[0.997,-0.074,0.074,0.997,14.75,169.6]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.15,"y":411},
@@ -9273,7 +8827,7 @@
 "MX":[1,0,-0.083,1,62.15,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":1,
 "ST":"G",
 "TRP":{"x":302.75,"y":174.5},
@@ -9281,7 +8835,7 @@
 "MX":[0.714,0.7,-0.7,0.714,309.2,152.65]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":264.2,"y":191.85},
@@ -9289,7 +8843,7 @@
 "MX":[0.999,-0.047,0.047,0.999,80.55,9.55]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":0,
 "ST":"G",
 "TRP":{"x":251.3,"y":157},
@@ -9297,7 +8851,7 @@
 "MX":[0.999,-0.047,0.047,0.999,205,159.25]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":3,
 "ST":"G",
 "TRP":{"x":235.3,"y":175.25},
@@ -9305,7 +8859,7 @@
 "MX":[0.999,-0.047,0.047,0.999,168.1,70.35]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 8",
+"SN":"edits/Symbol 8",
 "FF":0,
 "ST":"G",
 "TRP":{"x":358,"y":252.85},
@@ -9316,7 +8870,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":241.2,"y":181.75},
@@ -9324,7 +8878,7 @@
 "MX":[0.997,-0.074,0.074,0.997,14.75,169.6]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.15,"y":411},
@@ -9332,7 +8886,7 @@
 "MX":[1,0,-0.083,1,62.15,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":1,
 "ST":"G",
 "TRP":{"x":302.75,"y":174.5},
@@ -9340,7 +8894,7 @@
 "MX":[0.714,0.7,-0.7,0.714,309.2,152.65]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":264.2,"y":191.85},
@@ -9348,7 +8902,7 @@
 "MX":[0.999,-0.047,0.047,0.999,80.55,9.55]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":3,
 "ST":"G",
 "TRP":{"x":249.9,"y":157.05},
@@ -9356,7 +8910,7 @@
 "MX":[0.958,-0.045,0.015,1.004,205.2,159]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":3,
 "ST":"G",
 "TRP":{"x":235.3,"y":175.25},
@@ -9364,7 +8918,7 @@
 "MX":[0.999,-0.047,0.047,0.999,168.1,70.35]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 8",
+"SN":"edits/Symbol 8",
 "FF":0,
 "ST":"G",
 "TRP":{"x":358,"y":252.85},
@@ -9375,7 +8929,7 @@
 "DU":4,
 "E":[
 {"SI":{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":241.2,"y":181.75},
@@ -9383,7 +8937,7 @@
 "MX":[0.997,-0.074,0.074,0.997,14.75,169.6]
 }},
 {"SI":{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "FF":1,
 "ST":"G",
 "TRP":{"x":204.15,"y":411},
@@ -9391,7 +8945,7 @@
 "MX":[1,0,-0.083,1,62.15,162.75]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "FF":1,
 "ST":"G",
 "TRP":{"x":302.75,"y":174.5},
@@ -9399,7 +8953,7 @@
 "MX":[0.714,0.7,-0.7,0.714,309.2,152.65]
 }},
 {"SI":{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "FF":1,
 "ST":"G",
 "TRP":{"x":264.2,"y":191.85},
@@ -9407,7 +8961,7 @@
 "MX":[0.999,-0.047,0.047,0.999,80.55,9.55]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "FF":2,
 "ST":"G",
 "TRP":{"x":249.7,"y":157},
@@ -9415,7 +8969,7 @@
 "MX":[0.999,-0.047,0.047,0.999,203.4,159.25]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "FF":3,
 "ST":"G",
 "TRP":{"x":235.3,"y":175.25},
@@ -9423,7 +8977,7 @@
 "MX":[0.999,-0.047,0.047,0.999,168.1,70.35]
 }},
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 8",
+"SN":"edits/Symbol 8",
 "FF":0,
 "ST":"G",
 "TRP":{"x":358,"y":252.85},
@@ -9432,7 +8986,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"Export/BF ligma",
+"SN":"<-- Export -->/BF ligma",
 "TL":{
 "L":[
 {
@@ -9443,7 +8997,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"darnell mix anim parts/Symbol 10",
+"SN":"edits/Symbol 10",
 "FF":0,
 "ST":"G",
 "TRP":{"x":206.15,"y":202.35},
@@ -9464,7 +9018,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.05,0.45],
-"N":"47"
+"N":"43"
 }}]}
 ]}
 ]}},{
@@ -9480,7 +9034,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-4.5,-8.25],
-"N":"48"
+"N":"44"
 }}]}
 ]}
 ]}},{
@@ -9496,7 +9050,7 @@
 "E":[
 {"ASI":{
 "MX":[0.971,0,0,0.981,-0.25,0.15],
-"N":"49"
+"N":"45"
 }}]}
 ]}
 ]}},{
@@ -9512,7 +9066,7 @@
 "E":[
 {"ASI":{
 "MX":[0.994,0,0,0.977,-0.25,-2],
-"N":"50"
+"N":"46"
 }}]}
 ]}
 ]}},{
@@ -9528,7 +9082,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.15,0.05],
-"N":"51"
+"N":"47"
 }}]}
 ]}
 ]}},{
@@ -9544,7 +9098,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"52"
+"N":"48"
 }}]}
 ]}
 ]}},{
@@ -9560,7 +9114,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"53"
+"N":"49"
 }}]}
 ]}
 ]}},{
@@ -9576,7 +9130,7 @@
 "E":[
 {"ASI":{
 "MX":[0.961,0,0,1,-1,-0.15],
-"N":"54"
+"N":"50"
 }}]}
 ]}
 ]}},{
@@ -9592,7 +9146,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.983,0,0],
-"N":"55"
+"N":"51"
 }}]}
 ]}
 ]}},{
@@ -9608,151 +9162,7 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,1.001,0.05,0.45],
-"N":"56"
-}}]}
-]}
-]}},{
-"SN":"miss left f color",
-"TL":{
-"L":[
-{
-"LN":"Layer 2",
-"FR":[
-{
-"I":0,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,242.55,-31],
-"N":"57"
-}}]},{
-"I":2,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,242.5,-30.9],
-"N":"58"
-}}]}
-]},{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":4,
-"E":[
-{"SI":{
-"SN":"Bitmap 7",
-"ST":"MC",
-"TRP":{"x":184.5,"y":199},
-"MX":[1,0,0,1,0,0]
-}}]}
-]}
-]}},{
-"SN":"down miss purp dude",
-"TL":{
-"L":[
-{
-"LN":"Layer 2",
-"FR":[
-{
-"I":0,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,0.989,235.7,-32.75],
-"N":"60"
-}}]},{
-"I":2,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,0.989,235.6,-32.65],
-"N":"61"
-}}]}
-]},{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":4,
-"E":[
-{"SI":{
-"SN":"Bitmap 6",
-"ST":"MC",
-"TRP":{"x":188.5,"y":177.5},
-"MX":[1,0,0,1,0,0]
-}}]}
-]}
-]}},{
-"SN":"purp mizz combine",
-"TL":{
-"L":[
-{
-"LN":"Layer 2",
-"FR":[
-{
-"I":0,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[0.989,0,0,1,278.15,-3.75],
-"N":"63"
-}}]},{
-"I":2,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[0.989,0,0,1,277.85,-3.7],
-"N":"64"
-}}]}
-]},{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":4,
-"E":[
-{"SI":{
-"SN":"Bitmap 3",
-"ST":"MC",
-"TRP":{"x":177.5,"y":212.5},
-"MX":[1,0,0,1,0,0]
-}}]}
-]}
-]}},{
-"SN":"right note miss colorsawddwa",
-"TL":{
-"L":[
-{
-"LN":"Layer 2",
-"FR":[
-{
-"I":0,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,267.45,-35.8],
-"N":"66"
-}}]},{
-"I":2,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,267.3,-35.75],
-"N":"67"
-}}]}
-]},{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":4,
-"E":[
-{"SI":{
-"SN":"Bitmap 9",
-"ST":"MC",
-"TRP":{"x":199.5,"y":198},
-"MX":[1,0,0,1,0,0]
+"N":"52"
 }}]}
 ]}
 ]}},{
@@ -9768,28 +9178,28 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-8,-1.85],
-"N":"69"
+"N":"53"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-7.5,-2.3],
-"N":"70"
+"N":"54"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-8.2,-1.6],
-"N":"71"
+"N":"55"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-8.5,-1.1],
-"N":"72"
+"N":"56"
 }}]}
 ]},{
 "LN":"morph_box_black_Layer",
@@ -9815,28 +9225,28 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"73"
+"N":"57"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,7.7],
-"N":"74"
+"N":"58"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.05,0.4],
-"N":"75"
+"N":"59"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.9,0.4],
-"N":"76"
+"N":"60"
 }}]}
 ]}
 ]}},{
@@ -9852,14 +9262,14 @@
 "E":[
 {"ASI":{
 "MX":[0.818,0,0,0.818,13.6,-11.9],
-"N":"77"
+"N":"61"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.818,0,0,0.818,18.9,-7.65],
-"N":"78"
+"N":"62"
 }}]}
 ]}
 ]}},{
@@ -9875,7 +9285,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,80.7,0],
-"N":"79"
+"N":"63"
 }}]}
 ]}
 ]}},{
@@ -9891,7 +9301,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,10.5,8.8],
-"N":"80"
+"N":"64"
 }}]}
 ]}
 ]}},{
@@ -9905,7 +9315,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,59.8,-3.6],
-"N":"18"
+"N":"14"
 }}]}]}]}},{
 "SN":"joyous face",
 "TL":{
@@ -9919,14 +9329,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-10.9,-34.95],
-"N":"81"
+"N":"65"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-8.65,-39.7],
-"N":"82"
+"N":"66"
 }}]}
 ]}
 ]}},{
@@ -9942,28 +9352,28 @@
 "E":[
 {"ASI":{
 "MX":[0.986,0,0,0.986,0,29.05],
-"N":"83"
+"N":"67"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.986,0,0,0.986,1.25,25.05],
-"N":"84"
+"N":"68"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.986,0,0,0.986,-4.15,26.35],
-"N":"85"
+"N":"69"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.986,0,0,0.986,-4.65,23.85],
-"N":"86"
+"N":"70"
 }}]}
 ]},{
 "LN":"Layer 1",
@@ -9974,7 +9384,7 @@
 "E":[
 {"ASI":{
 "MX":[0.986,0,0,0.986,44.55,0],
-"N":"87"
+"N":"71"
 }}]}
 ]}
 ]}},{
@@ -9990,7 +9400,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"88"
+"N":"72"
 }}]}
 ]}
 ]}},{
@@ -10006,14 +9416,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-43.1,-43.85],
-"N":"89"
+"N":"73"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-44.85,-36.35],
-"N":"90"
+"N":"74"
 }}]}
 ]}
 ]}},{
@@ -10029,7 +9439,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.25,0.15],
-"N":"91"
+"N":"75"
 }}]}
 ]}
 ]}},{
@@ -10045,7 +9455,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.25,0.15],
-"N":"92"
+"N":"76"
 }}]}
 ]}
 ]}},{
@@ -10061,7 +9471,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1.009,-1,-0.15],
-"N":"93"
+"N":"77"
 }}]}
 ]}
 ]}},{
@@ -10077,7 +9487,7 @@
 "E":[
 {"ASI":{
 "MX":[0.763,0,0,0.763,-13.6,-13.35],
-"N":"94"
+"N":"78"
 }}]}
 ]}
 ]}},{
@@ -10093,7 +9503,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"95"
+"N":"79"
 }}]}
 ]}
 ]}},{
@@ -10107,7 +9517,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-21.05,-30.5],
-"N":"20"
+"N":"16"
 }}]}]}]}},{
 "SN":"BF Head limo",
 "TL":{
@@ -10121,7 +9531,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,29.05],
-"N":"96"
+"N":"80"
 }}]}
 ]},{
 "LN":"Layer 1",
@@ -10132,7 +9542,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,44.55,0],
-"N":"97"
+"N":"81"
 }}]}
 ]}
 ]}},{
@@ -10148,7 +9558,7 @@
 "E":[
 {"ASI":{
 "MX":[1.044,0,0,0.992,-0.2,10.75],
-"N":"98"
+"N":"82"
 }}]}
 ]}
 ]}},{
@@ -10164,28 +9574,28 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-7.95,-34.95],
-"N":"99"
+"N":"83"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-5.7,-39.7],
-"N":"100"
+"N":"84"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-10,-29.15],
-"N":"101"
+"N":"85"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-6.8,-32.6],
-"N":"102"
+"N":"86"
 }}]}
 ]}
 ]}},{
@@ -10199,7 +9609,7 @@
 "E":[
 {"ASI":{
 "MX":[1.044,0,0,0.992,8.65,-10.45],
-"N":"21"
+"N":"17"
 }}]}]}]}},{
 "SN":"bf body no pocket limo",
 "TL":{
@@ -10213,7 +9623,7 @@
 "E":[
 {"ASI":{
 "MX":[0.904,0,0,0.97,-0.25,6.5],
-"N":"103"
+"N":"87"
 }}]}
 ]}
 ]}},{
@@ -10229,7 +9639,7 @@
 "E":[
 {"ASI":{
 "MX":[0.938,0,0,0.967,-0.25,6.5],
-"N":"104"
+"N":"88"
 }}]}
 ]}
 ]}},{
@@ -10245,7 +9655,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,52.45,0],
-"N":"105"
+"N":"89"
 }}]}
 ]}
 ]}},{
@@ -10261,7 +9671,7 @@
 "E":[
 {"ASI":{
 "MX":[0.798,0,0,0.798,0,0],
-"N":"106"
+"N":"90"
 }}]}
 ]}
 ]}},{
@@ -10277,7 +9687,7 @@
 "E":[
 {"ASI":{
 "MX":[1.019,0,0,1.012,0,0],
-"N":"107"
+"N":"91"
 }}]}
 ]}
 ]}},{
@@ -10293,7 +9703,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-38.4,-14.6],
-"N":"108"
+"N":"92"
 }}]}
 ]}
 ]}},{
@@ -10309,7 +9719,7 @@
 "E":[
 {"ASI":{
 "MX":[0.86,0,0,0.711,0,0],
-"N":"109"
+"N":"93"
 }}]}
 ]}
 ]}},{
@@ -10325,7 +9735,7 @@
 "E":[
 {"ASI":{
 "MX":[0.969,0,0,0.99,-8.2,13.1],
-"N":"110"
+"N":"94"
 }}]}
 ]}
 ]}},{
@@ -10339,7 +9749,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-4.5,-3.55],
-"N":"26"
+"N":"22"
 }}]}]}]}},{
 "SN":"bf body nervous",
 "TL":{
@@ -10353,28 +9763,28 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.25,0],
-"N":"111"
+"N":"95"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.25,0],
-"N":"112"
+"N":"96"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.25,0],
-"N":"113"
+"N":"97"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.2,-1.35],
-"N":"114"
+"N":"98"
 }}]}
 ]}
 ]}},{
@@ -10390,7 +9800,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"115"
+"N":"99"
 }}]}
 ]}
 ]}},{
@@ -10406,7 +9816,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,-1.55],
-"N":"116"
+"N":"100"
 }}]}
 ]}
 ]}},{
@@ -10422,7 +9832,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"117"
+"N":"101"
 }}]}
 ]}
 ]}},{
@@ -10436,7 +9846,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,6.7,3.2],
-"N":"30"
+"N":"26"
 }}]}]}]}},{
 "SN":"mictied",
 "TL":{
@@ -10468,7 +9878,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,10.3,15.15],
-"N":"35"
+"N":"31"
 }}]}]}]}},{
 "SN":"bf attack bod",
 "TL":{
@@ -10482,7 +9892,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"118"
+"N":"102"
 }}]}
 ]}
 ]}},{
@@ -10498,7 +9908,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.886,0,0],
-"N":"119"
+"N":"103"
 }}]}
 ]}
 ]}},{
@@ -10514,7 +9924,7 @@
 "E":[
 {"ASI":{
 "MX":[0.979,0,0,0.982,0,0],
-"N":"120"
+"N":"104"
 }}]}
 ]}
 ]}},{
@@ -10530,7 +9940,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"121"
+"N":"105"
 }}]}
 ]}
 ]}},{
@@ -10546,21 +9956,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"122"
+"N":"106"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-4.5,9.2],
-"N":"123"
+"N":"107"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,2.7,12.4],
-"N":"124"
+"N":"108"
 }}]}
 ]}
 ]}},{
@@ -10576,7 +9986,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"125"
+"N":"109"
 }}]}
 ]}
 ]}},{
@@ -10592,21 +10002,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,-7.2],
-"N":"126"
+"N":"110"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,5.4,-15.4],
-"N":"127"
+"N":"111"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,2.7,-18.1],
-"N":"128"
+"N":"112"
 }}]}
 ]}
 ]}},{
@@ -10622,7 +10032,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"129"
+"N":"113"
 }}]}
 ]}
 ]}},{
@@ -10638,7 +10048,7 @@
 "E":[
 {"ASI":{
 "MX":[0.985,0,0,1,0,0],
-"N":"130"
+"N":"114"
 }}]}
 ]}
 ]}},{
@@ -10654,14 +10064,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-18.85,-4.6],
-"N":"131"
+"N":"115"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-19,-6.3],
-"N":"132"
+"N":"116"
 }}]}
 ]}
 ]}},{
@@ -10677,7 +10087,7 @@
 "E":[
 {"ASI":{
 "MX":[1.003,0,0,1.003,0,0],
-"N":"133"
+"N":"117"
 }}]}
 ]}
 ]}},{
@@ -10693,21 +10103,21 @@
 "E":[
 {"ASI":{
 "MX":[0.723,0,0,0.723,0,0],
-"N":"134"
+"N":"118"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.723,0,0,0.723,0.25,0.15],
-"N":"135"
+"N":"119"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.723,0,0,0.723,0.05,0.05],
-"N":"136"
+"N":"120"
 }}]}
 ]}
 ]}},{
@@ -10723,21 +10133,21 @@
 "E":[
 {"ASI":{
 "MX":[0.68,0,0,0.74,0,0],
-"N":"137"
+"N":"121"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.68,0,0,0.74,0,0],
-"N":"138"
+"N":"122"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.68,0,0,0.74,0,0],
-"N":"139"
+"N":"123"
 }}]}
 ]}
 ]}},{
@@ -10753,7 +10163,7 @@
 "E":[
 {"ASI":{
 "MX":[0.753,0,0,0.746,0,0],
-"N":"140"
+"N":"124"
 }}]}
 ]}
 ]}},{
@@ -10767,7 +10177,7 @@
 "E":[
 {"ASI":{
 "MX":[0.762,0,0,0.762,0,1.65],
-"N":"38"
+"N":"34"
 }}]}]}]}},{
 "SN":"bf bent arm",
 "TL":{
@@ -10781,7 +10191,7 @@
 "E":[
 {"ASI":{
 "MX":[0.764,0,0,0.764,0,0],
-"N":"141"
+"N":"125"
 }}]}
 ]}
 ]}},{
@@ -10839,7 +10249,7 @@
 "E":[
 {"ASI":{
 "MX":[0.749,0,0,0.746,2.4,0],
-"N":"142"
+"N":"126"
 }}]}
 ]}
 ]}},{
@@ -10855,7 +10265,7 @@
 "E":[
 {"ASI":{
 "MX":[0.746,0,0,0.78,0,0],
-"N":"143"
+"N":"127"
 }}]}
 ]}
 ]}},{
@@ -10871,21 +10281,21 @@
 "E":[
 {"ASI":{
 "MX":[0.717,0,0,0.723,56.25,-15.95],
-"N":"144"
+"N":"128"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.717,0,0,0.723,64,-16.2],
-"N":"145"
+"N":"129"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.717,0,0,0.723,57.65,-17.65],
-"N":"146"
+"N":"130"
 }}]}
 ]},{
 "LN":"Layer 1",
@@ -10896,7 +10306,7 @@
 "E":[
 {"ASI":{
 "MX":[0.717,0,0,0.723,17.15,-0.35],
-"N":"147"
+"N":"131"
 }}]}
 ]}
 ]}},{
@@ -10912,7 +10322,7 @@
 "E":[
 {"ASI":{
 "MX":[0.756,0,0,0.756,0,0],
-"N":"148"
+"N":"132"
 }}]}
 ]}
 ]}},{
@@ -10928,7 +10338,7 @@
 "E":[
 {"ASI":{
 "MX":[0.756,0,0,0.756,0,0],
-"N":"149"
+"N":"133"
 }}]}
 ]}
 ]}},{
@@ -10944,14 +10354,14 @@
 "E":[
 {"ASI":{
 "MX":[0.739,0,0,0.756,-4.8,3.25],
-"N":"150"
+"N":"134"
 }}]},{
 "I":2,
 "DU":5,
 "E":[
 {"ASI":{
 "MX":[0.739,0,0,0.756,0.1,3.8],
-"N":"151"
+"N":"135"
 }}]}
 ]}
 ]}},{
@@ -10967,7 +10377,7 @@
 "E":[
 {"ASI":{
 "MX":[0.723,0,0,0.756,-0.25,-0.25],
-"N":"152"
+"N":"136"
 }}]}
 ]}
 ]}},{
@@ -10983,11 +10393,231 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,1.001,0.15,0.05],
-"N":"153"
+"N":"137"
 }}]}
 ]}
 ]}},{
 "SN":"Down Face",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"138"
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-9,-3.35],
+"N":"139"
+}}]}
+]}
+]}},{
+"SN":"Down Hand",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[3.928,0,0,3.903,0,0],
+"N":"140"
+}}]}
+]}
+]}},{
+"SN":"BF Head defalt copy",
+"TL":{
+"L":[
+{
+"LN":"Layer 2",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0.05,0.45],
+"N":"141"
+}}]}
+]}
+]}},{
+"SN":"BF Body Down copy",
+"TL":{
+"L":[
+{
+"LN":"Layer 1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.978,0,0,1.002,-1,-0.15],
+"N":"142"
+}}]}
+]}
+]}},{
+"SN":"Left Face",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"143"
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-2.9,5.35],
+"N":"144"
+}}]}
+]}
+]}},{
+"SN":"Left Arm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.935,0,0,1,0,0],
+"N":"145"
+}}]}
+]}
+]}},{
+"SN":"arm default copy",
+"TL":{
+"L":[
+{
+"LN":"Layer 1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"146"
+}}]}
+]}
+]}},{
+"SN":"bf body default copy",
+"TL":{
+"L":[
+{
+"LN":"Layer 1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.991,0,0,0.981,-0.25,0.15],
+"N":"147"
+}}]},{
+"I":1,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.991,0,0,0.981,-0.25,0.15],
+"N":"148"
+}}]}
+]}
+]}},{
+"SN":"Right Face",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"149"
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-9.35,8.05],
+"N":"150"
+}}]}
+]}
+]}},{
+"SN":"Right Arm",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,0.966,-2.6,0],
+"N":"151"
+}}]}
+]}
+]}},{
+"SN":"BF Head defalt right copy",
+"TL":{
+"L":[
+{
+"LN":"Layer 2",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1.002,0,0,1.002,0.05,0.45],
+"N":"152"
+}}]}
+]}
+]}},{
+"SN":"Up Hand",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.997,0,0,0.963,0,0],
+"N":"153"
+}}]}
+]}
+]}},{
+"SN":"Up Face",
 "TL":{
 "L":[
 {
@@ -11005,228 +10635,8 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,-9,-3.35],
-"N":"155"
-}}]}
-]}
-]}},{
-"SN":"Down Hand",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[3.928,0,0,3.903,0,0],
-"N":"156"
-}}]}
-]}
-]}},{
-"SN":"BF Head defalt copy",
-"TL":{
-"L":[
-{
-"LN":"Layer 2",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0.05,0.45],
-"N":"157"
-}}]}
-]}
-]}},{
-"SN":"BF Body Down copy",
-"TL":{
-"L":[
-{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[0.978,0,0,1.002,-1,-0.15],
-"N":"158"
-}}]}
-]}
-]}},{
-"SN":"Left Face",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"159"
-}}]},{
-"I":2,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,-2.9,5.35],
-"N":"160"
-}}]}
-]}
-]}},{
-"SN":"Left Arm",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[0.935,0,0,1,0,0],
-"N":"161"
-}}]}
-]}
-]}},{
-"SN":"arm default copy",
-"TL":{
-"L":[
-{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"162"
-}}]}
-]}
-]}},{
-"SN":"bf body default copy",
-"TL":{
-"L":[
-{
-"LN":"Layer 1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[0.991,0,0,0.981,-0.25,0.15],
-"N":"163"
-}}]},{
-"I":1,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[0.991,0,0,0.981,-0.25,0.15],
-"N":"164"
-}}]}
-]}
-]}},{
-"SN":"Right Face",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"165"
-}}]},{
-"I":2,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,-9.35,8.05],
-"N":"166"
-}}]}
-]}
-]}},{
-"SN":"Right Arm",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,0.966,-2.6,0],
-"N":"167"
-}}]}
-]}
-]}},{
-"SN":"BF Head defalt right copy",
-"TL":{
-"L":[
-{
-"LN":"Layer 2",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1.002,0,0,1.002,0.05,0.45],
-"N":"168"
-}}]}
-]}
-]}},{
-"SN":"Up Hand",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[0.997,0,0,0.963,0,0],
-"N":"169"
-}}]}
-]}
-]}},{
-"SN":"Up Face",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":2,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"170"
-}}]},{
-"I":2,
-"DU":1,
-"E":[
-{"ASI":{
 "MX":[1,0,0,1,1.95,11.6],
-"N":"171"
+"N":"155"
 }}]}
 ]}
 ]}},{
@@ -11242,11 +10652,11 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,0.983,0,0],
-"N":"172"
+"N":"156"
 }}]}
 ]}
 ]}},{
-"SN":"<-- Export -->/BF defalt arm",
+"SN":"edits/BF defalt arm",
 "TL":{
 "L":[
 {
@@ -11258,11 +10668,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.997,-0.25,-2],
-"N":"173"
+"N":"157"
 }}]}
 ]}
 ]}},{
-"SN":"<-- Export -->/bf body default",
+"SN":"edits/bf body default",
 "TL":{
 "L":[
 {
@@ -11274,18 +10684,18 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.985,-0.25,0.15],
-"N":"174"
+"N":"158"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.985,-0.25,6.45],
-"N":"175"
+"N":"159"
 }}]}
 ]}
 ]}},{
-"SN":"<-- Export -->/BF Head defalt",
+"SN":"edits/BF Head defalt",
 "TL":{
 "L":[
 {
@@ -11297,18 +10707,18 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.998,0.05,0.45],
-"N":"176"
+"N":"160"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.998,10.1,-7],
-"N":"177"
+"N":"161"
 }}]}
 ]}
 ]}},{
-"SN":"darnell mix anim parts/Symbol 2",
+"SN":"edits/Symbol 2",
 "TL":{
 "L":[
 {
@@ -11320,102 +10730,102 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,0,0],
-"N":"178"
+"N":"162"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,-10.95,-0.3],
-"N":"179"
+"N":"163"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,3.35,3.8],
-"N":"180"
+"N":"164"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,2.75,5.55],
-"N":"181"
+"N":"165"
 }}]},{
 "I":4,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,22.4,42.1],
-"N":"182"
+"N":"166"
 }}]},{
 "I":5,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,20.75,33.85],
-"N":"183"
+"N":"167"
 }}]},{
 "I":6,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,-16.95,16.45],
-"N":"184"
+"N":"168"
 }}]},{
 "I":7,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,-18.05,14.75],
-"N":"185"
+"N":"169"
 }}]},{
 "I":8,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,-16.35,20.6],
-"N":"186"
+"N":"170"
 }}]},{
 "I":9,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,-13.75,23.05],
-"N":"187"
+"N":"171"
 }}]},{
 "I":10,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,0,0],
-"N":"188"
+"N":"172"
 }}]},{
 "I":11,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,-0.15,4.85],
-"N":"189"
+"N":"173"
 }}]},{
 "I":12,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,0.1,3.7],
-"N":"190"
+"N":"174"
 }}]},{
 "I":13,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.982,-16.85,-0.9],
-"N":"191"
+"N":"175"
 }}]}
 ]}
 ]}},{
-"SN":"darnell mix anim parts/Symbol 1",
+"SN":"edits/Symbol 1",
 "TL":{
 "L":[
 {
@@ -11427,46 +10837,46 @@
 "E":[
 {"ASI":{
 "MX":[0.99,0,0,0.998,0,0],
-"N":"192"
+"N":"176"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.99,0,0,0.998,27.6,43.25],
-"N":"193"
+"N":"177"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.99,0,0,0.998,28.5,36.55],
-"N":"194"
+"N":"178"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.99,0,0,0.998,3.65,6.15],
-"N":"195"
+"N":"179"
 }}]},{
 "I":4,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.99,0,0,0.998,-2.35,-6.95],
-"N":"196"
+"N":"180"
 }}]},{
 "I":5,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.99,0,0,0.998,4.35,-8.65],
-"N":"197"
+"N":"181"
 }}]}
 ]}
 ]}},{
-"SN":"darnell mix anim parts/Symbol 4",
+"SN":"edits/Symbol 4",
 "TL":{
 "L":[
 {
@@ -11478,18 +10888,18 @@
 "E":[
 {"ASI":{
 "MX":[0.994,0,0,1,0,0],
-"N":"198"
+"N":"182"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.994,0,0,1,0,0],
-"N":"199"
+"N":"183"
 }}]}
 ]}
 ]}},{
-"SN":"darnell mix anim parts/Symbol 3",
+"SN":"edits/Symbol 3",
 "TL":{
 "L":[
 {
@@ -11501,11 +10911,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"200"
+"N":"184"
 }}]}
 ]}
 ]}},{
-"SN":"darnell mix anim parts/Symbol 7",
+"SN":"edits/Symbol 7",
 "TL":{
 "L":[
 {
@@ -11517,11 +10927,11 @@
 "E":[
 {"ASI":{
 "MX":[0.996,0,0,1,-2.85,8.2],
-"N":"201"
+"N":"185"
 }}]}
 ]}
 ]}},{
-"SN":"darnell mix anim parts/Symbol 8",
+"SN":"edits/Symbol 8",
 "TL":{
 "L":[
 {
@@ -11533,11 +10943,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"202"
+"N":"186"
 }}]}
 ]}
 ]}},{
-"SN":"darnell mix anim parts/Symbol 10",
+"SN":"edits/Symbol 10",
 "TL":{
 "L":[
 {
@@ -11549,14 +10959,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,5.85,0],
-"N":"203"
+"N":"187"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,5.7,0],
-"N":"204"
+"N":"188"
 }}]}
 ]}
 ]}},{
@@ -11572,28 +10982,28 @@
 "E":[
 {"ASI":{
 "MX":[0.949,0,0,1.163,-0.05,0.4],
-"N":"205"
+"N":"189"
 }}]},{
 "I":1,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.949,0,0,1.163,0.9,0.4],
-"N":"206"
+"N":"190"
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.949,0,0,1.163,0,0],
-"N":"207"
+"N":"191"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[0.949,0,0,1.163,0,7.7],
-"N":"208"
+"N":"192"
 }}]}
 ]}
 ]}},{
@@ -11609,7 +11019,7 @@
 "E":[
 {"ASI":{
 "MX":[0.935,0,0,0.977,0,0.25],
-"N":"209"
+"N":"193"
 }}]}
 ]}
 ]}},{
@@ -11625,7 +11035,7 @@
 "E":[
 {"ASI":{
 "MX":[0.765,0,0,0.765,-0.15,1.25],
-"N":"210"
+"N":"194"
 }}]}
 ]}
 ]}},{
@@ -11639,7 +11049,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"36"
+"N":"32"
 }}]}]}]}},{
 "SN":"Bitmap 17",
 "TL":{
@@ -11651,60 +11061,12 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"37"
-}}]}]}]}},{
-"SN":"Bitmap 7",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"59"
-}}]}]}]}},{
-"SN":"Bitmap 6",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,0.989,0,0],
-"N":"62"
-}}]}]}]}},{
-"SN":"Bitmap 3",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[0.989,0,0,1,0,0],
-"N":"65"
-}}]}]}]}},{
-"SN":"Bitmap 9",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"68"
+"N":"33"
 }}]}]}]}}
 ]},
 "MD":{
 "V":"BTA 1.2.0",
-"N":"remnants bf",
+"N":"remnants bf TA export",
 "BGC":"#666666",
 "W":1820,
 "H":1080,

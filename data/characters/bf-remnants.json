@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Remnants BF",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/dismemberment",
+  "assetPath": "shared:characters/bf-remnants",
   "flipX": true,
   "singTime": 8.0,
   "atlasSettings": {
@@ -78,24 +78,28 @@
       "offsets": [0, 0]
     },
     {
+      "assetPath": "shared:characters/bf-remnants MISSES",
       "name": "singLEFTmiss",
       "prefix": "Miss Left",
-      "offsets": [0, 0]
+      "offsets": [-304, -260]
     },
     {
+      "assetPath": "shared:characters/bf-remnants MISSES",
       "name": "singDOWNmiss",
       "prefix": "Miss Down",
-      "offsets": [0, 0]
+      "offsets": [-304, -260]
     },
     {
+      "assetPath": "shared:characters/bf-remnants MISSES",
       "name": "singUPmiss",
       "prefix": "Miss Up",
-      "offsets": [0, 0]
+      "offsets": [-304, -260]
     },
     {
+      "assetPath": "shared:characters/bf-remnants MISSES",
       "name": "singRIGHTmiss",
       "prefix": "Miss Right",
-      "offsets": [0, 0]
+      "offsets": [-304, -260]
     },
     {
       "name": "singLEFT-censor",
@@ -192,26 +196,26 @@
       "offsets": [0, 0]
     },
     {
-      "assetPath": "shared:characters/dismemberment death",
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "fakeoutDeath",
       "prefix": "Fakeout",
       "offsets": [-278, -126]
     },
     {
-      "assetPath": "shared:characters/dismemberment death",
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "firstDeath",
       "prefix": "Death",
       "offsets": [-278, -126]
     },
     {
-      "assetPath": "shared:characters/dismemberment death",
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "deathLoop",
       "prefix": "Loop Death",
       "looped": true,
       "offsets": [-278, -126]
     },
     {
-      "assetPath": "shared:characters/dismemberment death",
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "deathConfirm",
       "prefix": "Retry",
       "offsets": [-278, -126]

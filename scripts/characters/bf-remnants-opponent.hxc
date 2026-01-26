@@ -1,8 +1,8 @@
-import funkin.play.character.AnimateAtlasCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
 import funkin.Paths;
 
-class BFRemnantsOpponentCharacter extends AnimateAtlasCharacter
+class BFRemnantsOpponentCharacter extends MultiAnimateAtlasCharacter
 {
   function new()
   {
@@ -11,9 +11,9 @@ class BFRemnantsOpponentCharacter extends AnimateAtlasCharacter
 
   var flippedParts:FlxAnimateFrames;
 
-  override function loadAtlas():Void
+  override public function onCreate():Void
   {
-    super.loadAtlas();
+    super.onCreate();
 
     flippedParts = Paths.getAnimateAtlas("characters/bf opponent parts", "shared", _data.atlasSettings);
     flippedParts.parent.destroyOnNoUse = false;
@@ -50,16 +50,30 @@ class BFRemnantsOpponentCharacter extends AnimateAtlasCharacter
 
   function replaceWithFlipped():Void
   {
-    var symbols:Array<String> = ["bf body default", "BF Body Down", "BF Body Up"];
-    var flippedSymbol:Array<String> = ["bf body default flipped", "BF Body Down Flipped", "BF Body Up Flipped"];
+    var collections:Array<FlxAnimateFrames> = this.library?.addedCollections?.copy() ?? [];
+    collections.push(this.library);
+    trace(collections);
+    var symbols:Array<Array<String>> = [
+      ["bf body default", "bf body default flipped"],
+      ["edits/bf body default", "bf body default flipped alts"],
+      ["bf body default copy", "bf body default flipped alts"],
+      ["BF Body Down", "BF Body Down Flipped"],
+      ["BF Body Up", "BF Body Up Flipped"],
+      ["BF Body Down copy", "BF Body Down Flipped"],
+      ["BF Body Up copy", "BF Body Up Flipped"]
+    ];
 
-    for (i in 0...symbols.length)
+    for (collection in collections)
     {
-      var symbol:SymbolItem = this.library.getSymbol(symbols[i]);
-      var flippedSymbol:SymbolItem = this.library.getSymbol(flippedSymbol[i]);
+      for (i in 0...symbols.length)
+      {
+        var symbol:SymbolItem = collection.getSymbol(symbols[i][0]);
+        var flippedSymbol:SymbolItem = flippedParts.getSymbol(symbols[i][1]);
+        if (symbol == null || flippedSymbol == collection) continue;
 
-      symbol.timeline = flippedSymbol.timeline;
-      trace('replaced ' + symbol.name + ' with ' + flippedSymbol.name);
+        symbol.timeline = flippedSymbol.timeline;
+        trace('Replaced ' + symbol.name + ' with ' + flippedSymbol.name + '!');
+      }
     }
   }
 }

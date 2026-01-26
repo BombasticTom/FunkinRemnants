@@ -1,120 +1,126 @@
 {
   "version": "1.0.0",
   "name": "Remnants BF (Christmas)",
-  "assetPath": "characters/bfChristmas-remnants",
+  "assetPath": "shared:characters/bf-remnants-christmas",
   "flipX": true,
   "healthIcon": {
     "id": "bf-christmas-remnants"
   },
+  "offsets": [25, 0],
   "death": {
     "cameraOffsets": [10, -85],
     "cameraZoom": 0.85
   },
-  "renderType": "multisparrow",
+  "atlasSettings": {
+    "swfMode": false
+  },
+  "renderType": "multianimateatlas",
   "singTime": 8.0,
   "animations": [
     {
       "name": "idle",
-      "prefix": "BF idle dance",
-      "offsets": [-5, 0]
+      "prefix": "Idle",
+      "offsets": [0, 0]
     },
     {
       "name": "singLEFT",
-      "prefix": "BF NOTE LEFT0",
-      "offsets": [12, -6]
+      "prefix": "Pose Left",
+      "offsets": [0, 0]
     },
     {
       "name": "singDOWN",
-      "prefix": "BF NOTE DOWN0",
-      "offsets": [-10, -50]
+      "prefix": "Pose Down",
+      "offsets": [0, 0]
     },
     {
       "name": "singUP",
-      "prefix": "BF NOTE UP0",
-      "offsets": [-29, 27]
+      "prefix": "Pose Up",
+      "offsets": [0, 0]
     },
     {
       "name": "singRIGHT",
-      "prefix": "BF NOTE RIGHT0",
-      "offsets": [-38, -7]
+      "prefix": "Pose Right",
+      "offsets": [0, 0]
     },
     {
       "name": "singLEFT-perfect",
-      "prefix": "BF LEFT PERFECT0",
-      "assetPath": "characters/bfChristmas-remnants_Perfect",
-      "offsets": [26, -6]
+      "prefix": "Perfect Left",
+      "offsets": [0, 0]
     },
     {
       "name": "singDOWN-perfect",
-      "prefix": "BF DOWN PERFECT0",
-      "assetPath": "characters/bfChristmas-remnants_Perfect",
-      "offsets": [9, -43]
+      "prefix": "Perfect Down",
+      "offsets": [0, 0]
     },
     {
       "name": "singUP-perfect",
-      "prefix": "BF UP PERFECT0",
-      "assetPath": "characters/bfChristmas-remnants_Perfect",
-      "offsets": [-5, 17]
+      "prefix": "Perfect Up",
+      "offsets": [0, 0]
     },
     {
       "name": "singRIGHT-perfect",
-      "prefix": "BF RIGHT PERFECT0",
-      "assetPath": "characters/bfChristmas-remnants_Perfect",
-      "offsets": [-39, -7]
+      "prefix": "Perfect Right",
+      "offsets": [0, 0]
     },
     {
       "name": "singLEFTmiss",
-      "prefix": "BF NOTE LEFT MISS",
-      "offsets": [12, 24]
+      "prefix": "Miss Left",
+      "offsets": [0, 0]
     },
     {
       "name": "singDOWNmiss",
-      "prefix": "BF NOTE DOWN MISS",
-      "offsets": [-11, -19]
+      "prefix": "Miss Down",
+      "offsets": [0, 0]
     },
     {
       "name": "singUPmiss",
-      "prefix": "BF NOTE UP MISS",
-      "offsets": [-29, 27]
+      "prefix": "Miss Up",
+      "offsets": [0, 0]
     },
     {
       "name": "singRIGHTmiss",
-      "prefix": "BF NOTE RIGHT MISS",
-      "offsets": [-30, 21]
+      "prefix": "Miss Right",
+      "offsets": [0, 0]
     },
     {
       "name": "hey",
-      "prefix": "BF HEY!!",
-      "offsets": [-2, 5]
+      "prefix": "Hey",
+      "offsets": [0, 0]
     },
     {
       "name": "ayo",
-      "prefix": "BF ayyyy",
-      "offsets": [-29, 6]
+      "prefix": "Ayo",
+      "offsets": [0, 0]
     },
     {
       "name": "aww",
-      "prefix": "BF awww",
-      "offsets": [-2, 116]
+      "prefix": "Aww",
+      "offsets": [0, 0]
     },
     {
+      "assetPath": "shared:characters/bf-remnants-death",
+      "name": "fakeoutDeath",
+      "prefix": "Fakeout",
+      "offsets": [-8, 41]
+    },
+    {
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "firstDeath",
-      "prefix": "BF dies",
-      "assetPath": "characters/bf-DEAD-remnants",
-      "offsets": [-37, 11]
+      "prefix": "Death",
+      "offsets": [-8, 41]
     },
     {
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "deathLoop",
-      "prefix": "BF Dead Loop",
-      "assetPath": "characters/bf-DEAD-remnants",
+      "prefix": "Loop Death",
       "looped": true,
-      "offsets": [-37, 5]
+      "offsets": [-8, 41]
     },
     {
+      "assetPath": "shared:characters/bf-remnants-death",
       "name": "deathConfirm",
-      "prefix": "BF Dead confirm",
-      "assetPath": "characters/bf-DEAD-remnants",
-      "offsets": [-37, 69]
+      "prefix": "Retry",
+      "offsets": [-8, 41]
     }
   ]
 }
