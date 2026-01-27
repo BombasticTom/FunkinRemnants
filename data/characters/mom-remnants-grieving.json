@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "name": "Remnants Mom (Grieving)",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/mom-remnants-grieving",
+  "singTime": 8.0,
+  "healthIcon": {
+    "id": "mom-remnants"
+  },
+  "cameraOffsets": [0, 100],
+  "offsets": [5, 40],
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Idle",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "idle-hold",
+      "prefix": "Idle",
+      "looped": true,
+      "frameIndices": [12, 13, 14, 15],
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "Left",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singLEFT-hold",
+      "prefix": "Left",
+      "looped": true,
+      "frameIndices": [6, 7, 8, 9],
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "Down",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singDOWN-hold",
+      "prefix": "Down",
+      "looped": true,
+      "frameIndices": [6, 7, 8, 9],
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singUP",
+      "prefix": "Up",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singUP-hold",
+      "prefix": "Up",
+      "looped": true,
+      "frameIndices": [6, 7, 8, 9],
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "Right",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singRIGHT-hold",
+      "prefix": "Right",
+      "looped": true,
+      "frameIndices": [6, 7, 8, 9],
+      "offsets": [0, 0]
+    }
+  ]
+}
