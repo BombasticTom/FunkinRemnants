@@ -25,7 +25,7 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": ["Not bad for an ugly worm."]
+      "text": ["How DARE you make a mockery of me in front of the ladies!"]
     },
     {
       "speaker": "senpai-remnants-angry",
@@ -33,9 +33,15 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": [
-        "But this time I'll rip your nuts off right after your girlfriend finishes gargling mine."
-      ]
+      "text": ["I'm gonna rip your nuts off, right after your Girlfriend finishes gargling mine!"]
+    },
+    {
+      "speaker": "senpai-remnants-angry",
+      "speakerAnimation": "talk",
+      "box": "remnants-pixel",
+      "boxAnimation": "idle",
+
+      "text": ["After I'm done with you I'll earn back the love and respect of my lovely roses..."]
     },
     {
       "speaker": "bf-pixel-remnants",
@@ -43,10 +49,7 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": [
-        "Bee Movie Script",
-        " According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground."
-      ]
+      "text": ["Beep bop skoo blep!"]
     },
     {
       "speaker": "senpai-remnants-bwuh",
@@ -54,7 +57,7 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": ["shut the fuck up"]
+      "text": ["Yeah..", " keep saying that..."]
     }
   ]
 }
