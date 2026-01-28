@@ -8,9 +8,6 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.FlxG;
 
-/**
- * Apply middlescroll to the song.
- */
 class BlazinBFRemnantsMixSong extends Song
 {
   var black:FunkinSprite;
@@ -121,39 +118,37 @@ class BlazinBFRemnantsMixSong extends Song
     PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x = 1400;
 
     FlxG.camera.stopFX();
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     FlxTween.cancelTweensOf(black);
 
     if (fadeOut)
     {
       FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
       fadeOut = false;
     }
     else
     {
+      black.cameras = [PlayState.instance.camGame];
       black.alpha = 1;
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
     }
   }
 
   function onGameOver(event:ScriptEvent):Void
   {
     FlxG.camera.stopFX();
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
   }
 
   function onPause()
   {
     FlxG.camera?.active = false;
+    FlxTweenUtil.pauseTweensOf(black);
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
     FlxG.camera?.active = true;
+    FlxTweenUtil.resumeTweensOf(black);
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 
@@ -176,8 +171,8 @@ class BlazinBFRemnantsMixSong extends Song
         black.alpha = 0;
         fadeOut = true;
       case 352:
-        FlxTween.tween(black, {alpha: 1}, 5, {ease: FlxEase.linear});
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 5, {ease: FlxEase.linear});
+        black.cameras = [PlayState.instance.camCutscene];
+        FlxTween.tween(black, {alpha: 1}, 6, {ease: FlxEase.linear});
         fadeOut = false;
     }
   }

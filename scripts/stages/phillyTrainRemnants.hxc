@@ -198,5 +198,12 @@ class PhillyTrainRemnantsStage extends Stage
     super.kill();
     lightShader = null;
   }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    refresh(); // This game fucking sucks so I added this
+  }
 }
 

@@ -146,5 +146,12 @@ class MallEvilRemnantsStage extends Stage
       FlxTweenUtil.resumeTweensOf(snowGroup.members[snow]);
     }
   }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    refresh(); // This game fucking sucks so I added this
+  }
 }
 

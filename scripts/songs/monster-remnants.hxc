@@ -31,6 +31,8 @@ class MonsterRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
+    PlayState.instance.camHUD.alpha = 0;
+
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
@@ -70,7 +72,6 @@ class MonsterRemnantsMixSong extends Song
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
     black.alpha = 1;
-    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onGameOver(event:ScriptEvent):Void

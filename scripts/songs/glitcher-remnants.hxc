@@ -5,8 +5,6 @@ import funkin.play.PlayState;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import flixel.FlxSprite;
-import flixel.FlxG;
 
 class GlitcherRemnantsSong extends Song
 {
@@ -30,7 +28,7 @@ class GlitcherRemnantsSong extends Song
   {
     super.onCreate(event);
 
-    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.disableKeys = true;
     fadeOut = false;
@@ -40,27 +38,23 @@ class GlitcherRemnantsSong extends Song
   {
     super.onSongRetry(event);
 
-    FlxG.camera.stopFX();
+    PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-
-    PlayState.instance.disableKeys = true;
 
     if (fadeOut)
     {
-      FlxG.camera.fade(0xFF000000, 0.5, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, false);
       fadeOut = false;
     }
     else
     {
-      FlxG.camera.fade(0xFF000000, 0, false);
-      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     }
   }
 
   function onGameOver(event:ScriptEvent):Void
   {
-    FlxG.camera.stopFX();
+    PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
@@ -68,21 +62,28 @@ class GlitcherRemnantsSong extends Song
 
   function onPause()
   {
-    FlxG.camera?.active = false;
+    PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
-    FlxG.camera?.active = true;
+    PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
 
-    FlxG.camera.fade(0xFF000000, 4, true);
+    PlayState.instance.camCutscene.fade(0xFF000000, 4, true, null, false);
   }
 
   function onBeatHit(event:ScriptEvent):Void

@@ -5,7 +5,6 @@ import funkin.play.PlayState;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import flixel.FlxG;
 
 class SatinPantiesRemnantsMixSong extends Song
 {
@@ -49,31 +48,34 @@ class SatinPantiesRemnantsMixSong extends Song
     super.onSongRetry(event);
 
     if (!outro) return;
-    FlxG.camera.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camCutscene?.stopFX();
 
-    FlxG.camera.fade(0xFF000000, 0.5, true);
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+    PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, false);
     PlayState.instance.tweenCameraToPosition(787, 400, 0, FlxEase.instant);
     PlayState.instance.disableKeys = false;
     outro = false;
   }
 
+  function onGameOver(event:ScriptEvent):Void
+  {
+    super.onGameOver(event);
+
+    PlayState.instance.camCutscene?.stopFX();
+    PlayState.instance.camHUD.alpha = 0;
+    outro = true;
+  }
+
   function onPause()
   {
-    FlxG.camera?.active = false;
+    PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
-    FlxG.camera?.active = true;
+    PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
-  }
-
-  function onSongEnd(event:ScriptEvent):Void
-  {
-    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -83,9 +85,10 @@ class SatinPantiesRemnantsMixSong extends Song
     if (PlayState.instance.isGameOverState) return;
     if (event.beat == 176)
     {
-      FlxG.camera.fade(0xFF000000, 4.2, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
-      PlayState.instance.disableKeys = true;
+      PlayState.instance.camCutscene.fade(0xFF000000, 4.2, false, null, false);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear, onComplete: function(_) {
+        PlayState.instance.disableKeys = true;
+      }});
       outro = true;
     }
   }

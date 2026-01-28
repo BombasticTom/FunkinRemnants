@@ -328,6 +328,8 @@ class LimoRideRemnantsStage extends Stage
     resetFastCar();
 
     isDeath = false;
+
+    refresh(); // This game fucking sucks so I added this
   }
 
   override function onGameOver(event:ScriptEvent):Void

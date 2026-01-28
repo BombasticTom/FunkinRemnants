@@ -17,8 +17,9 @@ class RosesRemnantsMixSong extends Song
 {
   var bgSprite:FunkinSprite;
   var hasPlayedCutscene:Bool;
-  var intro:Bool = true;
+  var intro:Bool = false;
   var outro:Bool = false;
+  var hudFade:Bool = false;
 
   public function new()
   {
@@ -37,6 +38,12 @@ class RosesRemnantsMixSong extends Song
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
+
+    if (!hudFade)
+    {
+      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camHUD.visible = true;
+    }
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
@@ -110,28 +117,29 @@ class RosesRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    FlxG.camera.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     hasPlayedCutscene = true;
-
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
 
     if (intro)
     {
       PlayState.instance.tweenCameraToPosition(710, 520, 0.001, FlxEase.instant);
+      PlayState.instance.camHUD.visible = false;
+    }
+    
+    if (hudFade)
+    {
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      hudFade = false;
+    }
+    else
+    {
+      PlayState.instance.camHUD.visible = false;
     }
 
     if (outro)
     {
-      FlxG.camera.fade(0xFF000000, 0, true);
       RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-      FlxG.camera.stopFX();
       outro = false;
-    }
-
-    if (PlayState.instance.isGameOverState)
-    {
-      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
     }
   }
 
@@ -143,8 +151,9 @@ class RosesRemnantsMixSong extends Song
     super.onCreate(event);
 
     hasPlayedCutscene = false;
-    intro = true;
+    intro = false;
     outro = false;
+    hudFade = false;
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -156,21 +165,24 @@ class RosesRemnantsMixSong extends Song
 
   function onGameOver(event:ScriptEvent):Void
   {
-    FlxG.camera.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camHUD.alpha = 0;
-    if (outro) outro = false;
+    hudFade = false;
+
+    if (outro)
+    {
+      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      outro = false;
+    }
   }
 
   function onPause()
   {
-    FlxG.camera?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
-    FlxG.camera?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 
@@ -197,12 +209,14 @@ class RosesRemnantsMixSong extends Song
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
       case 16:
         intro = false;
+        hudFade = true;
       case 184:
         intro = true;
       case 192:
         RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 1);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
         outro = true;
+        hudFade = false;
     }
   }
 }

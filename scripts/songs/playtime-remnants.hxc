@@ -28,7 +28,7 @@ class PlaytimeRemnantsSong extends Song
   {
     super.onCreate(event);
 
-    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
   }
@@ -37,25 +37,23 @@ class PlaytimeRemnantsSong extends Song
   {
     super.onSongRetry(event);
 
-    FlxG.camera.stopFX();
+    PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
     if (fadeOut)
     {
-      FlxG.camera.fade(0xFF000000, 0.5, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, false);
       fadeOut = false;
     }
     else
     {
-      FlxG.camera.fade(0xFF000000, 0, false);
-      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     }
   }
 
   function onGameOver(event:ScriptEvent):Void
   {
-    FlxG.camera.stopFX();
+    PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
@@ -63,26 +61,29 @@ class PlaytimeRemnantsSong extends Song
 
   function onPause()
   {
-    FlxG.camera?.active = false;
+    PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
-    FlxG.camera?.active = true;
+    PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 
-  function onSongEnd(event:ScriptEvent):Void
+  function onCountdownStart(event:ScriptEvent):Void
   {
-    PlayState.instance.camGame.visible = false;
+    super.onCountdownStart(event);
+
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.currentStage.getNamedProp('Overlay').alpha = 0.4;
   }
 
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
 
-    FlxG.camera.fade(0xFF000000, 5, true);
+    PlayState.instance.camCutscene.fade(0xFF000000, 5, true, null, false);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -106,9 +107,8 @@ class PlaytimeRemnantsSong extends Song
       case 160:
         FlxTween.tween(PlayState.instance.currentStage.getNamedProp('Overlay'), {alpha: 0.75}, 3.27, {ease: FlxEase.cubeOut});
       case 192:
-        FlxG.camera.fade(0xFF000000, 0.54, false);
+        PlayState.instance.camCutscene.fade(0xFF000000, 0.54, false, null, false);
         FlxTween.tween(PlayState.instance.currentStage.getNamedProp('Overlay'), {alpha: 1}, 0.54, {ease: FlxEase.linear});
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.54, {ease: FlxEase.linear});
         fadeOut = false;
     }
   }

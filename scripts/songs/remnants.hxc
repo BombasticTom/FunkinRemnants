@@ -1,17 +1,16 @@
 import funkin.play.song.Song;
 import funkin.save.Save;
 import funkin.play.PlayState;
-import funkin.graphics.FunkinSprite;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.play.cutscene.VideoCutscene;
-import flixel.FlxG;
 
 class RemnantsSong extends Song
 {
   var hasPlayedIntro:Bool;
   var outro:Bool = false;
+  var hudFade:Bool = false;
 
   function new()
   {
@@ -56,11 +55,15 @@ class RemnantsSong extends Song
     PlayState.instance.camHUD.alpha = 0;
     hasPlayedIntro = false;
     outro = false;
+    hudFade = false;
   }
 
   function onCountdownStart(event:ScriptEvent):Void
   {
     super.onCountdownStart(event);
+
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camHUD.visible = true;
 
     if (!hasPlayedIntro)
     {
@@ -80,34 +83,44 @@ class RemnantsSong extends Song
   {
     super.onSongRetry(event);
 
+    hasPlayedIntro = true;
+
     if (outro)
     {
-      FlxG.camera.stopFX();
-      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-
-      FlxG.camera.fade(0xFF000000, 1, true);
+      PlayState.instance.camCutscene?.stopFX();
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, false);
       outro = false;
     }
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
-    hasPlayedIntro = true;
+
+    if (hudFade)
+    {
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      hudFade = false;
+    }
+    else
+    {
+      PlayState.instance.camHUD.visible = false;
+    }
   }
 
   function onGameOver(event:ScriptEvent):Void
   {
-    FlxG.camera.stopFX();
+    PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camHUD.alpha = 0;
+    hudFade = false;
   }
 
   function onPause()
   {
-    FlxG.camera?.active = false;
+    PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
-    FlxG.camera?.active = true;
+    PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 
@@ -125,10 +138,11 @@ class RemnantsSong extends Song
     {
       case 14:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.smoothStepOut});
+        hudFade = true;
       case 272:
-        FlxG.camera.fade(0xFF000000, 0.8, false);
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.8, {ease: FlxEase.linear});
+        PlayState.instance.camCutscene.fade(0xFF000000, 0.8, false, null, false);
         outro = true;
+        hudFade = false;
     }
   }
 }

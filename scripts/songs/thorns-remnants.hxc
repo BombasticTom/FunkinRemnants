@@ -1,4 +1,3 @@
-import flixel.FlxG;
 import funkin.Preferences;
 import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
@@ -38,6 +37,10 @@ class ThornsRemnantsMixSong extends Song
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
+
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camHUD.visible = true;
+    PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 0;
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedDialogue) hasPlayedDialogue = true;
@@ -180,9 +183,7 @@ class ThornsRemnantsMixSong extends Song
 
     hasPlayedDialogue = true;
 
-    FlxG.camera.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 0;
 
     if (fadeOut)
     {
@@ -193,18 +194,12 @@ class ThornsRemnantsMixSong extends Song
     else
     {
       FlxG.camera.fade(0xFF000000, 0, false);
-      PlayState.instance.camHUD.alpha = 0;
-    }
-
-    if (PlayState.instance.isGameOverState)
-    {
-      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      PlayState.instance.camHUD.visible = false;
     }
   }
 
   function onGameOver(event:ScriptEvent):Void
   {
-    FlxG.camera.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
@@ -212,13 +207,11 @@ class ThornsRemnantsMixSong extends Song
 
   function onPause()
   {
-    FlxG.camera?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
-    FlxG.camera?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 

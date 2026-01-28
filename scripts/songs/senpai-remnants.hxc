@@ -10,6 +10,7 @@ import flixel.util.FlxTimer;
 import funkin.Preferences;
 import funkin.save.Save;
 import flixel.FlxSprite;
+import funkin.util.FlxTweenUtil;
 
 class SenpaiRemnantsMixSong extends Song
 {
@@ -166,6 +167,16 @@ class SenpaiRemnantsMixSong extends Song
     // We may need to wait for the outro to play.
     PlayState.instance.currentStage.resume();
     Countdown.performCountdown();
+  }
+
+  function onPause()
+  {
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 }
 

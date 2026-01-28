@@ -148,7 +148,7 @@ class MILFRemnantsMixSong extends Song
     // Refresh the stage to reorganize props by z-index.
     PlayState.instance.currentStage.refresh();
 
-    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
   }
@@ -164,19 +164,17 @@ class MILFRemnantsMixSong extends Song
     this.hardResetSong();
     PlayState.instance.currentStage.refresh();
 
-    FlxG.camera.stopFX();
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camCutscene?.stopFX();
+    PlayState.instance.camGame?.stopFX();
 
     if (fadeOut)
     {
-      FlxG.camera.fade(0xFF000000, 0.5, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, false);
       fadeOut = false;
     }
     else
     {
-      FlxG.camera.fade(0xFF000000, 0, false);
-      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     }
   }
 
@@ -188,9 +186,8 @@ class MILFRemnantsMixSong extends Song
     // Refresh the stage to reorganize props by z-index.
     PlayState.instance.currentStage.refresh();
 
-    FlxG.camera.stopFX();
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    PlayState.instance.currentStage.refresh();
+    PlayState.instance.camCutscene?.stopFX();
+    PlayState.instance.camGame?.stopFX();
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
   }
@@ -198,6 +195,8 @@ class MILFRemnantsMixSong extends Song
   function onCountdownStart(event:ScriptEvent)
   {
     super.onCountdownStart(event);
+
+    PlayState.instance.camHUD.alpha = 0;
 
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
@@ -395,6 +394,7 @@ class MILFRemnantsMixSong extends Song
     super.onPause(event);
 
     FlxG.camera?.active = false;
+    PlayState.instance.camHUD?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
 
     if (limoTween != null)
@@ -409,6 +409,7 @@ class MILFRemnantsMixSong extends Song
     super.onResume(event);
 
     FlxG.camera?.active = true;
+    PlayState.instance.camHUD?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
 
     if (limoTween != null)
@@ -657,13 +658,8 @@ class MILFRemnantsMixSong extends Song
     super.onSongStart(event);
 
     new FlxTimer().start(0.25, function() {
-      FlxG.camera.fade(0xFF000000, 2.41, true);
+      PlayState.instance.camCutscene.fade(0xFF000000, 2.41, true, null, false);
     });
-  }
-
-  function onSongEnd(event:ScriptEvent):Void
-  {
-    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -674,18 +670,16 @@ class MILFRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 8:
-        FlxG.camera.flash(0xFFFFFFFF, 0.5);
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+        PlayState.instance.camCutscene.fade(0xFFFFFFFF, 0.5, true, null, false);
+        PlayState.instance.camHUD.alpha = 1;
         fadeOut = true;
       case 200:
-        FlxG.camera.flash(0xFFFFFFFF, 0.5);
+        PlayState.instance.camGame.fade(0xFFFFFFFF, 0.5, true, null, false);
       case 232:
-        FlxG.camera.flash(0xFFFFFFFF, 0.5);
+        PlayState.instance.camGame.fade(0xFFFFFFFF, 0.5, true, null, false);
       case 360:
-        FlxG.camera.fade(0xFF000000, 1.33, false);
+        PlayState.instance.camCutscene.fade(0xFF000000, 1.33, false, null, false);
         fadeOut = false;
-      case 363:
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
     }
   }
 }

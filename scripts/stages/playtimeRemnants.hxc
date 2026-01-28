@@ -131,5 +131,7 @@ class PlaytimeRmenantsStage extends Stage
     super.onSongRetry(event);
     // Make it so the rain shader doesn't show over the game over screen
     FlxG.camera.filters = [rainShaderFilter];
+
+    refresh(); // This game fucking sucks so I added this
   }
 }

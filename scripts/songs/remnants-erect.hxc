@@ -43,7 +43,7 @@ class RemnantsErectSong extends Song
   {
     super.onCreate(event);
 
-    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
   }
@@ -52,20 +52,18 @@ class RemnantsErectSong extends Song
   {
     super.onSongRetry(event);
 
-    FlxG.camera.stopFX();
+    PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.disableKeys = false;
 
     if (fadeOut)
     {
-      FlxG.camera.fade(0xFF000000, 0.5, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, false);
       fadeOut = false;
     }
     else
     {
-      FlxG.camera.fade(0xFF000000, 0, false);
-      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
       PlayState.instance.disableKeys = false;
     }
   }
@@ -90,16 +88,18 @@ class RemnantsErectSong extends Song
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 
-  function onSongEnd(event:ScriptEvent):Void
+  function onCountdownStart(event:ScriptEvent):Void
   {
-    PlayState.instance.camGame.visible = false;
+    super.onCountdownStart(event);
+
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
 
-    FlxG.camera.fade(0xFF000000, 1, true);
+    PlayState.instance.camCutscene.fade(0xFF000000, 1, true, null, false);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -115,7 +115,7 @@ class RemnantsErectSong extends Song
       case 279:
         PlayState.instance.disableKeys = true;
       case 284:
-        FlxG.camera.fade(0xFF000000, 0, false);
+        PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
         PlayState.instance.camHUD.alpha = 0;
         fadeOut = false;
     }

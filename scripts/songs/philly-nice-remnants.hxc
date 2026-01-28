@@ -6,7 +6,6 @@ import funkin.graphics.FunkinSprite;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import flixel.FlxG;
 
 class PhillyNiceRemnantsMixSong extends Song
 {
@@ -30,7 +29,7 @@ class PhillyNiceRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
   }
@@ -38,6 +37,8 @@ class PhillyNiceRemnantsMixSong extends Song
   function onCountdownStart(event:ScriptEvent):Void
   {
     super.onCountdownStart(event);
+
+    PlayState.instance.camHUD.alpha = 0;
 
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
@@ -51,25 +52,23 @@ class PhillyNiceRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    FlxG.camera.stopFX();
+    PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
     if (fadeOut)
     {
-      FlxG.camera.fade(0xFF000000, 0.5, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, false);
       fadeOut = false;
     }
     else
     {
-      FlxG.camera.fade(0xFF000000, 0, false);
-      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
     }
   }
 
   function onGameOver(event:ScriptEvent):Void
   {
-    FlxG.camera.stopFX();
+    PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
@@ -77,19 +76,14 @@ class PhillyNiceRemnantsMixSong extends Song
 
   function onPause()
   {
-    FlxG.camera?.active = false;
+    PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
-    FlxG.camera?.active = true;
+    PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
-  }
-
-  function onSongEnd(event:ScriptEvent):Void
-  {
-    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -100,7 +94,7 @@ class PhillyNiceRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 3:
-        FlxG.camera.fade(0xFF000000, 1.72, true);
+        PlayState.instance.camCutscene.fade(0xFF000000, 1.72, true, null, false);
       case 6:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.69, {ease: FlxEase.linear});
       case 75:
@@ -109,7 +103,7 @@ class PhillyNiceRemnantsMixSong extends Song
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.74, {ease: FlxEase.smootherStepOut});
         fadeOut = false;
       case 352:
-        FlxG.camera.fade(0xFF000000, 2.74, false);
+        PlayState.instance.camCutscene.fade(0xFF000000, 2.74, false, null, false);
     }
   }
 }

@@ -31,6 +31,8 @@ class SoutRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
+    PlayState.instance.camHUD.alpha = 0;
+
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
@@ -70,7 +72,6 @@ class SoutRemnantsMixSong extends Song
     else
     {
       black.alpha = 1;
-      PlayState.instance.camHUD.alpha = 0;
     }
   }
 

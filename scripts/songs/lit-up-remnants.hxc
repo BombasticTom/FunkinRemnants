@@ -47,6 +47,8 @@ class LitUpRemnantsMixSong extends Song
 
   function onCreate(event:ScriptEvent):Void
   {
+    super.onCreate(event);
+
     outro = false;
   }
 
@@ -55,31 +57,34 @@ class LitUpRemnantsMixSong extends Song
     super.onSongRetry(event);
 
     if (!outro) return;
-    FlxG.camera.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camCutscene?.stopFX();
 
-    FlxG.camera.fade(0xFF000000, 0.5, true);
-    FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+    PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, false);
     PlayState.instance.tweenCameraToPosition(1415, 926, 0, FlxEase.instant);
     PlayState.instance.disableKeys = false;
     outro = false;
   }
 
+  function onGameOver(event:ScriptEvent):Void
+  {
+    super.onGameOver(event);
+
+    PlayState.instance.camCutscene?.stopFX();
+    PlayState.instance.camHUD.alpha = 0;
+    outro = true;
+  }
+
   function onPause()
   {
-    FlxG.camera?.active = false;
+    PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
-    FlxG.camera?.active = true;
+    PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
-  }
-
-  function onSongEnd(event:ScriptEvent):Void
-  {
-    PlayState.instance.camGame.visible = false;
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -89,9 +94,10 @@ class LitUpRemnantsMixSong extends Song
     if (PlayState.instance.isGameOverState) return;
     if (event.beat == 323)
     {
-      FlxG.camera.fade(0xFF000000, 9.29, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
-      PlayState.instance.disableKeys = true;
+      PlayState.instance.camCutscene.fade(0xFF000000, 9.29, false, null, false);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.98, {ease: FlxEase.smootherStepIn, onComplete: function(_) {
+        PlayState.instance.disableKeys = true;
+      }});
       outro = true;
     }
   }

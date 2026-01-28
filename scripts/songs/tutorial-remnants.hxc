@@ -1,14 +1,18 @@
 import funkin.modding.module.ModuleHandler;
 import funkin.ui.FullScreenScaleMode;
 import funkin.graphics.FunkinSprite;
+import funkin.util.FlxTweenUtil;
 import funkin.play.song.Song;
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import funkin.play.PlayState;
 import funkin.save.Save;
 import flixel.FlxG;
 
 class TutorialRemnantsMixSong extends Song
 {
+  var ending:Bool = false;
+
   public function new()
   {
     super('tutorial',
@@ -34,7 +38,7 @@ class TutorialRemnantsMixSong extends Song
     black = new FunkinSprite();
     black.makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
     black.screenCenter();
-    black.cameras = [PlayState.instance?.camHUD];
+    black.cameras = [PlayState.instance?.camCutscene];
     black.zIndex = -1000;
     PlayState.instance?.add(black);
     PlayState.instace?.refresh();
@@ -46,6 +50,9 @@ class TutorialRemnantsMixSong extends Song
     intro.cameras = [PlayState.instance?.camCutscene];
     intro.alpha = 0;
     PlayState.instance?.add(intro);
+
+    PlayState.instance.disableKeys = true;
+    ending = false;
   }
 
   function onCountdownStart(event:ScriptEvent):Void
@@ -75,26 +82,56 @@ class TutorialRemnantsMixSong extends Song
         intro.alpha = 1;
 
       case 'fadeAwayIntro':
+       PlayState.instance.disableKeys = false;
         introTween = FlxTween.num(1, 0, 0.5, {
           onComplete: () -> introTween = null
         }, (value:Float) -> {
           intro.alpha = value;
           black.alpha = value;
         });
+
+      case 'ending':
+        if (PlayState.instance.currentChart.difficulty != 'hard')
+        {
+          FlxTween.tween(black, {alpha: 1}, 6.72, {ease: FlxEase.expoIn});
+          ending = true;
+        }
     }
   }
 
   public function onSongRetry(event:ScriptEvent):Void
   {
-    if (black.alpha == 1) return;
+    PlayState.instance.disableKeys = true;
 
-    black.alpha = 0;
-    black.cameras = [PlayState.instance?.camHUD];
-    intro.alpha = 0;
+    if (black.alpha != 1 && !ending)
+    {
+      black.alpha = 0;
+      intro.alpha = 0;
 
-    introTween = FlxTween.tween(black, {alpha: 1}, 0.5, {onComplete: (_) -> {
-      introTween = null;
-    }});
+      introTween = FlxTween.tween(black, {alpha: 1}, 0.5, {onComplete: (_) -> {
+        introTween = null;
+      }});
+    }
+    else
+    {
+      black.alpha = 1;
+      ending = false;
+    }
+  }
+
+  function onPause()
+  {
+    FlxTweenUtil.pauseTweensOf(black);
+  }
+
+  function onResume()
+  {
+    FlxTweenUtil.resumeTweensOf(black);
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    PlayState.instance.camHUD.alpha = 0;
+    ending = true;
   }
 }
-

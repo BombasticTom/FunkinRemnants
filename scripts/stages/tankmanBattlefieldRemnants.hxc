@@ -322,6 +322,8 @@ class TankmanBattlefieldRemnantsStage extends Stage
   {
     super.onSongRetry(event);
 
+    refresh(); // This game fucking sucks so I added this
+
     if (PlayState.instance.currentSong != null)
     {
       if (PlayState.instance.currentSong.id == "ugh" || PlayState.instance.currentSong.id == "stress")
