@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "name": "Remnants Dad (Grieving)",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/dad-remnants-grieving",
+  "singTime": 8.0,
+  "healthIcon": {
+    "id": "dad-remnants"
+  },
+  "cameraOffsets": [0, 0],
+  "offsets": [0, 0],
+  "flipX": true,
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "Idle",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "Left",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "Down",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singUP",
+      "prefix": "Up",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "Right",
+      "offsets": [0, 0]
+    }
+  ]
+}
