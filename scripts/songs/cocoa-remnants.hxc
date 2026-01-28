@@ -29,8 +29,6 @@ class CocoaRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    PlayState.instance.camHUD.alpha = 0;
-
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
@@ -43,9 +41,7 @@ class CocoaRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
-    PlayState.instance.camHUD.alpha = 0;
-    PlayState.instance.disableKeys = true;
+    PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
     fadeOut = false;
   }
 
@@ -93,6 +89,9 @@ class CocoaRemnantsMixSong extends Song
     super.onSongStart(event);
 
     PlayState.instance.camCutscene.fade(0xFF000000, 4.8, true, null, false);
+    PlayState.instance.camHUD.fade(0xFF000000, 0, true, null, false);
+    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.disableKeys = true;
   }
 
   function onBeatHit(event:ScriptEvent):Void

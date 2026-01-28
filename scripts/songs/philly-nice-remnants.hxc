@@ -29,16 +29,13 @@ class PhillyNiceRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
-    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
     fadeOut = false;
   }
 
   function onCountdownStart(event:ScriptEvent):Void
   {
     super.onCountdownStart(event);
-
-    PlayState.instance.camHUD.alpha = 0;
 
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
@@ -95,6 +92,8 @@ class PhillyNiceRemnantsMixSong extends Song
     {
       case 3:
         PlayState.instance.camCutscene.fade(0xFF000000, 1.72, true, null, false);
+        PlayState.instance.camHUD.fade(0xFF000000, 0, true, null, false);
+        PlayState.instance.camHUD.alpha = 0;
       case 6:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.69, {ease: FlxEase.linear});
       case 75:

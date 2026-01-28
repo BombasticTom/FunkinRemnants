@@ -1,9 +1,7 @@
 import funkin.play.character.SparrowCharacter;
 import funkin.play.character.CharacterType;
-import funkin.play.PlayState;
 import funkin.audio.FunkinSound;
 import funkin.Conductor;
-import flixel.FlxG;
 
 class DarnellRemnantsCharacter extends SparrowCharacter
 {

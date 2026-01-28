@@ -41,8 +41,6 @@ class SpookeezRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    PlayState.instance.camHUD.alpha = 0;
-
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
@@ -55,8 +53,7 @@ class SpookeezRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
-    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
     fadeOut = false;
   }
 
@@ -103,6 +100,8 @@ class SpookeezRemnantsMixSong extends Song
     super.onSongStart(event);
 
     PlayState.instance.camCutscene.fade(0xFF000000, 3, true, null, false);
+    PlayState.instance.camHUD.fade(0xFF000000, 0, true, null, false);
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onBeatHit(event:ScriptEvent):Void

@@ -13,34 +13,19 @@
  },
  "playData": {
   "songVariations": [],
-  "difficulties": [
-   "easy",
-   "normal",
-   "hard"
-  ],
+  "difficulties": ["easy", "normal", "hard"],
   "characters": {
    "player": "bf-remnants",
    "girlfriend": "gf-remnants",
    "opponent": "dad-remnants",
    "instrumental": "remnants",
-   "altInstrumentals": [
-    "pico",
-    ""
-   ],
-   "opponentVocals": [
-    "dad-remnants"
-   ],
-   "playerVocals": [
-    "bf-remnants"
-   ]
+   "altInstrumentals": ["pico",""],
+   "opponentVocals": ["dad-remnants"],
+   "playerVocals": ["bf-remnants"]
   },
   "stage": "mainStageRemnants",
   "noteStyle": "funkin",
-  "ratings": {
-   "easy": 1,
-   "normal": 1,
-   "hard": 2
-  },
+  "ratings": { "easy": 1, "normal": 2, "hard": 3 },
   "album": "remnants-week1",
   "previewStart": 0,
   "previewEnd": 0

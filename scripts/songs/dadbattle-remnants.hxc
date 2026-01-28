@@ -31,8 +31,6 @@ class DadBattleRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    PlayState.instance.camHUD.alpha = 0;
-
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
@@ -52,9 +50,7 @@ class DadBattleRemnantsMixSong extends Song
     bfAttackSound = FunkinSound.load(Paths.sound('bfAttack'), 0.5);
     dadKickSound = FunkinSound.load(Paths.sound('dadKick'), 0.5);
 
-
-    PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
-    PlayState.instance.camHUD.alpha = 0;
+    PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
     fadeOut = false;
   }
 
@@ -244,6 +240,8 @@ class DadBattleRemnantsMixSong extends Song
     super.onSongStart(event);
 
     PlayState.instance.camCutscene.fade(0xFF000000, 6, true, null, false);
+    PlayState.instance.camHUD.fade(0xFF000000, 0, true, null, false);
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onBeatHit(event:ScriptEvent):Void
