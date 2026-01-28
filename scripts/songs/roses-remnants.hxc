@@ -86,11 +86,18 @@ class RosesRemnantsMixSong extends Song
 
   function startDialogue()
   {
-    var targetDialogue = 'roses-remnants';
-    if (!Preferences.naughtyness) targetDialogue += "-censored";
+    var targetDialogue = 'roses-remnants'; // Normal dialogue
 
-    // Play a SFX
-    FunkinSound.playOnce(Paths.sound('ANGRY'), 1.0);
+    if (!FlxG.random.bool(25))
+    {
+      if (!Preferences.naughtyness) targetDialogue += "-censored"; // Adds cesnored dialogue
+    }
+    else
+    {
+      targetDialogue += "-secret"; // Adds BEE MOVIE
+    }
+
+    FunkinSound.playOnce(Paths.sound('ANGRY'), 1);
 
     trace('Playing dialogue...');
     PlayState.instance.startConversation(targetDialogue);
