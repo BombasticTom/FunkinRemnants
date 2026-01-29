@@ -77,6 +77,8 @@ class DarnellRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
+    // Skip the cutscene if we're playtesting in the Chart Editor.
+    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
