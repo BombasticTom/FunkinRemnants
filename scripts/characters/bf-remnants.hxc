@@ -54,9 +54,10 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
    */
   function createDeathSprites()
   {
-    loseSprite = FunkinSprite.createSparrow(this.x - 125, this.y - 600, "gameover/loseText");
+    loseSprite = FunkinSprite.createSparrow(0, 0, "gameover/loseText");
     loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
     loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
+    loseSprite.setPosition(this.getMidpoint().x - (loseSprite.width / 2) + 110, -200);
     loseSprite.animation.onFinish.add(function(name:String) {
       loseSprite.animation.play('idle', true);
     });

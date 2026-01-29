@@ -1,12 +1,12 @@
-import flixel.FlxG;
-import funkin.audio.FunkinSound;
-import funkin.play.character.SparrowCharacter;
+import funkin.graphics.FunkinSprite;
 import funkin.play.GameOverSubState;
 import funkin.play.character.BaseCharacter;
 import funkin.data.character.CharacterDataParser;
 import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
 import funkin.play.character.MultiAnimateAtlasCharacter;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 import funkin.util.HapticUtil;
 
 class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
@@ -33,30 +33,6 @@ class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
     {
       HapticUtil.vibrate(0, 0.1, 0.1, 1);
     }
-  }
-
-  var loseSprite:FunkinSprite;
-
-  /**
-   * Initialize and cache sprites used for the death animation,
-   */
-  function createDeathSprites()
-  {
-    loseSprite = FunkinSprite.createSparrow(this.x - 125, this.y - 600, "gameover/loseText");
-    loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
-    loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
-    loseSprite.animation.onFinish.add(function(name:String) {
-      loseSprite.animation.play('idle', true);
-    });
-
-    // week 3 shader
-    if (shader != null)
-    {
-      loseSprite.shader = shader;
-    }
-
-    loseSprite.zIndex = this.zIndex + 5;
-    loseSprite.visible = false;
   }
 
   var normalChar:BaseCharacter;
@@ -90,23 +66,6 @@ class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
         lastX = this.x;
         lastY = this.y;
       }
-    }
-
-    if (name == "firstDeath")
-    {
-      // Standard death animation.
-      createDeathSprites();
-
-      GameOverSubState.instance.add(loseSprite);
-    }
-    else if (name == 'deathLoop')
-    {
-      loseSprite.visible = true;
-      loseSprite.animation.play('fall', true);
-    }
-    else if (name == "deathConfirm")
-    {
-      FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
     }
   }
 
