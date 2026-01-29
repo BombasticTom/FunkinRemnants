@@ -439,13 +439,13 @@ class GunsRemnantsMixSong extends Song
 
         if (FlxG.random.bool(25))
         {
-          FlxTween.tween(PlayState.instance.currentStage.getDad(), {y: PlayState.instance.currentStage.getDad().originalPosition.y - 350}, 10.38, {ease: FlxEase.smoothStepInOut});
+          FlxTween.tween(PlayState.instance.currentStage.getDad(), {y: PlayState.instance.currentStage.getDad().originalPosition.y - 300}, 10.38, {ease: FlxEase.smoothStepInOut});
           FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 1);
           ascension = true;
         }
       case 256:
         if (!ascension) return;
-          FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {y: PlayState.instance.currentStage.getBoyfriend().originalPosition.y - 320}, 9.41, {ease: FlxEase.smoothStepInOut});
+          FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {y: PlayState.instance.currentStage.getBoyfriend().originalPosition.y - 290}, 9.41, {ease: FlxEase.smoothStepInOut});
 
       case 285:
         if (!ascension) return;

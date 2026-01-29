@@ -1,10 +1,13 @@
 import funkin.play.character.SparrowCharacter;
 import funkin.play.character.CharacterType;
-import flixel.tweens.FlxEase;
-import funkin.play.PlayState;
-import flixel.math.FlxMath;
 import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
+import funkin.util.FlxTweenUtil;
+import funkin.play.PlayState;
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.math.FlxMath;
+import flixel.FlxG;
 
 class DadRemnantsCharacter extends SparrowCharacter
 {
@@ -18,6 +21,11 @@ class DadRemnantsCharacter extends SparrowCharacter
    */
   var curKickOffset:Float = 0;
 
+  /**
+   * Super serect :eyes:
+   */
+  var slip:Bool = false;
+
   public function new()
   {
     super('dad-remnants');
@@ -26,23 +34,38 @@ class DadRemnantsCharacter extends SparrowCharacter
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     super.playAnimation(name, restart, ignoreOther);
-    if (name == 'preAttack') playCockAura();
+    if (name == 'preAttack' && !slip) playCockAura();
   }
 
   override public function onAnimationFrame(name:String = "", frameNumber:Int = -1, frameIndex:Int = -1):Void
   {
     curKickOffset = 0;
     super.onAnimationFrame(name, frameNumber, frameIndex);
-    if (name != "attack") return;
+    if (name != "attack" || slip) return;
 
     curKickOffset = KICK_OFFSET;
 
     if (frameNumber <= 3)
     {
+      if (!FlxG.random.bool(0.2)) // This chance rolls 22 times throughout the song so this is actaully like a 4.2% chance
+      {
       curKickOffset *= FlxEase.quintOut(frameNumber / 3);
       trace(curKickOffset);
+      }
+      else
+      {
+        // Bros boutta go for a ride
+        slip = true;
+        FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 1);
+        FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: PlayState.instance.currentStage.getDad().originalPosition.x + 3000}, 0.75, {ease: FlxEase.linear, onComplete: function(_) {
+          this.visible = false;
+          this.x = this.originalPosition.x;
+          FlxG.camera.shake(0.05, 2.5);
+          FunkinSound.playOnce(Paths.sound('crash'), 1);
+	}});
+      }
     }
-    else if (frameNumber >= 6 && frameNumber <= 14)
+    else if (frameNumber >= 6 && frameNumber <= 14 && !slip)
     {
       curKickOffset *= (1 - FlxEase.quadInOut(FlxMath.remapToRange(frameNumber, 6, 14, 0, 1)));
       trace(curKickOffset);
@@ -52,7 +75,7 @@ class DadRemnantsCharacter extends SparrowCharacter
   override function getScreenPosition(?result:FlxPoint, ?camera:FlxCamera):FlxPoint
   {
     var output:FlxPoint = super.getScreenPosition(result, camera);
-    output.x += curKickOffset;
+    output.x += curKickOffset; // BUG: This sometimes messes with the secret slip tween and I dont really know how this thingy works so womp womp
     return output;
   }
 
@@ -90,12 +113,51 @@ class DadRemnantsCharacter extends SparrowCharacter
   {
     super.onPause(event);
     if (fadeTween != null) fadeTween.active = false;
+    if (slip) FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getDad());
+    FlxG.camera?.active = false;
   }
 
   override function onResume(event:ScriptEvent):Void
   {
     super.onResume(event);
     if (fadeTween != null) fadeTween.active = true;
+    if (slip) FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getDad());
+    FlxG.camera?.active = true;
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+    if (PlayState.instance.currentStage == null || !slip || PlayState.instance.currentStage.getDad() == null) return;
+    if (!event.note.noteData.getMustHitNote())
+    {
+      event.cancelEvent();
+      PlayState.instance.vocals.opponentVolume = 0;
+    }
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    slip = false;
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    if (slip) this.visible = false; // BUG: This is so dad doesnt pop back when you restart after the slip, but this game sucks so slip gets sets to false on reset (I think?) even tho I didnt put any code to do that, so fuck me I guess
+  }
+
+  function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (slip)
+    {
+      this.visible = true; // Makes dad visible after the fade out if he slipped but the bitch ass code above dosent work so this is currently useless
+      slip = false;
+    }
   }
 }
-

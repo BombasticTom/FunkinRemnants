@@ -38,7 +38,7 @@
     },
     {
       "danceEvery": 0,
-      "zIndex": 40,
+      "zIndex": 400,
       "position": [-950, -300],
       "scale": [1, 1],
       "animType": "sparrow",
@@ -49,7 +49,7 @@
       "animations": []
     },
     {
-      "zIndex": 50,
+      "zIndex": 500,
       "danceEvery": 0,
       "position": [-650, -370],
       "scale": [1.1, 1.1],
