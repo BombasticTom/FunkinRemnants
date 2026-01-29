@@ -3,6 +3,7 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.group.FlxTypedSpriteGroup;
 import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
 import funkin.audio.FunkinSound;
 import funkin.graphics.FunkinSprite;
