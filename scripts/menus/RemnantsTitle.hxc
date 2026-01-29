@@ -55,7 +55,7 @@ class RemnantsTitle extends Module
         injectRemnantsTitle();
       }
 
-      if (FlxG.state.transitioning && !confirmed)
+      if (FlxG.state.transitioning && !confirmed && injectedTitle)
       {
         confirmed = true;
         if (!RemnantsContentUtil.remnantsContentEnabled()) return;
@@ -71,28 +71,28 @@ class RemnantsTitle extends Module
   {
     if (!RemnantsContentUtil.remnantsContentEnabled()) return;
 
-    var stageBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("remnants/Stage", "week1"));
+    var stageBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("titleScreen/Stage"));
     stageBG.setGraphicSize(FlxG.width);
     stageBG.updateHitbox();
     stageBG.y += 140 * (1 - (FullScreenScaleMode.gameCutoutSize.x / 320));
 
-    var floorLights:FlxSprite = new FlxSprite(0, 500).loadGraphic(Paths.image("remnants/FrontLights", "week1"));
+    var floorLights:FlxSprite = new FlxSprite(0, 500).loadGraphic(Paths.image("titleScreen/FrontLights"));
     floorLights.scale.set(0.4, 0.4);
     floorLights.updateHitbox();
     floorLights.screenCenter();
     floorLights.y += 275;
 
-    var roofLights:FlxSprite = new FlxSprite().loadGraphic(Paths.image("remnants/StageLights", "week1"));
+    var roofLights:FlxSprite = new FlxSprite().loadGraphic(Paths.image("titleScreen/StageLights"));
     roofLights.scale.set(0.4, 0.4);
     roofLights.updateHitbox();
     roofLights.screenCenter(0x01);
 
-    var stageCurtains:FlxSprite = new FlxSprite().loadGraphic(Paths.image("remnants/Curtains", "week1"));
+    var stageCurtains:FlxSprite = new FlxSprite().loadGraphic(Paths.image("titleScreen/Curtains"));
     stageCurtains.setGraphicSize(FlxG.width);
     stageCurtains.updateHitbox();
 
     var gfDance:FlxSprite = FlxG.state.gfDance;
-    gfDance.frames = Paths.getSparrowAtlas('characters/gf-remnants', 'shared');
+    gfDance.frames = Paths.getSparrowAtlas('titleScreen/gfTitle');
     gfDance.animation.addByIndices('danceLeft', 'GF Dancing Beat0', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
     gfDance.animation.addByIndices('danceRight', 'GF Dancing Beat0', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
     gfDance.animation.addByPrefix('cheer', 'GF Cheer', 24, false);
@@ -103,16 +103,14 @@ class RemnantsTitle extends Module
 
     var logoBl:FlxSprite = FlxG.state.logoBl;
     logoBl.loadGraphic(Paths.image('remnantsLogo'));
-    logoBl.antialiasing = false;
     logoBl.setGraphicSize(Std.int(logoBl.width * 0.1));
-    logoBl.antialiasing = true;
     logoBl.updateHitbox();
     logoBl.screenCenter();
     logoBl.y -= 225;
 
     var logoTrail:FunkinSprite = FunkinSprite.create(0, 0, 'remnantsLogo');
-    logoTrail.antialiasing = false;
     logoTrail.setGraphicSize(Std.int(logoTrail.width * 0.1));
+    logoTrail.setColorTransform(0, 0, 1, 1, 0, 0, 135, 1);
     logoTrail.antialiasing = true;
     logoTrail.color = 0xFF0C2F5D;
     logoTrail.updateHitbox();
@@ -122,17 +120,19 @@ class RemnantsTitle extends Module
     FlxTween.tween(logoBl, {y: logoBl.y + 25}, 0.6, {ease: FlxEase.quadInOut, type: 4});
     FlxTween.tween(logoTrail, {y: logoTrail.y + 25}, 0.6, {ease: FlxEase.quadInOut, type: 4, startDelay: 0.1});
 
+    stageBG.shader = FlxG.state?.swagShader?.shader;
+    floorLights.shader = FlxG.state?.swagShader?.shader;
+    stageCurtains.shader = FlxG.state?.swagShader?.shader;
+    roofLights.shader = FlxG.state?.swagShader?.shader;
+    logoTrail.shader = FlxG.state?.swagShader?.shader;
+
     FlxG.state.insert(FlxG.state.members.indexOf(logoBl), stageBG);
     FlxG.state.insert(FlxG.state.members.indexOf(logoBl), floorLights);
     FlxG.state.insert(FlxG.state.members.indexOf(logoBl), roofLights);
     FlxG.state.insert(FlxG.state.members.indexOf(logoBl), stageCurtains);
     FlxG.state.insert(FlxG.state.members.indexOf(logoBl), logoTrail);
 
-    stageBG.shader = FlxG.state?.swagShader?.shader;
-    floorLights.shader = FlxG.state?.swagShader?.shader;
-    stageCurtains.shader = FlxG.state?.swagShader?.shader;
-    roofLights.shader = FlxG.state?.swagShader?.shader;
-    logoTrail.shader = FlxG.state?.swagShader?.shader;
+    // Cancel the attract mode timer so people is able to listen to the whole theme.
     FlxG.state?.attractTimer?.cancel();
   }
 }
