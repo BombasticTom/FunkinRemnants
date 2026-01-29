@@ -54,6 +54,7 @@ class GlitcherRemnantsStage extends Stage
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     if (PlayState.instance.currentSong != null)
     {
       if (PlayState.instance.currentSong.id == "glitcher-remnants")

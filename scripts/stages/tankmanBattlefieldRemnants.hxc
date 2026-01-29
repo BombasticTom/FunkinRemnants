@@ -251,6 +251,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
   {
     super.onBeatHit(event);
 
+    if (PlayState.instance.isGameOverState) return;
     if (PlayState.instance.currentSong != null)
     {
       if (event.beat == 159 && PlayState.instance.currentSong.id == "ugh")
