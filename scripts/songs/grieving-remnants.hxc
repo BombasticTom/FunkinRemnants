@@ -1,0 +1,32 @@
+import funkin.modding.module.ModuleHandler;
+import funkin.play.song.Song;
+import funkin.save.Save;
+
+class GrievingRemnantsSong extends Song
+{
+  public function new()
+  {
+    super('grieving-remnants');
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentDifficulty == 'easy' || currentDifficulty == 'normal' || currentDifficulty == 'hard')
+    {
+      return !Save.instance.hasBeatenSong(this.id, null, '');
+    }
+    return false;
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+  }
+}
