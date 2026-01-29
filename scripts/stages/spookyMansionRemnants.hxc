@@ -207,6 +207,7 @@ class SpookyMansionRemnantsStage extends Stage
       });
     }
 
+    if (PlayState.instance.isGameOverState) return;
     if (PlayState.instance.currentSong != null)
     {
       if (event.beat == 139 && PlayState.instance.currentSong.id == "spookeez")
