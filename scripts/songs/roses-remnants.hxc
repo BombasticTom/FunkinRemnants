@@ -97,7 +97,7 @@ class RosesRemnantsMixSong extends Song
 
     if (!FlxG.random.bool(25))
     {
-      if (!Preferences.naughtyness) targetDialogue += "-censored"; // Adds cesnored dialogue
+      if (!Preferences.naughtyness) targetDialogue += "-censored"; // Adds censored dialogue
     }
     else
     {
