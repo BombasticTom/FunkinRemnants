@@ -25,10 +25,10 @@
    "instrumental": "",
    "altInstrumentals": [],
    "opponentVocals": [
-    "mom-remnants-car"
+    "mom-remnants-grieving"
    ],
    "playerVocals": [
-    "dad-remnants"
+    "dad-remnants-grieving"
    ]
   },
   "stage": "mainStageRemnants",
@@ -47,6 +47,38 @@
   {
    "t": 0,
    "b": 0,
+   "bpm": 70,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 43232.2954,
+   "b": 50.4377,
+   "bpm": 70,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 85122,
+   "b": 99.309,
+   "bpm": 70,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 121545.5715,
+   "b": 141.8032,
+   "bpm": 70,
+   "n": 4,
+   "d": 4,
+   "bt": [4, 4, 4, 4]
+  },
+  {
+   "t": 139879.0001,
+   "b": 163.1922,
    "bpm": 70,
    "n": 4,
    "d": 4,
