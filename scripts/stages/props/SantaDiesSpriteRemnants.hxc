@@ -24,7 +24,6 @@ class SantaDiesSpriteRemnants extends FunkinSprite
 
   public function playMonsterComingOut():Void
   {
-    FunkinSound.playOnce(Paths.sound("spookBeforeChristmas"), 1.0);
     this.anim.play("Monster coming out Santa", true);
   }
 

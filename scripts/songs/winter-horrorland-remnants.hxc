@@ -1,14 +1,33 @@
 import funkin.modding.module.ModuleHandler;
-import funkin.play.PlayState;
-import flixel.util.FlxTimer;
-import flixel.tweens.FlxEase;
+import flixel.text.FlxTextBorderStyle;
+import funkin.ui.FullScreenScaleMode;
+import flixel.util.FlxTimerManager;
+import funkin.audio.FunkinSound;
+import flixel.tweens.FlxTween;
 import funkin.play.song.Song;
+import flixel.tweens.FlxEase;
+import funkin.play.PlayState;
+import funkin.util.TouchUtil;
+import flixel.util.FlxTimer;
+import flixel.text.FlxText;
 import funkin.save.Save;
 import funkin.Conductor;
+import flixel.FlxSprite;
+import flixel.FlxG;
 
 class WinterHorrorlandRemnantsMixSong extends Song
 {
-  var monsterCame:Bool;
+  var hasPlayedCutscene:Bool = false;
+  var onSpookChristmas:Bool = false;
+
+  var cutsceneTimerManager:FlxTimerManager;
+  var isMobilePauseButtonPressed:Bool = false;
+
+  var santaDead:ScriptedFunkinSprite = null;
+  var spookBeforeChristmas:FunkinSound = null;
+
+  var cutsceneSkipped:Bool = false;
+  var canSkipCutscene:Bool = false;
 
   public function new()
   {
@@ -24,9 +43,133 @@ class WinterHorrorlandRemnantsMixSong extends Song
     return false;
   }
 
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    onSpookChristmas = false;
+    cutsceneSkipped = false;
+    canSkipCutscene = false;
+    hasPlayedCutscene = true;
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
   function onCreate(event:ScriptEvent):Void
   {
-    monsterCame = false;
+    super.onCreate(event);
+
+    onSpookChristmas = false;
+    cutsceneSkipped = false;
+    canSkipCutscene = false;
+    hasPlayedCutscene = false;
+  }
+
+  function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    if (cutsceneTimerManager != null)
+    {
+      cutsceneTimerManager.update(event.elapsed);
+    }
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getIsPlaying'))
+    {
+      if (FlxG.onMobile)
+      {
+        isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
+      }
+
+      if (onSpookChristmas)
+      {
+        if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && !cutsceneSkipped)
+        {
+          if (!canSkipCutscene)
+          {
+            trace('cant skip yet!');
+            FlxTween.tween(skipText, {alpha: 1}, 0.5, {ease: FlxEase.quadOut});
+            new FlxTimer().start(0.5, function(_) {
+              canSkipCutscene = true;
+              trace('can skip!');
+            });
+          }
+        }
+      }
+
+      if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && canSkipCutscene && !cutsceneSkipped)
+      {
+        skipCutscene();
+        trace('Skipped cutscene!');
+      }
+    }
+  }
+
+  var skipText:FlxText;
+
+  function runCutscene()
+  {
+    onSpookChristmas = true;
+    PlayState.instance.currentStage.getDad().visible = false;
+    PlayState.instance.camHUD.visible = false;
+
+    cutsceneTimerManager = new FlxTimerManager();
+
+    skipText = new FlxText(936 * FullScreenScaleMode.wideScale.x, 618 * FullScreenScaleMode.wideScale.y, 0,
+      'Skip [ ' + PlayState.instance.controls.getDialogueNameFromToken("CUTSCENE_ADVANCE", true) + ' ]', 20);
+    if (FlxG.onMobile)
+    {
+      skipText.text = 'Skip [Pause Button]';
+      skipText.x -= 136;
+    }
+    skipText.setFormat(Paths.font('vcr.ttf'), 40, 0xFFFFFFFF, "right", FlxTextBorderStyle.OUTLINE, 0xFF000000);
+    skipText.scrollFactor.set();
+    skipText.borderSize = 2;
+    skipText.alpha = 0;
+    PlayState.instance.currentStage.add(skipText);
+
+    skipText.cameras = [PlayState.instance.camCutscene];
+
+    try
+    {
+      santaDead = PlayState.instance.currentStage.scriptGet('santaDead');
+    }
+    catch (e:Exception)
+    {
+      PlayState.instance.currentStage.getDad().visible = true;
+      PlayState.instance.camHUD.visible = true;
+      return;
+    }
+
+    spookBeforeChristmas = FunkinSound.load(Paths.sound("spookBeforeChristmas"), 1.0);
+    spookBeforeChristmas.volume = 1.0;
+    spookBeforeChristmas.play(false);
+
+    santaDead.scriptCall('playMonsterComingOut');
+    santaDead.anim.pause();
+
+    var santaPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x - 200,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y + 150
+    ];
+
+    PlayState.instance.resetCamera(false, false, false);
+    PlayState.instance.cancelCameraFollowTween();
+    PlayState.instance.cameraFollowPoint.setPosition(santaPos[0], santaPos[1]);
+
+    var durSeconds:Float = Conductor.instance.stepLengthMs * 8 / 1000;
+    PlayState.instance.tweenCameraZoom(1.8, durSeconds, false, FlxEase.smootherStepOut);
+
+    new FlxTimer(cutsceneTimerManager).start(3, (tmr:FlxTimer) -> {
+      santaDead.anim.resume();
+      santaDead.anim.onFinish.addOnce((anim:String) -> {
+        this.endCutscene();
+      });
+    });
   }
 
   function onCountdownStart(event:ScriptEvent):Void
@@ -40,61 +183,50 @@ class WinterHorrorlandRemnantsMixSong extends Song
       PlayState.instance.camHUD.visible = false;
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
-    else if (!monsterCame)
+    else if (!hasPlayedCutscene)
     {
-      monsterCame = true;
-      PlayState.instance.currentStage.getDad().visible = false;
-      PlayState.instance.camHUD.visible = false;
-
-      var santaDead:ScriptedFunkinSprite = null;
-
-      try
-      {
-        santaDead = PlayState.instance.currentStage.scriptGet('santaDead');
-      }
-      catch (e:Exception)
-      {
-        PlayState.instance.currentStage.getDad().visible = true;
-        PlayState.instance.camHUD.visible = true;
-        return;
-      }
-
-      santaDead.scriptCall('playMonsterComingOut');
-      santaDead.anim.pause();
-
-      var bfPos:Array<Float> = [
-        PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
-        PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
-      ];
-
-      var santaPos:Array<Float> = [
-        PlayState.instance.currentStage.getDad().cameraFocusPoint.x - 200,
-        PlayState.instance.currentStage.getDad().cameraFocusPoint.y + 150
-      ];
-
-      PlayState.instance.resetCamera(false, false, false);
-      PlayState.instance.cancelCameraFollowTween();
-      PlayState.instance.cameraFollowPoint.setPosition(santaPos[0], santaPos[1]);
-
-      var durSeconds:Float = Conductor.instance.stepLengthMs * 8 / 1000;
-      PlayState.instance.tweenCameraZoom(1.8, durSeconds, false, FlxEase.smootherStepOut);
-
-      new FlxTimer().start(3, (tmr:FlxTimer) -> {
-        santaDead.anim.resume();
-        santaDead.anim.onFinish.addOnce((anim:String) -> {
-          santaDead.scriptCall("playDeadSanta");
-          PlayState.instance.currentStage.getDad().visible = true;
-          PlayState.instance.camHUD.visible = true;
-          PlayState.instance.startCountdown();
-
-          PlayState.instance.resetCamera(false, false, false);
-          PlayState.instance.cancelCameraFollowTween();
-          PlayState.instance.cameraFollowPoint.setPosition(bfPos[0], bfPos[1]);
-        });
-      });
-
+      hasPlayedCutscene = true;
       event.cancel();
+      runCutscene();
     }
+  }
+
+  function endCutscene():Void
+  {
+    cutsceneTimerManager.clear();
+    cutsceneTimerManager.destroy();
+    cutsceneTimerManager = null;
+
+    onSpookChristmas = false;
+    santaDead.scriptCall("playDeadSanta");
+    PlayState.instance.currentStage.getDad().visible = true;
+    PlayState.instance.camHUD.visible = true;
+    PlayState.instance.startCountdown();
+
+    var bfPos:Array<Float> = [
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+    ];
+
+    PlayState.instance.resetCamera(false, false, false);
+    PlayState.instance.cancelCameraFollowTween();
+    PlayState.instance.cameraFollowPoint.setPosition(bfPos[0], bfPos[1]);
+  }
+
+  function skipCutscene():Void
+  {
+    cutsceneSkipped = true;
+    canSkipCutscene = false;
+
+    spookBeforeChristmas?.fadeOut(0.5, 0, function() spookBeforeChristmas?.stop());
+    PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
+
+    new FlxTimer(cutsceneTimerManager).start(0.5, function(_) {
+      PlayState.instance.justUnpaused = true;
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
+      skipText.visible = false;
+      this.endCutscene();
+    });
   }
 }
 
