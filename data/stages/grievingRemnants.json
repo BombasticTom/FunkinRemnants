@@ -1,0 +1,36 @@
+{
+  "props": [
+    {
+      "danceEvery": 0,
+      "zIndex": 10,
+      "position": [-1300, -500],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "stageGrieving",
+      "isPixel": false,
+      "assetPath": "stages/grievingRemnants/Stage",
+      "scroll": [0.975, 0.975],
+      "animations": []
+    }
+  ],
+  "cameraZoom": 0.475,
+  "version": "1.0.0",
+  "characters": {
+    "bf": {
+      "zIndex": 300,
+      "position": [1200.5, 1050],
+      "cameraOffsets": [-300, -100]
+    },
+    "dad": {
+      "zIndex": 200,
+      "position": [0, 1000],
+      "cameraOffsets": [300, -100]
+    },
+    "gf": {
+      "zIndex": 100,
+      "cameraOffsets": [0, 0],
+      "position": [591.5, 747]
+    }
+  },
+  "name": "DIVORCE Stage"
+}
