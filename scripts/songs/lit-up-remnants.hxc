@@ -95,11 +95,14 @@ class LitUpRemnantsMixSong extends Song
     if (event.beat == 323)
     {
       PlayState.instance.camCutscene.fade(0xFF000000, 9.29, false, null, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.98, {ease: FlxEase.smootherStepIn, onComplete: function(_) {
-        PlayState.instance.disableKeys = true;
-      }});
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.98,
+        {
+          ease: FlxEase.smootherStepIn,
+          onComplete: function(_) {
+            PlayState.instance.disableKeys = true;
+          }
+        });
       outro = true;
     }
   }
 }
-

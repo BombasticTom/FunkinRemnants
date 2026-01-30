@@ -77,4 +77,3 @@ class BFRemnantsOpponentCharacter extends MultiAnimateAtlasCharacter
     }
   }
 }
-

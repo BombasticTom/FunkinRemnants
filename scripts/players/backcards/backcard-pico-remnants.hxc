@@ -333,4 +333,3 @@ class PicoRemnantsCard extends BackingCard
     FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
   }
 }
-

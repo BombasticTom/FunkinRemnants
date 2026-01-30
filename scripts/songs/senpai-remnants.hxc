@@ -179,4 +179,3 @@ class SenpaiRemnantsMixSong extends Song
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 }
-

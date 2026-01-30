@@ -14,11 +14,9 @@ class SpookyRemnantsCharacter extends SparrowCharacter
   {
     super.playAnimation(name, restart, ignoreOther);
 
-    if (name == 'idleToDance')
-      shouldAlternate = true;
+    if (name == 'idleToDance') shouldAlternate = true;
 
-    if (name == 'danceToIdle')
-      shouldAlternate = false;
+    if (name == 'danceToIdle') shouldAlternate = false;
   }
 
   function onCreate(event:ScriptEvent)
@@ -26,14 +24,11 @@ class SpookyRemnantsCharacter extends SparrowCharacter
     super.onCreate(event);
     if (!this.debug)
     {
-      if (PlayState.instance.currentSong.id == null)
-        return;
+      if (PlayState.instance.currentSong.id == null) return;
 
-      if (['spookeez'].contains(PlayState.instance.currentSong.id))
-        shouldAlternate = false;
+      if (['spookeez'].contains(PlayState.instance.currentSong.id)) shouldAlternate = false;
       else
         shouldAlternate = true;
     }
   }
 }
-

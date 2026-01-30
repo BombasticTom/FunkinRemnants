@@ -36,8 +36,8 @@ class DarnellRemnantsMixSong extends Song
 
   var darnellLaugh:FunkinSound;
   var neneLaugh:FunkinSound;
-  //
 
+  //
   var cutsceneTimerManager:FlxTimerManager;
   var isMobilePauseButtonPressed:Bool = false;
 
@@ -499,4 +499,3 @@ class DarnellRemnantsMixSong extends Song
     }
   }
 }
-

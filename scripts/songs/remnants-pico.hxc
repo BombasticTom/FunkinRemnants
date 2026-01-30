@@ -109,12 +109,12 @@ class RemnantsPicoSong extends Song
         fadeHud = true;
 
       case 192:
-	PlayState.instance.camCutscene.fade(0xFF000000, 6.8, false, null, false);
+        PlayState.instance.camCutscene.fade(0xFF000000, 6.8, false, null, false);
         fadeOut = true;
         fadeHud = false;
 
       case 223:
-	PlayState.instance.camCutscene.fade(0xFF000000, 0.4, true, null, false);
+        PlayState.instance.camCutscene.fade(0xFF000000, 0.4, true, null, false);
         fadeOut = false;
         fadeHud = true;
 
@@ -123,9 +123,8 @@ class RemnantsPicoSong extends Song
         fadeHud = false;
 
       case 288:
-	PlayState.instance.camCutscene.fade(0xFF000000, 1.7, false, null, false);
+        PlayState.instance.camCutscene.fade(0xFF000000, 1.7, false, null, false);
         fadeOut = true;
     }
   }
 }
-

@@ -248,4 +248,3 @@ class BFRemnantsCard extends BackingCard
     glow.visible = false;
   }
 }
-

@@ -86,11 +86,14 @@ class SatinPantiesRemnantsMixSong extends Song
     if (event.beat == 176)
     {
       PlayState.instance.camCutscene.fade(0xFF000000, 4.2, false, null, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear, onComplete: function(_) {
-        PlayState.instance.disableKeys = true;
-      }});
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1,
+        {
+          ease: FlxEase.linear,
+          onComplete: function(_) {
+            PlayState.instance.disableKeys = true;
+          }
+        });
       outro = true;
     }
   }
 }
-

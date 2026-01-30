@@ -49,20 +49,24 @@ class DadRemnantsCharacter extends SparrowCharacter
     {
       if (!FlxG.random.bool(0.2)) // This chance rolls 22 times throughout the song so this is actaully like a 4.2% chance
       {
-      curKickOffset *= FlxEase.quintOut(frameNumber / 3);
-      trace(curKickOffset);
+        curKickOffset *= FlxEase.quintOut(frameNumber / 3);
+        trace(curKickOffset);
       }
       else
       {
         // Bros boutta go for a ride
         slip = true;
         FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 1);
-        FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: PlayState.instance.currentStage.getDad().originalPosition.x + 3000}, 0.75, {ease: FlxEase.linear, onComplete: function(_) {
-          this.visible = false;
-          this.x = this.originalPosition.x;
-          FlxG.camera.shake(0.05, 2.5);
-          FunkinSound.playOnce(Paths.sound('crash'), 1);
-	}});
+        FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: PlayState.instance.currentStage.getDad().originalPosition.x + 3000}, 0.75,
+          {
+            ease: FlxEase.linear,
+            onComplete: function(_) {
+              this.visible = false;
+              this.x = this.originalPosition.x;
+              FlxG.camera.shake(0.05, 2.5);
+              FunkinSound.playOnce(Paths.sound('crash'), 1);
+            }
+          });
       }
     }
     else if (frameNumber >= 6 && frameNumber <= 14 && !slip)
@@ -147,7 +151,8 @@ class DadRemnantsCharacter extends SparrowCharacter
   {
     super.onSongRetry(event);
 
-    if (slip) this.visible = false; // BUG: This is so dad doesnt pop back when you restart after the slip, but this game sucks so slip gets sets to false on reset (I think?) even tho I didnt put any code to do that, so fuck me I guess
+    if (slip)
+      this.visible = false; // BUG: This is so dad doesnt pop back when you restart after the slip, but this game sucks so slip gets sets to false on reset (I think?) even tho I didnt put any code to do that, so fuck me I guess
   }
 
   function onCountdownStart(event:CountdownScriptEvent):Void

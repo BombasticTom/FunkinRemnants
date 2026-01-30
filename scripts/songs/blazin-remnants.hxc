@@ -118,16 +118,16 @@ class BlazinRemnantsMixSong extends Song
 
   function onNoteHit(event:HitNoteScriptEvent):Void // Super awesome easter egg good ending
   {
-    if (!gigacut) return; 
+    if (!gigacut) return;
     switch (event?.note?.kind ?? '')
     {
       case "weekend-1-picouppercut":
-      PlayState.instance.currentStage.getDad().velocity.y = -5000;
-      PlayState.instance.currentStage.getDad().velocity.x = -1000;
-      PlayState.instance.currentStage.getGirlfriend().playAnimation('combo200', true, true);
-      FunkinSound.playOnce(Paths.sound('gameplay/secret/goodEnd'), 1);
-      FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 1);
-      gigaPicoPunch();
+        PlayState.instance.currentStage.getDad().velocity.y = -5000;
+        PlayState.instance.currentStage.getDad().velocity.x = -1000;
+        PlayState.instance.currentStage.getGirlfriend().playAnimation('combo200', true, true);
+        FunkinSound.playOnce(Paths.sound('gameplay/secret/goodEnd'), 1);
+        FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 1);
+        gigaPicoPunch();
     }
   }
 
@@ -137,24 +137,24 @@ class BlazinRemnantsMixSong extends Song
     switch (event.note.kind)
     {
       case "weekend-1-picouppercut":
-      PlayState.instance.currentStage.getBoyfriend().zIndex = 1000;
-      PlayState.instance.currentStage.refresh();
+        PlayState.instance.currentStage.getBoyfriend().zIndex = 1000;
+        PlayState.instance.currentStage.refresh();
 
-      PlayState.instance.currentStage.getBoyfriend().velocity.y = -5000;
-      PlayState.instance.currentStage.getBoyfriend().velocity.x = 1000;
-      PlayState.instance.currentStage.getBoyfriend().playAnimation('uppercutHit', true, false);
-      PlayState.instance.currentStage.getDad().playAnimation('uppercut', true, true);
-      PlayState.instance.currentStage.getGirlfriend().playAnimation('drop70', true, true);
-      FunkinSound.playOnce(Paths.sound('gameplay/secret/badEnd'), 1);
-      FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 0.5);
-      gigaDarnellPunch();
-      PlayState.instance.disableKeys = true;
+        PlayState.instance.currentStage.getBoyfriend().velocity.y = -5000;
+        PlayState.instance.currentStage.getBoyfriend().velocity.x = 1000;
+        PlayState.instance.currentStage.getBoyfriend().playAnimation('uppercutHit', true, false);
+        PlayState.instance.currentStage.getDad().playAnimation('uppercut', true, true);
+        PlayState.instance.currentStage.getGirlfriend().playAnimation('drop70', true, true);
+        FunkinSound.playOnce(Paths.sound('gameplay/secret/badEnd'), 1);
+        FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 0.5);
+        gigaDarnellPunch();
+        PlayState.instance.disableKeys = true;
 
-      new FlxTimer().start(3, function() { // BUG: Timer dosent cancel after retry or stop while paused, which can cause some bullshit
-        PlayState.instance.disableKeys = false;
-        PlayState.instance.currentStage.getBoyfriend().visible = false;
-        PlayState.instance.health = 0;
-      });
+        new FlxTimer().start(3, function() { // BUG: Timer dosent cancel after retry or stop while paused, which can cause some bullshit
+          PlayState.instance.disableKeys = false;
+          PlayState.instance.currentStage.getBoyfriend().visible = false;
+          PlayState.instance.health = 0;
+        });
     }
   }
 
@@ -164,7 +164,6 @@ class BlazinRemnantsMixSong extends Song
 
   function gigaPicoPunch() // For the super awesome easter egg's good ending
   {
-
     if (picoFade != null) picoFade.destroy();
     picoFade = new FunkinSprite(810, 590);
     picoFade.x = 810; // Blah.Blah.Blah.getBoyfriend().x/y didnt work... but luckly Im a psycopath so I did the X & Y manually B)
@@ -190,7 +189,6 @@ class BlazinRemnantsMixSong extends Song
 
   function gigaDarnellPunch() // For the super awesome easter egg's bad ending
   {
-
     if (darnellFade != null) darnellFade.destroy();
     darnellFade = new FunkinSprite(830, 510);
     darnellFade.x = 830; // Blah.Blah.Blah.getDad().x/y didnt work... but luckly Im a psycopath so I did the X & Y manually B)
@@ -213,7 +211,6 @@ class BlazinRemnantsMixSong extends Song
         darnellFade.alpha = 0.3 - (0.3 * num);
       });
   }
-
 
   override function onPause(event:ScriptEvent):Void
   {

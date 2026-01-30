@@ -81,30 +81,31 @@ class GlitcherRemnantsStage extends Stage
     wentDark = goDark;
 
     ambienceTween?.cancel();
-    ambienceTween = FlxTween.num(1 - targetAlpha, targetAlpha, duration, {
-      onComplete: (_) -> {
-        ambienceTween = null;
-      }
-    }, (curAlpha:Float) -> {
-      for (id in ['bf', 'gf', 'dad'])
+    ambienceTween = FlxTween.num(1 - targetAlpha, targetAlpha, duration,
       {
-        var remnantsChar:BaseCharacter = getCharacter('remnants-' + id);
-        var char:BaseCharacter = getCharacter(id);
-
-        if (remnantsChar != null)
-        {
-          remnantsChar.alpha = 1 - curAlpha;
-          if (remnantsChar.alpha == 0) remnantsChar.alpha = 0.0001;
+        onComplete: (_) -> {
+          ambienceTween = null;
         }
-        if (char != null)
+      }, (curAlpha:Float) -> {
+        for (id in ['bf', 'gf', 'dad'])
         {
-          char.alpha = curAlpha;
-          if (char.alpha == 0) char.alpha = 0.0001;
-        }
-      }
+          var remnantsChar:BaseCharacter = getCharacter('remnants-' + id);
+          var char:BaseCharacter = getCharacter(id);
 
-      if (getNamedProp('Court Back') != null) getNamedProp('Court Back').alpha = curAlpha;
-    });
+          if (remnantsChar != null)
+          {
+            remnantsChar.alpha = 1 - curAlpha;
+            if (remnantsChar.alpha == 0) remnantsChar.alpha = 0.0001;
+          }
+          if (char != null)
+          {
+            char.alpha = curAlpha;
+            if (char.alpha == 0) char.alpha = 0.0001;
+          }
+        }
+
+        if (getNamedProp('Court Back') != null) getNamedProp('Court Back').alpha = curAlpha;
+      });
 
     for (id in ['bf', 'dad'])
     {
@@ -150,4 +151,3 @@ class GlitcherRemnantsStage extends Stage
     super.onSongRetry();
   }
 }
-

@@ -23,4 +23,3 @@ class UghPicoMixSong extends Song
     return results;
   }
 }
-

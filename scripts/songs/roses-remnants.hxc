@@ -125,7 +125,7 @@ class RosesRemnantsMixSong extends Song
       PlayState.instance.tweenCameraToPosition(710, 520, 0.001, FlxEase.instant);
       PlayState.instance.camHUD.visible = false;
     }
-    
+
     if (hudFade)
     {
       FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
@@ -220,4 +220,3 @@ class RosesRemnantsMixSong extends Song
     }
   }
 }
-

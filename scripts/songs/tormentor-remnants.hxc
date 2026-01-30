@@ -113,4 +113,3 @@ class TormentorSong extends Song
     }
   }
 }
-

@@ -36,11 +36,9 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
       normalChar.setPosition(this.x, this.y);
     }
 
-    if (name == 'idleToDance')
-      shouldAlternate = true;
+    if (name == 'idleToDance') shouldAlternate = true;
 
-    if (name == 'danceToIdle')
-      shouldAlternate = false;
+    if (name == 'danceToIdle') shouldAlternate = false;
   }
 
   function onCreate(event:ScriptEvent)
@@ -58,4 +56,3 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
     }
   }
 }
-

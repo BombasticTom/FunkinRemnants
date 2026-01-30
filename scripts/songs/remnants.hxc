@@ -146,4 +146,3 @@ class RemnantsSong extends Song
     }
   }
 }
-

@@ -252,13 +252,16 @@ class DadBattleRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 12:
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.5, {ease: FlxEase.linear, onComplete: function(_) {
-        fadeOut = true;
-	  }});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.5,
+          {
+            ease: FlxEase.linear,
+            onComplete: function(_) {
+              fadeOut = true;
+            }
+          });
       case 300:
         PlayState.instance.camCutscene.fade(0xFF000000, 1.5, false, null, false);
         fadeOut = false;
     }
   }
 }
-

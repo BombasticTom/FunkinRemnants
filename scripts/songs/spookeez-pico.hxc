@@ -23,4 +23,3 @@ class SpookeezPicoMixSong extends Song
     return results;
   }
 }
-

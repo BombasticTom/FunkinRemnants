@@ -53,7 +53,7 @@ class RemnantsOptions extends Module
       {
         remnantsMusic = false;
         trace("Changed drumsBG to default audio.");
-        OptionsState.instance.drumsBG = FunkinSound.load(Paths.music('offsetsLoop/drumsLoop'), 0, true, false, false, false); 
+        OptionsState.instance.drumsBG = FunkinSound.load(Paths.music('offsetsLoop/drumsLoop'), 0, true, false, false, false);
       }
     }
     else
@@ -76,4 +76,3 @@ class RemnantsOptions extends Module
     return Save.instance.modOptions.get('remnantsBumpers');
   }
 }
-

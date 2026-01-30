@@ -111,4 +111,3 @@ class BoyfriendRemnantsCarCharacter extends MultiAnimateAtlasCharacter
     }
   }
 }
-

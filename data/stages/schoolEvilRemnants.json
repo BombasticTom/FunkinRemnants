@@ -61,18 +61,18 @@
       "animations": []
     },
     {
-     "danceEvery": 0,
-     "zIndex": 3000,
-     "position": [-600, 18],
-     "scale": [2, 1.4],
-     "animType": "sparrow",
-     "name": "pixeloverlay",
-     "isPixel": true,
-     "alpha": 0, 
-     "blend": "multiply",
-     "assetPath": "remnants/evil/pixeloverlay",
-     "scroll": [0.5, 0.5],
-     "animations": []
+      "danceEvery": 0,
+      "zIndex": 3000,
+      "position": [-600, 18],
+      "scale": [2, 1.4],
+      "animType": "sparrow",
+      "name": "pixeloverlay",
+      "isPixel": true,
+      "alpha": 0,
+      "blend": "multiply",
+      "assetPath": "remnants/evil/pixeloverlay",
+      "scroll": [0.5, 0.5],
+      "animations": []
     }
   ],
   "cameraZoom": 1,

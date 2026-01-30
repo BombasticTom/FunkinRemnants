@@ -102,7 +102,6 @@ class PicoPlayerCharacter extends MultiSparrowCharacter
     });
   }
 
-
   function onNoteHit(event:HitNoteScriptEvent)
   {
     if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
@@ -504,4 +503,3 @@ class PicoPlayerCharacter extends MultiSparrowCharacter
     }
   }
 }
-

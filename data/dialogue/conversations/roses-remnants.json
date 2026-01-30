@@ -33,7 +33,9 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": ["I'm gonna rip your nuts off, right after your Girlfriend finishes gargling mine!"]
+      "text": [
+        "I'm gonna rip your nuts off, right after your Girlfriend finishes gargling mine!"
+      ]
     },
     {
       "speaker": "senpai-remnants-angry",
@@ -41,7 +43,9 @@
       "box": "remnants-pixel",
       "boxAnimation": "idle",
 
-      "text": ["After I'm done with you I'll earn back the love and respect of my lovely roses..."]
+      "text": [
+        "After I'm done with you I'll earn back the love and respect of my lovely roses..."
+      ]
     },
     {
       "speaker": "bf-pixel-remnants",

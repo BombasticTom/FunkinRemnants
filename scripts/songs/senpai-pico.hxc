@@ -132,4 +132,3 @@ class SenpaiPicoMixSong extends Song
     Countdown.performCountdown();
   }
 }
-

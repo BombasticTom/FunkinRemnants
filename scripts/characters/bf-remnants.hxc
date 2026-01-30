@@ -125,8 +125,7 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
 
   function doExplosionDeath()
   {
-    if (fadeTween != null && fadeTween.active)
-      fadeTween.cancel();
+    if (fadeTween != null && fadeTween.active) fadeTween.cancel();
 
     // Suffixed death sound will already play.
     GameOverSubState.instance.resetCameraZoom();
@@ -322,4 +321,3 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     if (fadeTween != null) fadeTween.active = true;
   }
 }
-

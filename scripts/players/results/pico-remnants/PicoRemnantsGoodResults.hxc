@@ -37,4 +37,3 @@ class PicoRemnantsGoodResults extends FunkinSprite
     scaleElement(blackElement, 15, FLASH_POSITION_OFFSET);
   }
 }
-

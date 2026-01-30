@@ -60,4 +60,3 @@ class SpraycanAtlasSpriteRemnants extends FunkinSprite
     this.animation.play('Hit Pico');
   }
 }
-

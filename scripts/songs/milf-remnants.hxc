@@ -251,9 +251,10 @@ class MILFRemnantsMixSong extends Song
   function isPlayerDucking():Bool
   {
     // Right now we just assume if they're holding a key at the right time, it counts.
-    if (PlayState.instance.controls.NOTE_DOWN || PlayState.instance.controls.NOTE_UP
-      || PlayState.instance.controls.NOTE_LEFT || PlayState.instance.controls.NOTE_RIGHT)
-      return true;
+    if (PlayState.instance.controls.NOTE_DOWN
+      || PlayState.instance.controls.NOTE_UP
+      || PlayState.instance.controls.NOTE_LEFT
+      || PlayState.instance.controls.NOTE_RIGHT) return true;
 
     return false;
   }
@@ -684,4 +685,3 @@ class MILFRemnantsMixSong extends Song
     }
   }
 }
-

@@ -24,4 +24,3 @@ class DarnellBFMixSong extends Song
     return results;
   }
 }
-

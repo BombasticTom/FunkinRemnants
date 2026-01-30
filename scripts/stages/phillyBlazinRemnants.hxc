@@ -267,4 +267,3 @@ class PhillyBlazinRemnantsStage extends Stage
     PlayState.instance.camGame.fade(0xFF000000, 1.5, true, null, true);
   }
 }
-

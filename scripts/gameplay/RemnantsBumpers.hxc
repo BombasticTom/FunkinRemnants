@@ -58,7 +58,7 @@ class RemnantsBumpers extends Module
   public var week6ListScary:Array<String> = ["thorns"];
   public var week7List:Array<String> = ["ugh", "guns", "stress"];
   public var weekend1List:Array<String> = ["darnell", "lit-up", "2hot", "blazin"];
-  
+
   // I could put all of the songs in a single array but that would cause the bumpers to play twice when re-entering the same song.
   public var grievingList:Array<String> = ["grieving-remnants"];
 
@@ -229,4 +229,3 @@ class RemnantsBumpers extends Module
     return null;
   }
 }
-

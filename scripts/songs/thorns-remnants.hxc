@@ -61,8 +61,7 @@ class ThornsRemnantsMixSong extends Song
     PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.camHUD.visible = true;
 
-    if (PlayState.instance.currentStage.getNamedProp('pixeloverlay') != null)
-      PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 0;
+    if (PlayState.instance.currentStage.getNamedProp('pixeloverlay') != null) PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 0;
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
@@ -169,8 +168,7 @@ class ThornsRemnantsMixSong extends Song
     PlayState.instance.refresh();
 
     // Senpai fades in stepwise rather than linear.
-    new FlxTimer(cutsceneTimerManager).start(0.3, function(timer:FlxTimer)
-    {
+    new FlxTimer(cutsceneTimerManager).start(0.3, function(timer:FlxTimer) {
       senpaiCrazy.alpha += 0.15;
 
       if (senpaiCrazy.alpha < 1)
@@ -188,8 +186,7 @@ class ThornsRemnantsMixSong extends Song
         if (!stopSenpai)
         {
           trace('Playing senpai death SFX.');
-          localManExplodesFreeSoundEffect = FunkinSound.load(Paths.sound('Senpai_Dies'), 1.0, false, false, false, false, function()
-          {
+          localManExplodesFreeSoundEffect = FunkinSound.load(Paths.sound('Senpai_Dies'), 1.0, false, false, false, false, function() {
             trace('Senpai death SFX done.');
 
             // Called when the sound completes. Clean up the cutscene here.
@@ -197,8 +194,7 @@ class ThornsRemnantsMixSong extends Song
             PlayState.instance.remove(darkness);
             RetroCameraFade.fadeBlack(PlayState.instance.camCutscene, 6, 1.4);
             RetroCameraFade.fadeBlack(PlayState.instance.camGame, 6, 1.4);
-            new FlxTimer(cutsceneTimerManager).start(1.6, _ ->
-            {
+            new FlxTimer(cutsceneTimerManager).start(1.6, _ -> {
               startDialogue();
             });
           });
@@ -207,14 +203,12 @@ class ThornsRemnantsMixSong extends Song
 
         if (FlxG.random.bool(1)) // 1% chance of this happening.
         {
-          new FlxTimer(cutsceneTimerManager).start(1.75, function(deadTime:FlxTimer)
-          {
+          new FlxTimer(cutsceneTimerManager).start(1.75, function(deadTime:FlxTimer) {
             FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
             canSkipCutscene = false;
           });
 
-          new FlxTimer(cutsceneTimerManager).start(2.5, function(deadTime:FlxTimer)
-          {
+          new FlxTimer(cutsceneTimerManager).start(2.5, function(deadTime:FlxTimer) {
             canSkipCutscene = false;
             skipText.visible = false;
 
@@ -227,16 +221,18 @@ class ThornsRemnantsMixSong extends Song
             localSchoolBoyFoundDead.zIndex = -3;
             PlayState.instance.add(localSchoolBoyFoundDead);
 
-            new FlxTimer(cutsceneTimerManager).start(2.75, function(secret:FlxTimer)
-            {
-              FlxTween.tween(localSchoolBoyFoundDead, {alpha: 0}, 1.5, {ease: FlxEase.linear, onComplete: function(twn) {
-                PlayState.instance.remove(localSchoolBoyFoundDead);
-                this.endCutscene();
-              }});
+            new FlxTimer(cutsceneTimerManager).start(2.75, function(secret:FlxTimer) {
+              FlxTween.tween(localSchoolBoyFoundDead, {alpha: 0}, 1.5,
+                {
+                  ease: FlxEase.linear,
+                  onComplete: function(twn) {
+                    PlayState.instance.remove(localSchoolBoyFoundDead);
+                    this.endCutscene();
+                  }
+                });
             });
 
-            new FlxTimer(cutsceneTimerManager).start(0.2, function(timer:FlxTimer)
-            {
+            new FlxTimer(cutsceneTimerManager).start(0.2, function(timer:FlxTimer) {
               localSchoolBoyFoundDead.alpha += 0.15;
 
               if (localSchoolBoyFoundDead.alpha < 1)
@@ -249,11 +245,9 @@ class ThornsRemnantsMixSong extends Song
         else // Normal transition.
         {
           // Fade to white 3.2 seconds into the cutscene.
-          new FlxTimer(cutsceneTimerManager).start(3.2, function(deadTime:FlxTimer)
-          {
+          new FlxTimer(cutsceneTimerManager).start(3.2, function(deadTime:FlxTimer) {
             RetroCameraFade.fadeWhite(PlayState.instance.camCutscene, 8, 1.4);
-            new FlxTimer(cutsceneTimerManager).start(1.4, function(timer:FlxTimer)
-            {
+            new FlxTimer(cutsceneTimerManager).start(1.4, function(timer:FlxTimer) {
               darkness.color = 0xFFFFFFFF;
               PlayState.instance.remove(senpaiCrazy);
 
@@ -278,11 +272,9 @@ class ThornsRemnantsMixSong extends Song
       bgSprite = null;
     }
 
-    if (darkness != null)
-      PlayState.instance.remove(darkness);
+    if (darkness != null) PlayState.instance.remove(darkness);
 
-    if (senpaiCrazy != null)
-      PlayState.instance.remove(senpaiCrazy);
+    if (senpaiCrazy != null) PlayState.instance.remove(senpaiCrazy);
 
     RetroCameraFade.fadeBlack(PlayState.instance.camCutscene, 6, 1.4);
     RetroCameraFade.fadeBlack(PlayState.instance.camGame, 6, 1.4);
@@ -417,10 +409,10 @@ class ThornsRemnantsMixSong extends Song
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 2.08, {ease: FlxEase.linear, onComplete: (_) -> fadeOut = true});
       case 128:
         RetroCameraFade.fadeBlack(PlayState.instance.camGame, 4, 0.5);
-	      PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 1;
+        PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 1;
       case 192:
         RetroCameraFade.fadeBlack(PlayState.instance.camGame, 4, 0.5);
-	      PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 0;
+        PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 0;
       case 331:
         RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 4, 0.5);
         fadeOut = false;
@@ -429,7 +421,7 @@ class ThornsRemnantsMixSong extends Song
         fadeOut = true;
       case 400:
         RetroCameraFade.fadeBlack(PlayState.instance.camGame, 4, 0.5);
-	      PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 1;
+        PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 1;
       case 464:
         RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 1.04);
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1.04, {ease: FlxEase.linear});
