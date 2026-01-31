@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "name": "Remnants Mom (Grieving)",
+  "name": "Remnants Roxanne (Mom Grieving)",
   "renderType": "animateatlas",
-  "assetPath": "shared:characters/mom-remnants-grieving",
+  "assetPath": "shared:characters/roxanne-remnants",
   "singTime": 8.0,
   "healthIcon": {
     "id": "mom-remnants"

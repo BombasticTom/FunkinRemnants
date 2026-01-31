@@ -14,13 +14,13 @@
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-      "player": "dad-remnants-grieving",
+      "player": "luis-remnants",
       "girlfriend": "bf-gf-remnants-grieving",
-      "opponent": "mom-remnants-grieving",
+      "opponent": "roxanne-remnants",
       "instrumental": "",
       "altInstrumentals": [],
-      "opponentVocals": ["mom-remnants-grieving"],
-      "playerVocals": ["dad-remnants-grieving"]
+      "opponentVocals": ["roxanne-remnants"],
+      "playerVocals": ["luis-remnants"]
     },
     "stage": "grievingRemnants",
     "noteStyle": "funkin",

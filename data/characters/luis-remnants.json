@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "name": "Remnants Dad (Grieving)",
+  "name": "Remnants Luis (Dad Grieving)",
   "renderType": "animateatlas",
-  "assetPath": "shared:characters/dad-remnants-grieving",
+  "assetPath": "shared:characters/luis-remnants",
   "singTime": 8.0,
   "healthIcon": {
-    "id": "dad-remnants-grieving"
+    "id": "luis-remnants"
   },
   "cameraOffsets": [0, 0],
   "offsets": [0, 0],
