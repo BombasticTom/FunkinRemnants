@@ -17,19 +17,17 @@ class RemnantsDiscordUtil extends Module
     if (PlayState.instance == null) return;
     if (!RemnantsContentUtil.remnantsContentEnabled()) return;
 
-    var songName = PlayState.instance.currentChart.songName;
-    var timeStamp = Date.now().getTime();
-
     // Update Discord Rich Presence.
+    var timeStamp = Date.now().getTime();
     this.updateAlbum(timeStamp);
     this.updateIcon(timeStamp);
   }
 
   function updateAlbum(timeStamp:Float):Void {
-    PlayState.instance.discordRPCAlbum = '$ASSETS_URL${PlayState.instance.currentChart.characters.album}$GITHUB_RAW$timeStamp';
+    PlayState.instance.discordRPCAlbum = "" + ASSETS_URL + PlayState.instance.currentChart.characters.album + GITHUB_RAW + timeStamp;
   }
 
   function updateIcon(timeStamp:Float):Void {
-    PlayState.instance.discordRPCIcon = '$ASSETS_URL${PlayState.instance.currentChart.characters.opponent}$GITHUB_RAW$timeStamp';
+    PlayState.instance.discordRPCIcon = "" + ASSETS_URL + PlayState.instance.currentChart.characters.opponent + GITHUB_RAW + timeStamp;
   }
 }

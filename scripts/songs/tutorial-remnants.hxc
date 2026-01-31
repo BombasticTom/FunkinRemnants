@@ -51,7 +51,9 @@ class TutorialRemnantsMixSong extends Song
     intro.alpha = 0;
     PlayState.instance?.add(intro);
 
-    PlayState.instance.disableKeys = true;
+    // Putting this here won't let the player skip the bumper.
+    // PlayState.instance.disableKeys = true;
+
     ending = false;
   }
 
@@ -64,6 +66,10 @@ class TutorialRemnantsMixSong extends Song
     {
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+    else
+    {
+      PlayState.instance.disableKeys = true;
     }
   }
 
@@ -108,13 +114,7 @@ class TutorialRemnantsMixSong extends Song
     {
       black.alpha = 0;
       intro.alpha = 0;
-
-      introTween = FlxTween.tween(black, {alpha: 1}, 0.5,
-        {
-          onComplete: (_) -> {
-            introTween = null;
-          }
-        });
+      introTween = FlxTween.tween(black, {alpha: 1}, 0.5, {onComplete: (_) -> introTween = null});
     }
     else
     {
@@ -123,13 +123,17 @@ class TutorialRemnantsMixSong extends Song
     }
   }
 
-  function onPause()
+  override function onPause(event:ScriptEvent):Void
   {
+    super.onPause(event);
+
     FlxTweenUtil.pauseTweensOf(black);
   }
 
-  function onResume()
+  function onResume(event:ScriptEvent):Void
   {
+    super.onResume(event);
+
     FlxTweenUtil.resumeTweensOf(black);
   }
 
