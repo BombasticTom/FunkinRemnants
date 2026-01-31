@@ -127,8 +127,8 @@
     },
     "dad": {
       "zIndex": 200,
-      "cameraOffsets": [300, -200],
-      "position": [850, 1495]
+      "cameraOffsets": [300, -125],
+      "position": [950, 1550]
     }
   },
   "name": "Philly Streets (Remnants)",
