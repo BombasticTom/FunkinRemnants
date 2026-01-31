@@ -1,0 +1,35 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import Date;
+
+class RemnantsDiscordUtil extends Module
+{
+  function new()
+  {
+    super("RemnantsDiscordUtil", 1);
+  }
+
+  final ASSETS_URL:String = "https://github.com/RemnantsCrew/FunkinRemnants.art-Private/blob/main/discord";
+  final GITHUB_RAW:String = ".png?raw=true?t=";
+
+  override function onSongLoaded(event:SongLoadScriptEvent) 
+  {
+    if (PlayState.instance == null) return;
+    if (!RemnantsContentUtil.remnantsContentEnabled()) return;
+
+    var songName = PlayState.instance.currentChart.songName;
+    var timeStamp = Date.now().getTime();
+
+    // Update Discord Rich Presence.
+    this.updateAlbum(timeStamp);
+    this.updateIcon(timeStamp);
+  }
+
+  function updateAlbum(timeStamp:Float):Void {
+    PlayState.instance.discordRPCAlbum = '$ASSETS_URL${PlayState.instance.currentChart.characters.album}$GITHUB_RAW$timeStamp';
+  }
+
+  function updateIcon(timeStamp:Float):Void {
+    PlayState.instance.discordRPCIcon = '$ASSETS_URL${PlayState.instance.currentChart.characters.opponent}$GITHUB_RAW$timeStamp';
+  }
+}
