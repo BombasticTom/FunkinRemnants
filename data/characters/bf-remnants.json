@@ -10,8 +10,8 @@
     "useRenderTexture": true,
     "uniqueInCache": true
   },
-  "cameraOffsets": [0, 146],
-  "offsets": [-47, 17],
+  "cameraOffsets": [57, 149.5],
+  "offsets": [-49, 13],
   "death": {
     "cameraOffsets": [10, -85],
     "cameraZoom": 0.85
