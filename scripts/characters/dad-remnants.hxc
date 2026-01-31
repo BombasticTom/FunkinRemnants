@@ -47,29 +47,10 @@ class DadRemnantsCharacter extends SparrowCharacter
 
     if (frameNumber <= 3)
     {
-      if (!FlxG.random.bool(0.2)) // This chance rolls 22 times throughout the song so this is actaully like a 4.2% chance
-      {
-        curKickOffset *= FlxEase.quintOut(frameNumber / 3);
-        trace(curKickOffset);
-      }
-      else
-      {
-        // Bros boutta go for a ride
-        slip = true;
-        FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 1);
-        FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: PlayState.instance.currentStage.getDad().originalPosition.x + 3000}, 0.75,
-          {
-            ease: FlxEase.linear,
-            onComplete: function(_) {
-              this.visible = false;
-              this.x = this.originalPosition.x;
-              FlxG.camera.shake(0.05, 2.5);
-              FunkinSound.playOnce(Paths.sound('crash'), 1);
-            }
-          });
-      }
+      curKickOffset *= FlxEase.quintOut(frameNumber / 3);
+      trace(curKickOffset);
     }
-    else if (frameNumber >= 6 && frameNumber <= 14 && !slip)
+    else if (frameNumber >= 6 && frameNumber <= 14)
     {
       curKickOffset *= (1 - FlxEase.quadInOut(FlxMath.remapToRange(frameNumber, 6, 14, 0, 1)));
       trace(curKickOffset);
@@ -131,14 +112,38 @@ class DadRemnantsCharacter extends SparrowCharacter
 
   function onNoteHit(event:HitNoteScriptEvent)
   {
-    super.onNoteHit(event);
-    if (PlayState.instance.currentStage == null || !slip || PlayState.instance.currentStage.getDad() == null) return;
-    if (!event.note.noteData.getMustHitNote())
+		var hasSlip:Bool = false;
+		for (i => param in event.note.params)
+		{
+			if (param.name == 'battle-slip') hasSlip = true;
+		}
+
+		if (!slip && hasSlip)
+		{
+			// Bros boutta go for a ride
+      slip = true;
+      FunkinSound.playOnce(Paths.sound('gameplay/secret/secret'), 1);
+      FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: PlayState.instance.currentStage.getDad().originalPosition.x + 3000}, 0.75,
+        {
+          onComplete: function(_) {
+            this.visible = false;
+            this.x = this.originalPosition.x;
+            FlxG.camera.shake(0.05, 2.5);
+            FunkinSound.playOnce(Paths.sound('crash'), 1);
+          }
+        });
+		}
+
+		if (characterType != CharacterType.DAD) return super.onNoteHit(event);
+
+    if (!event.note.noteData.getMustHitNote() && slip)
     {
-      event.cancelEvent();
       PlayState.instance.vocals.opponentVolume = 0;
+      event.cancel();
     }
-  }
+
+		super.onNoteHit(event);
+	}
 
   function onCreate(event:ScriptEvent):Void
   {

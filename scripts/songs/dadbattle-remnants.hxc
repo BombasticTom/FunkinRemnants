@@ -42,8 +42,8 @@ class DadBattleRemnantsMixSong extends Song
   var bfAttackSound:FunkinSound;
   var dadKickSound:FunkinSound;
 
-  var attackerHitTimes:Array<Float> = [];
-  var attackerHitStrumID:Array<Float> = [];
+  var attackerNotes:Array<SongNoteData> = [];
+  var slipIndex:Int = -1;
 
   function onCreate():Void
   {
@@ -52,36 +52,44 @@ class DadBattleRemnantsMixSong extends Song
 
     PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
     fadeOut = false;
+
+    slipIndex = -1;
   }
 
   function onSongLoaded(event:SongLoadScriptEvent)
   {
-    attackerHitTimes = [];
-
-    for (note in event.notes)
-    {
-      switch (note.kind)
+    attackerNotes = event.notes.filter((note:SongNoteData) -> {
+      var i:Int = 0;
+      while (note.params.length > i)
       {
-        case 'battle-dodge-remnants':
-          attackerHitTimes.push(note.time);
-          attackerHitStrumID.push(note.getStrumlineIndex());
+        if (note.params[i].name == 'battle-slip') note.params.remove(note.params[i]);
+        i++;
       }
+
+      return note.kind == 'battle-dodge-remnants';
+    });
+
+    if (FlxG.random.bool(4))
+    {
+      var randomAttackNote:SongNoteData = attackerNotes[FlxG.random.int(0, attackerNotes.length - 1)];
+      randomAttackNote.params.push({name: "battle-slip", value: true});
+      trace("Placed slip note at " + randomAttackNote.time + "!");
     }
   }
 
   function onUpdate(event:UpdateScriptEvent):Void
   {
-    while (attackerHitTimes.length > 0)
+    while (attackerNotes.length > 0)
     {
-      if (Conductor.instance.songPosition < attackerHitTimes[0]) break;
+      if (Conductor.instance.songPosition < attackerNotes[0]?.time) break;
 
-      var time:Float = attackerHitTimes.shift();
+      var note:SongNoteData = attackerNotes.shift();
 
       var attacker:BaseCharacter = null;
       var target:BaseCharacter = null;
       var attackSound:FunkinSound = null;
 
-      if (attackerHitStrumID.shift() != 0)
+      if (note.getStrumlineIndex() != 0)
       {
         attacker = PlayState.instance.currentStage.getBoyfriend();
         target = PlayState.instance.currentStage.getDad();
