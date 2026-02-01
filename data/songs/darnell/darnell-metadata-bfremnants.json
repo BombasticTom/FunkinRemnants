@@ -6,7 +6,7 @@
   "divisions": 96,
   "looped": false,
   "offsets": {
-    "instrumental": 0,
+    "instrumental": -10,
     "altInstrumentals": {},
     "vocals": {},
     "altVocals": {}
