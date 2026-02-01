@@ -10,6 +10,9 @@
   "cameraOffsets": [0, 0],
   "offsets": [0, 0],
   "flipX": true,
+  "atlasSettings": {
+    "useRenderTexture": true
+  },
   "animations": [
     {
       "name": "idle",

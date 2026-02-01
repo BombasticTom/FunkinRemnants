@@ -7,6 +7,9 @@
   "healthIcon": {
     "id": "bf-remnants"
   },
+  "atlasSettings": {
+    "useRenderTexture": true
+  },
   "cameraOffsets": [0, 0],
   "offsets": [0, 0],
   "flipX": false,

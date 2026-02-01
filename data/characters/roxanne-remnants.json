@@ -7,6 +7,9 @@
   "healthIcon": {
     "id": "mom-remnants"
   },
+  "atlasSettings": {
+    "useRenderTexture": true
+  },
   "cameraOffsets": [0, 100],
   "offsets": [5, 40],
   "animations": [

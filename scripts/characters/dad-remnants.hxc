@@ -156,8 +156,7 @@ class DadRemnantsCharacter extends SparrowCharacter
   {
     super.onSongRetry(event);
 
-    if (slip)
-      this.visible = false;
+    if (slip) this.visible = false;
   }
 
   function onCountdownStart(event:CountdownScriptEvent):Void
