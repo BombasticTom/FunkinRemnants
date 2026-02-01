@@ -112,15 +112,15 @@ class DadRemnantsCharacter extends SparrowCharacter
 
   function onNoteHit(event:HitNoteScriptEvent)
   {
-		var hasSlip:Bool = false;
-		for (i => param in event.note.params)
-		{
-			if (param.name == 'battle-slip') hasSlip = true;
-		}
+    var hasSlip:Bool = false;
+    for (i => param in event.note.params)
+    {
+      if (param.name == 'battle-slip') hasSlip = true;
+    }
 
-		if (!slip && hasSlip)
-		{
-			// Bros boutta go for a ride
+    if (!slip && hasSlip)
+    {
+      // Bros boutta go for a ride
       slip = true;
       FunkinSound.playOnce(Paths.sound('gameplay/secret/secret'), 1);
       FlxTween.tween(PlayState.instance.currentStage.getDad(), {x: PlayState.instance.currentStage.getDad().originalPosition.x + 3000}, 0.75,
@@ -132,9 +132,9 @@ class DadRemnantsCharacter extends SparrowCharacter
             FunkinSound.playOnce(Paths.sound('crash'), 1);
           }
         });
-		}
+    }
 
-		if (characterType != CharacterType.DAD) return super.onNoteHit(event);
+    if (characterType != CharacterType.DAD) return super.onNoteHit(event);
 
     if (!event.note.noteData.getMustHitNote() && slip)
     {
@@ -142,8 +142,8 @@ class DadRemnantsCharacter extends SparrowCharacter
       event.cancel();
     }
 
-		super.onNoteHit(event);
-	}
+    super.onNoteHit(event);
+  }
 
   function onCreate(event:ScriptEvent):Void
   {

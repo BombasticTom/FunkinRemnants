@@ -121,14 +121,16 @@ class RemnantsPicoSong extends Song
     var dadPosition:FlxPoint = PlayState.instance.currentStage?.getDadPosition();
     var bfPosition:FlxPoint = PlayState.instance.currentStage?.getBoyfriendPosition();
 
-    var pico:FunkinSprite = FunkinSprite.createTextureAtlas((bfPosition?.x ?? 0) - 260, (bfPosition?.y ?? 0) - 490, 'stages/sketchRemnants/pico/cutscene/pico', 'shared');
+    var pico:FunkinSprite = FunkinSprite.createTextureAtlas((bfPosition?.x ?? 0) - 260, (bfPosition?.y ?? 0) - 490,
+      'stages/sketchRemnants/pico/cutscene/pico', 'shared');
     pico.anim.addByTimeline('anim', pico.anim.getDefaultTimeline(), 24, false);
     pico.shader = PlayState.instance.currentStage?.getBoyfriend()?.shader ?? null;
     pico.zIndex = PlayState.instance.currentStage?.getBoyfriend()?.zIndex ?? 0;
     PlayState.instance?.currentStage?.getBoyfriend()?.visible = false;
     PlayState.instance?.currentStage?.add(pico);
 
-    var remnantsPico:FunkinSprite = FunkinSprite.createTextureAtlas((dadPosition?.x ?? 0) - 237, (dadPosition?.y ?? 0) - 483, 'stages/sketchRemnants/pico/cutscene/remnants pico', 'shared');
+    var remnantsPico:FunkinSprite = FunkinSprite.createTextureAtlas((dadPosition?.x ?? 0) - 237, (dadPosition?.y ?? 0) - 483,
+      'stages/sketchRemnants/pico/cutscene/remnants pico', 'shared');
     remnantsPico.anim.addByTimeline('anim', remnantsPico.anim.getDefaultTimeline(), 24, false);
     remnantsPico.shader = PlayState.instance.currentStage?.getDad()?.shader ?? null;
     remnantsPico.zIndex = PlayState.instance.currentStage?.getDad()?.zIndex ?? 0;
