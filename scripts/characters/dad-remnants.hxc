@@ -157,7 +157,7 @@ class DadRemnantsCharacter extends SparrowCharacter
     super.onSongRetry(event);
 
     if (slip)
-      this.visible = false; // BUG: This is so dad doesnt pop back when you restart after the slip, but this game sucks so slip gets sets to false on reset (I think?) even tho I didnt put any code to do that, so fuck me I guess
+      this.visible = false;
   }
 
   function onCountdownStart(event:CountdownScriptEvent):Void
@@ -166,7 +166,7 @@ class DadRemnantsCharacter extends SparrowCharacter
 
     if (slip)
     {
-      this.visible = true; // Makes dad visible after the fade out if he slipped but the bitch ass code above dosent work so this is currently useless
+      this.visible = true;
       slip = false;
     }
   }

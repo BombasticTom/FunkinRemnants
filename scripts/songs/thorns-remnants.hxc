@@ -220,6 +220,7 @@ class ThornsRemnantsMixSong extends Song
             localSchoolBoyFoundDead.alpha = 0;
             localSchoolBoyFoundDead.zIndex = -3;
             PlayState.instance.add(localSchoolBoyFoundDead);
+            FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 1);
 
             new FlxTimer(cutsceneTimerManager).start(2.75, function(secret:FlxTimer) {
               FlxTween.tween(localSchoolBoyFoundDead, {alpha: 0}, 1.5,

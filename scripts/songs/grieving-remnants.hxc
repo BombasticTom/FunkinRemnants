@@ -1,9 +1,18 @@
 import funkin.modding.module.ModuleHandler;
 import funkin.play.song.Song;
 import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.util.FlxTweenUtil;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.Preferences;
+import funkin.play.cutscene.VideoCutscene;
 
 class GrievingRemnantsSong extends Song
 {
+  var fadeOut:Bool = false;
+  var emotional:Bool = false;
+
   public function new()
   {
     super('grieving-remnants');
@@ -27,6 +36,154 @@ class GrievingRemnantsSong extends Song
     {
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+
+    if (emotional)
+    {
+      PlayState.instance.currentStage.getNamedProp('TheGrievingLands').alpha = 1;
+      PlayState.instance.currentStage.getGirlfriend().alpha = 1;
+      PlayState.instance.currentStage.getBoyfriend().alpha = 1;
+      PlayState.instance.currentStage.getDad().alpha = 1;
+      emotional = false;
+    }
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
+    fadeOut = false;
+    emotional = false;
+
+    if (!Preferences.downscroll) // Move pop ups
+    {
+      PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll Offset
+    }
+    else
+    {
+      PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll Offset
+    }
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    PlayState.instance.camCutscene?.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+
+    if (fadeOut)
+    {
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, false);
+      fadeOut = false;
+    }
+    else
+    {
+      PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    PlayState.instance.currentStage.getBoyfriend().alpha = 0;
+    PlayState.instance.camCutscene.fade(0xFF000000, 0, true, null, false);
+    PlayState.instance.camCutscene?.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+    emotional = true;
+  }
+
+  function onPause()
+  {
+    PlayState.instance.camCutscene?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'));
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getGirlfriend());
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getBoyfriend());
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getDad());
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    PlayState.instance.camCutscene?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'));
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getGirlfriend());
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getBoyfriend());
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getDad());
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    PlayState.instance.camCutscene.fade(0xFF000000, 3, true, null, false);
+    PlayState.instance.camHUD.fade(0xFF000000, 0, true, null, false);
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (PlayState.instance.isGameOverState) return;
+    switch (event.beat)
+    {
+      case 26:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 2.57, {ease: FlxEase.linear, onComplete: function(_) {
+	  fadeOut = true;
+	}});
+
+      case 92:
+        PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
+	fadeOut = false;
+
+      case 96:
+        PlayState.instance.camCutscene.fade(0xFF000000, 0.1, true, null, false);
+	fadeOut = true;
+
+      case 218: // Fade em all out
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'), {alpha: 0}, 2.57, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.currentStage.getGirlfriend(), {alpha: 0}, 2.57, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {alpha: 0}, 2.57, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.currentStage.getDad(), {alpha: 0}, 2.57, {ease: FlxEase.linear});
+        emotional = true;
+
+      case 224: // Fade only Roxanne in
+        FlxTween.tween(PlayState.instance.currentStage.getDad(), {alpha: 1}, 2.57, {ease: FlxEase.linear});
+
+      case 236, 268: // Fade Roxanne out and Luis in after
+        FlxTween.tween(PlayState.instance.currentStage.getDad(), {alpha: 0}, 1.71, {ease: FlxEase.linear, onComplete: function(_) {
+	  FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {alpha: 1}, 1.71, {ease: FlxEase.linear});
+	}});
+
+      case 252: // Fade Luis out and Roxanne in after
+        FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {alpha: 0}, 1.71, {ease: FlxEase.linear, onComplete: function(_) {
+	  FlxTween.tween(PlayState.instance.currentStage.getDad(), {alpha: 1}, 1.71, {ease: FlxEase.linear});
+	}});
+
+      case 284: // Fade only Luis out
+	FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {alpha: 0}, 1.71, {ease: FlxEase.linear});
+
+      case 288: // Bring everyone back
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'), {alpha: 1}, 3.43, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.currentStage.getGirlfriend(), {alpha: 1}, 3.43, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.currentStage.getBoyfriend(), {alpha: 1}, 3.43, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.currentStage.getDad(), {alpha: 1}, 3.43, {ease: FlxEase.linear});
+        emotional = false;
+
+      case 352: // Fade bg stuffs out
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'), {alpha: 0}, 1.71, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.currentStage.getGirlfriend(), {alpha: 0}, 1.71, {ease: FlxEase.linear});
+        emotional = true;
+
+      case 354:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1.71, {ease: FlxEase.sineIn});
+
+      case 384: // Lonely Chud
+        FlxTween.tween(PlayState.instance.currentStage.getDad(), {alpha: 0}, 1.71, {ease: FlxEase.linear});
     }
   }
 }

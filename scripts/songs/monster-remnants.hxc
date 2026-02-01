@@ -53,13 +53,13 @@ class MonsterRemnantsMixSong extends Song
     black.alpha = 1;
     PlayState.instance.camHUD.alpha = 0;
 
-    if (!Preferences.downscroll)
+    if (!Preferences.downscroll) // Move pop ups
     {
-      PlayState.instance.comboPopUps.offsets = [550, 350];
+      PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll Offset
     }
     else
     {
-      PlayState.instance.comboPopUps.offsets = [550, -190];
+      PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll Offset
     }
   }
 

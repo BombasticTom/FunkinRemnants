@@ -6,8 +6,9 @@
   "divisions": 96,
   "looped": false,
   "offsets": {
-    "instrumental": -79,
+    "instrumental": 0,
     "altInstrumentals": {},
+    "vocals": {},
     "altVocals": {}
   },
   "playData": {
@@ -24,11 +25,7 @@
     },
     "stage": "grievingRemnants",
     "noteStyle": "funkin",
-    "ratings": {
-      "easy": 0,
-      "normal": 0,
-      "hard": 0
-    },
+    "ratings": { "easy": 3, "normal": 4, "hard": 5 },
     "previewStart": 0,
     "previewEnd": 0
   },
