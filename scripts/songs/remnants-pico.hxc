@@ -2,13 +2,17 @@ import funkin.play.song.Song;
 import funkin.save.Save;
 import funkin.play.PlayState;
 import funkin.graphics.FunkinSprite;
+import funkin.audio.FunkinSound;
 import funkin.util.FlxTweenUtil;
+import flixel.util.FlxTimer;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.FlxG;
 
 class RemnantsPicoSong extends Song
 {
+  var playedCutscene:Bool = false;
+
   var fadeOut:Bool = false;
   var fadeHud:Bool = false;
 
@@ -43,6 +47,7 @@ class RemnantsPicoSong extends Song
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
     fadeHud = false;
+    playedCutscene = false;
   }
 
   function onSongRetry(event:ScriptEvent)
@@ -93,8 +98,70 @@ class RemnantsPicoSong extends Song
   {
     super.onCountdownStart(event);
 
+    if (!playedCutscene)
+    {
+      trace('Pausing countdown to play in-game cutscene (`remnants-pico`)');
+      event.cancel();
+
+      playCutscene();
+      playedCutscene = true;
+    }
+
     PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.camHUD.visible = true;
+  }
+
+  function playCutscene():Void
+  {
+    PlayState.instance.tweenCameraToPosition(620, 515.5, 0);
+
+    var cutsceneMusic:FunkinSound = FunkinSound.load(Paths.music("freeplayRandom-remnants/freeplayRandom-remnants"), 0.0, true);
+    var cutsceneAudio:FunkinSound = FunkinSound.load(Paths.sound('gameplay/cutscene/remnants-pico-cutscene'), 1.0);
+
+    var dadPosition:FlxPoint = PlayState.instance.currentStage?.getDadPosition();
+    var bfPosition:FlxPoint = PlayState.instance.currentStage?.getBoyfriendPosition();
+
+    var pico:FunkinSprite = FunkinSprite.createTextureAtlas((bfPosition?.x ?? 0) - 260, (bfPosition?.y ?? 0) - 490, 'stages/sketchRemnants/pico/cutscene/pico', 'shared');
+    pico.anim.addByTimeline('anim', pico.anim.getDefaultTimeline(), 24, false);
+    pico.shader = PlayState.instance.currentStage?.getBoyfriend()?.shader ?? null;
+    pico.zIndex = PlayState.instance.currentStage?.getBoyfriend()?.zIndex ?? 0;
+    PlayState.instance?.currentStage?.getBoyfriend()?.visible = false;
+    PlayState.instance?.currentStage?.add(pico);
+
+    var remnantsPico:FunkinSprite = FunkinSprite.createTextureAtlas((dadPosition?.x ?? 0) - 237, (dadPosition?.y ?? 0) - 483, 'stages/sketchRemnants/pico/cutscene/remnants pico', 'shared');
+    remnantsPico.anim.addByTimeline('anim', remnantsPico.anim.getDefaultTimeline(), 24, false);
+    remnantsPico.shader = PlayState.instance.currentStage?.getDad()?.shader ?? null;
+    remnantsPico.zIndex = PlayState.instance.currentStage?.getDad()?.zIndex ?? 0;
+    PlayState.instance?.currentStage?.getDad()?.visible = false;
+    PlayState.instance?.currentStage?.add(remnantsPico);
+
+    PlayState.instance?.currentStage?.refresh();
+
+    PlayState.instance.currentStage?.getGirlfriend()?.animation?.onFinish?.add(PlayState.instance.currentStage?.getGirlfriend()?.dance);
+
+    cutsceneMusic.play();
+    cutsceneMusic.fadeIn(3.0, 0.0, 0.3);
+
+    FlxTimer.wait(2, () -> {
+      pico.anim.play('anim', true);
+      remnantsPico.anim.play('anim', true);
+      cutsceneAudio.play();
+    });
+
+    pico.animation.onFinish.addOnce(() -> {
+      cutsceneMusic.fadeOut(0.5, 0, (_) -> {
+        PlayState.instance?.currentStage?.getBoyfriend()?.visible = true;
+        PlayState.instance?.currentStage?.getDad()?.visible = true;
+
+        PlayState.instance.currentStage?.getGirlfriend()?.animation?.onFinish?.remove(PlayState.instance.currentStage?.getGirlfriend()?.dance);
+
+        // TODO: DESTROY THESE!!
+        pico?.visible = false;
+        remnantsPico?.visible = false;
+
+        PlayState.instance.startCountdown();
+      });
+    });
   }
 
   function onBeatHit(event:ScriptEvent):Void
