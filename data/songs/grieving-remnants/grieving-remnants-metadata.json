@@ -27,7 +27,7 @@
     "noteStyle": "funkin",
     "ratings": { "easy": 3, "normal": 4, "hard": 5 },
     "previewStart": 0,
-    "previewEnd": 0
+    "previewEnd": 10000
   },
   "generatedBy": "Friday Night Funkin' - v0.8.1",
   "timeFormat": "ms",

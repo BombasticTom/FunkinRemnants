@@ -86,7 +86,6 @@ class GrievingRemnantsSong extends Song
 
   function onGameOver(event:ScriptEvent):Void
   {
-    PlayState.instance.currentStage.getBoyfriend().alpha = 0;
     PlayState.instance.camCutscene.fade(0xFF000000, 0, true, null, false);
     PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
