@@ -26,6 +26,7 @@
     "stage": "grievingRemnants",
     "noteStyle": "funkin",
     "ratings": { "easy": 3, "normal": 4, "hard": 5 },
+    "album": "remnants-grieving",
     "previewStart": 0,
     "previewEnd": 10000
   },
