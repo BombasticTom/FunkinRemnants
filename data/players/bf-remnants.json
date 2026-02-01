@@ -20,6 +20,7 @@
   "stickerPack": "remnants-default",
   "freeplayDJ": {
     "assetPath": "freeplay/freeplay-bf-remnants",
+    "scriptClass": "BoyfriendRemnantsFreeplayDJ",
     "cartoon": {
       "soundClickFrame": 80,
       "soundCartoonFrame": 85,

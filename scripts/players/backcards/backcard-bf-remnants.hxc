@@ -2,13 +2,13 @@ import funkin.ui.freeplay.BGScrollingText;
 import funkin.ui.freeplay.FreeplayState;
 import funkin.ui.freeplay.backcards.BackingCard;
 import flixel.FlxSprite;
+import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxSpriteUtil;
-import funkin.ui.freeplay.charselect.PlayableCharacter;
+import funkin.audio.FunkinSound;
 import funkin.data.freeplay.player.PlayerRegistry;
 import flixel.FlxG;
-import funkin.Conductor;
 
 class BFRemnantsCard extends BackingCard
 {
@@ -246,5 +246,34 @@ class BFRemnantsCard extends BackingCard
     funnyScroll3.visible = false;
     glowDark.visible = false;
     glow.visible = false;
+  }
+
+  // Thank you Sonic JAM...
+  public function onCapsuleSelected(event:CapsuleScriptEvent)
+  {
+    super.onCapsuleSelected(event);
+
+    // Check if the random capsule was hovered over before replacing the sound.
+    if (event.capsule.freeplayData != null) return;
+
+    // Remove the delay timer for the music and start a fresh new one.
+    FlxTimer.globalManager._timers.pop();
+    FlxTimer.wait(FreeplayState.FADE_IN_DELAY, function()
+    {
+      this.instance.clearPreviews();
+
+      var previewVolume:Float = 0.7;
+      if (instance.dj != null) previewVolume *= instance.dj.getMusicPreviewMult();
+
+      // Check if this music is already playing before fading it in, in case the player is just scrolling through variations while on the capsule.
+      var shouldFade:Bool = FunkinSound.playMusic('freeplayRandom-remnants',
+      {
+        startingVolume: 0.0,
+        overrideExisting: true,
+        restartTrack: false
+      });
+
+      if (shouldFade) FlxG.sound.music.fadeIn(2, 0, previewVolume);
+    });
   }
 }
