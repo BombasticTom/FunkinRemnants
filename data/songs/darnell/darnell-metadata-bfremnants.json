@@ -1,77 +1,65 @@
 {
- "version": "2.2.4",
- "songName": "Darnell (BF Remnants Mix)",
- "artist": "Loopy",
- "charter": "TRWario",
- "divisions": 96,
- "looped": false,
- "offsets": {
-  "instrumental": 0,
-  "altInstrumentals": {  },
-  "vocals": {  },
-  "altVocals": {  }
- },
- "playData": {
-  "songVariations": [],
-  "difficulties": [
-   "easy",
-   "normal",
-   "hard"
-  ],
-  "characters": {
-   "player": "bf-remnants",
-   "girlfriend": "gf-remnants",
-   "opponent": "darnell-remnants",
-   "instrumental": "bfremnants",
-   "altInstrumentals": [
-    "bf",
-    "",
-    "remnants"
-   ],
-   "opponentVocals": [
-    "darnell-remnants"
-   ],
-   "playerVocals": [
-    "bf-remnants"
-   ]
+  "version": "2.2.4",
+  "songName": "Darnell (BF Remnants Mix)",
+  "artist": "Loopy",
+  "charter": "TRWario",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {},
+    "vocals": {},
+    "altVocals": {}
   },
-  "stage": "phillyStreetsRemnants",
-  "noteStyle": "funkin",
-  "ratings": {
-   "easy": 8,
-   "normal": 9,
-   "hard": 10
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf-remnants",
+      "girlfriend": "gf-remnants",
+      "opponent": "darnell-remnants",
+      "instrumental": "bfremnants",
+      "altInstrumentals": ["bf", "", "remnants"],
+      "opponentVocals": ["darnell-remnants"],
+      "playerVocals": ["bf-remnants"]
+    },
+    "stage": "phillyStreetsRemnants",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 8,
+      "normal": 9,
+      "hard": 10
+    },
+    "album": "remnants-weekend1-bf",
+    "previewStart": 0,
+    "previewEnd": 0
   },
-  "album": "remnants-weekend1-bf",
-  "previewStart": 0,
-  "previewEnd": 0
- },
- "generatedBy": "Friday Night Funkin' - v0.8.1",
- "timeFormat": "ms",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 155,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 76679.0001,
-   "b": 198.0874,
-   "bpm": 155,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  },
-  {
-   "t": 123538.7712,
-   "b": 319.1418,
-   "bpm": 155,
-   "n": 4,
-   "d": 4,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+  "generatedBy": "Friday Night Funkin' - v0.8.1",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 155,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 76679.0001,
+      "b": 198.0874,
+      "bpm": 155,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    },
+    {
+      "t": 123538.7712,
+      "b": 319.1418,
+      "bpm": 155,
+      "n": 4,
+      "d": 4,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
 }
