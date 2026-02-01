@@ -42,7 +42,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     var imgs:Array<String> = [
       "characters/Pico_Death_Retry-remnants",
       "characters/neneKnife-remnants",
-      "weekend1:characters/picoExplosionDeath-remnants/spritemap1",
+      "shared:characters/picoExplosionDeath-remnants/spritemap1",
       "weekend1:PicoBullet"
     ];
 
@@ -175,7 +175,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
     if (name == "firstDeath")
     {
-      if (GameOverSubState.blueBallSuffix == '-pico-explode')
+      if (GameOverSubState.blueBallSuffix == '-pico-explode-remnants')
       {
         // Explosion death animation.
         doExplosionDeath();
@@ -257,9 +257,9 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
   {
     var result = super.getDeathCameraOffsets();
 
-    if (GameOverSubState.blueBallSuffix == '-pico-explode')
+    if (GameOverSubState.blueBallSuffix == '-pico-explode-remnants')
     {
-      return [result[0], result[1] + 100];
+      return [result[0] - 725, result[1] + 175];
     }
 
     return [result[0], result[1]];
@@ -276,6 +276,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
     // Suffixed death sound will already play.
     GameOverSubState.instance.resetCameraZoom();
+    GameOverSubState.instance.targetCameraZoom = 0.8;
 
     // Move the camera up.
     GameOverSubState.instance.cameraFollowPoint.y -= 100;
@@ -288,7 +289,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       HapticUtil.vibrate(0, 0.1, 0.1, 1);
     });
 
-    picoDeathExplosion = FunkinSprite.createTextureAtlas(this.x - 1100, this.y - 1000, "characters/picoExplosionDeath-remnants", "weekend1");
+    picoDeathExplosion = FunkinSprite.createTextureAtlas(this.x - 1100, this.y - 1000, "characters/picoExplosionDeath-remnants", "shared");
     PlayState.instance.subState.add(picoDeathExplosion);
     picoDeathExplosion.zIndex = 1000;
     picoDeathExplosion.anim.onFinish.add(onExplosionFinishAnim);
@@ -351,7 +352,6 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     // Reset to standard death animation.
     GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico';
-
     PauseSubState.musicSuffix = '-remnants-pico';
 
     picoDeathExplosion = null;
@@ -379,8 +379,11 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       // also no animation suffix ????
       GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
 
-      loseSprite.visible = true;
-      loseSprite.animation.play('fall', true);
+      if (GameOverSubState.blueBallSuffix != '-pico-explode-remnants')
+      {
+        loseSprite.visible = true;
+        loseSprite.animation.play('fall', true);
+      }
     }
 
     if (name == "cock" && frameNumber == 3)
