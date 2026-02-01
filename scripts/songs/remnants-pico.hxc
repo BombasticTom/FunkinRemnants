@@ -155,9 +155,14 @@ class RemnantsPicoSong extends Song
 
         PlayState.instance.currentStage?.getGirlfriend()?.animation?.onFinish?.remove(PlayState.instance.currentStage?.getGirlfriend()?.dance);
 
-        // TODO: DESTROY THESE!!
-        pico?.visible = false;
-        remnantsPico?.visible = false;
+        PlayState.instance?.currentStage?.remove(pico);
+        PlayState.instance?.currentStage?.remove(remnantsPico);
+
+        // Wait until next update to destroy these...
+        FlxTimer.wait(0.0, () -> {
+          pico?.destroy();
+          remnantsPico?.destroy();
+        });
 
         PlayState.instance.startCountdown();
       });
