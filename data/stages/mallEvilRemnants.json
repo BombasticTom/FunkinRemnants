@@ -324,7 +324,7 @@
       "animType": "sparrow",
       "name": "overlay",
       "isPixel": true,
-      "alpha": 0.8,
+      "alpha": 0,
       "blend": "multiply",
       "assetPath": "remnants/evil/overlay",
       "scroll": [0.5, 0.5],

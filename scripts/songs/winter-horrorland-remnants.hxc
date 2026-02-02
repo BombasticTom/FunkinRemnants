@@ -1,8 +1,10 @@
 import funkin.modding.module.ModuleHandler;
 import flixel.text.FlxTextBorderStyle;
 import funkin.ui.FullScreenScaleMode;
+import funkin.graphics.FunkinSprite;
 import flixel.util.FlxTimerManager;
 import funkin.audio.FunkinSound;
+import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import funkin.play.song.Song;
 import flixel.tweens.FlxEase;
@@ -28,6 +30,8 @@ class WinterHorrorlandRemnantsMixSong extends Song
 
   var cutsceneSkipped:Bool = false;
   var canSkipCutscene:Bool = false;
+  var overlay:Bool = false;
+  var black:FunkinSprite;
 
   public function new()
   {
@@ -54,6 +58,26 @@ class WinterHorrorlandRemnantsMixSong extends Song
     cutsceneSkipped = false;
     canSkipCutscene = false;
     hasPlayedCutscene = true;
+
+    if (overlay)
+    {
+      FlxTween.cancelTweensOf(black);
+      black.alpha = 1;
+      PlayState.instance.currentStage.getNamedProp('overlay').alpha = 0;
+
+      PlayState.instance.iconP1.color = 0xFFFFFF;
+      PlayState.instance.iconP2.color = 0xFFFFFF;
+      PlayState.instance.camHUD.color = 0xFFFFFF;
+
+      for (arrow in PlayState.instance.playerStrumline.members)
+      arrow.color = 0xFFFFFF;
+
+      for (arrow in PlayState.instance.opponentStrumline.members)
+      arrow.color = 0xFFFFFF;
+
+      FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.linear});
+      overlay = false;
+    }
   }
 
   /**
@@ -63,10 +87,17 @@ class WinterHorrorlandRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
+    black = new FunkinSprite(-20, -20);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    PlayState.instance.add(black);
+    black.alpha = 0;
+
     onSpookChristmas = false;
     cutsceneSkipped = false;
     canSkipCutscene = false;
     hasPlayedCutscene = false;
+    overlay = false;
   }
 
   function onUpdate(event:UpdateScriptEvent)
@@ -227,5 +258,50 @@ class WinterHorrorlandRemnantsMixSong extends Song
       skipText.visible = false;
       this.endCutscene();
     });
+  }
+
+  function onPause()
+  {
+    FlxTweenUtil.pauseTweensOf(black);
+  }
+
+  function onResume()
+  {
+    FlxTweenUtil.resumeTweensOf(black);
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (PlayState.instance.isGameOverState) return;
+    switch (event.beat)
+    {
+      case 222:
+        FlxTween.tween(black, {alpha: 1}, 0.75, {ease: FlxEase.linear});
+
+      case 224: // Red time :)
+        FlxTween.tween(black, {alpha: 0.7}, 3, {ease: FlxEase.linear});
+        PlayState.instance.currentStage.getNamedProp('overlay').alpha = 1;
+
+        PlayState.instance.iconP1.color = 0xFF0000;
+        PlayState.instance.iconP2.color = 0xFF0000;
+        PlayState.instance.camHUD.color = 0xFF0000;
+
+        // BUG: Color change sometimes dosent apply to hold notes
+        for (arrow in PlayState.instance.playerStrumline.members)
+        arrow.color = 0xFF0000;
+
+        for (arrow in PlayState.instance.opponentStrumline.members)
+        arrow.color = 0xFF0000;
+
+        overlay = true;
+
+      case 254:
+        FlxTween.tween(black, {alpha: 0}, 0.75, {ease: FlxEase.backIn});
+
+      case 351:
+        FlxTween.tween(black, {alpha: 1}, 0.37, {ease: FlxEase.linear});
+    }
   }
 }

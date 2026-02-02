@@ -132,44 +132,44 @@ TO MY TONGUE!!
 
 34
 00:01:24,250 --> 00:01:27,449
-Your skin is freezing...
+<font color="#FF0000">Your skin is freezing...
 
 35
 00:01:27,450 --> 00:01:30,750
-Here, let me help you take it off.
+<font color="#FF0000">Here, let me help you take it off.
 
 36
 00:01:36,200 --> 00:01:39,349
-Your life is bleeding...
+<font color="#FF0000">Your life is bleeding...
 
 37
 00:01:39,350 --> 00:01:43,000
-Underneath my afflicting claw.
+<font color="#FF0000">Underneath my afflicting claw.
 
 38
 00:01:48,250 --> 00:01:49,199
-Left in progress,
+<font color="#FF0000">Left in progress,
 
 39
 00:01:49,200 --> 00:01:51,199
-all construction meets an end,
+<font color="#FF0000">all construction meets an end,
 
 40
 00:01:51,200 --> 00:01:53,750
-voices calling for your rest.
+<font color="#FF0000">voices calling for your rest.
 
 41
 00:02:00,000 --> 00:02:01,899
-Broken to the end,
+<font color="#FF0000">Broken to the end,
 
 42
 00:02:01,900 --> 00:02:03,249
-I'm just pieces in your head,
+<font color="#FF0000">I'm just pieces in your head,
 
 43
 00:02:03,250 --> 00:02:04,999
-this nightmare you can never mend.
+<font color="#FF0000">this nightmare you can never mend.
 
 44
 00:02:05,000 --> 00:02:06,000
-(La, la, la, laaaa!)
+<font color="#FF0000">(La, la, la, laaaa!)
