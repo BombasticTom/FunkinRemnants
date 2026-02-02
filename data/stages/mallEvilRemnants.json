@@ -315,6 +315,20 @@
       "scroll": [1, 1],
       "startingAnimation": "",
       "zIndex": 301
+    },
+    {
+      "danceEvery": 0,
+      "zIndex": 3000,
+      "position": [-3000, -3000],
+      "scale": [6, 6],
+      "animType": "sparrow",
+      "name": "overlay",
+      "isPixel": true,
+      "alpha": 0.8,
+      "blend": "multiply",
+      "assetPath": "remnants/evil/overlay",
+      "scroll": [0.5, 0.5],
+      "animations": []
     }
   ],
   "characters": {

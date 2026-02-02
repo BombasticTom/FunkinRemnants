@@ -7,6 +7,16 @@ import funkin.modding.base.ScriptedFunkinSprite;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import funkin.graphics.shaders.WiggleEffectRuntime;
+import funkin.graphics.shaders.WiggleEffectType;
+import flixel.FlxSprite;
+import flixel.addons.display.FlxRuntimeShader;
+import flixel.sound.FlxSound;
+import funkin.Conductor;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
+import flixel.addons.effects.FlxTrail;
+import funkin.play.Countdown;
+import funkin.play.character.CharacterType;
 
 class MallEvilRemnantsStage extends Stage
 {
@@ -17,8 +27,14 @@ class MallEvilRemnantsStage extends Stage
 
   var snowGroup:FlxTypedSpriteGroup;
   var santaDead:ScriptedFunkinSprite;
+  var wiggleOverlay:FlxRuntimeShader = null;
 
-  function buildStage()
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+  }
+
+  override function buildStage()
   {
     super.buildStage();
 
@@ -125,8 +141,22 @@ class MallEvilRemnantsStage extends Stage
 
       snowGroup.add(snowFall);
     }
+  
+    wiggleOverlay = new WiggleEffectRuntime(2, 20, 1, WiggleEffectType.DREAMY);
 
+    getNamedProp('overlay').shader = wiggleOverlay;
+  
     PlayState.instance.currentStage.refresh(); // Apply z-index.
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+  }
+
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
   }
 
   public override function onPause(event:PauseScriptEvent)
@@ -145,6 +175,21 @@ class MallEvilRemnantsStage extends Stage
     {
       FlxTweenUtil.resumeTweensOf(snowGroup.members[snow]);
     }
+  }
+
+    override function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+    if (wiggleOverlay != null)
+    {
+      wiggleOverlay.update(event.elapsed);
+    }
+  }
+
+  function kill()
+  {
+    super.kill();
+    wiggleOverlay = null;
   }
 
   function onSongRetry(event:ScriptEvent)
