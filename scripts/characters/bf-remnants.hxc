@@ -85,45 +85,42 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     // Do not create the sprites when on the animation editor.
     if (!this.debug)
     {
-      if (name == 'fakeoutDeath')
+      switch (name)
       {
-        doFakeoutDeath();
-      }
-      else if (name == "firstDeath")
-      {
-        if (GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
-        {
-          // Explosion death animation... ngl idk if I even implented this right I only half know what im doing lmao. All I know is that the game over song dosent loop peroperly, so Till plz save me
-          doExplosionDeath();
-        }
-        else
-        {
-          // Lose...
-          createDeathSprites();
-          GameOverSubState.instance.add(loseSprite);
-        }
-      }
-      else if (name == 'deathLoop')
-      {
-        if (loseSprite != null)
-        {
-          loseSprite.visible = true;
-          loseSprite.animation.play('fall', true);
-        }
-      }
-      else if (name == "deathConfirm")
-      {
-        if (bfDeathExplosion != null || GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
-        {
-          doExplosionConfirm();
-        }
-        else
-        {
+        case "fakeoutDeath":
+          doFakeoutDeath();
+
+        case "firstDeath":
+          if (GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+          {
+            // Explosion death animation... ngl idk if I even implented this right I only half know what im doing lmao. All I know is that the game over song dosent loop peroperly, so Till plz save me
+            doExplosionDeath();
+          }
+          else
+          {
+            createDeathSprites(); // Lose...
+            GameOverSubState.instance.add(loseSprite);
+          }
+
+        case "deathLoop":
           if (loseSprite != null)
           {
-            FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+            loseSprite.visible = true;
+            loseSprite.animation.play('fall', true);
           }
-        }
+
+        case "deathConfirm":
+          if (bfDeathExplosion != null || GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+          {
+            doExplosionConfirm();
+          }
+          else
+          {
+            if (loseSprite != null)
+            {
+              FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+            }
+          }
       }
     }
 
