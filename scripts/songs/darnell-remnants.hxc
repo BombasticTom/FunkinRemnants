@@ -258,6 +258,11 @@ class DarnellRemnantsMixSong extends Song
     new FlxTimer(cutsceneTimerManager).start(cutsceneDelay + 5.1, function(_) {
       PlayState.instance.currentStage.getBoyfriend().playAnimation('intro2', true, true);
 
+      // Prevent skipping the cutscene from here.
+      cutsceneSkipped = true;
+      canSkipCutscene = false;
+      FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+
       gunShoot = FunkinSound.load(Paths.soundRandom('shot', 1, 4), 1);
       gunShoot.volume = 1;
       gunShoot.play(false);
@@ -354,6 +359,17 @@ class DarnellRemnantsMixSong extends Song
         continue;
       }
 
+      if (stageProp.zIndex == 300)
+      {
+        continue;
+      }
+
+      // Skip Text
+      if (stageProp == skipText)
+      {
+        continue;
+      }
+
       // If not excluded, darken.
       stageProp.color = 0xFF111111;
       new FlxTimer().start(1 / 24, (tmr) -> {
@@ -365,18 +381,21 @@ class DarnellRemnantsMixSong extends Song
 
   function endCutscene():Void
   {
-    cutsceneTimerManager.clear();
-    cutsceneTimerManager.destroy();
+    cutsceneTimerManager?.clear();
+    cutsceneTimerManager?.destroy();
     cutsceneTimerManager = null;
 
     if (bgSprite != null)
     {
-      bgSprite.destroy();
+      bgSprite?.destroy();
       bgSprite = null;
     }
 
-    skipText.destroy();
-    skipText = null;
+    if (skipText != null)
+    {
+      skipText?.destroy();
+      skipText = null;
+    }
 
     canKnee?.stop();
     canKick?.stop();
@@ -392,7 +411,7 @@ class DarnellRemnantsMixSong extends Song
 
     PlayState.instance.isInCutscene = false;
     PlayState.instance.mayPauseGame = true;
-    PlayState.instance.startCountdown();
+    PlayState.instance?.startCountdown();
   }
 
   function skipCutscene():Void
@@ -402,9 +421,9 @@ class DarnellRemnantsMixSong extends Song
 
     PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
 
-    cutsceneMusic.fadeOut(0.5, 0, function(_) {
-      cutsceneMusic.stop();
-      cutsceneMusic.destroy();
+    cutsceneMusic?.fadeOut(0.5, 0, function(_) {
+      cutsceneMusic?.stop();
+      cutsceneMusic?.destroy();
       cutsceneMusic = null;
     });
 
@@ -412,20 +431,11 @@ class DarnellRemnantsMixSong extends Song
       PlayState.instance.justUnpaused = true;
       PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
 
-      PlayState.instance.currentStage.getBoyfriend().playAnimation('idle', true);
-      PlayState.instance.currentStage.getBoyfriend().animation.curAnim.curFrame = 12;
-
-      PlayState.instance.currentStage.getDad().playAnimation('idle', true);
-      PlayState.instance.currentStage.getDad().animation.curAnim.curFrame = 12;
-
-      PlayState.instance.currentStage.getGirlfriend().playAnimation('danceRight', true);
-      PlayState.instance.currentStage.getGirlfriend().animation.curAnim.curFrame = 0;
-
       PlayState.instance.cameraFollowPoint.setPosition(PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
         PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y);
       PlayState.instance.resetCamera(true, true, true);
 
-      skipText.visible = false;
+      skipText?.visible = false;
       endCutscene();
     });
   }
