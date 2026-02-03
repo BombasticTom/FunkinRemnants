@@ -82,38 +82,48 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
       PlayState.instance?.vocals?.playerVolume = 1;
     }
 
-    if (name == 'fakeoutDeath')
+    // Do not create the sprites when on the animation editor.
+    if (!this.debug)
     {
-      doFakeoutDeath();
-    }
-    else if (name == "firstDeath")
-    {
-      if (GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+      if (name == 'fakeoutDeath')
       {
-        // Explosion death animation... ngl idk if I even implented this right I only half know what im doing lmao. All I know is that the game over song dosent loop peroperly, so Till plz save me
-        doExplosionDeath();
+        doFakeoutDeath();
       }
-      else
+      else if (name == "firstDeath")
       {
-        // Standard death animation.
-        createDeathSprites();
-        GameOverSubState.instance.add(loseSprite);
+        if (GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+        {
+          // Explosion death animation... ngl idk if I even implented this right I only half know what im doing lmao. All I know is that the game over song dosent loop peroperly, so Till plz save me
+          doExplosionDeath();
+        }
+        else
+        {
+          // Lose...
+          createDeathSprites();
+          GameOverSubState.instance.add(loseSprite);
+        }
       }
-    }
-    else if (name == 'deathLoop')
-    {
-      loseSprite.visible = true;
-      loseSprite.animation.play('fall', true);
-    }
-    else if (name == "deathConfirm")
-    {
-      if (bfDeathExplosion != null || GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+      else if (name == 'deathLoop')
       {
-        doExplosionConfirm();
+        if (loseSprite != null)
+        {
+          loseSprite.visible = true;
+          loseSprite.animation.play('fall', true);
+        }
       }
-      else
+      else if (name == "deathConfirm")
       {
-        FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+        if (bfDeathExplosion != null || GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+        {
+          doExplosionConfirm();
+        }
+        else
+        {
+          if (loseSprite != null)
+          {
+            FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+          }
+        }
       }
     }
 
@@ -121,8 +131,11 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
 
     if (name == 'preAttack')
     {
-      // Devious animation name...
-      playCockAura();
+      if (!this.debug)
+      {
+        // Devious animation name...
+        playCockAura();
+      }
     }
   }
 
