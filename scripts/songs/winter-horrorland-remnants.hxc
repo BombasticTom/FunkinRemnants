@@ -1,8 +1,10 @@
 import funkin.modding.module.ModuleHandler;
+import funkin.modding.base.ScriptedFlxRuntimeShader;
 import flixel.text.FlxTextBorderStyle;
 import funkin.ui.FullScreenScaleMode;
 import funkin.graphics.FunkinSprite;
 import flixel.util.FlxTimerManager;
+import openfl.filters.ShaderFilter;
 import funkin.audio.FunkinSound;
 import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
@@ -32,6 +34,8 @@ class WinterHorrorlandRemnantsMixSong extends Song
   var canSkipCutscene:Bool = false;
   var overlay:Bool = false;
   var black:FunkinSprite;
+
+  var redFilter:ShaderFilter;
 
   public function new()
   {
@@ -65,16 +69,10 @@ class WinterHorrorlandRemnantsMixSong extends Song
       black.alpha = 1;
       PlayState.instance.currentStage.getNamedProp('overlay').alpha = 0;
 
-      PlayState.instance.iconP1.color = 0xFFFFFF;
-      PlayState.instance.iconP2.color = 0xFFFFFF;
-      PlayState.instance.camHUD.color = 0xFFFFFF;
-
-      // BUG: Most hold splashes stay red
-      for (arrow in PlayState.instance.playerStrumline.members)
-      arrow.color = 0xFFFFFF;
-
-      for (arrow in PlayState.instance.opponentStrumline.members)
-      arrow.color = 0xFFFFFF;
+      while (PlayState.instance.camHUD.filters.contains(redFilter))
+      {
+        PlayState.instance.camHUD.remove(redFilter);
+      }
 
       FlxTween.tween(black, {alpha: 0}, 1, {ease: FlxEase.linear});
       overlay = false;
@@ -99,6 +97,11 @@ class WinterHorrorlandRemnantsMixSong extends Song
     canSkipCutscene = false;
     hasPlayedCutscene = false;
     overlay = false;
+
+    var redShader:FlxRuntimeShader = ScriptedFlxRuntimeShader.init('OneColorShader');
+    redShader.setColor(0xFFFF0000);
+    redFilter = new ShaderFilter(redShader);
+    PlayState.instance.camHUD.filters = [];
   }
 
   function onUpdate(event:UpdateScriptEvent)
@@ -279,23 +282,16 @@ class WinterHorrorlandRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 222: // Red time :)
-        FlxTween.tween(black, {alpha: 1}, 0.8, {ease: FlxEase.linear, onComplete: (_) -> {
-          FlxTween.tween(black, {alpha: 0.5}, 3, {ease: FlxEase.linear});
-          PlayState.instance.currentStage.getNamedProp('overlay').alpha = 1;
-
-          PlayState.instance.iconP1.color = 0xFF0000;
-          PlayState.instance.iconP2.color = 0xFF0000;
-          PlayState.instance.camHUD.color = 0xFF0000;
-
-          // BUG: Color change sometimes dosent apply to hold notes
-          for (arrow in PlayState.instance.playerStrumline.members)
-          arrow.color = 0xFF0000;
-
-          for (arrow in PlayState.instance.opponentStrumline.members)
-          arrow.color = 0xFF0000;
-
-          overlay = true;
-	}});
+        FlxTween.tween(black, {alpha: 1}, 0.8,
+          {
+            ease: FlxEase.linear,
+            onComplete: (_) -> {
+              FlxTween.tween(black, {alpha: 0.5}, 3, {ease: FlxEase.linear});
+              PlayState.instance.currentStage.getNamedProp('overlay').alpha = 1;
+              PlayState.instance.camHUD.filters.push(redFilter);
+              overlay = true;
+            }
+          });
 
       case 254:
         FlxTween.tween(black, {alpha: 0}, 0.75, {ease: FlxEase.backIn});
