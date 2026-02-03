@@ -5,15 +5,20 @@
   "charter": "Sammy The Goog",
   "timeFormat": "ms",
   "divisions": 96,
-  "offsets": {"instrumental": 0},
+  "offsets": { "instrumental": 0 },
   "timeChanges": [{ "t": 0, "bpm": 182, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
   "looped": false,
   "playData": {
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-      "player": "bf-remnants","girlfriend": "gf-remnants","opponent": "darnell-remnants",
-      "instrumental": "bfremnants","playerVocals": ["bf-remnants"],"opponentVocals": ["darnell-remnants"], "altInstrumentals": ["","remnants"]
+      "player": "bf-remnants",
+      "girlfriend": "gf-remnants",
+      "opponent": "darnell-remnants",
+      "instrumental": "bfremnants",
+      "playerVocals": ["bf-remnants"],
+      "opponentVocals": ["darnell-remnants"],
+      "altInstrumentals": ["", "remnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",

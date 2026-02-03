@@ -5,14 +5,13 @@ class ResultsDebugKey extends Module
 {
   public function new()
   {
-		super('ResultsDebugKey');
-	}
+    super('ResultsDebugKey');
+  }
 
   override function onUpdate(event:UpdateScriptEvent)
   {
     super.onUpdate(event);
 
-    if (FlxG.keys.justPressed.F9)
-      FlxG.switchState(() -> new funkin.ui.debug.results.ResultsDebugSubState());
+    if (FlxG.keys.justPressed.F9) FlxG.switchState(() -> new funkin.ui.debug.results.ResultsDebugSubState());
   }
 }

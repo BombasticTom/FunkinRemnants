@@ -141,11 +141,11 @@ class MallEvilRemnantsStage extends Stage
 
       snowGroup.add(snowFall);
     }
-  
+
     wiggleOverlay = new WiggleEffectRuntime(2, 20, 1, WiggleEffectType.DREAMY);
 
     getNamedProp('overlay').shader = wiggleOverlay;
-  
+
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
 
@@ -177,7 +177,7 @@ class MallEvilRemnantsStage extends Stage
     }
   }
 
-    override function onUpdate(event:UpdateScriptEvent)
+  override function onUpdate(event:UpdateScriptEvent)
   {
     super.onUpdate(event);
     if (wiggleOverlay != null)

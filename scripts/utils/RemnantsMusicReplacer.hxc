@@ -23,11 +23,11 @@ class RemnantsMusicReplacer extends Module
   public function initialize():Void
   {
     /*
-    // At the moment this doesn't works everytime so it will get handled by the backcard scripts instead.
-    // This tells the module that `freeplayRandom` should be replaced with `freeplayRandom-remnants`.
-    // The third argument is completely optional.
-    addReplacement('freeplayRandom', 'freeplayRandom-remnants', RemnantsContentUtil.remnantsContentEnabled);
-    */
+      // At the moment this doesn't works everytime so it will get handled by the backcard scripts instead.
+      // This tells the module that `freeplayRandom` should be replaced with `freeplayRandom-remnants`.
+      // The third argument is completely optional.
+      addReplacement('freeplayRandom', 'freeplayRandom-remnants', RemnantsContentUtil.remnantsContentEnabled);
+     */
 
     addReplacement('freakyMenu', 'freakyMenu-remnants', RemnantsContentUtil.remnantsContentEnabled);
     addReplacement('girlfriendsRingtone', 'tutorialTitle', RemnantsContentUtil.remnantsContentEnabled);

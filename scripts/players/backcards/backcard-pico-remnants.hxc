@@ -342,8 +342,7 @@ class PicoRemnantsCard extends BackingCard
 
     // Remove the delay timer for the music and start a fresh new one.
     FlxTimer.globalManager._timers.pop();
-    FlxTimer.wait(FreeplayState.FADE_IN_DELAY, function()
-    {
+    FlxTimer.wait(FreeplayState.FADE_IN_DELAY, function() {
       this.instance.clearPreviews();
 
       var previewVolume:Float = 0.7;
@@ -351,11 +350,11 @@ class PicoRemnantsCard extends BackingCard
 
       // Check if this music is already playing before fading it in, in case the player is just scrolling through variations while on the capsule.
       var shouldFade:Bool = FunkinSound.playMusic('freeplayRandom-remnants',
-      {
-        startingVolume: 0.0,
-        overrideExisting: true,
-        restartTrack: false
-      });
+        {
+          startingVolume: 0.0,
+          overrideExisting: true,
+          restartTrack: false
+        });
 
       if (shouldFade) FlxG.sound.music.fadeIn(2, 0, previewVolume);
     });

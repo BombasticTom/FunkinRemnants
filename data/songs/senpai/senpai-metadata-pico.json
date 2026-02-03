@@ -5,15 +5,20 @@
   "charter": "fabs + Spazkid",
   "timeFormat": "ms",
   "divisions": 96,
-  "offsets": {"instrumental": 0},
+  "offsets": { "instrumental": 0 },
   "timeChanges": [{ "t": 0, "bpm": 144, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
   "looped": false,
   "playData": {
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-      "player": "pico-pixel","girlfriend": "nene-pixel","opponent": "senpai",
-      "instrumental": "pico","playerVocals": ["pico"],"opponentVocals": ["senpai"], "altInstrumentals": []
+      "player": "pico-pixel",
+      "girlfriend": "nene-pixel",
+      "opponent": "senpai",
+      "instrumental": "pico",
+      "playerVocals": ["pico"],
+      "opponentVocals": ["senpai"],
+      "altInstrumentals": []
     },
     "stage": "schoolErect",
     "noteStyle": "pixel",
