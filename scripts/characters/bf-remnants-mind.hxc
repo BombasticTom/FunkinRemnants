@@ -3,12 +3,12 @@ import funkin.util.HapticUtil;
 import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import funkin.play.PauseSubState;
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.GameOverSubState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 
-class BoyfriendRemnantsMindCharacter extends MultiSparrowCharacter
+class BoyfriendRemnantsMindCharacter extends MultiAnimateAtlasCharacter
 {
   function new()
   {
@@ -33,7 +33,7 @@ class BoyfriendRemnantsMindCharacter extends MultiSparrowCharacter
     loseSprite = FunkinSprite.createSparrow(0, 0, "gameover/loseText");
     loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
     loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
-    loseSprite.setPosition(this.getMidpoint().x - (loseSprite.width / 2) + 110, -200);
+    loseSprite.setPosition(this.getMidpoint().x - (loseSprite.width / 2) + 50, -200);
     loseSprite.animation.onFinish.add(function(name:String) {
       loseSprite.animation.play('idle', true);
     });
