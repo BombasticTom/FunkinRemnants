@@ -119,8 +119,8 @@ class TwoHOTRemnantsBFMixSong extends Song
         var newCan:ScriptedFunkinSprite = ScriptedFunkinSprite.init('SpraycanAtlasSpriteRemnants', 0, 0);
         var spraycanPile = PlayState.instance.currentStage.getNamedProp('spraycanPile');
 
-        newCan.x = spraycanPile.x + 30;
-        newCan.y = spraycanPile.y - 840;
+        newCan.x = spraycanPile.x - 335;
+        newCan.y = spraycanPile.y - 825;
         newCan.zIndex = spraycanPile.zIndex - 1;
 
         newCan.scriptCall('playCanStart');
@@ -342,9 +342,6 @@ class TwoHOTRemnantsBFMixSong extends Song
   function takeCanDamage():Void
   {
     trace('Taking damage from can exploding!');
-
-    PlayState.instance.currentStage.getBoyfriend().playAnimation('hit', true, false);
-    FunkinSound.playOnce(Paths.sound('Pico_Bonk'), 1.0);
 
     PlayState.instance.health -= HEALTH_LOSS;
     // TODO: This is jank as hell! Add some better way to prevent onNoteMiss's normal health loss.

@@ -4,6 +4,7 @@ import funkin.util.HapticUtil;
 import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import funkin.play.PauseSubState;
+import flixel.effects.FlxFlicker;
 import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.GameOverSubState;
@@ -12,6 +13,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxTimer;
 import funkin.util.Constants;
+import funkin.FunkinMemory;
 import funkin.Preferences;
 
 class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
@@ -28,6 +30,7 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
 
+    FunkinMemory.cacheSound(Paths.sound('Pico_Bonk', "weekend1"));
     this.shouldAlternate = ['south'].contains(PlayState?.instance?.currentSong?.id);
   }
 
@@ -126,6 +129,11 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
   function doExplosionDeath()
   {
     if (fadeTween != null && fadeTween.active) fadeTween.cancel();
+
+    if (bfFlicker != null)
+    {
+      bfFlicker.stop(); // this sets visible to true, but we make it false a few lines down anyways
+    }
 
     // Suffixed death sound will already play.
     GameOverSubState.instance.resetCameraZoom();
@@ -279,6 +287,48 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     }
   }
 
+  function onNoteMiss(event:NoteScriptEvent)
+  {
+    // Override the miss note animation.
+    switch (event.note.kind)
+    {
+      case "bf-attack":
+        playCanExplodeAnim();
+      case "battle-dodge-remnants":
+        this.playAnimation('hit', true);
+      default:
+        super.onNoteMiss(event);
+    }
+  }
+
+  /**
+   * Play the animation where BF is hit by the exploding can.
+   */
+  function playCanExplodeAnim()
+  {
+    this.playAnimation('hitCan', true, true);
+    // Donk.
+    FunkinSound.playOnce(Paths.sound('Pico_Bonk'), 1.0);
+  }
+
+  var bfFlicker:FlxFlicker = null;
+
+  override function onAnimationFinished(name:String)
+  {
+    super.onAnimationFinished(name);
+
+    if (name == 'hitCan' && PlayState.instance.health > 0.0 && !PlayState.instance.isPlayerDying)
+    {
+      // ERIC: You have to use super instead of this or it breaks.
+      // This is because typeof(this) is PolymodAbstractClass.
+      bfFlicker = FlxFlicker.flicker(super, 1, 1 / 30, true, true, function(_) {
+        bfFlicker = FlxFlicker.flicker(super, 0.5, 1 / 60, true, true, function(_) {
+          bfFlicker = null;
+        });
+      });
+    }
+  }
+
   var bfFade:FunkinSprite;
   var fadeTween:FlxTween;
 
@@ -313,11 +363,20 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
   {
     super.onPause(event);
     if (fadeTween != null) fadeTween.active = false;
+    if (bfFlicker != null)
+    {
+      bfFlicker.pause();
+      this.visible = true;
+    }
   }
 
   override function onResume(event:ScriptEvent):Void
   {
     super.onResume(event);
     if (fadeTween != null) fadeTween.active = true;
+    if (bfFlicker != null)
+    {
+      bfFlicker.resume();
+    }
   }
 }
