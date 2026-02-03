@@ -204,13 +204,19 @@ class ThornsRemnantsMixSong extends Song
         if (FlxG.random.bool(1)) // 1% chance of this happening.
         {
           new FlxTimer(cutsceneTimerManager).start(1.75, function(deadTime:FlxTimer) {
-            FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+            // Prevent skipping the cutscene from here.
+            cutsceneSkipped = true;
             canSkipCutscene = false;
+            skipText?.alpha = 0;
           });
 
           new FlxTimer(cutsceneTimerManager).start(2.5, function(deadTime:FlxTimer) {
-            canSkipCutscene = false;
             skipText.visible = false;
+
+            // Prevent skipping the cutscene from here.
+            cutsceneSkipped = true;
+            canSkipCutscene = false;
+            skipText?.alpha = 0;
 
             PlayState.instance.remove(senpaiCrazy);
             localManExplodesFreeSoundEffect.destroy();
@@ -246,9 +252,17 @@ class ThornsRemnantsMixSong extends Song
         else // Normal transition.
         {
           // Fade to white 3.2 seconds into the cutscene.
-          new FlxTimer(cutsceneTimerManager).start(3.2, function(deadTime:FlxTimer) {
+          new FlxTimer(cutsceneTimerManager).start(3.2, function(deadTime:FlxTimer)
+          {
+            // Prevent skipping the cutscene from here.
+            cutsceneSkipped = true;
+            canSkipCutscene = false;
+            if (skipText != null) FlxTween.tween(skipText, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+
+            // Fade to WHITE.
             RetroCameraFade.fadeWhite(PlayState.instance.camCutscene, 8, 1.4);
-            new FlxTimer(cutsceneTimerManager).start(1.4, function(timer:FlxTimer) {
+            new FlxTimer(cutsceneTimerManager).start(1.4, function(timer:FlxTimer)
+            {
               darkness.color = 0xFFFFFFFF;
               PlayState.instance.remove(senpaiCrazy);
 
@@ -290,6 +304,12 @@ class ThornsRemnantsMixSong extends Song
     canSkipCutscene = false;
     stopSenpai = true;
 
+    if (skipText != null)
+    {
+      skipText?.destroy();
+      skipText = null;
+    }
+
     localManExplodesFreeSoundEffect?.fadeOut(0.5, 0, function() {
       localManExplodesFreeSoundEffect?.stop();
       PlayState.instance.camCutscene.filters = [];
@@ -302,7 +322,6 @@ class ThornsRemnantsMixSong extends Song
     new FlxTimer(cutsceneTimerManager).start(0.5, function(_) {
       PlayState.instance.justUnpaused = true;
       PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, true);
-      skipText.visible = false;
       endCutscene();
     });
   }
@@ -395,6 +414,7 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onSongStart(event);
 
+    PlayState.instance.disableKeys = true;
     RetroCameraFade.fadeBlack(PlayState.instance.camGame, 15, 3);
     FlxG.camera.fade(0xFF000000, 0, true);
   }
@@ -407,7 +427,10 @@ class ThornsRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 24:
+        PlayState.instance.disableKeys = false;
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 2.08, {ease: FlxEase.linear, onComplete: (_) -> fadeOut = true});
+      case 25, 26, 27: // just in case
+        if (PlayState.instance.disableKeys) PlayState.instance.disableKeys = false;
       case 128:
         RetroCameraFade.fadeBlack(PlayState.instance.camGame, 4, 0.5);
         PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 1;
