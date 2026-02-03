@@ -69,6 +69,7 @@ class WinterHorrorlandRemnantsMixSong extends Song
       PlayState.instance.iconP2.color = 0xFFFFFF;
       PlayState.instance.camHUD.color = 0xFFFFFF;
 
+      // BUG: Most hold splashes stay red
       for (arrow in PlayState.instance.playerStrumline.members)
       arrow.color = 0xFFFFFF;
 
@@ -277,25 +278,24 @@ class WinterHorrorlandRemnantsMixSong extends Song
     if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
-      case 222:
-        FlxTween.tween(black, {alpha: 1}, 0.75, {ease: FlxEase.linear});
+      case 222: // Red time :)
+        FlxTween.tween(black, {alpha: 1}, 0.8, {ease: FlxEase.linear, onComplete: (_) -> {
+          FlxTween.tween(black, {alpha: 0.5}, 3, {ease: FlxEase.linear});
+          PlayState.instance.currentStage.getNamedProp('overlay').alpha = 1;
 
-      case 224: // Red time :)
-        FlxTween.tween(black, {alpha: 0.7}, 3, {ease: FlxEase.linear});
-        PlayState.instance.currentStage.getNamedProp('overlay').alpha = 1;
+          PlayState.instance.iconP1.color = 0xFF0000;
+          PlayState.instance.iconP2.color = 0xFF0000;
+          PlayState.instance.camHUD.color = 0xFF0000;
 
-        PlayState.instance.iconP1.color = 0xFF0000;
-        PlayState.instance.iconP2.color = 0xFF0000;
-        PlayState.instance.camHUD.color = 0xFF0000;
+          // BUG: Color change sometimes dosent apply to hold notes
+          for (arrow in PlayState.instance.playerStrumline.members)
+          arrow.color = 0xFF0000;
 
-        // BUG: Color change sometimes dosent apply to hold notes
-        for (arrow in PlayState.instance.playerStrumline.members)
-        arrow.color = 0xFF0000;
+          for (arrow in PlayState.instance.opponentStrumline.members)
+          arrow.color = 0xFF0000;
 
-        for (arrow in PlayState.instance.opponentStrumline.members)
-        arrow.color = 0xFF0000;
-
-        overlay = true;
+          overlay = true;
+	}});
 
       case 254:
         FlxTween.tween(black, {alpha: 0}, 0.75, {ease: FlxEase.backIn});
