@@ -3,44 +3,25 @@
   "songName": "2hot (Remnants Mix)",
   "artist": "LunarzNova",
   "charter": "RhysRJJ",
+  "timeFormat": "ms",
   "divisions": 96,
+  "offsets": {"instrumental": 0},
+  "timeChanges": [{ "t": 0, "bpm": 182, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
   "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {},
-    "vocals": {},
-    "altVocals": {}
-  },
   "playData": {
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-      "player": "pico-remnants-playable",
-      "girlfriend": "nene-remnants",
-      "opponent": "darnell-remnants",
-      "instrumental": "remnants",
-      "altInstrumentals": ["", "bfremnants"],
-      "opponentVocals": ["darnell-remnants"],
-      "playerVocals": ["pico-remnants-playable"]
+      "player": "pico-remnants-playable","girlfriend": "nene-remnants","opponent": "darnell-remnants",
+      "instrumental": "","playerVocals": ["pico-remnants-playable"],"opponentVocals": ["darnell-remnants"], "altInstrumentals": ["", "bfremnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
-    "stickerPack": "remnants-pico-weekend1",
     "ratings": { "easy": 6, "normal": 7, "hard": 9 },
     "album": "remnants-weekend1",
-    "previewStart": 0,
-    "previewEnd": 15000
+    "stickerPack": "remnants-pico-weekend1"
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.4",
-  "timeFormat": "ms",
-  "timeChanges": [
-    {
-      "t": 0,
-      "b": 0,
-      "bpm": 182,
-      "n": 4,
-      "d": 4,
-      "bt": [4, 4, 4, 4]
-    }
-  ]
+  "previewStart": 0,
+  "previewEnd": 15000,
+  "generatedBy": "LeGooey (By Hand)"
 }
