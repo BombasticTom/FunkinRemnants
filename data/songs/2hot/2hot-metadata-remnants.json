@@ -13,7 +13,7 @@
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "pico-remnants-playable","girlfriend": "nene-remnants","opponent": "darnell-remnants",
-      "instrumental": "","playerVocals": ["pico-remnants-playable"],"opponentVocals": ["darnell-remnants"], "altInstrumentals": ["", "bfremnants"]
+      "instrumental": "remnants","playerVocals": ["pico-remnants-playable"],"opponentVocals": ["darnell-remnants"], "altInstrumentals": ["", "bfremnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",

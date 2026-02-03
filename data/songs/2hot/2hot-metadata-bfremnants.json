@@ -13,7 +13,7 @@
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants","girlfriend": "gf-remnants","opponent": "darnell-remnants",
-      "instrumental": "","playerVocals": ["bf-remnants"],"opponentVocals": ["darnell-remnants"], "altInstrumentals": ["","remnants"]
+      "instrumental": "bfremnants","playerVocals": ["bf-remnants"],"opponentVocals": ["darnell-remnants"], "altInstrumentals": ["","remnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
