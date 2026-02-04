@@ -252,8 +252,7 @@ class ThornsRemnantsMixSong extends Song
         else // Normal transition.
         {
           // Fade to white 3.2 seconds into the cutscene.
-          new FlxTimer(cutsceneTimerManager).start(3.2, function(deadTime:FlxTimer)
-          {
+          new FlxTimer(cutsceneTimerManager).start(3.2, function(deadTime:FlxTimer) {
             // Prevent skipping the cutscene from here.
             cutsceneSkipped = true;
             canSkipCutscene = false;
@@ -261,8 +260,7 @@ class ThornsRemnantsMixSong extends Song
 
             // Fade to WHITE.
             RetroCameraFade.fadeWhite(PlayState.instance.camCutscene, 8, 1.4);
-            new FlxTimer(cutsceneTimerManager).start(1.4, function(timer:FlxTimer)
-            {
+            new FlxTimer(cutsceneTimerManager).start(1.4, function(timer:FlxTimer) {
               darkness.color = 0xFFFFFFFF;
               PlayState.instance.remove(senpaiCrazy);
 

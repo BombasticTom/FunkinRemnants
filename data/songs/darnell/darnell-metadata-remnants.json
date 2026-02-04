@@ -5,15 +5,20 @@
   "charter": "RhysRJJ + Sammy The Goog",
   "timeFormat": "ms",
   "divisions": 96,
-  "offsets": {"instrumental": 0},
+  "offsets": { "instrumental": 0 },
   "timeChanges": [{ "t": 0, "bpm": 155, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
   "looped": false,
   "playData": {
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-      "player": "pico-remnants-playable","girlfriend": "nene-remnants","opponent": "darnell-remnants",
-      "instrumental": "remnants","playerVocals": ["pico-remnants-playable"],"opponentVocals": ["darnell-remnants"], "altInstrumentals": ["bf", "", "bfremnants"]
+      "player": "pico-remnants-playable",
+      "girlfriend": "nene-remnants",
+      "opponent": "darnell-remnants",
+      "instrumental": "remnants",
+      "playerVocals": ["pico-remnants-playable"],
+      "opponentVocals": ["darnell-remnants"],
+      "altInstrumentals": ["bf", "", "bfremnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
