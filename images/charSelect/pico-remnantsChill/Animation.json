@@ -1,6 +1,16 @@
 {
   "AN": {
     "N": "pico character select remnants smoke",
+    "STI": {
+      "SI": {
+        "SN": "PICO CS",
+        "FF": 0,
+        "ST": "G",
+        "TRP": { "x": 758.7, "y": 401.95 },
+        "LP": "PO",
+        "MX": [1, 0, 0, 1, 758.7, 401.95]
+      }
+    },
     "SN": "PICO CS",
     "TL": {
       "L": [
