@@ -24,26 +24,26 @@
             },
             {
               "N": "Left Flame Loop",
-              "I": 32,
-              "DU": 12,
+              "I": 36,
+              "DU": 4,
               "E": []
             },
             {
               "N": "Down Flame Loop",
-              "I": 44,
-              "DU": 12,
+              "I": 48,
+              "DU": 4,
               "E": []
             },
             {
               "N": "Right Flame Loop",
-              "I": 56,
-              "DU": 12,
+              "I": 60,
+              "DU": 4,
               "E": []
             },
             {
               "N": "Up Flame Loop",
-              "I": 68,
-              "DU": 98,
+              "I": 72,
+              "DU": 4,
               "E": []
             }
           ]
