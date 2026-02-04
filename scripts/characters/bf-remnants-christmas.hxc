@@ -51,23 +51,30 @@ class BoyfriendRemnantsChristmasCharacter extends MultiAnimateAtlasCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
-    if (name == "hey") PlayState.instance.vocals.playerVolume = 1;
-
+    if (name == "hey") PlayState.instance?.vocals?.playerVolume = 1;
     if (name == "firstDeath")
     {
-      // Standard death animation.
-      createDeathSprites();
-
-      GameOverSubState.instance.add(loseSprite);
+      if (!this.debug)
+      {
+        // Lose...
+        createDeathSprites();
+        GameOverSubState.instance.add(loseSprite);
+      }
     }
     else if (name == 'deathLoop')
     {
-      loseSprite.visible = true;
-      loseSprite.animation.play('fall', true);
+      if (loseSprite != null)
+      {
+        loseSprite.visible = true;
+        loseSprite.animation.play('fall', true);
+      }
     }
     else if (name == "deathConfirm")
     {
-      FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+      if (loseSprite != null)
+      {
+        FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+      }
     }
 
     super.playAnimation(name, restart, ignoreOther);

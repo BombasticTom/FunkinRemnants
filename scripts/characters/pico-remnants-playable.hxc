@@ -171,8 +171,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
   {
     // restore vocal volume to ensure burps always play
     // not needed on the dark variant because this one always exists anyway..
-    if (name == "hey" || name == "cheer" || name == "burpSmile" || name == "burpSmileLong" || name == "burpShit") PlayState.instance.vocals.playerVolume = 1;
-
+    if (name == "hey" || name == "cheer" || name == "burpSmile" || name == "burpSmileLong" || name == "burpShit") PlayState.instance?.vocals?.playerVolume = 1;
     if (name == "firstDeath")
     {
       if (GameOverSubState.blueBallSuffix == '-pico-explode-remnants')
@@ -182,13 +181,16 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       }
       else
       {
-        // Standard death animation.
-        createDeathSprites();
-        GameOverSubState.instance.add(loseSprite);
+        if (!this.debug)
+        {
+          // Lose...
+          createDeathSprites();
+          GameOverSubState.instance.add(loseSprite);
 
-        GameOverSubState.instance.add(deathSpriteRetry);
-        GameOverSubState.instance.add(deathSpriteNene);
-        deathSpriteNene.animation.play("throw");
+          GameOverSubState.instance.add(deathSpriteRetry);
+          GameOverSubState.instance.add(deathSpriteNene);
+          deathSpriteNene.animation.play("throw");
+        }
       }
     }
     else if (name == "deathConfirm")
@@ -199,12 +201,19 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       }
       else
       {
-        FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-        deathSpriteRetry.animation.play('confirm');
-        // I think the glow makes the overall animation larger,
-        // but a plain FlxSprite doesn't have an animation offset option so we do it manually.
-        deathSpriteRetry.x -= 250;
-        deathSpriteRetry.y -= 200;
+        if (loseSprite != null)
+        {
+          FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+        }
+
+        if (deathSpriteRetry != null)
+        {
+          deathSpriteRetry.animation.play('confirm');
+          // I think the glow makes the overall animation larger,
+          // but a plain FlxSprite doesn't have an animation offset option so we do it manually.
+          deathSpriteRetry.x -= 250;
+          deathSpriteRetry.y -= 200;
+        }
 
         // Skip playing the animation.
         return;
@@ -381,8 +390,11 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
       if (GameOverSubState.blueBallSuffix != '-pico-explode-remnants')
       {
-        loseSprite.visible = true;
-        loseSprite.animation.play('fall', true);
+        if (loseSprite != null)
+        {
+          loseSprite.visible = true;
+          loseSprite.animation.play('fall', true);
+        }
       }
     }
 

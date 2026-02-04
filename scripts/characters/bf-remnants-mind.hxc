@@ -58,9 +58,8 @@ class BoyfriendRemnantsMindCharacter extends MultiAnimateAtlasCharacter
           doFakeoutDeath();
 
         case "firstDeath":
-          // Standard death animation.
+          // Lose...
           createDeathSprites();
-
           GameOverSubState.instance.add(loseSprite);
 
         case "deathLoop":
