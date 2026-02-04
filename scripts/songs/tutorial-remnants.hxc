@@ -43,9 +43,7 @@ class TutorialRemnantsMixSong extends Song
     PlayState.instance?.add(black);
     PlayState.instace?.refresh();
 
-    var magicEquationNumber:Float = FullScreenScaleMode.gameCutoutSize.x / FlxG.width;
-    if (FullScreenScaleMode.gameCutoutSize.x == 0) magicEquationNumber = 1;
-    intro = FunkinSprite.createTextureAtlas(-152.45 * magicEquationNumber, -52.15, 'remnants/gf opening', 'week1');
+    intro = FunkinSprite.createTextureAtlas(0, -52.15, 'remnants/gf opening', 'week1');
     intro.anim.addByTimeline('anim', intro.anim.getDefaultTimeline(), 24, false);
     intro.cameras = [PlayState.instance?.camCutscene];
     intro.screenCenter(0x01);
