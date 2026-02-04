@@ -48,13 +48,44 @@ class TutorialRemnantsMixSong extends Song
     intro = FunkinSprite.createTextureAtlas(-152.45 * magicEquationNumber, -52.15, 'remnants/gf opening', 'week1');
     intro.anim.addByTimeline('anim', intro.anim.getDefaultTimeline(), 24, false);
     intro.cameras = [PlayState.instance?.camCutscene];
+    intro.screenCenter(0x01);
     intro.alpha = 0;
     PlayState.instance?.add(intro);
+
+    if (!FlxG.stage.window.onResize.has(onResizeWindow))
+    {
+      FlxG.stage.window.onResize.add(onResizeWindow);
+      trace("Added resize signal.");
+    }
 
     // Putting this here won't let the player skip the bumper.
     // PlayState.instance.disableKeys = true;
 
     ending = false;
+  }
+
+  function onResizeWindow()
+  {
+    if (intro != null)
+    {
+      intro.screenCenter(0x01);
+      trace("Rescaled Tutorial cutscene!");
+    }
+    else
+    {
+      trace("Error: The cutscene instance is null.");
+    }
+  }
+
+  public function onSongEnd(event:ScriptEvent):Void
+  {
+    if (FlxG.stage.window.onResize.has(onResizeWindow))
+    {
+      FlxG.stage.window.onResize.remove(onResizeWindow);
+      trace("Removed resize signal.");
+    }
+
+    super.onSongEnd(event);
   }
 
   function onCountdownStart(event:ScriptEvent):Void
