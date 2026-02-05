@@ -119,8 +119,8 @@ class TwoHOTRemnantsBFMixSong extends Song
         var newCan:ScriptedFunkinSprite = ScriptedFunkinSprite.init('SpraycanAtlasSpriteRemnants', 0, 0);
         var spraycanPile = PlayState.instance.currentStage.getNamedProp('spraycanPile');
 
-        newCan.x = spraycanPile.x - 335;
-        newCan.y = spraycanPile.y - 825;
+        newCan.x = spraycanPile.x - 100;
+        newCan.y = spraycanPile.y - 550;
         newCan.zIndex = spraycanPile.zIndex - 1;
 
         newCan.scriptCall('playCanStart');

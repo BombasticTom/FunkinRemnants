@@ -5,8 +5,8 @@
   "assetPath": "shared:characters/bf-remnants",
   "flipX": true,
   "singTime": 8.0,
-  "cameraOffsets": [-150, 148.5],
-  "offsets": [110, 17],
+  "cameraOffsets": [-55, 144.5],
+  "offsets": [55, 9],
   "healthIcon": {
     "id": "bf-remnants",
     "isPixel": false

@@ -182,8 +182,8 @@ class DarnellRemnantsMixSong extends Song
     var spraycanPile = PlayState.instance.currentStage.getNamedProp('spraycanPile');
     if (newCan != null)
     {
-      newCan.x = spraycanPile.x + 30;
-      newCan.y = spraycanPile.y - 840;
+      newCan.x = spraycanPile.x - 100;
+      newCan.y = spraycanPile.y - 550;
       newCan.zIndex = 300;
       PlayState.instance.currentStage.add(newCan);
       PlayState.instance.currentStage.refresh();
