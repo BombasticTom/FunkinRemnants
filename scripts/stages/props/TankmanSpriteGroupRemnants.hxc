@@ -7,7 +7,7 @@ import funkin.modding.base.ScriptedFunkinSprite;
 import funkin.play.PlayState;
 import Lambda;
 
-class TankmanSpriteGroup extends FlxTypedSpriteGroup
+class TankmanSpriteGroupRemnants extends FlxTypedSpriteGroup
 {
   var tankmanTimes:Array<Float> = [];
   var tankmanDirs:Array<Bool> = [];
@@ -26,7 +26,7 @@ class TankmanSpriteGroup extends FlxTypedSpriteGroup
     this.zIndex = 30;
 
     this.isErect = (erect != null) ? erect : false;
-    trace('Initializing TankmanSpriteGroup... ' + (this.isErect ? ' (erect)' : ' (base)'));
+    trace('Initializing TankmanSpriteGroupRemnants... ' + (this.isErect ? ' (erect)' : ' (base)'));
   }
 
   public function isValid():Bool
@@ -116,7 +116,7 @@ class TankmanSpriteGroup extends FlxTypedSpriteGroup
 
   function _initTankmanObj():ScriptedFunkinSprite
   {
-    var result:ScriptedFunkinSprite = ScriptedFunkinSprite.init('TankmanSprite');
+    var result:ScriptedFunkinSprite = ScriptedFunkinSprite.init('TankmanSpriteRemnants');
     return result;
   }
 

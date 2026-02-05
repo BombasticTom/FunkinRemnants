@@ -28,7 +28,7 @@ import funkin.Preferences;
 
 class StressRemnantsMixSong extends Song
 {
-  var tankmanGroup:TankmanSpriteGroup = null;
+  var tankmanGroup:TankmanSpriteGroupRemnants = null;
   var bgSprite:FunkinSprite = null;
 
   var hasPlayedCutscene:Bool = false;
@@ -116,7 +116,7 @@ class StressRemnantsMixSong extends Song
     {
       // Initialize the tankman group if it's not available.
       trace('Initializing tankman group...');
-      tankmanGroup = ScriptedFlxSpriteGroup.init('TankmanSpriteGroup', false);
+      tankmanGroup = ScriptedFlxSpriteGroup.init('TankmanSpriteGroupRemnants', false);
     }
 
     if (tankmanGroup != null)

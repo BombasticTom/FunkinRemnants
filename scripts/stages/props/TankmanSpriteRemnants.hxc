@@ -9,7 +9,7 @@ import flixel.effects.FlxFlicker;
  * A sprite which plays the 'run' animation while moving in the specified direction.
  * It then plays the 'shot' animation at a specific time in the song, then destroys itself.
  */
-class TankmanSprite extends FunkinSprite
+class TankmanSpriteRemnants extends FunkinSprite
 {
   // Randomize the horizontal position of the tankman when 'shot' plays.
   public var endingOffset:Float = 0;
