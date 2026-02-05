@@ -20,6 +20,7 @@ class BFRemnantsOpponentCharacter extends MultiAnimateAtlasCharacter
     this.library.addAtlas(flippedParts);
 
     replaceWithFlipped();
+    flipCensor();
   }
 
   function onNoteHit(event:HitNoteScriptEvent)
@@ -75,5 +76,35 @@ class BFRemnantsOpponentCharacter extends MultiAnimateAtlasCharacter
         trace('Replaced ' + symbol.name + ' with ' + flippedSymbol.name + '!');
       }
     }
+  }
+
+  function flipCensor():Void
+  {
+    var symbolInstance:SymbolItem = this.library.getSymbol("mouth censor");
+    if (symbolInstance == null) return;
+
+    var timeline:Timeline = symbolInstance.timeline;
+
+    var bounds:FlxRect = null;
+
+    for (layer in timeline.layers)
+    {
+      if (!layer.visible || layer.frames == null) continue;
+
+      for (frame in layer.frames)
+      {
+        for (element in frame.elements)
+        {
+          bounds = element.getBounds(0, bounds);
+          element.matrix.scale(-1, 1);
+          element.matrix.translate(bounds.width, 0);
+
+          // offset fix for the "Uh-Oh!" text
+          if (layer.name == 'Layer 2') element.matrix.translate(-30, 0);
+        }
+      }
+    }
+
+    if (bounds != null) bounds.put();
   }
 }
