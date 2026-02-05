@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "Remnants BF (Opponent)",
   "renderType": "multianimateatlas",
-  "assetPath": "shared:characters/bf-remnants",
+  "assetPath": "shared:characters/bf-remnants/base",
   "flipX": true,
   "singTime": 8.0,
   "cameraOffsets": [-55, 144.5],
@@ -61,25 +61,25 @@
       "offsets": [0, 0]
     },
     {
-      "assetPath": "shared:characters/bf-remnants MISSES",
+      "assetPath": "shared:characters/bf-remnants/miss",
       "name": "singLEFTmiss",
       "prefix": "Miss Right",
       "offsets": [-50, -259]
     },
     {
-      "assetPath": "shared:characters/bf-remnants MISSES",
+      "assetPath": "shared:characters/bf-remnants/miss",
       "name": "singDOWNmiss",
       "prefix": "Miss Down",
       "offsets": [-50, -259]
     },
     {
-      "assetPath": "shared:characters/bf-remnants MISSES",
+      "assetPath": "shared:characters/bf-remnants/miss",
       "name": "singUPmiss",
       "prefix": "Miss Up",
       "offsets": [-50, -259]
     },
     {
-      "assetPath": "shared:characters/bf-remnants MISSES",
+      "assetPath": "shared:characters/bf-remnants/miss",
       "name": "singRIGHTmiss",
       "prefix": "Miss Left",
       "offsets": [-50, -259]

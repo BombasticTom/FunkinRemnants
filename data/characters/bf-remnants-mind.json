@@ -7,7 +7,7 @@
     "cameraOffsets": [10, -85]
   },
   "startingAnimation": "idle",
-  "assetPath": "shared:characters/bf-remnants-mind",
+  "assetPath": "shared:characters/bf-remnants/mind",
   "healthIcon": {
     "offsets": [0, 0],
     "isPixel": false,
@@ -156,7 +156,7 @@
       "looped": false,
       "name": "fakeoutDeath",
       "flipY": false,
-      "assetPath": "shared:characters/bf-remnants-death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "frameRate": 24
     },
     {
@@ -167,7 +167,7 @@
       "looped": false,
       "name": "firstDeath",
       "flipY": false,
-      "assetPath": "shared:characters/bf-remnants-death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "frameRate": 24
     },
     {
@@ -178,7 +178,7 @@
       "name": "deathLoop",
       "looped": true,
       "flipY": false,
-      "assetPath": "shared:characters/bf-remnants-death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "frameRate": 24
     },
     {
@@ -189,7 +189,7 @@
       "looped": false,
       "name": "deathConfirm",
       "flipY": false,
-      "assetPath": "shared:characters/bf-remnants-death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "frameRate": 24
     }
   ]

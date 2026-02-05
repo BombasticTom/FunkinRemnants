@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Boyfriend (Blazin') [Remnants]",
-  "assetPath": "shared:characters/bfBlazinRemnants",
+  "assetPath": "shared:characters/bf-remnants/blazin",
   "healthIcon": {
     "id": "bf-remnants"
   },

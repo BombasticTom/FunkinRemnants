@@ -15,7 +15,7 @@ class BFRemnantsOpponentCharacter extends MultiAnimateAtlasCharacter
   {
     super.onCreate();
 
-    flippedParts = Paths.getAnimateAtlas("characters/bf opponent parts", "shared", _data.atlasSettings);
+    flippedParts = Paths.getAnimateAtlas("characters/bf-remnants/opponent parts", "shared", _data.atlasSettings);
     flippedParts.parent.destroyOnNoUse = false;
     this.library.addAtlas(flippedParts);
 

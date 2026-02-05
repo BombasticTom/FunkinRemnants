@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Remnants BF (Car)",
-  "assetPath": "shared:characters/bf-remnants-car",
+  "assetPath": "shared:characters/bf-remnants/car",
   "flipX": true,
   "renderType": "multianimateatlas",
   "singTime": 8.0,
@@ -156,25 +156,25 @@
       "offsets": [0, 0]
     },
     {
-      "assetPath": "shared:characters/bf-remnants MISSES",
+      "assetPath": "shared:characters/bf-remnants/miss",
       "name": "singLEFTmiss",
       "prefix": "Miss Left",
       "offsets": [-90, -44]
     },
     {
-      "assetPath": "shared:characters/bf-remnants MISSES",
+      "assetPath": "shared:characters/bf-remnants/miss",
       "name": "singDOWNmiss",
       "prefix": "Miss Down",
       "offsets": [-90, -44]
     },
     {
-      "assetPath": "shared:characters/bf-remnants MISSES",
+      "assetPath": "shared:characters/bf-remnants/miss",
       "name": "singUPmiss",
       "prefix": "Miss Up",
       "offsets": [-90, -44]
     },
     {
-      "assetPath": "shared:characters/bf-remnants MISSES",
+      "assetPath": "shared:characters/bf-remnants/miss",
       "name": "singRIGHTmiss",
       "prefix": "Miss Right",
       "offsets": [-90, -44]
@@ -197,26 +197,26 @@
       "offsets": [0, 0]
     },
     {
-      "assetPath": "shared:characters/bf-remnants-death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "name": "fakeoutDeath",
       "prefix": "Fakeout",
       "offsets": [-64, 90]
     },
     {
-      "assetPath": "shared:characters/bf-remnants-death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "name": "firstDeath",
       "prefix": "Death",
       "offsets": [-64, 90]
     },
     {
-      "assetPath": "shared:characters/bf-remnants-death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "name": "deathLoop",
       "prefix": "Loop Death",
       "looped": true,
       "offsets": [-64, 90]
     },
     {
-      "assetPath": "shared:characters/bf-remnants-death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "name": "deathConfirm",
       "prefix": "Retry",
       "offsets": [-64, 90]
