@@ -210,11 +210,11 @@ class RosesRemnantsMixSong extends Song
         fadeOut = true;
 
       case 225:
-        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 5, 0.55);
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 5, 0.4);
 
       case 226:
         PlayState.instance.currentStage.getNamedProp('black').alpha = 1;
-        RetroCameraFade.fadeBlack(PlayState.instance.camGame, 5, 0.55);
+        RetroCameraFade.fadeBlack(PlayState.instance.camGame, 5, 0.4);
 
       case 229:
         FlxTween.tween(PlayState.instance.currentStage.getNamedProp('black'), {alpha: 0}, 0.55, {ease: FlxEase.backIn});

@@ -13,7 +13,7 @@
   },
   "playData": {
     "songVariations": [],
-    "difficulties": ["remnantsold"],
+    "difficulties": ["old"],
     "characters": {
       "player": "bf-remnants-pixel",
       "girlfriend": "gf-remnants-pixel",
@@ -22,7 +22,7 @@
     },
     "stage": "schoolRemnants",
     "noteStyle": "pixel",
-    "ratings": { "remnantsold": 4 },
+    "ratings": { "old": 4 },
     "album": "remnants-week6",
     "previewStart": 0,
     "previewEnd": 13000

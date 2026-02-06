@@ -1,9 +1,9 @@
 {
   "version": "2.0.0",
   "scrollSpeed": {
-    "remnantsold-easy": 2,
-    "remnantsold-normal": 2.2,
-    "remnantsold": 2.4
+    "old-easy": 2,
+    "old-normal": 2.2,
+    "old": 2.4
   },
   "events": [
     {
@@ -774,7 +774,7 @@
     }
   ],
   "notes": {
-    "remnantsold-easy": [
+    "old-easy": [
       {
         "t": 8999,
         "d": 6,
@@ -2912,7 +2912,7 @@
         "p": []
       }
     ],
-    "remnantsold-normal": [
+    "old-normal": [
       {
         "t": 8999,
         "d": 6,
@@ -5932,7 +5932,7 @@
         "p": []
       }
     ],
-    "remnantsold": [
+    "old": [
       {
         "t": 9000,
         "d": 6,
