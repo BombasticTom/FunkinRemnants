@@ -24,10 +24,12 @@ class PlaytimeRmenantsStage extends Stage
   var colorShaderBf:AdjustColorShader;
   var colorShaderDad:AdjustColorShader;
   var colorShaderGf:AdjustColorShader;
+
   var rainShader:RuntimeRainShader = new RuntimeRainShader();
   var rainShaderFilter:ShaderFilter;
   var rainDropTimer:Float = 500;
   var rainDropWait:Float = 900;
+
   var blurFilter:BlurFilter = new BlurFilter(300, 300);
 
   // As the song goes on, this is used to make the rain more intense throughout the song
@@ -48,46 +50,52 @@ class PlaytimeRmenantsStage extends Stage
     zara.cameras = [PlayState.instance.camGame];
     PlayState.instance.add(zara);
 
-    rainShader.scale = FlxG.height / 300; // Increase rain scale
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      rainShader.scale = FlxG.height / 300; // Increase rain scale
 
-    FlxG.console.registerObject("rainShader", rainShader); // Don't change name of this unless you have a custom rain shader in modName/shaders
-    rainShaderStartIntensity = 0;
-    rainShaderEndIntensity = 0.1;
-    rainShader.intensity = rainShaderStartIntensity;
-    rainShaderFilter = new ShaderFilter(rainShader);
-    FlxG.camera.filters = [rainShaderFilter];
+      FlxG.console.registerObject("rainShader", rainShader); // Don't change name of this unless you have a custom rain shader in modName/shaders
+      rainShaderStartIntensity = 0;
+      rainShaderEndIntensity = 0.1;
+      rainShader.intensity = rainShaderStartIntensity;
+      rainShaderFilter = new ShaderFilter(rainShader);
+      FlxG.camera.filters = [rainShaderFilter];
 
-    super.buildStage();
+      super.buildStage();
 
-    colorShaderBf = new AdjustColorShader();
-    colorShaderDad = new AdjustColorShader();
-    colorShaderGf = new AdjustColorShader();
+      colorShaderBf = new AdjustColorShader();
+      colorShaderDad = new AdjustColorShader();
+      colorShaderGf = new AdjustColorShader();
 
-    colorShaderBf.brightness = -20;
-    colorShaderBf.hue = 20;
-    colorShaderBf.contrast = 5;
-    colorShaderBf.saturation = 5;
+      colorShaderBf.brightness = -20;
+      colorShaderBf.hue = 20;
+      colorShaderBf.contrast = 5;
+      colorShaderBf.saturation = 5;
 
-    colorShaderGf.brightness = -20;
-    colorShaderGf.hue = 20;
-    colorShaderGf.contrast = 5;
-    colorShaderGf.saturation = 5;
+      colorShaderGf.brightness = -20;
+      colorShaderGf.hue = 20;
+      colorShaderGf.contrast = 5;
+      colorShaderGf.saturation = 5;
 
-    colorShaderDad.brightness = -20;
-    colorShaderDad.hue = 20;
-    colorShaderDad.contrast = 5;
-    colorShaderDad.saturation = 5;
+      colorShaderDad.brightness = -20;
+      colorShaderDad.hue = 20;
+      colorShaderDad.contrast = 5;
+      colorShaderDad.saturation = 5;
+    }
   }
 
   override function onUpdate(event:UpdateScriptEvent)
   {
     super.onUpdate(event);
 
-    var remappedIntensityValue:Float = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music != null ? FlxG.sound.music.length : 0.0,
-      rainShaderStartIntensity, rainShaderEndIntensity);
-    rainShader.intensity = remappedIntensityValue;
-    rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
-    rainShader.update(event.elapsed);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      var remappedIntensityValue:Float = FlxMath.remapToRange(Conductor.instance.songPosition, 0, FlxG.sound.music != null ? FlxG.sound.music.length : 0.0,
+        rainShaderStartIntensity, rainShaderEndIntensity);
+      rainShader.intensity = remappedIntensityValue;
+      rainShader.updateViewInfo(FlxG.width, FlxG.height, FlxG.camera);
+      rainShader.update(event.elapsed);
+    }
   }
 
   /**
@@ -97,15 +105,19 @@ class PlaytimeRmenantsStage extends Stage
   {
     // Apply the shader automatically to each character as it gets added.
     super.addCharacter(character, charType);
-    trace('Applied stage shader to ' + character.characterName);
-    switch (charType)
+
+    if (!RemnantsOptions.getPerformanceOption())
     {
-      case CharacterType.BF:
-        character.shader = colorShaderBf;
-      case CharacterType.DAD:
-        character.shader = colorShaderDad;
-      case CharacterType.GF:
-        character.shader = colorShaderGf;
+      trace('Applied stage shader to ' + character.characterName);
+      switch (charType)
+      {
+        case CharacterType.BF:
+          character.shader = colorShaderBf;
+        case CharacterType.DAD:
+          character.shader = colorShaderDad;
+        case CharacterType.GF:
+          character.shader = colorShaderGf;
+      }
     }
   }
 
@@ -122,6 +134,7 @@ class PlaytimeRmenantsStage extends Stage
   override function onGameOver(event:ScriptEvent):Void
   {
     super.onGameOver(event);
+
     // Make it so the rain shader doesn't show over the game over screen
     FlxG.camera.filters = [];
   }
@@ -129,8 +142,12 @@ class PlaytimeRmenantsStage extends Stage
   override function onSongRetry(event:ScriptEvent):Void
   {
     super.onSongRetry(event);
-    // Make it so the rain shader doesn't show over the game over screen
-    FlxG.camera.filters = [rainShaderFilter];
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      // Make it so the rain shader doesn't show over the game over screen
+      FlxG.camera.filters = [rainShaderFilter];
+    }
 
     refresh(); // This game fucking sucks so I added this
   }

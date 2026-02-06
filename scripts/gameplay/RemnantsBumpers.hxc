@@ -108,7 +108,7 @@ class RemnantsBumpers extends Module
     if (getWeek(songLowercase) == null) return false;
 
     // Prevent the bumper from playing if the option is set to off.
-    if (!ModuleHandler.getModule('RemnantsOptions').scriptCall('getBumperOption')) return false;
+    if (!RemnantsOptions.getBumperOption()) return false;
 
     if (isFirstOfWeek && !playedBumper)
     {

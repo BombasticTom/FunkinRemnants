@@ -27,7 +27,9 @@ class TwoHOTRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    // Precache the spraycan atlas.
+    // Precache the assets for the song.
+    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/CanImpactParticle"));
+    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraypaintExplosionEZ"));
     FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1"));
   }
 

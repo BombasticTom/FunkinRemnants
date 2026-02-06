@@ -20,43 +20,31 @@ class SketchRemnantsPicoStage extends Stage
   var colorShaderDad:AdjustColorShader;
   var colorShaderGf:AdjustColorShader;
 
-  public override function onCountdownStart(event:CountdownScriptEvent):Void
-  {
-    super.onCountdownStart(event);
-  }
-
   function buildStage()
   {
     super.buildStage();
 
-    colorShaderBf = new AdjustColorShader();
-    colorShaderDad = new AdjustColorShader();
-    colorShaderGf = new AdjustColorShader();
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      colorShaderBf = new AdjustColorShader();
+      colorShaderDad = new AdjustColorShader();
+      colorShaderGf = new AdjustColorShader();
 
-    colorShaderBf.brightness = -8;
-    colorShaderBf.hue = -26;
-    colorShaderBf.contrast = 15;
-    colorShaderBf.saturation = 5;
+      colorShaderBf.brightness = -8;
+      colorShaderBf.hue = -26;
+      colorShaderBf.contrast = 15;
+      colorShaderBf.saturation = 5;
 
-    colorShaderGf.brightness = -20;
-    colorShaderGf.hue = 0;
-    colorShaderGf.contrast = 20;
-    colorShaderGf.saturation = -10;
+      colorShaderGf.brightness = -20;
+      colorShaderGf.hue = 0;
+      colorShaderGf.contrast = 20;
+      colorShaderGf.saturation = -10;
 
-    colorShaderDad.brightness = -33;
-    colorShaderDad.hue = 0;
-    colorShaderDad.contrast = -23;
-    colorShaderDad.saturation = 0;
-  }
-
-  function onBeatHit(event:SongTimeScriptEvent):Void
-  {
-    super.onBeatHit(event);
-  }
-
-  function onStepHit(event:SongTimeScriptEvent):Void
-  {
-    super.onStepHit(event);
+      colorShaderDad.brightness = -33;
+      colorShaderDad.hue = 0;
+      colorShaderDad.contrast = -23;
+      colorShaderDad.saturation = 0;
+    }
   }
 
   /**
@@ -66,15 +54,19 @@ class SketchRemnantsPicoStage extends Stage
   {
     // Apply the shader automatically to each character as it gets added.
     super.addCharacter(character, charType);
-    trace('Applied stage shader to ' + character.characterName);
-    switch (charType)
+
+    if (!RemnantsOptions.getPerformanceOption())
     {
-      case CharacterType.BF:
-        character.shader = colorShaderBf;
-      case CharacterType.DAD:
-        character.shader = colorShaderDad;
-      case CharacterType.GF:
-        character.shader = colorShaderGf;
+      trace('Applied stage shader to ' + character.characterName);
+      switch (charType)
+      {
+        case CharacterType.BF:
+          character.shader = colorShaderBf;
+        case CharacterType.DAD:
+          character.shader = colorShaderDad;
+        case CharacterType.GF:
+          character.shader = colorShaderGf;
+      }
     }
   }
 }
