@@ -1,4 +1,5 @@
 import funkin.modding.module.ModuleHandler;
+import funkin.util.SongSequence;
 import funkin.play.song.Song;
 import funkin.save.Save;
 import funkin.play.PlayState;
@@ -47,6 +48,10 @@ class SatinPantiesRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
+    var boyfriend:BaseCharacter = PlayState.instance?.currentStage?.getBoyfriend() ?? null;
+    boyfriend.shouldAlternate = null;
+    boyfriend.idleSuffix = '';
+
     if (!outro) return;
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
     PlayState.instance.camCutscene?.stopFX();
@@ -83,7 +88,14 @@ class SatinPantiesRemnantsMixSong extends Song
     super.onBeatHit(event);
 
     if (PlayState.instance.isGameOverState) return;
-    if (event.beat == 176)
+
+    if (event.beat == 72)
+    {
+      var boyfriend:BaseCharacter = PlayState.instance?.currentStage?.getBoyfriend() ?? null;
+      boyfriend.shouldAlternate = true;
+      boyfriend.idleSuffix = '-limodance';
+    }
+    else if (event.beat == 176)
     {
       PlayState.instance.camCutscene.fade(0xFF000000, 4.2, false, null, false);
       FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1,

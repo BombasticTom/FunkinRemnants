@@ -55,6 +55,10 @@ class SpookeezRemnantsMixSong extends Song
 
     PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
     fadeOut = false;
+
+    var dad:BaseCharacter = PlayState.instance?.currentStage?.getDad() ?? null;
+    dad.shouldAlternate = false;
+    dad.idleSuffix = '-remnants';
   }
 
   function onSongRetry(event:ScriptEvent)

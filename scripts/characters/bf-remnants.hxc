@@ -31,7 +31,6 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     PauseSubState.musicSuffix = '-remnants';
 
     FunkinMemory.cacheSound(Paths.sound('Pico_Bonk', "weekend1"));
-    this.shouldAlternate = ['south'].contains(PlayState?.instance?.currentSong?.id);
   }
 
   override function onSongRetry(event:ScriptEvent):Void

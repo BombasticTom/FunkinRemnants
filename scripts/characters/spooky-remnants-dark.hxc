@@ -36,9 +36,17 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
       normalChar.setPosition(this.x, this.y);
     }
 
-    if (name == 'idleToDance') shouldAlternate = true;
+    if (name == 'idleToDance')
+    {
+      shouldAlternate = true;
+      idleSuffix = '';
+    }
 
-    if (name == 'danceToIdle') shouldAlternate = false;
+    if (name == 'danceToIdle')
+    {
+      shouldAlternate = false;
+      idleSuffix = '-remnants';
+    }
   }
 
   function onCreate(event:ScriptEvent)
@@ -52,7 +60,6 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
 
       PlayState.instance.currentStage.add(normalChar);
       PlayState.instance.currentStage.refresh(); // Apply z-index.
-      shouldAlternate = !['spookeez'].contains(PlayState.instance?.currentSong?.id);
     }
   }
 }

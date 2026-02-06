@@ -24,7 +24,6 @@ class BoyfriendRemnantsCarCharacter extends MultiAnimateAtlasCharacter
 
     GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
-    shouldAlternate = false;
   }
 
   var loseSprite:FunkinSprite;

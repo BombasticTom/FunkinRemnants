@@ -159,6 +159,10 @@ class MILFRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
+    var boyfriend:BaseCharacter = PlayState.instance?.currentStage?.getBoyfriend() ?? null;
+    boyfriend.shouldAlternate = null;
+    boyfriend.idleSuffix = '';
+
     // Properly reset lights and collision when restarting the song.
     this.hardResetSong();
     PlayState.instance.currentStage.refresh();
@@ -675,6 +679,10 @@ class MILFRemnantsMixSong extends Song
         PlayState.instance.camCutscene.fade(0xFFFFFFFF, 0.5, true, null, false);
         PlayState.instance.camHUD.alpha = 1;
         fadeOut = true;
+      case 168:
+        var boyfriend:BaseCharacter = PlayState.instance?.currentStage?.getBoyfriend() ?? null;
+        boyfriend.shouldAlternate = true;
+        boyfriend.idleSuffix = '-limodance';
       case 200:
         PlayState.instance.camGame.fade(0xFFFFFFFF, 0.5, true, null, false);
       case 232:

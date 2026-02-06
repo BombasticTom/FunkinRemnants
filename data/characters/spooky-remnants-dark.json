@@ -7,7 +7,7 @@
   "name": "Remnants Spooky Kids (Dark)",
   "cameraOffsets": [0, 0],
   "flipX": false,
-  "startingAnimation": "idle",
+  "startingAnimation": "danceLeft",
   "singTime": 8,
   "isPixel": false,
   "healthIcon": {
@@ -24,7 +24,7 @@
       "flipY": false,
       "frameRate": 24,
       "prefix": "Idle0",
-      "name": "idle",
+      "name": "idle-remnants",
       "looped": false,
       "flipX": false
     },

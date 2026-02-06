@@ -85,10 +85,6 @@ class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
 
       PlayState.instance.currentStage.add(normalChar);
       PlayState.instance.currentStage.refresh(); // Apply z-index.
-
-      if (['south'].contains(PlayState.instance.currentSong.id)) shouldAlternate = true;
-      else
-        shouldAlternate = false;
     }
   }
 

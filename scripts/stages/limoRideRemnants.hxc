@@ -199,22 +199,6 @@ class LimoRideRemnantsStage extends Stage
     if (FlxG.random.bool(10) && fastCarCanDrive && !isDeath) fastVehicleDrive(false);
 
     if (FlxG.random.bool(5) && fastTruckCanDrive && !isDeath) fastVehicleDrive(true);
-
-    if (event.beat == 72 && PlayState.instance.currentSong.id == "satin-panties")
-    {
-      if (getBoyfriend() != null && getBoyfriend().hasAnimation('danceLeft-hold'))
-      {
-        getBoyfriend().shouldAlternate = true;
-      }
-    }
-
-    if (event.beat == 168 && PlayState.instance.currentSong.id == "milf")
-    {
-      if (getBoyfriend() != null && getBoyfriend().hasAnimation('danceLeft-hold'))
-      {
-        getBoyfriend().shouldAlternate = true;
-      }
-    }
   }
 
   var fastCarCanDrive:Bool = false;

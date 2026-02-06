@@ -53,6 +53,10 @@ class SoutRemnantsMixSong extends Song
     black.alpha = 1;
     PlayState.instance.camHUD.alpha = 0;
     fadeOut = false;
+
+    var boyfriend:BaseCharacter = PlayState.instance?.currentStage?.getBoyfriend() ?? null;
+    boyfriend.shouldAlternate = true;
+    boyfriend.idleSuffix = '-spooky';
   }
 
   function onSongRetry(event:ScriptEvent)

@@ -7,7 +7,7 @@
   "name": "Remnants Spooky Kids",
   "cameraOffsets": [0, 0],
   "flipX": false,
-  "startingAnimation": "idle",
+  "startingAnimation": "danceLeft",
   "singTime": 8,
   "isPixel": false,
   "assetPath": "characters/spooky-remnants",
@@ -26,7 +26,7 @@
       "prefix": "Idle0",
       "flipX": false,
       "looped": false,
-      "name": "idle"
+      "name": "idle-remnants"
     },
     {
       "flipY": false,

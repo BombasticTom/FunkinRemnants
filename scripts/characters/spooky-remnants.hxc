@@ -14,9 +14,17 @@ class SpookyRemnantsCharacter extends SparrowCharacter
   {
     super.playAnimation(name, restart, ignoreOther);
 
-    if (name == 'idleToDance') shouldAlternate = true;
+    if (name == 'idleToDance')
+    {
+      shouldAlternate = true;
+      idleSuffix = '';
+    }
 
-    if (name == 'danceToIdle') shouldAlternate = false;
+    if (name == 'danceToIdle')
+    {
+      shouldAlternate = false;
+      idleSuffix = '-remnants';
+    }
   }
 
   function onCreate(event:ScriptEvent)
