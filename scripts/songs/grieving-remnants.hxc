@@ -139,14 +139,6 @@ class GrievingRemnantsSong extends Song
             }
           });
 
-      case 92:
-        PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
-        fadeOut = false;
-
-      case 96:
-        PlayState.instance.camCutscene.fade(0xFF000000, 0.1, true, null, false);
-        fadeOut = true;
-
       case 218: // Fade em all out
         FlxTween.tween(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'), {alpha: 0}, 2.57, {ease: FlxEase.linear});
         FlxTween.tween(PlayState.instance.currentStage.getGirlfriend(), {alpha: 0}, 2.57, {ease: FlxEase.linear});
