@@ -1,92 +1,161 @@
 {
-  "version": "1.0.0",
-  "renderType": "sparrow",
-  "offsets": [0, 0],
-  "danceEvery": 1,
-  "scale": 1,
-  "flipX": true,
-  "name": "Remnants Pico",
-  "cameraOffsets": [0, 0],
-  "startingAnimation": "idle",
-  "isPixel": false,
-  "singTime": 8,
-  "assetPath": "characters/pico-remnants",
-  "healthIcon": {
-    "offsets": [0, 0],
-    "id": "pico-remnants",
-    "flipX": false,
-    "isPixel": false,
-    "scale": 1
-  },
-  "animations": [
-    {
-      "flipY": false,
-      "offsets": [5, -5],
-      "frameRate": 24,
-      "prefix": "Pico Idle Dance",
-      "flipX": false,
-      "looped": false,
-      "name": "idle"
-    },
-    {
-      "flipY": false,
-      "offsets": [-82, -40],
-      "frameRate": 24,
-      "prefix": "Pico NOTE LEFT0",
-      "flipX": false,
-      "looped": false,
-      "name": "singRIGHT"
-    },
-    {
-      "flipY": false,
-      "offsets": [-37, -112],
-      "frameRate": 24,
-      "prefix": "Pico Down Note0",
-      "flipX": false,
-      "looped": false,
-      "name": "singDOWN"
-    },
-    {
-      "flipY": false,
-      "offsets": [-32, -2],
-      "frameRate": 24,
-      "prefix": "pico Up note0",
-      "flipX": false,
-      "looped": false,
-      "name": "singUP"
-    },
-    {
-      "flipY": false,
-      "offsets": [61, -28],
-      "frameRate": 24,
-      "prefix": "Pico Note Right0",
-      "flipX": false,
-      "looped": false,
-      "name": "singLEFT"
-    },
-    {
-      "name": "singRIGHT-perfect",
-      "prefix": "PICO RIGHT PERFECT0",
-      "assetPath": "characters/pico-remnants_Perfect",
-      "offsets": [20, -10]
-    },
-    {
-      "name": "singDOWN-perfect",
-      "prefix": "PICO DOWN PERFECT0",
-      "assetPath": "characters/pico-remnants_Perfect",
-      "offsets": [82, -19]
-    },
-    {
-      "name": "singUP-perfect",
-      "prefix": "PICO UP PERFECT0",
-      "assetPath": "characters/pico-remnants_Perfect",
-      "offsets": [42, 56]
-    },
-    {
-      "name": "singLEFT-perfect",
-      "prefix": "PICO LEFT PERFECT0",
-      "assetPath": "characters/pico-remnants_Perfect",
-      "offsets": [153, -5]
-    }
-  ]
+	"version": "1.0.0",
+	"renderType": "multisparrow",
+	"offsets": [
+		0,
+		0
+	],
+	"danceEvery": 1,
+	"applyStageMatrix": false,
+	"scale": 1,
+	"flipX": true,
+	"name": "Remnants Pico",
+	"cameraOffsets": [
+		0,
+		0
+	],
+	"startingAnimation": "idle",
+	"isPixel": false,
+	"singTime": 8,
+	"assetPath": "characters/pico-remnants",
+	"healthIcon": {
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"id": "pico-remnants",
+		"flipX": false
+	},
+	"atlasSettings": {
+		"applyStageMatrix": false,
+		"useRenderTexture": false,
+		"filterQuality": 1,
+		"cacheOnLoad": false,
+		"swfMode": true
+	},
+	"animations": [
+		{
+			"offsets": [
+				5,
+				-5
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Pico Idle Dance",
+			"animType": "framelabel",
+			"name": "idle",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-82,
+				-40
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Pico NOTE LEFT0",
+			"animType": "framelabel",
+			"name": "singRIGHT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-37,
+				-112
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Pico Down Note0",
+			"animType": "framelabel",
+			"name": "singDOWN",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				-32,
+				-2
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "pico Up note0",
+			"animType": "framelabel",
+			"name": "singUP",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				61,
+				-28
+			],
+			"flipY": false,
+			"frameRate": 24,
+			"prefix": "Pico Note Right0",
+			"animType": "framelabel",
+			"name": "singLEFT",
+			"looped": false,
+			"flipX": false
+		},
+		{
+			"offsets": [
+				113,
+				-40
+			],
+			"prefix": "PICO RIGHT PERFECT0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singRIGHT-perfect",
+			"flipY": false,
+			"assetPath": "characters/pico-remnants_Perfect",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-19,
+				-48
+			],
+			"prefix": "PICO DOWN PERFECT0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singDOWN-perfect",
+			"flipY": false,
+			"assetPath": "characters/pico-remnants_Perfect",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				9,
+				25
+			],
+			"prefix": "PICO UP PERFECT0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singUP-perfect",
+			"flipY": false,
+			"assetPath": "characters/pico-remnants_Perfect",
+			"frameRate": 24
+		},
+		{
+			"offsets": [
+				-68,
+				-53
+			],
+			"prefix": "PICO LEFT PERFECT0",
+			"animType": "framelabel",
+			"flipX": false,
+			"looped": false,
+			"name": "singLEFT-perfect",
+			"flipY": false,
+			"assetPath": "characters/pico-remnants_Perfect",
+			"frameRate": 24
+		}
+	]
 }
