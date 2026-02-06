@@ -23,4 +23,3 @@ class BlammedSong extends Song
     return results;
   }
 }
-

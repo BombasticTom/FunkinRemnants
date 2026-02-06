@@ -108,4 +108,3 @@ class BFRemnantsOpponentCharacter extends MultiAnimateAtlasCharacter
     if (bounds != null) bounds.put();
   }
 }
-

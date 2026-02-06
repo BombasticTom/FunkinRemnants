@@ -37,4 +37,3 @@ class RemnantsContentUtil
     Save.instance.flush();
   }
 }
-

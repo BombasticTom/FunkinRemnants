@@ -172,4 +172,3 @@ class TutorialRemnantsMixSong extends Song
     ending = true;
   }
 }
-

@@ -110,4 +110,3 @@ class CocoaRemnantsMixSong extends Song
     }
   }
 }
-

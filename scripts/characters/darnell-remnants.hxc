@@ -145,4 +145,3 @@ class DarnellRemnantsCharacter extends AnimateAtlasCharacter
     trace('jarvis play knee can sound');
   }
 }
-

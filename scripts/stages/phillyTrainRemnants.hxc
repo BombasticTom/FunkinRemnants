@@ -206,4 +206,3 @@ class PhillyTrainRemnantsStage extends Stage
     refresh(); // This game fucking sucks so I added this
   }
 }
-

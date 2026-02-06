@@ -42,4 +42,3 @@ class MonsterRemnantsDarkCharacter extends SparrowCharacter
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
 }
-

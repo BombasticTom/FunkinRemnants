@@ -33,4 +33,3 @@ class RemnantsDiscordUtil extends Module
     PlayState.instance.discordRPCIcon = "" + ASSETS_URL + PlayState.instance.currentChart.characters.opponent + GITHUB_RAW + timeStamp;
   }
 }
-

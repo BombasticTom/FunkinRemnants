@@ -23,4 +23,3 @@ class GunsPicoMixSong extends Song
     return results;
   }
 }
-

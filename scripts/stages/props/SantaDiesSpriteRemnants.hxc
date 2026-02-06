@@ -32,4 +32,3 @@ class SantaDiesSpriteRemnants extends FunkinSprite
     this.anim.play("santa dead with hole", true);
   }
 }
-

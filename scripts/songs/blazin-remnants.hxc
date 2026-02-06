@@ -224,4 +224,3 @@ class BlazinRemnantsMixSong extends Song
     if (fadeTween != null) fadeTween.active = true;
   }
 }
-

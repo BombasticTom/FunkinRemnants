@@ -73,4 +73,3 @@ class UghSong extends Song
     hasPlayedCutscene = false;
   }
 }
-

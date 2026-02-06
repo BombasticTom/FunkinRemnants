@@ -154,4 +154,3 @@ class RemnantsMusicReplacer extends Module
     lastRememberedLabel = null;
   }
 }
-

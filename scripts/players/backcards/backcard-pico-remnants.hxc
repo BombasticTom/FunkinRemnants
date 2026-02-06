@@ -360,4 +360,3 @@ class PicoRemnantsCard extends BackingCard
     });
   }
 }
-

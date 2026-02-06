@@ -480,4 +480,3 @@ class PicoRemnantsBlazinCharacter extends AnimateAtlasCharacter
     moveToBack();
   }
 }
-

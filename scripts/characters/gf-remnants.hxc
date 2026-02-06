@@ -50,4 +50,3 @@ class GirlfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     super.dance(force);
   }
 }
-

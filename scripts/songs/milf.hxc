@@ -20,4 +20,3 @@ class MILFSong extends Song
     return results;
   }
 }
-

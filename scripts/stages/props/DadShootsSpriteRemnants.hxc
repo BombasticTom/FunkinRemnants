@@ -21,4 +21,3 @@ class DadShootsSpriteRemnants extends FunkinSprite
     this.anim.play("parents whole scene", true);
   }
 }
-

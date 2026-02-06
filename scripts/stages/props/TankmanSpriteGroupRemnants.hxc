@@ -152,4 +152,3 @@ class TankmanSpriteGroupRemnants extends FlxTypedSpriteGroup
     tankmanTimes = [];
   }
 }
-

@@ -136,4 +136,3 @@ class RemnantsTitle extends Module
     FlxG.state?.attractTimer?.cancel();
   }
 }
-
