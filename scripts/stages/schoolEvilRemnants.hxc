@@ -31,57 +31,45 @@ class SchoolEvilRemnantsStage extends Stage
   var colorShaderDad:AdjustColorShader;
   var colorShaderGf:AdjustColorShader;
 
-  public override function onCountdownStart(event:CountdownScriptEvent):Void
-  {
-    super.onCountdownStart(event);
-  }
-
   override function buildStage()
   {
     super.buildStage();
 
-    colorShaderBf = new AdjustColorShader();
-    colorShaderDad = new AdjustColorShader();
-    colorShaderGf = new AdjustColorShader();
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      colorShaderBf = new AdjustColorShader();
+      colorShaderDad = new AdjustColorShader();
+      colorShaderGf = new AdjustColorShader();
 
-    colorShaderBf.brightness = 0;
-    colorShaderBf.hue = -20;
-    colorShaderBf.contrast = 30;
-    colorShaderBf.saturation = -15;
+      colorShaderBf.brightness = 0;
+      colorShaderBf.hue = -20;
+      colorShaderBf.contrast = 30;
+      colorShaderBf.saturation = -15;
 
-    colorShaderGf.brightness = 0;
-    colorShaderGf.hue = -10;
-    colorShaderGf.contrast = 45;
-    colorShaderGf.saturation = -25;
+      colorShaderGf.brightness = 0;
+      colorShaderGf.hue = -10;
+      colorShaderGf.contrast = 45;
+      colorShaderGf.saturation = -25;
 
-    colorShaderDad.brightness = 0;
-    colorShaderDad.hue = -10;
-    colorShaderDad.contrast = 50;
-    colorShaderDad.saturation = -15;
+      colorShaderDad.brightness = 0;
+      colorShaderDad.hue = -10;
+      colorShaderDad.contrast = 50;
+      colorShaderDad.saturation = -15;
 
-    wiggleSky = new WiggleEffectRuntime(2 * 0.8, 4 * 0.4, 0.011, WiggleEffectType.DREAMY);
-    wiggleBack = new WiggleEffectRuntime(2 * 0.8, 4 * 0.4, 0.011, WiggleEffectType.DREAMY);
-    wiggleSchool = new WiggleEffectRuntime(2, 4, 0.017, WiggleEffectType.DREAMY);
-    wiggleGround = new WiggleEffectRuntime(2, 4, 0.007, WiggleEffectType.DREAMY);
-    wiggleTrees = new WiggleEffectRuntime(2, 4, 0.007, WiggleEffectType.DREAMY);
-    wiggleOverlay = new WiggleEffectRuntime(50, 90, 0.7, WiggleEffectType.DREAMY);
+      wiggleSky = new WiggleEffectRuntime(2 * 0.8, 4 * 0.4, 0.011, WiggleEffectType.DREAMY);
+      wiggleBack = new WiggleEffectRuntime(2 * 0.8, 4 * 0.4, 0.011, WiggleEffectType.DREAMY);
+      wiggleSchool = new WiggleEffectRuntime(2, 4, 0.017, WiggleEffectType.DREAMY);
+      wiggleGround = new WiggleEffectRuntime(2, 4, 0.007, WiggleEffectType.DREAMY);
+      wiggleTrees = new WiggleEffectRuntime(2, 4, 0.007, WiggleEffectType.DREAMY);
+      wiggleOverlay = new WiggleEffectRuntime(50, 90, 0.7, WiggleEffectType.DREAMY);
 
-    getNamedProp('sky').shader = wiggleSky;
-    getNamedProp('backTrees').shader = wiggleBack;
-    getNamedProp('school').shader = wiggleSchool;
-    getNamedProp('street').shader = wiggleGround;
-    getNamedProp('trees').shader = wiggleTrees;
-    getNamedProp('pixeloverlay').shader = wiggleOverlay;
-  }
-
-  function onBeatHit(event:SongTimeScriptEvent):Void
-  {
-    super.onBeatHit(event);
-  }
-
-  function onStepHit(event:SongTimeScriptEvent):Void
-  {
-    super.onStepHit(event);
+      getNamedProp('sky').shader = wiggleSky;
+      getNamedProp('backTrees').shader = wiggleBack;
+      getNamedProp('school').shader = wiggleSchool;
+      getNamedProp('street').shader = wiggleGround;
+      getNamedProp('trees').shader = wiggleTrees;
+      getNamedProp('pixeloverlay').shader = wiggleOverlay;
+    }
   }
 
   /**
@@ -91,15 +79,19 @@ class SchoolEvilRemnantsStage extends Stage
   {
     // Apply the shader automatically to each character as it gets added.
     super.addCharacter(character, charType);
-    trace('Applied stage shader to ' + character.characterName);
-    switch (charType)
+
+    if (!RemnantsOptions.getPerformanceOption())
     {
-      case CharacterType.BF:
-        character.shader = colorShaderBf;
-      case CharacterType.DAD:
-        character.shader = colorShaderDad;
-      case CharacterType.GF:
-        character.shader = colorShaderGf;
+      trace('Applied stage shader to ' + character.characterName);
+      switch (charType)
+      {
+        case CharacterType.BF:
+          character.shader = colorShaderBf;
+        case CharacterType.DAD:
+          character.shader = colorShaderDad;
+        case CharacterType.GF:
+          character.shader = colorShaderGf;
+      }
     }
   }
 
@@ -121,6 +113,7 @@ class SchoolEvilRemnantsStage extends Stage
   function kill()
   {
     super.kill();
+
     wiggleSky = null;
     wiggleBack = null;
     wiggleSchool = null;

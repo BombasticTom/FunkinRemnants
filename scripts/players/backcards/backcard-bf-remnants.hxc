@@ -154,18 +154,21 @@ class BFRemnantsCard extends BackingCard
     funnyScroll3.speed = -3.8;
     add(funnyScroll3);
 
-    glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
-      330).loadGraphic(Paths.image('freeplay/backingCards/bf-remnants/glow'));
-    glowDark.blend = 9;
-    add(glowDark);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+        330).loadGraphic(Paths.image('freeplay/backingCards/bf-remnants/glow'));
+      glowDark.blend = 9;
+      add(glowDark);
 
-    glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
-      330).loadGraphic(Paths.image('freeplay/backingCards/bf-remnants/glow'));
-    glow.blend = 0;
-    add(glow);
+      glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+        330).loadGraphic(Paths.image('freeplay/backingCards/bf-remnants/glow'));
+      glow.blend = 0;
+      add(glow);
 
-    glowDark.visible = false;
-    glow.visible = false;
+      glowDark.visible = false;
+      glow.visible = false;
+    }
 
     add(cardGlow);
   }
@@ -194,13 +197,16 @@ class BFRemnantsCard extends BackingCard
 
   function glowBeat()
   {
-    FlxTween.cancelTweensOf(glow);
-    FlxTween.cancelTweensOf(glowDark);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      FlxTween.cancelTweensOf(glow);
+      FlxTween.cancelTweensOf(glowDark);
 
-    glow.alpha = 1;
-    FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut});
-    glowDark.alpha = 0;
-    FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
+      glow.alpha = 1;
+      FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut});
+      glowDark.alpha = 0;
+      FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
+    }
   }
 
   public override function introDone():Void
@@ -214,9 +220,12 @@ class BFRemnantsCard extends BackingCard
     funnyScroll2.visible = true;
     moreWays2.visible = true;
     funnyScroll3.visible = true;
-    // grpTxtScrolls.visible = true;
-    glowDark.visible = true;
-    glow.visible = true;
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark.visible = true;
+      glow.visible = true;
+    }
   }
 
   public override function confirm():Void
@@ -230,8 +239,12 @@ class BFRemnantsCard extends BackingCard
     funnyScroll2.visible = false;
     moreWays2.visible = false;
     funnyScroll3.visible = false;
-    glowDark.visible = false;
-    glow.visible = false;
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark.visible = false;
+      glow.visible = false;
+    }
   }
 
   public override function disappear():Void
@@ -244,8 +257,12 @@ class BFRemnantsCard extends BackingCard
     funnyScroll2.visible = false;
     moreWays2.visible = false;
     funnyScroll3.visible = false;
-    glowDark.visible = false;
-    glow.visible = false;
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark.visible = false;
+      glow.visible = false;
+    }
   }
 
   // Thank you Sonic JAM...

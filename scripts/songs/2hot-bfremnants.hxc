@@ -24,13 +24,21 @@ class TwoHOTRemnantsBFMixSong extends Song
     hasPlayedCutscene = false;
   }
 
+  var bfAttackSound:FunkinSound;
+
   function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
 
-    // Precache the spraycan atlas.
+    // Precache the sounds used in 2hot.
+    FunkinMemory.cacheSound(Paths.sound("bfAttack", "week1"));
+
+    // Precache the assets for the song.
+    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/CanImpactParticle"));
+    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraypaintExplosionEZ"));
     FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1"));
 
+    // Fix GF position.
     PlayState.instance.currentStage.getGirlfriend().x = 1050;
   }
 
@@ -38,18 +46,6 @@ class TwoHOTRemnantsBFMixSong extends Song
   {
     if (currentVariation == 'bfremnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-  }
-
-  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
-  {
-    var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
-    var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
-    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
-    {
-      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
-      if (!hasBeatenPicoMix) results.remove('pico');
-    }
-    if (hasBeatenRemnantsMix) return results;
   }
 
   function onCountdownStart(event:ScriptEvent):Void
@@ -276,6 +272,8 @@ class TwoHOTRemnantsBFMixSong extends Song
     {
       can.scriptSet('currentState', STATE_SHOT);
       can.scriptCall('playCanShot');
+
+      // Play BF's attack sound.
       FunkinSound.playOnce(Paths.sound('bfAttack', "week1"), 1);
 
       new FlxTimer().start(1 / 24, function(tmr) {

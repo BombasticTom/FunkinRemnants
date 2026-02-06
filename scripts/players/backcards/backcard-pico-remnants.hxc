@@ -130,23 +130,27 @@ class PicoRemnantsCard extends BackingCard
     add(scrollMiddle);
     scrollMiddle.velocity.x = 220;
 
-    glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
-      330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
-    glowDark.blend = 9;
-    add(glowDark);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+        330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
+      glowDark.blend = 9;
+      add(glowDark);
 
-    glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
-      330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
-    glow.blend = 0;
-    add(glow);
+      glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+        330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
+      glow.blend = 0;
+      add(glow);
+
+      glow.visible = false;
+      glowDark.visible = false;
+    }
 
     blueBar.visible = false;
     scrollBack.visible = false;
     scrollLower.visible = false;
     scrollTop.visible = false;
     scrollMiddle.visible = false;
-    glow.visible = false;
-    glowDark.visible = false;
 
     confirmAtlas = FunkinSprite.createTextureAtlas((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) - 120, 55,
       "freeplay/backingCards/pico/pico-confirm");
@@ -247,8 +251,12 @@ class PicoRemnantsCard extends BackingCard
     scrollLower.visible = true;
     scrollTop.visible = true;
     scrollMiddle.visible = true;
-    glowDark.visible = true;
-    glow.visible = true;
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark.visible = true;
+      glow.visible = true;
+    }
 
     cardGlow.visible = true;
     FlxTween.tween(cardGlow, {alpha: 0}, 0.45, {ease: FlxEase.sineOut});
@@ -264,8 +272,12 @@ class PicoRemnantsCard extends BackingCard
     scrollLower.visible = false;
     scrollTop.visible = false;
     scrollMiddle.visible = false;
-    glowDark.visible = false;
-    glow.visible = false;
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark.visible = false;
+      glow.visible = false;
+    }
 
     cardGlow.visible = true;
     cardGlow.alpha = 1;
@@ -323,13 +335,16 @@ class PicoRemnantsCard extends BackingCard
 
   function glowBeat()
   {
-    FlxTween.cancelTweensOf(glow);
-    FlxTween.cancelTweensOf(glowDark);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      FlxTween.cancelTweensOf(glow);
+      FlxTween.cancelTweensOf(glowDark);
 
-    glow.alpha = 1;
-    FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut});
-    glowDark.alpha = 0;
-    FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
+      glow.alpha = 1;
+      FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut});
+      glowDark.alpha = 0;
+      FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
+    }
   }
 
   // Thank you Sonic JAM...

@@ -37,11 +37,17 @@ class RemnantsDiscordHelper extends Module
 
   function updateAlbum():Void
   {
-    PlayState.instance.discordRPCAlbum = ASSETS_URL + PlayState.instance.discordRPCAlbum + RAW_EXTENSION;
+    var album:String = 'album-' + (PlayState.instance?.currentChart?.album ?? 'remnants-general');
+    PlayState.instance.discordRPCAlbum = ASSETS_URL + album + RAW_EXTENSION;
+
+    PlayState.instance?.initDiscord();
   }
 
   function updateIcon():Void
   {
-    PlayState.instance.discordRPCIcon = ASSETS_URL + PlayState.instance.discordRPCIcon + RAW_EXTENSION;
+    var healthIcon:String = 'icon-' + (PlayState.instance?.currentStage?.getDad()?._data?.healthIcon?.id ?? 'bf-remnants');
+    PlayState.instance.discordRPCIcon = ASSETS_URL + healthIcon + RAW_EXTENSION;
+
+    PlayState.instance?.initDiscord();
   }
 }
