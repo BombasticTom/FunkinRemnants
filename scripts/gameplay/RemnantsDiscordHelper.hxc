@@ -1,0 +1,47 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import Date;
+
+class RemnantsDiscordHelper extends Module
+{
+  final ASSETS_URL:String = "https://remnants.tilnotdrip.org/discord/";
+  final RAW_EXTENSION:String = ".png";
+
+  function new()
+  {
+    super("remnants-discord-helper", 1);
+  }
+
+  var lastAlbum:String = null;
+  var lastIcon:String = null;
+
+  override public function onUpdate(event:UpdateScriptEvent):Void
+  {
+    super.onUpdate(event);
+
+    if (PlayState.instance == null) return;
+    if (!RemnantsContentUtil.remnantsContentEnabled()) return;
+
+    if (lastAlbum != PlayState.instance.discordRPCAlbum)
+    {
+      updateAlbum();
+      lastAlbum = PlayState.instance.discordRPCAlbum;
+    }
+
+    if (lastIcon != PlayState.instance.discordRPCIcon)
+    {
+      updateIcon();
+      lastIcon = PlayState.instance.discordRPCIcon;
+    }
+  }
+
+  function updateAlbum():Void
+  {
+    PlayState.instance.discordRPCAlbum = ASSETS_URL + PlayState.instance.discordRPCAlbum + RAW_EXTENSION;
+  }
+
+  function updateIcon():Void
+  {
+    PlayState.instance.discordRPCIcon = ASSETS_URL + PlayState.instance.discordRPCIcon + RAW_EXTENSION;
+  }
+}
