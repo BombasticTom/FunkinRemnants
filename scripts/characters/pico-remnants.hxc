@@ -26,3 +26,4 @@ class PicoRemnantsCharacter extends SparrowCharacter
     }
   }
 }
+

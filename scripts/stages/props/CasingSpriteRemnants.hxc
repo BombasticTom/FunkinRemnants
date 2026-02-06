@@ -63,3 +63,4 @@ class CasingSpriteRemnants extends FunkinSprite
     animation.play('idle');
   }
 }
+

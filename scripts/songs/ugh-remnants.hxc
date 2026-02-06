@@ -331,3 +331,4 @@ class UghSong extends Song
     cutsceneSkipped = false;
   }
 }
+

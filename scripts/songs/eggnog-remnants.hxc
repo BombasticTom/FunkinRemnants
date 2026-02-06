@@ -236,3 +236,4 @@ class EggnogRemnantsMixSong extends Song
     hasPlayedCutscene = false;
   }
 }
+

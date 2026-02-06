@@ -389,3 +389,4 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     }
   }
 }
+

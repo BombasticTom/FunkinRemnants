@@ -129,3 +129,4 @@ class MonsterRemnantsMixSong extends Song
     }
   }
 }
+

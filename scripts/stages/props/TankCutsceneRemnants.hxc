@@ -28,3 +28,4 @@ class TankCutsceneRemnants extends FunkinSprite
     this.anim.play(animName, force, reversed, frame);
   }
 }
+

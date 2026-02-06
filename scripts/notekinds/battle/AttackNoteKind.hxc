@@ -10,3 +10,4 @@ class AttackNoteKind extends NoteKind
     this.noanim = true;
   }
 }
+

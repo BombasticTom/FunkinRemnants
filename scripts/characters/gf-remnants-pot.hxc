@@ -50,3 +50,4 @@ class GirlfriendRemnantsPotCharacter extends MultiSparrowCharacter
     super.dance(force);
   }
 }
+

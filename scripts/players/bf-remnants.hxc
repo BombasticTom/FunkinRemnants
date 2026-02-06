@@ -13,3 +13,4 @@ class BFRemnantsPlayableCharacter extends PlayableCharacter
     return Save.instance.hasBeatenLevel('remnants-week');
   }
 }
+

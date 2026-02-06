@@ -533,3 +533,4 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     }
   }
 }
+

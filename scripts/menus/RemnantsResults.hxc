@@ -198,3 +198,4 @@ class RemnantsResults extends Module
     return format2;
   }
 }
+

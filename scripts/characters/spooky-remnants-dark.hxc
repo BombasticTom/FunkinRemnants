@@ -63,3 +63,4 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
     }
   }
 }
+

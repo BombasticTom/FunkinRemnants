@@ -30,3 +30,4 @@ class ParentsChristmasRemnantsCharacter extends MultiAnimateAtlasCharacter
     super.onNoteHit(event);
   }
 }
+

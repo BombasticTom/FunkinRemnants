@@ -37,3 +37,4 @@ class FreshRemnantsMixSong extends Song
     }
   }
 }
+

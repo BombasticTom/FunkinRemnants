@@ -11,3 +11,4 @@ class ABotAtlasSpriteRemnants extends FunkinSprite
     loadTextureAtlas("characters/abot-remnants/abotSystem", "shared");
   }
 }
+

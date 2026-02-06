@@ -315,3 +315,4 @@ class SpookyMansionRemnantsStage extends Stage
     stopThunders = false;
   }
 }
+

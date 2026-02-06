@@ -129,3 +129,4 @@ class SchoolEvilRemnantsStage extends Stage
     wiggleOverlay = null;
   }
 }
+

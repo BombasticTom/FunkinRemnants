@@ -15,3 +15,4 @@ class ResultsDebugKey extends Module
     if (FlxG.keys.justPressed.F9) FlxG.switchState(() -> new funkin.ui.debug.results.ResultsDebugSubState());
   }
 }
+

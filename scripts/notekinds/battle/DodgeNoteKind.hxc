@@ -10,3 +10,4 @@ class DodgeNoteKind extends NoteKind
     this.noanim = true;
   }
 }
+

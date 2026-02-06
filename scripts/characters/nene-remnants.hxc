@@ -532,3 +532,4 @@ class NeneRemnantsCharacter extends SparrowCharacter
     }
   }
 }
+

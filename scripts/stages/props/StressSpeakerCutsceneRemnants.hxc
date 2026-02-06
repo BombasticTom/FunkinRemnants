@@ -51,3 +51,4 @@ class StressSpeakerCutsceneRemnants extends FunkinSprite
     }
   }
 }
+

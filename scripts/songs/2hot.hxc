@@ -461,3 +461,4 @@ class TwoHOTSong extends Song
     hasPlayedCutscene = false;
   }
 }
+

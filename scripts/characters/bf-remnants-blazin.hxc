@@ -511,3 +511,4 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     return true;
   }
 }
+

@@ -225,10 +225,15 @@ class RosesRemnantsMixSong extends Song
         outro = true;
 
       case 282:
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.2, {ease: FlxEase.linear, onComplete: (_) -> {
-          PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
-	  PlayState.instance.disableKeys = true;
-	}});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.2,
+          {
+            ease: FlxEase.linear,
+            onComplete: (_) -> {
+              PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+              PlayState.instance.disableKeys = true;
+            }
+          });
     }
   }
 }
+

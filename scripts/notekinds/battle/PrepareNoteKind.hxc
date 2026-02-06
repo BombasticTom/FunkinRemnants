@@ -10,3 +10,4 @@ class PrepareNoteKind extends NoteKind
     this.noanim = true;
   }
 }
+

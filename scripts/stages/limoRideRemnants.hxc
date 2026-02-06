@@ -355,3 +355,4 @@ class LimoRideRemnantsStage extends Stage
     if (truckSequence != null) truckSequence.running = true;
   }
 }
+

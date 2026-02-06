@@ -36,3 +36,4 @@ class SpiritRemnantsCharacter extends PackerCharacter
     }
   }
 }
+

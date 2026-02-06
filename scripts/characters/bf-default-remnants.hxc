@@ -39,3 +39,4 @@ class BoyfriendDefaultRemnantsCharacter extends MultiAnimateAtlasCharacter
     super.playAnimation(name, restart, ignoreOther);
   }
 }
+

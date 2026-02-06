@@ -76,3 +76,4 @@ class RemnantsOptions extends Module
     return Save.instance.modOptions.get('remnantsBumpers');
   }
 }
+

@@ -14,3 +14,4 @@ class RemnantsWeekLevel extends Level
     return Save.instance.hasBeatenLevel('remnants-week') ? ["Remnants!"] : ["???"];
   }
 }
+

@@ -18,3 +18,4 @@ class OneColorShader extends FlxRuntimeShader
     this.setFloatArray('targetColor', targetColorArray);
   }
 }
+

@@ -146,3 +146,4 @@ class TankmanSpriteRemnants extends FunkinSprite
     // 	visible = true;
   }
 }
+

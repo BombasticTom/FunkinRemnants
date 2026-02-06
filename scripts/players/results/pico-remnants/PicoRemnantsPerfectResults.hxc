@@ -18,3 +18,4 @@ class PicoRemnantsPerfectResults extends FunkinSprite
     });
   }
 }
+

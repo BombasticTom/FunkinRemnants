@@ -164,9 +164,9 @@
           "flipY": false,
           "frameRate": 24
         }
-       ]
-      },
-     {
+      ]
+    },
+    {
       "name": "black",
       "zIndex": 110,
       "assetPath": "#000000",
