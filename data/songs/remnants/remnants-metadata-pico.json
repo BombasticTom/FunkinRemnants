@@ -25,6 +25,7 @@
     },
     "stage": "sketchRemnantsPico",
     "noteStyle": "funkin",
+    "stickerPack": "remnants-pico-test",
     "ratings": {
       "easy": 2,
       "hard": 4,
