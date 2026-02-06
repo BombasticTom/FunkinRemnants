@@ -27,13 +27,24 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
     return val;
   }
 
+  var lastX:Float = null;
+  var lastY:Float = null;
+
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     super.playAnimation(name, restart, ignoreOther);
     if (normalChar != null)
     {
       normalChar.playAnimation(name, restart, ignoreOther);
-      normalChar.setPosition(this.x, this.y);
+
+      if (normalChar != null && (lastX != this.x || lastY != this.y))
+      {
+        normalChar.x = this.feetPosition.x - normalChar.characterOrigin.x;
+        normalChar.y = this.feetPosition.y - normalChar.characterOrigin.y;
+
+        lastX = this.x;
+        lastY = this.y;
+      }
     }
 
     if (name == 'idleToDance')
@@ -55,6 +66,7 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
     if (!this.debug)
     {
       normalChar = CharacterDataParser.fetchCharacter('spooky-remnants');
+      normalChar.resetCharacter();
       normalChar.flipX = false;
       normalChar.zIndex = 199;
 

@@ -60,8 +60,8 @@ class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
 
       if (normalChar != null && (lastX != this.x || lastY != this.y))
       {
-        normalChar.x = (this.x + this.characterOrigin.x) - normalChar.characterOrigin.x;
-        normalChar.y = (this.y + this.characterOrigin.y) - normalChar.characterOrigin.y;
+        normalChar.x = feetPosition.x - normalChar.characterOrigin.x;
+        normalChar.y = feetPosition.y - normalChar.characterOrigin.y;
 
         lastX = this.x;
         lastY = this.y;

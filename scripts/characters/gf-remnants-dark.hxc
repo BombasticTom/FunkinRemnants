@@ -50,32 +50,40 @@ class GirlfriendRemnantsDarkCharacter extends SparrowCharacter
     return val;
   }
 
+  var lastX:Float = null;
+  var lastY:Float = null;
+
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     super.playAnimation(name, restart, ignoreOther);
     if (normalChar != null)
     {
       normalChar.playAnimation(name, restart, ignoreOther);
-      normalChar.setPosition(this.x, this.y);
+
+      if (normalChar != null && (lastX != this.x || lastY != this.y))
+      {
+        normalChar.x = this.feetPosition.x - normalChar.characterOrigin.x;
+        normalChar.y = this.feetPosition.y - normalChar.characterOrigin.y;
+
+        lastX = this.x;
+        lastY = this.y;
+      }
     }
   }
 
   function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
-    normalChar = CharacterDataParser.fetchCharacter('gf-remnants');
-    normalChar.flipX = false;
-    normalChar.zIndex = 99;
-
-    PlayState.instance.currentStage.add(normalChar);
-    PlayState.instance.currentStage.refresh(); // Apply z-index.
 
     if (!this.debug)
-    { // Gotta do it like this because the editor freaks out.
-      if (PlayState.instance.currentSong.id == null) return;
-      if (['south'].contains(PlayState.instance.currentSong.id)) this.idleSuffix = '-spooky';
-      else
-        this.idleSuffix = '';
+    {
+      normalChar = CharacterDataParser.fetchCharacter('gf-remnants');
+      normalChar.resetCharacter();
+      normalChar.flipX = false;
+      normalChar.zIndex = 99;
+
+      PlayState.instance.currentStage.add(normalChar);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
     }
   }
 }

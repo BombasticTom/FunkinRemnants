@@ -57,6 +57,10 @@ class SoutRemnantsMixSong extends Song
     var boyfriend:BaseCharacter = PlayState.instance?.currentStage?.getBoyfriend() ?? null;
     boyfriend.shouldAlternate = true;
     boyfriend.idleSuffix = '-spooky';
+
+    var gf:BaseCharacter = PlayState.instance?.currentStage?.getGirlfriend() ?? null;
+    gf.shouldAlternate = true;
+    gf.idleSuffix = '-spooky';
   }
 
   function onSongRetry(event:ScriptEvent)
