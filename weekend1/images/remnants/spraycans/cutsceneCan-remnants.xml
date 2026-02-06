@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="wked1_cutscene_1_can-remnants.png">
+<TextureAtlas imagePath="cutsceneCan-remnants.png">
 	<SubTexture name="can kick quick0000" x="2" y="2" width="194" height="117" frameX="0" frameY="-112" frameWidth="891" frameHeight="229"/>
 	<SubTexture name="can kick quick0001" x="198" y="2" width="151" height="156" frameX="-312" frameY="-29" frameWidth="891" frameHeight="229"/>
 	<SubTexture name="can kick quick0002" x="351" y="2" width="99" height="172" frameX="-575" frameY="0" frameWidth="891" frameHeight="229"/>

@@ -43,7 +43,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       "characters/Pico_Death_Retry-remnants",
       "characters/neneKnife-remnants",
       "shared:characters/picoExplosionDeath-remnants/spritemap1",
-      "weekend1:PicoBullet"
+      "weekend1:remnants/spraycans/PicoBullet"
     ];
 
     var snds:Array<String> = ["singed_loop", "Gun_Prep", "Pico_Bonk", "shot1", "shot2", "shot3", "shot4"];

@@ -15,7 +15,7 @@ class SpraycanAtlasSpriteRemnants extends FunkinSprite
   {
     super(x, y);
 
-    loadTextureAtlas("remnants/mechanics/spraycanAtlas", "weekend1",
+    loadTextureAtlas("remnants/spraycans/spraycanAtlas", "weekend1",
       {
         swfMode: true
       });
@@ -40,7 +40,7 @@ class SpraycanAtlasSpriteRemnants extends FunkinSprite
 
   public function playShotAnimation():Void
   {
-    var explode:FunkinSprite = FunkinSprite.createSparrow(this.x + 150, this.y - 250, "remnants/mechanics/SpraypaintExplosion");
+    var explode:FunkinSprite = FunkinSprite.createSparrow(this.x + 150, this.y - 250, "SpraypaintExplosion");
     explode.animation.addByPrefix("idle", "Explosion 1 movie0", 24, false);
     PlayState.instance.currentStage.add(explode);
 
@@ -52,7 +52,7 @@ class SpraycanAtlasSpriteRemnants extends FunkinSprite
 
   public function playHitExplosion():Void
   {
-    var explodeEZ:FunkinSprite = FunkinSprite.createSparrow(this.x + 750, this.y - 100, "remnants/mechanics/spraypaintExplosionEZ");
+    var explodeEZ:FunkinSprite = FunkinSprite.createSparrow(this.x + 750, this.y - 100, "spraypaintExplosionEZ");
     explodeEZ.animation.addByPrefix("idle", "explosion round 1 short0", 24, false);
     explodeEZ.animation.play("idle");
 

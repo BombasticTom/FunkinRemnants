@@ -17,7 +17,7 @@ class CasingSpriteRemnants extends FunkinSprite
 
     zIndex = 999;
 
-    loadSparrow('remnants/mechanics/PicoBullet');
+    loadSparrow('remnants/spraycans/PicoBullet');
 
     // Active needs to be true to enable updates.
     // This includes velocity/acceleration and frame animations.

@@ -228,9 +228,12 @@ class WinterHorrorlandRemnantsMixSong extends Song
 
   function endCutscene():Void
   {
-    cutsceneTimerManager.clear();
-    cutsceneTimerManager.destroy();
-    cutsceneTimerManager = null;
+    if (cutsceneTimerManager != null)
+    {
+      cutsceneTimerManager.clear();
+      cutsceneTimerManager.destroy();
+      cutsceneTimerManager = null;
+    }
 
     onSpookChristmas = false;
     santaDead.scriptCall("playDeadSanta");
@@ -264,13 +267,17 @@ class WinterHorrorlandRemnantsMixSong extends Song
     });
   }
 
-  function onPause()
+  public override function onPause(event:ScriptEvent)
   {
+    super.onPause(event);
+
     FlxTweenUtil.pauseTweensOf(black);
   }
 
-  function onResume()
+  public override function onResume(event:ScriptEvent)
   {
+    super.onResume(event);
+
     FlxTweenUtil.resumeTweensOf(black);
   }
 

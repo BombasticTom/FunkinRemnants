@@ -34,9 +34,9 @@ class TwoHOTRemnantsBFMixSong extends Song
     FunkinMemory.cacheSound(Paths.sound("bfAttack", "week1"));
 
     // Precache the assets for the song.
-    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/CanImpactParticle"));
-    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraypaintExplosionEZ"));
-    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1"));
+    FunkinMemory.cacheTexture(Paths.image("CanImpactParticle"));
+    FunkinMemory.cacheTexture(Paths.image("spraypaintExplosionEZ"));
+    FunkinMemory.cacheTexture(Paths.image("remnants/spraycans/spraycanAtlas/spritemap1"));
 
     // Fix GF position.
     PlayState.instance.currentStage.getGirlfriend().x = 1050;
