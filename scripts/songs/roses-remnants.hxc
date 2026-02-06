@@ -17,9 +17,9 @@ class RosesRemnantsMixSong extends Song
 {
   var bgSprite:FunkinSprite;
   var hasPlayedCutscene:Bool;
-  var intro:Bool = false;
+
+  var fadeOut:Bool = false;
   var outro:Bool = false;
-  var hudFade:Bool = false;
 
   public function new()
   {
@@ -38,12 +38,6 @@ class RosesRemnantsMixSong extends Song
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
-
-    if (!hudFade)
-    {
-      PlayState.instance.camHUD.alpha = 0;
-      PlayState.instance.camHUD.visible = true;
-    }
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
@@ -95,7 +89,7 @@ class RosesRemnantsMixSong extends Song
   {
     var targetDialogue = 'roses-remnants'; // Normal dialogue
 
-    if (!FlxG.random.bool(25))
+    if (!FlxG.random.bool(20))
     {
       if (!Preferences.naughtyness) targetDialogue += "-censored"; // Adds censored dialogue
     }
@@ -111,39 +105,6 @@ class RosesRemnantsMixSong extends Song
   }
 
   /**
-   * Don't replay the cutscene between restarts.
-   */
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    hasPlayedCutscene = true;
-
-    if (intro)
-    {
-      PlayState.instance.tweenCameraToPosition(710, 520, 0.001, FlxEase.instant);
-      PlayState.instance.camHUD.visible = false;
-    }
-
-    if (hudFade)
-    {
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-      hudFade = false;
-    }
-    else
-    {
-      PlayState.instance.camHUD.visible = false;
-    }
-
-    if (outro)
-    {
-      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-      outro = false;
-    }
-  }
-
-  /**
    * Replay the cutscene after leaving the song.
    */
   function onCreate(event:ScriptEvent):Void
@@ -151,10 +112,47 @@ class RosesRemnantsMixSong extends Song
     super.onCreate(event);
 
     hasPlayedCutscene = false;
-    intro = false;
+    fadeOut = false;
     outro = false;
-    hudFade = false;
-    PlayState.instance.camHUD.alpha = 0;
+
+    PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+
+    if (!Preferences.downscroll) // Move pop ups
+    {
+      PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll Offset
+    }
+    else
+    {
+      PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll Offset
+    }
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedCutscene = true;
+
+    if (fadeOut)
+    {
+      RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 0.5);
+      fadeOut = false;
+    }
+    else
+    {
+      PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+    }
+
+    if (outro)
+    {
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+      PlayState.instance.disableKeys = false;
+      outro = false;
+    }
   }
 
   public override function onDialogueEnd()
@@ -165,37 +163,35 @@ class RosesRemnantsMixSong extends Song
 
   function onGameOver(event:ScriptEvent):Void
   {
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    PlayState.instance.camHUD.alpha = 0;
-    hudFade = false;
+    fadeOut = false;
 
     if (outro)
     {
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+      PlayState.instance.camHUD.alpha = 0;
       RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-      outro = false;
     }
   }
 
   function onPause()
   {
+    PlayState.instance.camGame?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
   }
 
   function onResume()
   {
+    PlayState.instance.camGame?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
-  }
-
-  function onSongEnd(event:ScriptEvent):Void
-  {
-    PlayState.instance.camGame.visible = false;
   }
 
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
 
-    intro = true;
+    RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 3);
+    PlayState.instance.currentStage.getNamedProp('black').alpha = 1;
+    PlayState.instance.camGame.fade(0xFF000000, 0, true, null, false);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -205,18 +201,34 @@ class RosesRemnantsMixSong extends Song
     if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
-      case 14:
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
-      case 16:
-        intro = false;
-        hudFade = true;
-      case 184:
-        intro = true;
-      case 192:
-        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 1);
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
+      case 30:
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 2);
+
+      case 34:
+        RetroCameraFade.fadeBlack(PlayState.instance.camGame, 5, 0.25);
+        PlayState.instance.currentStage.getNamedProp('black').alpha = 0;
+        fadeOut = true;
+
+      case 225:
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 5, 0.55);
+
+      case 226:
+        PlayState.instance.currentStage.getNamedProp('black').alpha = 1;
+        RetroCameraFade.fadeBlack(PlayState.instance.camGame, 5, 0.55);
+
+      case 229:
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('black'), {alpha: 0}, 0.55, {ease: FlxEase.backIn});
+
+      case 278:
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 2);
+        fadeOut = false;
         outro = true;
-        hudFade = false;
+
+      case 282:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.2, {ease: FlxEase.linear, onComplete: (_) -> {
+          PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+	  PlayState.instance.disableKeys = true;
+	}});
     }
   }
 }

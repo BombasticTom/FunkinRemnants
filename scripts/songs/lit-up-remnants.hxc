@@ -61,6 +61,7 @@ class LitUpRemnantsMixSong extends Song
     PlayState.instance.camCutscene?.stopFX();
 
     PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, false);
+    PlayState.instance.camHUD.alpha = 1;
     PlayState.instance.tweenCameraToPosition(1415, 926, 0, FlxEase.instant);
     PlayState.instance.disableKeys = false;
     outro = false;

@@ -164,7 +164,15 @@
           "flipY": false,
           "frameRate": 24
         }
-      ]
+       ]
+      },
+     {
+      "name": "black",
+      "zIndex": 110,
+      "assetPath": "#000000",
+      "position": [-500, -1000],
+      "scale": [2400, 2000],
+      "scroll": [0, 0]
     }
   ],
   "cameraZoom": 1,

@@ -57,6 +57,7 @@ class SatinPantiesRemnantsMixSong extends Song
     PlayState.instance.camCutscene?.stopFX();
 
     PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, false);
+    PlayState.instance.camHUD.alpha = 1;
     PlayState.instance.tweenCameraToPosition(787, 400, 0, FlxEase.instant);
     PlayState.instance.disableKeys = false;
     outro = false;
@@ -88,24 +89,22 @@ class SatinPantiesRemnantsMixSong extends Song
     super.onBeatHit(event);
 
     if (PlayState.instance.isGameOverState) return;
-
-    if (event.beat == 72)
+    switch (event.beat)
     {
-      var boyfriend:BaseCharacter = PlayState.instance?.currentStage?.getBoyfriend() ?? null;
-      boyfriend.shouldAlternate = true;
-      boyfriend.idleSuffix = '-limodance';
-    }
-    else if (event.beat == 176)
-    {
-      PlayState.instance.camCutscene.fade(0xFF000000, 4.2, false, null, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1,
-        {
-          ease: FlxEase.linear,
-          onComplete: function(_) {
-            PlayState.instance.disableKeys = true;
-          }
-        });
-      outro = true;
+      case 72:
+        var boyfriend:BaseCharacter = PlayState.instance?.currentStage?.getBoyfriend() ?? null;
+        boyfriend.shouldAlternate = true;
+        boyfriend.idleSuffix = '-limodance';
+      case 176:
+        PlayState.instance.camCutscene.fade(0xFF000000, 4.2, false, null, false);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1,
+          {
+            ease: FlxEase.linear,
+            onComplete: function(_) {
+              PlayState.instance.disableKeys = true;
+            }
+          });
+        outro = true;
     }
   }
 }
