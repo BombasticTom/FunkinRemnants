@@ -3,9 +3,20 @@ import funkin.graphics.FunkinSprite;
 import funkin.play.song.Song;
 import funkin.play.PlayState;
 import funkin.save.Save;
+import flixel.addons.display.FlxBackdrop;
+import funkin.util.FlxTweenUtil;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 
 class LitUpBFRemnantsMixSong extends Song
 {
+  var storm0:FlxBackdrop;
+  var storm1:FlxBackdrop;
+  var storm2:FlxBackdrop;
+  var storm3:FlxBackdrop;
+  var storm4:FlxBackdrop;
+  var storm5:FlxBackdrop;
+
   public function new()
   {
     super('lit-up',
@@ -50,6 +61,163 @@ class LitUpBFRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+    PlayState.instance.currentStage.getNamedProp.getGirlfriend().x = 1050;
+    stormOff(1);
+  }
+
+  override function buildStage()
+  {
+    super.buildStage();
+
+    storm0 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm0.setPosition(-650, -850);
+    storm0.scrollFactor.set(1.1, 1.1);
+    storm0.zIndex = 5001;
+    storm0.blend = 0;
+    storm0.color = 0xFFad9e76;
+    storm0.alpha = 0;
+    storm0.velocity.x = -4000;
+    storm0.scale.set(3, 3);
+
+    storm1 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm1.setPosition(-650, -100);
+    storm1.scrollFactor.set(1.1, 1.1);
+    storm1.zIndex = 5001;
+    storm1.blend = 0;
+    storm1.color = 0xFFad9e76;
+    storm1.alpha = 0;
+    storm1.velocity.x = 2700;
+    storm1.scale.set(1.4, 1.4);
+
+    storm2 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
+    storm2.setPosition(-650, 100);
+    storm2.scrollFactor.set(1.2, 1.2);
+    storm2.zIndex = 5000;
+    storm2.blend = 0;
+    storm2.color = 0xFF614621;
+    storm2.alpha = 0;
+    storm2.velocity.x = -2100;
+    storm2.scale.set(1.2, 1.2);
+
+    storm3 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm3.setPosition(-650, -500);
+    storm3.scrollFactor.set(0.8, 0.8);
+    storm3.zIndex = 39;
+    storm3.blend = 0;
+    storm3.color = 0xFF614621;
+    storm3.alpha = 0;
+    storm3.velocity.x = 900;
+    storm3.scale.set(1.5, 1.5);
+
+    storm4 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
+    storm4.setPosition(-650, -580);
+    storm4.scrollFactor.set(0.6, 0.6);
+    storm4.zIndex = 39;
+    storm4.blend = 0;
+    storm4.color = 0xFF614621;
+    storm4.alpha = 0;
+    storm4.velocity.x = 1300;
+    storm4.scale.set(1.5, 1.5);
+
+    storm5 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm5.setPosition(-650, -500);
+    storm5.scrollFactor.set(0.2, 0.2);
+    storm5.zIndex = 39;
+    storm5.blend = 0;
+    storm5.color = 0xFF614621;
+    storm5.alpha = 0;
+    storm5.velocity.x = 1200;
+    storm5.scale.set(1.5, 1.5);
+
+    PlayState.instance.currentStage.add(storm0);
+    PlayState.instance.currentStage.add(storm1);
+    PlayState.instance.currentStage.add(storm2);
+    PlayState.instance.currentStage.add(storm3);
+    PlayState.instance.currentStage.add(storm4);
+    PlayState.instance.currentStage.add(storm5);
+
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+  }
+
+  function stormOn(duration:Float)
+  {
+    if (duration == null) duration = 1;
+
+    // Prevent new tweens from being overridden
+    FlxTween.cancelTweensOf(storm0);
+    FlxTween.cancelTweensOf(storm1);
+    FlxTween.cancelTweensOf(storm2);
+    FlxTween.cancelTweensOf(storm3);
+    FlxTween.cancelTweensOf(storm4);
+    FlxTween.cancelTweensOf(storm5);
+
+    FlxTween.tween(storm0, {alpha: 1}, duration);
+    FlxTween.tween(storm1, {alpha: 0.9}, duration);
+    FlxTween.tween(storm2, {alpha: 1}, duration);
+    FlxTween.tween(storm3, {alpha: 0.5}, duration);
+    FlxTween.tween(storm4, {alpha: 0.5}, duration);
+    FlxTween.tween(storm5, {alpha: 0.5}, duration);
+  }
+
+  function stormOff(duration:Float)
+  {
+    if (duration == null) duration = 1;
+
+    // Prevent new tweens from being overridden
+    FlxTween.cancelTweensOf(storm0);
+    FlxTween.cancelTweensOf(storm1);
+    FlxTween.cancelTweensOf(storm2);
+    FlxTween.cancelTweensOf(storm3);
+    FlxTween.cancelTweensOf(storm4);
+    FlxTween.cancelTweensOf(storm5);
+
+    FlxTween.tween(storm0, {alpha: 0}, duration);
+    FlxTween.tween(storm1, {alpha: 0}, duration);
+    FlxTween.tween(storm2, {alpha: 0}, duration);
+    FlxTween.tween(storm3, {alpha: 0}, duration);
+    FlxTween.tween(storm4, {alpha: 0}, duration);
+    FlxTween.tween(storm5, {alpha: 0}, duration);
+  }
+
+  public override function onPause(event:PauseScriptEvent)
+  {
+    super.onPause(event);
+
+    FlxTweenUtil.pauseTweensOf(storm0);
+    FlxTweenUtil.pauseTweensOf(storm1);
+    FlxTweenUtil.pauseTweensOf(storm2);
+    FlxTweenUtil.pauseTweensOf(storm3);
+    FlxTweenUtil.pauseTweensOf(storm4);
+    FlxTweenUtil.pauseTweensOf(storm5);
+  }
+
+  public override function onResume(event:ScriptEvent)
+  {
+    super.onResume(event);
+
+    FlxTweenUtil.resumeTweensOf(storm0);
+    FlxTweenUtil.resumeTweensOf(storm1);
+    FlxTweenUtil.resumeTweensOf(storm2);
+    FlxTweenUtil.resumeTweensOf(storm3);
+    FlxTweenUtil.resumeTweensOf(storm4);
+    FlxTweenUtil.resumeTweensOf(storm5);
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (PlayState.instance.isGameOverState) return;
+    switch (event.beat)
+    {
+      case 128:
+        stormOn(1);
+      case 160:
+        stormOff(1);
+      case 288:
+        stormOn(1);
+      case 304:
+        stormOff(1);
+    }
   }
 }

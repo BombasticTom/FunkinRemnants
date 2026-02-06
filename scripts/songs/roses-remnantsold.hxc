@@ -1,0 +1,222 @@
+import funkin.Preferences;
+import funkin.save.Save;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.util.HapticUtil;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.module.ModuleHandler;
+import funkin.audio.FunkinSound;
+import funkin.util.FlxTweenUtil;
+import funkin.effects.RetroCameraFade;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+import flixel.FlxG;
+
+class RosesOldRemnantsMixSong extends Song
+{
+  var bgSprite:FunkinSprite;
+  var hasPlayedCutscene:Bool;
+  var intro:Bool = false;
+  var outro:Bool = false;
+  var hudFade:Bool = false;
+
+  public function new()
+  {
+    super('roses',
+      {
+        variation: 'remnantsold'
+      });
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    return false;
+  }
+
+  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!hudFade)
+    {
+      PlayState.instance.camHUD.alpha = 0;
+      PlayState.instance.camHUD.visible = true;
+    }
+
+    // Skip the cutscene if we're playtesting in the Chart Editor.
+    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      if (bgSprite == null)
+      {
+        bgSprite = new FunkinSprite(0, 0);
+        bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+        bgSprite.cameras = [PlayState.instance.camCutscene];
+        bgSprite.zIndex = -10000;
+        PlayState.instance.add(bgSprite);
+        PlayState.instance.refresh();
+      }
+
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+      event.cancel();
+    }
+    else
+    {
+      if (!hasPlayedCutscene)
+      {
+        trace('Pausing countdown to play cutscene.');
+
+        hasPlayedCutscene = true;
+        event.cancel(); // CANCEL THE COUNTDOWN!
+
+        // Play a SFX
+        FunkinSound.playOnce(Paths.sound('ANGRY_TEXT_BOX'), 1.0);
+        HapticUtil.vibrate(0.1, 0.5, 1, 1);
+
+        if (bgSprite != null)
+        {
+          FlxTween.tween(bgSprite, {alpha: 0}, 0.15, {startDelay: 0.1}, function() {
+            bgSprite.visible = false;
+          });
+        }
+
+        new FlxTimer().start(2, _ -> {
+          startDialogue();
+        });
+      }
+    }
+  }
+
+  function startDialogue()
+  {
+    var targetDialogue = 'roses-remnants'; // Normal dialogue
+
+    if (!FlxG.random.bool(20))
+    {
+      if (!Preferences.naughtyness) targetDialogue += "-censored"; // Adds censored dialogue
+    }
+    else
+    {
+      targetDialogue += "-secret"; // Adds BEE MOVIE
+    }
+
+    FunkinSound.playOnce(Paths.sound('ANGRY'), 1);
+
+    trace('Playing dialogue...');
+    PlayState.instance.startConversation(targetDialogue);
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    hasPlayedCutscene = true;
+
+    if (intro)
+    {
+      PlayState.instance.tweenCameraToPosition(710, 520, 0.001, FlxEase.instant);
+      PlayState.instance.camHUD.visible = false;
+    }
+
+    if (hudFade)
+    {
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
+      hudFade = false;
+    }
+    else
+    {
+      PlayState.instance.camHUD.visible = false;
+    }
+
+    if (outro)
+    {
+      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      outro = false;
+    }
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    hasPlayedCutscene = false;
+    intro = false;
+    outro = false;
+    hudFade = false;
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  public override function onDialogueEnd()
+  {
+    // We may need to wait for the outro to play.
+    Countdown.performCountdown();
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    hudFade = false;
+
+    if (outro)
+    {
+      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
+      outro = false;
+    }
+  }
+
+  function onPause()
+  {
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongEnd(event:ScriptEvent):Void
+  {
+    PlayState.instance.camGame.visible = false;
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    intro = true;
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (PlayState.instance.isGameOverState) return;
+    switch (event.beat)
+    {
+      case 14:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
+      case 16:
+        intro = false;
+        hudFade = true;
+      case 184:
+        intro = true;
+      case 192:
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 1);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
+        outro = true;
+        hudFade = false;
+    }
+  }
+}
