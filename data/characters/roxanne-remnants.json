@@ -72,6 +72,18 @@
       "looped": true,
       "frameIndices": [6, 7, 8, 9],
       "offsets": [0, 0]
+    },
+    {
+      "name": "shocked",
+      "prefix": "Shocked",
+      "offsets": [0, 0]
+    },
+    {
+      "name": "shocked-hold",
+      "prefix": "Shocked",
+      "looped": true,
+      "frameIndices": [12, 13, 14, 15],
+      "offsets": [0, 0]
     }
   ]
 }
