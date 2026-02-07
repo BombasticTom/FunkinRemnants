@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Download Source Code
-        uses: FunkinCrew/ci-checkout@v7.3.3
+        uses: actions/checkout@main
 
       - uses: FunkinCrew/ci-haxe@v3
         with:
