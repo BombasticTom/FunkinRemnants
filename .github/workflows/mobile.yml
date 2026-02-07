@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Download Source Code
         uses: actions/checkout@main
+        with:
+          clean: true
+          persist-credentials: false
 
       - uses: FunkinCrew/ci-haxe@v3
         with:
