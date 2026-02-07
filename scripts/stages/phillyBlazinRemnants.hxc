@@ -87,7 +87,7 @@ class PhillyBlazinRemnantsStage extends Stage
     if (!RemnantsOptions.getPerformanceOption())
     {
       scrollingSky = new FlxTiledSprite(Paths.image('remnants/blazin/skyBlur'), 4000, 495, true, false);
-      scrollingSky.setPosition(-700, -120);
+      scrollingSky.setPosition(-700, -200);
       scrollingSky.scrollFactor.set();
       scrollingSky.zIndex = 10;
 
