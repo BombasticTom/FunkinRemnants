@@ -121,7 +121,7 @@ class SpookeezRemnantsMixSong extends Song
         fadeOut = true;
       case 139:
         new FlxTimer().start(0.3, _ -> {
- 	  PlayState.instance.currentStage.changeAmbiance(true, 0.1);
+          PlayState.instance.currentStage.changeAmbiance(true, 0.1);
         });
       case 240:
         PlayState.instance.camCutscene.fade(0xFF000000, 1.66, false, null, false);

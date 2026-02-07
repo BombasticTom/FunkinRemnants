@@ -121,7 +121,7 @@ class SpookeezOldRemnantsMixSong extends Song
         fadeOut = true;
       case 143:
         PlayState.instance.camCutscene.fade(0xFF000000, 0.35, false, null, false);
-	PlayState.instance.currentStage.changeAmbiance(true, 0.35);
+        PlayState.instance.currentStage.changeAmbiance(true, 0.35);
         fadeOut = false;
       case 144:
         PlayState.instance.camCutscene.fade(0xFFFFFFFF, 0.5, true, null, false);

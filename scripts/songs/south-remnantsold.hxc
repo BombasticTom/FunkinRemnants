@@ -116,7 +116,7 @@ class SouthOldRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 30:
-         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.7, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.7, {ease: FlxEase.linear});
       case 32:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
         PlayState.instance.currentStage.changeAmbiance(true, 0.0001);
