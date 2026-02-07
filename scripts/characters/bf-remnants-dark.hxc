@@ -40,6 +40,8 @@ class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
   override function set_alpha(val:Float):Float
   {
     super.set_alpha(val);
+    if (normalChar == null) return val;
+
     if (val == 1) normalChar.alpha = 0.0001;
     else
       normalChar.alpha = 1;
@@ -54,37 +56,29 @@ class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
     if (name == "hey" || name == "cheer" || name == "lights") PlayState.instance.vocals.playerVolume = 1;
 
     super.playAnimation(name, restart, ignoreOther);
-    if (normalChar != null)
-    {
-      normalChar.playAnimation(name, restart, ignoreOther);
-
-      if (normalChar != null && (lastX != this.x || lastY != this.y))
-      {
-        normalChar.x = feetPosition.x - normalChar.characterOrigin.x;
-        normalChar.y = feetPosition.y - normalChar.characterOrigin.y;
-
-        lastX = this.x;
-        lastY = this.y;
-      }
-    }
+    if (normalChar != null) normalChar.playAnimation(name, restart, ignoreOther);
   }
 
-  function onCreate(event:ScriptEvent)
+  function onAdd(event:ScriptEvent)
   {
-    super.onCreate(event);
+    super.onAdd(event);
 
-    if (!this.debug) // Gotta do it like this because the editor freaks out.
+    if (!this.debug)
     {
       normalChar = CharacterDataParser.fetchCharacter('bf-remnants');
-      normalChar.resetCharacter();
-      normalChar.setPosition(this.x, this.y);
-      normalChar.flipX = false;
-      normalChar.zIndex = 299;
+      PlayState.instance.currentStage.addCharacter(normalChar, characterType);
 
-      if (PlayState.instance.currentSong.id == null) return;
+      for (char in PlayState.instance.currentStage.characters.keys())
+      {
+        if (PlayState.instance.currentStage.characters.get(char) == normalChar)
+        {
+          PlayState.instance.currentStage.characters.set(char, super);
+          break;
+        }
+      }
 
-      PlayState.instance.currentStage.add(normalChar);
-      PlayState.instance.currentStage.refresh(); // Apply z-index.
+      normalChar.zIndex = normalChar.zIndex - 1;
+      alpha = alpha;
     }
   }
 

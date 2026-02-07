@@ -55,21 +55,8 @@ class LitUpBFRemnantsMixSong extends Song
     super.onCreate(event);
 
     PlayState.instance.currentStage.getGirlfriend().x = 1050;
-  }
 
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    PlayState.instance.currentStage.getNamedProp.getGirlfriend().x = 1050;
-    stormOff(1);
-  }
-
-  override function buildStage()
-  {
-    super.buildStage();
-
-    storm0 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
     storm0.setPosition(-650, -850);
     storm0.scrollFactor.set(1.1, 1.1);
     storm0.zIndex = 5001;
@@ -79,7 +66,7 @@ class LitUpBFRemnantsMixSong extends Song
     storm0.velocity.x = -4000;
     storm0.scale.set(3, 3);
 
-    storm1 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
     storm1.setPosition(-650, -100);
     storm1.scrollFactor.set(1.1, 1.1);
     storm1.zIndex = 5001;
@@ -89,7 +76,7 @@ class LitUpBFRemnantsMixSong extends Song
     storm1.velocity.x = 2700;
     storm1.scale.set(1.4, 1.4);
 
-    storm2 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
+    storm2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
     storm2.setPosition(-650, 100);
     storm2.scrollFactor.set(1.2, 1.2);
     storm2.zIndex = 5000;
@@ -99,7 +86,7 @@ class LitUpBFRemnantsMixSong extends Song
     storm2.velocity.x = -2100;
     storm2.scale.set(1.2, 1.2);
 
-    storm3 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
     storm3.setPosition(-650, -500);
     storm3.scrollFactor.set(0.8, 0.8);
     storm3.zIndex = 39;
@@ -109,7 +96,7 @@ class LitUpBFRemnantsMixSong extends Song
     storm3.velocity.x = 900;
     storm3.scale.set(1.5, 1.5);
 
-    storm4 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
+    storm4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
     storm4.setPosition(-650, -580);
     storm4.scrollFactor.set(0.6, 0.6);
     storm4.zIndex = 39;
@@ -119,7 +106,7 @@ class LitUpBFRemnantsMixSong extends Song
     storm4.velocity.x = 1300;
     storm4.scale.set(1.5, 1.5);
 
-    storm5 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+    storm5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
     storm5.setPosition(-650, -500);
     storm5.scrollFactor.set(0.2, 0.2);
     storm5.zIndex = 39;
@@ -137,6 +124,14 @@ class LitUpBFRemnantsMixSong extends Song
     PlayState.instance.currentStage.add(storm5);
 
     PlayState.instance.currentStage.refresh(); // Apply z-index.
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+    stormOff(1);
   }
 
   function stormOn(duration:Float)
