@@ -336,6 +336,29 @@ class ThornsRemnantsMixSong extends Song
     PlayState.instance.startConversation(targetDialogue);
   }
 
+  public override function onDialogueEnd()
+  {
+    // We may need to wait for the outro to play.
+    Countdown.performCountdown();
+  }
+
+  /**
+   * Replay the cutscene after leaving the song.
+   */
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    stopSenpai = false;
+    cutsceneSkipped = false;
+    canSkipCutscene = false;
+    hasPlayedCutscene = false;
+
+    FlxG.camera.fade(0xFF000000, 0, false);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+  }
+
   /**
    * Don't replay the cutscene between restarts.
    */
@@ -383,29 +406,6 @@ class ThornsRemnantsMixSong extends Song
   function onSongEnd(event:ScriptEvent):Void
   {
     PlayState.instance.camGame.visible = false;
-  }
-
-  /**
-   * Replay the cutscene after leaving the song.
-   */
-  function onCreate(event:ScriptEvent):Void
-  {
-    super.onCreate(event);
-
-    stopSenpai = false;
-    cutsceneSkipped = false;
-    canSkipCutscene = false;
-    hasPlayedCutscene = false;
-
-    FlxG.camera.fade(0xFF000000, 0, false);
-    PlayState.instance.camHUD.alpha = 0;
-    fadeOut = false;
-  }
-
-  public override function onDialogueEnd()
-  {
-    // We may need to wait for the outro to play.
-    Countdown.performCountdown();
   }
 
   function onSongStart(event:ScriptEvent):Void

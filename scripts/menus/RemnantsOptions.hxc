@@ -16,11 +16,14 @@ class RemnantsOptions extends Module
   // Constants to prevent long code...
   final OPTION_ARRAY:Array<String, String> = [
     ["Show Remnants Bumpers", "When disabled, Remnants bumpers will no longer play."],
-    ["Remnants Performance", "When enabled, it disables shaders and other effects to improve performance on low-end devices."]
+    [
+      "Remnants Performance",
+      "When enabled, it disables shaders and other effects to improve performance on low-end devices."
+    ]
   ];
 
   /**
-  * If the options doesn't exist, create them and set a default value.
+   * If the options doesn't exist, create them and set a default value.
   **/
   public function onCreate(event:ScriptEvent)
   {

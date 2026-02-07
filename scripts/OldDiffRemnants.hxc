@@ -1,5 +1,4 @@
 // IF 0.8.2 COMES OUT DELETE THIS WHOLE FILE
-
 import funkin.util.Constants;
 import funkin.modding.module.Module;
 import funkin.modding.ModStore;

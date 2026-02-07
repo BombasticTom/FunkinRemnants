@@ -6,6 +6,7 @@ import funkin.util.FlxTweenUtil;
 import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
 
 class SpookeezRemnantsMixSong extends Song
 {
@@ -118,6 +119,10 @@ class SpookeezRemnantsMixSong extends Song
       case 15:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
         fadeOut = true;
+      case 139:
+        new FlxTimer().start(0.3, _ -> {
+ 	  PlayState.instance.currentStage.changeAmbiance(true, 0.1);
+        });
       case 240:
         PlayState.instance.camCutscene.fade(0xFF000000, 1.66, false, null, false);
         fadeOut = false;

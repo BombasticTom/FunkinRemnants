@@ -1,1 +1,135 @@
+import funkin.modding.module.ModuleHandler;
+import funkin.save.Save;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.util.FlxTweenUtil;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.audio.FunkinSound;
 
+class SpookeezOldRemnantsMixSong extends Song
+{
+  var fadeOut:Bool = false;
+
+  public function new()
+  {
+    super('spookeez',
+      {
+        variation: 'remnantsold'
+      });
+  }
+
+  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'remnantsold') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    return false;
+  }
+
+  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
+  {
+    var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
+    var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+    {
+      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
+      if (!hasBeatenPicoMix) results.remove('pico');
+    }
+    if (hasBeatenRemnantsMix) return results;
+  }
+
+  function onCountdownStart(event:ScriptEvent):Void
+  {
+    super.onCountdownStart(event);
+
+    if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
+      && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
+    {
+      event.cancel();
+      ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
+    }
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
+    fadeOut = false;
+
+    var dad:BaseCharacter = PlayState.instance?.currentStage?.getDad() ?? null;
+    dad.shouldAlternate = false;
+    dad.idleSuffix = '-remnants';
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    PlayState.instance.camCutscene?.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+
+    if (fadeOut)
+    {
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, false);
+      fadeOut = false;
+    }
+    else
+    {
+      PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    PlayState.instance.camCutscene?.stopFX();
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
+    fadeOut = false;
+  }
+
+  function onPause()
+  {
+    PlayState.instance.camCutscene?.active = false;
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume()
+  {
+    PlayState.instance.camCutscene?.active = true;
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onSongStart(event:ScriptEvent):Void
+  {
+    super.onSongStart(event);
+
+    PlayState.instance.camCutscene.fade(0xFF000000, 3, true, null, false);
+    PlayState.instance.camHUD.fade(0xFF000000, 0, true, null, false);
+    PlayState.instance.camHUD.alpha = 0;
+  }
+
+  function onBeatHit(event:ScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (PlayState.instance.isGameOverState) return;
+    switch (event.beat)
+    {
+      case 15:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+        fadeOut = true;
+      case 143:
+        PlayState.instance.camCutscene.fade(0xFF000000, 0.35, false, null, false);
+	PlayState.instance.currentStage.changeAmbiance(true, 0.35);
+        fadeOut = false;
+      case 144:
+        PlayState.instance.camCutscene.fade(0xFFFFFFFF, 0.5, true, null, false);
+        fadeOut = true;
+      case 240:
+        PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
+        FunkinSound.playOnce(Paths.soundRandom('thunder_', 1, 2), 1);
+        fadeOut = false;
+    }
+  }
+}

@@ -206,45 +206,6 @@ class SpookyMansionRemnantsStage extends Stage
         doLightningStrike(true, leBeat);
       });
     }
-
-    if (PlayState.instance.isGameOverState) return;
-    if (PlayState.instance.currentSong != null)
-    {
-      if (event.beat == 139 && PlayState.instance.currentSong.id == "spookeez")
-      {
-        new FlxTimer().start(0.3, _ -> {
-          changeAmbiance(true, 0.1);
-        });
-      }
-      if (PlayState.instance.currentSong.id == "south")
-      {
-        switch (event.beat)
-        {
-          case 32:
-            changeAmbiance(true, 0.0001);
-          case 64:
-            changeAmbiance(false, 1);
-          case 96:
-            changeAmbiance(true, 1);
-          case 192:
-            changeAmbiance(false, 1);
-          case 222:
-            changeAmbiance(true, 0.3);
-        }
-      }
-      if (PlayState.instance.currentSong.id == "monster")
-      {
-        switch (event.beat)
-        {
-          case 0:
-            changeAmbiance(true, 0.00001);
-          case 128:
-            changeAmbiance(false, 0.1);
-          case 227:
-            changeAmbiance(true, 0.5);
-        }
-      }
-    }
   }
 
   function changeAmbiance(goDark:Bool, duration:Float)
