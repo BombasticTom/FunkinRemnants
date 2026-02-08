@@ -274,7 +274,7 @@ class BFRemnantsCard extends BackingCard
 
       var curLevelId:String = event.capsule.freeplayData?.levelId;
 
-      if(curLevelId == 'momDadDivorceRemnants-week' && curLevelId != prevLevelId){
+      if(curLevelId == 'remnants-modWeek4-divorce' && curLevelId != prevLevelId){
       moreWays.updateText('ABSOLUTE CINEMA');
       funnyScroll.updateText('HEARTBREAKING');
       txtNuts.updateText('FNF SONGS THAT MADE ME CRY');
@@ -282,7 +282,7 @@ class BFRemnantsCard extends BackingCard
       moreWays2.updateText('ABSOLUTE CINEMA');
       funnyScroll3.updateText('HEARTBREAKING');
     }
-    else if(prevLevelId == 'momDadDivorceRemnants-week' && curLevelId != prevLevelId)
+    else if(prevLevelId == 'remnants-modWeek4-divorce' && curLevelId != prevLevelId)
     {
       var player = PlayerRegistry.instance.fetchEntry(this.currentCharacter);
 
