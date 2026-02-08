@@ -6,10 +6,14 @@ import funkin.util.FlxTweenUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.Preferences;
+import funkin.audio.FunkinSound;
 import funkin.play.cutscene.VideoCutscene;
+import flixel.FlxG;
 
 class GrievingRemnantsSong extends Song
 {
+  var utterShock:Bool = FlxG.random.bool(1);
+
   var fadeOut:Bool = false;
   var emotional:Bool = false;
 
@@ -51,6 +55,11 @@ class GrievingRemnantsSong extends Song
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
+
+    if (utterShock)
+    {
+      PlayState.instance.currentStage.getDad().playAnimation("shocked", true, true);
+    }
 
     PlayState.instance.camHUD.fade(0xFF000000, 0, false, null, false);
     fadeOut = false;
@@ -123,6 +132,18 @@ class GrievingRemnantsSong extends Song
     PlayState.instance.camHUD.alpha = 0;
   }
 
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    super.onNoteHit(event);
+
+    if (PlayState.instance.currentStage == null) return;
+    if (!event.note.noteData.getMustHitNote() && utterShock)
+    {
+      event.cancelEvent();
+      PlayState.instance.vocals.opponentVolume = 0;
+    }
+  }
+
   function onBeatHit(event:ScriptEvent):Void
   {
     super.onBeatHit(event);
@@ -138,6 +159,13 @@ class GrievingRemnantsSong extends Song
               fadeOut = true;
             }
           });
+
+      case 32:
+        if (utterShock)
+        {
+          // She got an utter shock.
+          FunkinSound.playOnce(Paths.sound('gameplay/secret/shock'), 1);
+        }
 
       case 218: // Fade em all out
         FlxTween.tween(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'), {alpha: 0}, 2.57, {ease: FlxEase.linear});
