@@ -14,6 +14,19 @@
     },
     {
       "danceEvery": 0,
+      "zIndex": 11,
+      "position": [-626, -78],
+      "scale": [6, 6],
+      "animType": "sparrow",
+      "name": "skyEvil",
+      "isPixel": true,
+      "assetPath": "remnants/evil/weebSky",
+      "scroll": [0.2, 0.2],
+      "alpha": 0,
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
       "zIndex": 20,
       "position": [-816, -38],
       "scale": [6, 6],
