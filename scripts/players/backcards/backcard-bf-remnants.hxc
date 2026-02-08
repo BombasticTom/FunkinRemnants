@@ -265,10 +265,36 @@ class BFRemnantsCard extends BackingCard
     }
   }
 
+  var prevLevelId:String = '';
+
   // Thank you Sonic JAM...
   public function onCapsuleSelected(event:CapsuleScriptEvent)
   {
     super.onCapsuleSelected(event);
+
+      var curLevelId:String = event.capsule.freeplayData?.levelId;
+
+      if(curLevelId == 'momDadDivorceRemnants-week' && curLevelId != prevLevelId){
+      moreWays.updateText('ABSOLUTE CINEMA');
+      funnyScroll.updateText('HEARTBREAKING');
+      txtNuts.updateText('FNF SONGS THAT MADE ME CRY');
+      funnyScroll2.updateText('HEARTBREAKING');
+      moreWays2.updateText('ABSOLUTE CINEMA');
+      funnyScroll3.updateText('HEARTBREAKING');
+    }
+    else if(prevLevelId == 'momDadDivorceRemnants-week' && curLevelId != prevLevelId)
+    {
+      var player = PlayerRegistry.instance.fetchEntry(this.currentCharacter);
+
+      funnyScroll.updateText(player.getFreeplayDJText(1));
+      funnyScroll2.updateText(player.getFreeplayDJText(1));
+      moreWays.updateText(player.getFreeplayDJText(2));
+      moreWays2.updateText(player.getFreeplayDJText(2));
+      txtNuts.updateText(player.getFreeplayDJText(3));
+      funnyScroll3.updateText(player.getFreeplayDJText(1));
+    }
+
+    prevLevelId = curLevelId;
 
     // Check if the random capsule was hovered over before replacing the sound.
     if (event.capsule.freeplayData != null) return;
