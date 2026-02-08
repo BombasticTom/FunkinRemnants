@@ -16,6 +16,7 @@ class LitUpBFRemnantsMixSong extends Song
   var storm3:FlxBackdrop;
   var storm4:FlxBackdrop;
   var storm5:FlxBackdrop;
+  var storm6:FlxBackdrop;
 
   public function new()
   {
@@ -57,64 +58,78 @@ class LitUpBFRemnantsMixSong extends Song
     PlayState.instance.currentStage.getGirlfriend().x = 1050;
 
     storm0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm0.setPosition(-650, -850);
+    storm0.setPosition(-650, -500);
     storm0.scrollFactor.set(1.1, 1.1);
     storm0.zIndex = 5001;
     storm0.blend = 0;
-    storm0.color = 0xFFad9e76;
+    storm0.color = 0xFF00425c;
     storm0.alpha = 0;
-    storm0.velocity.x = -4000;
-    storm0.scale.set(3, 3);
+    storm0.velocity.x = -400;
+    storm0.scale.set(3.5, 3.5);
 
     storm1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm1.setPosition(-650, -100);
+    storm1.setPosition(-650, 1300);
     storm1.scrollFactor.set(1.1, 1.1);
     storm1.zIndex = 5001;
     storm1.blend = 0;
-    storm1.color = 0xFFad9e76;
+    storm1.color = 0xFF032b4d;
     storm1.alpha = 0;
-    storm1.velocity.x = 2700;
-    storm1.scale.set(1.4, 1.4);
+    storm1.angle = 180;
+    storm1.velocity.x = 270;
+    storm1.scale.set(3.5, 3.5);
 
     storm2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
-    storm2.setPosition(-650, 100);
+    storm2.setPosition(-650, -1000);
     storm2.scrollFactor.set(1.2, 1.2);
     storm2.zIndex = 5000;
     storm2.blend = 0;
-    storm2.color = 0xFF614621;
+    storm2.color = 0xFF14374d;
     storm2.alpha = 0;
-    storm2.velocity.x = -2100;
-    storm2.scale.set(1.2, 1.2);
+    storm2.velocity.x = -210;
+    storm2.scale.set(5, 5);
 
     storm3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm3.setPosition(-650, -500);
+    storm3.setPosition(-650, -300);
     storm3.scrollFactor.set(0.8, 0.8);
-    storm3.zIndex = 39;
+    storm3.zIndex = 3000;
     storm3.blend = 0;
-    storm3.color = 0xFF614621;
+    storm3.color = 0xFF14374d;
     storm3.alpha = 0;
-    storm3.velocity.x = 900;
-    storm3.scale.set(1.5, 1.5);
+    storm3.velocity.x = 90;
+    storm3.scale.set(3, 3);
 
     storm4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
-    storm4.setPosition(-650, -580);
+    storm4.setPosition(-650, 500);
     storm4.scrollFactor.set(0.6, 0.6);
-    storm4.zIndex = 39;
+    storm4.zIndex = 4900;
     storm4.blend = 0;
-    storm4.color = 0xFF614621;
+    storm4.color = 0xFF113342;
     storm4.alpha = 0;
-    storm4.velocity.x = 1300;
-    storm4.scale.set(1.5, 1.5);
+    storm4.angle = 180;
+    storm4.velocity.x = 130;
+    storm4.scale.set(2.5, 2.5);
 
     storm5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm5.setPosition(-650, -500);
+    storm5.setPosition(-650, -100);
     storm5.scrollFactor.set(0.2, 0.2);
-    storm5.zIndex = 39;
+    storm5.zIndex = 2000;
     storm5.blend = 0;
-    storm5.color = 0xFF614621;
+    storm5.color = 0xFF113342;
     storm5.alpha = 0;
-    storm5.velocity.x = 1200;
-    storm5.scale.set(1.5, 1.5);
+    storm5.angle = 180;
+    storm5.velocity.x = 120;
+    storm5.scale.set(2, 2);
+
+    storm6 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    storm6.setPosition(-650, 1100);
+    storm6.scrollFactor.set(1.1, 1.1);
+    storm6.zIndex = 6000;
+    storm6.blend = 0;
+    storm6.color = 0xFF00425c;
+    storm6.alpha = 0;
+    storm6.angle = 180;
+    storm6.velocity.x = -400;
+    storm6.scale.set(3, 3);
 
     PlayState.instance.currentStage.add(storm0);
     PlayState.instance.currentStage.add(storm1);
@@ -122,6 +137,7 @@ class LitUpBFRemnantsMixSong extends Song
     PlayState.instance.currentStage.add(storm3);
     PlayState.instance.currentStage.add(storm4);
     PlayState.instance.currentStage.add(storm5);
+    PlayState.instance.currentStage.add(storm6);
 
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
@@ -145,6 +161,7 @@ class LitUpBFRemnantsMixSong extends Song
     FlxTween.cancelTweensOf(storm3);
     FlxTween.cancelTweensOf(storm4);
     FlxTween.cancelTweensOf(storm5);
+    FlxTween.cancelTweensOf(storm6);
 
     FlxTween.tween(storm0, {alpha: 1}, duration);
     FlxTween.tween(storm1, {alpha: 0.9}, duration);
@@ -152,6 +169,7 @@ class LitUpBFRemnantsMixSong extends Song
     FlxTween.tween(storm3, {alpha: 0.5}, duration);
     FlxTween.tween(storm4, {alpha: 0.5}, duration);
     FlxTween.tween(storm5, {alpha: 0.5}, duration);
+    FlxTween.tween(storm6, {alpha: 1}, duration);
   }
 
   function stormOff(duration:Float)
@@ -165,6 +183,7 @@ class LitUpBFRemnantsMixSong extends Song
     FlxTween.cancelTweensOf(storm3);
     FlxTween.cancelTweensOf(storm4);
     FlxTween.cancelTweensOf(storm5);
+    FlxTween.cancelTweensOf(storm6);
 
     FlxTween.tween(storm0, {alpha: 0}, duration);
     FlxTween.tween(storm1, {alpha: 0}, duration);
@@ -172,6 +191,8 @@ class LitUpBFRemnantsMixSong extends Song
     FlxTween.tween(storm3, {alpha: 0}, duration);
     FlxTween.tween(storm4, {alpha: 0}, duration);
     FlxTween.tween(storm5, {alpha: 0}, duration);
+    FlxTween.tween(storm5, {alpha: 0}, duration);
+    FlxTween.tween(storm6, {alpha: 0}, duration);
   }
 
   public override function onPause(event:PauseScriptEvent)
@@ -184,6 +205,7 @@ class LitUpBFRemnantsMixSong extends Song
     FlxTweenUtil.pauseTweensOf(storm3);
     FlxTweenUtil.pauseTweensOf(storm4);
     FlxTweenUtil.pauseTweensOf(storm5);
+    FlxTweenUtil.pauseTweensOf(storm6);
   }
 
   public override function onResume(event:ScriptEvent)
@@ -196,6 +218,7 @@ class LitUpBFRemnantsMixSong extends Song
     FlxTweenUtil.resumeTweensOf(storm3);
     FlxTweenUtil.resumeTweensOf(storm4);
     FlxTweenUtil.resumeTweensOf(storm5);
+    FlxTweenUtil.resumeTweensOf(storm6);
   }
 
   function onBeatHit(event:SongTimeScriptEvent):Void
@@ -205,14 +228,22 @@ class LitUpBFRemnantsMixSong extends Song
     if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
-      case 128:
-        stormOn(1);
-      case 160:
-        stormOff(1);
-      case 288:
-        stormOn(1);
-      case 304:
-        stormOff(1);
+      case 126:
+        stormOn(2);
+      case 158:
+        stormOff(2);
+        case 174:
+        stormOn(2);
+      case 192:
+        stormOff(2);
+      case 286:
+        stormOn(2);
+      case 300:
+        stormOff(2.5);
+        case 325:
+        stormOn(3);
+      case 348:
+        stormOff(2.5);
     }
   }
 }
