@@ -181,6 +181,16 @@ class TankmanBattlefieldRemnantsStage extends Stage
       tankAngle = FlxG.random.int(-90, 45);
       tankSpeed = FlxG.random.float(5, 7);
     }
+    else // Hide the tanks when on performance mode.
+    {
+      var tankRolling = getNamedProp('tankRolling');
+      tankRolling?.animation.pause();
+      tankRolling?.visible = false;
+
+      var tankRollingExtra = getNamedProp('tankRollingExtra');
+      tankRollingExtra?.animation.pause();
+      tankRollingExtra?.visible = false;
+    }
   }
 
   var _timer:Float = 0;
