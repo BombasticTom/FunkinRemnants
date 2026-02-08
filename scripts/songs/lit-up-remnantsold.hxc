@@ -43,13 +43,13 @@ class LitUpOldBFRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+    PlayState.instance.currentStage.getGirlfriend().x = 950;
   }
 
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
 
-    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+    PlayState.instance.currentStage.getGirlfriend().x = 950;
   }
 }
