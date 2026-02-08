@@ -166,7 +166,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
     if (!this.debug)
     {
-      switch(name)
+      switch (name)
       {
         case "firstDeath":
           // Lose...

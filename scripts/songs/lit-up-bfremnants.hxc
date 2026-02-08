@@ -229,7 +229,7 @@ class LitUpBFRemnantsMixSong extends Song
         stormOn(2);
       case 158:
         stormOff(2);
-        case 174:
+      case 174:
         stormOn(2);
       case 192:
         stormOff(2);
@@ -237,7 +237,7 @@ class LitUpBFRemnantsMixSong extends Song
         stormOn(2);
       case 300:
         stormOff(2.5);
-        case 325:
+      case 325:
         stormOn(3);
       case 348:
         stormOff(2.5);

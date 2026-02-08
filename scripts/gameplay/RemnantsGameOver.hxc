@@ -103,9 +103,13 @@ class RemnantsGameOver extends Module
     // If the lose tween is already playing, don't continue.
     if (loseTween != null) return;
 
-    loseTween = FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut, onComplete: (_) -> {
-      loseSprite.destroy();
-      loseTween = null;
-    }});
+    loseTween = FlxTween.tween(loseSprite, {alpha: 0}, 1,
+      {
+        ease: FlxEase.quadInOut,
+        onComplete: (_) -> {
+          loseSprite.destroy();
+          loseTween = null;
+        }
+      });
   }
 }
