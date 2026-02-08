@@ -99,12 +99,6 @@
     },
     {
       "assetPath": "shared:characters/bf-remnants/death",
-      "name": "fakeoutDeath",
-      "prefix": "Fakeout",
-      "offsets": [-8, 41]
-    },
-    {
-      "assetPath": "shared:characters/bf-remnants/death",
       "name": "firstDeath",
       "prefix": "Death",
       "offsets": [-8, 41]

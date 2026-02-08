@@ -149,17 +149,6 @@
       "name": "singRIGHTmiss"
     },
     {
-      "offsets": [4, 89],
-      "prefix": "Fakeout",
-      "animType": "framelabel",
-      "flipX": false,
-      "looped": false,
-      "name": "fakeoutDeath",
-      "flipY": false,
-      "assetPath": "shared:characters/bf-remnants/death",
-      "frameRate": 24
-    },
-    {
       "offsets": [7, 93],
       "prefix": "Death",
       "animType": "framelabel",

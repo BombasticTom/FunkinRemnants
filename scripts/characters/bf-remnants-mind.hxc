@@ -1,12 +1,7 @@
-import flixel.FlxG;
 import funkin.util.HapticUtil;
-import funkin.graphics.FunkinSprite;
-import funkin.audio.FunkinSound;
 import funkin.play.PauseSubState;
 import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.GameOverSubState;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
 
 class BoyfriendRemnantsMindCharacter extends MultiAnimateAtlasCharacter
 {
@@ -21,34 +16,6 @@ class BoyfriendRemnantsMindCharacter extends MultiAnimateAtlasCharacter
 
     GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
-  }
-
-  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
-  {
-    if (!this.debug)
-    {
-      switch (name)
-      {
-        case "fakeoutDeath":
-          doFakeoutDeath();
-      }
-    }
-
-    super.playAnimation(name, restart, ignoreOther);
-  }
-
-  function doFakeoutDeath():Void
-  {
-    FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
-
-    // We don't want people to miss this.
-    GameOverSubState.instance.mustNotExit = true;
-    this.animation.onFinish.addOnce(() -> {
-      GameOverSubState.instance.mustNotExit = false;
-      this.playAnimation('firstDeath', true);
-      // Play the "blue balled" sound. May play a variant if one has been assigned.
-      GameOverSubState.playBlueBalledSFX();
-    });
   }
 
   function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
