@@ -19,6 +19,8 @@ import funkin.util.HapticUtil;
 import funkin.Preferences;
 import funkin.FunkinMemory;
 
+using StringTools;
+
 class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 {
   function new()
@@ -35,6 +37,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
     GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico';
+    GameOverSubState.animationSuffix = "";
 
     PauseSubState.musicSuffix = '-remnants-pico';
 
@@ -172,17 +175,18 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     // restore vocal volume to ensure burps always play
     // not needed on the dark variant because this one always exists anyway..
     if (name == "hey" || name == "cheer" || name == "burpSmile" || name == "burpSmileLong" || name == "burpShit") PlayState.instance?.vocals?.playerVolume = 1;
-    if (name == "firstDeath")
+
+    // Bugfix!
+    if (["firstDeath", "deathLoop", "deathConfirm"].contains(name) && GameOverSubState.animationSuffix.length > 0)
     {
-      if (GameOverSubState.blueBallSuffix == '-pico-explode-remnants')
+      return playAnimation(name + GameOverSubState.animationSuffix, restart, ignoreOther);
+    }
+
+    if (!this.debug)
+    {
+      switch(name)
       {
-        // Explosion death animation.
-        doExplosionDeath();
-      }
-      else
-      {
-        if (!this.debug)
-        {
+        case "firstDeath":
           // Lose...
           createDeathSprites();
           GameOverSubState.instance.add(loseSprite);
@@ -190,33 +194,32 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
           GameOverSubState.instance.add(deathSpriteRetry);
           GameOverSubState.instance.add(deathSpriteNene);
           deathSpriteNene.animation.play("throw");
-        }
-      }
-    }
-    else if (name == "deathConfirm")
-    {
-      if (picoDeathExplosion != null)
-      {
-        doExplosionConfirm();
-      }
-      else
-      {
-        if (loseSprite != null)
-        {
-          FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-        }
 
-        if (deathSpriteRetry != null)
-        {
-          deathSpriteRetry.animation.play('confirm');
-          // I think the glow makes the overall animation larger,
-          // but a plain FlxSprite doesn't have an animation offset option so we do it manually.
-          deathSpriteRetry.x -= 250;
-          deathSpriteRetry.y -= 200;
-        }
+        case "deathConfirm":
+          if (loseSprite != null)
+          {
+            FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+          }
 
-        // Skip playing the animation.
-        return;
+          if (deathSpriteRetry != null)
+          {
+            deathSpriteRetry.animation.play('confirm');
+            // I think the glow makes the overall animation larger,
+            // but a plain FlxSprite doesn't have an animation offset option so we do it manually.
+            deathSpriteRetry.x -= 250;
+            deathSpriteRetry.y -= 200;
+          }
+
+          // Skip playing the animation.
+          return;
+
+        case "firstDeath-explosion":
+          doExplosionDeath();
+          return;
+
+        case "deathConfirm-explosion":
+          doExplosionConfirm();
+          return;
       }
     }
 
@@ -361,6 +364,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     // Reset to standard death animation.
     GameOverSubState.musicSuffix = '-remnants-pico';
     GameOverSubState.blueBallSuffix = '-pico';
+    GameOverSubState.animationSuffix = "";
     PauseSubState.musicSuffix = '-remnants-pico';
 
     picoDeathExplosion = null;
@@ -371,7 +375,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
   {
     super.onAnimationFrame(name, frameNumber, frameIndex);
 
-    if (name == "firstDeath" && frameNumber == 36 - 1)
+    if (name.startsWith("firstDeath") && frameNumber == 36 - 1)
     {
       if (deathSpriteRetry != null && deathSpriteRetry.animation != null)
       {
@@ -386,15 +390,12 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       // force the deathloop to play in here, since we are starting the music early it
       // doesn't check this in gameover substate !
       // also no animation suffix ????
-      GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
+      GameOverSubState.instance.boyfriend.playAnimation('deathLoop' + GameOverSubState.animationSuffix);
 
-      if (GameOverSubState.blueBallSuffix != '-pico-explode-remnants')
+      if (name != 'firstDeath-explosion' && loseSprite != null)
       {
-        if (loseSprite != null)
-        {
-          loseSprite.visible = true;
-          loseSprite.animation.play('fall', true);
-        }
+        loseSprite.visible = true;
+        loseSprite.animation.play('fall', true);
       }
     }
 
@@ -403,7 +404,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       createCasing();
     }
 
-    if (!HapticUtil.hapticsAvailable || picoDeathExplosion != null) return;
+    if (!HapticUtil.hapticsAvailable) return;
 
     // Pico falls on his back.
     if (name == 'firstDeath' && frameNumber == 20)

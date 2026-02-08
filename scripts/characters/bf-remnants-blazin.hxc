@@ -137,25 +137,6 @@ class BFRemnantsBlazinCharacter extends AnimateAtlasCharacter
     }
   }
 
-  function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
-  {
-    if (name == "firstDeath")
-    {
-      // TODO: ACTUALLY play one of the three death animations here.
-
-      // Make sure the death music plays with PERFECT timing.
-      new FlxTimer().start(2.54, afterBFDeathNutPunchIntro);
-    }
-
-    super.playAnimation(name, restart, ignoreOther);
-  }
-
-  function afterBFDeathNutPunchIntro():Void
-  {
-    GameOverSubState.instance.startDeathMusic(1.0, false);
-    playAnimation('deathLoop', true, false);
-  }
-
   function onNoteMiss(event:NoteScriptEvent)
   {
     holdTimer = 0;

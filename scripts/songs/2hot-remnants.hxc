@@ -358,6 +358,7 @@ class TwoHOTRemnantsMixSong extends Song
       trace('Died to the can! Use special death animation.');
       GameOverSubState.musicSuffix = '-pico-explode-remnants';
       GameOverSubState.blueBallSuffix = '-pico-explode-remnants';
+      GameOverSubState.animationSuffix = '-explosion';
 
       if (!PlayState.instance.isPracticeMode) blackenStageProps();
     }

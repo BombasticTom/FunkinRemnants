@@ -347,6 +347,7 @@ class TwoHOTRemnantsBFMixSong extends Song
       // Reset to standard death animation.
       GameOverSubState.musicSuffix = '-bf-explode-remnants';
       GameOverSubState.blueBallSuffix = '-bf-explode-remnants';
+      GameOverSubState.animationSuffix = '-explosion';
 
       if (!PlayState.instance.isPracticeMode) blackenStageProps();
     }

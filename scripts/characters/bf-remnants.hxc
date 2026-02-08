@@ -29,6 +29,7 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
 
     GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
+    GameOverSubState.animationSuffix = "";
 
     FunkinMemory.cacheSound(Paths.sound('Pico_Bonk', "weekend1"));
   }
@@ -40,6 +41,7 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     // Reset to standard death animation.
     GameOverSubState.musicSuffix = '-remnants';
     GameOverSubState.blueBallSuffix = "";
+    GameOverSubState.animationSuffix = "";
 
     PauseSubState.musicSuffix = '-remnants';
 
@@ -81,6 +83,12 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
       PlayState.instance?.vocals?.playerVolume = 1;
     }
 
+    // Bugfix!
+    if (["firstDeath", "deathLoop", "deathConfirm"].contains(name) && GameOverSubState.animationSuffix.length > 0)
+    {
+      return playAnimation(name + GameOverSubState.animationSuffix, restart, ignoreOther);
+    }
+
     // Do not create the sprites when on the animation editor.
     if (!this.debug)
     {
@@ -90,16 +98,8 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
           doFakeoutDeath();
 
         case "firstDeath":
-          if (GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
-          {
-            // Explosion death animation... ngl idk if I even implented this right I only half know what im doing lmao. All I know is that the game over song dosent loop peroperly, so Till plz save me
-            doExplosionDeath();
-          }
-          else
-          {
-            createDeathSprites(); // Lose...
-            GameOverSubState.instance.add(loseSprite);
-          }
+          createDeathSprites(); // Lose...
+          GameOverSubState.instance.add(loseSprite);
 
         case "deathLoop":
           if (loseSprite != null)
@@ -109,17 +109,16 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
           }
 
         case "deathConfirm":
-          if (bfDeathExplosion != null || GameOverSubState.blueBallSuffix == '-bf-explode-remnants')
+          if (loseSprite != null)
           {
-            doExplosionConfirm();
+            FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
           }
-          else
-          {
-            if (loseSprite != null)
-            {
-              FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-            }
-          }
+
+        case "firstDeath-explosion":
+          doExplosionDeath();
+
+        case "deathConfirm-explosion":
+          doExplosionConfirm();
       }
     }
 
@@ -144,53 +143,23 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
       bfFlicker.stop(); // this sets visible to true, but we make it false a few lines down anyways
     }
 
-    // Suffixed death sound will already play.
-    GameOverSubState.instance.resetCameraZoom();
+    // Make the camera to center BF more.
+    GameOverSubState.instance.cameraFollowPoint.x += 50;
+    GameOverSubState.instance.cameraFollowPoint.y += 150;
+    GameOverSubState.instance.targetCameraZoom = 0.95;
 
-    // Move the camera up.
-    GameOverSubState.instance.cameraFollowPoint.y -= 100;
     HapticUtil.vibrate(0, 0.5);
 
-    // Death by Darnell's can.
-    new FlxTimer().start(1.85, function(tmr:FlxTimer) {
-      HapticUtil.vibrate(0, 0.1, 0.1, 1); // Pico falls on his knees.
-    });
-
-    bfDeathExplosion = FunkinSprite.createTextureAtlas(this.x - 1100, this.y - 1000, "characters/picoExplosionDeath", "weekend1");
-    PlayState.instance.subState.add(bfDeathExplosion);
-    bfDeathExplosion.zIndex = 1000;
-    bfDeathExplosion.animation.onFinish.add(onExplosionFinishAnim);
-    bfDeathExplosion.visible = true;
-    this.visible = false;
-
     new FlxTimer().start(3.0, afterExplosionIntro);
-    bfDeathExplosion.anim.play('intro');
   }
 
   function doExplosionConfirm()
   {
-    // Suffixed confirm music will already play.
-    bfDeathExplosion.animation.play('Confirm', true);
     if (singed != null)
     {
       singed.stop();
       singed = null;
     }
-  }
-
-  function onExplosionFinishAnim(animLabel:String)
-  {
-    if (animLabel == 'intro')
-    {
-      bfDeathExplosion.animation.play('Loop Start', true);
-      bfDeathExplosion.animation.curAnim.looped = true;
-    }
-    else if (animLabel == 'Confirm')
-    {
-      // Do nothing, the animation will just play.
-    }
-
-    trace("Explosion animation finished: " + animLabel);
   }
 
   function afterExplosionIntro(timer:FlxTimer)
@@ -217,6 +186,12 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     if (name == 'deathLoop' && (frameNumber == 0 || frameNumber == 18))
     {
       HapticUtil.vibrate(0, 0.1, 0.1, 1);
+    }
+
+    // BF sits down with much force.
+    if (name == 'firstDeath-explosion' && frameNumber == 37)
+    {
+      HapticUtil.vibrate(0, 0.1, 0.1, 1); // BF sits down
     }
   }
 
@@ -325,6 +300,11 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
   override function onAnimationFinished(name:String)
   {
     super.onAnimationFinished(name);
+
+    if (name == 'firstDeath-explosion' && !debug)
+    {
+      playAnimation('deathLoop-explosion', true);
+    }
 
     if (name == 'hitCan' && PlayState.instance.health > 0.0 && !PlayState.instance.isPlayerDying)
     {

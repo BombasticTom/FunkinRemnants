@@ -226,6 +226,25 @@
       "offsets": [-278, -126]
     },
     {
+      "assetPath": "shared:characters/bf-remnants/can explosion",
+      "name": "firstDeath-explosion",
+      "prefix": "Can Explosion Death Start",
+      "offsets": [137, 189]
+    },
+    {
+      "assetPath": "shared:characters/bf-remnants/can explosion",
+      "name": "deathLoop-explosion",
+      "prefix": "Can Explosion Death Loop",
+      "looped": true,
+      "offsets": [137, 189]
+    },
+    {
+      "assetPath": "shared:characters/bf-remnants/can explosion",
+      "name": "deathConfirm-explosion",
+      "prefix": "Can Explosion Death Confirm",
+      "offsets": [137, 189]
+    },
+    {
       "name": "scared",
       "prefix": "Scared",
       "offsets": [0, 0]
