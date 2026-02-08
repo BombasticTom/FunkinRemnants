@@ -15,7 +15,8 @@
     "cameraZoom": 0.85
   },
   "atlasSettings": {
-    "useRenderTexture": true
+    "useRenderTexture": true,
+    "swfMode": true
   },
   "animations": [
     {
