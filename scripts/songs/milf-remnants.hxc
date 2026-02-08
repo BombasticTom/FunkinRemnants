@@ -266,7 +266,6 @@ class MILFRemnantsMixSong extends Song
   var nextBFLampIndex = 0;
   var nextHenchLampIndex = 0;
 
-  var hasCurrentBFLampHit = false;
   var hasCurrentGFLampDucked = false;
   var currentHenchmenIndex = 1;
 
@@ -436,17 +435,9 @@ class MILFRemnantsMixSong extends Song
       if (Conductor.instance.songPosition >= nextLampReset)
       {
         nextBFLampIndex++;
-        hasCurrentBFLampHit = false;
       }
       else if (boyfriend != null)
       {
-        if (Conductor.instance.songPosition >= nextLampTime && !hasCurrentBFLampHit)
-        {
-          // Do the actual lamp collision animation and gameplay.
-          doLampHit();
-          hasCurrentBFLampHit = true;
-        }
-
         if (Conductor.instance.songPosition >= nextLampTime - GF_DUCK_DELAY && !hasCurrentGFLampDucked)
         {
           // Ensure this code only runs once.
@@ -634,7 +625,6 @@ class MILFRemnantsMixSong extends Song
 
   function hardResetSong()
   {
-    hasCurrentBFLampHit = false;
     hasCurrentGFLampDucked = false;
     nextBFLampIndex = 0;
     nextHenchLampIndex = 0;
