@@ -11,7 +11,7 @@ using StringTools;
 class RemnantsGameOver extends Module
 {
   final CHAR_BLACKLIST:Array<String> = ["bf-remnants-blazin", "pico-remnants-blazin"];
-  final SUFFIX_BLACKLIST:Array<String> = ["-bf-explode-remnants", "-bf-explode-remnants"];
+  final SUFFIX_BLACKLIST:Array<String> = ["-pico-explode-remnants", "-remnants-explode"];
 
   public var loseSprite:FunkinSprite;
   public var loseTween:FlxTween;
