@@ -67,7 +67,6 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
 
   var deathSpriteRetry:FunkinSprite;
   var deathSpriteNene:FunkinSprite;
-  var loseSprite:FunkinSprite;
   var picoFade:FunkinSprite;
 
   /**
@@ -100,23 +99,6 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     deathSpriteNene.animation.onFinish.add(function(name:String) {
       deathSpriteNene.visible = false;
     });
-
-    loseSprite = FunkinSprite.createSparrow(1750, 300, "gameover/loseText");
-
-    // week 3 shader
-    if (shader != null)
-    {
-      loseSprite.shader = shader;
-    }
-
-    loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
-    loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
-    loseSprite.animation.onFinish.add(function(name:String) {
-      loseSprite.animation.play('idle', true);
-    });
-
-    loseSprite.zIndex = this.zIndex + 5;
-    loseSprite.visible = false;
   }
 
   function onNoteHit(event:HitNoteScriptEvent)
@@ -189,18 +171,12 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
         case "firstDeath":
           // Lose...
           createDeathSprites();
-          GameOverSubState.instance.add(loseSprite);
 
           GameOverSubState.instance.add(deathSpriteRetry);
           GameOverSubState.instance.add(deathSpriteNene);
           deathSpriteNene.animation.play("throw");
 
         case "deathConfirm":
-          if (loseSprite != null)
-          {
-            FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-          }
-
           if (deathSpriteRetry != null)
           {
             deathSpriteRetry.animation.play('confirm');
@@ -391,12 +367,6 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
       // doesn't check this in gameover substate !
       // also no animation suffix ????
       GameOverSubState.instance.boyfriend.playAnimation('deathLoop' + GameOverSubState.animationSuffix);
-
-      if (name != 'firstDeath-explosion' && loseSprite != null)
-      {
-        loseSprite.visible = true;
-        loseSprite.animation.play('fall', true);
-      }
     }
 
     if (name == "cock" && frameNumber == 3)
