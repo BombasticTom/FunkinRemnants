@@ -55,8 +55,6 @@ class LitUpBFRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    PlayState.instance.currentStage.getGirlfriend().x = 950;
-
     storm0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
     storm0.setPosition(-650, -500);
     storm0.scrollFactor.set(1.1, 1.1);
@@ -146,7 +144,6 @@ class LitUpBFRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    PlayState.instance.currentStage.getGirlfriend().x = 950;
     stormOff(1);
   }
 

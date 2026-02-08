@@ -28,9 +28,6 @@ class BlazinBFRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    PlayState.instance.currentStage.getGirlfriend().x = 1010;
-    PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x = 1400;
-
     this.hasHidden = false;
     this.hasPlayedCutscene = false;
     fadeOut = false;
@@ -113,9 +110,6 @@ class BlazinBFRemnantsMixSong extends Song
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
-
-    PlayState.instance.currentStage.getGirlfriend().x = 1010;
-    PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x = 1400;
 
     FlxG.camera.stopFX();
     FlxTween.cancelTweensOf(black);

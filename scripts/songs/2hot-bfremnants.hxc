@@ -37,9 +37,6 @@ class TwoHOTRemnantsBFMixSong extends Song
     FunkinMemory.cacheTexture(Paths.image("CanImpactParticle"));
     FunkinMemory.cacheTexture(Paths.image("spraypaintExplosionEZ"));
     FunkinMemory.cacheTexture(Paths.image("remnants/spraycans/spraycanAtlas/spritemap1"));
-
-    // Fix GF position.
-    PlayState.instance.currentStage.getGirlfriend().x = 950;
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -63,8 +60,6 @@ class TwoHOTRemnantsBFMixSong extends Song
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
-
-    PlayState.instance.currentStage.getGirlfriend().x = 950;
 
     removeCans();
     micCocked = false;

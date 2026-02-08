@@ -41,15 +41,11 @@ class DarnellBFRemnantsMixSong extends Song
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
-
-    PlayState.instance.currentStage.getGirlfriend().x = 950;
   }
 
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
-
-    PlayState.instance.currentStage.getGirlfriend().x = 950;
 
     PlayState.instance.camGame.visible = true;
     PlayState.instance.camHUD.visible = true;

@@ -6,12 +6,14 @@ import flixel.util.FlxTimer;
 import funkin.audio.FunkinSound;
 import funkin.Conductor;
 import funkin.graphics.shaders.RuntimeRainShader;
+import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
 import funkin.play.stage.Stage;
 import openfl.filters.ShaderFilter;
 import flixel.addons.display.FlxBackdrop;
 import funkin.util.FlxTweenUtil;
-import StringTools;
+
+using StringTools;
 
 class PhillyStreetsRemnantsStage extends Stage
 {
@@ -147,6 +149,17 @@ class PhillyStreetsRemnantsStage extends Stage
 
       PlayState.instance.currentStage.add(mist5);
       PlayState.instance.currentStage.refresh(); // Apply z-index.
+    }
+  }
+
+  override public function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    super.addCharacter(character, charType);
+
+    if (character.characterId.startsWith('gf') && charType == CharacterType.GF)
+    {
+      character.x += 99;
+      character.originalPosition.x = character.x;
     }
   }
 

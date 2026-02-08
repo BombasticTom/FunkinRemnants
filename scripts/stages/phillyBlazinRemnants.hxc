@@ -5,6 +5,7 @@ import flixel.util.FlxTimer;
 import funkin.audio.FunkinSound;
 import funkin.graphics.FunkinSprite;
 import funkin.graphics.shaders.RuntimeRainShader;
+import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
 import funkin.play.stage.Stage;
 import openfl.filters.ShaderFilter;
@@ -13,6 +14,8 @@ import funkin.play.stage.StageProp;
 import flixel.addons.display.FlxTiledSprite;
 import funkin.util.MathUtil;
 import funkin.util.HapticUtil;
+
+using StringTools;
 
 /**
  * This stage includes a partial version of the Philly Streets stage with shaders applied.
@@ -93,6 +96,23 @@ class PhillyBlazinRemnantsStage extends Stage
 
       PlayState.instance.currentStage.add(scrollingSky);
       PlayState.instance.currentStage.refresh(); // Apply z-index.
+    }
+  }
+
+  override public function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    super.addCharacter(character, charType);
+
+    if (charType == CharacterType.GF)
+    {
+      if (character.characterId.startsWith('gf'))
+      {
+        character.x += 121;
+        character.originalPosition.x = character.x;
+      }
+
+      // very hacky but we need it
+      character.cameraFocusPoint.x = 1400;
     }
   }
 
