@@ -6,6 +6,7 @@ import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.GameOverSubState;
 import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 

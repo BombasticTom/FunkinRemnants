@@ -3,8 +3,8 @@ import funkin.play.GameOverSubState;
 import funkin.play.character.BaseCharacter;
 import funkin.data.character.CharacterDataParser;
 import funkin.play.character.CharacterType;
-import funkin.play.PlayState;
 import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import funkin.util.HapticUtil;
@@ -53,9 +53,10 @@ class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
-    if (name == "hey" || name == "cheer" || name == "lights") PlayState.instance.vocals.playerVolume = 1;
+    if (name == "hey" || name == "cheer" || name == "lights") PlayState.instance?.vocals?.playerVolume = 1;
 
     super.playAnimation(name, restart, ignoreOther);
+
     if (normalChar != null) normalChar.playAnimation(name, restart, ignoreOther);
   }
 
