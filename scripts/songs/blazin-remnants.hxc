@@ -100,6 +100,11 @@ class BlazinRemnantsMixSong extends Song
     if (!gigacut) return;
     FlxG.camera.fade(0xFF000000, 1, true);
     PlayState.instance.disableKeys = false;
+    PlayState.instance.currentStage.getDad().velocity.y = 0;
+    PlayState.instance.currentStage.getDad().velocity.x = 0;
+    PlayState.instance.currentStage.getBoyfriend().velocity.y = 0;
+    PlayState.instance.currentStage.getBoyfriend().velocity.x = 0;
+    PlayState.instance.currentStage.getBoyfriend().visible = true;
     gigacut = false;
   }
 
