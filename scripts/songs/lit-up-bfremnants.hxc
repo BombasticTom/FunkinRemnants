@@ -140,13 +140,6 @@ class LitUpBFRemnantsMixSong extends Song
     PlayState.instance.currentStage.refresh(); // Apply z-index.
   }
 
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    stormOff(1);
-  }
-
   function stormOn(duration:Float)
   {
     if (duration == null) duration = 1;
@@ -190,6 +183,42 @@ class LitUpBFRemnantsMixSong extends Song
     FlxTween.tween(storm5, {alpha: 0}, duration);
     FlxTween.tween(storm5, {alpha: 0}, duration);
     FlxTween.tween(storm6, {alpha: 0}, duration);
+  }
+
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    if (storm0.alpha > 0) 
+    {
+      FlxTween.cancelTweensOf(storm0);
+      FlxTween.cancelTweensOf(storm1);
+      FlxTween.cancelTweensOf(storm2);
+      FlxTween.cancelTweensOf(storm3);
+      FlxTween.cancelTweensOf(storm4);
+      FlxTween.cancelTweensOf(storm5);
+      FlxTween.cancelTweensOf(storm6);
+
+      stormOff(1);
+    }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    super.onGameOver(event);
+
+    if (storm0.alpha > 0) 
+    {
+      FlxTween.cancelTweensOf(storm0);
+      FlxTween.cancelTweensOf(storm1);
+      FlxTween.cancelTweensOf(storm2);
+      FlxTween.cancelTweensOf(storm3);
+      FlxTween.cancelTweensOf(storm4);
+      FlxTween.cancelTweensOf(storm5);
+      FlxTween.cancelTweensOf(storm6);
+
+      stormOff(0);
+    }
   }
 
   public override function onPause(event:PauseScriptEvent)

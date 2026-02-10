@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
-  "songName": "Lit Up (Old BF Remnants Mix)",
+  "songName": "Lit Up (BF Remnants Mix)",
   "artist": "LunarzNova",
-  "charter": "RhysRJJ + Sammy The Goog",
+  "charter": "RhysRJJ",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -13,22 +13,23 @@
   },
   "playData": {
     "songVariations": [],
-    "difficulties": ["old"],
+    "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-remnants",
       "girlfriend": "gf-remnants",
       "opponent": "darnell-remnants",
-      "instrumental": "remnantsold",
+      "instrumental": "bfremnants",
       "altInstrumentals": [],
       "opponentVocals": ["darnell-remnants"],
       "playerVocals": ["bf-remnants"]
     },
     "stage": "phillyStreetsRemnants",
     "noteStyle": "funkin",
-    "ratings": { "old": 6 },
+    "stickerPack": "remnants-weekend1",
+    "ratings": { "easy": 2, "normal": 3, "hard": 4 },
     "album": "remnants-weekend1-bf",
     "previewStart": 0,
-    "previewEnd": 0
+    "previewEnd": 14000
   },
   "generatedBy": "Friday Night Funkin' - v0.7.5",
   "timeFormat": "ms",

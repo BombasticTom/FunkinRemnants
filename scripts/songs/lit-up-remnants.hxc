@@ -7,9 +7,18 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.play.PlayState;
 import flixel.FlxG;
+import flixel.addons.display.FlxBackdrop;
 
 class LitUpRemnantsMixSong extends Song
 {
+  var storm0:FlxBackdrop;
+  var storm1:FlxBackdrop;
+  var storm2:FlxBackdrop;
+  var storm3:FlxBackdrop;
+  var storm4:FlxBackdrop;
+  var storm5:FlxBackdrop;
+  var storm6:FlxBackdrop;
+
   var outro:Bool = false;
 
   public function new()
@@ -49,22 +58,166 @@ class LitUpRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
+    storm0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    storm0.setPosition(-650, -500);
+    storm0.scrollFactor.set(1.1, 1.1);
+    storm0.zIndex = 5001;
+    storm0.blend = 0;
+    storm0.color = 0xFF5c5c5c;
+    storm0.alpha = 0;
+    storm0.velocity.x = -400;
+    storm0.scale.set(3.5, 3.5);
+
+    storm1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    storm1.setPosition(-650, 1300);
+    storm1.scrollFactor.set(1.1, 1.1);
+    storm1.zIndex = 5001;
+    storm1.blend = 0;
+    storm1.color = 0xFF5c5c5c;
+    storm1.alpha = 0;
+    storm1.angle = 180;
+    storm1.velocity.x = 270;
+    storm1.scale.set(3.5, 3.5);
+
+    storm2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
+    storm2.setPosition(-650, -1000);
+    storm2.scrollFactor.set(1.2, 1.2);
+    storm2.zIndex = 5000;
+    storm2.blend = 0;
+    storm2.color = 0xFF5c5c5c;
+    storm2.alpha = 0;
+    storm2.velocity.x = -210;
+    storm2.scale.set(5, 5);
+
+    storm3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    storm3.setPosition(-650, -300);
+    storm3.scrollFactor.set(0.8, 0.8);
+    storm3.zIndex = 3000;
+    storm3.blend = 0;
+    storm3.color = 0xFF5c5c5c;
+    storm3.alpha = 0;
+    storm3.velocity.x = 90;
+    storm3.scale.set(3, 3);
+
+    storm4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
+    storm4.setPosition(-650, 500);
+    storm4.scrollFactor.set(0.6, 0.6);
+    storm4.zIndex = 4900;
+    storm4.blend = 0;
+    storm4.color = 0xFF5c5c5c;
+    storm4.alpha = 0;
+    storm4.angle = 180;
+    storm4.velocity.x = 130;
+    storm4.scale.set(2.5, 2.5);
+
+    storm5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    storm5.setPosition(-650, -100);
+    storm5.scrollFactor.set(0.2, 0.2);
+    storm5.zIndex = 2000;
+    storm5.blend = 0;
+    storm5.color = 0xFF5c5c5c;
+    storm5.alpha = 0;
+    storm5.angle = 180;
+    storm5.velocity.x = 120;
+    storm5.scale.set(2, 2);
+
+    storm6 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    storm6.setPosition(-650, 1100);
+    storm6.scrollFactor.set(1.1, 1.1);
+    storm6.zIndex = 6000;
+    storm6.blend = 0;
+    storm6.color = 0xFF5c5c5c;
+    storm6.alpha = 0;
+    storm6.angle = 180;
+    storm6.velocity.x = -400;
+    storm6.scale.set(3, 3);
+
+    PlayState.instance.currentStage.add(storm0);
+    PlayState.instance.currentStage.add(storm1);
+    PlayState.instance.currentStage.add(storm2);
+    PlayState.instance.currentStage.add(storm3);
+    PlayState.instance.currentStage.add(storm4);
+    PlayState.instance.currentStage.add(storm5);
+    PlayState.instance.currentStage.add(storm6);
+
+    PlayState.instance.currentStage.refresh(); // Apply z-index.
+
     outro = false;
+  }
+
+  function stormOn(duration:Float)
+  {
+    if (duration == null) duration = 1;
+
+    // Prevent new tweens from being overridden
+    FlxTween.cancelTweensOf(storm0);
+    FlxTween.cancelTweensOf(storm1);
+    FlxTween.cancelTweensOf(storm2);
+    FlxTween.cancelTweensOf(storm3);
+    FlxTween.cancelTweensOf(storm4);
+    FlxTween.cancelTweensOf(storm5);
+    FlxTween.cancelTweensOf(storm6);
+
+    FlxTween.tween(storm0, {alpha: 1}, duration);
+    FlxTween.tween(storm1, {alpha: 0.9}, duration);
+    FlxTween.tween(storm2, {alpha: 1}, duration);
+    FlxTween.tween(storm3, {alpha: 0.5}, duration);
+    FlxTween.tween(storm4, {alpha: 0.5}, duration);
+    FlxTween.tween(storm5, {alpha: 0.5}, duration);
+    FlxTween.tween(storm6, {alpha: 1}, duration);
+  }
+
+  function stormOff(duration:Float)
+  {
+    if (duration == null) duration = 1;
+
+    // Prevent new tweens from being overridden
+    FlxTween.cancelTweensOf(storm0);
+    FlxTween.cancelTweensOf(storm1);
+    FlxTween.cancelTweensOf(storm2);
+    FlxTween.cancelTweensOf(storm3);
+    FlxTween.cancelTweensOf(storm4);
+    FlxTween.cancelTweensOf(storm5);
+    FlxTween.cancelTweensOf(storm6);
+
+    FlxTween.tween(storm0, {alpha: 0}, duration);
+    FlxTween.tween(storm1, {alpha: 0}, duration);
+    FlxTween.tween(storm2, {alpha: 0}, duration);
+    FlxTween.tween(storm3, {alpha: 0}, duration);
+    FlxTween.tween(storm4, {alpha: 0}, duration);
+    FlxTween.tween(storm5, {alpha: 0}, duration);
+    FlxTween.tween(storm5, {alpha: 0}, duration);
+    FlxTween.tween(storm6, {alpha: 0}, duration);
   }
 
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
 
-    if (!outro) return;
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    PlayState.instance.camCutscene?.stopFX();
+    if (storm0.alpha > 0) 
+    {
+      FlxTween.cancelTweensOf(storm0);
+      FlxTween.cancelTweensOf(storm1);
+      FlxTween.cancelTweensOf(storm2);
+      FlxTween.cancelTweensOf(storm3);
+      FlxTween.cancelTweensOf(storm4);
+      FlxTween.cancelTweensOf(storm5);
+      FlxTween.cancelTweensOf(storm6);
 
-    PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, false);
-    PlayState.instance.camHUD.alpha = 1;
-    PlayState.instance.tweenCameraToPosition(1415, 926, 0, FlxEase.instant);
-    PlayState.instance.disableKeys = false;
-    outro = false;
+      stormOff(1);
+    }
+
+    if (outro)
+    {
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+      PlayState.instance.camCutscene?.stopFX();
+
+      PlayState.instance.camCutscene.fade(0xFF000000, 0.5, true, null, false);
+      PlayState.instance.camHUD.alpha = 1;
+      PlayState.instance.tweenCameraToPosition(1415, 926, 0, FlxEase.instant);
+      PlayState.instance.disableKeys = false;
+      outro = false;
+    }
   }
 
   function onGameOver(event:ScriptEvent):Void
@@ -74,18 +227,45 @@ class LitUpRemnantsMixSong extends Song
     PlayState.instance.camCutscene?.stopFX();
     PlayState.instance.camHUD.alpha = 0;
     outro = true;
+
+    if (storm0.alpha > 0) 
+    {
+      FlxTween.cancelTweensOf(storm0);
+      FlxTween.cancelTweensOf(storm1);
+      FlxTween.cancelTweensOf(storm2);
+      FlxTween.cancelTweensOf(storm3);
+      FlxTween.cancelTweensOf(storm4);
+      FlxTween.cancelTweensOf(storm5);
+      FlxTween.cancelTweensOf(storm6);
+
+      stormOff(0);
+    }
   }
 
   function onPause()
   {
     PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+    FlxTweenUtil.pauseTweensOf(storm0);
+    FlxTweenUtil.pauseTweensOf(storm1);
+    FlxTweenUtil.pauseTweensOf(storm2);
+    FlxTweenUtil.pauseTweensOf(storm3);
+    FlxTweenUtil.pauseTweensOf(storm4);
+    FlxTweenUtil.pauseTweensOf(storm5);
+    FlxTweenUtil.pauseTweensOf(storm6);
   }
 
   function onResume()
   {
     PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+    FlxTweenUtil.resumeTweensOf(storm0);
+    FlxTweenUtil.resumeTweensOf(storm1);
+    FlxTweenUtil.resumeTweensOf(storm2);
+    FlxTweenUtil.resumeTweensOf(storm3);
+    FlxTweenUtil.resumeTweensOf(storm4);
+    FlxTweenUtil.resumeTweensOf(storm5);
+    FlxTweenUtil.resumeTweensOf(storm6);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -93,8 +273,15 @@ class LitUpRemnantsMixSong extends Song
     super.onBeatHit(event);
 
     if (PlayState.instance.isGameOverState) return;
-    if (event.beat == 323)
+    switch (event.beat)
     {
+      case 96:
+        stormOn(3);
+
+      case 160:
+        stormOff(3);
+
+      case 323:
       PlayState.instance.camCutscene.fade(0xFF000000, 9.29, false, null, false);
       FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.98,
         {
