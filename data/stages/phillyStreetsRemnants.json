@@ -93,7 +93,7 @@
       "animations": [
         {
           "name": "paperBlow",
-          "prefix": "Paper Blowing instance 1",
+          "prefix": "Paper Blowing",
           "frameRate": 24,
           "flipX": false,
           "flipY": false

@@ -203,11 +203,11 @@ class PhillyStreetsRemnantsStage extends Stage
     super.onBeatHit(event);
 
     var paper = getNamedProp('paper');
-    if (FlxG.random.bool(1) && paperInterruptable == true)
+    if (FlxG.random.bool(10) && paperInterruptable)
     {
       if (paper != null)
       {
-        paper.visible = true;
+        paper.alpha = 1;
         paper.animation.play('paperBlow');
         paper.y = 608 + FlxG.random.float(-150, 150);
         FlxTween.tween(paper, {x: paper.x - 550}, 2);
@@ -274,7 +274,7 @@ class PhillyStreetsRemnantsStage extends Stage
     if (paper != null)
     {
       FlxTween.cancelTweensOf(paper);
-      paper.visible = false;
+      paper.alpha = 0;
       paper.x = 550;
     }
   }
