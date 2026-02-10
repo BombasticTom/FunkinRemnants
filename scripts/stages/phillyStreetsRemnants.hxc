@@ -203,7 +203,7 @@ class PhillyStreetsRemnantsStage extends Stage
     super.onBeatHit(event);
 
     var paper = getNamedProp('paper');
-    if (FlxG.random.bool(10) && paperInterruptable)
+    if (FlxG.random.bool(5) && paperInterruptable)
     {
       if (paper != null)
       {
