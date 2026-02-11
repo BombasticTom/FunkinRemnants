@@ -192,14 +192,6 @@ class LitUpBFRemnantsMixSong extends Song
 
     if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption())
     {
-      FlxTween.cancelTweensOf(mist0);
-      FlxTween.cancelTweensOf(mist1);
-      FlxTween.cancelTweensOf(mist2);
-      FlxTween.cancelTweensOf(mist3);
-      FlxTween.cancelTweensOf(mist4);
-      FlxTween.cancelTweensOf(mist5);
-      FlxTween.cancelTweensOf(mist6);
-
       mistOff(1);
     }
   }
@@ -210,14 +202,6 @@ class LitUpBFRemnantsMixSong extends Song
 
     if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption())
     {
-      FlxTween.cancelTweensOf(mist0);
-      FlxTween.cancelTweensOf(mist1);
-      FlxTween.cancelTweensOf(mist2);
-      FlxTween.cancelTweensOf(mist3);
-      FlxTween.cancelTweensOf(mist4);
-      FlxTween.cancelTweensOf(mist5);
-      FlxTween.cancelTweensOf(mist6);
-
       mistOff(0);
     }
   }
