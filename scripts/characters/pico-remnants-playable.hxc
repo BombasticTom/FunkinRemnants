@@ -399,9 +399,9 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     if (casingGroup == null)
     {
       casingGroup = new FlxTypedSpriteGroup();
-      casingGroup.x = this.x + 250;
+      casingGroup.x = this.x + 200;
       casingGroup.y = this.y + 100;
-      casingGroup.zIndex = 1000;
+      casingGroup.zIndex = 800;
       addToStage(casingGroup);
     }
 
@@ -471,6 +471,7 @@ class PicoRemnantsPlayerCharacter extends MultiSparrowCharacter
     else if (PlayState.instance != null && PlayState.instance.currentStage != null)
     {
       PlayState.instance.currentStage.add(sprite);
+      PlayState.instance.currentStage.refresh();
     }
     else
     {
