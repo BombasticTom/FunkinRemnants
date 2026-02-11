@@ -342,7 +342,8 @@ class MILFRemnantsMixSong extends Song
     PlayState.instance.currentStage.add(bloodEffect);
     gibs.push(bloodEffect);
     bloodEffect.animation.finishCallback = function(_name) {
-      PlayState.instance.currentStage.remove(bloodEffect);
+      PlayState.instance.currentStage.remove(bloodEffect, true);
+      bloodEffect.destroy();
       gibs.remove(bloodEffect);
     }
 
@@ -374,9 +375,10 @@ class MILFRemnantsMixSong extends Song
   {
     for (gib in gibs)
     {
-      PlayState.instance.currentStage.remove(gib);
-      PlayState.instance.currentStage.refresh();
+      PlayState.instance.currentStage.remove(gib, true);
     }
+
+    PlayState.instance.currentStage.refresh();
     gibs = [];
   }
 
