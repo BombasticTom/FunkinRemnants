@@ -347,7 +347,7 @@ class PicoRemnantsCard extends BackingCard
     }
   }
 
-  // Thank you Sonic JAM...
+  // Thank you Sonic JAM... (Had to fix something)
   public function onCapsuleSelected(event:CapsuleScriptEvent)
   {
     super.onCapsuleSelected(event);
@@ -355,9 +355,9 @@ class PicoRemnantsCard extends BackingCard
     // Check if the random capsule was hovered over before replacing the sound.
     if (event.capsule.freeplayData != null) return;
 
-    // Remove the delay timer for the music and start a fresh new one.
-    FlxTimer.globalManager._timers.pop();
-    FlxTimer.wait(FreeplayState.FADE_IN_DELAY, function() {
+    // Replace the sound with a bit more of delay so it actually overrides it.
+    FlxTimer.wait(FreeplayState.FADE_IN_DELAY + 0.05, _ ->
+    {
       this.instance.clearPreviews();
 
       var previewVolume:Float = 0.7;
