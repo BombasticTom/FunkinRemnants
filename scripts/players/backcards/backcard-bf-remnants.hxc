@@ -1,7 +1,6 @@
 import funkin.ui.freeplay.BGScrollingText;
 import funkin.ui.freeplay.FreeplayState;
 import funkin.ui.freeplay.backcards.BackingCard;
-import funkin.Conductor;
 import flixel.FlxSprite;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
