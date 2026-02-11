@@ -8,6 +8,7 @@ import flixel.tweens.FlxEase;
 import funkin.Preferences;
 import funkin.audio.FunkinSound;
 import flixel.FlxG;
+import funkin.mobile.input.ControlsHandler;
 
 class GrievingRemnantsSong extends Song
 {
@@ -124,13 +125,22 @@ class GrievingRemnantsSong extends Song
     fadeOut = false;
     emotional = false;
 
-    if (!Preferences.downscroll) // Move pop ups
+    if (!FlxG.onMobile) // Move pop ups
     {
-      PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll Offset
+      if (!Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll PC Offset
+
+      if (Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll PC Offset
     }
     else
     {
-      PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll Offset
+      if (FlxG.onMobile && Preferences.controlsScheme == "Arrows" && !ControlsHandler.usingExternalInputDevice) 
+PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+
+      if (FlxG.onMobile && !Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
+PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+
+      if (FlxG.onMobile && Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
+PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
     }
   }
 

@@ -12,6 +12,7 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
 import flixel.FlxG;
+import funkin.mobile.input.ControlsHandler;
 
 class RosesRemnantsMixSong extends Song
 {
@@ -117,13 +118,22 @@ class RosesRemnantsMixSong extends Song
 
     PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
 
-    if (!Preferences.downscroll) // Move pop ups
+    if (!FlxG.onMobile) // Move pop ups
     {
-      PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll Offset
+      if (!Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll PC Offset
+
+      if (Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll PC Offset
     }
     else
     {
-      PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll Offset
+      if (FlxG.onMobile && Preferences.controlsScheme == "Arrows" && !ControlsHandler.usingExternalInputDevice) 
+PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+
+      if (FlxG.onMobile && !Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
+PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+
+      if (FlxG.onMobile && Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
+PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
     }
   }
 
