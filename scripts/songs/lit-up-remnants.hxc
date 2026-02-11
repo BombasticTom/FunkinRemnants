@@ -11,13 +11,13 @@ import flixel.addons.display.FlxBackdrop;
 
 class LitUpRemnantsMixSong extends Song
 {
-  var storm0:FlxBackdrop;
-  var storm1:FlxBackdrop;
-  var storm2:FlxBackdrop;
-  var storm3:FlxBackdrop;
-  var storm4:FlxBackdrop;
-  var storm5:FlxBackdrop;
-  var storm6:FlxBackdrop;
+  var mist0:FlxBackdrop;
+  var mist1:FlxBackdrop;
+  var mist2:FlxBackdrop;
+  var mist3:FlxBackdrop;
+  var mist4:FlxBackdrop;
+  var mist5:FlxBackdrop;
+  var mist6:FlxBackdrop;
 
   var outro:Bool = false;
 
@@ -58,153 +58,154 @@ class LitUpRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    storm0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm0.setPosition(-650, -500);
-    storm0.scrollFactor.set(1.1, 1.1);
-    storm0.zIndex = 5001;
-    storm0.blend = 0;
-    storm0.color = 0xFF5c5c5c;
-    storm0.alpha = 0;
-    storm0.velocity.x = -400;
-    storm0.scale.set(3.5, 3.5);
+    outro = false;
 
-    storm1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm1.setPosition(-650, 1300);
-    storm1.scrollFactor.set(1.1, 1.1);
-    storm1.zIndex = 5001;
-    storm1.blend = 0;
-    storm1.color = 0xFF5c5c5c;
-    storm1.alpha = 0;
-    storm1.angle = 180;
-    storm1.velocity.x = 270;
-    storm1.scale.set(3.5, 3.5);
+    if (RemnantsOptions.getPerformanceOption()) return;
+    mist0 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist0.setPosition(-650, -500);
+    mist0.scrollFactor.set(1.1, 1.1);
+    mist0.zIndex = 5001;
+    mist0.blend = 0;
+    mist0.color = 0xFF5c5c5c; // Chnage this to 0xFF748500; on all mists for funni ;)
+    mist0.alpha = 0;
+    mist0.velocity.x = -400;
+    mist0.scale.set(3.5, 3.5);
 
-    storm2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
-    storm2.setPosition(-650, -1000);
-    storm2.scrollFactor.set(1.2, 1.2);
-    storm2.zIndex = 5000;
-    storm2.blend = 0;
-    storm2.color = 0xFF5c5c5c;
-    storm2.alpha = 0;
-    storm2.velocity.x = -210;
-    storm2.scale.set(5, 5);
+    mist1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist1.setPosition(-650, 1300);
+    mist1.scrollFactor.set(1.1, 1.1);
+    mist1.zIndex = 5001;
+    mist1.blend = 0;
+    mist1.color = 0xFF5c5c5c;
+    mist1.alpha = 0;
+    mist1.angle = 180;
+    mist1.velocity.x = 270;
+    mist1.scale.set(3.5, 3.5);
 
-    storm3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm3.setPosition(-650, -300);
-    storm3.scrollFactor.set(0.8, 0.8);
-    storm3.zIndex = 3000;
-    storm3.blend = 0;
-    storm3.color = 0xFF5c5c5c;
-    storm3.alpha = 0;
-    storm3.velocity.x = 90;
-    storm3.scale.set(3, 3);
+    mist2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
+    mist2.setPosition(-650, -1000);
+    mist2.scrollFactor.set(1.2, 1.2);
+    mist2.zIndex = 5000;
+    mist2.blend = 0;
+    mist2.color = 0xFF5c5c5c;
+    mist2.alpha = 0;
+    mist2.velocity.x = -210;
+    mist2.scale.set(5, 5);
 
-    storm4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
-    storm4.setPosition(-650, 500);
-    storm4.scrollFactor.set(0.6, 0.6);
-    storm4.zIndex = 4900;
-    storm4.blend = 0;
-    storm4.color = 0xFF5c5c5c;
-    storm4.alpha = 0;
-    storm4.angle = 180;
-    storm4.velocity.x = 130;
-    storm4.scale.set(2.5, 2.5);
+    mist3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist3.setPosition(-650, -300);
+    mist3.scrollFactor.set(0.8, 0.8);
+    mist3.zIndex = 3000;
+    mist3.blend = 0;
+    mist3.color = 0xFF5c5c5c;
+    mist3.alpha = 0;
+    mist3.velocity.x = 90;
+    mist3.scale.set(3, 3);
 
-    storm5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm5.setPosition(-650, -100);
-    storm5.scrollFactor.set(0.2, 0.2);
-    storm5.zIndex = 2000;
-    storm5.blend = 0;
-    storm5.color = 0xFF5c5c5c;
-    storm5.alpha = 0;
-    storm5.angle = 180;
-    storm5.velocity.x = 120;
-    storm5.scale.set(2, 2);
+    mist4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
+    mist4.setPosition(-650, 500);
+    mist4.scrollFactor.set(0.6, 0.6);
+    mist4.zIndex = 4900;
+    mist4.blend = 0;
+    mist4.color = 0xFF5c5c5c;
+    mist4.alpha = 0;
+    mist4.angle = 180;
+    mist4.velocity.x = 130;
+    mist4.scale.set(2.5, 2.5);
 
-    storm6 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    storm6.setPosition(-650, 1100);
-    storm6.scrollFactor.set(1.1, 1.1);
-    storm6.zIndex = 6000;
-    storm6.blend = 0;
-    storm6.color = 0xFF5c5c5c;
-    storm6.alpha = 0;
-    storm6.angle = 180;
-    storm6.velocity.x = -400;
-    storm6.scale.set(3, 3);
+    mist5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist5.setPosition(-650, -100);
+    mist5.scrollFactor.set(0.2, 0.2);
+    mist5.zIndex = 2000;
+    mist5.blend = 0;
+    mist5.color = 0xFF5c5c5c;
+    mist5.alpha = 0;
+    mist5.angle = 180;
+    mist5.velocity.x = 120;
+    mist5.scale.set(2, 2);
 
-    PlayState.instance.currentStage.add(storm0);
-    PlayState.instance.currentStage.add(storm1);
-    PlayState.instance.currentStage.add(storm2);
-    PlayState.instance.currentStage.add(storm3);
-    PlayState.instance.currentStage.add(storm4);
-    PlayState.instance.currentStage.add(storm5);
-    PlayState.instance.currentStage.add(storm6);
+    mist6 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+    mist6.setPosition(-650, 1100);
+    mist6.scrollFactor.set(1.1, 1.1);
+    mist6.zIndex = 6000;
+    mist6.blend = 0;
+    mist6.color = 0xFF5c5c5c;
+    mist6.alpha = 0;
+    mist6.angle = 180;
+    mist6.velocity.x = -400;
+    mist6.scale.set(3, 3);
+
+    PlayState.instance.currentStage.add(mist0);
+    PlayState.instance.currentStage.add(mist1);
+    PlayState.instance.currentStage.add(mist2);
+    PlayState.instance.currentStage.add(mist3);
+    PlayState.instance.currentStage.add(mist4);
+    PlayState.instance.currentStage.add(mist5);
+    PlayState.instance.currentStage.add(mist6);
 
     PlayState.instance.currentStage.refresh(); // Apply z-index.
-
-    outro = false;
   }
 
-  function stormOn(duration:Float)
+  function mistOn(duration:Float)
   {
     if (duration == null) duration = 1;
 
     // Prevent new tweens from being overridden
-    FlxTween.cancelTweensOf(storm0);
-    FlxTween.cancelTweensOf(storm1);
-    FlxTween.cancelTweensOf(storm2);
-    FlxTween.cancelTweensOf(storm3);
-    FlxTween.cancelTweensOf(storm4);
-    FlxTween.cancelTweensOf(storm5);
-    FlxTween.cancelTweensOf(storm6);
+    FlxTween.cancelTweensOf(mist0);
+    FlxTween.cancelTweensOf(mist1);
+    FlxTween.cancelTweensOf(mist2);
+    FlxTween.cancelTweensOf(mist3);
+    FlxTween.cancelTweensOf(mist4);
+    FlxTween.cancelTweensOf(mist5);
+    FlxTween.cancelTweensOf(mist6);
 
-    FlxTween.tween(storm0, {alpha: 1}, duration);
-    FlxTween.tween(storm1, {alpha: 0.9}, duration);
-    FlxTween.tween(storm2, {alpha: 1}, duration);
-    FlxTween.tween(storm3, {alpha: 0.5}, duration);
-    FlxTween.tween(storm4, {alpha: 0.5}, duration);
-    FlxTween.tween(storm5, {alpha: 0.5}, duration);
-    FlxTween.tween(storm6, {alpha: 1}, duration);
+    FlxTween.tween(mist0, {alpha: 1}, duration);
+    FlxTween.tween(mist1, {alpha: 0.9}, duration);
+    FlxTween.tween(mist2, {alpha: 1}, duration);
+    FlxTween.tween(mist3, {alpha: 0.5}, duration);
+    FlxTween.tween(mist4, {alpha: 0.5}, duration);
+    FlxTween.tween(mist5, {alpha: 0.5}, duration);
+    FlxTween.tween(mist6, {alpha: 1}, duration);
   }
 
-  function stormOff(duration:Float)
+  function mistOff(duration:Float)
   {
     if (duration == null) duration = 1;
 
     // Prevent new tweens from being overridden
-    FlxTween.cancelTweensOf(storm0);
-    FlxTween.cancelTweensOf(storm1);
-    FlxTween.cancelTweensOf(storm2);
-    FlxTween.cancelTweensOf(storm3);
-    FlxTween.cancelTweensOf(storm4);
-    FlxTween.cancelTweensOf(storm5);
-    FlxTween.cancelTweensOf(storm6);
+    FlxTween.cancelTweensOf(mist0);
+    FlxTween.cancelTweensOf(mist1);
+    FlxTween.cancelTweensOf(mist2);
+    FlxTween.cancelTweensOf(mist3);
+    FlxTween.cancelTweensOf(mist4);
+    FlxTween.cancelTweensOf(mist5);
+    FlxTween.cancelTweensOf(mist6);
 
-    FlxTween.tween(storm0, {alpha: 0}, duration);
-    FlxTween.tween(storm1, {alpha: 0}, duration);
-    FlxTween.tween(storm2, {alpha: 0}, duration);
-    FlxTween.tween(storm3, {alpha: 0}, duration);
-    FlxTween.tween(storm4, {alpha: 0}, duration);
-    FlxTween.tween(storm5, {alpha: 0}, duration);
-    FlxTween.tween(storm5, {alpha: 0}, duration);
-    FlxTween.tween(storm6, {alpha: 0}, duration);
+    FlxTween.tween(mist0, {alpha: 0}, duration);
+    FlxTween.tween(mist1, {alpha: 0}, duration);
+    FlxTween.tween(mist2, {alpha: 0}, duration);
+    FlxTween.tween(mist3, {alpha: 0}, duration);
+    FlxTween.tween(mist4, {alpha: 0}, duration);
+    FlxTween.tween(mist5, {alpha: 0}, duration);
+    FlxTween.tween(mist5, {alpha: 0}, duration);
+    FlxTween.tween(mist6, {alpha: 0}, duration);
   }
 
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
 
-    if (storm0.alpha > 0)
+    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption())
     {
-      FlxTween.cancelTweensOf(storm0);
-      FlxTween.cancelTweensOf(storm1);
-      FlxTween.cancelTweensOf(storm2);
-      FlxTween.cancelTweensOf(storm3);
-      FlxTween.cancelTweensOf(storm4);
-      FlxTween.cancelTweensOf(storm5);
-      FlxTween.cancelTweensOf(storm6);
+      FlxTween.cancelTweensOf(mist0);
+      FlxTween.cancelTweensOf(mist1);
+      FlxTween.cancelTweensOf(mist2);
+      FlxTween.cancelTweensOf(mist3);
+      FlxTween.cancelTweensOf(mist4);
+      FlxTween.cancelTweensOf(mist5);
+      FlxTween.cancelTweensOf(mist6);
 
-      stormOff(1);
+      mistOff(1);
     }
 
     if (outro)
@@ -228,17 +229,17 @@ class LitUpRemnantsMixSong extends Song
     PlayState.instance.camHUD.alpha = 0;
     outro = true;
 
-    if (storm0.alpha > 0)
+    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption())
     {
-      FlxTween.cancelTweensOf(storm0);
-      FlxTween.cancelTweensOf(storm1);
-      FlxTween.cancelTweensOf(storm2);
-      FlxTween.cancelTweensOf(storm3);
-      FlxTween.cancelTweensOf(storm4);
-      FlxTween.cancelTweensOf(storm5);
-      FlxTween.cancelTweensOf(storm6);
+      FlxTween.cancelTweensOf(mist0);
+      FlxTween.cancelTweensOf(mist1);
+      FlxTween.cancelTweensOf(mist2);
+      FlxTween.cancelTweensOf(mist3);
+      FlxTween.cancelTweensOf(mist4);
+      FlxTween.cancelTweensOf(mist5);
+      FlxTween.cancelTweensOf(mist6);
 
-      stormOff(0);
+      mistOff(0);
     }
   }
 
@@ -246,26 +247,34 @@ class LitUpRemnantsMixSong extends Song
   {
     PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
-    FlxTweenUtil.pauseTweensOf(storm0);
-    FlxTweenUtil.pauseTweensOf(storm1);
-    FlxTweenUtil.pauseTweensOf(storm2);
-    FlxTweenUtil.pauseTweensOf(storm3);
-    FlxTweenUtil.pauseTweensOf(storm4);
-    FlxTweenUtil.pauseTweensOf(storm5);
-    FlxTweenUtil.pauseTweensOf(storm6);
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      FlxTweenUtil.pauseTweensOf(mist0);
+      FlxTweenUtil.pauseTweensOf(mist1);
+      FlxTweenUtil.pauseTweensOf(mist2);
+      FlxTweenUtil.pauseTweensOf(mist3);
+      FlxTweenUtil.pauseTweensOf(mist4);
+      FlxTweenUtil.pauseTweensOf(mist5);
+      FlxTweenUtil.pauseTweensOf(mist6);
+    }
   }
 
   function onResume()
   {
     PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
-    FlxTweenUtil.resumeTweensOf(storm0);
-    FlxTweenUtil.resumeTweensOf(storm1);
-    FlxTweenUtil.resumeTweensOf(storm2);
-    FlxTweenUtil.resumeTweensOf(storm3);
-    FlxTweenUtil.resumeTweensOf(storm4);
-    FlxTweenUtil.resumeTweensOf(storm5);
-    FlxTweenUtil.resumeTweensOf(storm6);
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      FlxTweenUtil.resumeTweensOf(mist0);
+      FlxTweenUtil.resumeTweensOf(mist1);
+      FlxTweenUtil.resumeTweensOf(mist2);
+      FlxTweenUtil.resumeTweensOf(mist3);
+      FlxTweenUtil.resumeTweensOf(mist4);
+      FlxTweenUtil.resumeTweensOf(mist5);
+      FlxTweenUtil.resumeTweensOf(mist6);
+    }
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -276,10 +285,10 @@ class LitUpRemnantsMixSong extends Song
     switch (event.beat)
     {
       case 96:
-        stormOn(3);
+        if (!RemnantsOptions.getPerformanceOption()) mistOn(3);
 
       case 160:
-        stormOff(3);
+        if (!RemnantsOptions.getPerformanceOption()) mistOff(3);
 
       case 323:
         PlayState.instance.camCutscene.fade(0xFF000000, 9.29, false, null, false);
