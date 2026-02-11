@@ -1,6 +1,7 @@
 import funkin.ui.freeplay.BGScrollingText;
 import funkin.ui.freeplay.FreeplayState;
 import funkin.ui.freeplay.backcards.BackingCard;
+import funkin.Conductor;
 import flixel.FlxSprite;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
@@ -173,6 +174,9 @@ class BFRemnantsCard extends BackingCard
     add(cardGlow);
   }
 
+  var canGlow = false;
+  var beatTimer:FlxTimer;
+
   override public function update(elapsed:Float):Void
   {
     if (FlxG.state.subState.capsuleOptionsMenu != null)
@@ -185,13 +189,12 @@ class BFRemnantsCard extends BackingCard
 
     super.update(elapsed);
 
-    final curDJ = FlxG.state?.subState?.dj;
-    if (curDJ != null)
+    if (beatTimer == null && canGlow)
     {
-      if (curDJ.getCurrentAnimation() == 'Boyfriend DJ' && curDJ.animation.curAnim.curFrame == 0)
-      {
+      beatTimer = new FlxTimer().start(0.5, _ -> {
         glowBeat();
-      }
+        beatTimer = null;
+      });
     }
   }
 
@@ -203,9 +206,9 @@ class BFRemnantsCard extends BackingCard
       FlxTween.cancelTweensOf(glowDark);
 
       glow.alpha = 1;
-      FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut});
+      FlxTween.tween(glow, {alpha: 0}, 16 / 15, {ease: FlxEase.quartOut});
       glowDark.alpha = 0;
-      FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
+      FlxTween.tween(glowDark, {alpha: 1}, 18 / 15, {ease: FlxEase.quartOut});
     }
   }
 
@@ -225,13 +228,14 @@ class BFRemnantsCard extends BackingCard
     {
       glowDark.visible = true;
       glow.visible = true;
+      canGlow = true;
+      glowBeat();
     }
   }
 
   public override function confirm():Void
   {
     super.confirm();
-    // FlxTween.color(bgDad, 0.33, 0xFFFFFFFF, 0xFF555555, {ease: FlxEase.quadOut});
 
     moreWays.visible = false;
     funnyScroll.visible = false;
@@ -244,6 +248,7 @@ class BFRemnantsCard extends BackingCard
     {
       glowDark.visible = false;
       glow.visible = false;
+      canGlow = false;
     }
   }
 
@@ -262,6 +267,7 @@ class BFRemnantsCard extends BackingCard
     {
       glowDark.visible = false;
       glow.visible = false;
+      canGlow = false;
     }
   }
 
@@ -299,26 +305,30 @@ class BFRemnantsCard extends BackingCard
     // Save the previous song ID.
     prevSongID = curSongID;
 
-    // Check if the random capsule was hovered over before replacing the sound.
-    if (event.capsule.freeplayData != null) return;
-
-     // Replace the sound with a bit more of delay so it actually overrides it.
-    FlxTimer.wait(FreeplayState.FADE_IN_DELAY + 0.05, _ ->
+    // Replace the random capsule theme if we are on it.
+    if (this.instance.curSelected == 0)
     {
-      this.instance.clearPreviews();
+      // Check if the random capsule was hovered over before replacing the sound.
+      // It's similar to the previous check but this doesn't crash the game...
+      if (event.capsule.freeplayData != null) return;
 
-      var previewVolume:Float = 0.7;
-      if (instance.dj != null) previewVolume *= instance.dj.getMusicPreviewMult();
+      // Replace the sound with a bit more of delay so it actually overrides it every time it needs to play.
+      new FlxTimer().start(0.3, _ -> {
+        this.instance.clearPreviews();
 
-      // Check if this music is already playing before fading it in, in case the player is just scrolling through variations while on the capsule.
-      var shouldFade:Bool = FunkinSound.playMusic('freeplayRandom-remnants',
-        {
-          startingVolume: 0.0,
-          overrideExisting: true,
-          restartTrack: false
-        });
+        var previewVolume:Float = 0.7;
+        if (instance.dj != null) previewVolume *= instance.dj.getMusicPreviewMult();
 
-      if (shouldFade) FlxG.sound.music.fadeIn(2, 0, previewVolume);
-    });
+        // Check if this music is already playing before fading it in, in case the player is just scrolling through variations while on the capsule.
+        var shouldFade:Bool = FunkinSound.playMusic('freeplayRandom-remnants',
+          {
+            startingVolume: 0.0,
+            overrideExisting: true,
+            restartTrack: false
+          });
+
+        if (shouldFade) FlxG.sound.music.fadeIn(2, 0, previewVolume);
+      });
+    }
   }
 }
