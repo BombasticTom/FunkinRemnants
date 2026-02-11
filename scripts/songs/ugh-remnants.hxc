@@ -9,6 +9,7 @@ import funkin.ui.FullScreenScaleMode;
 import funkin.Paths;
 import flixel.text.FlxText;
 import flixel.text.FlxTextBorderStyle;
+import funkin.util.TouchUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
