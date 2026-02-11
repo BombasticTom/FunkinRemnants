@@ -194,7 +194,7 @@ class LitUpRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    if (storm0.alpha > 0) 
+    if (storm0.alpha > 0)
     {
       FlxTween.cancelTweensOf(storm0);
       FlxTween.cancelTweensOf(storm1);
@@ -228,7 +228,7 @@ class LitUpRemnantsMixSong extends Song
     PlayState.instance.camHUD.alpha = 0;
     outro = true;
 
-    if (storm0.alpha > 0) 
+    if (storm0.alpha > 0)
     {
       FlxTween.cancelTweensOf(storm0);
       FlxTween.cancelTweensOf(storm1);
@@ -282,15 +282,15 @@ class LitUpRemnantsMixSong extends Song
         stormOff(3);
 
       case 323:
-      PlayState.instance.camCutscene.fade(0xFF000000, 9.29, false, null, false);
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.98,
-        {
-          ease: FlxEase.smootherStepIn,
-          onComplete: function(_) {
-            PlayState.instance.disableKeys = true;
-          }
-        });
-      outro = true;
+        PlayState.instance.camCutscene.fade(0xFF000000, 9.29, false, null, false);
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.98,
+          {
+            ease: FlxEase.smootherStepIn,
+            onComplete: function(_) {
+              PlayState.instance.disableKeys = true;
+            }
+          });
+        outro = true;
     }
   }
 }

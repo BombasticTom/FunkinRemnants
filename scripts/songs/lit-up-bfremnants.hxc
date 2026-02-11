@@ -189,7 +189,7 @@ class LitUpBFRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    if (storm0.alpha > 0) 
+    if (storm0.alpha > 0)
     {
       FlxTween.cancelTweensOf(storm0);
       FlxTween.cancelTweensOf(storm1);
@@ -207,7 +207,7 @@ class LitUpBFRemnantsMixSong extends Song
   {
     super.onGameOver(event);
 
-    if (storm0.alpha > 0) 
+    if (storm0.alpha > 0)
     {
       FlxTween.cancelTweensOf(storm0);
       FlxTween.cancelTweensOf(storm1);
