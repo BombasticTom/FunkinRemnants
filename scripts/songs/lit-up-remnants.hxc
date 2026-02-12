@@ -183,10 +183,7 @@ class LitUpRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption())
-    {
-      mistOff(1);
-    }
+    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption()) mistOff(1);
 
     if (outro)
     {
@@ -209,10 +206,7 @@ class LitUpRemnantsMixSong extends Song
     PlayState.instance.camHUD.alpha = 0;
     outro = true;
 
-    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption())
-    {
-      mistOff(0);
-    }
+    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption()) mistOff(0);
   }
 
   function onPause()

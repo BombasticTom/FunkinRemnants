@@ -178,20 +178,14 @@ class LitUpBFRemnantsMixSong extends Song
   {
     super.onSongRetry(event);
 
-    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption())
-    {
-      mistOff(1);
-    }
+    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption()) mistOff(1);
   }
 
   function onGameOver(event:ScriptEvent):Void
   {
     super.onGameOver(event);
 
-    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption())
-    {
-      mistOff(0);
-    }
+    if (mist0.alpha > 0 && !RemnantsOptions.getPerformanceOption()) mistOff(0);
   }
 
   public override function onPause(event:PauseScriptEvent)
@@ -214,7 +208,7 @@ class LitUpBFRemnantsMixSong extends Song
   {
     super.onBeatHit(event);
 
-    if (PlayState.instance.isGameOverState && RemnantsOptions.getPerformanceOption()) return;
+    if (PlayState.instance.isGameOverState || RemnantsOptions.getPerformanceOption()) return;
     switch (event.beat)
     {
       case 126:
