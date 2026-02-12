@@ -609,20 +609,28 @@ class StressRemnantsMixSong extends Song
     }
   }
 
-  /**
-   * Don't replay the cutscene between restarts.
-   */
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
 
     hasPlayedCutscene = true;
 
+    if (PlayState.instance.currentStage.scriptGet('storm0').alpha > 0 && !RemnantsOptions.getPerformanceOption()) 
+    PlayState.instance.currentStage.stormOff(1);
+
     // resets the tankmen!
     if (tankmanGroup != null)
     {
       tankmanGroup.scriptCall('reset');
     }
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    super.onGameOver(event);
+
+    if (PlayState.instance.currentStage.scriptGet('storm0').alpha > 0 && !RemnantsOptions.getPerformanceOption()) 
+    PlayState.instance.currentStage.stormOff(0);
   }
 
   function kill():Void
@@ -637,6 +645,22 @@ class StressRemnantsMixSong extends Song
       PlayState.instance.currentStage.remove(tankmanGroup);
       tankmanGroup.destroy();
       tankmanGroup = null;
+    }
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (PlayState.instance.isGameOverState || RemnantsOptions.getPerformanceOption()) return;
+    switch (event.beat)
+    {
+      case 96:
+        PlayState.instance.currentStage.stormOn(1);
+      case 160:
+        PlayState.instance.currentStage.stormOff(1);
+      case 224:
+        PlayState.instance.currentStage.stormOn(1);
     }
   }
 }

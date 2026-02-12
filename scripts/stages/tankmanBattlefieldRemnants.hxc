@@ -29,22 +29,6 @@ class TankmanBattlefieldRemnantsStage extends Stage
   var boxParachute1:FlxBackdrop;
   var boxParachute2:FlxBackdrop;
 
-  function onCreate(event:ScriptEvent):Void
-  {
-    super.onCreate(event);
-
-    if (!RemnantsOptions.getPerformanceOption())
-    {
-      if (PlayState.instance.currentSong != null)
-      {
-        if (PlayState.instance.currentSong.id == "guns")
-        {
-          stormOn(0.0001);
-        }
-      }
-    }
-  }
-
   override function buildStage()
   {
     super.buildStage();
@@ -280,41 +264,6 @@ class TankmanBattlefieldRemnantsStage extends Stage
     tankRollingExtra.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1100;
   }
 
-  function onBeatHit(event:SongTimeScriptEvent):Void
-  {
-    super.onBeatHit(event);
-
-    if (PlayState.instance.isGameOverState) return;
-    if (PlayState.instance.currentSong != null)
-    {
-      if (!RemnantsOptions.getPerformanceOption())
-      {
-        if (event.beat == 159 && PlayState.instance.currentSong.id == "ugh")
-        {
-          stormOn(1);
-        }
-
-        if (event.beat == 224 && PlayState.instance.currentSong.id == "guns")
-        {
-          stormOff(2.6);
-        }
-
-        if (PlayState.instance.currentSong.id == "stress")
-        {
-          switch (event.beat)
-          {
-            case 96:
-              stormOn(1);
-            case 160:
-              stormOff(1);
-            case 224:
-              stormOn(1);
-          }
-        }
-      }
-    }
-  }
-
   function stormOn(duration:Float)
   {
     if (duration == null) duration = 1;
@@ -352,20 +301,5 @@ class TankmanBattlefieldRemnantsStage extends Stage
     super.onSongRetry(event);
 
     refresh(); // This game fucking sucks so I added this
-
-    if (PlayState.instance.currentSong != null)
-    {
-      if (!RemnantsOptions.getPerformanceOption())
-      {
-        if (PlayState.instance.currentSong.id == "ugh" || PlayState.instance.currentSong.id == "stress")
-        {
-          stormOff(1);
-        }
-        else
-        {
-          stormOn(1);
-        }
-      }
-    }
   }
 }
