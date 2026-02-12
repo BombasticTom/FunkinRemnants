@@ -4,14 +4,19 @@ import funkin.play.PlayState;
 import funkin.save.Save;
 import funkin.graphics.FunkinSprite;
 import funkin.util.FlxTweenUtil;
+import flixel.util.FlxTimer;
 import flixel.FlxG;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import funkin.audio.FunkinSound;
 
-class SoutRemnantsMixSong extends Song
+class SouthRemnantsMixSong extends Song
 {
   var black:FunkinSprite;
   var fadeOut:Bool = false;
+
+  var hasPlayedMonsterCutscene:Bool = false;
+  var mosnerCutsceneAudio:FunkinSound;
 
   public function new()
   {
@@ -39,14 +44,19 @@ class SoutRemnantsMixSong extends Song
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
+
+    hasPlayedMonsterCutscene = false;
   }
 
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
 
+    mosnerCutsceneAudio = FunkinSound.load(Paths.sound('mosnerCutscene'), 1.0, false, true);
+
     black = new FunkinSprite(-20, -20);
-    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFF000000);
+    black.makeSolidColor(Std.int(FlxG.width * 1.5), Std.int(FlxG.height * 1.5), 0xFFFFFFFF);
+    black.color = 0xFF000000;
     black.cameras = [PlayState.instance.camCutscene];
     PlayState.instance.add(black);
 
@@ -156,5 +166,96 @@ class SoutRemnantsMixSong extends Song
         FlxTween.tween(black, {alpha: 1}, 0.5, {ease: FlxEase.linear});
         fadeOut = false;
     }
+  }
+
+  override public function onSongEnd(event:ScriptEvent):Void
+  {
+    if (!hasPlayedMonsterCutscene)
+    {
+      event.cancel();
+      hasPlayedMonsterCutscene = true;
+
+      PlayState.instance?.camHUD?.visible = false;
+
+      mosnerCutsceneAudio.play();
+
+      black.color = 0xFFFFFFFF;
+      FlxTween.tween(black, {alpha: 0}, 6 * (1 / 24));
+
+      var currentStage:Stage = PlayState.instance?.currentStage;
+      currentStage?.changeAmbiance(true, 0.0001);
+
+      currentStage?.getBoyfriend()?.visible = false;
+      currentStage?.getGirlfriend()?.visible = false;
+      currentStage?.getDad()?.visible = false;
+
+      var bfPos:FlxPoint = currentStage?.getBoyfriendPosition();
+      var gfPos:FlxPoint = currentStage?.getGirlfriendPosition();
+      var dadPos:FlxPoint = currentStage?.getGirlfriendPosition();
+
+      var bfSquint:FunkinSprite = FunkinSprite.createTextureAtlas(0, 0, 'remnants/monster cutscene/BF Squinting', 'week2');
+      bfSquint.anim.addByTimeline('anim', bfSquint.anim.getDefaultTimeline(), 24, false);
+      bfSquint.anim.play('anim', true);
+      bfSquint.updateHitbox();
+      bfSquint.setPosition(bfPos.x - (bfSquint.width / 2), bfPos.y - bfSquint.height);
+      bfSquint.y += 26;
+      bfSquint.zIndex = currentStage?.getBoyfriend()?.zIndex ?? 0;
+      currentStage?.add(bfSquint);
+
+      var gfSquint:FunkinSprite = FunkinSprite.createTextureAtlas(0, 0, 'remnants/monster cutscene/GF Squinting', 'week2');
+      gfSquint.anim.addByTimeline('anim', gfSquint.anim.getDefaultTimeline(), 24, false);
+      gfSquint.anim.play('anim', true);
+      gfSquint.updateHitbox();
+      gfSquint.setPosition(gfPos.x - (gfSquint.width / 2), gfPos.y - gfSquint.height);
+      gfSquint.x -= 12;
+      gfSquint.zIndex = currentStage?.getGirlfriend()?.zIndex ?? 0;
+      currentStage?.add(gfSquint);
+
+      var mosner:FunkinSprite = FunkinSprite.createTextureAtlas(0, 0, 'remnants/monster cutscene/moster appear', 'week2');
+      mosner.anim.addByTimeline('anim', mosner.anim.getDefaultTimeline(), 24, false);
+      mosner.anim.addBySymbol('evilAssFace', 'monster face baked', 24, true);
+      mosner.anim.play('anim', true);
+      mosner.updateHitbox();
+      mosner.setPosition(dadPos.x - (mosner.width / 2), dadPos.y - mosner.height);
+      mosner.x -= 20;
+      mosner.y += 485;
+      mosner.zIndex = currentStage?.getDad()?.zIndex ?? 0;
+      currentStage?.add(mosner);
+
+      currentStage?.refresh();
+
+      FlxTimer.wait(121 * (1 / 24), () -> {
+        FlxTween.tween(black, {alpha: 1}, 15 * (1 / 24));
+        black.color = 0xFF000000;
+      });
+
+      FlxTimer.wait(148 * (1 / 24), () -> {
+        mosner.alpha = 0;
+        mosner.anim.play('evilAssFace', true);
+        PlayState.instance?.add(mosner);
+
+        mosner.x += 325;
+        mosner.y += 111;
+
+        FlxTween.tween(mosner, {alpha: 0.3}, 6 * (1 / 24));
+
+        black.alpha = 0;
+        currentStage?.remove(mosner);
+        currentStage?.visible = false;
+      });
+
+      FlxTimer.wait(205 * (1 / 24), () -> {
+        FlxTween.tween(mosner, {alpha: 0}, 7 * (1 / 24));
+      });
+
+      FlxTimer.wait(216 * (1 / 24), () -> {
+        bfSquint.destroy();
+        gfSquint.destroy();
+        mosner.destroy();
+
+        PlayState.instance?.endSong(true);
+      });
+    }
+    super.onSongEnd(event);
   }
 }

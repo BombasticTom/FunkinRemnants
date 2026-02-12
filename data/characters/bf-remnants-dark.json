@@ -16,7 +16,7 @@
   },
   "atlasSettings": {
     "useRenderTexture": true,
-    "swfMode": true
+    "swfMode": false
   },
   "animations": [
     {
