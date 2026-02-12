@@ -219,7 +219,7 @@ class StressRemnantsMixSong extends Song
     steveDies = FunkinSound.load(Paths.sound("steveDies"), 1, false);
     cutsceneSounds.push(steveDies);
 
-    gfFail = FlxG.random.bool(15);
+    gfFail = FlxG.random.bool(50);
     if (gfFail) trace("Girlfriend is face-planting!");
 
     var dadPosition:FlxPoint = PlayState.instance.currentStage.getDadPosition();
