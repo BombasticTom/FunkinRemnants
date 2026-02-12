@@ -151,13 +151,7 @@ class LitUpRemnantsMixSong extends Song
     if (duration == null) duration = 1;
 
     // Prevent new tweens from being overridden
-    FlxTween.cancelTweensOf(mist0);
-    FlxTween.cancelTweensOf(mist1);
-    FlxTween.cancelTweensOf(mist2);
-    FlxTween.cancelTweensOf(mist3);
-    FlxTween.cancelTweensOf(mist4);
-    FlxTween.cancelTweensOf(mist5);
-    FlxTween.cancelTweensOf(mist6);
+    for (i in 0...7) FlxTween.cancelTweensOf(scriptGet('mist' + i));
 
     FlxTween.tween(mist0, {alpha: 1}, duration);
     FlxTween.tween(mist1, {alpha: 0.9}, duration);
@@ -173,13 +167,7 @@ class LitUpRemnantsMixSong extends Song
     if (duration == null) duration = 1;
 
     // Prevent new tweens from being overridden
-    FlxTween.cancelTweensOf(mist0);
-    FlxTween.cancelTweensOf(mist1);
-    FlxTween.cancelTweensOf(mist2);
-    FlxTween.cancelTweensOf(mist3);
-    FlxTween.cancelTweensOf(mist4);
-    FlxTween.cancelTweensOf(mist5);
-    FlxTween.cancelTweensOf(mist6);
+    for (i in 0...7) FlxTween.cancelTweensOf(scriptGet('mist' + i));
 
     FlxTween.tween(mist0, {alpha: 0}, duration);
     FlxTween.tween(mist1, {alpha: 0}, duration);
@@ -232,16 +220,8 @@ class LitUpRemnantsMixSong extends Song
     PlayState.instance.camCutscene?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
 
-    if (!RemnantsOptions.getPerformanceOption())
-    {
-      FlxTweenUtil.pauseTweensOf(mist0);
-      FlxTweenUtil.pauseTweensOf(mist1);
-      FlxTweenUtil.pauseTweensOf(mist2);
-      FlxTweenUtil.pauseTweensOf(mist3);
-      FlxTweenUtil.pauseTweensOf(mist4);
-      FlxTweenUtil.pauseTweensOf(mist5);
-      FlxTweenUtil.pauseTweensOf(mist6);
-    }
+    if (RemnantsOptions.getPerformanceOption()) return;
+    for (i in 0...7) FlxTweenUtil.pauseTweensOf(scriptGet('mist' + i));
   }
 
   function onResume()
@@ -249,16 +229,8 @@ class LitUpRemnantsMixSong extends Song
     PlayState.instance.camCutscene?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
 
-    if (!RemnantsOptions.getPerformanceOption())
-    {
-      FlxTweenUtil.resumeTweensOf(mist0);
-      FlxTweenUtil.resumeTweensOf(mist1);
-      FlxTweenUtil.resumeTweensOf(mist2);
-      FlxTweenUtil.resumeTweensOf(mist3);
-      FlxTweenUtil.resumeTweensOf(mist4);
-      FlxTweenUtil.resumeTweensOf(mist5);
-      FlxTweenUtil.resumeTweensOf(mist6);
-    }
+    if (RemnantsOptions.getPerformanceOption()) return;
+    for (i in 0...7) FlxTweenUtil.resumeTweensOf(scriptGet('mist' + i));
   }
 
   function onBeatHit(event:ScriptEvent):Void

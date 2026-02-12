@@ -174,34 +174,36 @@ PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile 
 
   function onPause()
   {
-    PlayState.instance.camCutscene?.active = false;
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'));
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getGirlfriend());
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getBoyfriend());
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getDad());
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+    var playState:PlayState = PlayState.instance;
+    var stage:Stage = playState?.currentStage;
 
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('Hangout'));
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('BOOBIES'));
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('Lovers'));
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('Singing'));
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('Sleeping'));
+    playState?.camCutscene?.active = false;
+
+    var props:Array<Dynamic> = [for (i in stage.characters.iterator()) props.push(i)];
+
+    for (i in ['TheGrievingLands', 'Hangout', 'BOOBIES', 'Lovers', 'Singing', 'Sleeping'])
+    {
+      props.push(stage.getNamedProp(i));
+    }
+
+    for (i in props) FlxTweenUtil.pauseTweensOf(i);
   }
 
   function onResume()
   {
-    PlayState.instance.camCutscene?.active = true;
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('TheGrievingLands'));
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getGirlfriend());
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getBoyfriend());
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getDad());
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
+    var playState:PlayState = PlayState.instance;
+    var stage:Stage = playState?.currentStage;
 
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('Hangout'));
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('BOOBIES'));
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('Lovers'));
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('Singing'));
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('Sleeping'));
+    playState?.camCutscene?.active = true;
+
+    var props:Array<Dynamic> = [for (i in stage.characters.iterator()) props.push(i)];
+
+    for (i in ['TheGrievingLands', 'Hangout', 'BOOBIES', 'Lovers', 'Singing', 'Sleeping'])
+    {
+      props.push(stage.getNamedProp(i));
+    }
+
+    for (i in props) FlxTweenUtil.resumeTweensOf(i);
   }
 
   function onSongStart(event:ScriptEvent):Void

@@ -379,8 +379,7 @@ class GunsRemnantsMixSong extends Song
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
 
     if (!ascension) return;
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getDad());
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getBoyfriend());
+    for (i in PlayState.instance?.currentStage?.characters?.iterator() ?? []) FlxTweenUtil.pauseTweensOf(i);
   }
 
   function onResume()
@@ -389,8 +388,7 @@ class GunsRemnantsMixSong extends Song
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
 
     if (!ascension) return;
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getDad());
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getBoyfriend());
+    for (i in PlayState.instance?.currentStage?.characters?.iterator() ?? []) FlxTweenUtil.resumeTweensOf(i);
   }
 
   function onSongEnd(event:ScriptEvent):Void

@@ -170,27 +170,15 @@ class SpookyMansionRemnantsStage extends Stage
 
   function onPause()
   {
-    FlxTweenUtil.pauseTweensOf(getGirlfriend());
-    FlxTweenUtil.pauseTweensOf(getBoyfriend());
-    FlxTweenUtil.pauseTweensOf(getDad());
-    FlxTweenUtil.pauseTweensOf(getNamedProp('sky'));
-    FlxTweenUtil.pauseTweensOf(getNamedProp('mansionThunder'));
-    FlxTweenUtil.pauseTweensOf(getNamedProp('paintingThunder'));
-    FlxTweenUtil.pauseTweensOf(getNamedProp('coatThunder'));
-    FlxTweenUtil.pauseTweensOf(getNamedProp('cabinetThunder'));
+    for (i in characters?.iterator() ?? []) FlxTweenUtil.pauseTweensOf(i);
+    for (i in ['sky', 'mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder']) FlxTweenUtil.pauseTweensOf(getNamedProp(i));
     FlxTweenUtil.pauseTweensOf(halloweenWhite);
   }
 
   function onResume()
   {
-    FlxTweenUtil.resumeTweensOf(getGirlfriend());
-    FlxTweenUtil.resumeTweensOf(getBoyfriend());
-    FlxTweenUtil.resumeTweensOf(getDad());
-    FlxTweenUtil.resumeTweensOf(getNamedProp('sky'));
-    FlxTweenUtil.resumeTweensOf(getNamedProp('mansionThunder'));
-    FlxTweenUtil.resumeTweensOf(getNamedProp('paintingThunder'));
-    FlxTweenUtil.resumeTweensOf(getNamedProp('coatThunder'));
-    FlxTweenUtil.resumeTweensOf(getNamedProp('cabinetThunder'));
+    for (i in characters?.iterator() ?? []) FlxTweenUtil.resumeTweensOf(i);
+    for (i in ['sky', 'mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder']) FlxTweenUtil.resumeTweensOf(getNamedProp(i));
     FlxTweenUtil.resumeTweensOf(halloweenWhite);
   }
 
@@ -215,13 +203,8 @@ class SpookyMansionRemnantsStage extends Stage
     wentDark = goDark;
 
     // Cancel tweens just in case thunder strikes so they can actaully work here
-    FlxTween.cancelTweensOf(getGirlfriend());
-    FlxTween.cancelTweensOf(getBoyfriend());
-    FlxTween.cancelTweensOf(getDad());
-    FlxTween.cancelTweensOf(getNamedProp('mansionThunder'));
-    FlxTween.cancelTweensOf(getNamedProp('paintingThunder'));
-    FlxTween.cancelTweensOf(getNamedProp('coatThunder'));
-    FlxTween.cancelTweensOf(getNamedProp('cabinetThunder'));
+    for (i in characters?.iterator() ?? []) FlxTween.cancelTweensOf(i);
+    for (i in ['mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder']) FlxTween.cancelTweensOf(getNamedProp(i));
 
     if (getGirlfriend() != null) FlxTween.tween(getGirlfriend(), {alpha: targetAlpha}, duration);
     if (getBoyfriend() != null) FlxTween.tween(getBoyfriend(), {alpha: targetAlpha}, duration);
