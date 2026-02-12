@@ -68,7 +68,7 @@
       "name": "singDOWN-calm",
       "prefix": "monster down calm",
       "animType": "symbol",
-      "offsets": [-50, -66]
+      "offsets": [-50, -62]
     },
     {
       "name": "singDOWN-calm-hold",
@@ -79,7 +79,7 @@
         22, 23, 24, 25, 26, 27, 28, 29
       ],
       "animType": "symbol",
-      "offsets": [-50, -66]
+      "offsets": [-50, -62]
     },
     {
       "name": "singUP",
@@ -102,7 +102,7 @@
       "name": "singUP-calm",
       "prefix": "monster up note calm",
       "animType": "symbol",
-      "offsets": [-21, 32]
+      "offsets": [-21, 48]
     },
     {
       "name": "singUP-calm-hold",
@@ -113,7 +113,7 @@
         22, 23
       ],
       "animType": "symbol",
-      "offsets": [-21, 32]
+      "offsets": [-21, 48]
     },
     {
       "name": "singLEFT",
@@ -135,7 +135,7 @@
       "name": "singLEFT-calm",
       "prefix": "Monster left note calm",
       "animType": "symbol",
-      "offsets": [-32, -18]
+      "offsets": [-32, -20.5]
     },
     {
       "name": "singLEFT-calm-hold",
@@ -145,7 +145,7 @@
         2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
       ],
       "animType": "symbol",
-      "offsets": [-32, -18]
+      "offsets": [-32, -20.5]
     }
   ]
 }
