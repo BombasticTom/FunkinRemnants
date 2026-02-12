@@ -40,7 +40,7 @@ class MindRemnantsStage extends Stage
       switch (charType)
       {
         case CharacterType.BF:
-          rim.angle = 130;
+          rim.angle = 120;
           rim.maskThreshold = 0.1;
 
           character.animation.onFrameChange.add(function() {
@@ -58,8 +58,8 @@ class MindRemnantsStage extends Stage
           });
 
         case CharacterType.DAD:
-          rim.angle = 90;
-          rim.threshold = 0.3;
+          rim.angle = 40;
+          rim.threshold = 0.1;
 
           character.animation.onFrameChange.add(function() {
             rim.updateFrameInfo(getDad().frame);
