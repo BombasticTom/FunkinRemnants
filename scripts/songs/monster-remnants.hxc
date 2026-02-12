@@ -62,14 +62,19 @@ class MonsterRemnantsMixSong extends Song
     }
     else
     {
-      if (FlxG.onMobile && Preferences.controlsScheme == "Arrows" && !ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+      if (FlxG.onMobile
+        && Preferences.controlsScheme == "Arrows"
+        && !ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
 
-      if (FlxG.onMobile && !Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+      if (FlxG.onMobile
+        && !Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
 
-      if (FlxG.onMobile && Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
+      if (FlxG.onMobile
+        && Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
     }
   }
 

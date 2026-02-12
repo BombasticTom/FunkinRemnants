@@ -20,7 +20,8 @@ class MonsterRemnantsDarkCharacter extends SparrowCharacter
     if (normalChar != null)
     {
       if (val == 1) normalChar.alpha = 0.5;
-      else normalChar.alpha = 1;
+      else
+        normalChar.alpha = 1;
     }
     return val;
   }

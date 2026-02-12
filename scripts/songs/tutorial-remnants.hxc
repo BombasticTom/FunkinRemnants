@@ -68,14 +68,19 @@ class TutorialRemnantsMixSong extends Song
     }
     else
     {
-      if (FlxG.onMobile && Preferences.controlsScheme == "Arrows" && !ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+      if (FlxG.onMobile
+        && Preferences.controlsScheme == "Arrows"
+        && !ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
 
-      if (FlxG.onMobile && !Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+      if (FlxG.onMobile
+        && !Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
 
-      if (FlxG.onMobile && Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
+      if (FlxG.onMobile
+        && Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
     }
   }
 
@@ -144,7 +149,8 @@ PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile 
           });
 
       case 'ending':
-        if (PlayState.instance.currentChart.difficulty == 'easy' || PlayState.instance.currentChart.difficulty == 'normal') // Didnt just do "!= hard" just in case people make fan charts under new diffcutlies
+        if (PlayState.instance.currentChart.difficulty == 'easy'
+          || PlayState.instance.currentChart.difficulty == 'normal') // Didnt just do "!= hard" just in case people make fan charts under new diffcutlies
         {
           FlxTween.tween(black, {alpha: 1}, 6.72, {ease: FlxEase.expoIn});
           ending = true;

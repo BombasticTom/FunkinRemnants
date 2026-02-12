@@ -170,15 +170,19 @@ class SpookyMansionRemnantsStage extends Stage
 
   function onPause()
   {
-    for (i in characters?.iterator() ?? []) FlxTweenUtil.pauseTweensOf(i);
-    for (i in ['sky', 'mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder']) FlxTweenUtil.pauseTweensOf(getNamedProp(i));
+    for (i in characters?.iterator() ?? [])
+      FlxTweenUtil.pauseTweensOf(i);
+    for (i in ['sky', 'mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder'])
+      FlxTweenUtil.pauseTweensOf(getNamedProp(i));
     FlxTweenUtil.pauseTweensOf(halloweenWhite);
   }
 
   function onResume()
   {
-    for (i in characters?.iterator() ?? []) FlxTweenUtil.resumeTweensOf(i);
-    for (i in ['sky', 'mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder']) FlxTweenUtil.resumeTweensOf(getNamedProp(i));
+    for (i in characters?.iterator() ?? [])
+      FlxTweenUtil.resumeTweensOf(i);
+    for (i in ['sky', 'mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder'])
+      FlxTweenUtil.resumeTweensOf(getNamedProp(i));
     FlxTweenUtil.resumeTweensOf(halloweenWhite);
   }
 
@@ -203,8 +207,10 @@ class SpookyMansionRemnantsStage extends Stage
     wentDark = goDark;
 
     // Cancel tweens just in case thunder strikes so they can actaully work here
-    for (i in characters?.iterator() ?? []) FlxTween.cancelTweensOf(i);
-    for (i in ['mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder']) FlxTween.cancelTweensOf(getNamedProp(i));
+    for (i in characters?.iterator() ?? [])
+      FlxTween.cancelTweensOf(i);
+    for (i in ['mansionThunder', 'paintingThunder', 'coatThunder', 'cabinetThunder'])
+      FlxTween.cancelTweensOf(getNamedProp(i));
 
     if (getGirlfriend() != null) FlxTween.tween(getGirlfriend(), {alpha: targetAlpha}, duration);
     if (getBoyfriend() != null) FlxTween.tween(getBoyfriend(), {alpha: targetAlpha}, duration);

@@ -214,7 +214,19 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
     if (RemnantsOptions.getPerformanceOption()) return;
 
-    for (i in [tankParachute1, tankParachute2, tankParachute3, boxParachute1, boxParachute2, storm0, storm1, storm2, storm3, storm4, storm5])
+    for (i in [
+      tankParachute1,
+      tankParachute2,
+      tankParachute3,
+      boxParachute1,
+      boxParachute2,
+      storm0,
+      storm1,
+      storm2,
+      storm3,
+      storm4,
+      storm5
+    ])
     {
       FlxTweenUtil.pauseTweensOf(i);
     }
@@ -226,7 +238,19 @@ class TankmanBattlefieldRemnantsStage extends Stage
 
     if (RemnantsOptions.getPerformanceOption()) return;
 
-    for (i in [tankParachute1, tankParachute2, tankParachute3, boxParachute1, boxParachute2, storm0, storm1, storm2, storm3, storm4, storm5])
+    for (i in [
+      tankParachute1,
+      tankParachute2,
+      tankParachute3,
+      boxParachute1,
+      boxParachute2,
+      storm0,
+      storm1,
+      storm2,
+      storm3,
+      storm4,
+      storm5
+    ])
     {
       FlxTweenUtil.resumeTweensOf(i);
     }
@@ -296,7 +320,8 @@ class TankmanBattlefieldRemnantsStage extends Stage
     if (duration == null) duration = 1;
 
     // Prevent new tweens from being overridden
-    for (i in 0...6) FlxTween.cancelTweensOf(scriptGet('storm' + i));
+    for (i in 0...6)
+      FlxTween.cancelTweensOf(scriptGet('storm' + i));
 
     FlxTween.tween(storm0, {alpha: 1}, duration);
     FlxTween.tween(storm1, {alpha: 0.9}, duration);
@@ -311,7 +336,8 @@ class TankmanBattlefieldRemnantsStage extends Stage
     if (duration == null) duration = 1;
 
     // Prevent new tweens from being overridden
-    for (i in 0...6) FlxTween.cancelTweensOf(scriptGet('storm' + i));
+    for (i in 0...6)
+      FlxTween.cancelTweensOf(scriptGet('storm' + i));
 
     FlxTween.tween(storm0, {alpha: 0}, duration);
     FlxTween.tween(storm1, {alpha: 0}, duration);

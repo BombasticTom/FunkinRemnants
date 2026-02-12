@@ -133,14 +133,19 @@ class GrievingRemnantsSong extends Song
     }
     else
     {
-      if (FlxG.onMobile && Preferences.controlsScheme == "Arrows" && !ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+      if (FlxG.onMobile
+        && Preferences.controlsScheme == "Arrows"
+        && !ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
 
-      if (FlxG.onMobile && !Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+      if (FlxG.onMobile
+        && !Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
 
-      if (FlxG.onMobile && Preferences.downscroll && Preferences.controlsScheme == "Arrows" && ControlsHandler.usingExternalInputDevice) 
-PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
+      if (FlxG.onMobile
+        && Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
     }
   }
 
@@ -186,7 +191,8 @@ PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile 
       props.push(stage.getNamedProp(i));
     }
 
-    for (i in props) FlxTweenUtil.pauseTweensOf(i);
+    for (i in props)
+      FlxTweenUtil.pauseTweensOf(i);
   }
 
   function onResume()
@@ -203,7 +209,8 @@ PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile 
       props.push(stage.getNamedProp(i));
     }
 
-    for (i in props) FlxTweenUtil.resumeTweensOf(i);
+    for (i in props)
+      FlxTweenUtil.resumeTweensOf(i);
   }
 
   function onSongStart(event:ScriptEvent):Void

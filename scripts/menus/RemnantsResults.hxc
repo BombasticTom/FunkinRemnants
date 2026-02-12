@@ -145,20 +145,24 @@ class RemnantsResults extends Module
                 for (i in 0...object.members.length)
                 {
                   var tallie = object.members[i];
-                  FlxTween.tween(rating, {curNumber: rating.neededNumber}, 0.5, {ease: FlxEase.quartOut, onUpdate: function(twn) {
-                    for (num in tallie.members)
+                  FlxTween.tween(rating, {curNumber: rating.neededNumber}, 0.5,
                     {
-                      if (num?.frames != Paths.getSparrowAtlas("resultScreen/tallieNumber-remnants"))
-                      {
-                        num?.frames = Paths.getSparrowAtlas("resultScreen/tallieNumber-remnants");
-                        for (i in 0...10)
+                      ease: FlxEase.quartOut,
+                      onUpdate: function(twn) {
+                        for (num in tallie.members)
                         {
-                          num?.animation.addByPrefix(Std.string(i), i + " small", 24, false);
+                          if (num?.frames != Paths.getSparrowAtlas("resultScreen/tallieNumber-remnants"))
+                          {
+                            num?.frames = Paths.getSparrowAtlas("resultScreen/tallieNumber-remnants");
+                            for (i in 0...10)
+                            {
+                              num?.animation.addByPrefix(Std.string(i), i + " small", 24, false);
+                            }
+                            num?.updateHitbox();
+                          }
                         }
-                        num?.updateHitbox();
                       }
-                    }
-                  }});
+                    });
                 }
               });
             }
