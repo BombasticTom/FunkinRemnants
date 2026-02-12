@@ -1,6 +1,7 @@
 import funkin.data.character.CharacterDataParser;
 import funkin.play.character.SparrowCharacter;
 import funkin.play.character.BaseCharacter;
+import funkin.play.character.CharacterType;
 import funkin.play.PlayState;
 
 class MonsterRemnantsDarkCharacter extends SparrowCharacter
@@ -15,15 +16,19 @@ class MonsterRemnantsDarkCharacter extends SparrowCharacter
   override function set_alpha(val:Float):Float
   {
     super.set_alpha(val);
-    if (val == 1) normalChar.alpha = 0.0001;
-    else
-      normalChar.alpha = 1;
+
+    if (normalChar != null)
+    {
+      if (val == 1) normalChar.alpha = 0.5;
+      else normalChar.alpha = 1;
+    }
     return val;
   }
 
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     super.playAnimation(name, restart, ignoreOther);
+
     if (normalChar != null)
     {
       normalChar.playAnimation(name, restart, ignoreOther);
@@ -31,14 +36,36 @@ class MonsterRemnantsDarkCharacter extends SparrowCharacter
     }
   }
 
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
+    {
+      // Override the hit note animation.
+      switch (event.note.kind)
+      {
+        case "calm":
+          holdTimer = 0;
+          this.playSingAnimation(event.note.noteData.getDirection(), false, 'calm');
+          return;
+
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+
   function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
-    normalChar = CharacterDataParser.fetchCharacter('monster-remnants');
-    normalChar.flipX = false;
-    normalChar.zIndex = 199;
 
-    PlayState.instance.currentStage.add(normalChar);
-    PlayState.instance.currentStage.refresh(); // Apply z-index.
+    if (!this.debug)
+    {
+      normalChar = CharacterDataParser.fetchCharacter('monster-remnants');
+      normalChar.flipX = false;
+      normalChar.zIndex = 199;
+
+      PlayState.instance.currentStage.add(normalChar);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+    }
   }
 }
