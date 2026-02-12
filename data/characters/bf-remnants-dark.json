@@ -8,7 +8,7 @@
   "healthIcon": {
     "id": "bf-remnants"
   },
-  "offsets": [13, 14],
+  "offsets": [13.5, 19.5],
   "cameraOffsets": [3, 41],
   "death": {
     "cameraOffsets": [10, -85],
