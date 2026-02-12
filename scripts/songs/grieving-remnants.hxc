@@ -184,7 +184,7 @@ class GrievingRemnantsSong extends Song
 
     playState?.camCutscene?.active = false;
 
-    var props:Array<Dynamic> = [for (i in stage.characters.iterator()) props.push(i)];
+    var props:Array<Dynamic> = [for (i in stage.characters.iterator()) i];
 
     for (i in ['TheGrievingLands', 'Hangout', 'BOOBIES', 'Lovers', 'Singing', 'Sleeping'])
     {
@@ -202,7 +202,7 @@ class GrievingRemnantsSong extends Song
 
     playState?.camCutscene?.active = true;
 
-    var props:Array<Dynamic> = [for (i in stage.characters.iterator()) props.push(i)];
+    var props:Array<Dynamic> = [for (i in stage.characters.iterator()) i];
 
     for (i in ['TheGrievingLands', 'Hangout', 'BOOBIES', 'Lovers', 'Singing', 'Sleeping'])
     {
