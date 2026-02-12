@@ -86,6 +86,7 @@ class RemnantsResults extends Module
         var songText:String = curState.songName.text;
         var fontLetters:String = "AaBbCcDdEeFfGgHhiIJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz:1234567890";
         curState.songName.font = FlxBitmapFont.fromMonospace(Paths.image("resultScreen/tardlingSpritesheet-remnants"), fontLetters, FlxBasePoint.get(49, 62));
+        curState.songName.text = "i fucked up";
         curState.songName.text = songText;
 
         // Difficulty Sprite
