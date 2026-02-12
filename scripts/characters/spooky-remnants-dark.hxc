@@ -38,15 +38,7 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
     if (normalChar != null)
     {
       normalChar.playAnimation(name, restart, ignoreOther);
-
-      if (normalChar != null && (lastX != this.x || lastY != this.y))
-      {
-        normalChar.x = this.feetPosition.x - normalChar.characterOrigin.x;
-        normalChar.y = this.feetPosition.y - normalChar.characterOrigin.y;
-
-        lastX = this.x;
-        lastY = this.y;
-      }
+      normalChar.setPosition(this.x, this.y);
     }
 
     if (name == 'idleToDance')
