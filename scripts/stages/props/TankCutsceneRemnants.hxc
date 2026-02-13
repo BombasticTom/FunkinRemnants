@@ -10,9 +10,10 @@ class TankCutsceneRemnants extends FunkinSprite
   {
     super(x, y);
 
-    loadTextureAtlas("remnants/cutscene/tankmanAtlas", "week7", {
-      onSymbolCreate: onSymbolCreate
-    });
+    loadTextureAtlas("remnants/cutscene/tankmanAtlas", "week7",
+      {
+        onSymbolCreate: onSymbolCreate
+      });
 
     // Ugh
     anim.addByFrameLabel("wellWellWell", "What do we got here", 24, false);

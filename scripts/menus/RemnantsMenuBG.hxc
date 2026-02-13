@@ -38,7 +38,7 @@ class RemnantsMenuBG extends Module
         checkAndReplace(basic.members);
         continue;
       }
-      catch(e:Exception) {}
+      catch (e:Exception) {}
 
       if (!Std.isOfType(basic, FlxSprite)) continue;
 

@@ -317,8 +317,8 @@ class GunsRemnantsMixSong extends Song
 
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
 
-    if (PlayState.instance.currentStage.scriptGet('storm0').alpha < 1 && !RemnantsOptions.getPerformanceOption()) 
-    PlayState.instance.currentStage.stormOn(1);
+    if (PlayState.instance.currentStage.scriptGet('storm0').alpha < 1
+      && !RemnantsOptions.getPerformanceOption()) PlayState.instance.currentStage.stormOn(1);
 
     if (fadeHud)
     {
@@ -371,8 +371,8 @@ class GunsRemnantsMixSong extends Song
     fadeOut = true;
     fadeHud = false;
 
-    if (PlayState.instance.currentStage.scriptGet('storm0').alpha < 1 && !RemnantsOptions.getPerformanceOption()) 
-    PlayState.instance.currentStage.stormOn(0);
+    if (PlayState.instance.currentStage.scriptGet('storm0').alpha < 1
+      && !RemnantsOptions.getPerformanceOption()) PlayState.instance.currentStage.stormOn(0);
 
     if (!ascension) return;
     FlxTween.cancelTweensOf(PlayState.instance.currentStage.getBoyfriend());
@@ -445,7 +445,7 @@ class GunsRemnantsMixSong extends Song
         FlxG.camera.fade(0xFF000000, 0, true);
         fadeOut = false;
 
-	if (!RemnantsOptions.getPerformanceOption()) PlayState.instance.currentStage.stormOff(2.6);
+        if (!RemnantsOptions.getPerformanceOption()) PlayState.instance.currentStage.stormOff(2.6);
 
         if (FlxG.random.bool(25)) // Ascension!
         {
