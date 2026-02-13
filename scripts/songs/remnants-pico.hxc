@@ -113,6 +113,7 @@ class RemnantsPicoSong extends Song
 
   function playCutscene():Void
   {
+    PlayState.instance.disableKeys = true;
     PlayState.instance.tweenCameraToPosition(620, 515.5, 0);
 
     var cutsceneMusic:FunkinSound = FunkinSound.load(Paths.music("freeplayRandom-remnants/freeplayRandom-remnants"), 0.0, true);
@@ -166,6 +167,7 @@ class RemnantsPicoSong extends Song
           remnantsPico?.destroy();
         });
 
+        // PlayState.instance.disableKeys = false;
         PlayState.instance.startCountdown();
       });
     });
@@ -180,7 +182,11 @@ class RemnantsPicoSong extends Song
     {
       case 12:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1.7, {ease: FlxEase.linear});
+        PlayState.instance.disableKeys = false;
         fadeHud = true;
+
+      case 13, 14, 15: // Making sure lag doesn't mess it up.
+        PlayState.instance.disableKeys = false;
 
       case 192:
         PlayState.instance.camCutscene.fade(0xFF000000, 6.8, false, null, false);

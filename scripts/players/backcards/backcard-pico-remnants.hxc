@@ -130,23 +130,27 @@ class PicoRemnantsCard extends BackingCard
     add(scrollMiddle);
     scrollMiddle.velocity.x = 220;
 
-    glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
-      330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
-    glowDark.blend = 9;
-    add(glowDark);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+        330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
+      glowDark.blend = 9;
+      add(glowDark);
 
-    glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
-      330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
-    glow.blend = 0;
-    add(glow);
+      glow = new FlxSprite((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) + -300,
+        330).loadGraphic(Paths.image('freeplay/backingCards/pico-remnants/glow'));
+      glow.blend = 0;
+      add(glow);
+
+      glow.visible = false;
+      glowDark.visible = false;
+    }
 
     blueBar.visible = false;
     scrollBack.visible = false;
     scrollLower.visible = false;
     scrollTop.visible = false;
     scrollMiddle.visible = false;
-    glow.visible = false;
-    glowDark.visible = false;
 
     confirmAtlas = FunkinSprite.createTextureAtlas((FreeplayState.CUTOUT_WIDTH * FreeplayState.DJ_POS_MULTI) - 120, 55,
       "freeplay/backingCards/pico/pico-confirm");
@@ -173,6 +177,13 @@ class PicoRemnantsCard extends BackingCard
   {
     confirmAtlas.visible = true;
     confirmAtlas.anim.play("");
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark.visible = false;
+      glow.visible = false;
+      canGlow = false;
+    }
 
     FlxTween.color(instance.backingImage, 10 / 24, 0xFFFFFFFF, 0xFF8A8A8A,
       {
@@ -247,8 +258,14 @@ class PicoRemnantsCard extends BackingCard
     scrollLower.visible = true;
     scrollTop.visible = true;
     scrollMiddle.visible = true;
-    glowDark.visible = true;
-    glow.visible = true;
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark.visible = true;
+      glow.visible = true;
+      canGlow = true;
+      glowBeat();
+    }
 
     cardGlow.visible = true;
     FlxTween.tween(cardGlow, {alpha: 0}, 0.45, {ease: FlxEase.sineOut});
@@ -264,8 +281,13 @@ class PicoRemnantsCard extends BackingCard
     scrollLower.visible = false;
     scrollTop.visible = false;
     scrollMiddle.visible = false;
-    glowDark.visible = false;
-    glow.visible = false;
+
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      glowDark.visible = false;
+      glow.visible = false;
+      canGlow = false;
+    }
 
     cardGlow.visible = true;
     cardGlow.alpha = 1;
@@ -273,6 +295,9 @@ class PicoRemnantsCard extends BackingCard
     FlxTween.tween(cardGlow, {alpha: 0}, 0.25, {ease: FlxEase.sineOut});
     FlxTween.tween(cardGlow.scale, {x: 1.2, y: 1.2}, 0.25, {ease: FlxEase.sineOut});
   }
+
+  var canGlow = false;
+  var beatTimer:FlxTimer;
 
   override public function update(elapsed:Float):Void
   {
@@ -286,13 +311,12 @@ class PicoRemnantsCard extends BackingCard
 
     super.update(elapsed);
 
-    final curDJ = FlxG.state?.subState?.dj;
-    if (curDJ != null)
+    if (beatTimer == null && canGlow)
     {
-      if (curDJ.getCurrentAnimation() == 'Pico DJ' && curDJ.animation.curAnim.curFrame == 0)
-      {
+      beatTimer = new FlxTimer().start(0.5, _ -> {
         glowBeat();
-      }
+        beatTimer = null;
+      });
     }
 
     var scrollProgress:Float = Math.abs(scrollTop.x % (scrollTop.frameWidth + 20));
@@ -323,40 +347,47 @@ class PicoRemnantsCard extends BackingCard
 
   function glowBeat()
   {
-    FlxTween.cancelTweensOf(glow);
-    FlxTween.cancelTweensOf(glowDark);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      FlxTween.cancelTweensOf(glow);
+      FlxTween.cancelTweensOf(glowDark);
 
-    glow.alpha = 1;
-    FlxTween.tween(glow, {alpha: 0}, 16 / 24, {ease: FlxEase.quartOut});
-    glowDark.alpha = 0;
-    FlxTween.tween(glowDark, {alpha: 1}, 18 / 24, {ease: FlxEase.quartOut});
+      glow.alpha = 1;
+      FlxTween.tween(glow, {alpha: 0}, 16 / 15, {ease: FlxEase.quartOut});
+      glowDark.alpha = 0;
+      FlxTween.tween(glowDark, {alpha: 1}, 18 / 15, {ease: FlxEase.quartOut});
+    }
   }
 
-  // Thank you Sonic JAM...
+  // Thank you Sonic JAM... (Had to fix something)
   public function onCapsuleSelected(event:CapsuleScriptEvent)
   {
     super.onCapsuleSelected(event);
 
-    // Check if the random capsule was hovered over before replacing the sound.
-    if (event.capsule.freeplayData != null) return;
+    // Replace the random capsule theme if we are on it.
+    if (this.instance.curSelected == 0)
+    {
+      // Check if the random capsule was hovered over before replacing the sound.
+      // It's similar to the previous check but this doesn't crash the game...
+      if (event.capsule.freeplayData != null) return;
 
-    // Remove the delay timer for the music and start a fresh new one.
-    FlxTimer.globalManager._timers.pop();
-    FlxTimer.wait(FreeplayState.FADE_IN_DELAY, function() {
-      this.instance.clearPreviews();
+      // Replace the sound with a bit more of delay so it actually overrides it every time it needs to play.
+      new FlxTimer().start(0.3, _ -> {
+        this.instance.clearPreviews();
 
-      var previewVolume:Float = 0.7;
-      if (instance.dj != null) previewVolume *= instance.dj.getMusicPreviewMult();
+        var previewVolume:Float = 0.7;
+        if (instance.dj != null) previewVolume *= instance.dj.getMusicPreviewMult();
 
-      // Check if this music is already playing before fading it in, in case the player is just scrolling through variations while on the capsule.
-      var shouldFade:Bool = FunkinSound.playMusic('freeplayRandom-remnants',
-        {
-          startingVolume: 0.0,
-          overrideExisting: true,
-          restartTrack: false
-        });
+        // Check if this music is already playing before fading it in, in case the player is just scrolling through variations while on the capsule.
+        var shouldFade:Bool = FunkinSound.playMusic('freeplayRandom-remnants',
+          {
+            startingVolume: 0.0,
+            overrideExisting: true,
+            restartTrack: false
+          });
 
-      if (shouldFade) FlxG.sound.music.fadeIn(2, 0, previewVolume);
-    });
+        if (shouldFade) FlxG.sound.music.fadeIn(2, 0, previewVolume);
+      });
+    }
   }
 }

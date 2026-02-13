@@ -1,12 +1,7 @@
-import flixel.FlxG;
 import funkin.util.HapticUtil;
-import funkin.graphics.FunkinSprite;
-import funkin.audio.FunkinSound;
 import funkin.play.PauseSubState;
 import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.GameOverSubState;
-import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTween;
 
 class BoyfriendRemnantsMindCharacter extends MultiAnimateAtlasCharacter
 {
@@ -21,71 +16,6 @@ class BoyfriendRemnantsMindCharacter extends MultiAnimateAtlasCharacter
 
     GameOverSubState.musicSuffix = '-remnants';
     PauseSubState.musicSuffix = '-remnants';
-  }
-
-  var loseSprite:FunkinSprite;
-
-  /**
-   * Initialize and cache sprites used for the death animation,
-   */
-  function createDeathSprites()
-  {
-    loseSprite = FunkinSprite.createSparrow(0, 0, "gameover/loseText");
-    loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
-    loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
-    loseSprite.setPosition(this.getMidpoint().x - (loseSprite.width / 2) + 50, -200);
-    loseSprite.animation.onFinish.add(function(name:String) {
-      loseSprite.animation.play('idle', true);
-    });
-
-    // week 3 shader
-    if (shader != null)
-    {
-      loseSprite.shader = shader;
-    }
-
-    loseSprite.zIndex = this.zIndex + 5;
-    loseSprite.visible = false;
-  }
-
-  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
-  {
-    if (!this.debug)
-    {
-      switch (name)
-      {
-        case "fakeoutDeath":
-          doFakeoutDeath();
-
-        case "firstDeath":
-          // Lose...
-          createDeathSprites();
-          GameOverSubState.instance.add(loseSprite);
-
-        case "deathLoop":
-          loseSprite.visible = true;
-          loseSprite.animation.play('fall', true);
-
-        case "deathConfirm":
-          FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-      }
-    }
-
-    super.playAnimation(name, restart, ignoreOther);
-  }
-
-  function doFakeoutDeath():Void
-  {
-    FunkinSound.playOnce(Paths.sound("gameplay/gameover/fakeout_death"), 1.0);
-
-    // We don't want people to miss this.
-    GameOverSubState.instance.mustNotExit = true;
-    this.animation.onFinish.addOnce(() -> {
-      GameOverSubState.instance.mustNotExit = false;
-      this.playAnimation('firstDeath', true);
-      // Play the "blue balled" sound. May play a variant if one has been assigned.
-      GameOverSubState.playBlueBalledSFX();
-    });
   }
 
   function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)

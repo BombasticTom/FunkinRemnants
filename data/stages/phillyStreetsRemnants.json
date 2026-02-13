@@ -80,6 +80,18 @@
     },
     {
       "danceEvery": 0,
+      "zIndex": 999,
+      "position": [2330, -100],
+      "scale": [1, 1],
+      "animType": "sparrow",
+      "name": "frontPole",
+      "isPixel": false,
+      "assetPath": "remnants/FrontPole",
+      "scroll": [1, 1],
+      "animations": []
+    },
+    {
+      "danceEvery": 0,
       "zIndex": 800,
       "position": [550, 608],
       "scale": [1, 1],
@@ -93,7 +105,7 @@
       "animations": [
         {
           "name": "paperBlow",
-          "prefix": "Paper Blowing instance 1",
+          "prefix": "Paper Blowing",
           "frameRate": 24,
           "flipX": false,
           "flipY": false
@@ -108,7 +120,7 @@
       "animType": "sparrow",
       "name": "spraycanPile",
       "isPixel": false,
-      "assetPath": "remnants/SpraycanPile",
+      "assetPath": "remnants/spraycans/SpraycanPile",
       "scroll": [1, 1],
       "alpha": 1,
       "animations": []

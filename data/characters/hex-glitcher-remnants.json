@@ -11,7 +11,7 @@
   "singTime": 6.1,
   "startingAnimation": "idle",
   "healthIcon": {
-    "id": "Hex-g-remnants",
+    "id": "hex-g-remnants",
     "isPixel": false
   },
   "assetPath": "characters/wirehex-virus",

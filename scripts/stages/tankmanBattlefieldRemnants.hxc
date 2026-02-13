@@ -16,165 +16,165 @@ class TankmanBattlefieldRemnantsStage extends Stage
     super('tankmanBattlefieldRemnants');
   }
 
-  function onCreate(event:ScriptEvent):Void
-  {
-    super.onCreate(event);
-
-    var storm0:FlxBackdrop;
-    var storm1:FlxBackdrop;
-    var storm2:FlxBackdrop;
-    var storm3:FlxBackdrop;
-    var storm4:FlxBackdrop;
-    var storm5:FlxBackdrop;
-    var clouds:FlxTiledSprite;
-    var tankParachute1:FlxBackdrop;
-    var tankParachute2:FlxBackdrop;
-    var tankParachute3:FlxBackdrop;
-    var boxParachute1:FlxBackdrop;
-    var boxParachute2:FlxBackdrop;
-
-    if (PlayState.instance.currentSong != null)
-    {
-      if (PlayState.instance.currentSong.id == "guns")
-      {
-        stormOn(0.0001);
-      }
-    }
-  }
+  var storm0:FlxBackdrop;
+  var storm1:FlxBackdrop;
+  var storm2:FlxBackdrop;
+  var storm3:FlxBackdrop;
+  var storm4:FlxBackdrop;
+  var storm5:FlxBackdrop;
+  var clouds:FlxTiledSprite;
+  var tankParachute1:FlxBackdrop;
+  var tankParachute2:FlxBackdrop;
+  var tankParachute3:FlxBackdrop;
+  var boxParachute1:FlxBackdrop;
+  var boxParachute2:FlxBackdrop;
 
   override function buildStage()
   {
     super.buildStage();
 
-    storm0 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
-    storm0.setPosition(-650, -850);
-    storm0.scrollFactor.set(1.1, 1.1);
-    storm0.zIndex = 5001;
-    storm0.blend = 0;
-    storm0.color = 0xFFad9e76;
-    storm0.alpha = 0;
-    storm0.velocity.x = -4000;
-    storm0.scale.set(3, 3);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      storm0 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+      storm0.setPosition(-650, -850);
+      storm0.scrollFactor.set(1.1, 1.1);
+      storm0.zIndex = 5001;
+      storm0.blend = 0;
+      storm0.color = 0xFFad9e76;
+      storm0.alpha = 0;
+      storm0.velocity.x = -4000;
+      storm0.scale.set(3, 3);
 
-    storm1 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
-    storm1.setPosition(-650, -100);
-    storm1.scrollFactor.set(1.1, 1.1);
-    storm1.zIndex = 5001;
-    storm1.blend = 0;
-    storm1.color = 0xFFad9e76;
-    storm1.alpha = 0;
-    storm1.velocity.x = 2700;
-    storm1.scale.set(1.4, 1.4);
+      storm1 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+      storm1.setPosition(-650, -100);
+      storm1.scrollFactor.set(1.1, 1.1);
+      storm1.zIndex = 5001;
+      storm1.blend = 0;
+      storm1.color = 0xFFad9e76;
+      storm1.alpha = 0;
+      storm1.velocity.x = 2700;
+      storm1.scale.set(1.4, 1.4);
 
-    storm2 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
-    storm2.setPosition(-650, 100);
-    storm2.scrollFactor.set(1.2, 1.2);
-    storm2.zIndex = 5000;
-    storm2.blend = 0;
-    storm2.color = 0xFF614621;
-    storm2.alpha = 0;
-    storm2.velocity.x = -2100;
-    storm2.scale.set(1.2, 1.2);
+      storm2 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
+      storm2.setPosition(-650, 100);
+      storm2.scrollFactor.set(1.2, 1.2);
+      storm2.zIndex = 5000;
+      storm2.blend = 0;
+      storm2.color = 0xFF614621;
+      storm2.alpha = 0;
+      storm2.velocity.x = -2100;
+      storm2.scale.set(1.2, 1.2);
 
-    storm3 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
-    storm3.setPosition(-650, -500);
-    storm3.scrollFactor.set(0.8, 0.8);
-    storm3.zIndex = 39;
-    storm3.blend = 0;
-    storm3.color = 0xFF614621;
-    storm3.alpha = 0;
-    storm3.velocity.x = 900;
-    storm3.scale.set(1.5, 1.5);
+      storm3 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+      storm3.setPosition(-650, -500);
+      storm3.scrollFactor.set(0.8, 0.8);
+      storm3.zIndex = 39;
+      storm3.blend = 0;
+      storm3.color = 0xFF614621;
+      storm3.alpha = 0;
+      storm3.velocity.x = 900;
+      storm3.scale.set(1.5, 1.5);
 
-    storm4 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
-    storm4.setPosition(-650, -580);
-    storm4.scrollFactor.set(0.6, 0.6);
-    storm4.zIndex = 39;
-    storm4.blend = 0;
-    storm4.color = 0xFF614621;
-    storm4.alpha = 0;
-    storm4.velocity.x = 1300;
-    storm4.scale.set(1.5, 1.5);
+      storm4 = new FlxBackdrop(Paths.image('stages/stormBack'), 0x01);
+      storm4.setPosition(-650, -580);
+      storm4.scrollFactor.set(0.6, 0.6);
+      storm4.zIndex = 39;
+      storm4.blend = 0;
+      storm4.color = 0xFF614621;
+      storm4.alpha = 0;
+      storm4.velocity.x = 1300;
+      storm4.scale.set(1.5, 1.5);
 
-    storm5 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
-    storm5.setPosition(-650, -500);
-    storm5.scrollFactor.set(0.2, 0.2);
-    storm5.zIndex = 39;
-    storm5.blend = 0;
-    storm5.color = 0xFF614621;
-    storm5.alpha = 0;
-    storm5.velocity.x = 1200;
-    storm5.scale.set(1.5, 1.5);
+      storm5 = new FlxBackdrop(Paths.image('stages/stormMid'), 0x01);
+      storm5.setPosition(-650, -500);
+      storm5.scrollFactor.set(0.2, 0.2);
+      storm5.zIndex = 39;
+      storm5.blend = 0;
+      storm5.color = 0xFF614621;
+      storm5.alpha = 0;
+      storm5.velocity.x = 1200;
+      storm5.scale.set(1.5, 1.5);
 
-    tankParachute1 = new FlxBackdrop(Paths.image('remnants/tankmanFall1'), 0x10, 0, 5000);
-    tankParachute1.scrollFactor.set(0.40, 0.35);
-    tankParachute1.setPosition(583, -215);
-    tankParachute1.velocity.y = 150;
-    tankParachute1.zIndex = 39;
-    tankParachute1.angle = -5;
+      tankParachute1 = new FlxBackdrop(Paths.image('remnants/tankmanFall1'), 0x10, 0, 5000);
+      tankParachute1.scrollFactor.set(0.40, 0.35);
+      tankParachute1.setPosition(583, -215);
+      tankParachute1.velocity.y = 150;
+      tankParachute1.zIndex = 39;
+      tankParachute1.angle = -5;
 
-    FlxTween.tween(tankParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+      FlxTween.tween(tankParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-    tankParachute2 = new FlxBackdrop(Paths.image('remnants/tankmanFall2'), 0x10, 0, 5000);
-    tankParachute2.scrollFactor.set(0.35, 0.35);
-    tankParachute2.setPosition(989, -110);
-    tankParachute2.velocity.y = 125;
-    tankParachute2.zIndex = 39;
-    tankParachute2.angle = -5;
+      tankParachute2 = new FlxBackdrop(Paths.image('remnants/tankmanFall2'), 0x10, 0, 5000);
+      tankParachute2.scrollFactor.set(0.35, 0.35);
+      tankParachute2.setPosition(989, -110);
+      tankParachute2.velocity.y = 125;
+      tankParachute2.zIndex = 39;
+      tankParachute2.angle = -5;
 
-    FlxTween.tween(tankParachute2, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+      FlxTween.tween(tankParachute2, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-    tankParachute3 = new FlxBackdrop(Paths.image('remnants/tankmanFall3'), 0x10, 0, 5000);
-    tankParachute3.scrollFactor.set(0.35, 0.35);
-    tankParachute3.setPosition(1238, -104);
-    tankParachute3.velocity.y = 125;
-    tankParachute3.zIndex = 39;
-    tankParachute3.angle = -5;
+      tankParachute3 = new FlxBackdrop(Paths.image('remnants/tankmanFall3'), 0x10, 0, 5000);
+      tankParachute3.scrollFactor.set(0.35, 0.35);
+      tankParachute3.setPosition(1238, -104);
+      tankParachute3.velocity.y = 125;
+      tankParachute3.zIndex = 39;
+      tankParachute3.angle = -5;
 
-    FlxTween.tween(tankParachute3, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+      FlxTween.tween(tankParachute3, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-    boxParachute1 = new FlxBackdrop(Paths.image('remnants/boxFall1'), 0x10, 0, 5000);
-    boxParachute1.scrollFactor.set(0.20, 0.35);
-    boxParachute1.setPosition(-79, -148);
-    boxParachute1.velocity.y = 125;
-    boxParachute1.zIndex = 39;
-    boxParachute1.angle = -5;
+      boxParachute1 = new FlxBackdrop(Paths.image('remnants/boxFall1'), 0x10, 0, 5000);
+      boxParachute1.scrollFactor.set(0.20, 0.35);
+      boxParachute1.setPosition(-79, -148);
+      boxParachute1.velocity.y = 125;
+      boxParachute1.zIndex = 39;
+      boxParachute1.angle = -5;
 
-    FlxTween.tween(boxParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
+      FlxTween.tween(boxParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
 
-    boxParachute2 = new FlxBackdrop(Paths.image('remnants/boxFall2'), 0x10, 0, 5000);
-    boxParachute2.scrollFactor.set(0.25, 0.35);
-    boxParachute2.setPosition(282, -27);
-    boxParachute2.velocity.y = 125;
-    boxParachute2.zIndex = 39;
+      boxParachute2 = new FlxBackdrop(Paths.image('remnants/boxFall2'), 0x10, 0, 5000);
+      boxParachute2.scrollFactor.set(0.25, 0.35);
+      boxParachute2.setPosition(282, -27);
+      boxParachute2.velocity.y = 125;
+      boxParachute2.zIndex = 39;
 
-    FlxTween.tween(boxParachute2, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
+      FlxTween.tween(boxParachute2, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
 
-    PlayState.instance.currentStage.add(storm0);
-    PlayState.instance.currentStage.add(storm1);
-    PlayState.instance.currentStage.add(storm2);
-    PlayState.instance.currentStage.add(storm3);
-    PlayState.instance.currentStage.add(storm4);
-    PlayState.instance.currentStage.add(storm5);
+      PlayState.instance.currentStage.add(storm0);
+      PlayState.instance.currentStage.add(storm1);
+      PlayState.instance.currentStage.add(storm2);
+      PlayState.instance.currentStage.add(storm3);
+      PlayState.instance.currentStage.add(storm4);
+      PlayState.instance.currentStage.add(storm5);
 
-    PlayState.instance.currentStage.add(tankParachute1);
-    PlayState.instance.currentStage.add(tankParachute2);
-    PlayState.instance.currentStage.add(tankParachute3);
-    PlayState.instance.currentStage.add(boxParachute1);
-    PlayState.instance.currentStage.add(boxParachute2);
+      PlayState.instance.currentStage.add(tankParachute1);
+      PlayState.instance.currentStage.add(tankParachute2);
+      PlayState.instance.currentStage.add(tankParachute3);
+      PlayState.instance.currentStage.add(boxParachute1);
+      PlayState.instance.currentStage.add(boxParachute2);
 
-    clouds = new FlxTiledSprite(Paths.image('remnants/tankClouds'), 3200, 235, true, false);
-    clouds.setPosition(-1100, 20);
-    clouds.scrollFactor.set(0.25, 0.25);
-    clouds.zIndex = 12;
+      clouds = new FlxTiledSprite(Paths.image('remnants/tankClouds'), 3200, 235, true, false);
+      clouds.setPosition(-1100, 20);
+      clouds.scrollFactor.set(0.25, 0.25);
+      clouds.zIndex = 12;
 
-    clouds.velocity.x = 8;
+      clouds.velocity.x = 8;
 
-    PlayState.instance.currentStage.add(clouds);
-    PlayState.instance.currentStage.refresh(); // Apply z-index.
+      PlayState.instance.currentStage.add(clouds);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
 
-    tankAngle = FlxG.random.int(-90, 45);
-    tankSpeed = FlxG.random.float(5, 7);
+      tankAngle = FlxG.random.int(-90, 45);
+      tankSpeed = FlxG.random.float(5, 7);
+    }
+    else // Hide the tanks when on performance mode.
+    {
+      var tankRolling = getNamedProp('tankRolling');
+      tankRolling?.animation.pause();
+      tankRolling?.visible = false;
+
+      var tankRollingExtra = getNamedProp('tankRollingExtra');
+      tankRollingExtra?.animation.pause();
+      tankRollingExtra?.visible = false;
+    }
   }
 
   var _timer:Float = 0;
@@ -183,44 +183,61 @@ class TankmanBattlefieldRemnantsStage extends Stage
   {
     super.onUpdate(event);
 
-    _timer += event.elapsed;
-    storm0.y = -500 + (Math.sin(_timer) * 300);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      _timer += event.elapsed;
+      storm0.y = -500 + (Math.sin(_timer) * 300);
 
-    moveTank(event.elapsed);
+      moveTank(event.elapsed);
+    }
   }
 
   public override function onPause(event:PauseScriptEvent)
   {
     super.onPause(event);
 
-    FlxTweenUtil.pauseTweensOf(tankParachute1);
-    FlxTweenUtil.pauseTweensOf(tankParachute2);
-    FlxTweenUtil.pauseTweensOf(tankParachute3);
-    FlxTweenUtil.pauseTweensOf(boxParachute1);
-    FlxTweenUtil.pauseTweensOf(boxParachute2);
-    FlxTweenUtil.pauseTweensOf(storm0);
-    FlxTweenUtil.pauseTweensOf(storm1);
-    FlxTweenUtil.pauseTweensOf(storm2);
-    FlxTweenUtil.pauseTweensOf(storm3);
-    FlxTweenUtil.pauseTweensOf(storm4);
-    FlxTweenUtil.pauseTweensOf(storm5);
+    if (RemnantsOptions.getPerformanceOption()) return;
+
+    for (i in [
+      tankParachute1,
+      tankParachute2,
+      tankParachute3,
+      boxParachute1,
+      boxParachute2,
+      storm0,
+      storm1,
+      storm2,
+      storm3,
+      storm4,
+      storm5
+    ])
+    {
+      FlxTweenUtil.pauseTweensOf(i);
+    }
   }
 
   public override function onResume(event:ScriptEvent)
   {
     super.onResume(event);
 
-    FlxTweenUtil.resumeTweensOf(tankParachute1);
-    FlxTweenUtil.resumeTweensOf(tankParachute2);
-    FlxTweenUtil.resumeTweensOf(tankParachute3);
-    FlxTweenUtil.resumeTweensOf(boxParachute1);
-    FlxTweenUtil.resumeTweensOf(boxParachute2);
-    FlxTweenUtil.resumeTweensOf(storm0);
-    FlxTweenUtil.resumeTweensOf(storm1);
-    FlxTweenUtil.resumeTweensOf(storm2);
-    FlxTweenUtil.resumeTweensOf(storm3);
-    FlxTweenUtil.resumeTweensOf(storm4);
-    FlxTweenUtil.resumeTweensOf(storm5);
+    if (RemnantsOptions.getPerformanceOption()) return;
+
+    for (i in [
+      tankParachute1,
+      tankParachute2,
+      tankParachute3,
+      boxParachute1,
+      boxParachute2,
+      storm0,
+      storm1,
+      storm2,
+      storm3,
+      storm4,
+      storm5
+    ])
+    {
+      FlxTweenUtil.resumeTweensOf(i);
+    }
   }
 
   var tankMoving:Bool = false;
@@ -247,49 +264,13 @@ class TankmanBattlefieldRemnantsStage extends Stage
     tankRollingExtra.y = 1300 + Math.sin(FlxAngle.asRadians((tankAngle2 * daAngleOffset) + 180)) * 1100;
   }
 
-  function onBeatHit(event:SongTimeScriptEvent):Void
-  {
-    super.onBeatHit(event);
-
-    if (PlayState.instance.isGameOverState) return;
-    if (PlayState.instance.currentSong != null)
-    {
-      if (event.beat == 159 && PlayState.instance.currentSong.id == "ugh")
-      {
-        stormOn(1);
-      }
-
-      if (event.beat == 224 && PlayState.instance.currentSong.id == "guns")
-      {
-        stormOff(2.6);
-      }
-
-      if (PlayState.instance.currentSong.id == "stress")
-      {
-        switch (event.beat)
-        {
-          case 96:
-            stormOn(1);
-          case 160:
-            stormOff(1);
-          case 224:
-            stormOn(1);
-        }
-      }
-    }
-  }
-
   function stormOn(duration:Float)
   {
     if (duration == null) duration = 1;
 
     // Prevent new tweens from being overridden
-    FlxTween.cancelTweensOf(storm0);
-    FlxTween.cancelTweensOf(storm1);
-    FlxTween.cancelTweensOf(storm2);
-    FlxTween.cancelTweensOf(storm3);
-    FlxTween.cancelTweensOf(storm4);
-    FlxTween.cancelTweensOf(storm5);
+    for (i in 0...6)
+      FlxTween.cancelTweensOf(scriptGet('storm' + i));
 
     FlxTween.tween(storm0, {alpha: 1}, duration);
     FlxTween.tween(storm1, {alpha: 0.9}, duration);
@@ -304,12 +285,8 @@ class TankmanBattlefieldRemnantsStage extends Stage
     if (duration == null) duration = 1;
 
     // Prevent new tweens from being overridden
-    FlxTween.cancelTweensOf(storm0);
-    FlxTween.cancelTweensOf(storm1);
-    FlxTween.cancelTweensOf(storm2);
-    FlxTween.cancelTweensOf(storm3);
-    FlxTween.cancelTweensOf(storm4);
-    FlxTween.cancelTweensOf(storm5);
+    for (i in 0...6)
+      FlxTween.cancelTweensOf(scriptGet('storm' + i));
 
     FlxTween.tween(storm0, {alpha: 0}, duration);
     FlxTween.tween(storm1, {alpha: 0}, duration);
@@ -324,17 +301,5 @@ class TankmanBattlefieldRemnantsStage extends Stage
     super.onSongRetry(event);
 
     refresh(); // This game fucking sucks so I added this
-
-    if (PlayState.instance.currentSong != null)
-    {
-      if (PlayState.instance.currentSong.id == "ugh" || PlayState.instance.currentSong.id == "stress")
-      {
-        stormOff(1);
-      }
-      else
-      {
-        stormOn(1);
-      }
-    }
   }
 }

@@ -15,7 +15,7 @@ class TormentorSong extends Song
 
   public function new()
   {
-    super('tormentor');
+    super('tormentor-remnants');
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool

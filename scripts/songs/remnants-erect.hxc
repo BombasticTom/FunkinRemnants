@@ -30,7 +30,7 @@ class RemnantsErectSong extends Song
 
   public function listDifficulties(variationId:String, variationIds:Array<String>, showLocked:Bool):Array<String>
   {
-    if (showLocked || Save.instance.hasBeatenLevel('remnants-week'))
+    if (showLocked || Save.instance.hasBeatenLevel('remnants-mainWeek1'))
     {
       return super.listDifficulties(variationId, variationIds);
     }

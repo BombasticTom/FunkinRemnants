@@ -12,14 +12,18 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
 import flixel.FlxG;
+import funkin.mobile.input.ControlsHandler;
 
 class RosesRemnantsMixSong extends Song
 {
   var bgSprite:FunkinSprite;
   var hasPlayedCutscene:Bool;
-  var intro:Bool = false;
+
+  var fadeOut:Bool = false;
   var outro:Bool = false;
-  var hudFade:Bool = false;
+  var color:Bool = false;
+
+  var colorTweens:Array<FlxTween> = [];
 
   public function new()
   {
@@ -39,11 +43,7 @@ class RosesRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    if (!hudFade)
-    {
-      PlayState.instance.camHUD.alpha = 0;
-      PlayState.instance.camHUD.visible = true;
-    }
+    PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
@@ -95,7 +95,7 @@ class RosesRemnantsMixSong extends Song
   {
     var targetDialogue = 'roses-remnants'; // Normal dialogue
 
-    if (!FlxG.random.bool(25))
+    if (!FlxG.random.bool(15))
     {
       if (!Preferences.naughtyness) targetDialogue += "-censored"; // Adds censored dialogue
     }
@@ -111,39 +111,6 @@ class RosesRemnantsMixSong extends Song
   }
 
   /**
-   * Don't replay the cutscene between restarts.
-   */
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    hasPlayedCutscene = true;
-
-    if (intro)
-    {
-      PlayState.instance.tweenCameraToPosition(710, 520, 0.001, FlxEase.instant);
-      PlayState.instance.camHUD.visible = false;
-    }
-
-    if (hudFade)
-    {
-      FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.linear});
-      hudFade = false;
-    }
-    else
-    {
-      PlayState.instance.camHUD.visible = false;
-    }
-
-    if (outro)
-    {
-      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-      outro = false;
-    }
-  }
-
-  /**
    * Replay the cutscene after leaving the song.
    */
   function onCreate(event:ScriptEvent):Void
@@ -151,10 +118,93 @@ class RosesRemnantsMixSong extends Song
     super.onCreate(event);
 
     hasPlayedCutscene = false;
-    intro = false;
+    fadeOut = false;
     outro = false;
-    hudFade = false;
-    PlayState.instance.camHUD.alpha = 0;
+    color = false;
+
+    PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+
+    if (!FlxG.onMobile) // Move pop ups
+    {
+      if (!Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll PC Offset
+
+      if (Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll PC Offset
+    }
+    else
+    {
+      if (FlxG.onMobile
+        && Preferences.controlsScheme == "Arrows"
+        && !ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+
+      if (FlxG.onMobile
+        && !Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+
+      if (FlxG.onMobile
+        && Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
+    }
+  }
+
+  /**
+   * Don't replay the cutscene between restarts.
+   */
+  function onSongRetry(event:ScriptEvent)
+  {
+    super.onSongRetry(event);
+
+    hasPlayedCutscene = true;
+
+    if (fadeOut)
+    {
+      RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 0.5);
+      fadeOut = false;
+    }
+    else
+    {
+      PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+    }
+
+    if (color)
+    {
+        while(colorTweens.length > 0) colorTweens.shift()?.cancel();
+
+        var thingies:Array<FlxSprite> = [PlayState.instance.iconP1, PlayState.instance.iconP2];
+
+        for (char in thingies)
+        {
+          var originalValues:Array<Float> = [
+            char.colorTransform.redOffset,
+            char.colorTransform.greenOffset,
+            char.colorTransform.blueOffset
+          ];
+
+          colorTweens.push(FlxTween.num(0, 1, 0.5, {
+            ease: FlxEase.linear,
+            onComplete: (t:FlxTween) -> {
+              colorTweens.remove(t);
+            }
+          }, (value:Float) -> {
+            char.colorTransform.redOffset = originalValues[0] * (1 - value);
+            char.colorTransform.greenOffset = originalValues[1] * (1 - value);
+            char.colorTransform.blueOffset = originalValues[2] * (1 - value);
+
+            char.colorTransform.redMultiplier = value;
+            char.colorTransform.greenMultiplier = value;
+            char.colorTransform.blueMultiplier = value;
+          }));
+       }
+    }
+
+    if (outro)
+    {
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+      FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
+      PlayState.instance.disableKeys = false;
+      outro = false;
+    }
   }
 
   public override function onDialogueEnd()
@@ -163,39 +213,82 @@ class RosesRemnantsMixSong extends Song
     Countdown.performCountdown();
   }
 
+  function onDestroy(event:ScriptEvent):Void
+  {
+    while(colorTweens.length > 0) colorTweens.shift()?.cancel();
+  }
+
   function onGameOver(event:ScriptEvent):Void
   {
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    PlayState.instance.camHUD.alpha = 0;
-    hudFade = false;
+    fadeOut = false;
 
     if (outro)
     {
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+      PlayState.instance.camHUD.alpha = 0;
       RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 1);
-      outro = false;
     }
   }
 
   function onPause()
   {
+    PlayState.instance.camGame?.active = false;
     FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('freaks'));
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('freaksColor'));
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('black'));
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('sky'));
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.currentStage.getNamedProp('skyEvil'));
+
+    for (i in colorTweens) i.active = false;
   }
 
   function onResume()
   {
+    PlayState.instance.camGame?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
-  }
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('freaks'));
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('freaksColor'));
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('black'));
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('sky'));
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.currentStage.getNamedProp('skyEvil'));
 
-  function onSongEnd(event:ScriptEvent):Void
-  {
-    PlayState.instance.camGame.visible = false;
+    for (i in colorTweens) i.active = true;
   }
 
   function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
 
-    intro = true;
+    PlayState.instance.currentStage.getNamedProp('black').zIndex = 110;
+    PlayState.instance.currentStage.refresh();
+
+    if (PlayState.instance.currentStage.getNamedProp('freaks').alpha < 1)
+    {
+      PlayState.instance.currentStage.getNamedProp('freaks').alpha = 1;
+      PlayState.instance.currentStage.getNamedProp('freaksColor').alpha = 0;
+    }
+
+    if (color)
+    {
+      PlayState.instance.currentStage.getBoyfriend().colorTransform.__identity();
+      PlayState.instance.currentStage.getGirlfriend().colorTransform.__identity();
+      PlayState.instance.currentStage.getDad().colorTransform.__identity();
+      color = false;
+    }
+
+    if (PlayState.instance.currentStage.getNamedProp('skyEvil').alpha > 0)
+    {
+      FlxTween.cancelTweensOf(PlayState.instance.currentStage.getNamedProp('sky'));
+      FlxTween.cancelTweensOf(PlayState.instance.currentStage.getNamedProp('skyEvil'));
+      PlayState.instance.currentStage.getNamedProp('sky').alpha = 1;
+      PlayState.instance.currentStage.getNamedProp('skyEvil').alpha = 0;
+    }
+
+    FlxTween.cancelTweensOf(PlayState.instance.currentStage.getNamedProp('black'));
+    RetroCameraFade.fadeBlack(PlayState.instance.camGame, 10, 3);
+    PlayState.instance.currentStage.getNamedProp('black').alpha = 0.9;
+    PlayState.instance.camGame.fade(0xFF000000, 0, true, null, false);
   }
 
   function onBeatHit(event:ScriptEvent):Void
@@ -205,18 +298,100 @@ class RosesRemnantsMixSong extends Song
     if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
-      case 14:
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 1, {ease: FlxEase.linear});
-      case 16:
-        intro = false;
-        hudFade = true;
-      case 184:
-        intro = true;
-      case 192:
-        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 1);
-        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 1, {ease: FlxEase.linear});
+      case 30:
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 2);
+
+      case 34:
+        RetroCameraFade.fadeBlack(PlayState.instance.camGame, 5, 0.25);
+        PlayState.instance.currentStage.getNamedProp('black').alpha = 0;
+        fadeOut = true;
+
+      case 98:
+        PlayState.instance.currentStage.getNamedProp('black').zIndex = 75;
+        PlayState.instance.currentStage.refresh();
+
+        PlayState.instance.currentStage.getNamedProp('black').alpha = 1;
+        PlayState.instance.currentStage.getNamedProp('freaks').alpha = 0;
+        PlayState.instance.currentStage.getNamedProp('freaksColor').alpha = 1;
+        PlayState.instance.currentStage.getBoyfriend().colorTransform.color = 0xFF40B5DF;
+        PlayState.instance.currentStage.getGirlfriend().colorTransform.color = 0xFFDB2C5B;
+        PlayState.instance.currentStage.getDad().colorTransform.color = 0xFFFFAA6F;
+        PlayState.instance.iconP1.colorTransform.color = 0xFF40B5DF;
+        PlayState.instance.iconP2.colorTransform.color = 0xFFFFAA6F;
+        color = true;
+
+      case 162:
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('skyEvil'), {alpha: 1}, 7.05, {ease: FlxEase.backIn});
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('sky'), {alpha: 0}, 7.05, {ease: FlxEase.backIn});
+
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('black'), {alpha: 0}, 7.05, {ease: FlxEase.linear});
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('freaks'), {alpha: 1}, 7.05,
+          {
+            ease: FlxEase.linear,
+            onComplete: (_) -> {
+              PlayState.instance.currentStage.getNamedProp('freaksColor').alpha = 0;
+              color = false;
+            }
+          });
+
+        var thingies:Array<FlxSprite> = [for (i in PlayState.instance.currentStage.characters.iterator()) i];
+
+        thingies.push(PlayState.instance.iconP1);
+        thingies.push(PlayState.instance.iconP2);
+
+        for (char in thingies)
+        {
+          var originalValues:Array<Float> = [
+            char.colorTransform.redOffset,
+            char.colorTransform.greenOffset,
+            char.colorTransform.blueOffset
+          ];
+
+          colorTweens.push(FlxTween.num(0, 1, 7.05, {
+            ease: FlxEase.linear,
+            onComplete: (t:FlxTween) -> {
+              colorTweens.remove(t);
+            }
+          }, (value:Float) -> {
+            char.colorTransform.redOffset = originalValues[0] * (1 - value);
+            char.colorTransform.greenOffset = originalValues[1] * (1 - value);
+            char.colorTransform.blueOffset = originalValues[2] * (1 - value);
+
+            char.colorTransform.redMultiplier = value;
+            char.colorTransform.greenMultiplier = value;
+            char.colorTransform.blueMultiplier = value;
+          }));
+        }
+
+      case 225:
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 5, 0.4);
+        fadeOut = false;
+
+      case 226:
+        PlayState.instance.currentStage.getNamedProp('black').zIndex = 110;
+        PlayState.instance.currentStage.refresh();
+
+        PlayState.instance.currentStage.getNamedProp('black').alpha = 0.9;
+        RetroCameraFade.fadeBlack(PlayState.instance.camGame, 5, 0.4);
+
+      case 229:
+        FlxTween.tween(PlayState.instance.currentStage.getNamedProp('black'), {alpha: 0}, 0.55, {ease: FlxEase.backIn});
+        fadeOut = true;
+
+      case 278:
+        RetroCameraFade.fadeToBlack(PlayState.instance.camGame, 10, 2);
+        fadeOut = false;
         outro = true;
-        hudFade = false;
+
+      case 282:
+        FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.2,
+          {
+            ease: FlxEase.linear,
+            onComplete: (_) -> {
+              PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+              PlayState.instance.disableKeys = true;
+            }
+          });
     }
   }
 }

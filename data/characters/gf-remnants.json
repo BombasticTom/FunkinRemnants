@@ -4,12 +4,13 @@
   "assetPath": "shared:characters/gf-remnants",
   "startingAnimation": "danceRight",
   "renderType": "multianimateatlas",
+  "offsets": [-11.5, -21.8],
   "singTime": 8.0,
   "animations": [
     {
       "name": "danceLeft",
       "prefix": "GF Dancing Beat",
-      "frameIndices": [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       "offsets": [8, -9]
     },
     {

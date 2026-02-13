@@ -24,32 +24,25 @@ class TwoHOTRemnantsBFMixSong extends Song
     hasPlayedCutscene = false;
   }
 
+  var bfAttackSound:FunkinSound;
+
   function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
 
-    // Precache the spraycan atlas.
-    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1"));
+    // Precache the sounds used in 2hot.
+    FunkinMemory.cacheSound(Paths.sound("bfAttack", "week1"));
 
-    PlayState.instance.currentStage.getGirlfriend().x = 1050;
+    // Precache the assets for the song.
+    FunkinMemory.cacheTexture(Paths.image("CanImpactParticle"));
+    FunkinMemory.cacheTexture(Paths.image("spraypaintExplosionEZ"));
+    FunkinMemory.cacheTexture(Paths.image("remnants/spraycans/spraycanAtlas/spritemap1"));
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
   {
     if (currentVariation == 'bfremnants') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
     return false;
-  }
-
-  public override function listAltInstrumentalIds(difficultyId:String, variationId:String):Array<String>
-  {
-    var results:Array<String> = super.listAltInstrumentalIds(difficultyId, variationId);
-    var hasBeatenRemnantsMix = Save.instance.hasBeatenSong(this.id, null, this.variation);
-    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
-    {
-      var hasBeatenPicoMix = Save.instance.hasBeatenSong(this.id, null, 'pico');
-      if (!hasBeatenPicoMix) results.remove('pico');
-    }
-    if (hasBeatenRemnantsMix) return results;
   }
 
   function onCountdownStart(event:ScriptEvent):Void
@@ -67,8 +60,6 @@ class TwoHOTRemnantsBFMixSong extends Song
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
-
-    PlayState.instance.currentStage.getGirlfriend().x = 1050;
 
     removeCans();
     micCocked = false;
@@ -276,6 +267,8 @@ class TwoHOTRemnantsBFMixSong extends Song
     {
       can.scriptSet('currentState', STATE_SHOT);
       can.scriptCall('playCanShot');
+
+      // Play BF's attack sound.
       FunkinSound.playOnce(Paths.sound('bfAttack', "week1"), 1);
 
       new FlxTimer().start(1 / 24, function(tmr) {
@@ -352,8 +345,9 @@ class TwoHOTRemnantsBFMixSong extends Song
       trace('Died to the can! Use special death animation.');
 
       // Reset to standard death animation.
-      GameOverSubState.musicSuffix = '-bf-explode-remnants';
+      GameOverSubState.musicSuffix = '-remnants-explode';
       GameOverSubState.blueBallSuffix = '-bf-explode-remnants';
+      GameOverSubState.animationSuffix = '-explosion';
 
       if (!PlayState.instance.isPracticeMode) blackenStageProps();
     }

@@ -27,8 +27,10 @@ class TwoHOTRemnantsMixSong extends Song
   {
     super.onCreate(event);
 
-    // Precache the spraycan atlas.
-    FunkinMemory.cacheTexture(Paths.image("remnants/mechanics/spraycanAtlas/spritemap1"));
+    // Precache the assets for the song.
+    FunkinMemory.cacheTexture(Paths.image("CanImpactParticle"));
+    FunkinMemory.cacheTexture(Paths.image("spraypaintExplosionEZ"));
+    FunkinMemory.cacheTexture(Paths.image("remnants/spraycans/spraycanAtlas/spritemap1"));
   }
 
   public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
@@ -356,6 +358,7 @@ class TwoHOTRemnantsMixSong extends Song
       trace('Died to the can! Use special death animation.');
       GameOverSubState.musicSuffix = '-remnants-pico-explode';
       GameOverSubState.blueBallSuffix = '-pico-explode-remnants';
+      GameOverSubState.animationSuffix = '-explosion';
 
       if (!PlayState.instance.isPracticeMode) blackenStageProps();
     }

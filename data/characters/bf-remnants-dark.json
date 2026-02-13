@@ -8,10 +8,15 @@
   "healthIcon": {
     "id": "bf-remnants"
   },
-  "offsets": [5, 20],
+  "offsets": [13.5, 19.5],
+  "cameraOffsets": [3, 41],
   "death": {
     "cameraOffsets": [10, -85],
     "cameraZoom": 0.85
+  },
+  "atlasSettings": {
+    "useRenderTexture": true,
+    "swfMode": false
   },
   "animations": [
     {
@@ -105,12 +110,6 @@
       "name": "lights",
       "prefix": "Lights Out",
       "offsets": [0, 0]
-    },
-    {
-      "assetPath": "shared:characters/bf-remnants/death",
-      "name": "fakeoutDeath",
-      "prefix": "Fakeout",
-      "offsets": [-278, -126]
     },
     {
       "assetPath": "shared:characters/bf-remnants/death",

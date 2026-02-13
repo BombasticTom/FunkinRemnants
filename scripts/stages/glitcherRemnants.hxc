@@ -50,30 +50,6 @@ class GlitcherRemnantsStage extends Stage
     changeAmbiance(false, 0.0001);
   }
 
-  function onBeatHit(event:SongTimeScriptEvent)
-  {
-    super.onBeatHit(event);
-
-    if (PlayState.instance.isGameOverState) return;
-    if (PlayState.instance.currentSong != null)
-    {
-      if (PlayState.instance.currentSong.id == "glitcher-remnants")
-      {
-        switch (event.beat)
-        {
-          case 143:
-            changeAmbiance(true, 0.2);
-          case 207:
-            changeAmbiance(false, 0.2);
-          case 271:
-            changeAmbiance(true, 0.2);
-          case 335:
-            changeAmbiance(false, 0.2);
-        }
-      }
-    }
-  }
-
   function changeAmbiance(goDark:Bool, duration:Float)
   {
     if (duration == null) duration = 1;

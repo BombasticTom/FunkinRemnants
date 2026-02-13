@@ -13,8 +13,8 @@
   "cameraOffsets": [57, 149.5],
   "offsets": [-49, 13],
   "death": {
-    "cameraOffsets": [10, -85],
-    "cameraZoom": 0.85
+    "cameraZoom": 0.85,
+    "cameraOffsets": [245, 75]
   },
   "healthIcon": {
     "id": "bf-remnants"
@@ -224,6 +224,25 @@
       "name": "deathConfirm",
       "prefix": "Retry",
       "offsets": [-278, -126]
+    },
+    {
+      "assetPath": "shared:characters/bf-remnants/can explosion",
+      "name": "firstDeath-explosion",
+      "prefix": "Can Explosion Death Start",
+      "offsets": [137, 189]
+    },
+    {
+      "assetPath": "shared:characters/bf-remnants/can explosion",
+      "name": "deathLoop-explosion",
+      "prefix": "Can Explosion Death Loop",
+      "looped": true,
+      "offsets": [137, 189]
+    },
+    {
+      "assetPath": "shared:characters/bf-remnants/can explosion",
+      "name": "deathConfirm-explosion",
+      "prefix": "Can Explosion Death Confirm",
+      "offsets": [137, 189]
     },
     {
       "name": "scared",

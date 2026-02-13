@@ -36,92 +36,95 @@ class LimoRideRemnantsStage extends Stage
   {
     super.buildStage();
 
-    colorShaderBf = new AdjustColorShader();
-    colorShaderDad = new AdjustColorShader();
-    colorShaderGf = new AdjustColorShader();
-
-    colorShaderBf.brightness = -10;
-    colorShaderBf.hue = 20;
-    colorShaderBf.contrast = 0;
-    colorShaderBf.saturation = -5;
-
-    colorShaderGf.brightness = -5;
-    colorShaderGf.hue = 15;
-    colorShaderGf.contrast = 0;
-    colorShaderGf.saturation = -15;
-
-    colorShaderDad.brightness = -15;
-    colorShaderDad.hue = 15;
-    colorShaderDad.contrast = 0;
-    colorShaderDad.saturation = -15;
-
-    mist1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    mist1.setPosition(-650, -100);
-    mist1.scrollFactor.set(1.1, 1.1);
-    mist1.zIndex = 400;
-    mist1.blend = 0;
-    mist1.color = 0xFF4a6ee0;
-    mist1.alpha = 0.4;
-    mist1.velocity.x = 1700;
-
-    mist2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
-    mist2.setPosition(-650, -100);
-    mist2.scrollFactor.set(1.2, 1.2);
-    mist2.zIndex = 401;
-    mist2.blend = 0;
-    mist2.color = 0xFF6a4da1;
-    mist2.velocity.x = 2100;
-    mist1.scale.set(1.3, 1.3);
-
-    mist3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    mist3.setPosition(-650, -100);
-    mist3.scrollFactor.set(0.8, 0.8);
-    mist3.zIndex = 99;
-    mist3.blend = 0;
-    mist3.color = 0xFFa7d9be;
-    mist3.alpha = 0.5;
-    mist3.velocity.x = 900;
-    mist3.scale.set(1.5, 1.5);
-
-    mist4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
-    mist4.setPosition(-650, -380);
-    mist4.scrollFactor.set(0.6, 0.6);
-    mist4.zIndex = 98;
-    mist4.blend = 0;
-    mist4.color = 0xFF9c77c7;
-    mist4.velocity.x = 700;
-    mist4.scale.set(1.5, 1.5);
-
-    mist5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
-    mist5.setPosition(-650, -400);
-    mist5.scrollFactor.set(0.2, 0.2);
-    mist5.zIndex = 15;
-    mist5.blend = 0;
-    mist5.color = 0xFF8a3675;
-    mist5.velocity.x = 100;
-    mist5.scale.set(1.5, 1.5);
-
-    PlayState.instance.currentStage.add(mist1);
-    PlayState.instance.currentStage.add(mist2);
-    PlayState.instance.currentStage.add(mist3);
-    PlayState.instance.currentStage.add(mist4);
-    PlayState.instance.currentStage.add(mist5);
-    PlayState.instance.currentStage.refresh(); // Apply z-index.
-
-    // Apply sky shader.
-    var skyOverlay:OverlayBlend = new OverlayBlend();
-    var sunOverlay:FlxSprite = new FlxSprite().loadGraphic(Paths.image('remnants/limoOverlay'));
-    sunOverlay.setGraphicSize(Std.int(sunOverlay.width * 2));
-    sunOverlay.updateHitbox();
-    skyOverlay.funnyShit.input = sunOverlay.pixels;
-    var limoSunset:FlxSprite = getNamedProp('limoSunset');
-    if (limoSunset == null)
+    if (!RemnantsOptions.getPerformanceOption())
     {
-      trace('[WARN] Could not retrieve limoSunset');
-    }
-    else
-    {
-      limoSunset.shader = skyOverlay;
+      colorShaderBf = new AdjustColorShader();
+      colorShaderDad = new AdjustColorShader();
+      colorShaderGf = new AdjustColorShader();
+
+      colorShaderBf.brightness = -10;
+      colorShaderBf.hue = 20;
+      colorShaderBf.contrast = 0;
+      colorShaderBf.saturation = -5;
+
+      colorShaderGf.brightness = -5;
+      colorShaderGf.hue = 15;
+      colorShaderGf.contrast = 0;
+      colorShaderGf.saturation = -15;
+
+      colorShaderDad.brightness = -15;
+      colorShaderDad.hue = 15;
+      colorShaderDad.contrast = 0;
+      colorShaderDad.saturation = -15;
+
+      mist1 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+      mist1.setPosition(-650, -100);
+      mist1.scrollFactor.set(1.1, 1.1);
+      mist1.zIndex = 400;
+      mist1.blend = 0;
+      mist1.color = 0xFF4a6ee0;
+      mist1.alpha = 0.4;
+      mist1.velocity.x = 1700;
+
+      mist2 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
+      mist2.setPosition(-650, -100);
+      mist2.scrollFactor.set(1.2, 1.2);
+      mist2.zIndex = 401;
+      mist2.blend = 0;
+      mist2.color = 0xFF6a4da1;
+      mist2.velocity.x = 2100;
+      mist1.scale.set(1.3, 1.3);
+
+      mist3 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+      mist3.setPosition(-650, -100);
+      mist3.scrollFactor.set(0.8, 0.8);
+      mist3.zIndex = 99;
+      mist3.blend = 0;
+      mist3.color = 0xFFa7d9be;
+      mist3.alpha = 0.5;
+      mist3.velocity.x = 900;
+      mist3.scale.set(1.5, 1.5);
+
+      mist4 = new FlxBackdrop(Paths.image('stages/mistBack'), 0x01);
+      mist4.setPosition(-650, -380);
+      mist4.scrollFactor.set(0.6, 0.6);
+      mist4.zIndex = 98;
+      mist4.blend = 0;
+      mist4.color = 0xFF9c77c7;
+      mist4.velocity.x = 700;
+      mist4.scale.set(1.5, 1.5);
+
+      mist5 = new FlxBackdrop(Paths.image('stages/mistMid'), 0x01);
+      mist5.setPosition(-650, -400);
+      mist5.scrollFactor.set(0.2, 0.2);
+      mist5.zIndex = 15;
+      mist5.blend = 0;
+      mist5.color = 0xFF8a3675;
+      mist5.velocity.x = 100;
+      mist5.scale.set(1.5, 1.5);
+
+      PlayState.instance.currentStage.add(mist1);
+      PlayState.instance.currentStage.add(mist2);
+      PlayState.instance.currentStage.add(mist3);
+      PlayState.instance.currentStage.add(mist4);
+      PlayState.instance.currentStage.add(mist5);
+      PlayState.instance.currentStage.refresh(); // Apply z-index.
+
+      // Apply sky shader.
+      var skyOverlay:OverlayBlend = new OverlayBlend();
+      var sunOverlay:FlxSprite = new FlxSprite().loadGraphic(Paths.image('remnants/limoOverlay'));
+      sunOverlay.setGraphicSize(Std.int(sunOverlay.width * 2));
+      sunOverlay.updateHitbox();
+      skyOverlay.funnyShit.input = sunOverlay.pixels;
+      var limoSunset:FlxSprite = getNamedProp('limoSunset');
+      if (limoSunset == null)
+      {
+        trace('[WARN] Could not retrieve limoSunset');
+      }
+      else
+      {
+        limoSunset.shader = skyOverlay;
+      }
     }
 
     carSequenceData = [
@@ -172,12 +175,15 @@ class LimoRideRemnantsStage extends Stage
       pole.x = lamp.x + 190;
     }
 
-    _timer += event.elapsed;
-    mist1.y = 200 + (Math.sin(_timer) * 200);
-    mist2.y = 100 + (Math.sin(_timer * 0.8) * 100);
-    mist3.y = 120 + (Math.sin(_timer * 0.5) * 200);
-    mist4.y = -80 + (Math.sin(_timer * 0.4) * 300);
-    mist5.y = -350 + (Math.sin(_timer * 0.2) * 150);
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      _timer += event.elapsed;
+      mist1.y = 200 + (Math.sin(_timer) * 200);
+      mist2.y = 100 + (Math.sin(_timer * 0.8) * 100);
+      mist3.y = 120 + (Math.sin(_timer * 0.5) * 200);
+      mist4.y = -80 + (Math.sin(_timer * 0.4) * 300);
+      mist5.y = -350 + (Math.sin(_timer * 0.2) * 150);
+    }
 
     if (doCarHaptics)
     {
@@ -197,17 +203,11 @@ class LimoRideRemnantsStage extends Stage
     super.onBeatHit(event);
 
     if (FlxG.random.bool(10) && fastCarCanDrive && !isDeath) fastVehicleDrive(false);
-
     if (FlxG.random.bool(5) && fastTruckCanDrive && !isDeath) fastVehicleDrive(true);
   }
 
   var fastCarCanDrive:Bool = false;
   var fastTruckCanDrive:Bool = false;
-
-  function onStepHit(event:SongTimeScriptEvent):Void
-  {
-    super.onStepHit(event);
-  }
 
   /**
    * Apply the shader to the character as it is added.
@@ -216,15 +216,19 @@ class LimoRideRemnantsStage extends Stage
   {
     // Apply the shader automatically to each character as it gets added.
     super.addCharacter(character, charType);
-    trace('Applied stage shader to ' + character.characterName);
-    switch (charType)
+
+    if (!RemnantsOptions.getPerformanceOption())
     {
-      case CharacterType.BF:
-        character.shader = colorShaderBf;
-      case CharacterType.DAD:
-        character.shader = colorShaderDad;
-      case CharacterType.GF:
-        character.shader = colorShaderGf;
+      trace('Applied stage shader to ' + character.characterName);
+      switch (charType)
+      {
+        case CharacterType.BF:
+          character.shader = colorShaderBf;
+        case CharacterType.DAD:
+          character.shader = colorShaderDad;
+        case CharacterType.GF:
+          character.shader = colorShaderGf;
+      }
     }
   }
 
@@ -288,8 +292,12 @@ class LimoRideRemnantsStage extends Stage
   {
     var results:Array<String> = super.fetchAssetPaths();
 
-    // This graphic is applied by shader to the background, so it's not included in the default stage function.
-    results.push(Paths.image('remnants/limoOverlay'));
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      // This graphic is applied by shader to the background, so it's not included in the default stage function.
+      results.push(Paths.image('remnants/limoOverlay'));
+    }
+
     results.push(Paths.sound('carPass0'));
     results.push(Paths.sound('carPass1'));
 

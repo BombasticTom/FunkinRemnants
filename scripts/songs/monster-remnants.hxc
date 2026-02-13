@@ -8,6 +8,7 @@ import funkin.util.FlxTweenUtil;
 import flixel.FlxG;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
+import funkin.mobile.input.ControlsHandler;
 
 class MonsterRemnantsMixSong extends Song
 {
@@ -53,13 +54,27 @@ class MonsterRemnantsMixSong extends Song
     black.alpha = 1;
     PlayState.instance.camHUD.alpha = 0;
 
-    if (!Preferences.downscroll) // Move pop ups
+    if (!FlxG.onMobile) // Move pop ups
     {
-      PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll Offset
+      if (!Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll PC Offset
+
+      if (Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll PC Offset
     }
     else
     {
-      PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll Offset
+      if (FlxG.onMobile
+        && Preferences.controlsScheme == "Arrows"
+        && !ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+
+      if (FlxG.onMobile
+        && !Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+
+      if (FlxG.onMobile
+        && Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
     }
   }
 
@@ -109,6 +124,8 @@ class MonsterRemnantsMixSong extends Song
     if (PlayState.instance.isGameOverState) return;
     switch (event.beat)
     {
+      case 0:
+        PlayState.instance.currentStage.changeAmbiance(true, 0.00001);
       case 8:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 3, {ease: FlxEase.linear});
       case 60:
@@ -117,9 +134,11 @@ class MonsterRemnantsMixSong extends Song
         FlxTween.tween(black, {alpha: 0.3}, 8, {ease: FlxEase.backIn});
       case 128:
         FlxG.camera.flash(0xFFFFFFFF, 0.5);
+        PlayState.instance.currentStage.changeAmbiance(false, 0.1);
         black.alpha = 0;
       case 227:
         FlxTween.tween(black, {alpha: 0.3}, 0.3, {ease: FlxEase.linear});
+        PlayState.instance.currentStage.changeAmbiance(true, 0.5);
       case 322:
         FlxTween.tween(black, {alpha: 0.5}, 0.5, {ease: FlxEase.linear});
       case 340:

@@ -36,24 +36,27 @@ class PhillyTrainRemnantsStage extends Stage
   {
     super.buildStage();
 
-    // NOTE: You pass the constructor variables directly, not as an array.
-    lightShader = ScriptedFlxRuntimeShader.init('BuildingEffectShader', 1.0);
-    trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
-
-    colorShader = new AdjustColorShader();
-    colorShader.hue = -26;
-    colorShader.saturation = -16;
-    colorShader.contrast = 0;
-    colorShader.brightness = -5;
-    getNamedProp('train').shader = colorShader;
-
-    FlxG.sound.list.add(trainSound);
-
-    for (i in 0...LIGHT_COUNT)
+    if (!RemnantsOptions.getPerformanceOption())
     {
-      var light:FlxSprite = getNamedProp('lights' + i);
-      light.shader = lightShader;
-      light.visible = false;
+      // NOTE: You pass the constructor variables directly, not as an array.
+      lightShader = ScriptedFlxRuntimeShader.init('BuildingEffectShader', 1.0);
+      trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
+
+      colorShader = new AdjustColorShader();
+      colorShader.hue = -26;
+      colorShader.saturation = -16;
+      colorShader.contrast = 0;
+      colorShader.brightness = -5;
+      getNamedProp('train').shader = colorShader;
+
+      FlxG.sound.list.add(trainSound);
+
+      for (i in 0...LIGHT_COUNT)
+      {
+        var light:FlxSprite = getNamedProp('lights' + i);
+        light.shader = lightShader;
+        light.visible = false;
+      }
     }
   }
 
@@ -73,21 +76,25 @@ class PhillyTrainRemnantsStage extends Stage
   function onUpdate(event:UpdateScriptEvent):Void
   {
     super.onUpdate(event);
-    // Update beat lights
-    var shaderInput:Float = (Conductor.instance.beatLengthMs / 1000) * event.elapsed * 1.5;
-    lightShader.scriptCall('update', [shaderInput]);
 
-    var amount:Int = 1;
-
-    // Update train
-    if (trainMoving)
+    if (!RemnantsOptions.getPerformanceOption())
     {
-      trainFrameTiming += event.elapsed;
+      // Update beat lights
+      var shaderInput:Float = (Conductor.instance.beatLengthMs / 1000) * event.elapsed * 1.5;
+      lightShader.scriptCall('update', [shaderInput]);
 
-      if (trainFrameTiming >= 1 / 24)
+      var amount:Int = 1;
+
+      // Update train
+      if (trainMoving)
       {
-        updateTrainPos();
-        trainFrameTiming = 0;
+        trainFrameTiming += event.elapsed;
+
+        if (trainFrameTiming >= 1 / 24)
+        {
+          updateTrainPos();
+          trainFrameTiming = 0;
+        }
       }
     }
   }
@@ -96,42 +103,48 @@ class PhillyTrainRemnantsStage extends Stage
   {
     // Apply the shader automatically to each character as it gets added.
     super.addCharacter(character, charType);
-    trace('Applied stage shader to ' + character.characterName);
 
-    shader = new AdjustColorShader();
+    if (!RemnantsOptions.getPerformanceOption())
+    {
+      trace('Applied stage shader to ' + character.characterName);
 
-    shader.hue = -26;
-    shader.saturation = -16;
-    shader.contrast = 0;
-    shader.brightness = -5;
-
-    character.shader = shader;
+      shader = new AdjustColorShader();
+      shader.hue = -26;
+      shader.saturation = -16;
+      shader.contrast = 0;
+      shader.brightness = -5;
+      character.shader = shader;
+    }
   }
 
   function onBeatHit(event:SongTimeScriptEvent):Void
   {
     super.onBeatHit(event);
-    // Update train cooldown
-    if (!trainMoving) trainCooldown += 1;
 
-    // Start train
-    if (event.beat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8)
+    if (!RemnantsOptions.getPerformanceOption())
     {
-      trainCooldown = FlxG.random.int(-4, 0);
-      trainStart();
-    }
+      // Update train cooldown
+      if (!trainMoving) trainCooldown += 1;
 
-    // Update lights
-    if (event.beat % 4 == 0)
-    {
-      // Reset opacity
-      lightShader.scriptCall('reset');
-
-      // Switch to a different light
-      curLight = FlxG.random.int(0, LIGHT_COUNT - 1);
-      for (i in 0...LIGHT_COUNT)
+      // Start train
+      if (event.beat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8)
       {
-        getNamedProp('lights' + i).visible = (i == curLight);
+        trainCooldown = FlxG.random.int(-4, 0);
+        trainStart();
+      }
+
+      // Update lights
+      if (event.beat % 4 == 0)
+      {
+        // Reset opacity
+        lightShader.scriptCall('reset');
+
+        // Switch to a different light
+        curLight = FlxG.random.int(0, LIGHT_COUNT - 1);
+        for (i in 0...LIGHT_COUNT)
+        {
+          getNamedProp('lights' + i).visible = (i == curLight);
+        }
       }
     }
   }

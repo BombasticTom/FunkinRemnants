@@ -8,6 +8,8 @@ import flixel.tweens.FlxEase;
 import funkin.play.PlayState;
 import funkin.save.Save;
 import flixel.FlxG;
+import funkin.Preferences;
+import funkin.mobile.input.ControlsHandler;
 
 class TutorialRemnantsMixSong extends Song
 {
@@ -56,10 +58,30 @@ class TutorialRemnantsMixSong extends Song
       trace("Added resize signal.");
     }
 
-    // Putting this here won't let the player skip the bumper.
-    // PlayState.instance.disableKeys = true;
-
     ending = false;
+
+    if (!FlxG.onMobile) // Move pop ups
+    {
+      if (!Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, 350]; // Upscroll PC Offset
+
+      if (Preferences.downscroll) PlayState.instance.comboPopUps.offsets = [550, -190]; // Downscroll PC Offset
+    }
+    else
+    {
+      if (FlxG.onMobile
+        && Preferences.controlsScheme == "Arrows"
+        && !ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [30, 350]; // Middle Mobile Offset
+
+      if (FlxG.onMobile
+        && !Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -350]; // Upscroll Side Mobile Offset
+
+      if (FlxG.onMobile
+        && Preferences.downscroll
+        && Preferences.controlsScheme == "Arrows"
+        && ControlsHandler.usingExternalInputDevice) PlayState.instance.comboPopUps.offsets = [725, -190]; // Downscroll Side Mobile Offset
+    }
   }
 
   function onResizeWindow()
@@ -108,7 +130,7 @@ class TutorialRemnantsMixSong extends Song
 
     switch (event.eventData.value)
     {
-      case 'fadeAwayCam':
+      case 'fadeAwayCam': // Idk if this is needed anymore
         // TODO: temporary for now, replace with a fade later?
         black.cameras = [PlayState.instance?.camCutscene];
 
@@ -127,7 +149,8 @@ class TutorialRemnantsMixSong extends Song
           });
 
       case 'ending':
-        if (PlayState.instance.currentChart.difficulty != 'hard')
+        if (PlayState.instance.currentChart.difficulty == 'easy'
+          || PlayState.instance.currentChart.difficulty == 'normal') // Didnt just do "!= hard" just in case people make fan charts under new diffcutlies
         {
           FlxTween.tween(black, {alpha: 1}, 6.72, {ease: FlxEase.expoIn});
           ending = true;

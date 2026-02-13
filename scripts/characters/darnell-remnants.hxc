@@ -24,6 +24,24 @@ class DarnellRemnantsCharacter extends AnimateAtlasCharacter
     }
   }
 
+  function onCountdownStart(event:CountdownScriptEvent):Void
+  {
+    var hasAbot:Bool = false;
+    try
+    {
+      // This line will throw an exception if abot doesn't exist. We use that for our advantage here.
+      PlayState.instance.currentStage.getGirlfriend().scriptGet('abot');
+      hasAbot = true;
+    }
+    catch (e:Exception) {}
+
+    for (symbolName in ["abot arm", "abot hand"])
+    {
+      var symbol:SymbolItem = this.library.getSymbol(symbolName);
+      symbol.timeline.forEachLayer((layer:Layer) -> layer.visible = hasAbot);
+    }
+  }
+
   function onNoteHit(event:HitNoteScriptEvent)
   {
     // Override the hit note animation.
@@ -90,7 +108,6 @@ class DarnellRemnantsCharacter extends AnimateAtlasCharacter
     }
 
     lightCanSound.play(true, -timeToPlay);
-    trace('jarvis play light can sound');
   }
 
   /**
@@ -116,7 +133,6 @@ class DarnellRemnantsCharacter extends AnimateAtlasCharacter
     }
 
     kickCanSound.play(true, -timeToPlay);
-    trace('jarvis play kick can sound');
   }
 
   /**
@@ -142,6 +158,5 @@ class DarnellRemnantsCharacter extends AnimateAtlasCharacter
     }
 
     kneeCanSound.play(true, -timeToPlay);
-    trace('jarvis play knee can sound');
   }
 }

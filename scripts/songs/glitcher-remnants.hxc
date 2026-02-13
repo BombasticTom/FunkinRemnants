@@ -97,6 +97,14 @@ class GlitcherRemnantsSong extends Song
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.5, {ease: FlxEase.linear});
         PlayState.instance.disableKeys = false;
         fadeOut = true;
+      case 143:
+        PlayState.instance.currentStage.changeAmbiance(true, 0.2);
+      case 207:
+        PlayState.instance.currentStage.changeAmbiance(false, 0.2);
+      case 271:
+        PlayState.instance.currentStage.changeAmbiance(true, 0.2);
+      case 335:
+        PlayState.instance.currentStage.changeAmbiance(false, 0.2);
       case 471:
         FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 2.5, {ease: FlxEase.linear});
         PlayState.instance.disableKeys = true;

@@ -9,6 +9,7 @@
       "position": [-600, -175],
       "animType": "sparrow",
       "name": "skyAdditive",
+      "blend": "add",
       "assetPath": "remnants/blazin/skyBlur",
       "scroll": [0.0, 0.0],
       "scale": [1.75, 1.75]
@@ -18,7 +19,7 @@
       "position": [50, -300],
       "animType": "sparrow",
       "name": "lightning",
-      "assetPath": "remnants/blazin/lightning",
+      "assetPath": "phillyBlazin/lightning",
       "scroll": [0.0, 0.0],
       "scale": [1.75, 1.75],
       "animations": [
@@ -43,6 +44,7 @@
       "position": [-600, -275],
       "animType": "sparrow",
       "name": "foregroundMultiply",
+      "blend": "multiply",
       "assetPath": "remnants/blazin/streetBlur",
       "scroll": [0.0, 0.0],
       "scale": [1.75, 1.75]
@@ -51,6 +53,7 @@
       "zIndex": 40,
       "position": [-600, -275],
       "animType": "sparrow",
+      "blend": "add",
       "name": "additionalLighten",
       "assetPath": "#FFFFFF",
       "scroll": [0.0, 0.0],

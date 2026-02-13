@@ -13,19 +13,32 @@ class RemnantsOptions extends Module
     remnantsMusic = false;
   }
 
+  // Constants to prevent long code...
+  final OPTION_ARRAY:Array<String, String> = [
+    ["Show Remnants Bumpers", "When disabled, Remnants bumpers will no longer play."],
+    [
+      "Remnants Performance",
+      "When enabled, it disables shaders and other effects to improve performance on low-end devices."
+    ]
+  ];
+
+  /**
+   * If the options doesn't exist, create them and set a default value.
+  **/
   public function onCreate(event:ScriptEvent)
   {
-    // Set the option to true if it doesnt exist.
     if (!Save.instance.modOptions.exists('remnantsBumpers'))
     {
       Save.instance.modOptions.set('remnantsBumpers', true);
       Save.instance.flush();
     }
-  }
 
-  // Constants to prevent long code...
-  var OPTION_NAME:String = "Show Remnants Bumpers";
-  var OPTION_DESC:String = "If disabled, Remnants bumpers will no longer show.";
+    if (!Save.instance.modOptions.exists('remnantsPerformance'))
+    {
+      Save.instance.modOptions.set('remnantsPerformance', false);
+      Save.instance.flush();
+    }
+  }
 
   /**
    * Custom Option Injection.
@@ -34,10 +47,15 @@ class RemnantsOptions extends Module
   {
     if (!Std.isOfType(event.targetState, OptionsState) || event.targetState.optionsCodex.pages.get("preferences") == null) return;
 
-    event.targetState.optionsCodex.pages.get("preferences").createPrefItemCheckbox(OPTION_NAME, OPTION_DESC, function(value:Bool):Void {
+    event.targetState.optionsCodex.pages.get("preferences").createPrefItemCheckbox(OPTION_ARRAY[0][0], OPTION_ARRAY[0][1], function(value:Bool):Void {
       Save.instance.modOptions.set('remnantsBumpers', value);
       Save.instance.flush();
     }, Save.instance.modOptions.get('remnantsBumpers'));
+
+    event.targetState.optionsCodex.pages.get("preferences").createPrefItemCheckbox(OPTION_ARRAY[1][0], OPTION_ARRAY[1][1], function(value:Bool):Void {
+      Save.instance.modOptions.set('remnantsPerformance', value);
+      Save.instance.flush();
+    }, Save.instance.modOptions.get('remnantsPerformance'));
   }
 
   var remnantsMusic:Bool = false;
@@ -68,11 +86,20 @@ class RemnantsOptions extends Module
   }
 
   /**
-   * Silly Getter Lol
+   * Returns the value of the bumpers option.
    * @return Bool
    */
-  public function getBumperOption():Bool
+  public static function getBumperOption():Bool
   {
     return Save.instance.modOptions.get('remnantsBumpers');
+  }
+
+  /**
+   * Returns the value of the performance option.
+   * @return Bool
+   */
+  public static function getPerformanceOption():Bool
+  {
+    return Save.instance.modOptions.get('remnantsPerformance');
   }
 }

@@ -66,7 +66,7 @@ class BoyfriendRemnantsFreeplayDJ extends AnimateAtlasFreeplayDJ
     {
       // trace('Finished cartoon');
 
-      this.CARTOON_CHANNEL_FRAME = FlxG.random.bool(33) ? (playableCharData.getCartoonLoopBlinkFrame()) : (playableCharData.getCartoonLoopFrame());
+      this.CARTOON_CHANNEL_FRAME = FlxG.random.bool(45) ? (playableCharData.getCartoonLoopBlinkFrame()) : (playableCharData.getCartoonLoopFrame());
 
       // Character switches channels when the video ends, or at a 10% chance each time his idle loops.
       if (FlxG.random.bool(10))

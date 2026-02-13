@@ -266,7 +266,6 @@ class MILFRemnantsMixSong extends Song
   var nextBFLampIndex = 0;
   var nextHenchLampIndex = 0;
 
-  var hasCurrentBFLampHit = false;
   var hasCurrentGFLampDucked = false;
   var currentHenchmenIndex = 1;
 
@@ -343,8 +342,7 @@ class MILFRemnantsMixSong extends Song
     PlayState.instance.currentStage.add(bloodEffect);
     gibs.push(bloodEffect);
     bloodEffect.animation.finishCallback = function(_name) {
-      PlayState.instance.currentStage.remove(bloodEffect);
-      gibs.remove(bloodEffect);
+      PlayState.instance.currentStage.remove(bloodEffect, true);
     }
 
     // Refresh the stage to reorganize props by z-index.
@@ -375,9 +373,11 @@ class MILFRemnantsMixSong extends Song
   {
     for (gib in gibs)
     {
-      PlayState.instance.currentStage.remove(gib);
-      PlayState.instance.currentStage.refresh();
+      gib.destroy();
+      PlayState.instance.currentStage.remove(gib, true);
     }
+
+    PlayState.instance.currentStage.refresh();
     gibs = [];
   }
 
@@ -436,17 +436,9 @@ class MILFRemnantsMixSong extends Song
       if (Conductor.instance.songPosition >= nextLampReset)
       {
         nextBFLampIndex++;
-        hasCurrentBFLampHit = false;
       }
       else if (boyfriend != null)
       {
-        if (Conductor.instance.songPosition >= nextLampTime && !hasCurrentBFLampHit)
-        {
-          // Do the actual lamp collision animation and gameplay.
-          doLampHit();
-          hasCurrentBFLampHit = true;
-        }
-
         if (Conductor.instance.songPosition >= nextLampTime - GF_DUCK_DELAY && !hasCurrentGFLampDucked)
         {
           // Ensure this code only runs once.
@@ -634,7 +626,6 @@ class MILFRemnantsMixSong extends Song
 
   function hardResetSong()
   {
-    hasCurrentBFLampHit = false;
     hasCurrentGFLampDucked = false;
     nextBFLampIndex = 0;
     nextHenchLampIndex = 0;

@@ -6,6 +6,7 @@ import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.GameOverSubState;
 import funkin.graphics.FunkinSprite;
+import funkin.play.PlayState;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 
@@ -24,58 +25,9 @@ class BoyfriendRemnantsChristmasCharacter extends MultiAnimateAtlasCharacter
     PauseSubState.musicSuffix = '-remnants';
   }
 
-  var loseSprite:FunkinSprite;
-
-  /**
-   * Initialize and cache sprites used for the death animation,
-   */
-  function createDeathSprites()
-  {
-    loseSprite = FunkinSprite.createSparrow(0, 0, "gameover/loseText");
-    loseSprite.animation.addByPrefix('fall', "lose0", 24, false);
-    loseSprite.animation.addByPrefix('idle', "lose loop0", 24, true);
-    loseSprite.setPosition(this.getMidpoint().x - (loseSprite.width / 2) + 110, -200);
-    loseSprite.animation.onFinish.add(function(name:String) {
-      loseSprite.animation.play('idle', true);
-    });
-
-    // week 5 shader
-    if (shader != null)
-    {
-      loseSprite.shader = shader;
-    }
-
-    loseSprite.zIndex = this.zIndex + 5;
-    loseSprite.visible = false;
-  }
-
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     if (name == "hey") PlayState.instance?.vocals?.playerVolume = 1;
-    if (name == "firstDeath")
-    {
-      if (!this.debug)
-      {
-        // Lose...
-        createDeathSprites();
-        GameOverSubState.instance.add(loseSprite);
-      }
-    }
-    else if (name == 'deathLoop')
-    {
-      if (loseSprite != null)
-      {
-        loseSprite.visible = true;
-        loseSprite.animation.play('fall', true);
-      }
-    }
-    else if (name == "deathConfirm")
-    {
-      if (loseSprite != null)
-      {
-        FlxTween.tween(loseSprite, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-      }
-    }
 
     super.playAnimation(name, restart, ignoreOther);
   }

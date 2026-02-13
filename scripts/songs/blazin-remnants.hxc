@@ -97,9 +97,16 @@ class BlazinRemnantsMixSong extends Song
 
   override function onSongRetry()
   {
+    if (picoTimer != null) picoTimer.cancel(); // KILL IT!
+
     if (!gigacut) return;
     FlxG.camera.fade(0xFF000000, 1, true);
     PlayState.instance.disableKeys = false;
+    PlayState.instance.currentStage.getDad().velocity.y = 0;
+    PlayState.instance.currentStage.getDad().velocity.x = 0;
+    PlayState.instance.currentStage.getBoyfriend().velocity.y = 0;
+    PlayState.instance.currentStage.getBoyfriend().velocity.x = 0;
+    PlayState.instance.currentStage.getBoyfriend().visible = true;
     gigacut = false;
   }
 
@@ -109,10 +116,7 @@ class BlazinRemnantsMixSong extends Song
 
     if (event.beat == 343)
     {
-      if (FlxG.random.bool(25))
-      {
-        gigacut = true;
-      }
+      gigacut = FlxG.random.bool(25);
     }
   }
 
@@ -131,6 +135,8 @@ class BlazinRemnantsMixSong extends Song
     }
   }
 
+  var picoTimer:FlxTimer = null;
+
   function onNoteMiss(event:NoteScriptEvent) // Super awesome easter egg bad ending
   {
     if (!gigacut) return;
@@ -142,18 +148,22 @@ class BlazinRemnantsMixSong extends Song
 
         PlayState.instance.currentStage.getBoyfriend().velocity.y = -5000;
         PlayState.instance.currentStage.getBoyfriend().velocity.x = 1000;
+
         PlayState.instance.currentStage.getBoyfriend().playAnimation('uppercutHit', true, false);
         PlayState.instance.currentStage.getDad().playAnimation('uppercut', true, true);
         PlayState.instance.currentStage.getGirlfriend().playAnimation('drop70', true, true);
+
         FunkinSound.playOnce(Paths.sound('gameplay/secret/badEnd'), 1);
         FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 0.5);
+
         gigaDarnellPunch();
         PlayState.instance.disableKeys = true;
 
-        new FlxTimer().start(3, function() { // BUG: Timer dosent cancel after retry or stop while paused, which can cause some bullshit
+        picoTimer = new FlxTimer().start(3, function() {
           PlayState.instance.disableKeys = false;
           PlayState.instance.currentStage.getBoyfriend().visible = false;
           PlayState.instance.health = 0;
+          picoTimer = null;
         });
     }
   }
@@ -216,11 +226,13 @@ class BlazinRemnantsMixSong extends Song
   {
     super.onPause(event);
     if (fadeTween != null) fadeTween.active = false;
+    if (picoTimer != null) picoTimer.active = false; // PAUSE IT!
   }
 
   override function onResume(event:ScriptEvent):Void
   {
     super.onResume(event);
     if (fadeTween != null) fadeTween.active = true;
+    if (picoTimer != null) picoTimer.active = true; // RESUME IT!
   }
 }

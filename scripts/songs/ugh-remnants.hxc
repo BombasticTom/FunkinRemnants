@@ -9,6 +9,7 @@ import funkin.ui.FullScreenScaleMode;
 import funkin.Paths;
 import flixel.text.FlxText;
 import flixel.text.FlxTextBorderStyle;
+import funkin.util.TouchUtil;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
@@ -309,14 +310,22 @@ class UghSong extends Song
     }
   }
 
-  /**
-   * Don't replay the cutscene between restarts.
-   */
   function onSongRetry(event:ScriptEvent):Void
   {
     super.onSongRetry(event);
 
     hasPlayedCutscene = true;
+
+    if (PlayState.instance.currentStage.scriptGet('storm0').alpha > 0
+      && !RemnantsOptions.getPerformanceOption()) PlayState.instance.currentStage.stormOff(1);
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    super.onGameOver(event);
+
+    if (PlayState.instance.currentStage.scriptGet('storm0').alpha > 0
+      && !RemnantsOptions.getPerformanceOption()) PlayState.instance.currentStage.stormOff(0);
   }
 
   /**
@@ -329,5 +338,13 @@ class UghSong extends Song
     hasPlayedCutscene = false;
     canSkipCutscene = false;
     cutsceneSkipped = false;
+  }
+
+  function onBeatHit(event:SongTimeScriptEvent):Void
+  {
+    super.onBeatHit(event);
+
+    if (PlayState.instance.isGameOverState || RemnantsOptions.getPerformanceOption()) return;
+    if (event.beat == 159) PlayState.instance.currentStage.stormOn(1);
   }
 }
