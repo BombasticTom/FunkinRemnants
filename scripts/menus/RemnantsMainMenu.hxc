@@ -1,0 +1,118 @@
+import funkin.modding.module.Module;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.title.TitleState;
+import flixel.util.FlxTimer;
+import flixel.FlxSprite;
+import flixel.FlxG;
+import Std;
+
+using StringTools;
+
+class RemnantsMainMenu extends Module
+{
+  public function new()
+  {
+    super('RemnantsMainMenu');
+    backSpaced = false;
+    addedBack = false;
+  }
+
+  var backSpaced:Bool = false;
+  var backSpr:FlxSprite = null;
+
+  override public function onStateChangeBegin(event:StateChangeScriptEvent):Void
+  {
+    super.onStateChangeBegin(event);
+
+    // I don't like going back to the title instantly....
+    if (FlxG.state.subState == null && Std.isOfType(FlxG.state, MainMenuState) && FlxG.state.controls.BACK_P && !backSpaced)
+    {
+      if (FlxG.onMobile) return;
+      if (backSpr == null) return;
+
+      backSpaced = true;
+      backSpr.animation.play('press', true);
+      backSpr.setPosition(FlxG.width - backSpr.width, FlxG.height - backSpr.height);
+
+      new FlxTimer().start(1.0, _ -> {
+        FlxG.switchState(() -> new TitleState());
+      });
+      event.cancel();
+    }
+  }
+
+  override public function onStateChangeEnd(event:StateChangeScriptEvent):Void
+  {
+    super.onStateChangeEnd(event);
+
+    checkAndReplace(event.targetState);
+    backSpaced = false;
+    addedBack = false;
+
+    if (backSpr != null)
+    {
+      FlxG.state.remove(backSpr);
+    }
+  }
+
+  override public function onSubStateOpenEnd(event:SubStateScriptEvent):Void
+  {
+    super.onSubStateOpenEnd(event);
+
+    checkAndReplace(event.targetState);
+    backSpaced = false;
+    addedBack = false;
+
+    if (backSpr != null)
+    {
+      FlxG.state.remove(backSpr);
+    }
+  }
+
+  override function onUpdate(event:UpdateScriptEvent)
+  {
+    super.onUpdate(event);
+
+    if (!FlxG.onMobile && Std.isOfType(FlxG.state, MainMenuState) && !addedBack)
+    {
+      addedBack = true;
+
+      backSpr = new FlxSprite();
+      backSpr.frames = Paths.getSparrowAtlas('mainMenu/backspace');
+      backSpr.animation.addByPrefix('idle', 'backspace to exit white', 24, false);
+      backSpr.animation.addByPrefix('press', 'backspace PRESSED', 24, false);
+      backSpr.animation.play('idle', true);
+      backSpr.scrollFactor.set();
+      FlxG.state.add(backSpr);
+
+      backSpr.setPosition(FlxG.width - backSpr.width + 15, FlxG.height - backSpr.height + 50);
+    }
+  }
+
+  public function checkAndReplace(group:FlxGroup):Void
+  {
+    if (!RemnantsContentUtil.remnantsContentEnabled() || group?.members == null) return;
+
+    for (basic in group.members)
+    {
+      try
+      {
+        basic.members[0];
+        checkAndReplace(basic.members);
+        continue;
+      }
+      catch (e:Exception) {}
+
+      if (!Std.isOfType(basic, FlxSprite)) continue;
+
+      var assetKey:String = basic.graphic?.assetsKey ?? '';
+      if (!assetKey.startsWith('assets/images/menu')) continue;
+
+      var suffix:String = assetKey.substring('assets/images/menu'.length, assetKey.length - '.png'.length);
+      if (suffix.startsWith('BG')) suffix = suffix.substring('BG'.length);
+
+      var graphic:FlxGraphic = FlxG.bitmap.add(Paths.image('menuBGRemnants' + suffix));
+      basic.frames = graphic?.imageFrame ?? null;
+    }
+  }
+}
