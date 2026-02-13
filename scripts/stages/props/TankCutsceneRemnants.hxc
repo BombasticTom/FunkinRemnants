@@ -1,5 +1,6 @@
 import funkin.graphics.FunkinSprite;
 import funkin.play.PlayState;
+import funkin.Preferences;
 import flixel.FlxG;
 
 // a unique object for tankman talking in his cutscenes
@@ -9,7 +10,9 @@ class TankCutsceneRemnants extends FunkinSprite
   {
     super(x, y);
 
-    loadTextureAtlas("remnants/cutscene/tankmanAtlas", "week7");
+    loadTextureAtlas("remnants/cutscene/tankmanAtlas", "week7", {
+      onSymbolCreate: onSymbolCreate
+    });
 
     // Ugh
     anim.addByFrameLabel("wellWellWell", "What do we got here", 24, false);
@@ -26,5 +29,15 @@ class TankCutsceneRemnants extends FunkinSprite
   public function playAnimation(animName:String, force:Bool = false, reversed:Bool = false, frame:Int = 0):Void
   {
     this.anim.play(animName, force, reversed, frame);
+  }
+
+  public function onSymbolCreate(symbol:SymbolItem):Void
+  {
+    if (symbol.name == 'mouth censor')
+    {
+      symbol.timeline.forEachLayer((layer:Layer) -> {
+        layer.visible = !Preferences.naughtyness;
+      });
+    }
   }
 }
