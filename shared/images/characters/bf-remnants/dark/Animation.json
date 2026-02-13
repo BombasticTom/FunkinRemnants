@@ -699,7 +699,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 13",
+"SN":"BITMAPS/Mapa de bits 13",
 "ST":"MC",
 "TRP":{"x":191.5,"y":150.5},
 "MX":[1,0,0,1,101,58]
@@ -708,7 +708,7 @@
 "DU":28,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 14",
+"SN":"BITMAPS/Mapa de bits 14",
 "ST":"MC",
 "TRP":{"x":197.5,"y":150},
 "MX":[1,0,0,1,106,58]
@@ -778,7 +778,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 16",
+"SN":"BITMAPS/Mapa de bits 16",
 "ST":"MC",
 "TRP":{"x":269.5,"y":183},
 "MX":[1,0,0,1,184,87]
@@ -787,7 +787,7 @@
 "DU":13,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 15",
+"SN":"BITMAPS/Mapa de bits 15",
 "ST":"MC",
 "TRP":{"x":267,"y":186},
 "MX":[1,0,0,1,184,97]
@@ -925,7 +925,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 20",
+"SN":"BITMAPS/Mapa de bits 20",
 "ST":"MC",
 "TRP":{"x":557.35,"y":-63.15},
 "MX":[1,0,0,1,462.85,-138.15]
@@ -934,7 +934,7 @@
 "DU":60,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 19",
+"SN":"BITMAPS/Mapa de bits 19",
 "ST":"MC",
 "TRP":{"x":560.85,"y":-66.2},
 "MX":[1,0,0,1,466.85,-141.7]
@@ -1871,7 +1871,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 26",
+"SN":"BITMAPS/Mapa de bits 26",
 "ST":"MC",
 "TRP":{"x":717.45,"y":75.5},
 "MX":[1,0,0,1,489.95,-164.5]
@@ -1880,7 +1880,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 27",
+"SN":"BITMAPS/Mapa de bits 27",
 "ST":"MC",
 "TRP":{"x":715,"y":86.65},
 "MX":[1,0,0,1,492,-143.35]
@@ -1889,7 +1889,7 @@
 "DU":5,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 28",
+"SN":"BITMAPS/Mapa de bits 28",
 "ST":"MC",
 "TRP":{"x":715.35,"y":83.55},
 "MX":[1,0,0,1,488.85,-150.45]
@@ -1959,7 +1959,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 48",
+"SN":"BITMAPS/Mapa de bits 48",
 "ST":"MC",
 "TRP":{"x":310.75,"y":244.95},
 "MX":[1,0,0,1,227.75,162.45]
@@ -1968,7 +1968,7 @@
 "DU":13,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 49",
+"SN":"BITMAPS/Mapa de bits 49",
 "ST":"MC",
 "TRP":{"x":311.35,"y":240.45},
 "MX":[1,0,0,1,229.35,159.45]
@@ -2797,7 +2797,7 @@
 "E":[
 {"SI":{
 "SN":"bf talk,ing thiungy tniguhtuj",
-"FF":2,
+"FF":16,
 "ST":"G",
 "TRP":{"x":699.5,"y":280},
 "LP":"LP",
@@ -2902,40 +2902,32 @@
 "I":0,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"12"
-}},
 {"SI":{
 "SN":"BF Body Down",
 "FF":0,
 "ST":"G",
-"TRP":{"x":651.8,"y":548.05},
+"TRP":{"x":654.4,"y":548.05},
 "LP":"LP",
-"MX":[1.035,0,-0.051,0.992,487.65,288.8]
+"MX":[1.035,0,-0.051,0.992,490.25,288.8]
 }},
 {"SI":{
 "SN":"BF Head defalt",
 "FF":0,
 "ST":"G",
-"TRP":{"x":675.8,"y":292},
+"TRP":{"x":678.4,"y":292},
 "LP":"LP",
-"MX":[0.99,-0.121,0.121,0.99,496.8,211.8]
+"MX":[0.99,-0.121,0.121,0.99,499.4,211.8]
 }}]},{
 "I":2,
 "DU":7,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"13"
-}},
 {"SI":{
 "SN":"BF Body Down",
 "FF":0,
 "ST":"G",
-"TRP":{"x":654.25,"y":417.05},
+"TRP":{"x":660.15,"y":418.05},
 "LP":"LP",
-"MX":[1,0,0,1,480.2,286.8]
+"MX":[1,0,0,1,486.1,287.8]
 }},
 {"SI":{
 "SN":"BF Head defalt",
@@ -2948,10 +2940,6 @@
 "I":9,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"14"
-}},
 {"SI":{
 "SN":"BF Body Down",
 "FF":0,
@@ -2971,10 +2959,6 @@
 "I":11,
 "DU":1,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"15"
-}},
 {"SI":{
 "SN":"BF Body Down",
 "FF":0,
@@ -2994,10 +2978,6 @@
 "I":12,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"16"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3017,10 +2997,6 @@
 "I":14,
 "DU":9,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"17"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3040,10 +3016,6 @@
 "I":23,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"18"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3063,10 +3035,6 @@
 "I":25,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"19"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3086,10 +3054,6 @@
 "I":27,
 "DU":1,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"20"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3109,10 +3073,6 @@
 "I":28,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"21"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3132,10 +3092,6 @@
 "I":30,
 "DU":16,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"22"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3155,10 +3111,6 @@
 "I":46,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"23"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3178,10 +3130,6 @@
 "I":48,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"24"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3201,10 +3149,6 @@
 "I":50,
 "DU":1,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,634.5,370.85],
-"N":"25"
-}},
 {"SI":{
 "SN":"bf body default",
 "FF":0,
@@ -3353,14 +3297,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF Head defalt baked",
+"LN":"BF_Head_defalt_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 4",
+"SN":"BITMAPS/Mapa de bits 4",
 "ST":"MC",
 "TRP":{"x":169.5,"y":103},
 "MX":[1,0,0,1,-9,-9]
@@ -3371,14 +3315,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf face default baked",
+"LN":"bf_face_default_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 3",
+"SN":"BITMAPS/Mapa de bits 3",
 "ST":"MC",
 "TRP":{"x":79.5,"y":55.5},
 "MX":[1,0,0,1,-14,-17]
@@ -3396,7 +3340,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 1",
+"SN":"BITMAPS/Mapa de bits 1",
 "ST":"MC",
 "TRP":{"x":167.5,"y":126},
 "MX":[1,0,0,1,-9,-9]
@@ -3407,14 +3351,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF defalt arm baked",
+"LN":"BF_defalt_arm_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 2",
+"SN":"BITMAPS/Mapa de bits 2",
 "ST":"MC",
 "TRP":{"x":114.5,"y":80},
 "MX":[1,0,0,1,-9,-11]
@@ -3425,14 +3369,14 @@
 "TL":{
 "L":[
 {
-"LN":"mic hand baked",
+"LN":"mic_hand_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 5",
+"SN":"BITMAPS/Mapa de bits 5",
 "ST":"MC",
 "TRP":{"x":92,"y":64.5},
 "MX":[1,0,0,1,-9,-9]
@@ -3443,14 +3387,14 @@
 "TL":{
 "L":[
 {
-"LN":"Símbolo 1 baked",
+"LN":"Símbolo_1_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 6",
+"SN":"BITMAPS/Mapa de bits 6",
 "ST":"MC",
 "TRP":{"x":81.5,"y":73},
 "MX":[1,0,0,1,-9,-9]
@@ -3461,14 +3405,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF sing face ye baked",
+"LN":"BF_sing_face_ye_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 7",
+"SN":"BITMAPS/Mapa de bits 7",
 "ST":"MC",
 "TRP":{"x":85,"y":68},
 "MX":[1,0,0,1,-9,-9]
@@ -3479,14 +3423,14 @@
 "TL":{
 "L":[
 {
-"LN":"arm default baked",
+"LN":"arm_default_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 8",
+"SN":"BITMAPS/Mapa de bits 8",
 "ST":"MC",
 "TRP":{"x":71,"y":53},
 "MX":[1,0,0,1,-9,-9]
@@ -3497,14 +3441,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF Body Down baked",
+"LN":"BF_Body_Down_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 9",
+"SN":"BITMAPS/Mapa de bits 9",
 "ST":"MC",
 "TRP":{"x":175.5,"y":132},
 "MX":[1,0,0,1,-10,-9]
@@ -3515,14 +3459,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF Body Up baked",
+"LN":"BF_Body_Up_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 17",
+"SN":"BITMAPS/Mapa de bits 17",
 "ST":"MC",
 "TRP":{"x":165.5,"y":137},
 "MX":[1,0,0,1,-9,-9]
@@ -3533,14 +3477,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF Head defalt right baked",
+"LN":"BF_Head_defalt_right_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 18",
+"SN":"BITMAPS/Mapa de bits 18",
 "ST":"MC",
 "TRP":{"x":169.5,"y":103},
 "MX":[1,0,0,1,-9,-9]
@@ -3559,14 +3503,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,242.55,-31],
-"N":"37"
+"N":"23"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,242.5,-30.9],
-"N":"38"
+"N":"24"
 }}]}
 ]},{
 "LN":"Layer_1_copia",
@@ -3576,7 +3520,7 @@
 "DU":4,
 "E":[
 {"SI":{
-"SN":"Bitmap 2",
+"SN":"BITMAPS/Bitmap 2",
 "ST":"MC",
 "TRP":{"x":184.5,"y":199},
 "MX":[1,0,0,1,0,0]
@@ -3603,14 +3547,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.989,235.7,-32.75],
-"N":"40"
+"N":"26"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.989,235.6,-32.65],
-"N":"41"
+"N":"27"
 }}]}
 ]},{
 "LN":"Layer_1_copia",
@@ -3620,7 +3564,7 @@
 "DU":4,
 "E":[
 {"SI":{
-"SN":"Bitmap 4",
+"SN":"BITMAPS/Bitmap 4",
 "ST":"MC",
 "TRP":{"x":188.5,"y":177.5},
 "MX":[1,0,0,1,0,0]
@@ -3639,14 +3583,14 @@
 "E":[
 {"ASI":{
 "MX":[0.989,0,0,1,278.15,-3.75],
-"N":"43"
+"N":"29"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[0.989,0,0,1,277.85,-3.7],
-"N":"44"
+"N":"30"
 }}]}
 ]},{
 "LN":"Layer_1_copia",
@@ -3656,7 +3600,7 @@
 "DU":4,
 "E":[
 {"SI":{
-"SN":"Bitmap 3",
+"SN":"BITMAPS/Bitmap 3",
 "ST":"MC",
 "TRP":{"x":177.5,"y":212.5},
 "MX":[1,0,0,1,0,0]
@@ -3675,14 +3619,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,267.45,-35.8],
-"N":"46"
+"N":"32"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,267.3,-35.75],
-"N":"47"
+"N":"33"
 }}]}
 ]},{
 "LN":"Layer_1",
@@ -3692,7 +3636,7 @@
 "DU":4,
 "E":[
 {"SI":{
-"SN":"Bitmap 1",
+"SN":"BITMAPS/Bitmap 1",
 "ST":"MC",
 "TRP":{"x":199.5,"y":198},
 "MX":[1,0,0,1,0,0]
@@ -3703,14 +3647,14 @@
 "TL":{
 "L":[
 {
-"LN":"hand out dance baked",
+"LN":"hand_out_dance_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 52",
+"SN":"BITMAPS/Mapa de bits 52",
 "ST":"MC",
 "TRP":{"x":80.1,"y":35.1},
 "MX":[1,0,0,1,4.6,-20.9]
@@ -3719,7 +3663,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 53",
+"SN":"BITMAPS/Mapa de bits 53",
 "ST":"MC",
 "TRP":{"x":80.4,"y":37.35},
 "MX":[1,0,0,1,9.9,-16.65]
@@ -3730,14 +3674,14 @@
 "TL":{
 "L":[
 {
-"LN":"fist clench inward bf baked",
+"LN":"fist_clench_inward_bf_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 66",
+"SN":"BITMAPS/Mapa de bits 66",
 "ST":"MC",
 "TRP":{"x":135.2,"y":57},
 "MX":[1,0,0,1,71.7,-9]
@@ -3748,14 +3692,14 @@
 "TL":{
 "L":[
 {
-"LN":"mic open palm dance baked",
+"LN":"mic_open_palm_dance_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 55",
+"SN":"BITMAPS/Mapa de bits 55",
 "ST":"MC",
 "TRP":{"x":87,"y":73.8},
 "MX":[1,0,0,1,1.5,-0.2]
@@ -3766,14 +3710,14 @@
 "TL":{
 "L":[
 {
-"LN":"fist clench inward bf mic baked",
+"LN":"fist_clench_inward_bf_mic_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 65",
+"SN":"BITMAPS/Mapa de bits 65",
 "ST":"MC",
 "TRP":{"x":130.3,"y":54.9},
 "MX":[1,0,0,1,50.8,-12.6]
@@ -3784,14 +3728,14 @@
 "TL":{
 "L":[
 {
-"LN":"joyous face baked",
+"LN":"joyous_face_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 61",
+"SN":"BITMAPS/Mapa de bits 61",
 "ST":"MC",
 "TRP":{"x":35.6,"y":12.55},
 "MX":[1,0,0,1,-19.9,-43.95]
@@ -3800,7 +3744,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 60",
+"SN":"BITMAPS/Mapa de bits 60",
 "ST":"MC",
 "TRP":{"x":35.85,"y":13.8},
 "MX":[1,0,0,1,-17.65,-48.7]
@@ -3811,14 +3755,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF Head defalt HAIR BLOWING baked",
+"LN":"BF_Head_defalt_HAIR_BLOWING_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 56",
+"SN":"BITMAPS/Mapa de bits 56",
 "ST":"MC",
 "TRP":{"x":170.5,"y":103.5},
 "MX":[1,0,0,1,-9,-9]
@@ -3827,7 +3771,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 57",
+"SN":"BITMAPS/Mapa de bits 57",
 "ST":"MC",
 "TRP":{"x":170.75,"y":103.5},
 "MX":[1,0,0,1,-7.75,-9]
@@ -3836,7 +3780,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 58",
+"SN":"BITMAPS/Mapa de bits 58",
 "ST":"MC",
 "TRP":{"x":168.35,"y":103.5},
 "MX":[1,0,0,1,-13.15,-9]
@@ -3845,7 +3789,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 59",
+"SN":"BITMAPS/Mapa de bits 59",
 "ST":"MC",
 "TRP":{"x":167.85,"y":103.5},
 "MX":[1,0,0,1,-13.65,-9]
@@ -3856,14 +3800,14 @@
 "TL":{
 "L":[
 {
-"LN":"head lookdown bf baked",
+"LN":"head_lookdown_bf_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 62",
+"SN":"BITMAPS/Mapa de bits 62",
 "ST":"MC",
 "TRP":{"x":161.5,"y":100.5},
 "MX":[1,0,0,1,-9,-9]
@@ -3881,7 +3825,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 63",
+"SN":"BITMAPS/Mapa de bits 63",
 "ST":"MC",
 "TRP":{"x":32.9,"y":0.65},
 "MX":[1,0,0,1,-43.1,-43.85]
@@ -3890,7 +3834,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 64",
+"SN":"BITMAPS/Mapa de bits 64",
 "ST":"MC",
 "TRP":{"x":31.65,"y":2.65},
 "MX":[1,0,0,1,-44.85,-36.35]
@@ -3901,14 +3845,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf body dance baked",
+"LN":"bf_body_dance_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 54",
+"SN":"BITMAPS/Mapa de bits 54",
 "ST":"MC",
 "TRP":{"x":167.25,"y":126.15},
 "MX":[1,0,0,1,-9.25,-8.85]
@@ -3919,14 +3863,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf body dance flipped baked",
+"LN":"bf_body_dance_flipped_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 67",
+"SN":"BITMAPS/Mapa de bits 67",
 "ST":"MC",
 "TRP":{"x":167.25,"y":126.15},
 "MX":[1,0,0,1,-9.25,-8.85]
@@ -3937,14 +3881,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF Body Down flipped baked",
+"LN":"BF_Body_Down_flipped_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 68",
+"SN":"BITMAPS/Mapa de bits 68",
 "ST":"MC",
 "TRP":{"x":175.5,"y":131.85},
 "MX":[1,0,0,1,-10,-9.15]
@@ -3967,14 +3911,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf body nerveous baked",
+"LN":"bf_body_nerveous_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 29",
+"SN":"BITMAPS/Mapa de bits 29",
 "ST":"MC",
 "TRP":{"x":167.25,"y":126.5},
 "MX":[1,0,0,1,-9.25,-9]
@@ -3983,7 +3927,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 30",
+"SN":"BITMAPS/Mapa de bits 30",
 "ST":"MC",
 "TRP":{"x":167.25,"y":126.5},
 "MX":[1,0,0,1,-9.25,-9]
@@ -3992,7 +3936,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 31",
+"SN":"BITMAPS/Mapa de bits 31",
 "ST":"MC",
 "TRP":{"x":167.25,"y":126.5},
 "MX":[1,0,0,1,-9.25,-9]
@@ -4001,7 +3945,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 32",
+"SN":"BITMAPS/Mapa de bits 32",
 "ST":"MC",
 "TRP":{"x":167.3,"y":125.65},
 "MX":[1,0,0,1,-9.2,-10.35]
@@ -4012,14 +3956,14 @@
 "TL":{
 "L":[
 {
-"LN":"Down Face baked",
+"LN":"Down_Face_baked",
 "FR":[
 {
 "I":0,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 51",
+"SN":"BITMAPS/Mapa de bits 51",
 "ST":"MC",
 "TRP":{"x":66.5,"y":64.5},
 "MX":[1,0,0,1,-9,-9]
@@ -4028,7 +3972,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 50",
+"SN":"BITMAPS/Mapa de bits 50",
 "ST":"MC",
 "TRP":{"x":66.5,"y":52.65},
 "MX":[1,0,0,1,-18,-12.35]
@@ -4039,14 +3983,14 @@
 "TL":{
 "L":[
 {
-"LN":"Left Face baked",
+"LN":"Left_Face_baked",
 "FR":[
 {
 "I":0,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 41",
+"SN":"BITMAPS/Mapa de bits 41",
 "ST":"MC",
 "TRP":{"x":62.5,"y":66},
 "MX":[1,0,0,1,-9,-9]
@@ -4055,7 +3999,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 40",
+"SN":"BITMAPS/Mapa de bits 40",
 "ST":"MC",
 "TRP":{"x":67.1,"y":68.35},
 "MX":[1,0,0,1,-11.9,-3.65]
@@ -4066,14 +4010,14 @@
 "TL":{
 "L":[
 {
-"LN":"Left Arm baked",
+"LN":"Left_Arm_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 39",
+"SN":"BITMAPS/Mapa de bits 39",
 "ST":"MC",
 "TRP":{"x":85.5,"y":70},
 "MX":[1,0,0,1,-9,-9]
@@ -4084,14 +4028,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf body defalt baked 2",
+"LN":"bf_body_defalt_baked_2",
 "FR":[
 {
 "I":0,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 38",
+"SN":"BITMAPS/Mapa de bits 38",
 "ST":"MC",
 "TRP":{"x":167.25,"y":126.15},
 "MX":[1,0,0,1,-9.25,-8.85]
@@ -4102,14 +4046,14 @@
 "TL":{
 "L":[
 {
-"LN":"Right Face baked",
+"LN":"Right_Face_baked",
 "FR":[
 {
 "I":0,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 70",
+"SN":"BITMAPS/Mapa de bits 70",
 "ST":"MC",
 "TRP":{"x":64,"y":80.5},
 "MX":[1,0,0,1,-9,-9]
@@ -4118,7 +4062,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 71",
+"SN":"BITMAPS/Mapa de bits 71",
 "ST":"MC",
 "TRP":{"x":62.15,"y":81.05},
 "MX":[1,0,0,1,-18.35,-0.95]
@@ -4129,14 +4073,14 @@
 "TL":{
 "L":[
 {
-"LN":"Right Arm baked",
+"LN":"Right_Arm_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 69",
+"SN":"BITMAPS/Mapa de bits 69",
 "ST":"MC",
 "TRP":{"x":90.4,"y":67},
 "MX":[1,0,0,1,-11.6,-9]
@@ -4147,14 +4091,14 @@
 "TL":{
 "L":[
 {
-"LN":"Up Hand baked",
+"LN":"Up_Hand_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 34",
+"SN":"BITMAPS/Mapa de bits 34",
 "ST":"MC",
 "TRP":{"x":73,"y":102},
 "MX":[1,0,0,1,-9,-9]
@@ -4165,14 +4109,14 @@
 "TL":{
 "L":[
 {
-"LN":"Up Face baked",
+"LN":"Up_Face_baked",
 "FR":[
 {
 "I":0,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 37",
+"SN":"BITMAPS/Mapa de bits 37",
 "ST":"MC",
 "TRP":{"x":69.5,"y":78.5},
 "MX":[1,0,0,1,-9,-9]
@@ -4181,7 +4125,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 36",
+"SN":"BITMAPS/Mapa de bits 36",
 "ST":"MC",
 "TRP":{"x":72.45,"y":85.6},
 "MX":[1,0,0,1,-7.05,2.6]
@@ -4192,14 +4136,14 @@
 "TL":{
 "L":[
 {
-"LN":"BF Body Up baked 2",
+"LN":"BF_Body_Up_baked_2",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 35",
+"SN":"BITMAPS/Mapa de bits 35",
 "ST":"MC",
 "TRP":{"x":165.5,"y":137},
 "MX":[1,0,0,1,-9,-9]
@@ -4210,14 +4154,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf cringey hand baked",
+"LN":"bf_cringey_hand_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 74",
+"SN":"BITMAPS/Mapa de bits 74",
 "ST":"MC",
 "TRP":{"x":69.5,"y":60},
 "MX":[1,0,0,1,-9,-9]
@@ -4228,14 +4172,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf hand open snap baked",
+"LN":"bf_hand_open_snap_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 77",
+"SN":"BITMAPS/Mapa de bits 77",
 "ST":"MC",
 "TRP":{"x":70.05,"y":75.7},
 "MX":[1,0,0,1,-16.45,-8.3]
@@ -4246,14 +4190,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf hand open baked",
+"LN":"bf_hand_open_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 78",
+"SN":"BITMAPS/Mapa de bits 78",
 "ST":"MC",
 "TRP":{"x":68.5,"y":64},
 "MX":[1,0,0,1,-9,-9]
@@ -4264,14 +4208,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf front arm out idfk baked",
+"LN":"bf_front_arm_out_idfk_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 79",
+"SN":"BITMAPS/Mapa de bits 79",
 "ST":"MC",
 "TRP":{"x":66.65,"y":86.95},
 "MX":[1,0,0,1,-12.85,-22.05]
@@ -4282,14 +4226,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf ooo... baked",
+"LN":"bf_ooo____baked",
 "FR":[
 {
 "I":0,
 "DU":16,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 73",
+"SN":"BITMAPS/Mapa de bits 73",
 "ST":"MC",
 "TRP":{"x":58.6,"y":51.05},
 "MX":[1,0,0,1,-14.9,-8.95]
@@ -4298,7 +4242,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 72",
+"SN":"BITMAPS/Mapa de bits 72",
 "ST":"MC",
 "TRP":{"x":63.35,"y":54.5},
 "MX":[1,0,0,1,-16.15,-8]
@@ -4309,14 +4253,14 @@
 "TL":{
 "L":[
 {
-"LN":"bf oOoOoo snap baked",
+"LN":"bf_oOoOoo_snap_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 75",
+"SN":"BITMAPS/Mapa de bits 75",
 "ST":"MC",
 "TRP":{"x":64.55,"y":45.5},
 "MX":[1,0,0,1,-13.45,-9]
@@ -4327,14 +4271,14 @@
 "TL":{
 "L":[
 {
-"LN":"speed why you tryin not to laugh bruh baked",
+"LN":"speed_why_you_tryin_not_to_laugh_bruh_baked",
 "FR":[
 {
 "I":0,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 76",
+"SN":"BITMAPS/Mapa de bits 76",
 "ST":"MC",
 "TRP":{"x":64,"y":35.5},
 "MX":[1,0,0,1,-9,-9]
@@ -4345,192 +4289,192 @@
 "TL":{
 "L":[
 {
-"LN":"bf talk,ing thiungy tniguhtuj baked",
+"LN":"Capa_2",
 "FR":[
 {
 "I":0,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 100",
+"SN":"BITMAPS/Mapa de bits 91",
 "ST":"MC",
-"TRP":{"x":43.7,"y":-90.35},
-"MX":[1,0,0,1,-32.8,-172.85]
+"TRP":{"x":43.5,"y":-90.75},
+"MX":[1,0,0,1,-33,-173.25]
 }}]},{
 "I":2,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 101",
+"SN":"BITMAPS/Mapa de bits 92",
 "ST":"MC",
-"TRP":{"x":45.35,"y":-93.25},
-"MX":[1,0,0,1,-31.15,-167.25]
+"TRP":{"x":45.15,"y":-93.65},
+"MX":[1,0,0,1,-31.35,-167.65]
 }}]},{
 "I":3,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 115",
+"SN":"BITMAPS/Mapa de bits 93",
 "ST":"MC",
-"TRP":{"x":45.35,"y":-94.75},
-"MX":[1,0,0,1,-31.15,-167.25]
+"TRP":{"x":45.15,"y":-95.65},
+"MX":[1,0,0,1,-31.35,-167.65]
 }}]},{
 "I":5,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 116",
+"SN":"BITMAPS/Mapa de bits 94",
 "ST":"MC",
-"TRP":{"x":45.35,"y":-92.75},
-"MX":[1,0,0,1,-31.15,-167.25]
+"TRP":{"x":45.15,"y":-93.15},
+"MX":[1,0,0,1,-31.35,-167.65]
 }}]},{
 "I":6,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 117",
+"SN":"BITMAPS/Mapa de bits 95",
 "ST":"MC",
-"TRP":{"x":45.35,"y":-95.25},
-"MX":[1,0,0,1,-31.15,-167.25]
+"TRP":{"x":45.15,"y":-96.15},
+"MX":[1,0,0,1,-31.35,-167.65]
 }}]},{
 "I":7,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 118",
+"SN":"BITMAPS/Mapa de bits 96",
 "ST":"MC",
-"TRP":{"x":45.35,"y":-93.25},
-"MX":[1,0,0,1,-31.15,-167.25]
+"TRP":{"x":45.15,"y":-93.65},
+"MX":[1,0,0,1,-31.35,-167.65]
 }}]},{
 "I":8,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 119",
+"SN":"BITMAPS/Mapa de bits 97",
 "ST":"MC",
-"TRP":{"x":45.35,"y":-93.75},
-"MX":[1,0,0,1,-31.15,-167.25]
+"TRP":{"x":45.15,"y":-93.65},
+"MX":[1,0,0,1,-31.35,-167.65]
 }}]},{
 "I":9,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 114",
+"SN":"BITMAPS/Mapa de bits 98",
 "ST":"MC",
-"TRP":{"x":45.35,"y":-94.75},
-"MX":[1,0,0,1,-31.15,-167.25]
+"TRP":{"x":45.15,"y":-95.65},
+"MX":[1,0,0,1,-31.35,-167.65]
 }}]},{
 "I":10,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 113",
+"SN":"BITMAPS/Mapa de bits 99",
 "ST":"MC",
-"TRP":{"x":45.35,"y":-92.75},
-"MX":[1,0,0,1,-31.15,-167.25]
+"TRP":{"x":45.15,"y":-92.65},
+"MX":[1,0,0,1,-31.35,-167.65]
 }}]},{
 "I":12,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 112",
+"SN":"BITMAPS/Mapa de bits 120",
 "ST":"MC",
-"TRP":{"x":45.3,"y":-90.8},
-"MX":[1,0,0,1,-31.2,-164.8]
+"TRP":{"x":45.1,"y":-90.7},
+"MX":[1,0,0,1,-31.4,-165.2]
 }}]},{
 "I":14,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 111",
+"SN":"BITMAPS/Mapa de bits 121",
 "ST":"MC",
-"TRP":{"x":48.7,"y":-86.6},
-"MX":[1,0,0,1,-26.3,-155.1]
+"TRP":{"x":48.5,"y":-87},
+"MX":[1,0,0,1,-26.5,-155.5]
 }}]},{
 "I":15,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 110",
+"SN":"BITMAPS/Mapa de bits 122",
 "ST":"MC",
-"TRP":{"x":45.2,"y":-83.7},
-"MX":[1,0,0,1,-30.3,-149.2]
+"TRP":{"x":48.5,"y":-84.1},
+"MX":[1,0,0,1,-23.5,-149.6]
 }}]},{
 "I":16,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 109",
+"SN":"BITMAPS/Mapa de bits 123",
 "ST":"MC",
-"TRP":{"x":47.55,"y":-61.6},
-"MX":[1,0,0,1,-26.45,-142.1]
+"TRP":{"x":47.35,"y":-62},
+"MX":[1,0,0,1,-26.65,-142.5]
 }}]},{
 "I":18,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 108",
+"SN":"BITMAPS/Mapa de bits 124",
 "ST":"MC",
-"TRP":{"x":47.05,"y":-74.1},
-"MX":[1,0,0,1,-27.95,-135.1]
+"TRP":{"x":47.35,"y":-74.5},
+"MX":[1,0,0,1,-28.15,-135.5]
 }}]},{
 "I":20,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 107",
+"SN":"BITMAPS/Mapa de bits 125",
 "ST":"MC",
-"TRP":{"x":47.05,"y":-72.6},
-"MX":[1,0,0,1,-27.95,-135.1]
+"TRP":{"x":47.35,"y":-73.5},
+"MX":[1,0,0,1,-28.15,-135.5]
 }}]},{
 "I":21,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 106",
+"SN":"BITMAPS/Mapa de bits 126",
 "ST":"MC",
-"TRP":{"x":47.05,"y":-68.1},
-"MX":[1,0,0,1,-27.95,-135.1]
+"TRP":{"x":47.35,"y":-68.5},
+"MX":[1,0,0,1,-28.15,-135.5]
 }}]},{
 "I":23,
 "DU":11,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 105",
+"SN":"BITMAPS/Mapa de bits 127",
 "ST":"MC",
-"TRP":{"x":47.05,"y":-69.6},
-"MX":[1,0,0,1,-27.95,-135.1]
+"TRP":{"x":47.35,"y":-69.5},
+"MX":[1,0,0,1,-28.15,-135.5]
 }}]},{
 "I":34,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 104",
+"SN":"BITMAPS/Mapa de bits 128",
 "ST":"MC",
-"TRP":{"x":50.2,"y":-73.1},
-"MX":[1,0,0,1,-21.8,-133.6]
+"TRP":{"x":50.5,"y":-73.5},
+"MX":[1,0,0,1,-22,-134]
 }}]},{
 "I":36,
 "DU":2,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 103",
+"SN":"BITMAPS/Mapa de bits 129",
 "ST":"MC",
-"TRP":{"x":51.35,"y":-84.7},
-"MX":[1,0,0,1,-18.65,-147.7]
+"TRP":{"x":51.15,"y":-85.1},
+"MX":[1,0,0,1,-18.85,-148.1]
 }}]},{
 "I":38,
 "DU":1,
 "E":[
 {"SI":{
-"SN":"Mapa de bits 102",
+"SN":"BITMAPS/Mapa de bits 130",
 "ST":"MC",
-"TRP":{"x":62.5,"y":-97.1},
-"MX":[1,0,0,1,-18,-166.1]
+"TRP":{"x":61.8,"y":-98},
+"MX":[1,0,0,1,-18.2,-166.5]
 }}]}
 ]}
 ]}},{
-"SN":"Mapa de bits 13",
+"SN":"BITMAPS/Mapa de bits 13",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4542,7 +4486,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"0"
 }}]}]}]}},{
-"SN":"Mapa de bits 14",
+"SN":"BITMAPS/Mapa de bits 14",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4554,7 +4498,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"1"
 }}]}]}]}},{
-"SN":"Mapa de bits 16",
+"SN":"BITMAPS/Mapa de bits 16",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4566,7 +4510,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"2"
 }}]}]}]}},{
-"SN":"Mapa de bits 15",
+"SN":"BITMAPS/Mapa de bits 15",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4578,7 +4522,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"3"
 }}]}]}]}},{
-"SN":"Mapa de bits 20",
+"SN":"BITMAPS/Mapa de bits 20",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4590,7 +4534,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"4"
 }}]}]}]}},{
-"SN":"Mapa de bits 19",
+"SN":"BITMAPS/Mapa de bits 19",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4602,7 +4546,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"5"
 }}]}]}]}},{
-"SN":"Mapa de bits 26",
+"SN":"BITMAPS/Mapa de bits 26",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4614,7 +4558,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"7"
 }}]}]}]}},{
-"SN":"Mapa de bits 27",
+"SN":"BITMAPS/Mapa de bits 27",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4626,7 +4570,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"8"
 }}]}]}]}},{
-"SN":"Mapa de bits 28",
+"SN":"BITMAPS/Mapa de bits 28",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4638,7 +4582,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"9"
 }}]}]}]}},{
-"SN":"Mapa de bits 48",
+"SN":"BITMAPS/Mapa de bits 48",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4650,7 +4594,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"10"
 }}]}]}]}},{
-"SN":"Mapa de bits 49",
+"SN":"BITMAPS/Mapa de bits 49",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4662,7 +4606,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"11"
 }}]}]}]}},{
-"SN":"Mapa de bits 4",
+"SN":"BITMAPS/Mapa de bits 4",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4672,9 +4616,9 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"26"
+"N":"12"
 }}]}]}]}},{
-"SN":"Mapa de bits 3",
+"SN":"BITMAPS/Mapa de bits 3",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4684,9 +4628,9 @@
 "E":[
 {"ASI":{
 "MX":[0.971,0,0,1,0,0],
-"N":"27"
+"N":"13"
 }}]}]}]}},{
-"SN":"Mapa de bits 1",
+"SN":"BITMAPS/Mapa de bits 1",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4696,9 +4640,9 @@
 "E":[
 {"ASI":{
 "MX":[0.951,0,0,0.951,0,0],
-"N":"28"
+"N":"14"
 }}]}]}]}},{
-"SN":"Mapa de bits 2",
+"SN":"BITMAPS/Mapa de bits 2",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4708,9 +4652,9 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"29"
+"N":"15"
 }}]}]}]}},{
-"SN":"Mapa de bits 5",
+"SN":"BITMAPS/Mapa de bits 5",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4720,9 +4664,9 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"30"
+"N":"16"
 }}]}]}]}},{
-"SN":"Mapa de bits 6",
+"SN":"BITMAPS/Mapa de bits 6",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4732,9 +4676,9 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"31"
+"N":"17"
 }}]}]}]}},{
-"SN":"Mapa de bits 7",
+"SN":"BITMAPS/Mapa de bits 7",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4744,9 +4688,9 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"32"
+"N":"18"
 }}]}]}]}},{
-"SN":"Mapa de bits 8",
+"SN":"BITMAPS/Mapa de bits 8",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4756,9 +4700,9 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"33"
+"N":"19"
 }}]}]}]}},{
-"SN":"Mapa de bits 9",
+"SN":"BITMAPS/Mapa de bits 9",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4768,9 +4712,9 @@
 "E":[
 {"ASI":{
 "MX":[0.967,0,0,0.949,0,0],
-"N":"34"
+"N":"20"
 }}]}]}]}},{
-"SN":"Mapa de bits 17",
+"SN":"BITMAPS/Mapa de bits 17",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4780,9 +4724,9 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.983,0,0],
-"N":"35"
+"N":"21"
 }}]}]}]}},{
-"SN":"Mapa de bits 18",
+"SN":"BITMAPS/Mapa de bits 18",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4792,9 +4736,105 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,1.001,0,0],
+"N":"22"
+}}]}]}]}},{
+"SN":"BITMAPS/Bitmap 2",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"25"
+}}]}]}]}},{
+"SN":"BITMAPS/Bitmap 4",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,0.989,0,0],
+"N":"28"
+}}]}]}]}},{
+"SN":"BITMAPS/Bitmap 3",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.989,0,0,1,0,0],
+"N":"31"
+}}]}]}]}},{
+"SN":"BITMAPS/Bitmap 1",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"34"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 52",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.818,0,0,0.818,0,0],
+"N":"35"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 53",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.818,0,0,0.818,0,0],
 "N":"36"
 }}]}]}]}},{
-"SN":"Bitmap 2",
+"SN":"BITMAPS/Mapa de bits 66",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"37"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 55",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"38"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 65",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4806,7 +4846,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"39"
 }}]}]}]}},{
-"SN":"Bitmap 4",
+"SN":"BITMAPS/Mapa de bits 61",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4815,10 +4855,34 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,0.989,0,0],
+"MX":[1,0,0,1,0,0],
+"N":"40"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 60",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"41"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 56",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
 "N":"42"
 }}]}]}]}},{
-"SN":"Bitmap 3",
+"SN":"BITMAPS/Mapa de bits 57",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4827,10 +4891,58 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.989,0,0,1,0,0],
+"MX":[1,0,0,1,0,0],
+"N":"43"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 58",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"44"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 59",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
 "N":"45"
 }}]}]}]}},{
-"SN":"Bitmap 1",
+"SN":"BITMAPS/Mapa de bits 62",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"46"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 63",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"47"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 64",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4842,31 +4954,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"48"
 }}]}]}]}},{
-"SN":"Mapa de bits 52",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[0.818,0,0,0.818,0,0],
-"N":"49"
-}}]}]}]}},{
-"SN":"Mapa de bits 53",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[0.818,0,0,0.818,0,0],
-"N":"50"
-}}]}]}]}},{
-"SN":"Mapa de bits 66",
+"SN":"BITMAPS/Mapa de bits 54",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4876,9 +4964,33 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
+"N":"49"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 67",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"50"
+}}]}]}]}},{
+"SN":"BITMAPS/Mapa de bits 68",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1.009,0,0],
 "N":"51"
 }}]}]}]}},{
-"SN":"Mapa de bits 55",
+"SN":"BITMAPS/Mapa de bits 29",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4890,7 +5002,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"52"
 }}]}]}]}},{
-"SN":"Mapa de bits 65",
+"SN":"BITMAPS/Mapa de bits 30",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4902,7 +5014,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"53"
 }}]}]}]}},{
-"SN":"Mapa de bits 61",
+"SN":"BITMAPS/Mapa de bits 31",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4914,7 +5026,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"54"
 }}]}]}]}},{
-"SN":"Mapa de bits 60",
+"SN":"BITMAPS/Mapa de bits 32",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4926,7 +5038,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"55"
 }}]}]}]}},{
-"SN":"Mapa de bits 56",
+"SN":"BITMAPS/Mapa de bits 51",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4938,7 +5050,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"56"
 }}]}]}]}},{
-"SN":"Mapa de bits 57",
+"SN":"BITMAPS/Mapa de bits 50",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4950,7 +5062,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"57"
 }}]}]}]}},{
-"SN":"Mapa de bits 58",
+"SN":"BITMAPS/Mapa de bits 41",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4962,7 +5074,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"58"
 }}]}]}]}},{
-"SN":"Mapa de bits 59",
+"SN":"BITMAPS/Mapa de bits 40",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4974,7 +5086,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"59"
 }}]}]}]}},{
-"SN":"Mapa de bits 62",
+"SN":"BITMAPS/Mapa de bits 39",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4983,10 +5095,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,0,0],
+"MX":[0.935,0,0,1,0,0],
 "N":"60"
 }}]}]}]}},{
-"SN":"Mapa de bits 63",
+"SN":"BITMAPS/Mapa de bits 38",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -4995,10 +5107,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,0,0],
+"MX":[0.991,0,0,0.981,0,0],
 "N":"61"
 }}]}]}]}},{
-"SN":"Mapa de bits 64",
+"SN":"BITMAPS/Mapa de bits 70",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5010,7 +5122,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"62"
 }}]}]}]}},{
-"SN":"Mapa de bits 54",
+"SN":"BITMAPS/Mapa de bits 71",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5022,7 +5134,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"63"
 }}]}]}]}},{
-"SN":"Mapa de bits 67",
+"SN":"BITMAPS/Mapa de bits 69",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5031,10 +5143,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,0,0],
+"MX":[1,0,0,0.966,0,0],
 "N":"64"
 }}]}]}]}},{
-"SN":"Mapa de bits 68",
+"SN":"BITMAPS/Mapa de bits 34",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5043,10 +5155,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1.009,0,0],
+"MX":[0.997,0,0,0.963,0,0],
 "N":"65"
 }}]}]}]}},{
-"SN":"Mapa de bits 29",
+"SN":"BITMAPS/Mapa de bits 37",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5058,7 +5170,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"66"
 }}]}]}]}},{
-"SN":"Mapa de bits 30",
+"SN":"BITMAPS/Mapa de bits 36",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5070,7 +5182,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"67"
 }}]}]}]}},{
-"SN":"Mapa de bits 31",
+"SN":"BITMAPS/Mapa de bits 35",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5079,10 +5191,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,0,0],
+"MX":[1.001,0,0,0.983,0,0],
 "N":"68"
 }}]}]}]}},{
-"SN":"Mapa de bits 32",
+"SN":"BITMAPS/Mapa de bits 74",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5094,7 +5206,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"69"
 }}]}]}]}},{
-"SN":"Mapa de bits 51",
+"SN":"BITMAPS/Mapa de bits 77",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5106,7 +5218,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"70"
 }}]}]}]}},{
-"SN":"Mapa de bits 50",
+"SN":"BITMAPS/Mapa de bits 78",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5115,10 +5227,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,0,0],
+"MX":[0.954,0,0,1,0,0],
 "N":"71"
 }}]}]}]}},{
-"SN":"Mapa de bits 41",
+"SN":"BITMAPS/Mapa de bits 79",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5130,7 +5242,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"72"
 }}]}]}]}},{
-"SN":"Mapa de bits 40",
+"SN":"BITMAPS/Mapa de bits 73",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5142,7 +5254,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"73"
 }}]}]}]}},{
-"SN":"Mapa de bits 39",
+"SN":"BITMAPS/Mapa de bits 72",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5151,10 +5263,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.935,0,0,1,0,0],
+"MX":[1,0,0,1,0,0],
 "N":"74"
 }}]}]}]}},{
-"SN":"Mapa de bits 38",
+"SN":"BITMAPS/Mapa de bits 75",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5163,10 +5275,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.991,0,0,0.981,0,0],
+"MX":[1,0,0,1,0,0],
 "N":"75"
 }}]}]}]}},{
-"SN":"Mapa de bits 70",
+"SN":"BITMAPS/Mapa de bits 76",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5178,7 +5290,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"76"
 }}]}]}]}},{
-"SN":"Mapa de bits 71",
+"SN":"BITMAPS/Mapa de bits 91",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5190,7 +5302,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"77"
 }}]}]}]}},{
-"SN":"Mapa de bits 69",
+"SN":"BITMAPS/Mapa de bits 92",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5199,10 +5311,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,0.966,0,0],
+"MX":[1,0,0,1,0,0],
 "N":"78"
 }}]}]}]}},{
-"SN":"Mapa de bits 34",
+"SN":"BITMAPS/Mapa de bits 93",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5211,10 +5323,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.997,0,0,0.963,0,0],
+"MX":[1,0,0,1,0,0],
 "N":"79"
 }}]}]}]}},{
-"SN":"Mapa de bits 37",
+"SN":"BITMAPS/Mapa de bits 94",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5226,7 +5338,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"80"
 }}]}]}]}},{
-"SN":"Mapa de bits 36",
+"SN":"BITMAPS/Mapa de bits 95",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5238,7 +5350,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"81"
 }}]}]}]}},{
-"SN":"Mapa de bits 35",
+"SN":"BITMAPS/Mapa de bits 96",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5247,10 +5359,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1.001,0,0,0.983,0,0],
+"MX":[1,0,0,1,0,0],
 "N":"82"
 }}]}]}]}},{
-"SN":"Mapa de bits 74",
+"SN":"BITMAPS/Mapa de bits 97",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5262,7 +5374,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"83"
 }}]}]}]}},{
-"SN":"Mapa de bits 77",
+"SN":"BITMAPS/Mapa de bits 98",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5274,7 +5386,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"84"
 }}]}]}]}},{
-"SN":"Mapa de bits 78",
+"SN":"BITMAPS/Mapa de bits 99",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5283,10 +5395,10 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.954,0,0,1,0,0],
+"MX":[1,0,0,1,0,0],
 "N":"85"
 }}]}]}]}},{
-"SN":"Mapa de bits 79",
+"SN":"BITMAPS/Mapa de bits 120",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5298,7 +5410,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"86"
 }}]}]}]}},{
-"SN":"Mapa de bits 73",
+"SN":"BITMAPS/Mapa de bits 121",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5310,7 +5422,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"87"
 }}]}]}]}},{
-"SN":"Mapa de bits 72",
+"SN":"BITMAPS/Mapa de bits 122",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5322,7 +5434,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"88"
 }}]}]}]}},{
-"SN":"Mapa de bits 75",
+"SN":"BITMAPS/Mapa de bits 123",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5334,7 +5446,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"89"
 }}]}]}]}},{
-"SN":"Mapa de bits 76",
+"SN":"BITMAPS/Mapa de bits 124",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5346,7 +5458,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"90"
 }}]}]}]}},{
-"SN":"Mapa de bits 100",
+"SN":"BITMAPS/Mapa de bits 125",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5358,7 +5470,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"91"
 }}]}]}]}},{
-"SN":"Mapa de bits 101",
+"SN":"BITMAPS/Mapa de bits 126",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5370,7 +5482,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"92"
 }}]}]}]}},{
-"SN":"Mapa de bits 115",
+"SN":"BITMAPS/Mapa de bits 127",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5382,7 +5494,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"93"
 }}]}]}]}},{
-"SN":"Mapa de bits 116",
+"SN":"BITMAPS/Mapa de bits 128",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5394,7 +5506,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"94"
 }}]}]}]}},{
-"SN":"Mapa de bits 117",
+"SN":"BITMAPS/Mapa de bits 129",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5406,7 +5518,7 @@
 "MX":[1,0,0,1,0,0],
 "N":"95"
 }}]}]}]}},{
-"SN":"Mapa de bits 118",
+"SN":"BITMAPS/Mapa de bits 130",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -5417,174 +5529,6 @@
 {"ASI":{
 "MX":[1,0,0,1,0,0],
 "N":"96"
-}}]}]}]}},{
-"SN":"Mapa de bits 119",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"97"
-}}]}]}]}},{
-"SN":"Mapa de bits 114",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"98"
-}}]}]}]}},{
-"SN":"Mapa de bits 113",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"99"
-}}]}]}]}},{
-"SN":"Mapa de bits 112",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"100"
-}}]}]}]}},{
-"SN":"Mapa de bits 111",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"101"
-}}]}]}]}},{
-"SN":"Mapa de bits 110",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"102"
-}}]}]}]}},{
-"SN":"Mapa de bits 109",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"103"
-}}]}]}]}},{
-"SN":"Mapa de bits 108",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"104"
-}}]}]}]}},{
-"SN":"Mapa de bits 107",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"105"
-}}]}]}]}},{
-"SN":"Mapa de bits 106",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"106"
-}}]}]}]}},{
-"SN":"Mapa de bits 105",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"107"
-}}]}]}]}},{
-"SN":"Mapa de bits 104",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"108"
-}}]}]}]}},{
-"SN":"Mapa de bits 103",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"109"
-}}]}]}]}},{
-"SN":"Mapa de bits 102",
-"TL":{
-"L":[
-{"LN":"Layer 1",
-"FR":[
-{"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,0],
-"N":"110"
 }}]}]}]}}
 ]},
 "MD":{
