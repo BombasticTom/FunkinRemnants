@@ -19,6 +19,9 @@ class BlazinRemnantsMixSong extends Song
         variation: 'remnants'
       });
 
+    ignoreExclusionPref.push("drop70");
+    ignoreExclusionPref.push("combo200");
+
     this.hasHidden = false;
     this.hasPlayedCutscene = false;
   }
@@ -128,7 +131,7 @@ class BlazinRemnantsMixSong extends Song
       case "weekend-1-picouppercut":
         PlayState.instance.currentStage.getDad().velocity.y = -5000;
         PlayState.instance.currentStage.getDad().velocity.x = -1000;
-        PlayState.instance.currentStage.getGirlfriend().playAnimation('combo200', true, true);
+        PlayState.instance.currentStage.getGirlfriend().playAnimation('combo200', true, false);
         FunkinSound.playOnce(Paths.sound('gameplay/secret/goodEnd'), 1);
         FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 1);
         gigaPicoPunch();
@@ -151,7 +154,7 @@ class BlazinRemnantsMixSong extends Song
 
         PlayState.instance.currentStage.getBoyfriend().playAnimation('uppercutHit', true, false);
         PlayState.instance.currentStage.getDad().playAnimation('uppercut', true, true);
-        PlayState.instance.currentStage.getGirlfriend().playAnimation('drop70', true, true);
+        PlayState.instance.currentStage.getGirlfriend().playAnimation('drop70', true, false);
 
         FunkinSound.playOnce(Paths.sound('gameplay/secret/badEnd'), 1);
         FunkinSound.playOnce(Paths.sound('gameplay/secret/secret', "shared"), 0.5);

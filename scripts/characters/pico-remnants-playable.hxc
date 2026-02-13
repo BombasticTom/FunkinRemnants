@@ -26,6 +26,7 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
   {
     super('pico-remnants-playable');
     ignoreExclusionPref.push("shoot");
+    ignoreExclusionPref.push("fire");
   }
 
   function onCreate(event:ScriptEvent)
@@ -385,7 +386,15 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
    */
   function playFireGunAnim(hip:Bool):Void
   {
-    this.playAnimation('shoot', true, true);
+    if (FlxG.random.bool(50))
+    {
+      this.playAnimation('shoot', true, true);
+    }
+    else
+    {
+      this.playAnimation('fire', true, true);
+    }
+
     FunkinSound.playOnce(Paths.soundRandom('shot', 1, 4));
   }
 

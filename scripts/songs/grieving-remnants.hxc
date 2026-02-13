@@ -41,6 +41,10 @@ class GrievingRemnantsSong extends Song
       event.cancel();
       ModuleHandler.getModule('RemnantsBumpers').scriptCall('setPlayedBumper', true);
     }
+    else
+    {
+      PlayState.instance.disableKeys = true;
+    }
 
     if (emotional)
     {
@@ -155,6 +159,7 @@ class GrievingRemnantsSong extends Song
 
     PlayState.instance.camCutscene?.stopFX();
     FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.disableKeys = true;
 
     if (fadeOut)
     {
@@ -247,6 +252,7 @@ class GrievingRemnantsSong extends Song
             ease: FlxEase.linear,
             onComplete: function(_) {
               fadeOut = true;
+	      PlayState.instance.disableKeys = false;
             }
           });
 
