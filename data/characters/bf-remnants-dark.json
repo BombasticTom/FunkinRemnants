@@ -8,11 +8,11 @@
   "healthIcon": {
     "id": "bf-remnants"
   },
-  "offsets": [13.5, 19.5],
+  "offsets": [9.5, 14.3],
   "cameraOffsets": [3, 41],
   "death": {
     "cameraZoom": 0.85,
-    "cameraOffsets": [245, 75]
+    "cameraOffsets": [250, 75]
   },
   "atlasSettings": {
     "useRenderTexture": true,
