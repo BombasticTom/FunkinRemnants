@@ -252,7 +252,7 @@ class GrievingRemnantsSong extends Song
             ease: FlxEase.linear,
             onComplete: function(_) {
               fadeOut = true;
-	      PlayState.instance.disableKeys = false;
+              PlayState.instance.disableKeys = false;
             }
           });
 
