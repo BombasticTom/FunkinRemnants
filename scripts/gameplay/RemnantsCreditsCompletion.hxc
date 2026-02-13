@@ -1,0 +1,31 @@
+import funkin.modding.module.Module;
+import funkin.save.Save;
+import funkin.play.PlayState;
+import funkin.ui.credits.CreditsState;
+import flixel.FlxG;
+
+class RemnantsCreditsCompletion extends Module
+{
+  public function new()
+  {
+    super("remnantsCreditsCompletion");
+  }
+
+  override public function onStateChangeBegin(event:StateChangeScriptEvent):Void
+  {
+    // Don't continue if all of the songs haven't been beaten yet.
+    if (!RemnantsContentUtil.hasBeatenAllSongs()) return;
+
+    // Don't continue if this has been shown already.
+    if (Save.instance.modOptions.exists('shownRemnantsCredits')) return;
+
+    Save.instance.modOptions.set('shownRemnantsCredits', true);
+    Save.instance.flush();
+
+    event.cancel();
+    FlxG.switchState(() -> new CreditsState());
+    trace('showing credits next!');
+
+    super.onStateChangeBegin(event);
+  }
+}

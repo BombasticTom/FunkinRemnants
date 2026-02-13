@@ -1,5 +1,6 @@
 import funkin.ui.freeplay.FreeplayState;
 import funkin.data.freeplay.player.PlayerRegistry;
+import funkin.data.song.SongRegistry;
 import funkin.save.Save;
 import StringTools;
 
@@ -18,6 +19,36 @@ class RemnantsContentUtil
     }
 
     return false;
+  }
+
+  public static function hasBeatenAllSongs():Bool
+  {
+    for (songID in SongRegistry.instance.listEntryIds())
+    {
+      var song:Song = SongRegistry.instance.fetchEntry(songID);
+
+      for (variation in song.variations)
+      {
+        if (!StringTools.contains(songID, 'remnants') && !StringTools.contains(variation, 'remnants')) continue;
+
+        var difficultyList:String = song.listDifficulties(variation, null, true, false);
+
+        var hasBeatenSong:Bool = false;
+        for (difficultyID in difficultyList)
+        {
+          hasBeatenSong = Save.instance.getSongScore(songID, difficultyID, variation) != null;
+          if (hasBeatenSong) break;
+        }
+
+        if (!hasBeatenSong)
+        {
+          trace('has not beaten "' + song.songName + '" on "' + variation + '"!');
+          return false;
+        }
+      }
+    }
+
+    return true;
   }
 
   public static function loadLastRemnantsChar():Void
