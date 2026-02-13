@@ -14,6 +14,7 @@ class RemnantsCredits extends Module
   final VIDEO_PATH:String = 'grieving';
 
   public var vid:FunkinVideoSprite;
+  public var vidBG:FunkinSprite;
 
   var playingVideo:Bool = false;
 
@@ -29,8 +30,9 @@ class RemnantsCredits extends Module
     super.onStateChangeEnd(event);
 
     var bg:FunkinSprite = FunkinSprite.create(0, 0, 'menuDesat');
-    bg.setGraphicSize(Std.int(FlxG.width));
+    bg.setGraphicSize(FlxG.width);
     bg.updateHitbox();
+    bg.screenCenter();
     bg.scrollFactor.set();
     bg.alpha = 0.5;
     bg.color = 0xFFB57EDC; // Lavender
@@ -45,6 +47,10 @@ class RemnantsCredits extends Module
 
   public function startVideo():Void
   {
+    vidBG = new FunkinSprite();
+    vidBG.makeSolidColor(FlxG.width, FlxG.height, 0xFF000000);
+    FlxG.state.add(vidBG);
+
     vid = new FunkinVideoSprite();
     playingVideo = true;
 
@@ -124,10 +130,16 @@ class RemnantsCredits extends Module
         vid.y -= CreditsState.CREDITS_SCROLL_BASE_SPEED * event.elapsed;
       }
 
+      if (vidBG != null) vidBG.y = vid.y;
+
       if (vid.y <= -vid.height)
       {
         vid.destroy();
         vid = null;
+
+        vidBG.destroy();
+        vidBG = null;
+
         trace('killed video');
       }
     }
