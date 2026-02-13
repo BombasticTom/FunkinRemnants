@@ -160,28 +160,21 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
 
     if (name == "firstDeath")
     {
-      if (GameOverSubState.blueBallSuffix == '-pico-explode')
-      {
-        // Explosion death animation.
-        doExplosionDeath();
-        return;
-      }
-      else
-      {
-        // Standard death animation.
-        createDeathSprites();
+      // Standard death animation.
+      createDeathSprites();
 
-        GameOverSubState.instance.add(deathSpriteNene);
-        deathSpriteNene.animation.play("throw");
-      }
+      GameOverSubState.instance.add(deathSpriteNene);
+      deathSpriteNene.animation.play("throw");
     }
-    else if (name == "deathConfirm")
+
+    if (name == "firstDeath-explosion")
     {
-      if (GameOverSubState.blueBallSuffix == '-pico-explode')
-      {
-        doExplosionConfirm();
-        return;
-      }
+      // Explosion death animation.
+      doExplosionDeath();
+    }
+    else if (name == "deathConfirm-explosion")
+    {
+      doExplosionConfirm();
     }
 
     super.playAnimation(name, restart, ignoreOther);
@@ -202,6 +195,11 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
           picoFlicker = null;
         });
       });
+    }
+
+    if (name == 'firstDeath-explosion')
+    {
+      playAnimation('deathLoop-explosion', true);
     }
   }
 
@@ -226,18 +224,6 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
     }
   }
 
-  public override function getDeathCameraOffsets():Array<Float>
-  {
-    var result = super.getDeathCameraOffsets();
-
-    if (GameOverSubState.blueBallSuffix == '-pico-explode')
-    {
-      return [result[0] - 10, result[1] - 40];
-    }
-
-    return [result[0], result[1]];
-  }
-
   function doExplosionDeath():Void
   {
     if (picoFlicker != null)
@@ -246,10 +232,10 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
     }
 
     // Suffixed death sound will already play.
-    GameOverSubState.instance.resetCameraZoom();
+    GameOverSubState.instance.targetCameraZoom = 0.8;
 
-    // Move the camera up.
-    GameOverSubState.instance.cameraFollowPoint.y -= 100;
+    // Move the camera to center pico.
+    GameOverSubState.instance.cameraFollowPoint.x += 50;
 
     HapticUtil.vibrate(0, 0.5);
 
@@ -306,7 +292,7 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
       // force the deathloop to play in here, since we are starting the music early it
       // doesn't check this in gameover substate !
       // also no animation suffix 🤔
-      GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
+      playAnimation('deathLoop');
     }
 
     if (name == "cock" && frameNumber == 3)
@@ -314,7 +300,7 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
       createCasing();
     }
 
-    if (!HapticUtil.hapticsAvailable || GameOverSubState.blueBallSuffix == '-pico-explode') return;
+    if (!HapticUtil.hapticsAvailable) return;
 
     // Pico falls on his back.
     if (name == 'firstDeath' && frameNumber == 20)
