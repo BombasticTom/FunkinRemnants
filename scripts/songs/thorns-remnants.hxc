@@ -60,6 +60,7 @@ class ThornsRemnantsMixSong extends Song
 
     PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.camHUD.visible = true;
+    PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
 
     if (PlayState.instance.currentStage.getNamedProp('pixeloverlay') != null) PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 0;
 
@@ -381,7 +382,7 @@ class ThornsRemnantsMixSong extends Song
     }
     else
     {
-      FlxG.camera.fade(0xFF000000, 0, false);
+      PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
       PlayState.instance.camHUD.visible = false;
     }
   }
@@ -414,7 +415,7 @@ class ThornsRemnantsMixSong extends Song
 
     PlayState.instance.disableKeys = true;
     RetroCameraFade.fadeBlack(PlayState.instance.camGame, 15, 3);
-    FlxG.camera.fade(0xFF000000, 0, true);
+    PlayState.instance.camGame.fade(0xFF000000, 0, true, null, false);
   }
 
   function onBeatHit(event:ScriptEvent):Void
