@@ -749,11 +749,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "Símbolo 1",
-=======
                         "SN": "bf ye face snap",
->>>>>>> Stashed changes
                         "FF": 0,
                         "ST": "G",
                         "TRP": { "x": 480.7, "y": -51.75 },
@@ -963,11 +959,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 13",
-=======
                         "SN": "Mapa de bits 13",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 191.5, "y": 150.5 },
                         "MX": [1, 0, 0, 1, 101, 58]
@@ -981,11 +973,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 14",
-=======
                         "SN": "Mapa de bits 14",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 197.5, "y": 150 },
                         "MX": [1, 0, 0, 1, 106, 58]
@@ -1085,11 +1073,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 16",
-=======
                         "SN": "Mapa de bits 16",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 269.5, "y": 183 },
                         "MX": [1, 0, 0, 1, 184, 87]
@@ -1103,11 +1087,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 15",
-=======
                         "SN": "Mapa de bits 15",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 267, "y": 186 },
                         "MX": [1, 0, 0, 1, 184, 97]
@@ -1301,11 +1281,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 20",
-=======
                         "SN": "Mapa de bits 20",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 557.35, "y": -63.15 },
                         "MX": [1, 0, 0, 1, 462.85, -138.15]
@@ -1319,11 +1295,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 19",
-=======
                         "SN": "Mapa de bits 19",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 560.85, "y": -66.2 },
                         "MX": [1, 0, 0, 1, 466.85, -141.7]
@@ -2653,11 +2625,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 26",
-=======
                         "SN": "Mapa de bits 26",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 717.45, "y": 75.5 },
                         "MX": [1, 0, 0, 1, 489.95, -164.5]
@@ -2671,11 +2639,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 27",
-=======
                         "SN": "Mapa de bits 27",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 715, "y": 86.65 },
                         "MX": [1, 0, 0, 1, 492, -143.35]
@@ -2689,11 +2653,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 28",
-=======
                         "SN": "Mapa de bits 28",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 715.35, "y": 83.55 },
                         "MX": [1, 0, 0, 1, 488.85, -150.45]
@@ -2793,11 +2753,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 48",
-=======
                         "SN": "Mapa de bits 48",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 310.75, "y": 244.95 },
                         "MX": [1, 0, 0, 1, 227.75, 162.45]
@@ -2811,11 +2767,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 49",
-=======
                         "SN": "Mapa de bits 49",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 311.35, "y": 240.45 },
                         "MX": [1, 0, 0, 1, 229.35, 159.45]
@@ -4703,11 +4655,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 4",
-=======
                         "SN": "Mapa de bits 4",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 169.5, "y": 103 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -4733,11 +4681,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 3",
-=======
                         "SN": "Mapa de bits 3",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 79.5, "y": 55.5 },
                         "MX": [1, 0, 0, 1, -14, -17]
@@ -4763,11 +4707,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 1",
-=======
                         "SN": "Mapa de bits 1",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.5, "y": 126 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -4793,11 +4733,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 2",
-=======
                         "SN": "Mapa de bits 2",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 114.5, "y": 80 },
                         "MX": [1, 0, 0, 1, -9, -11]
@@ -4823,11 +4759,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 5",
-=======
                         "SN": "Mapa de bits 5",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 92, "y": 64.5 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -4841,11 +4773,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "Símbolo 1",
-=======
         "SN": "bf ye face snap",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -4857,11 +4785,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 6",
-=======
                         "SN": "Mapa de bits 6",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 81.5, "y": 73 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -4887,11 +4811,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 7",
-=======
                         "SN": "Mapa de bits 7",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 85, "y": 68 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -4917,11 +4837,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 8",
-=======
                         "SN": "Mapa de bits 8",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 71, "y": 53 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -4947,11 +4863,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 9",
-=======
                         "SN": "Mapa de bits 9",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 175.5, "y": 132 },
                         "MX": [1, 0, 0, 1, -10, -9]
@@ -4977,11 +4889,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 17",
-=======
                         "SN": "Mapa de bits 17",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 165.5, "y": 137 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -5007,11 +4915,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 18",
-=======
                         "SN": "Mapa de bits 18",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 169.5, "y": 103 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -5066,11 +4970,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Bitmap 2",
-=======
                         "SN": "Bitmap 2",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 184.5, "y": 199 },
                         "MX": [1, 0, 0, 1, 0, 0]
@@ -5135,11 +5035,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Bitmap 4",
-=======
                         "SN": "Bitmap 4",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 188.5, "y": 177.5 },
                         "MX": [1, 0, 0, 1, 0, 0]
@@ -5194,11 +5090,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Bitmap 3",
-=======
                         "SN": "Bitmap 3",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 177.5, "y": 212.5 },
                         "MX": [1, 0, 0, 1, 0, 0]
@@ -5253,11 +5145,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Bitmap 1",
-=======
                         "SN": "Bitmap 1",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 199.5, "y": 198 },
                         "MX": [1, 0, 0, 1, 0, 0]
@@ -5283,11 +5171,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 52",
-=======
                         "SN": "Mapa de bits 52",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 80.1, "y": 35.1 },
                         "MX": [1, 0, 0, 1, 4.6, -20.9]
@@ -5301,11 +5185,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 53",
-=======
                         "SN": "Mapa de bits 53",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 80.4, "y": 37.35 },
                         "MX": [1, 0, 0, 1, 9.9, -16.65]
@@ -5331,11 +5211,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 66",
-=======
                         "SN": "Mapa de bits 66",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 135.2, "y": 57 },
                         "MX": [1, 0, 0, 1, 71.7, -9]
@@ -5361,11 +5237,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 55",
-=======
                         "SN": "Mapa de bits 55",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 87, "y": 73.8 },
                         "MX": [1, 0, 0, 1, 1.5, -0.2]
@@ -5391,11 +5263,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 65",
-=======
                         "SN": "Mapa de bits 65",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 130.3, "y": 54.9 },
                         "MX": [1, 0, 0, 1, 50.8, -12.6]
@@ -5421,11 +5289,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 61",
-=======
                         "SN": "Mapa de bits 61",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 35.6, "y": 12.55 },
                         "MX": [1, 0, 0, 1, -19.9, -43.95]
@@ -5439,11 +5303,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 60",
-=======
                         "SN": "Mapa de bits 60",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 35.85, "y": 13.8 },
                         "MX": [1, 0, 0, 1, -17.65, -48.7]
@@ -5469,11 +5329,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 56",
-=======
                         "SN": "Mapa de bits 56",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 170.5, "y": 103.5 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -5487,11 +5343,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 57",
-=======
                         "SN": "Mapa de bits 57",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 170.75, "y": 103.5 },
                         "MX": [1, 0, 0, 1, -7.75, -9]
@@ -5505,11 +5357,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 58",
-=======
                         "SN": "Mapa de bits 58",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 168.35, "y": 103.5 },
                         "MX": [1, 0, 0, 1, -13.15, -9]
@@ -5523,11 +5371,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 59",
-=======
                         "SN": "Mapa de bits 59",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.85, "y": 103.5 },
                         "MX": [1, 0, 0, 1, -13.65, -9]
@@ -5553,11 +5397,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 62",
-=======
                         "SN": "Mapa de bits 62",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 161.5, "y": 100.5 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -5583,11 +5423,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 63",
-=======
                         "SN": "Mapa de bits 63",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 32.9, "y": 0.65 },
                         "MX": [1, 0, 0, 1, -43.1, -43.85]
@@ -5601,11 +5437,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 64",
-=======
                         "SN": "Mapa de bits 64",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 31.65, "y": 2.65 },
                         "MX": [1, 0, 0, 1, -44.85, -36.35]
@@ -5631,11 +5463,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 54",
-=======
                         "SN": "Mapa de bits 54",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.25, "y": 126.15 },
                         "MX": [1, 0, 0, 1, -9.25, -8.85]
@@ -5661,11 +5489,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 67",
-=======
                         "SN": "Mapa de bits 67",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.25, "y": 126.15 },
                         "MX": [1, 0, 0, 1, -9.25, -8.85]
@@ -5691,11 +5515,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 68",
-=======
                         "SN": "Mapa de bits 68",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 175.5, "y": 131.85 },
                         "MX": [1, 0, 0, 1, -10, -9.15]
@@ -5745,11 +5565,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 29",
-=======
                         "SN": "Mapa de bits 29",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.25, "y": 126.5 },
                         "MX": [1, 0, 0, 1, -9.25, -9]
@@ -5763,11 +5579,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 30",
-=======
                         "SN": "Mapa de bits 30",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.25, "y": 126.5 },
                         "MX": [1, 0, 0, 1, -9.25, -9]
@@ -5781,11 +5593,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 31",
-=======
                         "SN": "Mapa de bits 31",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.25, "y": 126.5 },
                         "MX": [1, 0, 0, 1, -9.25, -9]
@@ -5799,11 +5607,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 32",
-=======
                         "SN": "Mapa de bits 32",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.3, "y": 125.65 },
                         "MX": [1, 0, 0, 1, -9.2, -10.35]
@@ -5829,11 +5633,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 51",
-=======
                         "SN": "Mapa de bits 51",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 66.5, "y": 64.5 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -5847,11 +5647,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 50",
-=======
                         "SN": "Mapa de bits 50",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 66.5, "y": 52.65 },
                         "MX": [1, 0, 0, 1, -18, -12.35]
@@ -5877,11 +5673,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 41",
-=======
                         "SN": "Mapa de bits 41",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 62.5, "y": 66 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -5895,11 +5687,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 40",
-=======
                         "SN": "Mapa de bits 40",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 67.1, "y": 68.35 },
                         "MX": [1, 0, 0, 1, -11.9, -3.65]
@@ -5925,11 +5713,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 39",
-=======
                         "SN": "Mapa de bits 39",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 85.5, "y": 70 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -5955,11 +5739,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 38",
-=======
                         "SN": "Mapa de bits 38",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 167.25, "y": 126.15 },
                         "MX": [1, 0, 0, 1, -9.25, -8.85]
@@ -5985,11 +5765,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 70",
-=======
                         "SN": "Mapa de bits 70",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 64, "y": 80.5 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -6003,11 +5779,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 71",
-=======
                         "SN": "Mapa de bits 71",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 62.15, "y": 81.05 },
                         "MX": [1, 0, 0, 1, -18.35, -0.95]
@@ -6033,11 +5805,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 69",
-=======
                         "SN": "Mapa de bits 69",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 90.4, "y": 67 },
                         "MX": [1, 0, 0, 1, -11.6, -9]
@@ -6063,11 +5831,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 34",
-=======
                         "SN": "Mapa de bits 34",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 73, "y": 102 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -6093,11 +5857,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 37",
-=======
                         "SN": "Mapa de bits 37",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 69.5, "y": 78.5 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -6111,11 +5871,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 36",
-=======
                         "SN": "Mapa de bits 36",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 72.45, "y": 85.6 },
                         "MX": [1, 0, 0, 1, -7.05, 2.6]
@@ -6141,11 +5897,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 35",
-=======
                         "SN": "Mapa de bits 35",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 165.5, "y": 137 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -6171,11 +5923,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 74",
-=======
                         "SN": "Mapa de bits 74",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 69.5, "y": 60 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -6201,11 +5949,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 77",
-=======
                         "SN": "Mapa de bits 77",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 70.05, "y": 75.7 },
                         "MX": [1, 0, 0, 1, -16.45, -8.3]
@@ -6231,11 +5975,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 78",
-=======
                         "SN": "Mapa de bits 78",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 68.5, "y": 64 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -6261,11 +6001,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 79",
-=======
                         "SN": "Mapa de bits 79",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 66.65, "y": 86.95 },
                         "MX": [1, 0, 0, 1, -12.85, -22.05]
@@ -6291,11 +6027,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 73",
-=======
                         "SN": "Mapa de bits 73",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 58.6, "y": 51.05 },
                         "MX": [1, 0, 0, 1, -14.9, -8.95]
@@ -6309,11 +6041,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 72",
-=======
                         "SN": "Mapa de bits 72",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 63.35, "y": 54.5 },
                         "MX": [1, 0, 0, 1, -16.15, -8]
@@ -6339,11 +6067,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 75",
-=======
                         "SN": "Mapa de bits 75",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 64.55, "y": 45.5 },
                         "MX": [1, 0, 0, 1, -13.45, -9]
@@ -6369,11 +6093,7 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 76",
-=======
                         "SN": "Mapa de bits 76",
->>>>>>> Stashed changes
                         "ST": "MC",
                         "TRP": { "x": 64, "y": 35.5 },
                         "MX": [1, 0, 0, 1, -9, -9]
@@ -6391,11 +6111,7 @@
         "TL": {
           "L": [
             {
-<<<<<<< Updated upstream
-              "LN": "Capa_2",
-=======
               "LN": "Capa_3",
->>>>>>> Stashed changes
               "FR": [
                 {
                   "I": 0,
@@ -6403,15 +6119,9 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 91",
-                        "ST": "MC",
-                        "TRP": { "x": 43.5, "y": -90.75 },
-=======
                         "SN": "Mapa de bits 131",
                         "ST": "MC",
                         "TRP": { "x": 43.5, "y": -111.25 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -33, -173.25]
                       }
                     }
@@ -6419,113 +6129,6 @@
                 },
                 {
                   "I": 2,
-<<<<<<< Updated upstream
-                  "DU": 1,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 92",
-                        "ST": "MC",
-                        "TRP": { "x": 45.15, "y": -93.65 },
-                        "MX": [1, 0, 0, 1, -31.35, -167.65]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 3,
-                  "DU": 2,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 93",
-                        "ST": "MC",
-                        "TRP": { "x": 45.15, "y": -95.65 },
-                        "MX": [1, 0, 0, 1, -31.35, -167.65]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 5,
-                  "DU": 1,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 94",
-                        "ST": "MC",
-                        "TRP": { "x": 45.15, "y": -93.15 },
-                        "MX": [1, 0, 0, 1, -31.35, -167.65]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 6,
-                  "DU": 1,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 95",
-                        "ST": "MC",
-                        "TRP": { "x": 45.15, "y": -96.15 },
-                        "MX": [1, 0, 0, 1, -31.35, -167.65]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 7,
-                  "DU": 1,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 96",
-                        "ST": "MC",
-                        "TRP": { "x": 45.15, "y": -93.65 },
-                        "MX": [1, 0, 0, 1, -31.35, -167.65]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 8,
-                  "DU": 1,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 97",
-                        "ST": "MC",
-                        "TRP": { "x": 45.15, "y": -93.65 },
-                        "MX": [1, 0, 0, 1, -31.35, -167.65]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 9,
-                  "DU": 1,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 98",
-                        "ST": "MC",
-                        "TRP": { "x": 45.15, "y": -95.65 },
-                        "MX": [1, 0, 0, 1, -31.35, -167.65]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 10,
-                  "DU": 2,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 99",
-                        "ST": "MC",
-                        "TRP": { "x": 45.15, "y": -92.65 },
-=======
                   "DU": 10,
                   "E": [
                     {
@@ -6533,7 +6136,6 @@
                         "SN": "Mapa de bits 132",
                         "ST": "MC",
                         "TRP": { "x": 45.15, "y": -110.15 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -31.35, -167.65]
                       }
                     }
@@ -6545,15 +6147,9 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 120",
-                        "ST": "MC",
-                        "TRP": { "x": 45.1, "y": -90.7 },
-=======
                         "SN": "Mapa de bits 133",
                         "ST": "MC",
                         "TRP": { "x": 45.1, "y": -107.7 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -31.4, -165.2]
                       }
                     }
@@ -6565,15 +6161,9 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 121",
-                        "ST": "MC",
-                        "TRP": { "x": 48.5, "y": -87 },
-=======
                         "SN": "Mapa de bits 134",
                         "ST": "MC",
                         "TRP": { "x": 48.5, "y": -107 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -26.5, -155.5]
                       }
                     }
@@ -6585,15 +6175,9 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 122",
-                        "ST": "MC",
-                        "TRP": { "x": 48.5, "y": -84.1 },
-=======
                         "SN": "Mapa de bits 135",
                         "ST": "MC",
                         "TRP": { "x": 48.5, "y": -102.1 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -23.5, -149.6]
                       }
                     }
@@ -6605,15 +6189,9 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 123",
-                        "ST": "MC",
-                        "TRP": { "x": 47.35, "y": -62 },
-=======
                         "SN": "Mapa de bits 136",
                         "ST": "MC",
                         "TRP": { "x": 47.35, "y": -94.5 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -26.65, -142.5]
                       }
                     }
@@ -6621,57 +6199,6 @@
                 },
                 {
                   "I": 18,
-<<<<<<< Updated upstream
-                  "DU": 2,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 124",
-                        "ST": "MC",
-                        "TRP": { "x": 47.35, "y": -74.5 },
-                        "MX": [1, 0, 0, 1, -28.15, -135.5]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 20,
-                  "DU": 1,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 125",
-                        "ST": "MC",
-                        "TRP": { "x": 47.35, "y": -73.5 },
-                        "MX": [1, 0, 0, 1, -28.15, -135.5]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 21,
-                  "DU": 2,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 126",
-                        "ST": "MC",
-                        "TRP": { "x": 47.35, "y": -68.5 },
-                        "MX": [1, 0, 0, 1, -28.15, -135.5]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "I": 23,
-                  "DU": 11,
-                  "E": [
-                    {
-                      "SI": {
-                        "SN": "BITMAPS/Mapa de bits 127",
-                        "ST": "MC",
-                        "TRP": { "x": 47.35, "y": -69.5 },
-=======
                   "DU": 16,
                   "E": [
                     {
@@ -6679,7 +6206,6 @@
                         "SN": "Mapa de bits 137",
                         "ST": "MC",
                         "TRP": { "x": 47.35, "y": -92 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -28.15, -135.5]
                       }
                     }
@@ -6691,15 +6217,9 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 128",
-                        "ST": "MC",
-                        "TRP": { "x": 50.5, "y": -73.5 },
-=======
                         "SN": "Mapa de bits 138",
                         "ST": "MC",
                         "TRP": { "x": 50.5, "y": -92.5 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -22, -134]
                       }
                     }
@@ -6711,15 +6231,9 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 129",
-                        "ST": "MC",
-                        "TRP": { "x": 51.15, "y": -85.1 },
-=======
                         "SN": "Mapa de bits 139",
                         "ST": "MC",
                         "TRP": { "x": 51.15, "y": -96.1 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -18.85, -148.1]
                       }
                     }
@@ -6731,23 +6245,15 @@
                   "E": [
                     {
                       "SI": {
-<<<<<<< Updated upstream
-                        "SN": "BITMAPS/Mapa de bits 130",
-                        "ST": "MC",
-                        "TRP": { "x": 61.8, "y": -98 },
-=======
                         "SN": "Mapa de bits 140",
                         "ST": "MC",
                         "TRP": { "x": 61.8, "y": -106 },
->>>>>>> Stashed changes
                         "MX": [1, 0, 0, 1, -18.2, -166.5]
                       }
                     }
                   ]
                 }
               ]
-<<<<<<< Updated upstream
-=======
             },
             {
               "LN": "Capa_2",
@@ -7019,17 +6525,12 @@
                   ]
                 }
               ]
->>>>>>> Stashed changes
             }
           ]
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 13",
-=======
         "SN": "Mapa de bits 13",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7053,11 +6554,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 14",
-=======
         "SN": "Mapa de bits 14",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7081,11 +6578,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 16",
-=======
         "SN": "Mapa de bits 16",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7109,11 +6602,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 15",
-=======
         "SN": "Mapa de bits 15",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7137,11 +6626,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 20",
-=======
         "SN": "Mapa de bits 20",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7165,11 +6650,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 19",
-=======
         "SN": "Mapa de bits 19",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7193,11 +6674,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 26",
-=======
         "SN": "Mapa de bits 26",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7221,11 +6698,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 27",
-=======
         "SN": "Mapa de bits 27",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7249,11 +6722,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 28",
-=======
         "SN": "Mapa de bits 28",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7277,11 +6746,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 48",
-=======
         "SN": "Mapa de bits 48",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7305,11 +6770,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 49",
-=======
         "SN": "Mapa de bits 49",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7333,11 +6794,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 4",
-=======
         "SN": "Mapa de bits 4",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7361,11 +6818,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 3",
-=======
         "SN": "Mapa de bits 3",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7389,11 +6842,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 1",
-=======
         "SN": "Mapa de bits 1",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7417,11 +6866,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 2",
-=======
         "SN": "Mapa de bits 2",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7445,11 +6890,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 5",
-=======
         "SN": "Mapa de bits 5",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7473,11 +6914,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 6",
-=======
         "SN": "Mapa de bits 6",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7501,11 +6938,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 7",
-=======
         "SN": "Mapa de bits 7",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7529,11 +6962,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 8",
-=======
         "SN": "Mapa de bits 8",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7557,11 +6986,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 9",
-=======
         "SN": "Mapa de bits 9",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7585,11 +7010,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 17",
-=======
         "SN": "Mapa de bits 17",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7613,11 +7034,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 18",
-=======
         "SN": "Mapa de bits 18",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7641,11 +7058,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Bitmap 2",
-=======
         "SN": "Bitmap 2",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7669,11 +7082,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Bitmap 4",
-=======
         "SN": "Bitmap 4",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7697,11 +7106,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Bitmap 3",
-=======
         "SN": "Bitmap 3",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7725,11 +7130,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Bitmap 1",
-=======
         "SN": "Bitmap 1",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7753,11 +7154,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 52",
-=======
         "SN": "Mapa de bits 52",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7781,11 +7178,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 53",
-=======
         "SN": "Mapa de bits 53",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7809,11 +7202,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 66",
-=======
         "SN": "Mapa de bits 66",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7837,11 +7226,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 55",
-=======
         "SN": "Mapa de bits 55",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7865,11 +7250,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 65",
-=======
         "SN": "Mapa de bits 65",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7893,11 +7274,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 61",
-=======
         "SN": "Mapa de bits 61",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7921,11 +7298,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 60",
-=======
         "SN": "Mapa de bits 60",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7949,11 +7322,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 56",
-=======
         "SN": "Mapa de bits 56",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -7977,11 +7346,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 57",
-=======
         "SN": "Mapa de bits 57",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8005,11 +7370,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 58",
-=======
         "SN": "Mapa de bits 58",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8033,11 +7394,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 59",
-=======
         "SN": "Mapa de bits 59",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8061,11 +7418,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 62",
-=======
         "SN": "Mapa de bits 62",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8089,11 +7442,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 63",
-=======
         "SN": "Mapa de bits 63",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8117,11 +7466,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 64",
-=======
         "SN": "Mapa de bits 64",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8145,11 +7490,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 54",
-=======
         "SN": "Mapa de bits 54",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8173,11 +7514,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 67",
-=======
         "SN": "Mapa de bits 67",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8201,11 +7538,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 68",
-=======
         "SN": "Mapa de bits 68",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8229,11 +7562,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 29",
-=======
         "SN": "Mapa de bits 29",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8257,11 +7586,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 30",
-=======
         "SN": "Mapa de bits 30",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8285,11 +7610,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 31",
-=======
         "SN": "Mapa de bits 31",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8313,11 +7634,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 32",
-=======
         "SN": "Mapa de bits 32",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8341,11 +7658,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 51",
-=======
         "SN": "Mapa de bits 51",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8369,11 +7682,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 50",
-=======
         "SN": "Mapa de bits 50",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8397,11 +7706,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 41",
-=======
         "SN": "Mapa de bits 41",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8425,11 +7730,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 40",
-=======
         "SN": "Mapa de bits 40",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8453,11 +7754,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 39",
-=======
         "SN": "Mapa de bits 39",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8481,11 +7778,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 38",
-=======
         "SN": "Mapa de bits 38",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8509,11 +7802,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 70",
-=======
         "SN": "Mapa de bits 70",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8537,11 +7826,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 71",
-=======
         "SN": "Mapa de bits 71",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8565,11 +7850,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 69",
-=======
         "SN": "Mapa de bits 69",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8593,11 +7874,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 34",
-=======
         "SN": "Mapa de bits 34",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8621,11 +7898,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 37",
-=======
         "SN": "Mapa de bits 37",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8649,11 +7922,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 36",
-=======
         "SN": "Mapa de bits 36",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8677,11 +7946,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 35",
-=======
         "SN": "Mapa de bits 35",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8705,11 +7970,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 74",
-=======
         "SN": "Mapa de bits 74",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8733,11 +7994,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 77",
-=======
         "SN": "Mapa de bits 77",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8761,11 +8018,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 78",
-=======
         "SN": "Mapa de bits 78",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8789,11 +8042,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 79",
-=======
         "SN": "Mapa de bits 79",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8817,11 +8066,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 73",
-=======
         "SN": "Mapa de bits 73",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8845,11 +8090,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 72",
-=======
         "SN": "Mapa de bits 72",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8873,11 +8114,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 75",
-=======
         "SN": "Mapa de bits 75",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8901,11 +8138,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 76",
-=======
         "SN": "Mapa de bits 76",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8929,11 +8162,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 91",
-=======
         "SN": "Mapa de bits 131",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8957,11 +8186,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 92",
-=======
         "SN": "Mapa de bits 132",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -8985,11 +8210,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 93",
-=======
         "SN": "Mapa de bits 133",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9013,11 +8234,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 94",
-=======
         "SN": "Mapa de bits 134",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9041,11 +8258,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 95",
-=======
         "SN": "Mapa de bits 135",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9069,11 +8282,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 96",
-=======
         "SN": "Mapa de bits 136",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9097,11 +8306,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 97",
-=======
         "SN": "Mapa de bits 137",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9125,11 +8330,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 98",
-=======
         "SN": "Mapa de bits 138",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9153,11 +8354,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 99",
-=======
         "SN": "Mapa de bits 139",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9181,11 +8378,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 120",
-=======
         "SN": "Mapa de bits 140",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9209,11 +8402,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 121",
-=======
         "SN": "Mapa de bits 141",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9237,11 +8426,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 122",
-=======
         "SN": "Mapa de bits 142",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9265,11 +8450,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 123",
-=======
         "SN": "Mapa de bits 143",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9293,11 +8474,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 124",
-=======
         "SN": "Mapa de bits 144",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9321,11 +8498,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 125",
-=======
         "SN": "Mapa de bits 145",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9349,11 +8522,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 126",
-=======
         "SN": "Mapa de bits 146",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9377,11 +8546,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 127",
-=======
         "SN": "Mapa de bits 147",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9405,11 +8570,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 128",
-=======
         "SN": "Mapa de bits 148",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9433,11 +8594,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 129",
-=======
         "SN": "Mapa de bits 149",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9461,11 +8618,7 @@
         }
       },
       {
-<<<<<<< Updated upstream
-        "SN": "BITMAPS/Mapa de bits 130",
-=======
         "SN": "Mapa de bits 150",
->>>>>>> Stashed changes
         "TL": {
           "L": [
             {
@@ -9487,8 +8640,6 @@
             }
           ]
         }
-<<<<<<< Updated upstream
-=======
       },
       {
         "SN": "Mapa de bits 151",
@@ -9705,7 +8856,6 @@
             }
           ]
         }
->>>>>>> Stashed changes
       }
     ]
   },

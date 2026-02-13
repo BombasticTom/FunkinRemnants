@@ -188,12 +188,12 @@ class StressRemnantsMixSong extends Song
       // @TechnikTil no i HATE funkin remnants
       var subtitlesFile:String = 'songs/' + PlayState.instance.currentSong.id + '/subtitles/cutscene-remnants';
 
-        if (!Preferences.naughtyness)
-        {
-          subtitlesFile += '-censored';
-        }
+      if (!Preferences.naughtyness)
+      {
+        subtitlesFile += '-censored';
+      }
 
-        PlayState.instance.subtitles.assignSubtitles(subtitlesFile, cutsceneTimeDummy);
+      PlayState.instance.subtitles.assignSubtitles(subtitlesFile, cutsceneTimeDummy);
     }
 
     var tankTalkSuffix:String = (!Preferences.naughtyness) ? '-censored' : '';
