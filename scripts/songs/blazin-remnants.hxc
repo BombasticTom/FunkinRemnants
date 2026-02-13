@@ -116,7 +116,7 @@ class BlazinRemnantsMixSong extends Song
 
     if (event.beat == 343)
     {
-      gigacut = FlxG.random.bool(100);
+      gigacut = FlxG.random.bool(25);
     }
   }
 
