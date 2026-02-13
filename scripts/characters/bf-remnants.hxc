@@ -102,8 +102,7 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     }
 
     // Make the camera to center BF more.
-    GameOverSubState.instance.cameraFollowPoint.x += 50;
-    GameOverSubState.instance.cameraFollowPoint.y += 150;
+    GameOverSubState.instance.cameraFollowPoint.x -= 210;
     GameOverSubState.instance.targetCameraZoom = 0.95;
 
     HapticUtil.vibrate(0, 0.5);
