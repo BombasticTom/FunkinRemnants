@@ -343,8 +343,6 @@ class MILFRemnantsMixSong extends Song
     gibs.push(bloodEffect);
     bloodEffect.animation.finishCallback = function(_name) {
       PlayState.instance.currentStage.remove(bloodEffect, true);
-      bloodEffect.destroy();
-      gibs.remove(bloodEffect);
     }
 
     // Refresh the stage to reorganize props by z-index.
@@ -375,6 +373,7 @@ class MILFRemnantsMixSong extends Song
   {
     for (gib in gibs)
     {
+      gib.destroy();
       PlayState.instance.currentStage.remove(gib, true);
     }
 
