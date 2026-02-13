@@ -1,7 +1,9 @@
 import funkin.ui.freeplay.FreeplayState;
+import funkin.data.song.SongRegistry;
 import funkin.modding.module.Module;
 import funkin.audio.FunkinSound;
 import funkin.util.ReflectUtil;
+import funkin.Conductor;
 import funkin.Paths;
 import flixel.FlxG;
 import StringTools;
@@ -49,7 +51,7 @@ class RemnantsMusicReplacer extends Module
       sound = FlxG.assets.getSoundUnsafe(path);
     }
 
-    musicReplaceRegistry.push([original, condition, sound]);
+    musicReplaceRegistry.push([original, condition, sound, replace]);
   }
 
   /**
@@ -102,6 +104,11 @@ class RemnantsMusicReplacer extends Module
     // Hackily replace the internal sound with our replaced sound.
     trace('Replacing ' + musicReplaceEntry[0] + '...');
     replaceSound(sound, musicReplaceEntry[2]);
+
+    // Initialize BPM Changes
+    var songMusicData:SongMusicData = SongRegistry.instance.parseMusicData(musicReplaceEntry[3]);
+    if (songMusicData != null) Conductor.instance.mapTimeChanges(songMusicData.timeChanges);
+
     trace('Replaced successfully!');
   }
 
