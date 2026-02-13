@@ -11,7 +11,7 @@
     "uniqueInCache": true
   },
   "cameraOffsets": [57, 149.5],
-  "offsets": [-49, 13],
+  "offsets": [-53, 8],
   "death": {
     "cameraZoom": 0.85,
     "cameraOffsets": [245, 75]
