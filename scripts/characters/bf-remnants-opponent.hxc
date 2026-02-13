@@ -15,7 +15,7 @@ class BFRemnantsOpponentCharacter extends MultiAnimateAtlasCharacter
   {
     super.onCreate();
 
-    flippedParts = Paths.getAnimateAtlas("characters/bf-remnants/opponent parts", "shared", _data.atlasSettings);
+    flippedParts = Paths.getAnimateAtlas("characters/bf-remnants/opponent/parts", "shared", _data.atlasSettings);
     flippedParts.parent.destroyOnNoUse = false;
     this.library.addAtlas(flippedParts);
 
@@ -54,6 +54,7 @@ class BFRemnantsOpponentCharacter extends MultiAnimateAtlasCharacter
     var collections:Array<FlxAnimateFrames> = this.library?.addedCollections?.copy() ?? [];
     collections.push(this.library);
     trace(collections);
+
     var symbols:Array<Array<String>> = [
       ["bf body default", "bf body default flipped"],
       ["edits/bf body default", "bf body default flipped alts"],

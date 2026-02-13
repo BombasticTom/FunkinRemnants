@@ -29,12 +29,13 @@ class RemnantsMainMenu extends Module
     {
       if (FlxG.onMobile) return;
       if (backSpr == null) return;
+      if (!RemnantsContentUtil.remnantsContentEnabled()) return;
 
       backSpaced = true;
       backSpr.animation.play('press', true);
       backSpr.setPosition(FlxG.width - backSpr.width, FlxG.height - backSpr.height);
 
-      new FlxTimer().start(1.0, _ -> {
+      new FlxTimer().start(0.5, _ -> {
         FlxG.switchState(() -> new TitleState());
       });
       event.cancel();
@@ -75,8 +76,13 @@ class RemnantsMainMenu extends Module
 
     if (!FlxG.onMobile && Std.isOfType(FlxG.state, MainMenuState) && !addedBack)
     {
-      addedBack = true;
+      if (!RemnantsContentUtil.remnantsContentEnabled())
+      {
+        addedBack = true;
+        return;
+      }
 
+      addedBack = true;
       backSpr = new FlxSprite();
       backSpr.frames = Paths.getSparrowAtlas('mainMenu/backspace');
       backSpr.animation.addByPrefix('press', 'backspace PRESSED', 24, false);

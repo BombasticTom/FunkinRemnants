@@ -99,7 +99,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
       tankParachute1.scrollFactor.set(0.40, 0.35);
       tankParachute1.setPosition(583, -215);
       tankParachute1.velocity.y = 150;
-      tankParachute1.zIndex = 39;
+      tankParachute1.zIndex = 21;
       tankParachute1.angle = -5;
 
       FlxTween.tween(tankParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
@@ -108,7 +108,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
       tankParachute2.scrollFactor.set(0.35, 0.35);
       tankParachute2.setPosition(989, -110);
       tankParachute2.velocity.y = 125;
-      tankParachute2.zIndex = 39;
+      tankParachute2.zIndex = 21;
       tankParachute2.angle = -5;
 
       FlxTween.tween(tankParachute2, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
@@ -117,7 +117,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
       tankParachute3.scrollFactor.set(0.35, 0.35);
       tankParachute3.setPosition(1238, -104);
       tankParachute3.velocity.y = 125;
-      tankParachute3.zIndex = 39;
+      tankParachute3.zIndex = 21;
       tankParachute3.angle = -5;
 
       FlxTween.tween(tankParachute3, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
@@ -126,7 +126,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
       boxParachute1.scrollFactor.set(0.20, 0.35);
       boxParachute1.setPosition(-79, -148);
       boxParachute1.velocity.y = 125;
-      boxParachute1.zIndex = 39;
+      boxParachute1.zIndex = 21;
       boxParachute1.angle = -5;
 
       FlxTween.tween(boxParachute1, {angle: 5}, 2, {ease: FlxEase.quadInOut, type: 4});
@@ -135,7 +135,7 @@ class TankmanBattlefieldRemnantsStage extends Stage
       boxParachute2.scrollFactor.set(0.25, 0.35);
       boxParachute2.setPosition(282, -27);
       boxParachute2.velocity.y = 125;
-      boxParachute2.zIndex = 39;
+      boxParachute2.zIndex = 21;
 
       FlxTween.tween(boxParachute2, {angle: 30}, 3, {ease: FlxEase.quadInOut, type: 4});
 
