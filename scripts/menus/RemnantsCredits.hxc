@@ -14,6 +14,7 @@ class RemnantsCredits extends Module
   final VIDEO_PATH:String = 'grieving';
 
   public var vid:FunkinVideoSprite;
+
   var playingVideo:Bool = false;
 
   public function new()
@@ -104,10 +105,8 @@ class RemnantsCredits extends Module
       {
         vid.bitmap.rate = pressingEnter ? 2 : 1;
 
-        if (FlxG.state.controls.PAUSE_P || FlxG.keys.justPressed.SHIFT)
-          vid.pause();
-        else if (FlxG.state.controls.PAUSE_R || FlxG.keys.justReleased.SHIFT)
-          vid.resume();
+        if (FlxG.state.controls.PAUSE_P || FlxG.keys.justPressed.SHIFT) vid.pause();
+        else if (FlxG.state.controls.PAUSE_R || FlxG.keys.justReleased.SHIFT) vid.resume();
       }
       else if (pressingEnter)
       {
