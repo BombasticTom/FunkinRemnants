@@ -45,6 +45,8 @@ class RosesRemnantsMixSong extends Song
 
     PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
 
+    if (hasPlayedCutscene && PlayState.instance.camHUD.alpha < 1) FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.8, {ease: FlxEase.linear});
+
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
 
@@ -105,6 +107,7 @@ class RosesRemnantsMixSong extends Song
     }
 
     FunkinSound.playOnce(Paths.sound('ANGRY'), 1);
+    PlayState.instance.disableKeys = false;
 
     trace('Playing dialogue...');
     PlayState.instance.startConversation(targetDialogue);
@@ -122,7 +125,9 @@ class RosesRemnantsMixSong extends Song
     outro = false;
     color = false;
 
+    PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+    PlayState.instance.disableKeys = true;
 
     if (!FlxG.onMobile) // Move pop ups
     {
