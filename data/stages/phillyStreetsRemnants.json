@@ -108,6 +108,7 @@
           "prefix": "Paper Blowing",
           "frameRate": 24,
           "flipX": false,
+          "looped": true,
           "flipY": false
         }
       ]

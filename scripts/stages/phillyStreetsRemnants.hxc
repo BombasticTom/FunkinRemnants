@@ -27,6 +27,12 @@ class PhillyStreetsRemnantsStage extends Stage
   var rainShaderStartIntensity:Float;
   var rainShaderEndIntensity:Float;
 
+  // The paper X starting position.
+  var INIT_X:Float = 3250;
+
+  // The paper X finish position.
+  var END_X:Float = -900;
+
   function new()
   {
     super('phillyStreetsRemnants');
@@ -196,25 +202,25 @@ class PhillyStreetsRemnantsStage extends Stage
     }
   }
 
-  var paperTimer:FlxTimer;
-
   function onBeatHit(event:SongTimeScriptEvent)
   {
     super.onBeatHit(event);
 
     var paper = getNamedProp('paper');
-    if (FlxG.random.bool(1) && paperInterruptable)
+    if (FlxG.random.bool(1.5) && paperInterruptable)
     {
       if (paper != null)
       {
         paper.alpha = 1;
-        paper.animation.play('paperBlow');
-        paper.y = 608 + FlxG.random.float(-150, 150);
-        FlxTween.tween(paper, {x: paper.x - 550}, 2);
-
         paperInterruptable = false;
-        paperTimer = new FlxTimer().start(2, function(tmr:FlxTimer) {
-          resetPaper();
+        paper.animation.play('paperBlow', true);
+        paper.y = 608 + FlxG.random.float(-100, 150);
+
+        // Do the tween.
+        FlxTween.tween(paper, {x: END_X}, FlxG.random.float(3.5, 5), {ease: FlxEase.sineInOut,
+          onComplete: function(twn) {
+            resetPaper();
+          }
         });
       }
     }
@@ -227,7 +233,6 @@ class PhillyStreetsRemnantsStage extends Stage
     if (paper != null)
     {
       FlxTweenUtil.pauseTweensOf(paper);
-      if (paperTimer != null) paperTimer.active = false;
     }
   }
 
@@ -239,7 +244,6 @@ class PhillyStreetsRemnantsStage extends Stage
     if (paper != null)
     {
       FlxTweenUtil.resumeTweensOf(paper);
-      if (paperTimer != null) paperTimer.active = true;
     }
   }
 
@@ -249,7 +253,7 @@ class PhillyStreetsRemnantsStage extends Stage
 
     // Make it so the rain shader doesn't show over the game over screen
     FlxG.camera.filters = [];
-    paperInterruptable = true;
+    resetPaper();
   }
 
   override function onSongRetry(event:ScriptEvent):Void
@@ -262,20 +266,21 @@ class PhillyStreetsRemnantsStage extends Stage
       FlxG.camera.filters = [rainShaderFilter];
     }
 
+    resetPaper();
     refresh(); // This game fucking sucks so I added this
   }
 
   function resetPaper()
   {
     var paper = getNamedProp('paper');
-    if (paperTimer != null) paperTimer.destroy();
     paperInterruptable = true;
+    paper?.alpha = 0; // Making sure.
 
     if (paper != null)
     {
       FlxTween.cancelTweensOf(paper);
+      paper.x = INIT_X;
       paper.alpha = 0;
-      paper.x = 550;
     }
   }
 }
