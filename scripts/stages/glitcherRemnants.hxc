@@ -9,10 +9,18 @@ class GlitcherRemnantsStage extends Stage
 {
   var wentDark:Bool = false;
   var ambienceTween:FlxTween;
+  var dead:Bool = false;
 
   function new()
   {
     super('glitcherRemnants');
+  }
+
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    dead = false;
   }
 
   override public function addCharacter(character:BaseCharacter, type:CharacterType):Void
@@ -112,16 +120,21 @@ class GlitcherRemnantsStage extends Stage
 
     getBoyfriend()?.alpha = 1;
     oldBF?.alpha = 0;
+    dead = true;
 
     super.onGameOver(event);
   }
 
   function onSongRetry(event:ScriptEvent):Void
   {
-    // Swap BF and Remnants BF back after Game Over.
-    var remnantsBF:BaseCharacter = getBoyfriend();
-    this.characters.set('bf', getCharacter('remnants-bf'));
-    this.characters.set('remnants-bf', remnantsBF);
+    if (dead)
+    {
+      // Swap BF and Remnants BF back after Game Over.
+      var remnantsBF:BaseCharacter = getBoyfriend();
+      this.characters.set('bf', getCharacter('remnants-bf'));
+      this.characters.set('remnants-bf', remnantsBF);
+      dead = false;
+    }
 
     // no alpha changes here, they get handled at countdown!
     super.onSongRetry();
