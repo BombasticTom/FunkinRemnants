@@ -241,14 +241,14 @@ class WinterHorrorlandRemnantsMixSong extends Song
     PlayState.instance.camHUD.visible = true;
     PlayState.instance.startCountdown();
 
-    var bfPos:Array<Float> = [
-      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
-      PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y
+    var dadPos:Array<Float> = [
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+      PlayState.instance.currentStage.getDad().cameraFocusPoint.y
     ];
 
     PlayState.instance.resetCamera(false, false, false);
     PlayState.instance.cancelCameraFollowTween();
-    PlayState.instance.cameraFollowPoint.setPosition(bfPos[0], bfPos[1]);
+    PlayState.instance.cameraFollowPoint.setPosition(dadPos[0], dadPos[1]);
   }
 
   function skipCutscene():Void

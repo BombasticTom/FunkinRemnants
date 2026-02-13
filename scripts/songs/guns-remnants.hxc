@@ -187,8 +187,8 @@ class GunsRemnantsMixSong extends Song
     });
 
     new FlxTimer(cutsceneTimerManager).start(11, function(_) {
-      PlayState.instance.cameraFollowPoint.setPosition(PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x,
-        PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y);
+      PlayState.instance.cameraFollowPoint.setPosition(PlayState.instance.currentStage.getDad().cameraFocusPoint.x,
+        PlayState.instance.currentStage.getDad().cameraFocusPoint.y);
       PlayState.instance.resetCamera(false, false, false);
       PlayState.instance.tweenCameraZoom(1, 0.5, false, FlxEase.quadInOut);
 
