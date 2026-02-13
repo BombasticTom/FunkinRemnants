@@ -37,7 +37,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-5, 0],
       "frameRate": 24,
       "prefix": "right",
       "flipX": false,
@@ -46,7 +46,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [10, -12],
       "frameRate": 24,
       "prefix": "down",
       "flipX": false,
@@ -55,7 +55,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-5, 0],
       "frameRate": 24,
       "prefix": "up",
       "flipX": false,
@@ -64,7 +64,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [5, 0],
       "frameRate": 24,
       "prefix": "left",
       "flipX": false,
@@ -75,7 +75,7 @@
       "name": "singRIGHT-perfect",
       "prefix": "right alt",
       "assetPath": "shared:characters/pico-remnants/alt-poses",
-      "offsets": [0, 0]
+      "offsets": [30, 0]
     },
     {
       "name": "singDOWN-perfect",
@@ -87,13 +87,13 @@
       "name": "singUP-perfect",
       "prefix": "up alt",
       "assetPath": "shared:characters/pico-remnants/alt-poses",
-      "offsets": [0, 0]
+      "offsets": [45, 3]
     },
     {
       "name": "singLEFT-perfect",
       "prefix": "left alt",
       "assetPath": "shared:characters/pico-remnants/alt-poses",
-      "offsets": [0, 0]
+      "offsets": [30, 0]
     },
     {
       "flipY": false,
@@ -107,7 +107,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [5, -10],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/censored",
       "prefix": "down c",
@@ -117,7 +117,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-5, 0],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/censored",
       "prefix": "up c",
@@ -147,7 +147,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [5, -10],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/censored",
       "prefix": "down c loop",
@@ -177,7 +177,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-10, 0],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/miss",
       "prefix": "left miss",
@@ -187,7 +187,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-8, -6],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/miss",
       "prefix": "down miss",
@@ -197,7 +197,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-20, 2],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/miss",
       "prefix": "up miss",
@@ -207,7 +207,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-15, 0],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/miss",
       "prefix": "right miss",
@@ -217,7 +217,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [510, 215],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/shooting",
       "prefix": "hit can",
@@ -226,7 +226,7 @@
       "name": "shootMISS"
     },
     {
-      "offsets": [0, 0],
+      "offsets": [40, 165],
       "prefix": "death stab",
       "flipX": false,
       "looped": false,
@@ -237,7 +237,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [280, 990],
       "frameRate": 24,
       "prefix": "intro",
       "flipX": false,
@@ -246,7 +246,7 @@
       "name": "firstDeath-explosion"
     },
     {
-      "offsets": [0, 0],
+      "offsets": [40, 165],
       "prefix": "retry",
       "flipX": false,
       "name": "deathLoop",
@@ -266,7 +266,7 @@
       "frameRate": 24
     },
     {
-      "offsets": [0, 0],
+      "offsets": [40, 165],
       "prefix": "confirm",
       "flipX": false,
       "name": "deathConfirm",
@@ -276,7 +276,7 @@
       "frameRate": 24
     },
     {
-      "offsets": [0, 0],
+      "offsets": [280, 990],
       "prefix": "Confirm",
       "flipX": false,
       "name": "deathConfirm-explosion",
@@ -296,7 +296,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-50, -50],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/taunts",
       "prefix": "hey",
@@ -306,7 +306,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-45, -55],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/taunts",
       "prefix": "cheer",
@@ -316,7 +316,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [550, 200],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/shooting",
       "prefix": "gun cock",
@@ -326,7 +326,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [550, 200],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/shooting",
       "prefix": "shoot hip",
@@ -336,7 +336,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [500, 200],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/shooting",
       "prefix": "fire",
@@ -346,7 +346,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [90, 202],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/intro-weekend1",
       "prefix": "gets pissed",
@@ -356,7 +356,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [58, 200],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/intro-weekend1",
       "prefix": "cutscene cock",
@@ -366,7 +366,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [100, 200],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/intro-weekend1",
       "prefix": "cutscene shoot",
@@ -376,7 +376,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-65, -14],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/burp",
       "prefix": "burp shit",
@@ -386,7 +386,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-70, -15],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/burp",
       "prefix": "burp smile",
@@ -395,7 +395,7 @@
       "name": "burpSmile"
     },
     {
-      "offsets": [0, 0],
+      "offsets": [-65, -14],
       "prefix": "burp smile",
       "frameIndices": [
         0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
@@ -412,7 +412,7 @@
     },
     {
       "flipY": false,
-      "offsets": [0, 0],
+      "offsets": [-65, -15],
       "frameRate": 24,
       "assetPath": "shared:characters/pico-remnants/burp",
       "prefix": "shit",
