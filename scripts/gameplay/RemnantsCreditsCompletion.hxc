@@ -2,6 +2,7 @@ import funkin.modding.module.Module;
 import funkin.save.Save;
 import funkin.play.PlayState;
 import funkin.ui.credits.CreditsState;
+import funkin.ui.freeplay.FreeplayState;
 import flixel.FlxG;
 
 class RemnantsCreditsCompletion extends Module
@@ -24,6 +25,7 @@ class RemnantsCreditsCompletion extends Module
 
     event.cancel();
     FlxG.switchState(() -> new CreditsState());
+    FreeplayState.rememberedCharacterId = 'bf-remnants'; // forcefully enable remnants content
     trace('showing credits next!');
 
     super.onStateChangeBegin(event);
