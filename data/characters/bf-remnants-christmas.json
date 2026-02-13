@@ -8,8 +8,8 @@
   },
   "offsets": [25, 0],
   "death": {
-    "cameraOffsets": [10, -85],
-    "cameraZoom": 0.85
+    "cameraZoom": 0.95,
+    "cameraOffsets": [15, -125]
   },
   "atlasSettings": {
     "swfMode": false
