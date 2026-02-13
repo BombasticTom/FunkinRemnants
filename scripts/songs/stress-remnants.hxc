@@ -185,14 +185,15 @@ class StressRemnantsMixSong extends Song
 
       // These are off-sync, so disabled for now.
       // @SPG64 can you fix these pretty please ????
-      /*var subtitlesFile:String = 'songs/' + PlayState.instance.currentSong.id + '/subtitles/cutscene-remnants';
+      // @TechnikTil no i HATE funkin remnants
+      var subtitlesFile:String = 'songs/' + PlayState.instance.currentSong.id + '/subtitles/cutscene-remnants';
 
         if (!Preferences.naughtyness)
         {
           subtitlesFile += '-censored';
         }
 
-        PlayState.instance.subtitles.assignSubtitles(subtitlesFile, cutsceneTimeDummy); */
+        PlayState.instance.subtitles.assignSubtitles(subtitlesFile, cutsceneTimeDummy);
     }
 
     var tankTalkSuffix:String = (!Preferences.naughtyness) ? '-censored' : '';
@@ -215,7 +216,7 @@ class StressRemnantsMixSong extends Song
     steveDies = FunkinSound.load(Paths.sound("steveDies"), 1, false);
     cutsceneSounds.push(steveDies);
 
-    gfFail = FlxG.random.bool(50);
+    gfFail = FlxG.random.bool(35);
     if (gfFail) trace("Girlfriend is face-planting!");
 
     var dadPosition:FlxPoint = PlayState.instance.currentStage.getDadPosition();
