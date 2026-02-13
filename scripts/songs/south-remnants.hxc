@@ -254,6 +254,7 @@ class SouthRemnantsMixSong extends Song
         mosner.destroy();
 
         PlayState.instance?.endSong(true);
+        currentStage?.visible = true;
       });
     }
     super.onSongEnd(event);
