@@ -187,7 +187,7 @@ class StressRemnantsMixSong extends Song
       // @SPG64 can you fix these pretty please ????
       /*var subtitlesFile:String = 'songs/' + PlayState.instance.currentSong.id + '/subtitles/cutscene-remnants';
 
-        if (Preferences.naughtyness)
+        if (!Preferences.naughtyness)
         {
           subtitlesFile += '-censored';
         }
@@ -195,17 +195,13 @@ class StressRemnantsMixSong extends Song
         PlayState.instance.subtitles.assignSubtitles(subtitlesFile, cutsceneTimeDummy); */
     }
 
-    var tankTalk:FunkinSound = FunkinSound.load(Paths.sound('stressCutscene1'), 1, false);
+    var tankTalkSuffix:String = (!Preferences.naughtyness) ? '-censored' : '';
+
+    var tankTalk:FunkinSound = FunkinSound.load(Paths.sound('stressCutscene1' + tankTalkSuffix), 1, false);
     cutsceneSounds.push(tankTalk);
 
-    var tankTalk2:FunkinSound = FunkinSound.load(Paths.sound('stressCutscene2'), 1, false);
+    var tankTalk2:FunkinSound = FunkinSound.load(Paths.sound('stressCutscene2' + tankTalkSuffix), 1, false);
     cutsceneSounds.push(tankTalk2);
-
-    if (!Preferences.naughtyness)
-    {
-      var censorBeep:FunkinSound = FunkinSound.load(Paths.sound("censorBeep"), 1, false);
-      cutsceneSounds.push(censorBeep);
-    }
 
     gunPoint = FunkinSound.load(Paths.sound("gunPoint"), 1, false);
     cutsceneSounds.push(gunPoint);
