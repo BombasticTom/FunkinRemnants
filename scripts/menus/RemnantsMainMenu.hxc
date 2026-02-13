@@ -79,8 +79,8 @@ class RemnantsMainMenu extends Module
 
       backSpr = new FlxSprite();
       backSpr.frames = Paths.getSparrowAtlas('mainMenu/backspace');
-      backSpr.animation.addByPrefix('idle', 'backspace to exit white', 24, false);
       backSpr.animation.addByPrefix('press', 'backspace PRESSED', 24, false);
+      backSpr.animation.addByPrefix('idle', 'backspace to exit', 24, true);
       backSpr.animation.play('idle', true);
       backSpr.scrollFactor.set();
       FlxG.state.add(backSpr);
