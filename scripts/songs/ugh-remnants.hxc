@@ -16,7 +16,7 @@ import flixel.util.FlxTimer;
 import flixel.util.FlxTimerManager;
 import flixel.FlxG;
 
-class UghSong extends Song
+class UghRemnantsMixSong extends Song
 {
   var hasPlayedCutscene:Bool = false;
   var canSkipCutscene:Bool = false;
