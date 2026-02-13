@@ -97,7 +97,7 @@ class RosesRemnantsMixSong extends Song
   {
     var targetDialogue = 'roses-remnants'; // Normal dialogue
 
-    if (!FlxG.random.bool(15))
+    if (!FlxG.random.bool(10))
     {
       if (!Preferences.naughtyness) targetDialogue += "-censored"; // Adds censored dialogue
     }
