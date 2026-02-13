@@ -115,7 +115,7 @@ class RemnantsMusicReplacer extends Module
    */
   public function replaceSound(sound:FlxSound, newSound:Sound):Void
   {
-    var wasntStopped:Bool = sound._channnel == null;
+    var wasntStopped:Bool = sound._channel != null;
     var time:Float = wasntStopped ? sound._channel.position : 0;
     var oldLength:Float = sound._length;
 
