@@ -112,6 +112,8 @@ class TutorialRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
+    if (PlayState.instance.camHUD.alpha < 1) PlayState.instance.camHUD.alpha = 1;
+
     if (!ModuleHandler.getModule('RemnantsBumpers').scriptCall('getPlayedBumper')
       && ModuleHandler.getModule('RemnantsBumpers').scriptCall('setupBumper'))
     {
