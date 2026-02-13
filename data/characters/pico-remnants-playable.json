@@ -243,7 +243,7 @@
       "flipX": false,
       "assetPath": "shared:characters/pico-remnants/explosion-death",
       "looped": false,
-      "name": "firstDeath-explosion"
+      "name": "firstDeath-explode"
     },
     {
       "offsets": [40, 165],
@@ -259,7 +259,7 @@
       "offsets": [0, 0],
       "prefix": "Loop Start",
       "flipX": false,
-      "name": "deathLoop-explosion",
+      "name": "deathLoop-explode",
       "looped": true,
       "flipY": false,
       "assetPath": "shared:characters/pico-remnants/explosion-death",
@@ -279,7 +279,7 @@
       "offsets": [280, 990],
       "prefix": "Confirm",
       "flipX": false,
-      "name": "deathConfirm-explosion",
+      "name": "deathConfirm-explode",
       "looped": false,
       "flipY": false,
       "assetPath": "shared:characters/pico-remnants/explosion-death",
