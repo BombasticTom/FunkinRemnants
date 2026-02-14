@@ -23,6 +23,8 @@ elif command -v powershell > /dev/null 2>&1
 then
   rm "$ZIP_NAME"
   powershell -Command "Compress-Archive -Path './modpack/*' -DestinationPath '$ZIP_NAME'"
+
+  echo "Done! The modpack is contained in $ZIP_NAME."
 else
   echo "7z and PowerShell are not installed! Cannot bundle the modpack into a zip automatically."
   echo "Done! The modpack is contained in the modpack folder."
