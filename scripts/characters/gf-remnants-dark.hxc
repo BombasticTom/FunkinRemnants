@@ -35,25 +35,10 @@ class GirlfriendRemnantsDarkCharacter extends SparrowCharacter
     return val;
   }
 
-  var lastX:Float = null;
-  var lastY:Float = null;
-
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     super.playAnimation(name, restart, ignoreOther);
-    if (normalChar != null)
-    {
-      normalChar.playAnimation(name, restart, ignoreOther);
-
-      if (normalChar != null && (lastX != this.x || lastY != this.y))
-      {
-        normalChar.x = this.feetPosition.x - normalChar.characterOrigin.x;
-        normalChar.y = this.feetPosition.y - normalChar.characterOrigin.y;
-
-        lastX = this.x;
-        lastY = this.y;
-      }
-    }
+    normalChar?.playAnimation(name, restart, ignoreOther);
   }
 
   function onAdd(event:ScriptEvent)

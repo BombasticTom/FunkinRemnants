@@ -48,16 +48,12 @@ class BoyfriendRemnantsDarkCharacter extends MultiAnimateAtlasCharacter
     return val;
   }
 
-  var lastX:Float = null;
-  var lastY:Float = null;
-
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     if (name == "hey" || name == "cheer" || name == "lights") PlayState.instance?.vocals?.playerVolume = 1;
 
     super.playAnimation(name, restart, ignoreOther);
-
-    if (normalChar != null) normalChar.playAnimation(name, restart, ignoreOther);
+    normalChar?.playAnimation(name, restart, ignoreOther);
   }
 
   function onAdd(event:ScriptEvent)

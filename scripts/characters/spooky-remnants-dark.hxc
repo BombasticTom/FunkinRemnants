@@ -29,17 +29,10 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
     return val;
   }
 
-  var lastX:Float = null;
-  var lastY:Float = null;
-
   override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
   {
     super.playAnimation(name, restart, ignoreOther);
-    if (normalChar != null)
-    {
-      normalChar.playAnimation(name, restart, ignoreOther);
-      normalChar.setPosition(this.x, this.y);
-    }
+    normalChar?.playAnimation(name, restart, ignoreOther);
 
     if (name == 'idleToDance')
     {
@@ -74,6 +67,8 @@ class SpookyRemnantsDarkCharacter extends SparrowCharacter
 
       normalChar.zIndex = normalChar.zIndex - 1;
       alpha = alpha;
+
+      PlayState.instance.currentStage.refresh();
     }
   }
 }
