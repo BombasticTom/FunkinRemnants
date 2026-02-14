@@ -3,6 +3,7 @@
   "name": "Remnants Monster",
   "assetPath": "shared:characters/monster-remnants",
   "renderType": "animateatlas",
+  "offsets": [1.5, 25.7],
   "animations": [
     {
       "name": "idle",
@@ -20,7 +21,7 @@
       "name": "singRIGHT",
       "prefix": "Monster Right note",
       "animType": "symbol",
-      "offsets": [-36, 20]
+      "offsets": [-36, 19]
     },
     {
       "name": "singRIGHT-hold",
@@ -34,7 +35,7 @@
       "name": "singRIGHT-calm",
       "prefix": "Monster Right note calm",
       "animType": "symbol",
-      "offsets": [-36, -15]
+      "offsets": [-36, -17]
     },
     {
       "name": "singRIGHT-calm-hold",
@@ -42,7 +43,7 @@
       "looped": true,
       "frameIndices": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
       "animType": "symbol",
-      "offsets": [-36, -15]
+      "offsets": [-36, -17]
     },
     {
       "name": "singDOWN",

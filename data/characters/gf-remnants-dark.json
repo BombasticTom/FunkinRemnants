@@ -4,6 +4,7 @@
   "assetPath": "characters/gf-remnants_dark",
   "startingAnimation": "danceRight",
   "singTime": 8.0,
+  "offsets": [-1, 3],
   "healthIcon": {
     "id": "gf-remnants"
   },

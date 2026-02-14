@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "renderType": "sparrow",
-  "offsets": [0, 0],
+  "offsets": [5.5, 6],
   "danceEvery": 1,
   "scale": 1,
   "name": "Remnants Spooky Kids (Dark)",
@@ -20,7 +20,7 @@
   "assetPath": "characters/spooky-remnants_dark",
   "animations": [
     {
-      "offsets": [-17, 4],
+      "offsets": [-18, -7],
       "flipY": false,
       "frameRate": 24,
       "prefix": "Idle0",
@@ -30,7 +30,7 @@
     },
     {
       "flipY": false,
-      "offsets": [9, 9],
+      "offsets": [8.5, 0],
       "frameRate": 24,
       "prefix": "SpookyDance",
       "frameIndices": [0, 1, 2, 3, 4, 5, 6, 7],
@@ -40,7 +40,7 @@
     },
     {
       "flipY": false,
-      "offsets": [9, 9],
+      "offsets": [8.5, 0],
       "frameRate": 24,
       "prefix": "SpookyDance",
       "frameIndices": [8, 9, 10, 11, 12, 13, 14, 15],
@@ -50,7 +50,7 @@
     },
     {
       "flipY": false,
-      "offsets": [130, -5],
+      "offsets": [130, -14],
       "frameRate": 24,
       "prefix": "SingLeft",
       "flipX": false,
@@ -59,7 +59,7 @@
     },
     {
       "flipY": false,
-      "offsets": [-50, -135],
+      "offsets": [-50, -144],
       "frameRate": 24,
       "prefix": "SingDown",
       "flipX": false,
@@ -68,7 +68,7 @@
     },
     {
       "flipY": false,
-      "offsets": [-20, 33],
+      "offsets": [-20, 24],
       "frameRate": 24,
       "prefix": "SingUp",
       "flipX": false,
@@ -77,7 +77,7 @@
     },
     {
       "flipY": false,
-      "offsets": [-138, -6],
+      "offsets": [-138, -15.3],
       "frameRate": 24,
       "prefix": "SingRight",
       "flipX": false,
@@ -86,7 +86,7 @@
     },
     {
       "flipY": false,
-      "offsets": [54, 33],
+      "offsets": [54, 24],
       "frameRate": 24,
       "prefix": "Cheer",
       "flipX": false,
@@ -94,7 +94,7 @@
       "name": "cheer"
     },
     {
-      "offsets": [-18, 4],
+      "offsets": [-27, -7],
       "flipY": false,
       "frameRate": 24,
       "prefix": "IdleToDance",
@@ -103,7 +103,7 @@
       "flipX": false
     },
     {
-      "offsets": [-18, 4],
+      "offsets": [-27, -7],
       "flipY": false,
       "frameRate": 24,
       "prefix": "DanceToIdle",

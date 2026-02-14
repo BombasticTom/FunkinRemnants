@@ -27,6 +27,8 @@ class GirlfriendRemnantsPotDarkCharacter extends SparrowCharacter
   override function set_alpha(val:Float):Float
   {
     super.set_alpha(val);
+    if (normalChar == null) return val;
+
     if (val == 1) normalChar.alpha = 0.0001;
     else
       normalChar.alpha = 1;

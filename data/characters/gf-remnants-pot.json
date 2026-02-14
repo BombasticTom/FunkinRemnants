@@ -5,6 +5,7 @@
   "startingAnimation": "danceRight",
   "renderType": "multisparrow",
   "singTime": 8.0,
+  "offsets": [-5, -10],
   "animations": [
     {
       "name": "danceLeft",

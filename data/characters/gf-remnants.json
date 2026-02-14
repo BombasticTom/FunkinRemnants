@@ -4,7 +4,7 @@
   "assetPath": "shared:characters/gf-remnants",
   "startingAnimation": "danceRight",
   "renderType": "multianimateatlas",
-  "offsets": [-11.5, -21.8],
+  "offsets": [-6, -8],
   "cameraOffsets": [0, 13],
   "singTime": 8.0,
   "animations": [
