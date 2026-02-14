@@ -219,7 +219,7 @@ class PhillyStreetsRemnantsStage extends Stage
         paper.y = 608 + FlxG.random.float(-100, 150);
 
         // Do the tween.
-        FlxTween.tween(paper, {x: END_X}, FlxG.random.float(3.5, 5),
+        FlxTween.tween(paper, {x: END_X}, FlxG.random.float(4.5, 5),
           {
             ease: FlxEase.sineInOut,
             onComplete: function(twn) {
