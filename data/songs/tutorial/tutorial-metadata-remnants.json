@@ -22,7 +22,7 @@
     },
     "stage": "mainStageRemnants",
     "noteStyle": "funkin",
-    "ratings": { "easy": 1, "normal": 1, "hard": 1},
+    "ratings": { "easy": 1, "normal": 1, "hard": 1 },
     "album": "remnants-tutorial",
     "stickerPack": null
   },

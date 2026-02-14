@@ -12,7 +12,7 @@
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-        "player": "bf-remnants-dark",
+      "player": "bf-remnants-dark",
       "girlfriend": "gf-remnants-dark",
       "opponent": "spooky-remnants-dark",
       "instrumental": "remnants",

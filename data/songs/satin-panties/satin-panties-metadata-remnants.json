@@ -12,7 +12,7 @@
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-            "player": "bf-remnants-car",
+      "player": "bf-remnants-car",
       "girlfriend": "gf-remnants-car",
       "opponent": "mom-remnants-car",
       "instrumental": "remnants",
