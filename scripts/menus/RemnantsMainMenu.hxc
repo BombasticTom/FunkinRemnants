@@ -40,7 +40,7 @@ class RemnantsMainMenu extends Module
     backSpr.setPosition(FlxG.width - backSpr.width, FlxG.height - backSpr.height);
 
     FlxTimer.wait(0.5, () -> {
-      FlxG.switchState(()->new TitleState());
+      FlxG.switchState(() -> new TitleState());
       backSpr = null;
     });
 
