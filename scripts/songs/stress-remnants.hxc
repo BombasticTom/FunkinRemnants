@@ -620,6 +620,12 @@ class StressRemnantsMixSong extends Song
     {
       tankmanGroup.scriptCall('reset');
     }
+
+    if (PlayState.instance.currentStage?.getGirlfriend() != null)
+    {
+      PlayState.instance.currentStage?.getGirlfriend().reset();
+      trace('reset pico!');
+    }
   }
 
   function onGameOver(event:ScriptEvent):Void
