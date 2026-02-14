@@ -218,6 +218,68 @@
           "looped": false,
           "name": "idle",
           "offsets": [0, 0],
+          "prefix": "Boppers Horrorland Middle"
+        }
+      ],
+      "assetPath": "remnants/evil/MiddleBoppers",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "middleBoppers",
+      "position": [-1765, -2335],
+      "scale": 1,
+      "scroll": [1, 1],
+      "startingAnimation": "idle",
+      "zIndex": 3
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [0, 0],
+          "prefix": "Plush Escalator"
+        }
+      ],
+      "assetPath": "remnants/evil/PlushBopper",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 1,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "plushBopper",
+      "position": [-708, -1890],
+      "scale": 1,
+      "scroll": [0.98, 0.98],
+      "startingAnimation": "idle",
+      "zIndex": 11
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [
+        {
+          "assetPath": null,
+          "flipX": false,
+          "flipY": false,
+          "frameIndices": [],
+          "frameRate": 24,
+          "looped": false,
+          "name": "idle",
+          "offsets": [0, 0],
           "prefix": "Phanto Bop Scared"
         }
       ],
