@@ -63,6 +63,7 @@ class RemnantsErectSong extends Song
     }
     else
     {
+      PlayState.instance.camHUD.alpha = 0;
       PlayState.instance.camCutscene.fade(0xFF000000, 0, false, null, false);
       PlayState.instance.disableKeys = false;
     }
@@ -86,13 +87,6 @@ class RemnantsErectSong extends Song
   {
     FlxG.camera?.active = true;
     FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
-  }
-
-  function onCountdownStart(event:ScriptEvent):Void
-  {
-    super.onCountdownStart(event);
-
-    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onSongStart(event:ScriptEvent):Void

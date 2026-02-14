@@ -283,7 +283,7 @@ class BoyfriendRemnantsCharacter extends MultiAnimateAtlasCharacter
     if (debug) return;
 
     if (bfFade != null) bfFade.destroy();
-    bfFade = new FunkinSprite(this.x, this.y);
+    bfFade = new FunkinSprite(this.x - 105, this.y + 15);
     bfFade.x -= this.animOffsets[0] + this.globalOffsets[0];
     bfFade.y -= this.animOffsets[1] + this.globalOffsets[1];
     bfFade.pixels = updateFramePixels();

@@ -58,11 +58,11 @@ class ThornsRemnantsMixSong extends Song
   {
     super.onCountdownStart(event);
 
-    PlayState.instance.camHUD.alpha = 0;
-    PlayState.instance.camHUD.visible = true;
-    PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
+    PlayState.instance.camHUD?.alpha = 0;
+    PlayState.instance.camHUD?.visible = true;
+    PlayState.instance.camGame?.fade(0xFF000000, 0, false, null, false);
 
-    if (PlayState.instance.currentStage.getNamedProp('pixeloverlay') != null) PlayState.instance.currentStage.getNamedProp('pixeloverlay').alpha = 0;
+    PlayState.instance.currentStage?.getNamedProp('pixeloverlay')?.alpha = 0;
 
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
