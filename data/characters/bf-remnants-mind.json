@@ -149,37 +149,26 @@
       "name": "singRIGHTmiss"
     },
     {
-      "offsets": [7, 93],
-      "prefix": "Death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "animType": "framelabel",
-      "flipX": false,
-      "looped": false,
       "name": "firstDeath",
-      "flipY": false,
-      "assetPath": "shared:characters/bf-remnants/death",
-      "frameRate": 24
+      "prefix": "Death",
+      "offsets": [7, 93]
     },
     {
-      "offsets": [7, 93],
-      "prefix": "Loop Death",
+      "assetPath": "shared:characters/bf-remnants/death",
       "animType": "framelabel",
-      "flipX": false,
       "name": "deathLoop",
+      "prefix": "Loop Death",
       "looped": true,
-      "flipY": false,
-      "assetPath": "shared:characters/bf-remnants/death",
-      "frameRate": 24
+      "offsets": [7, 93]
     },
     {
-      "offsets": [7, 93],
-      "prefix": "Retry",
-      "animType": "framelabel",
-      "flipX": false,
-      "looped": false,
-      "name": "deathConfirm",
-      "flipY": false,
       "assetPath": "shared:characters/bf-remnants/death",
-      "frameRate": 24
+      "name": "deathConfirm",
+      "animType": "framelabel",
+      "prefix": "Retry",
+      "offsets": [7, 93]
     }
   ]
 }
