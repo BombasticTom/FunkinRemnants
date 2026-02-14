@@ -367,7 +367,7 @@ class PicoRemnantsPlayerCharacter extends MultiAnimateAtlasCharacter
     PlayState.instance?.currentStage?.refresh();
 
     if (fadeTween != null) fadeTween.cancel();
-    fadeTween = FlxTween.num(0, 1, 1.4,
+    fadeTween = FlxTween.num(0, 1, 0.4,
       {
         onComplete: (_) -> {
           fadeTween = null;
