@@ -102,13 +102,13 @@ class RemnantsTitle extends Module
     gfDance.y += 75;
 
     var logoBl:FlxSprite = FlxG.state.logoBl;
-    logoBl.loadGraphic(Paths.image('remnantsLogo'));
+    logoBl.loadGraphic(Paths.image('titleScreen/remnantsLogo'));
     logoBl.setGraphicSize(Std.int(logoBl.width * 0.1));
     logoBl.updateHitbox();
     logoBl.screenCenter();
     logoBl.y -= 225;
 
-    var logoTrail:FunkinSprite = FunkinSprite.create(0, 0, 'remnantsLogo');
+    var logoTrail:FunkinSprite = FunkinSprite.create(0, 0, 'titleScreen/remnantsLogo');
     logoTrail.setGraphicSize(Std.int(logoTrail.width * 0.1));
     logoTrail.setColorTransform(0, 0, 1, 1, 0, 0, 135, 1);
     logoTrail.antialiasing = true;

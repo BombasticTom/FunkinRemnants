@@ -134,7 +134,7 @@ class RemnantsMainMenu extends Module
       var suffix:String = assetKey.substring('assets/images/menu'.length, assetKey.length - '.png'.length);
       if (suffix.startsWith('BG')) suffix = suffix.substring('BG'.length);
 
-      var graphic:FlxGraphic = FlxG.bitmap.add(Paths.image('menuBGRemnants' + suffix));
+      var graphic:FlxGraphic = FlxG.bitmap.add(Paths.image('mainMenu/menuBGRemnants' + suffix));
       basic.frames = graphic?.imageFrame ?? null;
     }
   }
