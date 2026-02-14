@@ -3,6 +3,7 @@ import funkin.ui.mainmenu.MainMenuState;
 import funkin.graphics.FunkinSprite;
 import funkin.ui.title.TitleState;
 import flixel.util.FlxTimer;
+import funkin.ui.UIState;
 import funkin.save.Save;
 import flixel.FlxSprite;
 import flixel.FlxG;
@@ -15,7 +16,6 @@ class RemnantsMainMenu extends Module
   public function new()
   {
     super('RemnantsMainMenu');
-    backSpaced = false;
   }
 
   var backSpr:FunkinSprite = null;
@@ -26,24 +26,25 @@ class RemnantsMainMenu extends Module
   {
     super.onStateChangeBegin(event);
 
+    if (backSpaced
+      || backSpr == null
+      || !RemnantsContentUtil.remnantsContentEnabled()
+      || FlxG.onMobile
+      || !Std.isOfType(FlxG.state, MainMenuState)
+      || !FlxG.state.uiStateMachine.is(UIState.Exiting)
+      || !FlxG.state.controls.BACK_P) return;
+
     // I don't like going back to the title instantly....
-    if (FlxG.state.subState == null && Std.isOfType(FlxG.state, MainMenuState) && FlxG.state.controls.BACK_P && !backSpaced)
-    {
-      if (FlxG.onMobile) return;
-      if (backSpr == null) return;
-      if (!RemnantsContentUtil.remnantsContentEnabled()) return;
+    backSpaced = true;
+    backSpr.animation.play('press', true);
+    backSpr.setPosition(FlxG.width - backSpr.width, FlxG.height - backSpr.height);
 
-      backSpaced = true;
-      backSpr.animation.play('press', true);
-      backSpr.setPosition(FlxG.width - backSpr.width, FlxG.height - backSpr.height);
+    FlxTimer.wait(0.5, () -> {
+      FlxG.switchState(FlxG.game._nextState);
+      backSpr = null;
+    });
 
-      FlxTimer.wait(0.5, () -> {
-        backSpr = null;
-        FlxG.switchState(()->new TitleState());
-      });
-
-      event.cancel();
-    }
+    event.cancel();
   }
 
   override public function onStateChangeEnd(event:StateChangeScriptEvent):Void
@@ -63,15 +64,20 @@ class RemnantsMainMenu extends Module
 
   public function addRemnantsMainMenuItems(state:FlxState):Void
   {
-    if (!RemnantsContentUtil.remnantsContentEnabled() || !Std.isOfType(state, MainMenuState) || FlxG.onMobile) return;
+    if (!RemnantsContentUtil.remnantsContentEnabled() || !Std.isOfType(state, MainMenuState)) return;
 
-    backSpr = FunkinSprite.createSparrow(0, 0, 'mainMenu/backspace');
-    backSpr.animation.addByPrefix('press', 'backspace PRESSED', 24, false);
-    backSpr.animation.addByPrefix('idle', 'backspace to exit', 24, true);
-    backSpr.animation.play('idle', true);
-    backSpr.setPosition(FlxG.width - backSpr.width + 15, FlxG.height - backSpr.height + 50);
-    backSpr.scrollFactor.set();
-    state.add(backSpr);
+    if (!FlxG.onMobile)
+    {
+      backSpr = FunkinSprite.createSparrow(0, 0, 'mainMenu/backspace');
+      backSpr.animation.addByPrefix('press', 'backspace PRESSED', 24, false);
+      backSpr.animation.addByPrefix('idle', 'backspace to exit', 24, true);
+      backSpr.animation.play('idle', true);
+      backSpr.setPosition(FlxG.width - backSpr.width + 15, FlxG.height - backSpr.height + 50);
+      backSpr.scrollFactor.set();
+      state.add(backSpr);
+
+      backSpaced = false;
+    }
 
     if (Save.instance.modOptions.exists('seenRemnantsCredits')) return;
 
