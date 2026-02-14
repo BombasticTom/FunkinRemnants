@@ -3,35 +3,9 @@
   "songName": "Monster (Remnants Mix)",
   "artist": "LunarzNova (ft. RubyyyButCool)",
   "charter": "Plush + fishgarden",
-  "divisions": 96,
-  "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {},
-    "vocals": {},
-    "altVocals": {}
-  },
-  "playData": {
-    "songVariations": [],
-    "difficulties": ["easy", "normal", "hard"],
-    "characters": {
-      "player": "bf-remnants-dark",
-      "girlfriend": "gf-remnants-pot-dark",
-      "opponent": "monster-remnants-dark",
-      "instrumental": "remnants",
-      "altInstrumentals": [],
-      "opponentVocals": ["monster-remnants-dark"],
-      "playerVocals": ["bf-remnants-dark"]
-    },
-    "stage": "spookyMansionRemnants",
-    "noteStyle": "funkin",
-    "ratings": { "easy": 1, "normal": 2, "hard": 3 },
-    "album": "remnants-week2-scary",
-    "previewStart": 0,
-    "previewEnd": 15000
-  },
-  "generatedBy": "Friday Night Funkin' - v0.7.5 (develop : 5b5d76a) PROTOTYPE",
   "timeFormat": "ms",
+  "divisions": 96,
+  "offsets": { "instrumental": 0 },
   "timeChanges": [
     {
       "t": 0,
@@ -113,5 +87,27 @@
       "d": 4,
       "bt": [4, 4, 4, 4]
     }
-  ]
+  ],
+  "looped": false,
+  "playData": {
+    "songVariations": [],
+    "difficulties": ["easy", "normal", "hard"],
+    "characters": {
+      "player": "bf-remnants-dark",
+      "girlfriend": "gf-remnants-pot-dark",
+      "opponent": "monster-remnants-dark",
+      "instrumental": "remnants",
+      "playerVocals": ["bf-remnants-dark"],
+      "opponentVocals": ["monster-remnants-dark"],
+      "altInstrumentals": []
+    },
+    "stage": "spookyMansionRemnants",
+    "noteStyle": "funkin",
+    "ratings": { "easy": 1, "normal": 2, "hard": 3 },
+    "album": "remnants-week2-scary",
+    "stickerPack": null
+  },
+  "previewStart": 0,
+  "previewEnd": 15000,
+  "generatedBy": "LeGooey (By Hand)"
 }

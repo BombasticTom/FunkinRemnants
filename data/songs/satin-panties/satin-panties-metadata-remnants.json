@@ -3,43 +3,30 @@
   "songName": "Satin Panties (Remnants Mix)",
   "artist": "DagaiTai",
   "charter": "Plush + Sammy The Goog",
+  "timeFormat": "ms",
   "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 112, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
   "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {},
-    "vocals": {},
-    "altVocals": {}
-  },
   "playData": {
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
-      "player": "bf-remnants-car",
+            "player": "bf-remnants-car",
       "girlfriend": "gf-remnants-car",
       "opponent": "mom-remnants-car",
       "instrumental": "remnants",
-      "altInstrumentals": [],
+      "playerVocals": ["bf-remnants-car"],
       "opponentVocals": ["mom-remnants-car"],
-      "playerVocals": ["bf-remnants-car"]
+      "altInstrumentals": []
     },
     "stage": "limoRideRemnants",
     "noteStyle": "funkin",
     "ratings": { "easy": 1, "normal": 2, "hard": 2 },
     "album": "remnants-week4",
-    "previewStart": 0,
-    "previewEnd": 14000
+    "stickerPack": null
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.3",
-  "timeFormat": "ms",
-  "timeChanges": [
-    {
-      "t": 0,
-      "b": 0,
-      "bpm": 112,
-      "n": 4,
-      "d": 4,
-      "bt": [4, 4, 4, 4]
-    }
-  ]
+  "previewStart": 0,
+  "previewEnd": 15000,
+  "generatedBy": "LeGooey (By Hand)"
 }

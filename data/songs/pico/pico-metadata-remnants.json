@@ -3,14 +3,11 @@
   "songName": "Pico (Remnants Mix)",
   "artist": "Loopy",
   "charter": "RhysRJJ + Sammy The Goog",
+  "timeFormat": "ms",
   "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 150, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
   "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {},
-    "vocals": {},
-    "altVocals": {}
-  },
   "playData": {
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
@@ -19,27 +16,17 @@
       "girlfriend": "gf-remnants",
       "opponent": "pico-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": ["pico", ""],
+      "playerVocals": ["bf-remnants"],
       "opponentVocals": ["pico-remnants"],
-      "playerVocals": ["bf-remnants"]
+      "altInstrumentals": ["pico", ""]
     },
     "stage": "phillyTrainRemnants",
     "noteStyle": "funkin",
     "ratings": { "easy": 3, "normal": 4, "hard": 5 },
     "album": "remnants-week3",
-    "previewStart": 0,
-    "previewEnd": 15000
+    "stickerPack": null
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.3",
-  "timeFormat": "ms",
-  "timeChanges": [
-    {
-      "t": 0,
-      "b": 0,
-      "bpm": 150,
-      "n": 4,
-      "d": 4,
-      "bt": [4, 4, 4, 4]
-    }
-  ]
+  "previewStart": 0,
+  "previewEnd": 15000,
+  "generatedBy": "LeGooey (By Hand)"
 }

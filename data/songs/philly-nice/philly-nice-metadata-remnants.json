@@ -3,14 +3,11 @@
   "songName": "Philly Nice (Remnants Mix)",
   "artist": "yusxki (ft. DagaiTai)",
   "charter": "Plush + Sammy The Goog",
+  "timeFormat": "ms",
   "divisions": 96,
+  "offsets": { "instrumental": 0 },
+  "timeChanges": [{ "t": 0, "bpm": 175, "n": 4, "d": 4, "bt": [4, 4, 4, 4] }],
   "looped": false,
-  "offsets": {
-    "instrumental": 0,
-    "altInstrumentals": {},
-    "vocals": {},
-    "altVocals": {}
-  },
   "playData": {
     "songVariations": [],
     "difficulties": ["easy", "normal", "hard"],
@@ -19,35 +16,17 @@
       "girlfriend": "gf-remnants",
       "opponent": "pico-remnants",
       "instrumental": "remnants",
-      "altInstrumentals": [],
+      "playerVocals": ["bf-remnants"],
       "opponentVocals": ["pico-remnants"],
-      "playerVocals": ["bf-remnants"]
+      "altInstrumentals": []
     },
     "stage": "phillyTrainRemnants",
     "noteStyle": "funkin",
     "ratings": { "easy": 2, "normal": 3, "hard": 4 },
     "album": "remnants-week3",
-    "previewStart": 0,
-    "previewEnd": 15000
+    "stickerPack": null
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.5",
-  "timeFormat": "ms",
-  "timeChanges": [
-    {
-      "t": 0,
-      "b": 0,
-      "bpm": 175,
-      "n": 4,
-      "d": 4,
-      "bt": [4, 4, 4, 4]
-    },
-    {
-      "t": 100858.0001,
-      "b": 294.1692,
-      "bpm": 175,
-      "n": 4,
-      "d": 4,
-      "bt": [4, 4, 4, 4]
-    }
-  ]
+  "previewStart": 0,
+  "previewEnd": 15000,
+  "generatedBy": "LeGooey (By Hand)"
 }
