@@ -235,6 +235,10 @@ class WinterHorrorlandRemnantsMixSong extends Song
       cutsceneTimerManager = null;
     }
 
+    cutsceneSkipped = true;
+    canSkipCutscene = false;
+    skipText.visible = false;
+
     onSpookChristmas = false;
     santaDead.scriptCall("playDeadSanta");
     PlayState.instance.currentStage.getDad().visible = true;
