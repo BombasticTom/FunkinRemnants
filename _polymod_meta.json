@@ -4,75 +4,15 @@
   "contributors": [
     {
       "name": "SPG64",
-      "role": "Director, Artist, Animator, Coder, Charter",
+      "role": "Director, Animator, Coder, Charter",
       "email": null,
       "url": "https://spg64.straw.page"
     },
     {
-      "name": "Ame",
-      "role": "Composer",
+      "name": "MarkedAman",
+      "role": "Composer, Graphics, Promo, Video Editor, SFX",
       "email": null,
-      "url": "https://yusxki.carrd.co"
-    },
-    {
-      "name": "ChazbillYT",
-      "role": "Artist, Animator",
-      "email": null,
-      "url": "https://x.com/ChazbillYT"
-    },
-    {
-      "name": "CoolJ4334",
-      "role": "Artist, Animator",
-      "email": null,
-      "url": "https://x.com/CoolJ4334"
-    },
-    {
-      "name": "DagaiTai",
-      "role": "Composer",
-      "email": null,
-      "url": "https://dagaitai.carrd.co"
-    },
-    {
-      "name": "DigitLuck",
-      "role": "Artist, Animator",
-      "email": null,
-      "url": "https://digitluck.straw.page"
-    },
-    {
-      "name": "FellowDesert51",
-      "role": "Guest Composer",
-      "email": null,
-      "url": "https://www.youtube.com/@FDesert51"
-    },
-    {
-      "name": "fishgarden",
-      "role": "Composer, Extra Artwork",
-      "email": null,
-      "url": "https://x.com/fishgarden"
-    },
-    {
-      "name": "FrenchOtter",
-      "role": "Artist, Animator",
-      "email": null,
-      "url": "https://www.youtube.com/@frenchotter"
-    },
-    {
-      "name": "FrikkoFrik",
-      "role": "Composer",
-      "email": null,
-      "url": "https://frikkofrik.straw.page"
-    },
-    {
-      "name": "GENZU",
-      "role": "Composer",
-      "email": null,
-      "url": "https://gen-zu.carrd.co"
-    },
-    {
-      "name": "Honton129",
-      "role": "Coder, Art, Animation",
-      "email": null,
-      "url": "https://x.com/honton129"
+      "url": "https://www.youtube.com/@mrkedaman"
     },
     {
       "name": "Jotacast",
@@ -81,22 +21,22 @@
       "url": "https://jotacast.straw.page"
     },
     {
-      "name": "JRetrioX",
-      "role": "Artist, Animator",
-      "email": null,
-      "url": "https://jretriox.newgrounds.com"
-    },
-    {
-      "name": "katsuki",
+      "name": "LunarzNova",
       "role": "Composer",
       "email": null,
-      "url": "https://katsukimedia.carrd.co"
+      "url": "https://x.com/LunarzNova"
     },
     {
-      "name": "KazKazzi9",
-      "role": "Artist, Animator",
+      "name": "fishgarden",
+      "role": "Composer, Charter, Artist",
       "email": null,
-      "url": "https://x.com/KazKazzi9"
+      "url": "https://x.com/fishgarden"
+    },
+    {
+      "name": "ZaraJan9th",
+      "role": "Composer",
+      "email": null,
+      "url": "https://x.com/ZaraJan9th"
     },
     {
       "name": "kuronamii",
@@ -105,32 +45,98 @@
       "url": "https://x.com/kuronamiiz"
     },
     {
-      "name": "LinkstormZ",
-      "role": "Artist, Animator",
+      "name": "RubyyyButCool",
+      "role": "Composer, Lyricist, Monster VA",
       "email": null,
-      "url": "https://www.youtube.com/@Linkstormz"
+      "url": "https://linktr.ee/RubyyyDubyyy"
     },
     {
-      "name": "Loopy Boop",
-      "role": "Composer",
+      "name": "LoopyBoop",
+      "role": "Composer, SFX",
       "email": null,
       "url": "https://x.com/loopyboop_"
     },
     {
-      "name": "LunarzNova",
-      "role": "Composer",
+      "name": "yusxki",
+      "role": "Composer, Lyricist, GF Tutorial VA",
       "email": null,
-      "url": "https://x.com/LunarzNova"
+      "url": "https://yusxki.carrd.co"
     },
     {
-      "name": "MarkedAman",
-      "role": "Composer, Editing",
+      "name": "DagaiTai",
+      "role": "Composer, Artist, Animator",
       "email": null,
-      "url": "https://www.youtube.com/@mrkedaman"
+      "url": "https://dagaitai.carrd.co"
+    },
+    {
+      "name": "TRAF",
+      "role": "Composer",
+      "email": null,
+      "url": "https://linktr.ee/trafalgaru"
+    },
+    {
+      "name": "Frikko",
+      "role": "Composer",
+      "email": null,
+      "url": "https://frikkofrik.straw.page"
+    },
+    {
+      "name": "PrinceLOLZ",
+      "role": "Composer, Horrorland Monster VA",
+      "email": null,
+      "url": "https://linktr.ee/prod.princelolz"
+    },
+    {
+      "name": "GENZU",
+      "role": "Composer",
+      "email": null,
+      "url": "https://gen-zu.carrd.co"
+    },
+    {
+      "name": "katsuki",
+      "role": "Composition Assistance",
+      "email": null,
+      "url": "https://katsukimedia.carrd.co"
+    },
+    {
+      "name": "FellowDesert51",
+      "role": "Composer",
+      "email": null,
+      "url": "https://www.youtube.com/@FDesert51"
+    },
+    {
+      "name": "RhysRJJ",
+      "role": "Charter, Song Events",
+      "email": null,
+      "url": "https://rhysrjj.straw.page"
+    },
+    {
+      "name": "Plush",
+      "role": "Charter, Song Events, Coding Assistance, Background Artist",
+      "email": null,
+      "url": "https://x.com/PlusherX"
+    },
+    {
+      "name": "Sammy The Goog",
+      "role": "Charter, Song Events, Coder",
+      "email": "sammytheman61@gmail.com",
+      "url": "https://www.youtube.com/@SammyTheGoog"
+    },
+    {
+      "name": "TRWario",
+      "role": "Charter, Song Events",
+      "email": null,
+      "url": "https://x.com/TennaBoobies"
+    },
+    {
+      "name": "Timson",
+      "role": "Charter",
+      "email": null,
+      "url": "https://timson-charts.carrd.co"
     },
     {
       "name": "Mykarm",
-      "role": "Artist/Animator",
+      "role": "Art Clean Up, Designer",
       "email": null,
       "url": "https://x.com/Mykarm09"
     },
@@ -141,82 +147,88 @@
       "url": "https://x.com/duffbeerphanto"
     },
     {
-      "name": "Plush",
-      "role": "Charter, Extra Coder",
-      "email": null,
-      "url": "https://x.com/PlusherX"
-    },
-    {
-      "name": "PrinceLOLz",
-      "role": "Composer",
-      "email": null,
-      "url": "https://linktr.ee/prod.princelolz"
-    },
-    {
-      "name": "PsykoEvie",
+      "name": "ChazbillYT",
       "role": "Artist, Animator",
       "email": null,
-      "url": "https://linktr.ee/psykoevie"
+      "url": "https://x.com/ChazbillYT"
     },
     {
-      "name": "RhysRJJ",
-      "role": "Charter",
-      "email": null,
-      "url": "https://rhysrjj.straw.page"
-    },
-    {
-      "name": "RubyyyButCool",
-      "role": "Composer",
-      "email": null,
-      "url": "https://linktr.ee/RubyyyDubyyy"
-    },
-    {
-      "name": "Sammy The Goog",
-      "role": "Charter, Extra Coder",
-      "email": "sammytheman61@gmail.com",
-      "url": "https://www.youtube.com/@SammyTheGoog"
-    },
-    {
-      "name": "Shinidami1",
-      "role": "Artist, Animator",
+      "name": "Shinidami",
+      "role": "Background Artist",
       "email": null,
       "url": "https://x.com/Shinidami1"
     },
     {
-      "name": "SS-SoStupidCool",
+      "name": "DigitLuck",
+      "role": "Thumbnail Artist, Extended Backgrounds",
+      "email": null,
+      "url": "https://digitluck.straw.page"
+    },
+    {
+      "name": "CrysOtter",
       "role": "Artist, Animator",
       "email": null,
+      "url": "https://x.com/CrysOtter08"
+    },
+    {
+      "name": "CoolJ4334",
+      "role": "Main Week 6 Artist, Freeplay Pixel Icons",
+      "email": null,
+      "url": "https://x.com/CoolJ4334"
+    },
+    {
+      "name": "JRetrioX",
+      "role": "Week 6 BF Sprite Artist",
+      "email": null,
+      "url": "https://jretriox.newgrounds.com"
+    },
+    {
+      "name": "LinkstormZ",
+      "role": "Week 6 GF Sprite Artist",
+      "email": null,
+      "url": "https://www.youtube.com/@Linkstormz"
+    },
+    {
+      "name": "SS-SoStupidCool",
+      "role": "Week 6 Icon Artist",
+      "email": null,
       "url": null
+    },
+    {
+      "name": "PsykoEvie",
+      "role": "Week 7 GF Tankmen Sprite Artist",
+      "email": null,
+      "url": "https://linktr.ee/psykoevie"
+    },
+    {
+      "name": "KazKazzi9",
+      "role": "Tormentor Sprite Artist",
+      "email": null,
+      "url": "https://x.com/KazKazzi9"
+    },
+    {
+      "name": "Honton129",
+      "role": "Coder, Artist, Animator, Texture Atlas Exports",
+      "email": null,
+      "url": "https://x.com/honton129"
     },
     {
       "name": "TechnikTil",
-      "role": "Coder and Lipsync Animator",
+      "role": "Coder, Animator, Texture Atlas Exports",
       "email": null,
-      "url": null
+      "url": "https://x.com/TechnikTil"
     },
     {
-      "name": "Timson",
-      "role": "Charter",
+      "name": "LeGooey",
+      "role": "Coder, Modpack Compatibility, Texture Atlas Exports",
       "email": null,
-      "url": "https://timson-charts.carrd.co"
+      "url": "https://x.com/LeGooey"
     },
     {
-      "name": "TRAF",
-      "role": "Composer",
+      "name": "Az989",
+      "role": "Texture Atlas Exports",
       "email": null,
-      "url": "https://linktr.ee/trafalgaru"
-    },
-    {
-      "name": "TRWario",
-      "role": "Charter",
-      "email": null,
-      "url": "https://www.roblox.com/users/3993594071"
-    },
-    {
-      "name": "ZaraJan9th",
-      "role": "Composer",
-      "email": null,
-      "url": "https://x.com/ZaraJan9th"
+      "url": "https://x.com/Az989YT"
     }
   ],
   "api_version": "0.8.0",
