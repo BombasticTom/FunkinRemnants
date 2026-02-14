@@ -76,6 +76,8 @@ class GirlfriendRemnantsDarkCharacter extends SparrowCharacter
 
       normalChar.zIndex = normalChar.zIndex - 1;
       alpha = alpha;
+
+      PlayState.instance.currentStage.refresh();
     }
   }
 }
