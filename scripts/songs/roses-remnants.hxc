@@ -78,6 +78,7 @@ class RosesRemnantsMixSong extends Song
         // Play a SFX
         FunkinSound.playOnce(Paths.sound('ANGRY_TEXT_BOX'), 1.0);
         HapticUtil.vibrate(0.1, 0.5, 1, 1);
+        PlayState.instance.disableKeys = true;
 
         if (bgSprite != null)
         {
@@ -127,7 +128,6 @@ class RosesRemnantsMixSong extends Song
 
     PlayState.instance.camHUD.alpha = 0;
     PlayState.instance.camGame.fade(0xFF000000, 0, false, null, false);
-    PlayState.instance.disableKeys = true;
 
     if (!FlxG.onMobile) // Move pop ups
     {

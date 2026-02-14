@@ -170,6 +170,8 @@ class MILFRemnantsMixSong extends Song
     PlayState.instance.camCutscene?.stopFX();
     PlayState.instance.camGame?.stopFX();
 
+    if (PlayState.instance.disableKeys) PlayState.instance.disableKeys = false;
+
     if (fadeOut)
     {
       PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, false);
@@ -681,6 +683,8 @@ class MILFRemnantsMixSong extends Song
       case 360:
         PlayState.instance.camCutscene.fade(0xFF000000, 1.33, false, null, false);
         fadeOut = false;
+      case 364:
+        PlayState.instance.disableKeys = true;
     }
   }
 }
