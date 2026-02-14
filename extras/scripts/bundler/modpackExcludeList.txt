@@ -1,0 +1,11 @@
+../../.git
+../../.github
+../../.vscode
+../../extras
+../../.editorconfig
+../../.gitattributes
+../../.gitignore
+../../.prettierrc.js
+../../astc-compression-data.json
+../../hxformat.json
+../../README.md
