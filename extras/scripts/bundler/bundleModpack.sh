@@ -23,6 +23,7 @@ elif command -v powershell > /dev/null 2>&1
 then
   rm "$ZIP_NAME"
   powershell -Command "Compress-Archive -Path './modpack/*' -DestinationPath '$ZIP_NAME'"
+  rm -fr modpack
 
   echo "Done! The modpack is contained in $ZIP_NAME."
 else

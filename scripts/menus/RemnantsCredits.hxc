@@ -88,7 +88,7 @@ class RemnantsCredits extends Module
 
     FlxG.state.scrollPaused = false;
 
-    FunkinSound.playMusic('creditsSong-remnants',
+    FunkinSound.playMusic('freeplayRandom-remnants',
       {
         startingVolume: 0.0,
         overrideExisting: true,

@@ -1,7 +1,9 @@
 import funkin.modding.module.Module;
 import funkin.ui.mainmenu.MainMenuState;
+import funkin.graphics.FunkinSprite;
 import funkin.ui.title.TitleState;
 import flixel.util.FlxTimer;
+import funkin.save.Save;
 import flixel.FlxSprite;
 import flixel.FlxG;
 import Std;
@@ -14,11 +16,11 @@ class RemnantsMainMenu extends Module
   {
     super('RemnantsMainMenu');
     backSpaced = false;
-    addedBack = false;
   }
 
+  var backSpr:FunkinSprite = null;
+  var newCredits:FunkinSprite = null;
   var backSpaced:Bool = false;
-  var backSpr:FlxSprite = null;
 
   override public function onStateChangeBegin(event:StateChangeScriptEvent):Void
   {
@@ -35,9 +37,11 @@ class RemnantsMainMenu extends Module
       backSpr.animation.play('press', true);
       backSpr.setPosition(FlxG.width - backSpr.width, FlxG.height - backSpr.height);
 
-      new FlxTimer().start(0.5, _ -> {
-        FlxG.switchState(() -> new TitleState());
+      FlxTimer.wait(0.5, () -> {
+        backSpr = null;
+        FlxG.switchState(()->new TitleState());
       });
+
       event.cancel();
     }
   }
@@ -47,13 +51,7 @@ class RemnantsMainMenu extends Module
     super.onStateChangeEnd(event);
 
     checkAndReplace(event.targetState);
-    backSpaced = false;
-    addedBack = false;
-
-    if (backSpr != null)
-    {
-      FlxG.state.remove(backSpr);
-    }
+    addRemnantsMainMenuItems(event.targetState);
   }
 
   override public function onSubStateOpenEnd(event:SubStateScriptEvent):Void
@@ -61,37 +59,50 @@ class RemnantsMainMenu extends Module
     super.onSubStateOpenEnd(event);
 
     checkAndReplace(event.targetState);
-    backSpaced = false;
-    addedBack = false;
+  }
 
-    if (backSpr != null)
+  public function addRemnantsMainMenuItems(state:FlxState):Void
+  {
+    if (!RemnantsContentUtil.remnantsContentEnabled() || !Std.isOfType(state, MainMenuState) || FlxG.onMobile) return;
+
+    backSpr = FunkinSprite.createSparrow(0, 0, 'mainMenu/backspace');
+    backSpr.animation.addByPrefix('press', 'backspace PRESSED', 24, false);
+    backSpr.animation.addByPrefix('idle', 'backspace to exit', 24, true);
+    backSpr.animation.play('idle', true);
+    backSpr.setPosition(FlxG.width - backSpr.width + 15, FlxG.height - backSpr.height + 50);
+    backSpr.scrollFactor.set();
+    state.add(backSpr);
+
+    if (Save.instance.modOptions.exists('seenRemnantsCredits')) return;
+
+    var creditsMenuItem:FlxSprite = state.menuItems.getItem('credits');
+    if (creditsMenuItem != null)
     {
-      FlxG.state.remove(backSpr);
+      var oldCallback:Void->Void = creditsMenuItem.callback;
+      creditsMenuItem.callback = () -> {
+        Save.instance.modOptions.set('seenRemnantsCredits', true);
+        Save.instance.flush();
+        oldCallback();
+      }
     }
+
+    newCredits = FunkinSprite.createSparrow((creditsMenuItem?.x ?? 0) + 200, (creditsMenuItem?.y ?? 0) - 80, 'freeplay/freeplayCapsule/new');
+    newCredits.scrollFactor.set(creditsMenuItem?.scrollFactor?.x ?? 1, creditsMenuItem?.scrollFactor?.y ?? 1);
+    newCredits.animation.addByPrefix('newAnim', 'NEW notif', 24, true);
+    newCredits.animation.play('newAnim', true);
+    newCredits.scale.set(1.25, 1.25);
+    newCredits.updateHitbox();
+    state.add(newCredits);
   }
 
   override function onUpdate(event:UpdateScriptEvent)
   {
     super.onUpdate(event);
 
-    if (!FlxG.onMobile && Std.isOfType(FlxG.state, MainMenuState) && !addedBack)
+    if (Std.isOfType(FlxG.state, MainMenuState) && newCredits != null)
     {
-      if (!RemnantsContentUtil.remnantsContentEnabled())
-      {
-        addedBack = true;
-        return;
-      }
-
-      addedBack = true;
-      backSpr = new FlxSprite();
-      backSpr.frames = Paths.getSparrowAtlas('mainMenu/backspace');
-      backSpr.animation.addByPrefix('press', 'backspace PRESSED', 24, false);
-      backSpr.animation.addByPrefix('idle', 'backspace to exit', 24, true);
-      backSpr.animation.play('idle', true);
-      backSpr.scrollFactor.set();
-      FlxG.state.add(backSpr);
-
-      backSpr.setPosition(FlxG.width - backSpr.width + 15, FlxG.height - backSpr.height + 50);
+      var creditsMenuItem:FlxSprite = FlxG.state?.menuItems?.getItem('credits');
+      newCredits.visible = creditsMenuItem?.visible ?? false;
     }
   }
 
