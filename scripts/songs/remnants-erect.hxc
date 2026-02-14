@@ -94,6 +94,7 @@ class RemnantsErectSong extends Song
     super.onSongStart(event);
 
     PlayState.instance.camCutscene.fade(0xFF000000, 1, true, null, false);
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onBeatHit(event:ScriptEvent):Void

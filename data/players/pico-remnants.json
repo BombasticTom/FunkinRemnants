@@ -31,37 +31,37 @@
       {
         "name": "intro",
         "prefix": "pico dj intro",
-        "offsets": [-88.277, -186.7]
+        "offsets": [-90.5, -186.7]
       },
       {
         "name": "idle",
         "prefix": "Pico DJ",
-        "offsets": [5.5, 236.384]
+        "offsets": [5.5, 236.3]
       },
       {
         "name": "idleEasterEgg",
         "prefix": "Pico DJ afk",
-        "offsets": [-142.8477, 133.9621]
+        "offsets": [-142.8, 133.9]
       },
       {
         "name": "confirm",
         "prefix": "Pico DJ confirm",
-        "offsets": [-78.0325, 246.7632]
+        "offsets": [-78, 246.7]
       },
       {
         "name": "fistPump",
         "prefix": "pico cheer",
-        "offsets": [-41.0724, 60.9]
+        "offsets": [-43, 61]
       },
       {
         "name": "loss",
         "prefix": "Pico DJ loss",
-        "offsets": [-40.7224, 213.3196]
+        "offsets": [-43, 213.3]
       },
       {
         "name": "charSelect",
         "prefix": "Pico DJ to CS",
-        "offsets": [-95.027, -12.6147]
+        "offsets": [-96, -12.6]
       }
     ]
   },
