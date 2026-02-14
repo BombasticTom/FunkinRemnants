@@ -11,7 +11,7 @@ using StringTools;
 
 class RemnantsCredits extends Module
 {
-  final VIDEO_PATH:String = 'grieving';
+  final VIDEO_PATH:String = 'remnants-credits';
 
   public var vid:FunkinVideoSprite;
   public var vidBG:FunkinSprite;
