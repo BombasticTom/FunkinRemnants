@@ -2,6 +2,7 @@ import funkin.play.PlayState;
 import funkin.modding.module.ModuleHandler;
 import funkin.play.cutscene.VideoCutscene;
 import funkin.modding.module.Module;
+import flixel.FlxG;
 
 class RemnantsBumpers extends Module
 {
@@ -103,6 +104,8 @@ class RemnantsBumpers extends Module
 
     setIsFirstOfWeek();
     trace(currentWeek);
+
+    if (FlxG.keys.pressed.SHIFT) return false;
 
     // Prevent the bumper from playing if there's no video.
     if (getWeek(songLowercase) == null) return false;
