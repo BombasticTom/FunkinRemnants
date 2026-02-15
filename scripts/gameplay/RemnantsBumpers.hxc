@@ -105,6 +105,7 @@ class RemnantsBumpers extends Module
     setIsFirstOfWeek();
     trace(currentWeek);
 
+    // Prevent the bumper from playing if the player uses a "cheat" code.
     if (FlxG.keys.pressed.SHIFT) return false;
 
     // Prevent the bumper from playing if there's no video.
